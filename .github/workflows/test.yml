@@ -1,0 +1,48 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+    paths: ['audit/**', 'site/**', '.github/workflows/test.yml']
+  pull_request:
+    paths: ['audit/**', 'site/**', '.github/workflows/test.yml']
+
+# One job per target (see CLAUDE.md Build & test). Each is skipped until its package exists (Phase 0).
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: audit } }
+    steps:
+      - uses: actions/checkout@v4
+      - id: exists
+        run: test -f package.json && echo "yes=true" >> "$GITHUB_OUTPUT" || echo "yes=false" >> "$GITHUB_OUTPUT"
+      - if: steps.exists.outputs.yes == 'true'
+        uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm, cache-dependency-path: audit/package-lock.json }
+      - if: steps.exists.outputs.yes == 'true'
+        run: npm ci
+      - if: steps.exists.outputs.yes == 'true'
+        run: npm run lint --if-present
+      - if: steps.exists.outputs.yes == 'true'
+        run: npm test
+      - if: steps.exists.outputs.yes == 'true'
+        run: npm run build
+
+  site:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: site } }
+    steps:
+      - uses: actions/checkout@v4
+      - id: exists
+        run: test -f package.json && echo "yes=true" >> "$GITHUB_OUTPUT" || echo "yes=false" >> "$GITHUB_OUTPUT"
+      - if: steps.exists.outputs.yes == 'true'
+        uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm, cache-dependency-path: site/package-lock.json }
+      - if: steps.exists.outputs.yes == 'true'
+        run: npm ci
+      - if: steps.exists.outputs.yes == 'true'
+        run: npm run lint --if-present
+      - if: steps.exists.outputs.yes == 'true'
+        run: npm test --if-present
+      - if: steps.exists.outputs.yes == 'true'
+        run: npm run build
