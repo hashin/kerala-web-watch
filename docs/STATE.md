@@ -67,5 +67,5 @@ _None yet. Each entry: what, why, ADR number._
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
 
-- **2026-09-19 · init** — Repo created at github.com/hashin/kerala-web-watch with the full design, `.claude/` convention, WP0.1 files and a guarded `test.yml`. `data` branch bootstrapped. Human to-dos: DNS CNAME for govwebsite.hashin.me, Pages source = GitHub Actions + custom domain, Actions workflow permissions read/write, answer open question 2 (contact email). Start WP0.2.
+- **2026-09-19 · init** — Repo created at github.com/hashin/kerala-web-watch with the full design, `.claude/` convention, WP0.1 files and a guarded `test.yml`. `data` branch bootstrapped. Pages already set to source=GitHub Actions with custom domain govwebsite.hashin.me; Actions workflow permissions already read/write. Human to-dos: (1) add DNS record `govwebsite.hashin.me CNAME hashin.github.io` at the hashin.me registrar; (2) once it resolves, tick *Enforce HTTPS* in Settings → Pages; (3) answer open question 2 (contact email). Start WP0.2.
 - **2026-09-19 · design** — Design (docs/DESIGN.md), agent rules (CLAUDE.md), ADRs 001–018 and this ledger written. No code exists. Start with WP0.1 once the human answers open questions 1, 2 and 4.
