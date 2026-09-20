@@ -1,0 +1,47 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HealthBadge from '../../components/HealthBadge.astro';
+import { getSites } from '../../lib/data';
+
+export function getStaticPaths() {
+  return getSites().map((site) => ({ params: { id: site.id }, props: { site } }));
+}
+
+const { site } = Astro.props;
+---
+
+<Layout title={site.name} description={`Status and audit findings for ${site.name}.`}>
+  <p><a href="/">&larr; All sites</a></p>
+  <h1>
+    {site.name}
+    {site.name_ml && <span lang="ml"> &middot; {site.name_ml}</span>}
+  </h1>
+  <p>
+    <a href={site.url}>{site.url}</a>
+    &nbsp;<HealthBadge status={site.status} />
+  </p>
+
+  <dl>
+    <dt>Tier</dt>
+    <dd>{site.tier}</dd>
+    <dt>Kind</dt>
+    <dd>{site.kind}</dd>
+    <dt>Department</dt>
+    <dd>{site.department}</dd>
+    {site.district && (
+      <>
+        <dt>District</dt>
+        <dd>{site.district}</dd>
+      </>
+    )}
+  </dl>
+
+  {site.status === 'unaudited' && (
+    <p>
+      This site has not been deep-audited yet. Findings will appear here once Phase 3's audit
+      checks are running (see the <a href="/methodology/">methodology</a> page).
+    </p>
+  )}
+
+  <p><a href={`https://github.com/hashin/kerala-web-watch/issues/new?title=${encodeURIComponent(`Correction: ${site.name}`)}`}>Suggest a correction</a></p>
+</Layout>

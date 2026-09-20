@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HealthBadge from '../components/HealthBadge.astro';
+import { getSites, getSummary } from '../lib/data';
+
+const sites = getSites().sort((a, b) => a.name.localeCompare(b.name));
+const summary = getSummary();
+const coveragePct = summary.coverage.total === 0
+  ? 0
+  : Math.round((summary.coverage.deep_audited / summary.coverage.total) * 100);
+---
+
+<Layout
+  title="Home"
+  description="Tracking which Government of Kerala websites are up, down or broken, and why."
+>
+  <h1>Kerala Web Watch</h1>
+  <p>
+    Tracking <strong>{sites.length}</strong> Government of Kerala websites. This registry is still
+    being built (Phase 0/1) &mdash; deep audits have not started yet, so every site below shows as
+    "Not yet audited".
+  </p>
+
+  <section aria-labelledby="coverage-heading">
+    <h2 id="coverage-heading">Audit coverage</h2>
+    <p>{summary.coverage.deep_audited} of {summary.coverage.total} sites deep-audited ({coveragePct}%)</p>
+    <div class="coverage-bar" role="img" aria-label={`${coveragePct}% of sites deep-audited`}>
+      <span style={`width: ${coveragePct}%`}></span>
+    </div>
+  </section>
+
+  <section aria-labelledby="sites-heading">
+    <h2 id="sites-heading">All tracked sites</h2>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Tier</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {sites.map((site) => (
+          <tr>
+            <td><a href={`/sites/${site.id}/`}>{site.name}</a></td>
+            <td>{site.tier}</td>
+            <td><HealthBadge status={site.status} /></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+</Layout>

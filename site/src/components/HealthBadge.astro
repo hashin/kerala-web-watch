@@ -1,0 +1,44 @@
+---
+import type { Status } from '../lib/data';
+
+interface Props {
+  status: Status;
+}
+
+const { status } = Astro.props;
+
+// Status is never conveyed by colour alone (DESIGN §7.4): each badge pairs an icon with a word.
+const LABELS: Record<Status, { icon: string; word: string; tone: string }> = {
+  down: { icon: '\u{1F534}', word: 'Down', tone: 'bad' },
+  hijacked: { icon: '⛔', word: 'Possibly hijacked — do not visit', tone: 'bad' },
+  broken: { icon: '\u{1F534}', word: 'Broken', tone: 'bad' },
+  unverifiable: { icon: '⚪', word: 'Unverifiable', tone: 'neutral' },
+  unaudited: { icon: '⚪', word: 'Not yet audited', tone: 'neutral' },
+  healthy: { icon: '\u{1F7E2}', word: 'Healthy', tone: 'good' },
+  'needs-work': { icon: '\u{1F7E1}', word: 'Needs work', tone: 'warn' },
+  poor: { icon: '\u{1F7E0}', word: 'Poor', tone: 'bad' },
+};
+
+const label = LABELS[status];
+---
+
+<span class={`health-badge health-badge--${label.tone}`}>
+  <span aria-hidden="true">{label.icon}</span> {label.word}
+</span>
+
+<style>
+  .health-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    padding: 0.15em 0.6em;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid currentColor;
+  }
+  .health-badge--good { color: var(--color-good); }
+  .health-badge--warn { color: var(--color-warn); }
+  .health-badge--bad { color: var(--color-bad); }
+  .health-badge--neutral { color: var(--color-neutral); }
+</style>

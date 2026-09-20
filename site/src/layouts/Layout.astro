@@ -1,0 +1,41 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  lang?: string;
+}
+
+const { title, description, lang = 'en' } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} · Kerala Web Watch</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="icon" href="data:," />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <nav aria-label="Primary">
+        <a href="/">Kerala Web Watch</a>
+        · <a href="/methodology/">Methodology</a>
+        · <a href="/about/">About</a>
+      </nav>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <p>
+        Kerala Web Watch is an independent, open-data civic audit. No cookies, no analytics, no
+        third-party requests. <a href="/about/">About &amp; contact</a>.
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const buildDate = new Date().toISOString().slice(0, 10);
+---
+
+<Layout
+  title="About"
+  description="Who runs Kerala Web Watch, why it exists, and how to contact or contribute."
+>
+  <h1>About Kerala Web Watch</h1>
+
+  <p>
+    Kerala Web Watch is an independent, open-source civic project. It is <strong>not</strong> an
+    official Government of Kerala service and is not affiliated with any department it audits.
+    It exists so a citizen can check, in plain language, whether a government website works right
+    now, and so a webmaster can see exactly what to fix.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    Source and issue tracker:
+    <a href="https://github.com/hashin/kerala-web-watch">github.com/hashin/kerala-web-watch</a>.
+    A public contact email is not yet set (tracked as an open question in the project's own
+    <a href="https://github.com/hashin/kerala-web-watch/blob/main/docs/STATE.md">STATE.md</a>) &mdash;
+    until then, please use a GitHub issue.
+  </p>
+
+  <h2>Contribute</h2>
+  <p>
+    Found a site we're missing, or a wrong entry? Open an issue or a pull request against the
+    <a href="https://github.com/hashin/kerala-web-watch/tree/main/registry">registry</a>.
+  </p>
+
+  <h2>Accessibility</h2>
+  <p>
+    We aim for WCAG 2.1 AA on our own pages: semantic HTML, a skip link, visible keyboard focus,
+    and status that is never conveyed by colour alone. This is a stub statement &mdash; a full
+    accessibility statement with a way to report barriers will replace it once the site's own
+    audit results exist (we intend to pass our own checks).
+  </p>
+
+  <h2>Privacy</h2>
+  <p>
+    No cookies, no analytics, no third-party requests of any kind on this site. Fonts are
+    self-hosted. See <a href="/fonts/OFL.txt">/fonts/OFL.txt</a> for the Malayalam typeface's
+    licence.
+  </p>
+
+  <h2>Licence</h2>
+  <p>
+    Code is MIT-licensed; the registry and audit data are CC-BY-4.0. Both are in the
+    <a href="https://github.com/hashin/kerala-web-watch">repository</a>.
+  </p>
+
+  <p>
+    <a href="/sitemap-index.xml">Sitemap</a> &middot; Last updated {buildDate}
+  </p>
+</Layout>

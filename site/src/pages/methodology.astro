@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Methodology"
+  description="How Kerala Web Watch audits government websites: what it checks, and its limits."
+>
+  <h1>Methodology</h1>
+
+  <p>
+    <strong>Current status:</strong> the audit suite itself (Phase 3 of this project) has not been
+    built yet. Every site currently shows "Not yet audited" &mdash; nothing on this site is
+    invented or estimated in the meantime. This page describes the plan so it can be checked
+    against what actually ships.
+  </p>
+
+  <h2>Principles</h2>
+  <ul>
+    <li>
+      <strong>Passive only.</strong> We fetch pages like a browser would &mdash; the homepage and
+      a bounded set of same-site links. No path guessing, no port scans, no form submissions, no
+      login attempts. Security findings come only from response headers and page contents.
+    </li>
+    <li>
+      <strong>Polite.</strong> At most one request per second per site, bounded page/PDF counts
+      per audit, and a `robots.txt`-respecting, self-identifying User-Agent.
+    </li>
+    <li>
+      <strong>Reproducible.</strong> Every check is a pure function of the fetched response to a
+      pass/warn/fail/not-applicable result with evidence attached.
+    </li>
+    <li>
+      <strong>Explainable.</strong> Every finding will show what it means for a citizen and how a
+      webmaster can fix it &mdash; never a bare internal check id.
+    </li>
+    <li>
+      <strong>Charitable.</strong> A site is only called "down" after two consecutive failed
+      checks. A site unreachable only from our vantage point is "unverifiable", not "down".
+    </li>
+  </ul>
+
+  <h2>Two tiers of checks</h2>
+  <p>
+    A <strong>light check</strong> (planned every 6 hours, for every site) will look at
+    reachability, HTTP status, redirects, TLS certificate validity, response time and security
+    headers. A <strong>deep audit</strong> (planned daily, on a rolling batch) will add
+    accessibility, performance, content and GIGW-compliance checks, plus a screenshot.
+  </p>
+
+  <h2>Status definitions</h2>
+  <table>
+    <thead>
+      <tr><th scope="col">Status</th><th scope="col">Meaning</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Down</td><td>Two consecutive failed light checks (DNS, connection, or HTTP status).</td></tr>
+      <tr><td>Possibly hijacked</td><td>The domain now serves a parked page, an off-site redirect, or trips a known-malware check.</td></tr>
+      <tr><td>Broken</td><td>Reachable, but blank, a default install page, "under construction", or an invalid TLS certificate that a browser would block.</td></tr>
+      <tr><td>Unverifiable</td><td>Unreachable only from our vantage point (for example, geo-blocked) &mdash; not counted as down.</td></tr>
+      <tr><td>Healthy / Needs work / Poor</td><td>A deep-audit score of 80+, 50&ndash;79, or below 50 across security, accessibility, content, GIGW compliance, performance and identity.</td></tr>
+      <tr><td>Not yet audited</td><td>No deep audit has run for this site yet.</td></tr>
+    </tbody>
+  </table>
+
+  <p>
+    See <a href="https://github.com/hashin/kerala-web-watch/blob/main/docs/DESIGN.md">docs/DESIGN.md</a>
+    in the repository for the full design, including the complete check catalogue once it exists.
+  </p>
+</Layout>
