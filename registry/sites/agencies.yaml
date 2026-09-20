@@ -397,7 +397,7 @@
 - id: rcctvm
   name: Regional Cancer Centre, Thiruvananthapuram
   url: https://www.rcctvm.gov.in
-  aliases: []
+  aliases: [https://www.rcctvm.org]
   tier: agency
   kind: agency
   department: health
@@ -595,7 +595,7 @@
 - id: ikm
   name: Information Kerala Mission (IKM)
   url: https://www.ikm.gov.in
-  aliases: []
+  aliases: [https://www.infokerala.org]
   tier: agency
   kind: mission
   department: lsgd
@@ -609,7 +609,7 @@
   source: registry/candidates (WP1.2/1.3 crawls, WP1.6 curation)
   added: '2026-09-20'
   lifecycle: active
-  notes: ''
+  notes: "WP1.7: the primary url (www.ikm.gov.in) returned HTTP 400 at verification (2026-09-21) -- it was a DESIGN.md Appendix A 'from memory' guess, never confirmed live. The alias infokerala.org is live and correctly titled. Left the primary url as-is per ADR-005 (flag, don't silently fix); a human should decide whether to promote the alias to primary."
 - id: keralahousedelhi
   name: Kerala House, New Delhi (Office of the Resident Commissioner)
   url: https://keralahouse.kerala.gov.in
@@ -1259,3 +1259,525 @@
   added: '2026-09-20'
   lifecycle: active
   notes: ''
+- id: dtpcalappuzha
+  name: DTPC Alappuzha
+  url: https://www.dtpcalappuzha.com
+  aliases: []
+  tier: agency
+  kind: agency
+  department: tourism
+  org_parent: null
+  scope: state
+  district: alappuzha
+  place: alappuzha
+  platform: null
+  priority: 1
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: ''
+- id: keralaservices
+  name: Kerala Government Services Portal
+  url: https://services.kerala.gov.in
+  aliases: []
+  tier: agency
+  kind: service
+  department: eit
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 3
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: "WP1.7: returned 503 at verification time (2026-09-21); registered anyway per ADR-005 (a temporary outage is a finding for the light check, not a reason to omit a real government portal)."
+- id: nregskerala
+  name: MGNREGS Kerala
+  url: https://nregs.kerala.gov.in
+  aliases: []
+  tier: agency
+  kind: service
+  department: lsgd
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 2
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: ''
+- id: rtikerala
+  name: Kerala Right to Information Portal
+  url: http://rti.kerala.gov.in
+  aliases: []
+  tier: agency
+  kind: service
+  department: gad
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 2
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: ''
+- id: etreasurykerala
+  name: e-Treasury
+  url: https://etreasury.kerala.gov.in
+  aliases: []
+  tier: agency
+  kind: service
+  department: fin
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 2
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: "WP1.7: distinct citizen/officer payment portal from the Treasury Department site (id treasury) -- same department, different e-service."
+- id: parambikulam
+  name: Parambikulam Tiger Reserve
+  url: https://www.parambikulam.org
+  aliases: []
+  tier: agency
+  kind: agency
+  department: forest
+  org_parent: null
+  scope: state
+  district: palakkad
+  place: palakkad
+  platform: null
+  priority: 2
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: "WP1.7: the reserve itself is not in places.yaml -- filed under the district town (Palakkad) instead of inventing a place record, same approach as kalamandalam."
+- id: selfkerala
+  name: SELF (System for Easy and Legal issuance of Fuel permit)
+  url: https://self.kerala.gov.in
+  aliases: []
+  tier: agency
+  kind: service
+  department: transport
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 1
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: ''
+- id: compose
+  name: COMPOSE (Comprehensive Operations and Management of Presses Over Secure Environment)
+  url: https://compose.kerala.gov.in
+  aliases: []
+  tier: agency
+  kind: service
+  department: gad
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 1
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: "WP1.7: Government Presses e-service; no dedicated Printing & Stationery department id exists in departments.yaml, filed under General Administration."
+- id: kcis
+  name: K-CIS (Kerala Central Inspection System)
+  url: https://kcis.kerala.gov.in
+  aliases: []
+  tier: agency
+  kind: service
+  department: labour
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 2
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: ''
+- id: kstmuseum
+  name: Kerala State Science and Technology Museum and Priyadarshini Planetarium
+  url: https://kstmuseum.com
+  aliases: []
+  tier: agency
+  kind: agency
+  department: st
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 1
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: ''
+- id: vasthuvidyagurukulam
+  name: Vasthuvidya Gurukulam
+  url: https://vasthuvidyagurukulam.com
+  aliases: []
+  tier: agency
+  kind: agency
+  department: culture
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 1
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: "WP1.7: exact HQ location unconfirmed; filed under state default (Thiruvananthapuram) per WP1.7 step 2. A near-identical domain without the \"h\" (vastuvidyagurukulam.com) failed to connect -- not registered."
+- id: auegskerala
+  name: AUEGS (Ayyankali Urban Employment Guarantee Scheme)
+  url: https://auegsmis.kerala.gov.in
+  aliases: []
+  tier: agency
+  kind: service
+  department: lsgd
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 1
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: ''
+- id: keralanews
+  name: Kerala News - I&PRD Portal
+  url: https://keralanews.gov.in
+  aliases: []
+  tier: agency
+  kind: agency
+  department: prd
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 1
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: ''
+- id: gksf
+  name: Grand Kerala Shopping Festival
+  url: https://www.shoppingfestival.in
+  aliases: []
+  tier: agency
+  kind: agency
+  department: tourism
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 1
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: "WP1.7: site content appears to still reference a 2015-2016 edition of the festival as of verification -- flagged per ADR-005, not silently updated."
+- id: ehousingkerala
+  name: e-Housing (Disbursement of Housing Assistance to SC/ST)
+  url: https://e-housing.kerala.gov.in
+  aliases: []
+  tier: agency
+  kind: service
+  department: scst
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 1
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: ''
+- id: kdisc
+  name: Kerala Development and Innovation Strategic Council (K-DISC)
+  url: https://kdisc.kerala.gov.in
+  aliases: []
+  tier: agency
+  kind: agency
+  department: plan
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 3
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: ''
+- id: ksdi
+  name: Kerala State Spatial Data Infrastructure (KSDI)
+  url: https://www.ksdi.kerala.gov.in
+  aliases: []
+  tier: agency
+  kind: agency
+  department: revenue
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 1
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: ''
+- id: karunya
+  name: Karunya Benevolent Fund
+  url: http://www.karunya.kerala.gov.in
+  aliases: []
+  tier: agency
+  kind: agency
+  department: health
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 2
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: ''
+- id: ipaffairs
+  name: Institute of Parliamentary Affairs (INPA)
+  url: http://ipaffairs.org
+  aliases: []
+  tier: agency
+  kind: agency
+  department: parl
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 1
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: ''
+- id: keralasamakhya
+  name: Kerala Mahila Samakhya Society
+  url: https://keralasamakhya.org
+  aliases: []
+  tier: agency
+  kind: society
+  department: wcd
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 1
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: ''
+- id: bharatbhavan
+  name: Bharat Bhavan
+  url: https://www.bharatbhavankerala.org
+  aliases: []
+  tier: agency
+  kind: agency
+  department: culture
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 1
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: ''
+- id: basheersmarakatrust
+  name: Vaikom Muhammad Basheer Smaraka Trust
+  url: https://www.basheersmarakatrust.com
+  aliases: []
+  tier: agency
+  kind: agency
+  department: culture
+  org_parent: null
+  scope: state
+  district: kottayam
+  place: kottayam
+  platform: null
+  priority: 1
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: "WP1.7: Basheer Smaraka is at Thalayolaparambu near Vaikom; filed under the district town (Kottayam), same approach as kalamandalam."
+- id: malayalammission
+  name: Malayalam Mission
+  url: https://www.mm.kerala.gov.in
+  aliases: []
+  tier: agency
+  kind: agency
+  department: culture
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 2
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: ''
+- id: sarvavijnanakosam
+  name: State Institute of Encyclopaedic Publications (Sarvavijnanakosam)
+  url: http://www.sarvavijnanakosam.gov.in
+  aliases: []
+  tier: agency
+  kind: agency
+  department: culture
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 1
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: ''
+- id: ksom
+  name: Kerala School of Mathematics
+  url: https://www.ksom.res.in
+  aliases: []
+  tier: agency
+  kind: agency
+  department: hedu
+  org_parent: null
+  scope: state
+  district: kozhikode
+  place: kozhikode
+  platform: null
+  priority: 1
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: "WP1.7: located at Kunnamangalam, Kozhikode; filed under the district town, same approach as kalamandalam."
+- id: thulasi
+  name: Thulasi (Kerala Public Service Commission Online Application System)
+  url: https://thulasi.psc.kerala.gov.in
+  aliases: []
+  tier: agency
+  kind: service
+  department: gad
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 3
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: ''
+- id: dcescholarship
+  name: Directorate of Collegiate Education Scholarship Portal
+  url: https://www.dcescholarship.kerala.gov.in
+  aliases: []
+  tier: agency
+  kind: service
+  department: hedu
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 2
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: ''
+- id: lsgtender
+  name: Local Self Government Department e-Tendering Portal
+  url: https://tender.lsgkerala.gov.in
+  aliases: []
+  tier: agency
+  kind: service
+  department: lsgd
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 1
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: ''
+- id: sabarimaladevaswom
+  name: Sabarimala Sree Dharma Sastha Temple (Travancore Devaswom Board)
+  url: https://sabarimala.kerala.gov.in
+  aliases: []
+  tier: agency
+  kind: agency
+  department: devaswom
+  org_parent: null
+  scope: state
+  district: pathanamthitta
+  place: pathanamthitta
+  platform: null
+  priority: 3
+  tags: []
+  source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
+  added: '2026-09-21'
+  lifecycle: active
+  notes: "WP1.7: temple itself is not in places.yaml -- filed under the district town (Pathanamthitta) instead of inventing a place record, same approach as kalamandalam."
