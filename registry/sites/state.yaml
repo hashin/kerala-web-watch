@@ -67,7 +67,7 @@
   name: Kerala Legislative Assembly
   name_ml: "കേരള നിയമസഭ"
   url: https://niyamasabha.org
-  aliases: []
+  aliases: [https://kerala.neva.gov.in]
   tier: state
   kind: legislature
   department: parl
@@ -82,7 +82,7 @@
   source: "docs/DESIGN.md Appendix A"
   added: "2026-09-20"
   lifecycle: active
-  notes: ""
+  notes: "WP1.7: kerala.neva.gov.in is the Assembly's instance of the central National eVidhan Application (NeVA) -- same organisation, added as an alias rather than a separate central-government entry."
 
 - id: edistrict
   name: e-District Kerala
@@ -172,7 +172,7 @@
   name: Registration Department
   name_ml: "രജിസ്ട്രേഷൻ വകുപ്പ്"
   url: https://igr.kerala.gov.in
-  aliases: []
+  aliases: [https://registration.kerala.gov.in, https://keralaregistration.gov.in]
   tier: directorate
   kind: directorate
   department: regn
@@ -187,7 +187,7 @@
   source: "docs/DESIGN.md Appendix A"
   added: "2026-09-20"
   lifecycle: active
-  notes: ""
+  notes: "WP1.7: the primary url (igr.kerala.gov.in) currently serves only a 'Fair Value of Land' tool page, not a department homepage -- the department's actual homepage now lives at the alias registration.kerala.gov.in (keralaregistration.gov.in 301-redirects there too). Left the primary url as-is per ADR-005 (flag, don't silently fix); a human should decide whether to promote the alias to primary."
 
 - id: keralamvd
   name: Motor Vehicles Department
