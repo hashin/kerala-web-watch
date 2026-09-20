@@ -127,3 +127,22 @@ the block/district panchayat gap ADR-021 flagged.
 **Consequence:** ADR-021's schema-level allowance (`Place.lat`/`Place.lon` nullable) stays in place as a safety net
 for any future code that fails to match a boundary, but is no longer expected to be hit for LSGI places. `topojson-client`,
 `d3-geo` and their `@types` packages are new root devDependencies, used only by this harvest script.
+
+## ADR-024 · District portal harvest targets homepages, not "Departments" pages · Accepted · 2026-09-20
+WP1.5's own text assumed the 14 `<district>.nic.in` (S3WaaS) portals link out to external department/office
+websites from their "Departments"/"Public Utilities"/"Department Directory" pages, the same shape as WP1.2's
+kerala.gov.in harvest. Checked by hand across five districts (Trivandrum, Ernakulam, Pathanamthitta, Kozhikode,
+Thrissur) and every page type those sections offer: they are consistently informational only -- office name,
+phone, a personal staff member's name and email -- with zero outbound `<a href>` links, and scraping the personal
+names would cross into privacy territory this project doesn't need for a website registry regardless. The one
+place genuine external links do appear is each district's own homepage (notices, quick-links widgets), which
+varies district to district and does surface real Kerala state/district sites (e.g. `dtpcalappuzha.com`,
+`keralamvd.gov.in`) alongside a large, near-identical block of central-government/platform links (India.gov.in,
+Digital India, PMNRF, NIC, MeitY, S3WaaS, social media, app-store, YouTube-embed noise). `scripts/harvest/district-portals.ts`
+harvests the homepage instead, with a hand-verified `IGNORE_HOSTS` map (every entry actually observed, not
+guessed) routing that central/platform noise to `registry/ignore.yaml` rather than the candidates files.
+**Consequence:** WP1.5's per-district candidate counts are driven by whatever each homepage happens to link to
+(2 for Wayanad's differently-templated site, up to 26 for Pathanamthitta) rather than a uniform "Departments"
+crawl; this is recorded honestly rather than padded. The 14 collectorate portal URLs themselves are always
+included as one certain candidate per district (`hints.kind: district_admin`), since DESIGN §2's T4 row counts
+them as sites in their own right regardless of what else a given homepage links to.
