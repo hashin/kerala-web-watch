@@ -18,8 +18,12 @@ export interface CategorizedCandidates {
   fresh: FiledCandidate[];
 }
 
+// no-website.yaml (WP1.6) records organisations with no discoverable URL at all -- {name, source,
+// reason}, not a Candidate -- so it's excluded from the url-keyed dedupe/categorize pipeline here.
+const NON_CANDIDATE_FILES = new Set(['no-website.yaml']);
+
 function readAllCandidates(): FiledCandidate[] {
-  const files = readdirSync(CANDIDATES_DIR).filter((f) => f.endsWith('.yaml'));
+  const files = readdirSync(CANDIDATES_DIR).filter((f) => f.endsWith('.yaml') && !NON_CANDIDATE_FILES.has(f));
   return files.flatMap((file) => {
     const entries = (parseYaml(readFileSync(join(CANDIDATES_DIR, file), 'utf8')) as Candidate[]) ?? [];
     return entries.map((candidate) => ({ ...candidate, file }));
