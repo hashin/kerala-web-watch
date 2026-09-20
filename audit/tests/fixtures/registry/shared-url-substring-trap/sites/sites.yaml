@@ -1,0 +1,46 @@
+# Neither side has a genuine mutual shares-url-with marker naming the OTHER site, but each
+# site's notes happens to contain the other's id as a plain substring inside unrelated prose (no
+# "shares-url-with:" prefix). A check that does a raw `notes.includes(otherId)` instead of parsing
+# the `shares-url-with:<id>` marker and comparing ids exactly would be fooled into treating this as
+# documented; the correct regex-bounded check must still see it as an undocumented collision.
+- id: central-office
+  name: Central Office
+  name_ml: "സെൻട്രൽ ഓഫീസ്"
+  url: http://sharedportal.lsgkerala.gov.in
+  aliases: []
+  tier: lsg
+  kind: grama_panchayat
+  department: fin
+  org_parent: null
+  scope: local
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  lsg_type: grama_panchayat
+  platform: lsgkerala
+  priority: 1
+  tags: []
+  source: "test fixture"
+  added: "2026-09-20"
+  lifecycle: active
+  notes: "This page was migrated from the old site; see backup-portal for legacy content."
+
+- id: backup-portal
+  name: Backup Portal
+  name_ml: "ബാക്കപ്പ് പോർട്ടൽ"
+  url: http://sharedportal.lsgkerala.gov.in
+  aliases: []
+  tier: lsg
+  kind: grama_panchayat
+  department: fin
+  org_parent: null
+  scope: local
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  lsg_type: grama_panchayat
+  platform: lsgkerala
+  priority: 1
+  tags: []
+  source: "test fixture"
+  added: "2026-09-20"
+  lifecycle: active
+  notes: "shares-url-with:central-office (ADR-022, source lists the same URL for both)"

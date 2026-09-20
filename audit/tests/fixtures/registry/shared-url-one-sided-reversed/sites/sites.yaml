@@ -1,0 +1,45 @@
+# Same pair as shared-url-one-sided/, but with the unmarked entry listed FIRST and the marked
+# entry SECOND -- the opposite order. A check that only inspects the second-processed site's own
+# notes (dropping the mutual AND) would pass this fixture by accident if the marked entry always
+# came second; listing it here in the other order pins that down regardless of file order.
+- id: alakode-kannur
+  name: Alakode Grama Panchayat
+  name_ml: "അളകോട് ഗ്രാമപഞ്ചായത്ത്"
+  url: http://alakodepanchayat.lsgkerala.gov.in
+  aliases: []
+  tier: lsg
+  kind: grama_panchayat
+  department: fin
+  org_parent: null
+  scope: local
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  lsg_type: grama_panchayat
+  platform: lsgkerala
+  priority: 1
+  tags: []
+  source: "test fixture"
+  added: "2026-09-20"
+  lifecycle: active
+  notes: ""
+
+- id: alakode-idukki
+  name: Alakode Grama Panchayat
+  name_ml: "അളകോട് ഗ്രാമപഞ്ചായത്ത്"
+  url: http://alakodepanchayat.lsgkerala.gov.in
+  aliases: []
+  tier: lsg
+  kind: grama_panchayat
+  department: fin
+  org_parent: null
+  scope: local
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  lsg_type: grama_panchayat
+  platform: lsgkerala
+  priority: 1
+  tags: []
+  source: "test fixture"
+  added: "2026-09-20"
+  lifecycle: active
+  notes: "shares-url-with:alakode-kannur (ADR-022, source lists the same URL for both)"

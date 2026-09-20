@@ -51,6 +51,16 @@ describe('validateRegistry: rule violations', () => {
     expect(failures.some((f) => f.rule === 'unique-url')).toBe(true);
   });
 
+  it('ADR-022: one-sided rejection holds regardless of which entry is listed first', () => {
+    const failures = validateRegistry(fixture('shared-url-one-sided-reversed'));
+    expect(failures.some((f) => f.rule === 'unique-url')).toBe(true);
+  });
+
+  it('ADR-022: a coincidental id substring in unrelated notes text does not count as documented', () => {
+    const failures = validateRegistry(fixture('shared-url-substring-trap'));
+    expect(failures.some((f) => f.rule === 'unique-url')).toBe(true);
+  });
+
   it('rejects a site referencing a department that does not exist', () => {
     const failures = validateRegistry(fixture('bad-department-ref'));
     expect(failures).toEqual([
