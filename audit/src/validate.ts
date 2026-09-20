@@ -131,7 +131,15 @@ function crossReferenceFailures(
   const failures: ValidationFailure[] = [];
   const siteIds = new Set(rawSites.map((r) => r.site.id));
   const seenIds = new Map<string, string>();
-  const seenUrls = new Map<string, string>();
+  const seenUrls = new Map<string, { file: string; site: Site }>();
+
+  // ADR-022: two distinct, real organisations can end up sharing one URL at the source (e.g.
+  // two same-named panchayats colliding on lsgkerala.gov.in's name-based subdomains). That is a
+  // documented fact, not a duplicate-registration bug, when both entries' `notes` mark it.
+  const sharesUrlWith = (site: Site, otherId: string) => {
+    const match = site.notes.match(/shares-url-with:(\S+)/);
+    return match ? match[1].split(',').includes(otherId) : false;
+  };
 
   for (const { file, site } of rawSites) {
     const fail = (rule: string, message: string) => failures.push({ file, id: site.id, rule, message });
@@ -147,11 +155,12 @@ function crossReferenceFailures(
       } catch {
         continue; // malformed URLs are already reported by the schema check
       }
-      const priorUrlFile = seenUrls.get(normalized);
-      if (priorUrlFile && priorUrlFile !== `${file}:${site.id}`) {
-        fail('unique-url', `url "${normalized}" also used by ${priorUrlFile}`);
+      const prior = seenUrls.get(normalized);
+      if (prior && prior.site.id !== site.id) {
+        const documented = sharesUrlWith(site, prior.site.id) && sharesUrlWith(prior.site, site.id);
+        if (!documented) fail('unique-url', `url "${normalized}" also used by ${prior.file}:${prior.site.id}`);
       } else {
-        seenUrls.set(normalized, `${file}:${site.id}`);
+        seenUrls.set(normalized, { file, site });
       }
     }
 

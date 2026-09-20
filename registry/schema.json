@@ -54,14 +54,14 @@
     "Place": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "name", "district", "lat", "lon"],
+      "required": ["id", "name", "district"],
       "properties": {
         "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
         "name": { "type": "string", "minLength": 1 },
         "name_ml": { "type": "string" },
         "district": { "type": "string" },
-        "lat": { "type": "number", "minimum": 8, "maximum": 13 },
-        "lon": { "type": "number", "minimum": 74, "maximum": 78 }
+        "lat": { "type": ["number", "null"], "minimum": 8, "maximum": 13, "default": null },
+        "lon": { "type": ["number", "null"], "minimum": 74, "maximum": 78, "default": null }
       }
     },
     "Minister": {

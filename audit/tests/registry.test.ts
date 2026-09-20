@@ -41,6 +41,16 @@ describe('validateRegistry: rule violations', () => {
     expect(failures.some((f) => f.rule === 'unique-url')).toBe(true);
   });
 
+  it('ADR-022: allows a shared url when both sites mutually document it in notes', () => {
+    const failures = validateRegistry(fixture('shared-url-documented'));
+    expect(failures.some((f) => f.rule === 'unique-url')).toBe(false);
+  });
+
+  it('ADR-022: still rejects a shared url when only one side documents it', () => {
+    const failures = validateRegistry(fixture('shared-url-one-sided'));
+    expect(failures.some((f) => f.rule === 'unique-url')).toBe(true);
+  });
+
   it('rejects a site referencing a department that does not exist', () => {
     const failures = validateRegistry(fixture('bad-department-ref'));
     expect(failures).toEqual([

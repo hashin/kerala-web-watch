@@ -86,3 +86,44 @@ and Pages. DNS (`CNAME govwebsite → hashin.github.io`) and "Enforce HTTPS" are
 The generic architect/builder/verifier/explainer convention (`.claude/agents/`) is adopted with two adjustments: the main
 session is the builder for WP work (the WPs already carry acceptance criteria), and `architect` is reserved for non-WP work.
 `.claude/settings.json` disables auto-memory so nothing lives outside git.
+
+## ADR-021 · `place.lat`/`place.lon` are optional · Accepted · 2026-09-20
+WP1.4 (harvesting all 1,200 LSGIs) asks for a `places.yaml` entry per local body, but lsgkerala.gov.in's own directory
+gives name/code/website only — no coordinates — and there is no authoritative source for 1,200 individual panchayat
+centroids to hand. Fabricating coordinates would be exactly the kind of invented data `CLAUDE.md` forbids for URLs;
+the same principle applies here. Wikidata (queried live by `scripts/harvest/lsgkerala.ts` via SPARQL, matched by name
++ district) supplies real coordinates for most grama panchayats, municipalities and corporations, but has essentially
+no coverage for block or district panchayats. Rather than block the whole harvest on this gap, `registry/schema.json`'s
+`Place.lat`/`Place.lon` become optional (`null` allowed); a site's own registry entry, id and district are unaffected
+and fully populated regardless of whether its place has coordinates yet.
+**Consequence:** the map (Phase 4) must handle a place with no coordinates (omit it, or show it unplaced) rather than
+assume every place plots. A future WP can backfill the remaining gaps from a proper geocoding pass or corrected
+Wikidata data.
+
+## ADR-022 · A documented `notes` marker, not a guess, resolves genuine shared-URL collisions · Accepted · 2026-09-20
+WP1.4's harvest found 5 pairs of distinct grama panchayats (different codes, different districts -- e.g. Alakode in
+Idukki and Alakode in Kannur) whose lsgkerala.gov.in listing gives the *identical* website URL. The platform names
+panchayat subdomains after the panchayat's name, not its code, so two same-named panchayats in different districts
+genuinely collide; the templated homepage (generic Malayalam "Home | Grama Panchayat" title) gives no way to tell
+which organisation the live site actually belongs to, and picking one would be inventing a fact `CLAUDE.md` forbids.
+Both organisations are real and belong in the registry (ADR-008/ADR-012), so neither entry is dropped. Each of the
+10 affected entries' `notes` records `shares-url-with:<other-id>` naming its pair; `crossReferenceFailures` in
+`audit/src/validate.ts` treats a `unique-url` collision as resolved, not failed, only when both sides carry that
+exact mutual marker -- an ordinary accidental duplicate registration (no marker) still fails loud.
+**Consequence:** this is a live citizen-facing bug on lsgkerala.gov.in itself (one district's official panchayat URL
+may show another district's panchayat), not a bug in our data. Phase 2/3 audit checks should flag org-identity
+mismatches like this on their own merits; this ADR only covers how the registry records the ambiguity.
+
+## ADR-023 · LSGI place coordinates come from opendatakerala.org boundary polygons, not Wikidata · Accepted · 2026-09-20
+ADR-021 accepted null coordinates for block/district panchayats because Wikidata had essentially no P625 claims for
+those two LSGI types. Directed to opendatakerala.org (the same source ADR-021 already pointed at for LSGI data),
+`scripts/harvest/lsgkerala.ts` found its 2025 election portal publishes topojson boundary polygons for all five
+LSGI types, each feature carrying an `LSG_code` in the exact same format as lsgkerala.gov.in's own Localbody Code.
+Matching by code (via `topojson-client` to decode + `d3-geo`'s `geoCentroid` for a proper spherical centroid) is
+exact, unlike the Wikidata lookup's name/slug matching, which also mismatched on real naming differences (Kochi
+Corporation vs. Wikidata's "Cochin Municipal Corporation") until manually patched. This replaces the Wikidata
+SPARQL lookup entirely: all 1200 LSGI places (up from 1019/1200) now get a real, source-derived coordinate, closing
+the block/district panchayat gap ADR-021 flagged.
+**Consequence:** ADR-021's schema-level allowance (`Place.lat`/`Place.lon` nullable) stays in place as a safety net
+for any future code that fails to match a boundary, but is no longer expected to be hit for LSGI places. `topojson-client`,
+`d3-geo` and their `@types` packages are new root devDependencies, used only by this harvest script.

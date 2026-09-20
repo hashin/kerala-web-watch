@@ -2,18 +2,24 @@
   "name": "kerala-web-watch",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "description": "Root tooling for one-off scripts (see CLAUDE.md); audit/ and site/ are the real packages.",
   "scripts": {
     "test": "tsx --test scripts/harvest/*.test.ts"
   },
   "dependencies": {
+    "d3-geo": "^3.1.1",
     "js-yaml": "^4.1.0",
-    "linkedom": "^0.18.13"
+    "linkedom": "^0.18.13",
+    "topojson-client": "^3.1.0"
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^22.10.2",
+    "@types/topojson-client": "^3.1.5",
+    "@types/topojson-specification": "^1.0.5",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2"
   }

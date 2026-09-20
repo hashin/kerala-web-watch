@@ -62,8 +62,8 @@ export interface Place {
   name: string;
   name_ml?: string;
   district: string;
-  lat: number;
-  lon: number;
+  lat: number | null;
+  lon: number | null;
 }
 
 export interface Minister {
