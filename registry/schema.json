@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://govwebsite.hashin.me/schema/registry.json",
+  "$defs": {
+    "Site": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "url", "tier", "kind", "department", "scope", "priority", "source", "added", "lifecycle"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{1,48}$" },
+        "name": { "type": "string", "minLength": 1 },
+        "name_ml": { "type": "string" },
+        "url": { "type": "string", "format": "uri", "pattern": "^https?://" },
+        "aliases": { "type": "array", "items": { "type": "string", "format": "uri", "pattern": "^https?://" }, "default": [] },
+        "tier": { "enum": ["state", "directorate", "agency", "statutory", "university", "college", "psu", "district", "lsg"] },
+        "kind": { "type": "string", "minLength": 1 },
+        "department": { "type": "string" },
+        "org_parent": { "type": ["string", "null"], "default": null },
+        "scope": { "enum": ["state", "district", "local"] },
+        "district": { "type": ["string", "null"] },
+        "place": { "type": ["string", "null"] },
+        "lsg_type": { "type": ["string", "null"], "enum": ["corporation", "municipality", "district_panchayat", "block_panchayat", "grama_panchayat", null], "default": null },
+        "platform": { "type": ["string", "null"], "enum": ["lsgkerala", "s3waas", "nic-cms", null], "default": null },
+        "priority": { "enum": [1, 2, 3] },
+        "tags": { "type": "array", "items": { "type": "string" }, "default": [] },
+        "source": { "type": "string", "minLength": 1 },
+        "added": { "type": "string", "format": "date" },
+        "lifecycle": { "type": "string", "pattern": "^(active|retired|merged-into:[a-z0-9][a-z0-9-]{1,48})$" },
+        "notes": { "type": "string", "default": "" }
+      }
+    },
+    "Department": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,15}$" },
+        "name": { "type": "string", "minLength": 1 },
+        "name_ml": { "type": "string" },
+        "website": { "type": ["string", "null"], "default": null }
+      }
+    },
+    "District": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "name_ml", "hq_place"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z-]+$" },
+        "name": { "type": "string", "minLength": 1 },
+        "name_ml": { "type": "string", "minLength": 1 },
+        "hq_place": { "type": "string" }
+      }
+    },
+    "Place": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "district", "lat", "lon"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "name": { "type": "string", "minLength": 1 },
+        "name_ml": { "type": "string" },
+        "district": { "type": "string" },
+        "lat": { "type": "number", "minimum": 8, "maximum": 13 },
+        "lon": { "type": "number", "minimum": 74, "maximum": 78 }
+      }
+    },
+    "Minister": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "departments"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "name": { "type": "string", "minLength": 1 },
+        "holder": { "type": "string", "default": "" },
+        "departments": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "IgnoreEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["pattern", "reason"],
+      "properties": {
+        "pattern": { "type": "string", "minLength": 1 },
+        "reason": { "type": "string", "minLength": 1 }
+      }
+    },
+    "SiteList": { "type": "array", "items": { "$ref": "#/$defs/Site" } },
+    "DepartmentList": { "type": "array", "items": { "$ref": "#/$defs/Department" } },
+    "DistrictList": { "type": "array", "items": { "$ref": "#/$defs/District" } },
+    "PlaceList": { "type": "array", "items": { "$ref": "#/$defs/Place" } },
+    "MinisterList": { "type": "array", "items": { "$ref": "#/$defs/Minister" } },
+    "IgnoreList": { "type": "array", "items": { "$ref": "#/$defs/IgnoreEntry" } },
+    "KindList": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+  }
+}
