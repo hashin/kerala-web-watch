@@ -16,7 +16,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | WP | Title | Status | Commit | Notes |
 |---|---|---|---|---|
 | 0.1 | Repository bootstrap | done | init | includes `.claude/` convention, CNAME, test.yml skeleton |
-| 0.2 | Registry schema + reference files + loader + `validate` | done | 8f2b1a0 | 21 tests; verifier ran mutation-testing, found 5 undertested rules, all fixed and re-verified |
+| 0.2 | Registry schema + reference files + loader + `validate` | done | 2453922 | 21 tests; verifier ran mutation-testing, found 5 undertested rules, all fixed and re-verified |
 | 0.3 | CI: test.yml, validate.yml (offline) | partial | init | `test.yml` exists with hashFiles guards; `validate.yml` still to do |
 | 0.4 | Astro skeleton + build-deploy.yml + first Pages deploy | todo | | |
 | 1.1 | Harvest framework (`scripts/harvest/`) | todo | | |
