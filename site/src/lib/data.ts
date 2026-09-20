@@ -65,8 +65,13 @@ export function getSite(id: string): SiteView | undefined {
 
 export function getSummary(): Summary {
   const path = `${DATA_DIR}/summary.json`;
+  const total = getSites().length;
   if (existsSync(path)) {
-    return JSON.parse(readFileSync(path, 'utf8'));
+    const summary: Summary = JSON.parse(readFileSync(path, 'utf8'));
+    // The registry (not summary.json) is the source of truth for how many sites exist (ADR-012):
+    // summary.json's own total is only as fresh as the last summary-writing job (WP2.2+), and
+    // before that job exists at all, it's still the WP0.1 bootstrap stub's placeholder 0.
+    return { ...summary, coverage: { ...summary.coverage, total } };
   }
-  return { generated: null, totals: {}, coverage: { deep_audited: 0, total: getSites().length, eta: null } };
+  return { generated: null, totals: {}, coverage: { deep_audited: 0, total, eta: null } };
 }
