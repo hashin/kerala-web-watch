@@ -1,0 +1,69 @@
+name: Validate Registry
+
+on:
+  pull_request:
+    paths: ['registry/**', '.github/workflows/validate.yml']
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm, cache-dependency-path: audit/package-lock.json }
+      - working-directory: audit
+        run: npm ci
+      - working-directory: audit
+        run: npm run build
+      # Offline schema + cross-reference checks only; --resolve (fetching every new URL) is WP2.5.
+      - id: validate
+        working-directory: audit
+        run: |
+          set +e
+          node dist/cli.js validate --registry ../registry --json > ../validate-result.json
+          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+          set -e
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const failures = JSON.parse(fs.readFileSync('validate-result.json', 'utf8'));
+            const marker = '<!-- registry-validate -->';
+            const body = failures.length === 0
+              ? `${marker}\n✅ Registry is valid: no failures.`
+              : [
+                  marker,
+                  `### Registry validation failed (${failures.length} issue${failures.length === 1 ? '' : 's'})`,
+                  '',
+                  '| File | Id | Rule | Message |',
+                  '|---|---|---|---|',
+                  ...failures.map((f) => `| ${f.file} | ${f.id ?? ''} | ${f.rule} | ${f.message} |`),
+                ].join('\n');
+
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            const existing = comments.find((c) => c.body.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body,
+              });
+            }
+      - if: steps.validate.outputs.exit_code != '0'
+        run: exit 1
