@@ -95,9 +95,12 @@ the plans, so `architect` is not needed for WP work. Use the agents like this:
 | Target | Directory | Install | Test | Lint | Run |
 |---|---|---|---|---|---|
 | audit (TypeScript, Node 22) | `audit/` | `npm ci` | `npm test` | `npm run lint` | `node dist/cli.js <cmd>` |
-| site (Astro 5, Node 22) | `site/` | `npm ci` | `npm test` | `npm run lint` | `npm run dev` |
+| site (Astro 7, Node 22) | `site/` | `npm ci` | `npm test` | `npm run lint` | `npm run dev` |
+| scripts (harvest tooling, Node 22) | repo root | `npm install` | `npm test` | — | `npx tsx scripts/harvest/<name>.ts` |
 
-Both packages are created in Phase 0 (WP0.2, WP0.4); until then the commands do not exist and CI skips them.
+The first two packages are created in Phase 0 (WP0.2, WP0.4); the root tooling in Phase 1 (WP1.1). Until each
+exists, its commands do not exist and CI skips it. `scripts/` isn't in CI (its harvests are one-off, human-supervised
+sessions, not something a PR check should re-run); run its `npm test` locally when touching `scripts/harvest/`.
 Hosting: GitHub Pages at **https://govwebsite.hashin.me** (custom domain; `site/public/CNAME`; `SITE_BASE=/`).
 
 ## Decision protocol
