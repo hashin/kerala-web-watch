@@ -1,0 +1,28 @@
+---
+import type { Page } from 'astro';
+
+interface Props {
+  page: Page<unknown>;
+}
+
+const { page } = Astro.props;
+---
+
+{page.lastPage > 1 && (
+  <nav class="pagination" aria-label="Pagination">
+    {page.url.prev ? <a href={page.url.prev} rel="prev">&larr; Previous</a> : <span aria-hidden="true"></span>}
+    <span>Page {page.currentPage} of {page.lastPage} &middot; {page.total.toLocaleString('en-IN')} sites</span>
+    {page.url.next ? <a href={page.url.next} rel="next">Next &rarr;</a> : <span aria-hidden="true"></span>}
+  </nav>
+)}
+
+<style>
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+  }
+</style>

@@ -1,7 +1,14 @@
-import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { loadRegistry } from '../../../audit/dist/registry.js';
-import type { Site } from '../../../audit/dist/types.js';
+import { readResult } from '../../../audit/dist/store.js';
+import { computeSummary } from '../../../audit/dist/summary.js';
+import type { Site, District, Department, Registry } from '../../../audit/dist/types.js';
+import type { Result } from '../../../audit/dist/store.js';
+import type { ResultStatus } from '../../../audit/dist/status.js';
+import type { Summary, GroupStat } from '../../../audit/dist/summary.js';
+
+export type { Result, GroupStat, Summary };
+export type Status = ResultStatus;
 
 // Resolved from process.cwd(), not import.meta.url: Vite relocates this module into
 // dist/.prerender/chunks/ at build time, which would change a URL-relative path's meaning.
@@ -14,46 +21,27 @@ import type { Site } from '../../../audit/dist/types.js';
 const REGISTRY_DIR = resolve(process.cwd(), '..', 'registry');
 const DATA_DIR = resolve(process.cwd(), '..', 'data');
 
-export type Status =
-  | 'unaudited'
-  | 'unverifiable'
-  | 'down'
-  | 'hijacked'
-  | 'broken'
-  | 'healthy'
-  | 'needs-work'
-  | 'poor';
-
 export interface SiteView extends Site {
   status: Status;
-  score?: number;
+  result: Result | null;
 }
 
-export interface Summary {
-  generated: string | null;
-  totals: Record<string, number>;
-  coverage: { deep_audited: number; total: number; eta: string | null };
-}
+// The build renders ~1,500+ pages, most of which need the registry or the summary at least once --
+// each is loaded/computed exactly once per build and shared, not reloaded per page.
+let cachedRegistry: Registry | undefined;
 
-interface ResultRecord {
-  status?: Status;
-  score?: { overall?: number };
-}
-
-function readResult(id: string): ResultRecord | undefined {
-  const path = `${DATA_DIR}/results/${id}.json`;
-  if (!existsSync(path)) return undefined;
-  return JSON.parse(readFileSync(path, 'utf8'));
+function getRegistry(): Registry {
+  if (!cachedRegistry) cachedRegistry = loadRegistry(REGISTRY_DIR);
+  return cachedRegistry;
 }
 
 let cachedSites: SiteView[] | undefined;
 
 export function getSites(): SiteView[] {
   if (!cachedSites) {
-    const registry = loadRegistry(REGISTRY_DIR);
-    cachedSites = registry.sites.map((site) => {
-      const result = readResult(site.id);
-      return { ...site, status: result?.status ?? 'unaudited', score: result?.score?.overall };
+    cachedSites = getRegistry().sites.map((site) => {
+      const result = readResult(DATA_DIR, site.id);
+      return { ...site, status: result?.status ?? 'unaudited', result };
     });
   }
   return cachedSites;
@@ -63,15 +51,36 @@ export function getSite(id: string): SiteView | undefined {
   return getSites().find((site) => site.id === id);
 }
 
+let cachedSummary: Summary | undefined;
+
+/** Recomputed at build time from whatever `data/results/*.json` exists, rather than trusting a
+ * checked-in `summary.json` verbatim -- the registry (ADR-012) and each result file are the
+ * source of truth; `data/summary.json` is uptime.yml's own cache for the moment nothing else
+ * reads it, but the site should never be one stale file away from a wrong headline number. */
 export function getSummary(): Summary {
-  const path = `${DATA_DIR}/summary.json`;
-  const total = getSites().length;
-  if (existsSync(path)) {
-    const summary: Summary = JSON.parse(readFileSync(path, 'utf8'));
-    // The registry (not summary.json) is the source of truth for how many sites exist (ADR-012):
-    // summary.json's own total is only as fresh as the last summary-writing job (WP2.2+), and
-    // before that job exists at all, it's still the WP0.1 bootstrap stub's placeholder 0.
-    return { ...summary, coverage: { ...summary.coverage, total } };
+  if (!cachedSummary) {
+    const results = getSites()
+      .map((s) => s.result)
+      .filter((r): r is Result => r !== null);
+    cachedSummary = computeSummary(getRegistry(), results, { now: new Date(), vantages: ['gh-us'] });
   }
-  return { generated: null, totals: {}, coverage: { deep_audited: 0, total, eta: null } };
+  return cachedSummary;
 }
+
+export function getDistricts(): District[] {
+  return getRegistry().districts;
+}
+
+export function getDistrict(id: string): District | undefined {
+  return getDistricts().find((d) => d.id === id);
+}
+
+export function getDepartments(): Department[] {
+  return getRegistry().departments;
+}
+
+export function getDepartment(id: string): Department | undefined {
+  return getDepartments().find((d) => d.id === id);
+}
+
+export const STATUSES: Status[] = ['down', 'hijacked', 'broken', 'poor', 'unverifiable', 'unaudited', 'needs-work', 'healthy'];

@@ -1,0 +1,86 @@
+---
+import districtLayout from '../data/kerala-districts.json';
+import { getDistricts, getSummary } from '../lib/data';
+import type { GroupStat } from '../lib/data';
+
+const districts = new Map(getDistricts().map((d) => [d.id, d]));
+const byDistrict = getSummary().by_district;
+
+// Real district boundaries need fetching DataMeet's shapefiles (an external download, which
+// per this project's rules needs the human's explicit go-ahead first, same as WP0.4's font
+// fetch) -- until that happens, WP2.4's own text allows this stand-in: a north-to-south ordered
+// strip of bars, never claiming to be an accurate shape. `_source` in the JSON explains why.
+const rows = (districtLayout.order as string[]).map((id) => {
+  const district = districts.get(id);
+  const stat: GroupStat | undefined = byDistrict[id];
+  const pct = stat && stat.sites > 0 ? Math.round((stat.broken / stat.sites) * 100) : 0;
+  return { id, name: district?.name ?? id, sites: stat?.sites ?? 0, broken: stat?.broken ?? 0, pct };
+});
+
+// Accessible 5-step sequential ramp (light -> dark, distinguishable without colour vision) --
+// the percentage number is always rendered too, so colour is never the only signal (DESIGN §7.4).
+function bucket(pct: number): string {
+  if (pct === 0) return 'var(--map-0)';
+  if (pct < 5) return 'var(--map-1)';
+  if (pct < 15) return 'var(--map-2)';
+  if (pct < 30) return 'var(--map-3)';
+  return 'var(--map-4)';
+}
+---
+
+<div class="kerala-map" role="img" aria-label="Percentage of broken government websites by district, north to south">
+  <p class="kerala-map__note">Schematic, not to scale — districts ordered north to south.</p>
+  {rows.map((row) => (
+    <a class="kerala-map__row" href={`/districts/${row.id}/`} style={`background: ${bucket(row.pct)}`}>
+      <span class="kerala-map__name">{row.name}</span>
+      <span class="kerala-map__pct">{row.pct}% broken ({row.broken}/{row.sites})</span>
+    </a>
+  ))}
+</div>
+
+<style>
+  :root {
+    --map-0: #e6f4ea;
+    --map-1: #b7e0c3;
+    --map-2: #f4d35e;
+    --map-3: #ef8354;
+    --map-4: #c4281c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --map-0: #1e3324;
+      --map-1: #2c4a35;
+      --map-2: #5c4a1f;
+      --map-3: #7a3f26;
+      --map-4: #5c1712;
+    }
+    .kerala-map__row { color: #e8ecf1; }
+  }
+  .kerala-map {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    max-width: 26rem;
+  }
+  .kerala-map__note {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    margin: 0 0 0.5rem;
+  }
+  .kerala-map__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.4rem 0.75rem;
+    color: #14181f;
+    text-decoration: none;
+    border-radius: 0.25rem;
+  }
+  .kerala-map__row:hover,
+  .kerala-map__row:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: -2px;
+  }
+  .kerala-map__name { font-weight: 600; }
+  .kerala-map__pct { font-variant-numeric: tabular-nums; }
+</style>

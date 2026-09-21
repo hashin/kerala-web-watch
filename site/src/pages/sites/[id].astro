@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import HealthBadge from '../../components/HealthBadge.astro';
+import AvailabilityStrip from '../../components/AvailabilityStrip.astro';
 import { getSites } from '../../lib/data';
 
 export function getStaticPaths() {
@@ -8,6 +9,7 @@ export function getStaticPaths() {
 }
 
 const { site } = Astro.props;
+const light = site.result?.light ?? null;
 ---
 
 <Layout title={site.name} description={`Status and audit findings for ${site.name}.`}>
@@ -27,14 +29,46 @@ const { site } = Astro.props;
     <dt>Kind</dt>
     <dd>{site.kind}</dd>
     <dt>Department</dt>
-    <dd>{site.department}</dd>
+    <dd><a href={`/departments/${site.department}/`}>{site.department}</a></dd>
     {site.district && (
       <>
         <dt>District</dt>
-        <dd>{site.district}</dd>
+        <dd><a href={`/districts/${site.district}/`}>{site.district}</a></dd>
       </>
     )}
   </dl>
+
+  {light ? (
+    <section aria-labelledby="light-heading">
+      <h2 id="light-heading">Light check</h2>
+      <p>Last checked {new Date(light.at).toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' })}.</p>
+      <dl>
+        <dt>Final URL</dt>
+        <dd>{light.final_url ?? '—'}</dd>
+        {light.tls && (
+          <>
+            <dt>TLS certificate</dt>
+            <dd>
+              {light.tls.valid ? 'Valid' : 'Invalid'}
+              {light.tls.days_left !== null && ` — expires in ${light.tls.days_left} days (${light.tls.expires})`}
+              {light.tls.issuer && ` — issued by ${light.tls.issuer}`}
+            </dd>
+          </>
+        )}
+        <dt>Security headers</dt>
+        <dd>
+          HSTS {light.headers.hsts ? '✓' : '✗'} &middot;
+          CSP {light.headers.csp ? '✓' : '✗'} &middot;
+          X-Frame-Options {light.headers.xfo ? '✓' : '✗'} &middot;
+          X-Content-Type-Options {light.headers.xcto ? '✓' : '✗'}
+        </dd>
+      </dl>
+      <h3>Last 90 days</h3>
+      <AvailabilityStrip history={site.result?.history ?? []} />
+    </section>
+  ) : (
+    <p>This site has not been light-checked yet — the next scheduled run is within 6 hours.</p>
+  )}
 
   {site.status === 'unaudited' && (
     <p>

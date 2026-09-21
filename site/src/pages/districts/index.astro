@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import KeralaMap from '../../components/KeralaMap.astro';
+import { getDistricts, getSummary } from '../../lib/data';
+
+const summary = getSummary();
+const districts = getDistricts().map((d) => ({ ...d, stat: summary.by_district[d.id] }));
+---
+
+<Layout title="Districts" description="Kerala government websites broken down by district.">
+  <p><a href="/">&larr; Home</a></p>
+  <h1>Districts</h1>
+  <KeralaMap />
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">District</th>
+        <th scope="col">Sites</th>
+        <th scope="col">Broken</th>
+      </tr>
+    </thead>
+    <tbody>
+      {districts.map((d) => (
+        <tr>
+          <td><a href={`/districts/${d.id}/`}>{d.name}</a></td>
+          <td>{d.stat?.sites ?? 0}</td>
+          <td>{d.stat?.broken ?? 0}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</Layout>

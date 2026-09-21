@@ -1,13 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import HealthBadge from '../components/HealthBadge.astro';
-import { getSites, getSummary } from '../lib/data';
+import StatTile from '../components/StatTile.astro';
+import CoverageBar from '../components/CoverageBar.astro';
+import KeralaMap from '../components/KeralaMap.astro';
+import { getDistricts, getSite, getSummary } from '../lib/data';
 
-const sites = getSites().sort((a, b) => a.name.localeCompare(b.name));
 const summary = getSummary();
-const coveragePct = summary.coverage.total === 0
-  ? 0
-  : Math.round((summary.coverage.deep_audited / summary.coverage.total) * 100);
+const { totals } = summary;
+const brokenHeadline = totals.down + totals.hijacked + totals.broken;
+const districts = getDistricts();
+
+const recentBroken = summary.recent_broken
+  .map((t) => ({ ...t, site: getSite(t.id) }))
+  .filter((t) => t.site);
+const recentFixed = summary.recent_fixed
+  .map((t) => ({ ...t, site: getSite(t.id) }))
+  .filter((t) => t.site);
 ---
 
 <Layout
@@ -15,39 +24,90 @@ const coveragePct = summary.coverage.total === 0
   description="Tracking which Government of Kerala websites are up, down or broken, and why."
 >
   <h1>Kerala Web Watch</h1>
+  <p class="headline">
+    <strong>{brokenHeadline}</strong> of <strong>{totals.sites}</strong> Kerala government websites are broken right now.
+  </p>
   <p>
-    Tracking <strong>{sites.length}</strong> Government of Kerala websites. This registry is still
-    being built (Phase 0/1) &mdash; deep audits have not started yet, so every site below shows as
-    "Not yet audited".
+    This is Phase 2: every site gets a light check (is it up? valid HTTPS? redirecting somewhere odd?)
+    every 6 hours. Deep audits (accessibility, security headers, content quality) start in Phase 3 —
+    until then, every site not already flagged shows as <HealthBadge status="unaudited" />.
   </p>
 
-  <section aria-labelledby="coverage-heading">
-    <h2 id="coverage-heading">Audit coverage</h2>
-    <p>{summary.coverage.deep_audited} of {summary.coverage.total} sites deep-audited ({coveragePct}%)</p>
-    <div class="coverage-bar" role="img" aria-label={`${coveragePct}% of sites deep-audited`}>
-      <span style={`width: ${coveragePct}%`}></span>
+  <section aria-labelledby="map-heading">
+    <h2 id="map-heading">By district</h2>
+    <KeralaMap />
+    <p><a href="/districts/">All districts &rarr;</a></p>
+  </section>
+
+  <section aria-labelledby="stats-heading">
+    <h2 id="stats-heading">Right now</h2>
+    <div class="stat-grid">
+      <StatTile label="Down" value={totals.down} tone="bad" href="/status/down/" />
+      <StatTile label="Hijacked" value={totals.hijacked} tone="bad" href="/status/hijacked/" />
+      <StatTile label="Broken" value={totals.broken} tone="bad" href="/status/broken/" />
+      <StatTile label="Unverifiable (geo-blocked)" value={totals.unverifiable} tone="warn" href="/status/unverifiable/" />
+      <StatTile label="Not yet audited" value={totals.unaudited} tone="neutral" href="/status/unaudited/" />
     </div>
   </section>
 
-  <section aria-labelledby="sites-heading">
-    <h2 id="sites-heading">All tracked sites</h2>
-    <table>
-      <thead>
-        <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Tier</th>
-          <th scope="col">Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        {sites.map((site) => (
-          <tr>
-            <td><a href={`/sites/${site.id}/`}>{site.name}</a></td>
-            <td>{site.tier}</td>
-            <td><HealthBadge status={site.status} /></td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+  <section aria-labelledby="coverage-heading">
+    <h2 id="coverage-heading">Audit coverage</h2>
+    <CoverageBar
+      done={summary.coverage.deep_audited}
+      total={summary.coverage.total}
+      label={`${summary.coverage.deep_audited} of ${summary.coverage.total} sites deep-audited${summary.coverage.eta ? ` — full coverage by ${summary.coverage.eta}` : ''}`}
+    />
+  </section>
+
+  {(recentBroken.length > 0 || recentFixed.length > 0) && (
+    <section aria-labelledby="recent-heading">
+      <h2 id="recent-heading">This week</h2>
+      {recentBroken.length > 0 && (
+        <>
+          <h3>Broke this week</h3>
+          <ul>
+            {recentBroken.map((t) => (
+              <li><a href={`/sites/${t.id}/`}>{t.site!.name}</a> — since {t.since}</li>
+            ))}
+          </ul>
+        </>
+      )}
+      {recentFixed.length > 0 && (
+        <>
+          <h3>Fixed this week</h3>
+          <ul>
+            {recentFixed.map((t) => (
+              <li><a href={`/sites/${t.id}/`}>{t.site!.name}</a> — since {t.since}</li>
+            ))}
+          </ul>
+        </>
+      )}
+    </section>
+  )}
+
+  <section aria-labelledby="browse-heading">
+    <h2 id="browse-heading">Browse</h2>
+    <ul>
+      <li><a href="/districts/">By district</a> ({districts.length} districts)</li>
+      <li><a href="/status/down/">Down sites</a></li>
+      <li><a href="/status/broken/">Broken sites</a></li>
+      <li><a href="/status/unaudited/">Not yet audited</a></li>
+    </ul>
+    <p class="muted">Ministry, department and kind browsing arrive in a later phase.</p>
   </section>
 </Layout>
+
+<style>
+  .headline {
+    font-size: 1.25rem;
+  }
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: 0.75rem;
+  }
+  .muted {
+    color: var(--color-muted);
+    font-size: 0.9rem;
+  }
+</style>

@@ -1,0 +1,70 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SiteTable from '../../components/SiteTable.astro';
+import { getSites, getDistricts, getDistrict } from '../../lib/data';
+import type { SiteView } from '../../lib/data';
+
+export function getStaticPaths() {
+  return getDistricts().map((district) => ({ params: { district: district.id } }));
+}
+
+const { district: districtId } = Astro.params;
+const district = getDistrict(districtId as string)!;
+const sites = getSites()
+  .filter((s) => s.district === district.id)
+  .sort((a, b) => a.name.localeCompare(b.name));
+
+// Grouped per DESIGN §7.2's `/districts/<slug>/` row, not one flat table -- each group here stays
+// well under ADR-025's 100-row pagination threshold even in the biggest district (grama panchayat
+// counts top out around 94), so no listing on this page needs to paginate.
+const administration = sites.filter((s) => s.kind === 'district_admin');
+const panchayatTiers = sites.filter((s) => s.kind === 'district_panchayat' || s.kind === 'block_panchayat');
+const urbanBodies = sites.filter((s) => s.kind === 'corporation' || s.kind === 'municipality');
+const gramaPanchayats = sites.filter((s) => s.kind === 'grama_panchayat');
+const grouped = new Set([...administration, ...panchayatTiers, ...urbanBodies, ...gramaPanchayats].map((s) => s.id));
+const other: SiteView[] = sites.filter((s) => !grouped.has(s.id));
+---
+
+<Layout title={district.name} description={`Government websites in ${district.name} district.`}>
+  <p><a href="/districts/">&larr; All districts</a></p>
+  <h1>{district.name}{district.name_ml && <span lang="ml"> &middot; {district.name_ml}</span>}</h1>
+  <p>{sites.length} tracked sites.</p>
+
+  {administration.length > 0 && (
+    <section aria-labelledby="admin-heading">
+      <h2 id="admin-heading">District administration</h2>
+      <SiteTable sites={administration} showDistrict={false} showDepartment={false} />
+    </section>
+  )}
+
+  {panchayatTiers.length > 0 && (
+    <section aria-labelledby="panchayat-heading">
+      <h2 id="panchayat-heading">District &amp; block panchayats</h2>
+      <SiteTable sites={panchayatTiers} showDistrict={false} showDepartment={false} />
+    </section>
+  )}
+
+  {urbanBodies.length > 0 && (
+    <section aria-labelledby="urban-heading">
+      <h2 id="urban-heading">Corporations &amp; municipalities</h2>
+      <SiteTable sites={urbanBodies} showDistrict={false} showDepartment={false} />
+    </section>
+  )}
+
+  {gramaPanchayats.length > 0 && (
+    <section aria-labelledby="gp-heading">
+      <h2 id="gp-heading">Grama panchayats</h2>
+      <details>
+        <summary>{gramaPanchayats.length} grama panchayats</summary>
+        <SiteTable sites={gramaPanchayats} showDistrict={false} showDepartment={false} />
+      </details>
+    </section>
+  )}
+
+  {other.length > 0 && (
+    <section aria-labelledby="other-heading">
+      <h2 id="other-heading">Institutions &amp; state bodies headquartered here</h2>
+      <SiteTable sites={other} showDistrict={false} />
+    </section>
+  )}
+</Layout>

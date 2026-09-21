@@ -1,0 +1,37 @@
+---
+import type { HistoryEntry } from '../../../audit/dist/history.js';
+
+interface Props {
+  history: HistoryEntry[];
+}
+
+const { history } = Astro.props;
+// history is newest-first (see audit/src/history.ts); render oldest -> newest, left to right.
+const days = [...history].reverse();
+---
+
+{days.length > 0 ? (
+  <div class="availability-strip" role="img" aria-label={`Availability over the last ${days.length} days`}>
+    {days.map((d) => (
+      <span class={`availability-strip__day ${d.up ? 'availability-strip__day--up' : 'availability-strip__day--down'}`} title={`${d.d}: ${d.up ? 'up' : 'down'}`}></span>
+    ))}
+  </div>
+) : (
+  <p>No history yet.</p>
+)}
+
+<style>
+  .availability-strip {
+    display: flex;
+    gap: 1px;
+    height: 1.5rem;
+  }
+  .availability-strip__day {
+    flex: 1 0 2px;
+    background: var(--color-good);
+    border-radius: 1px;
+  }
+  .availability-strip__day--down {
+    background: var(--color-bad);
+  }
+</style>

@@ -1,0 +1,32 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import SiteTable from '../../../components/SiteTable.astro';
+import Pagination from '../../../components/Pagination.astro';
+import HealthBadge from '../../../components/HealthBadge.astro';
+import { getSites, STATUSES } from '../../../lib/data';
+import type { Status } from '../../../lib/data';
+
+export async function getStaticPaths({ paginate }: { paginate: import('astro').PaginateFunction }) {
+  // ADR-025: `unaudited` alone can be well over 1,000 rows before Phase 3's deep audit starts, so
+  // every status listing paginates at 100 rows/page the same way department/district ones do.
+  // Defined inside this function, not at module scope -- see the identical note in
+  // departments/[department]/[...page].astro for why (an Astro build-time tree-shaking quirk).
+  const PAGE_SIZE = 100;
+  const sites = getSites();
+  return STATUSES.flatMap((status) => {
+    const rows = sites.filter((s) => s.status === status).sort((a, b) => a.name.localeCompare(b.name));
+    return paginate(rows, { params: { status }, pageSize: PAGE_SIZE });
+  });
+}
+
+const { status } = Astro.params as { status: Status };
+const { page } = Astro.props as { page: import('astro').Page<ReturnType<typeof getSites>[number]> };
+---
+
+<Layout title={`Status: ${status}`} description={`Government websites currently marked "${status}".`}>
+  <p><a href="/">&larr; Home</a></p>
+  <h1><HealthBadge status={status} /></h1>
+  <p>{page.total} sites.</p>
+  <SiteTable sites={page.data} />
+  <Pagination page={page} />
+</Layout>

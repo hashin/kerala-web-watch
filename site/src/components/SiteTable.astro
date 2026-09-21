@@ -1,0 +1,44 @@
+---
+import HealthBadge from './HealthBadge.astro';
+import type { SiteView } from '../lib/data';
+
+interface Props {
+  sites: SiteView[];
+  showDistrict?: boolean;
+  showDepartment?: boolean;
+}
+
+const { sites, showDistrict = true, showDepartment = true } = Astro.props;
+
+function host(url: string): string {
+  try {
+    return new URL(url).host;
+  } catch {
+    return url;
+  }
+}
+---
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Status</th>
+      <th scope="col">Name</th>
+      <th scope="col">Website</th>
+      {showDepartment && <th scope="col">Department</th>}
+      {showDistrict && <th scope="col">District</th>}
+    </tr>
+  </thead>
+  <tbody>
+    {sites.map((site) => (
+      <tr>
+        <td><HealthBadge status={site.status} /></td>
+        <td><a href={`/sites/${site.id}/`}>{site.name}</a></td>
+        <td>{host(site.url)}</td>
+        {showDepartment && <td>{site.department}</td>}
+        {showDistrict && <td>{site.district ?? '—'}</td>}
+      </tr>
+    ))}
+  </tbody>
+</table>
+{sites.length === 0 && <p>No sites in this list.</p>}
