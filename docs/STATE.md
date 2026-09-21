@@ -6,8 +6,8 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 ## Now
 
 - **Phase:** 3 — Deep audits
-- **Current WP:** WP3.2 (done) → **Next WP:** WP3.3 (security checks + retire.js + fixtures)
-- **Next action:** Start WP3.3 — read `docs/IMPLEMENTATION.md` WP3.3 and its Read-first list (DESIGN §5.3's `sec.*` table). Implement `audit/src/checks/security.ts` against fixtures, following the same `Check`-array-plus-fixtures pattern WP3.2 established in `availability.ts`/`identity.ts`; wire retire.js (or an equivalent CVE dataset) for `sec.vuln_js` against the script URLs a page loads.
+- **Current WP:** WP3.3 (done) → **Next WP:** WP3.4 (content + GIGW checks, bilingual)
+- **Next action:** Start WP3.4 — read `docs/IMPLEMENTATION.md` WP3.4 and its Read-first list (DESIGN §5.3's `content.*`/`gigw.*` tables, Appendix A.4-A.6's pattern lists). Implement `audit/src/checks/content.ts` and `audit/src/checks/gigw.ts` against fixtures, following the same `Check`-array-plus-fixtures pattern WP3.2/WP3.3 established; these are the first bilingual (en+ml) pattern-matching checks, so budget time for Malayalam fixture text.
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
 - **Registry size:** 1,500 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated) · **Deep-audited:** 0 · **Light-checked:** 1,500/1,500 (15 down, 19 broken as of first full run 2026-09-21T05:30Z) · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data instead of placeholders
 - **Candidates backlog:** ~2,476 fresh, uncurated candidates as of 2026-09-21 (mostly from a new `kerala-gov-in-subdomains` source — see Handoff below), waiting for a WP1.7-style curation pass. Not yet in `registry/sites/`.
@@ -34,7 +34,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 2.5 | validate.yml `--resolve` + PR comment | done | 7a6ceea | 99 tests; verified live with a real throwaway PR (#2, closed unmerged): bogus host failed with a clear row → fixed to a real URL → same comment updated in place, check passed, entry's name shown |
 | 3.1 | Check framework, `registry.ts` (all ids, EN), `score.ts` | done | 809d32b | 84 check ids (DESIGN §5.3 catalogues ~90); verifier mutation-tested `score.ts`, found 2 undertested paths (issues category-tiebreak, availability-exclusion), both fixed and re-verified by hand |
 | 3.2 | Availability + identity checks + fixtures | done | 8288a64 | 21 checks (11 avail.*, 10 id.*), 571 tests; verifier mutation-tested and found 4 undertested paths (avail.blank boundary, avail.redirect_offsite alias handling, avail.parked pattern coverage, avail.default_page's "It works!" branch), all fixed and re-verified by hand |
-| 3.3 | Security checks + retire.js + fixtures | todo | | |
+| 3.3 | Security checks + retire.js + fixtures | done | 2035977 | 14 sec.* checks, 634 tests; retire.js wired as a real dependency and shells out to its own CLI in a real (offline, fixture-jsrepo) integration test; verifier mutation-tested and found 3 undertested paths (header-lookup case/substring matching, a TLS major-version branch, the shared hadResponse timeout case), all fixed and re-verified by hand |
 | 3.4 | Content + GIGW checks (bilingual) + fixtures | todo | | |
 | 3.5 | Playwright runner: capture, axe, Lighthouse, crawl, screenshots; fixture-server smoke test | todo | | |
 | 3.6 | `plan` scheduler + `merge` (outlinks, phash gating) + tests | todo | | |
@@ -73,6 +73,39 @@ _None yet. Each entry: what, why, ADR number._
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-09-21 · WP3.3 done** — `audit/src/checks/security.ts` (14 `sec.*` checks). `sec.https`/
+  `http_redirect`/`cert_valid`/`cert_expiry`/`tls_version` read `ctx.light` (the existing TLS/redirect
+  info from Phase 2's light check); `sec.hsts`/`csp`/`xfo`/`xcto`/`referrer`/`server_banner` read a
+  new `ctx.headers` dict via a case-insensitive `getHeader()` helper -- deliberately a *different*
+  field from `ctx.light.headers`'s Phase-2 booleans, per the WP's own steps text, since the deep
+  audit's own richer fetch (WP3.5) will produce its own full raw header set. `sec.mixed_content`
+  combines a static `src=`/`href=` scan of `ctx.html` with an optional `ctx.requests` log (new
+  `CheckContext` field), gated to https pages only. `sec.vuln_js`/`sec.safe_browsing` read
+  pre-computed fields (`vulnerableLibraries`, `safeBrowsingFlagged`) only a future runner can
+  populate. **`audit/src/net/retire.ts`** shells out to the real retire.js CLI (now a pinned
+  dependency, not just `npx`-fetched ad hoc) against script contents written to a scratch dir,
+  parses its JSON output, and caches by content hash. Its test (`retire.test.ts`) is a genuine
+  integration test against the real binary, kept fully offline via a hand-crafted local
+  `tests/fixtures/retire/jsrepo.json` (NOT the real retire.js central repo) and a *synthetic*
+  `jquery-1.8.3.min.js` fixture containing only a version-banner comment -- never real third-party
+  source, since this project doesn't download external files without asking first. It reports the
+  real public CVE-2012-6708, satisfying the WP's own Verify text. **`audit/src/net/safebrowsing.ts`**
+  wraps Google Safe Browsing's Lookup API, returning `null` (never `false`) whenever no
+  `SAFE_BROWSING_KEY` is set or a lookup fails, so "never checked" can't be mistaken for "clean".
+  **verifier mutation-tested `security.ts`** and found 3 real gaps, each a case of "only passing by
+  coincidence, not by a test that actually pins the behaviour": `getHeader`'s case-insensitivity and
+  exact-vs-substring matching were never proven (every fixture happened to use lowercase,
+  non-overlapping header names already); the TLS major-version->1 branch in `tlsVersionAtLeast12` had
+  no test; and the shared `hadResponse()` gate's `timeout` case was untested on `sec.https`/
+  `sec.mixed_content` (only `connect_fail` was covered, even though the function explicitly special-
+  cases both). Fixed with a mixed-case header test, a substring-trap header test, a synthetic
+  `TLSv2.0` case, and a `timeout` case on both affected checks -- each manually re-broken and
+  re-fixed to confirm. Also tightened `retire.test.ts`'s caching test on the verifier's own minor
+  note: it now points a second call at a nonexistent `--jsrepo` path and confirms the (real, cached)
+  finding still comes back, which a broken cache could not produce. 634 tests, `npm run build` clean,
+  35 real checks now wired into `CHECK_LIST` (11 avail + 10 id + 14 sec). **Next: WP3.4** (`content.*`/
+  `gigw.*` checks, the first bilingual en+ml pattern-matching WP) — same `Check`-array pattern.
 
 - **2026-09-21 · WP3.2 done** — `audit/src/checks/availability.ts` (11 checks) and
   `audit/src/checks/identity.ts` (10 checks), both real `Check` implementations against DESIGN
