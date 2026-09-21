@@ -175,6 +175,17 @@ export interface CheckContext {
   /** Whether the `www` and bare-host variants of this site's domain both resolve and one redirects
    * to the other -- a second probe alongside the main fetch that only the runner can make. */
   wwwConsistent?: boolean;
+  /** Every subresource request the page made while loading (WP3.5's Playwright runner), used
+   * alongside a static `ctx.html` scan for `sec.mixed_content` -- an http:// entry here is a
+   * stronger signal than the static scan since it reflects what the browser actually fetched. */
+  requests?: { url: string }[];
+  /** Vulnerable JS libraries retire.js (net/retire.ts) found among the scripts the page loaded,
+   * populated once per audit run by the runner (a pure check can't shell out to a CLI itself). */
+  vulnerableLibraries?: { library: string; version: string | null; cve: string[] }[];
+  /** Result of a Google Safe Browsing lookup (net/safebrowsing.ts) -- `undefined` means it was
+   * never checked (no `SAFE_BROWSING_KEY` configured, or a transient lookup failure), which must
+   * stay distinct from `false` ("checked, and clean"). */
+  safeBrowsingFlagged?: boolean;
 }
 
 export type Check = {

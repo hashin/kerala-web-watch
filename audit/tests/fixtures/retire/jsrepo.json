@@ -1,0 +1,19 @@
+{
+  "jquery": {
+    "extractors": {
+      "filecontent": ["jQuery v(§§version§§)"]
+    },
+    "vulnerabilities": [
+      {
+        "below": "1.9.0",
+        "severity": "medium",
+        "cwe": ["CWE-79"],
+        "identifiers": {
+          "CVE": ["CVE-2012-6708"],
+          "summary": "jQuery before 1.9.0 is vulnerable to a selector-interpretation XSS"
+        },
+        "info": ["https://nvd.nist.gov/vuln/detail/CVE-2012-6708"]
+      }
+    ]
+  }
+}
