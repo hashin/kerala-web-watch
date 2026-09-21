@@ -5,9 +5,9 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 
 ## Now
 
-- **Phase:** 2 — Light checks live
-- **Current WP:** WP2.5 (done) — **Phase 2 complete.** → **Next WP:** WP3.1 (check framework, `registry.ts`, `score.ts`)
-- **Next action:** Start WP3.1 — read `docs/IMPLEMENTATION.md` WP3.1 and its Read-first list (DESIGN §5). This is the first Phase 3 WP: the deep-audit check framework, the `registry.ts` check-metadata catalogue (every check id, English explanation), and `score.ts`'s weighted scoring per ADR-006. Pure/fixture-tested, no Playwright yet (that's WP3.5).
+- **Phase:** 3 — Deep audits
+- **Current WP:** WP3.1 (done) → **Next WP:** WP3.2 (availability + identity checks + fixtures)
+- **Next action:** Start WP3.2 — read `docs/IMPLEMENTATION.md` WP3.2 and its Read-first list (DESIGN §5.3's avail./id. tables). Implement the real `Check` functions (populating `CHECK_LIST` in `audit/src/checks/index.ts`) for the `avail.*` and `id.*` categories against fixtures, following the `CheckMeta` already defined in `registry.ts`.
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
 - **Registry size:** 1,500 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated) · **Deep-audited:** 0 · **Light-checked:** 1,500/1,500 (15 down, 19 broken as of first full run 2026-09-21T05:30Z) · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data instead of placeholders
 - **Candidates backlog:** ~2,476 fresh, uncurated candidates as of 2026-09-21 (mostly from a new `kerala-gov-in-subdomains` source — see Handoff below), waiting for a WP1.7-style curation pass. Not yet in `registry/sites/`.
@@ -32,7 +32,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 2.3 | uptime.yml live | live | 52977b4 | cron running; 2 manual `workflow_dispatch` runs (limit=50, then all 1,500) verified end-to-end; "two consecutive *scheduled* runs" gate needs real calendar time — see Open question 8 |
 | 2.4 | Site v1: home + map + status lists + district pages + light-only site page | done | cf7661d | 1,596 pages in ~2.5s; found & fixed a real WP2.2 bug while dogfooding real data (see handoff); Lighthouse perf 100 on the production build (58 on `astro dev` — checked the wrong server first) |
 | 2.5 | validate.yml `--resolve` + PR comment | done | 7a6ceea | 99 tests; verified live with a real throwaway PR (#2, closed unmerged): bogus host failed with a clear row → fixed to a real URL → same comment updated in place, check passed, entry's name shown |
-| 3.1 | Check framework, `registry.ts` (all ids, EN), `score.ts` | todo | | |
+| 3.1 | Check framework, `registry.ts` (all ids, EN), `score.ts` | done | 809d32b | 84 check ids (DESIGN §5.3 catalogues ~90); verifier mutation-tested `score.ts`, found 2 undertested paths (issues category-tiebreak, availability-exclusion), both fixed and re-verified by hand |
 | 3.2 | Availability + identity checks + fixtures | todo | | |
 | 3.3 | Security checks + retire.js + fixtures | todo | | |
 | 3.4 | Content + GIGW checks (bilingual) + fixtures | todo | | |
@@ -73,6 +73,37 @@ _None yet. Each entry: what, why, ADR number._
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-09-21 · WP3.1 done — Phase 3 started** — `audit/src/checks/types.ts` (`CheckId` — 84 ids
+  written out by hand from DESIGN §5.3's tables, `~90` is that table's own approximate count so this is
+  in range; `CheckMeta`, `CheckContext` deliberately minimal — only `site`/`light` exist until WP3.5's
+  Playwright runner adds `html`/`headers`/etc.), `audit/src/checks/registry.ts` (`CHECKS`, all 84
+  entries: category, severity, `statusSetting` where DESIGN marks a check ★, English title/citizen/fix
+  text — `ml` fields present as empty strings per ADR pending WP5.3), `audit/src/checks/index.ts` (empty
+  `CHECK_LIST`; `runChecks()` reports every not-yet-implemented id as `na` so `score.ts` has something to
+  consume before WP3.2–3.4 populate real checks), `audit/src/score.ts` (`scoreSite()`: a failing ★ check
+  sets `status` directly and nulls the score outright — DESIGN §5.4's "availability is a gate, not a
+  component" — otherwise ADR-006's six weighted category scores, each checks' fail/warn/na deductions
+  floored at 0, roll into a rounded `overall` and `healthy`/`needs-work`/`poor` at the 80/50 boundaries).
+  Two interpretive calls made without a new ADR, since ADR-005's own text already delegates
+  status-setting to DESIGN §5.3's ★ marks: `sec.https` → `statusSetting: 'broken'` (no HTTPS at all is
+  the same "browser won't trust this" class as an invalid cert), and `avail.dns`/`connect`/`status` →
+  a deep-audit-specific `'down'`, distinct from Phase 2's own two-strike light-check `down` in
+  `status.ts` (a full audit's single observation is credible on its own; a 6-hourly light ping is not).
+  Both documented as code comments in `registry.ts`/`types.ts`/`score.ts` rather than a Proposed ADR.
+  **verifier mutation-tested `score.ts`** (9 mutations: floor removal, fail/warn ratio swap,
+  `STATUS_PRIORITY` reorder, `findStatusOverride` first-failure-only, both `buildIssues` sort keys, the
+  availability-category skip in `computeCategoryScores`, both 79/80 and 49/50 boundaries) — **7 caught,
+  2 survived**: the `CATEGORY_ORDER` tiebreak in `buildIssues` (every existing multi-issue test used
+  different severities, so the tiebreak line was never exercised) and the availability-exclusion in
+  `computeCategoryScores` (every availability check in the test fixture carried a `statusSetting`, so a
+  fail always short-circuited via `findStatusOverride` before that line ran). Fixed by adding one test
+  for each — a same-severity two-category tiebreak, and a fixture entry for `avail.ttfb` (one of the two
+  known non-★ availability checks) whose fail must not deduct from any scored category — then manually
+  re-broke and re-fixed both lines in `score.ts` to confirm the new tests actually catch them. 465 tests,
+  `npm run build` clean, `node -e "...registry.js..."` prints `84` per the WP's own Verify command.
+  **Next: WP3.2** (`avail.*` and `id.*` check implementations + fixtures) — the first WP to populate
+  `CHECK_LIST` with real, testable check functions instead of metadata alone.
 
 - **2026-09-21 · WP2.5 done — Phase 2 complete** — `audit/src/resolve.ts` (`resolveSite`/`resolveSites`,
   pure `dnsFailure`/`domainFailure`/`statusWarning` helpers exported for direct unit testing like
