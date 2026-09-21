@@ -6,10 +6,10 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 ## Now
 
 - **Phase:** 2 — Light checks live
-- **Current WP:** WP2.3 (live, cron confirmed running; see Open question 8) → **Next WP:** WP2.4 (site v1)
-- **Next action:** Start WP2.4 — read `docs/IMPLEMENTATION.md` WP2.4, DESIGN §7.2 rows `/`/`/districts/…`/`/status/…`/`/departments/<slug>/`/`/sites/<id>/`, §7.4, ADR-011, ADR-025. Build the Kerala district map, `SiteTable`/`Pagination`/`CoverageBar` components, and the home/districts/departments/status pages reading `data/summary.json` — real data now exists on `data` for this to render against.
+- **Current WP:** WP2.4 (done) → **Next WP:** WP2.5 (`validate --resolve` + PR comment)
+- **Next action:** Start WP2.5 — read `docs/IMPLEMENTATION.md` WP2.5. Add `--resolve` to `audit validate` (light-check entries changed vs. `--changed-only origin/main`, rate-limited, 20s timeout; fail on DNS failure or a final registrable domain that differs from the entry's without an alias; warn on non-200), then wire `validate.yml` to run it and post the results table on registry PRs.
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
-- **Registry size:** 1,500 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated) · **Deep-audited:** 0 · **Light-checked:** 1,500/1,500 (15 down, 19 broken as of first full run 2026-09-21T05:30Z) · **Site live:** yes — https://govwebsite.hashin.me
+- **Registry size:** 1,500 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated) · **Deep-audited:** 0 · **Light-checked:** 1,500/1,500 (15 down, 19 broken as of first full run 2026-09-21T05:30Z) · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data instead of placeholders
 - **Candidates backlog:** ~2,476 fresh, uncurated candidates as of 2026-09-21 (mostly from a new `kerala-gov-in-subdomains` source — see Handoff below), waiting for a WP1.7-style curation pass. Not yet in `registry/sites/`.
 
 ## Work packages
@@ -30,7 +30,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 2.1 | `light.ts` + tests | done | 4b6d5e0 | dns/tls/http primitives + orchestration; 52 tests incl. a verifier-caught redirect-loop cap and TLS-validity gap, both fixed |
 | 2.2 | `cli light`, data-branch writer, history, summary.json | done | 7e43cf1 | 79 tests; verifier found 4 undertested paths (score/deep/issues carry-forward, deep-audit-preserved status, null-district grouping, coverage-ETA batch cap), all fixed and re-verified by hand |
 | 2.3 | uptime.yml live | live | 52977b4 | cron running; 2 manual `workflow_dispatch` runs (limit=50, then all 1,500) verified end-to-end; "two consecutive *scheduled* runs" gate needs real calendar time — see Open question 8 |
-| 2.4 | Site v1: home + map + status lists + district pages + light-only site page | todo | | |
+| 2.4 | Site v1: home + map + status lists + district pages + light-only site page | done | cf7661d | 1,596 pages in ~2.5s; found & fixed a real WP2.2 bug while dogfooding real data (see handoff); Lighthouse perf 100 on the production build (58 on `astro dev` — checked the wrong server first) |
 | 2.5 | validate.yml `--resolve` + PR comment | todo | | |
 | 3.1 | Check framework, `registry.ts` (all ids, EN), `score.ts` | todo | | |
 | 3.2 | Availability + identity checks + fixtures | todo | | |
@@ -73,6 +73,42 @@ _None yet. Each entry: what, why, ADR number._
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-09-21 · WP2.4 done** — `site/src/lib/data.ts` rewritten to import the real `Result`/`Summary`
+  types from `audit/dist` (`readResult`, `computeSummary`) instead of the WP0.4-era hand-rolled subset,
+  with the registry/summary each computed once per build and cached module-wide (the build renders
+  ~1,600 pages, most touching one or both). New pages: `/districts/` (schematic map + table),
+  `/districts/<id>/` (grouped: administration / district & block panchayats / corporations &
+  municipalities / grama panchayats behind `<details>` / other institutions — every group stays under
+  ADR-025's 100-row cap even in Thiruvananthapuram, the biggest at 320 sites), `/departments/<id>/` and
+  `/status/<status>/` (both paginated via Astro's `paginate()` per ADR-025 — `lsgd` has ~1,210 sites,
+  `unaudited` currently has 1,466). Upgraded `/` and `/sites/<id>/` (TLS expiry, security headers, a
+  90-day availability strip from real `history[]`). New components: `KeralaMap`, `StatTile`,
+  `CoverageBar`, `SiteTable`, `Pagination`, `AvailabilityStrip`. Checked a git worktree at `./data`
+  (`git worktree add data data`) for local building against real content instead of an empty checkout.
+  **Real bug found and fixed by dogfooding actual WP2.3 data, not by any test:** the home page was
+  224KB (over the ~150KB budget) because `summary.recent_fixed` had 1,466 entries — `recentTransitions()`
+  in `audit/src/summary.ts` treated a site's very first-ever history entry as "just came up today" since
+  there was no older, differing day to compare against yet. Fixed in a separate commit (a22213a) with a
+  regression test, hand-verified to catch the original bug by reverting and reconfirming red. **One
+  Astro build-time surprise:** a top-level `const PAGE_SIZE = 100` above `getStaticPaths` got tree-shaken
+  away by Astro's build (referenced only inside that function, apparently invisible to whatever decides
+  what the extracted `getStaticPaths` module needs) — `PAGE_SIZE is not defined` at build time. Fixed by
+  moving the const inside the function; noted in both paginated route files so it isn't hit again.
+  **Real map deferred:** DataMeet's shapefiles need an external download, which needs the human's
+  explicit go-ahead first (same rule as WP0.4's font fetch) — used WP2.4's own explicitly-sanctioned
+  placeholder instead (`site/src/data/kerala-districts.json`, a north-to-south ordered strip, not real
+  geography; swapping in real boundaries later doesn't need this file's shape to change). Verified: `cd
+  audit && npm test` (80/80), `cd site && npm run build` (1,596 pages, ~2.5s) and `npm run lint` (`astro
+  check`, 0 errors) both clean, manually browsed home/district/status/department/site pages in the
+  built-in browser against real WP2.3 data (down/broken lists, Malayalam district names, pagination
+  page 1→2 on `/departments/lsgd/`). **Lighthouse gotcha for whoever runs this check next:** the first
+  run (`astro dev`) scored 58 — that's the unminified dev server, not a real regression. Re-ran against
+  `astro preview` (the actual production build) and got 100; always check the built site, never `astro
+  dev`, or you'll chase a performance problem that doesn't exist. **Reduced scope, by design not
+  accident:** home's browse section only offers District and Status (no Ministry/Kind tabs yet — those
+  pages don't exist until WP4.2), consistent with WP2.4's own "light data only" framing. **Next: WP2.5**
+  (`validate --resolve` + PR comment) — the last WP in Phase 2.
 
 - **2026-09-21 · WP2.3 live** — `.github/workflows/uptime.yml`: cron `0 */6 * * *` + `workflow_dispatch` with a
   `limit` input, `concurrency: {group: data-branch}` (shared with the future `audit.yml`), checks out `main` +
