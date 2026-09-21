@@ -75,6 +75,11 @@ export async function runDeepAudit(site: Site, existing: Result | null, opts: Ru
 
     const capturePromise = capture(deepUrl, { timeoutMs: opts.timeoutMs, userAgent });
     const lighthousePromise = opts.noLighthouse ? Promise.resolve(undefined) : runLighthouse(deepUrl);
+    // capture() can outlast a Lighthouse run that fails fast (e.g. a closed target), so
+    // lighthousePromise may reject before the `Promise.all` below ever attaches a handler to it --
+    // Node treats that as an unhandled rejection and kills the whole process. This no-op `.catch`
+    // marks the promise handled immediately; the real rejection still reaches `Promise.all` below.
+    lighthousePromise.catch(() => {});
     const robotsPromise = fetchRobotsTxt(origin, { userAgent });
     const sitemapPromise = fetchSitemapXmlStatus(origin, { userAgent });
     const soft404Promise = fetchSoft404Status(origin, { userAgent });

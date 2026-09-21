@@ -6,16 +6,13 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 ## Now
 
 - **Phase:** 3 — Deep audits
-- **Current WP:** WP3.7 (in progress: step 1 done; step 2 confirmed a real crash bug, not yet fixed) — `audit.yml` live: 3 → 50 → cron
-- **Next action:** **Read `docs/HANDOFF.md` first — do not just retry step 2.** The `batch_size=50` run (id
-  `35626792354`) confirmed a real bug, twice independently: an unhandled Lighthouse promise rejection crashes the
-  whole Node process mid-shard (bypassing `runner.ts`'s own `try/catch`) — both shards hit the identical error,
-  and because `audit.yml`'s `upload-artifact` step has no `if: always()`, `merge` found 0 artifacts and merged 0
-  sites, losing all 21 sites that *had* audited successfully before the crashes. Fix
-  `audit/src/runner.ts` (see HANDOFF.md for the exact diagnosis and a likely fix), add `if: always()` to the
-  upload-artifact step, add a regression test, `cd audit && npm test`, commit, push, **then** retry step 2. Only
-  after a clean step 2 run: read per-site timing, decide on `--max-batch` (see HANDOFF.md — step 1's timing was
-  ~55–65 s/site), then step 3 (cron is already in the committed file).
+- **Current WP:** WP3.7 (in progress: step 1 done; step 2's crash bug found, diagnosed and fixed this session — retry not yet run) — `audit.yml` live: 3 → 50 → cron
+- **Next action:** Retry step 2: `gh workflow run "Deep audit (rolling)" -f batch_size=50`, then read per-site
+  timing from the logs and decide on `--max-batch` (300, ADR-004) — step 1's timing was ~55–65 s/site, and the
+  crash-truncated step-2 attempt averaged ~53–70 s/site across 22 real sites, consistent with that estimate but
+  not yet confirmed by a complete run. Only after step 2 succeeds cleanly: step 3 (cron is already in the
+  committed file; needs two consecutive scheduled runs over real calendar days to close WP3.7, same kind of
+  multi-day gate as WP2.3's open question 8).
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
 - **Registry size:** 1,500 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated) · **Deep-audited:** 0 · **Light-checked:** 1,500/1,500 (15 down, 19 broken as of first full run 2026-09-21T05:30Z) · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data instead of placeholders
 - **Candidates backlog:** ~2,476 fresh, uncurated candidates as of 2026-09-21 (mostly from a new `kerala-gov-in-subdomains` source — see Handoff below), waiting for a WP1.7-style curation pass. Not yet in `registry/sites/`.
@@ -46,7 +43,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 3.4 | Content + GIGW checks (bilingual) + fixtures | done | f72501c | 11 content.* + 16 gigw.* checks (content.broken_*/console_errors deferred to WP3.5's crawler), 792 tests; new `audit/src/text/{dates,malayalam,patterns}.ts`; verifier mutation-tested and found 3 undertested paths (a threshold "passing by coincidence", a short-circuit never actually forced, gigw.* pattern-to-check wiring unverified per-check), all fixed and re-verified by hand |
 | 3.5 | Playwright runner: capture, axe, Lighthouse, crawl, screenshots; fixture-server smoke test | done | 77b8181 | 923 tests; verifier mutation-tested 10 new files, found and fixed 8 real gaps across crawl/lighthouse/screenshot/perf/content/store/fixture-server (all boundary conditions or an untested function), all re-verified; all 84 check ids now implemented |
 | 3.6 | `plan` scheduler + `merge` (outlinks, phash gating) + tests | done | 8a3659c | 979 tests; verifier mutation-tested and found 2 undertested paths (merge fold's history source, screenshot phash-copy gate's exact threshold boundary), both fixed and re-verified by hand |
-| 3.7 | audit.yml live (3 → 50 → cron) | todo | | |
+| 3.7 | audit.yml live (3 → 50 → cron) | in progress | ae87b71 (workflow), see handoff (crash fix) | step 1 done; step 2's crash bug fixed, retry pending |
 | 4.1 | Full site page | todo | | |
 | 4.2 | Ministry / department / kind / platform / leaderboard pages | todo | | |
 | 4.3 | Status pages, feeds, static API, data page | todo | | |
@@ -104,6 +101,28 @@ _None yet. Each entry: what, why, ADR number._
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-09-21 · WP3.7 step 2's crash bug: diagnosed, fixed, verified (see previous session's
+  `docs/HANDOFF.md`, now deleted since its content is resolved)** — `audit/src/runner.ts`'s
+  `runDeepAudit` created `lighthousePromise` but didn't `await` it until much later inside a
+  `Promise.all`; when Lighthouse rejected fast (a closed target) while `capture()` was still
+  slow, Node saw an unhandled rejection and killed the whole process, bypassing the function's
+  own `try/catch` and losing every site a shard had already audited (confirmed for real: the
+  `batch_size=50` run lost 21 successfully-audited sites this way, twice independently across
+  two shards). Fix: a no-op `lighthousePromise.catch(() => {})` right after creation, which marks
+  it "handled" without changing what the later `await Promise.all(...)` receives. Also added
+  `if: always()` to `.github/workflows/audit.yml`'s `upload-artifact` step (mirrored into
+  `docs/DESIGN.md` §6.3's own snippet) so a shard that still crashes for some other reason no
+  longer discards whatever it finished. New regression test
+  `audit/tests/runner-lighthouse-rejection.test.ts` reproduces the exact race with mocked
+  dependencies — deliberately plain functions, not `vi.fn()`, since `vi.fn()`'s own internal
+  result-tracking attaches a `.then`/`.catch` that silently masks this exact bug (confirmed by
+  hand: the `vi.fn()` version of the test passed even with the bug still present). Verified twice
+  independently — by hand (revert fix → test fails with the real assertion mismatch; restore →
+  passes) and by the `verifier` subagent, which redid the same break/restore itself and confirmed
+  the fix's placement, the test's determinism, and `audit.yml`'s `if: always()` condition are all
+  correct. `cd audit && npm test` (987/987) and `npm run lint` both clean. **Not yet done:** the
+  actual retry of `batch_size=50` hasn't been run yet — that's the literal next action.
 
 - **2026-09-21 · Cross-cutting: ADR-026, plain-language status reasons (not a WP, pushed `4a3053d`
   + `7e59ebf`)** — human instruction, done ahead of WP3.7 since it was already live on production

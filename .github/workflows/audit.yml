@@ -72,6 +72,7 @@ jobs:
           VANTAGE: gh-us
           SAFE_BROWSING_KEY: ${{ secrets.SAFE_BROWSING_KEY }}   # optional
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: shard-${{ matrix.index }}
           path: out/

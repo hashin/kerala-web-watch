@@ -503,6 +503,7 @@ jobs:
           VANTAGE: gh-us
           SAFE_BROWSING_KEY: ${{ secrets.SAFE_BROWSING_KEY }}   # optional
       - uses: actions/upload-artifact@v4
+        if: always()   # a shard that crashes partway through must still upload what it finished
         with: { name: shard-${{ matrix.index }}, path: out/, retention-days: 3 }
 
   merge:
