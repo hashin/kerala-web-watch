@@ -6,8 +6,8 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 ## Now
 
 - **Phase:** 3 — Deep audits
-- **Current WP:** WP3.4 (done) → **Next WP:** WP3.5 (Playwright runner: capture, axe, Lighthouse, crawl, screenshots; fixture-server smoke test)
-- **Next action:** Start WP3.5 — read `docs/IMPLEMENTATION.md` WP3.5 and its Read-first list. This is the big one: it builds the actual browser-driven runner that populates almost every optional `CheckContext` field WP3.1-3.4 have been forward-declaring and leaving `na` (`html`, `text`, `headers`, `cssTexts`, `scriptUrls`, `consoleErrors`, `malayalamRatio`, `requests`, `soft404Status`, `robotsTxt`, `sitemapXmlStatus`, `domainExpiryDays`, `wwwConsistent`, `vulnerableLibraries`, `safeBrowsingFlagged`, `history` -- see the WP3.1-3.4 handoff entries below for what each one means and who reads it), plus wires up `a11y.*`/`perf.*` (axe-core, Lighthouse) and the crawl-dependent `content.broken_links`/`broken_pdfs`/`broken_images`/`console_errors`. Read the handoff entries below closely before starting -- there's a lot of accumulated context about exactly what each field is for.
+- **Current WP:** WP3.5 (done) → **Next WP:** WP3.6 (`plan` scheduler + `merge` (outlinks, phash gating) + tests)
+- **Next action:** Start WP3.6 — read `docs/IMPLEMENTATION.md` WP3.6 and its Read-first list. WP3.5 landed `cli run` as a one-site-at-a-time runner with no batching/scheduling of its own; WP3.6 is what turns that into "audit ~250-300 sites/day, rotating through the registry" (ADR-004's cadence) via a `plan` command that picks the day's batch and a `merge` command that folds `cli run`'s per-site output plus outlinks/screenshot-phash bookkeeping into the data branch the way `cli light`'s own merge already does for light checks.
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
 - **Registry size:** 1,500 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated) · **Deep-audited:** 0 · **Light-checked:** 1,500/1,500 (15 down, 19 broken as of first full run 2026-09-21T05:30Z) · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data instead of placeholders
 - **Candidates backlog:** ~2,476 fresh, uncurated candidates as of 2026-09-21 (mostly from a new `kerala-gov-in-subdomains` source — see Handoff below), waiting for a WP1.7-style curation pass. Not yet in `registry/sites/`.
@@ -36,7 +36,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 3.2 | Availability + identity checks + fixtures | done | 8288a64 | 21 checks (11 avail.*, 10 id.*), 571 tests; verifier mutation-tested and found 4 undertested paths (avail.blank boundary, avail.redirect_offsite alias handling, avail.parked pattern coverage, avail.default_page's "It works!" branch), all fixed and re-verified by hand |
 | 3.3 | Security checks + retire.js + fixtures | done | 2035977 | 14 sec.* checks, 634 tests; retire.js wired as a real dependency and shells out to its own CLI in a real (offline, fixture-jsrepo) integration test; verifier mutation-tested and found 3 undertested paths (header-lookup case/substring matching, a TLS major-version branch, the shared hadResponse timeout case), all fixed and re-verified by hand |
 | 3.4 | Content + GIGW checks (bilingual) + fixtures | done | f72501c | 11 content.* + 16 gigw.* checks (content.broken_*/console_errors deferred to WP3.5's crawler), 792 tests; new `audit/src/text/{dates,malayalam,patterns}.ts`; verifier mutation-tested and found 3 undertested paths (a threshold "passing by coincidence", a short-circuit never actually forced, gigw.* pattern-to-check wiring unverified per-check), all fixed and re-verified by hand |
-| 3.5 | Playwright runner: capture, axe, Lighthouse, crawl, screenshots; fixture-server smoke test | todo | | |
+| 3.5 | Playwright runner: capture, axe, Lighthouse, crawl, screenshots; fixture-server smoke test | done | 77b8181 | 923 tests; verifier mutation-tested 10 new files, found and fixed 8 real gaps across crawl/lighthouse/screenshot/perf/content/store/fixture-server (all boundary conditions or an untested function), all re-verified; all 84 check ids now implemented |
 | 3.6 | `plan` scheduler + `merge` (outlinks, phash gating) + tests | todo | | |
 | 3.7 | audit.yml live (3 → 50 → cron) | todo | | |
 | 4.1 | Full site page | todo | | |
@@ -73,6 +73,68 @@ _None yet. Each entry: what, why, ADR number._
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-09-21 · WP3.5 done — all 84 check ids now implemented** — `audit/src/capture.ts` (one
+  Playwright/Chromium session per site: HTML, rendered text, links, inline+linked CSS, script
+  bodies, console/page errors, subresource request log, an axe-core pass, desktop+mobile
+  screenshots), `lighthouse.ts` (Lighthouse driven through Playwright's own Chromium via
+  `chrome-launcher`, mobile/slow-4G profile, 90s cap, never throws -- records `null` on failure per
+  ADR-015), `crawl.ts` (same-domain, robots.txt-respecting, 1 req/s, ≤30 pages + ≤20 PDFs,
+  HEAD-then-GET fallback for PDFs), `screenshot.ts` (sharp -> WebP q60 + 8x8 aHash, ADR-017's >10
+  Hamming-distance replace-only rule), `probes.ts` (robots.txt/sitemap.xml/soft-404/www-consistency
+  -- plain HTTP, no browser needed), `checks/a11y.ts` (11 checks) and `checks/perf.ts` (7 checks)
+  wired into `CHECK_LIST`, plus `content.broken_links`/`broken_pdfs`/`broken_images`/
+  `console_errors` added to `content.ts` -- every one of DESIGN §5.3's ~84 check ids now has a real
+  implementation, not just metadata. `runner.ts` orchestrates light -> capture -> Lighthouse ->
+  crawl -> the plain-HTTP probes -> `buildContext` -> `runChecks` -> `scoreSite` -> a `DeepResult`,
+  catching any uncaught error into `deep.error` with the site's *status* left untouched (WP3.5 step
+  5's own spec) rather than ever inferring "broke worse" from a half-finished run. `store.ts`'s
+  `Result.deep`/`score`/`issues` widened from their Phase-2 placeholder `null`/`null`/`[]` types to
+  the real `DeepResult`/`ScoreBreakdown`/`Issue[]` shapes (a real Phase-3 field going live, not a
+  new product decision -- DESIGN §5.5 already specified this shape); new `mergeRunResult` (a deep
+  audit's own status is authoritative, unlike a light check's two-strike rule) and `mergeErrorResult`
+  (status frozen, previous score/issues/screenshot carried forward). `cli.ts` gained `run`
+  (`--ids`/`--all` + `--out`, refuses an unbounded local run outside GitHub Actions the same way
+  `--resolve` already does, exempting `--fixture-base` runs since those never touch a real site) and
+  `self-test`. **`fixture-server.ts`** (a real `node:http` server, subdomain-routed by
+  `<label>.localhost` -- confirmed these resolve to loopback with no `/etc/hosts` edits on both this
+  Mac and, going by common CI-runner behaviour, Ubuntu) plus 8 fixture sites under
+  `tests/fixtures/sites/` (good/parked/default-apache/blank/legacy-font/no-gigw/mixed-content/
+  slow-5xx) and `self-test.ts` (asserts which check ids each fixture's page is built to trigger, and
+  that none of those leak into the one clean fixture). **Known, deliberate self-test limitation:**
+  every fixture is served over plain HTTP (no TLS setup for local test pages), so `sec.https`/
+  `sec.cert_valid` fail identically for all 8 fixtures including the "good" one, which pushes every
+  fixture's status to `broken` via the ★-override regardless of what else is true -- harmless and
+  fully expected (a real audit always hits a site's actual HTTPS), documented in `self-test.ts`'s own
+  comment; self-test therefore asserts on `deep.checks` issue-id membership, not on `status`.
+  **Real bug found via the live-site Verify run, not a unit test:** `capture.ts` originally read
+  `response.allHeaders()` *after* `context.close()`, throwing "Target page, context or browser has
+  been closed" on every single audit -- caught immediately because self-test failed 8/8 with that
+  exact error; fixed by reading `finalUrl`/`status`/`headers` before closing the context. **Real,
+  version-drift bug also found via the live run:** Lighthouse 13.x renamed the audits
+  IMPLEMENTATION.md §A.7 named (`tap-targets` -> `target-size`, `uses-optimized-images` ->
+  `image-delivery-insight`) -- `perf.tap_targets`/`perf.images` were silently `na` on every real run
+  until this was caught by manually inspecting a live `keralapsc` audit's check results and noticing
+  they never fired; fixed in `lighthouse.ts` with a comment explaining the rename, confirmed fixed
+  against a second live run (`pass`/`fail` respectively, no longer `na`). **Verified against a real
+  site, not just fixtures**, per the WP's own Verify text: `run --ids keralapsc --out /tmp/o`
+  produced lighthouse numbers (`{performance:11, accessibility:98, best_practices:69, seo:83}`),
+  both screenshots on disk, `crawl: {pages:30, pdfs:6, broken:36}`, `tech: {cms:"Drupal 8"}`, and
+  `axe: {serious:2}` -- status came back `down` because keralapsc.gov.in is genuinely returning a
+  plain Apache 403 to this dev machine right now (not a bug: `avail.geo_blocked`'s narrow A.9
+  signatures correctly declined to guess geo-blocking from an unmarked 403, so it's reported as the
+  more honest `down` rather than a falsely-reassuring `unverifiable`). **verifier mutation-tested**
+  `crawl.ts`/`capture.ts`/`lighthouse.ts`/`screenshot.ts`/`checks/a11y.ts`/`checks/perf.ts`/the four
+  new `content.*` checks/`store.ts`'s two new merge functions/`runner.ts`'s pure helpers/
+  `fixture-server.ts` and found 8 real gaps (mostly untested exact-boundary cutoffs -- LCP 4000ms,
+  CLS 0.25, weight 3MB/8MB, the `isBroken` 400 boundary -- plus `mergeErrorResult` having *zero*
+  tests despite being the function implementing WP3.5's own error-handling contract, and
+  `averageHash`/`hammingDistance` only ever being checked by self-/inequality rather than a concrete
+  hash value), all fixed with 16 new tests and manually re-verified. 923 tests, `npm run build` and
+  `self-test` both clean. **Phase 3's `explainer` readability pass is still due at WP3.7** (Phase 3's
+  last WP), not this one -- per CLAUDE.md's phase-boundary-only convention, unchanged from the
+  WP3.4 handoff's own note. **Next: WP3.6** (`plan` scheduler + `merge`) -- see the **Next action**
+  line above.
 
 - **2026-09-21 · WP3.4 done** — `audit/src/checks/content.ts` (11 checks) and `audit/src/checks/gigw.ts`
   (16 checks), the first bilingual (English + Malayalam) checks. Three new pure-function modules:
