@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { appendFileSync } from 'node:fs';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import pLimit from 'p-limit';
@@ -11,6 +12,9 @@ import { changedSiteIds } from './changed.js';
 import { resolveSites, toResolvedTable } from './resolve.js';
 import { runDeepAudit } from './runner.js';
 import { runSelfTest } from './self-test.js';
+import { deriveScheduleState, planBatch, toPlanTable } from './scheduler.js';
+import { nextBatchId, readBatches } from './batches.js';
+import { mergeAll } from './merge.js';
 
 function flagValue(argv: string[], name: string): string | undefined {
   const index = argv.indexOf(name);
@@ -204,6 +208,123 @@ async function runRun(argv: string[]): Promise<number> {
   return 0;
 }
 
+/** Appends a step output for GitHub Actions to pick up (`$GITHUB_OUTPUT`, the current mechanism --
+ * the old `::set-output` command is deprecated). A no-op outside Actions, where the env var isn't
+ * set, so `plan` behaves the same in a local dev run and just skips this. The `<<delimiter>>`
+ * heredoc form (rather than a plain `name=value` line) is what GitHub's own docs recommend for a
+ * value that might contain newlines, which the matrix JSON here does not, but the batch table
+ * output easily could if this helper is ever reused for it. */
+function writeGithubOutput(name: string, value: string): void {
+  const outputPath = process.env.GITHUB_OUTPUT;
+  if (!outputPath) return;
+  const delimiter = `ghadelimiter_${Math.random().toString(36).slice(2)}`;
+  appendFileSync(outputPath, `${name}<<${delimiter}\n${value}\n${delimiter}\n`);
+}
+
+const PLAN_USAGE =
+  'Usage: cli.js plan --registry <dir> --data <dir> [--refresh-days n] [--max-batch n] [--max-shards n] [--site-ids <id,id,...>] [--batch-size n] [--dry-run]';
+
+/**
+ * DESIGN §6.2's rolling scheduler (WP3.6): tiers every active site, picks the day's batch (or, with
+ * `--site-ids`, bypasses tiering entirely for a manual re-audit), and shards it for audit.yml's
+ * matrix job. `--dry-run` only prints the batch as a table. Otherwise the matrix JSON and batch id
+ * go to `$GITHUB_OUTPUT` for the workflow's later steps -- this command's own job never touches
+ * `data` beyond reading it, so it never pushes (see `batches.ts` on how `merge` still lands on the
+ * same batch id without this command passing it along).
+ */
+async function runPlan(argv: string[]): Promise<number> {
+  if (argv.includes('--help')) {
+    console.log(PLAN_USAGE);
+    return 0;
+  }
+
+  const registryDir = flagValue(argv, '--registry') ?? 'registry';
+  const dataDir = flagValue(argv, '--data');
+  if (!dataDir) {
+    console.error(`Missing --data <dir>\n${PLAN_USAGE}`);
+    return 1;
+  }
+
+  const refreshDays = Number(flagValue(argv, '--refresh-days') ?? '7');
+  const maxBatch = Number(flagValue(argv, '--max-batch') ?? '300');
+  const maxShards = Number(flagValue(argv, '--max-shards') ?? '6');
+  const siteIdsFlag = flagValue(argv, '--site-ids');
+  const batchSizeFlag = flagValue(argv, '--batch-size');
+  const dryRun = argv.includes('--dry-run');
+
+  const forcedSiteIds = siteIdsFlag
+    ? siteIdsFlag
+        .split(',')
+        .map((id) => id.trim())
+        .filter(Boolean)
+    : [];
+  const batchSizeOverride = batchSizeFlag ? Number(batchSizeFlag) : undefined;
+
+  const registry = loadRegistry(registryDir);
+  const activeSites = registry.sites.filter((s) => s.lifecycle === 'active');
+  const scheduleState = new Map(activeSites.map((s) => [s.id, deriveScheduleState(readResult(dataDir, s.id))]));
+
+  const output = planBatch({
+    activeSites: activeSites.map((s) => ({ id: s.id, priority: s.priority })),
+    scheduleState,
+    forcedSiteIds,
+    batchSizeOverride,
+    refreshDays,
+    minBatch: 50,
+    maxBatch,
+    maxShards,
+    shardSize: 40,
+  });
+
+  const batchId = nextBatchId(readBatches(dataDir), new Date());
+
+  if (dryRun) {
+    console.log(toPlanTable(output));
+    console.log(`\nbatch_id: ${batchId}`);
+    return 0;
+  }
+
+  const matrix = { include: output.shards.map((ids, index) => ({ index, ids: ids.join(',') })) };
+  writeGithubOutput('batch_id', batchId);
+  writeGithubOutput('matrix', JSON.stringify(matrix));
+  console.error(`plan: batch_id=${batchId} size=${output.selected.length} shards=${output.shards.length}`);
+  return 0;
+}
+
+const MERGE_USAGE = 'Usage: cli.js merge --in <dir> --data <dir> [--registry <dir>]';
+
+/**
+ * WP3.6's other half: folds a batch of shards' `out/results/*.json` into `data/` (`merge.ts`),
+ * then recomputes `outlinks.json` and `summary.json` from the result. Never touches the live
+ * internet itself -- everything it reads was already fetched by `cli run`'s shards -- so it has no
+ * CLAUDE.md live-audit gate to check, unlike `run`/`validate --resolve`.
+ */
+async function runMerge(argv: string[]): Promise<number> {
+  if (argv.includes('--help')) {
+    console.log(MERGE_USAGE);
+    return 0;
+  }
+
+  const inDir = flagValue(argv, '--in');
+  const dataDir = flagValue(argv, '--data');
+  const registryDir = flagValue(argv, '--registry') ?? 'registry';
+
+  if (!inDir || !dataDir) {
+    console.error(`Missing --in <dir> or --data <dir>\n${MERGE_USAGE}`);
+    return 1;
+  }
+
+  const registry = loadRegistry(registryDir);
+  const report = mergeAll(inDir, dataDir, registry, { now: new Date() });
+
+  for (const site of report.sites) {
+    console.error(`${site.id} ${site.status} score=${site.score ?? '-'}${site.screenshotCopied ? ' screenshot=copied' : ''}`);
+  }
+  console.error(`merge: batch_id=${report.batchId} sites=${report.sites.length}`);
+
+  return 0;
+}
+
 async function runSelfTestCommand(argv: string[]): Promise<number> {
   if (argv.includes('--help')) {
     console.log('Usage: cli.js self-test [--with-lighthouse]');
@@ -222,10 +343,16 @@ async function main(): Promise<number> {
       return runLight(rest);
     case 'run':
       return runRun(rest);
+    case 'plan':
+      return runPlan(rest);
+    case 'merge':
+      return runMerge(rest);
     case 'self-test':
       return runSelfTestCommand(rest);
     default:
-      console.error(`Unknown command: ${command ?? '(none)'}\nUsage: cli.js validate --registry <dir> [--json] | cli.js light --help | cli.js run --help | cli.js self-test --help`);
+      console.error(
+        `Unknown command: ${command ?? '(none)'}\nUsage: cli.js validate --registry <dir> [--json] | cli.js light --help | cli.js run --help | cli.js plan --help | cli.js merge --help | cli.js self-test --help`,
+      );
       return 1;
   }
 }

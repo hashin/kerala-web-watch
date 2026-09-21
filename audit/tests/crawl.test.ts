@@ -92,6 +92,13 @@ describe('crawl against a local fixture server', () => {
     const result = await crawl(`${baseUrl()}/`, links, noWait);
     expect(result.pagesChecked).toBe(1); // only the internal link is checked
     expect(result.outboundDomains).toEqual(['example.com']);
+    expect(result.outlinks).toEqual([{ host: 'example.com', count: 1, texts: ['Elsewhere'] }]);
+  });
+
+  it('caps outlink sample texts at 3 distinct values per host', async () => {
+    const links = Array.from({ length: 5 }, (_, i) => ({ href: `https://example.com/page${i}`, text: `Text ${i}` }));
+    const result = await crawl(`${baseUrl()}/`, links, noWait);
+    expect(result.outlinks).toEqual([{ host: 'example.com', count: 5, texts: ['Text 0', 'Text 1', 'Text 2'] }]);
   });
 
   it('samples PDFs separately from pages, using HEAD', async () => {

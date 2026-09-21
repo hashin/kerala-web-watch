@@ -2,7 +2,7 @@ import { mkdtempSync, readdirSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import { mergeErrorResult, mergeLightResult, mergeRunResult, readResult, writeJsonAtomic, writeResult, type DeepResult } from '../src/store.js';
+import { mergeDeepAuditIntoData, mergeErrorResult, mergeLightResult, mergeRunResult, readResult, writeJsonAtomic, writeResult, type DeepResult, type Result } from '../src/store.js';
 import type { LightResult } from '../src/light.js';
 import type { ScoreOutcome } from '../src/score.js';
 
@@ -17,6 +17,7 @@ function deepResult(overrides: Partial<DeepResult> = {}): DeepResult {
     tech: { cms: null, server: null, jquery: null },
     checks: [],
     screenshot: null,
+    outlinks: [],
     ...overrides,
   };
 }
@@ -95,6 +96,32 @@ describe('store', () => {
     const updated = mergeLightResult(audited, { id: 'x', url: 'https://x.kerala.gov.in' }, light(), { vantage: 'gh-us', today: '2026-09-21' });
 
     expect(updated.status).toBe('needs-work');
+  });
+
+  describe('mergeLightResult deep_bump (ADR-016)', () => {
+    it('does not bump a site that has never been light-checked before', () => {
+      const result = mergeLightResult(null, { id: 'x', url: 'https://x.kerala.gov.in' }, light(), { vantage: 'gh-us', today: '2026-09-21' });
+      expect(result.deep_bump).toBe(false);
+    });
+
+    it('bumps when the homepage content hash changes', () => {
+      const first = mergeLightResult(null, { id: 'x', url: 'https://x.kerala.gov.in' }, light({ content_hash: 'abc' }), { vantage: 'gh-us', today: '2026-09-20' });
+      const second = mergeLightResult(first, { id: 'x', url: 'https://x.kerala.gov.in' }, light({ content_hash: 'def' }), { vantage: 'gh-us', today: '2026-09-21' });
+      expect(second.deep_bump).toBe(true);
+    });
+
+    it('does not bump when nothing material changed', () => {
+      const first = mergeLightResult(null, { id: 'x', url: 'https://x.kerala.gov.in' }, light(), { vantage: 'gh-us', today: '2026-09-20' });
+      const second = mergeLightResult(first, { id: 'x', url: 'https://x.kerala.gov.in' }, light(), { vantage: 'gh-us', today: '2026-09-21' });
+      expect(second.deep_bump).toBe(false);
+    });
+
+    it('stays bumped across further light checks until a deep audit clears it', () => {
+      const first = mergeLightResult(null, { id: 'x', url: 'https://x.kerala.gov.in' }, light({ title: 'Old' }), { vantage: 'gh-us', today: '2026-09-19' });
+      const bumped = mergeLightResult(first, { id: 'x', url: 'https://x.kerala.gov.in' }, light({ title: 'New' }), { vantage: 'gh-us', today: '2026-09-20' });
+      const third = mergeLightResult(bumped, { id: 'x', url: 'https://x.kerala.gov.in' }, light({ title: 'New' }), { vantage: 'gh-us', today: '2026-09-21' });
+      expect(third.deep_bump).toBe(true);
+    });
   });
 
   it('writeResult then readResult round-trips exactly, including through the atomic rename', () => {
@@ -205,6 +232,141 @@ describe('store', () => {
     it('stringifies a non-Error throw rather than losing it', () => {
       const result = mergeErrorResult(null, { id: 'x', url: 'https://x.kerala.gov.in' }, light(), 'plain string rejection', opts);
       expect(result.deep?.error).toBe('plain string rejection');
+    });
+  });
+
+  describe('mergeDeepAuditIntoData (WP3.6)', () => {
+    function freshRunResult(overrides: Partial<Result> = {}): Result {
+      const base = mergeRunResult(null, { id: 'x', url: 'https://x.kerala.gov.in' }, light({ at: '2026-09-21T03:00:00.000Z' }), deepResult({ at: '2026-09-21T03:00:00.000Z' }), scoreOutcome(), {
+        vantage: 'gh-us',
+        today: '2026-09-21',
+      });
+      return { ...base, ...overrides };
+    }
+
+    it("keeps data/'s own light rather than the shard's stale probe", () => {
+      const existingData = mergeLightResult(null, { id: 'x', url: 'https://x.kerala.gov.in' }, light({ at: '2026-09-21T05:00:00.000Z', ttfb_ms: 42 }), {
+        vantage: 'gh-us',
+        today: '2026-09-21',
+      });
+      const freshRun = freshRunResult();
+
+      const { result } = mergeDeepAuditIntoData(existingData, freshRun, { today: '2026-09-21' });
+
+      expect(result.light?.at).toBe('2026-09-21T05:00:00.000Z');
+      expect(result.light?.ttfb_ms).toBe(42);
+    });
+
+    it("keeps data/'s own multi-day history rather than the shard's own (necessarily single-entry) history", () => {
+      // The shard's own out/ record always starts from a null `existing` (a fresh scratch dir --
+      // see docs/HANDOFF.md), so `freshRun.history` here has exactly one entry for today and knows
+      // nothing about `existingData`'s older days. If the fold ever threaded `freshRun.history`
+      // through instead of `existingData.history`, this older day would silently vanish.
+      const day1 = mergeLightResult(null, { id: 'x', url: 'https://x.kerala.gov.in' }, light(), { vantage: 'gh-us', today: '2026-09-10' });
+      const existingData = mergeLightResult(day1, { id: 'x', url: 'https://x.kerala.gov.in' }, light(), { vantage: 'gh-us', today: '2026-09-15' });
+      expect(existingData.history).toHaveLength(2);
+      const freshRun = freshRunResult();
+      expect(freshRun.history).toHaveLength(1); // sanity: the shard's own history really is a subset
+
+      const { result } = mergeDeepAuditIntoData(existingData, freshRun, { today: '2026-09-21' });
+
+      expect(result.history.map((h) => h.d)).toEqual(['2026-09-21', '2026-09-15', '2026-09-10']);
+    });
+
+    it('replaces deep/score/status/issues from the fresh run and clears deep_bump', () => {
+      const existingData: Result = { ...mergeLightResult(null, { id: 'x', url: 'https://x.kerala.gov.in' }, light(), { vantage: 'gh-us', today: '2026-09-20' }), deep_bump: true };
+      const freshRun = freshRunResult();
+
+      const { result, copyScreenshot } = mergeDeepAuditIntoData(existingData, freshRun, { today: '2026-09-21' });
+
+      expect(result.status).toBe('needs-work');
+      expect(result.score?.overall).toBe(72);
+      expect(result.issues).toEqual([{ id: 'sec.hsts', sev: 'M' }]);
+      expect(result.deep_bump).toBe(false);
+      expect(copyScreenshot).toBe(false); // freshRun has no screenshot in this fixture
+      expect(result.history[0]).toEqual({ d: '2026-09-21', up: true, score: 72 });
+    });
+
+    it("keeps data/'s own multi-day history when the shard's run errored", () => {
+      const day1 = mergeLightResult(null, { id: 'x', url: 'https://x.kerala.gov.in' }, light(), { vantage: 'gh-us', today: '2026-09-10' });
+      const existingData = mergeLightResult(day1, { id: 'x', url: 'https://x.kerala.gov.in' }, light(), { vantage: 'gh-us', today: '2026-09-15' });
+      const erroredRun = mergeErrorResult(null, { id: 'x', url: 'https://x.kerala.gov.in' }, light(), new Error('boom'), {
+        vantage: 'gh-us',
+        today: '2026-09-21',
+        runId: '9',
+        now: new Date('2026-09-21T03:00:00.000Z'),
+      });
+
+      const { result } = mergeDeepAuditIntoData(existingData, erroredRun, { today: '2026-09-21' });
+
+      expect(result.history.map((h) => h.d)).toEqual(['2026-09-21', '2026-09-15', '2026-09-10']);
+    });
+
+    it("keeps data/'s status/score/issues and the deep_bump flag when the shard's run errored", () => {
+      const existingData: Result = {
+        ...mergeRunResult(null, { id: 'x', url: 'https://x.kerala.gov.in' }, light(), deepResult(), scoreOutcome({ status: 'healthy' }), { vantage: 'gh-us', today: '2026-09-20' }),
+        deep_bump: true,
+      };
+      const erroredRun = mergeErrorResult(null, { id: 'x', url: 'https://x.kerala.gov.in' }, light(), new Error('navigation timeout'), {
+        vantage: 'gh-us',
+        today: '2026-09-21',
+        runId: '9',
+        now: new Date('2026-09-21T03:00:00.000Z'),
+      });
+
+      const { result, copyScreenshot } = mergeDeepAuditIntoData(existingData, erroredRun, { today: '2026-09-21' });
+
+      expect(result.status).toBe('healthy'); // untouched by the half-finished audit
+      expect(result.score?.overall).toBe(72);
+      expect(result.issues).toEqual([{ id: 'sec.hsts', sev: 'M' }]);
+      expect(result.deep_bump).toBe(true); // nothing has looked at the change yet -- stays queued
+      expect(result.deep?.error).toBe('navigation timeout');
+      expect(copyScreenshot).toBe(false);
+    });
+
+    it('skips the screenshot copy when the fresh aHash is close to the one already on file', () => {
+      const existingData: Result = mergeRunResult(
+        null,
+        { id: 'x', url: 'https://x.kerala.gov.in' },
+        light(),
+        deepResult({ screenshot: { desktop: '2026-09-14.webp', mobile: '2026-09-14-m.webp', phash: '0000000000000000' } }),
+        scoreOutcome(),
+        { vantage: 'gh-us', today: '2026-09-14' },
+      );
+      const freshRun = freshRunResult({ deep: deepResult({ screenshot: { desktop: '2026-09-21.webp', mobile: '2026-09-21-m.webp', phash: '0000000000000001' } }) });
+
+      const { result, copyScreenshot } = mergeDeepAuditIntoData(existingData, freshRun, { today: '2026-09-21' });
+
+      expect(copyScreenshot).toBe(false);
+      expect(result.deep?.screenshot).toEqual({ desktop: '2026-09-14.webp', mobile: '2026-09-14-m.webp', phash: '0000000000000000' });
+    });
+
+    it('copies the fresh screenshot when the aHash moved past the threshold', () => {
+      const existingData: Result = mergeRunResult(
+        null,
+        { id: 'x', url: 'https://x.kerala.gov.in' },
+        light(),
+        deepResult({ screenshot: { desktop: '2026-09-14.webp', mobile: '2026-09-14-m.webp', phash: '0000000000000000' } }),
+        scoreOutcome(),
+        { vantage: 'gh-us', today: '2026-09-14' },
+      );
+      const freshRun = freshRunResult({ deep: deepResult({ screenshot: { desktop: '2026-09-21.webp', mobile: '2026-09-21-m.webp', phash: 'ffffffffffffffff' } }) });
+
+      const { result, copyScreenshot } = mergeDeepAuditIntoData(existingData, freshRun, { today: '2026-09-21' });
+
+      expect(copyScreenshot).toBe(true);
+      expect(result.deep?.screenshot).toEqual({ desktop: '2026-09-21.webp', mobile: '2026-09-21-m.webp', phash: 'ffffffffffffffff' });
+    });
+
+    it('is idempotent: merging the same fresh run twice produces the same stored result', () => {
+      const existingData = mergeLightResult(null, { id: 'x', url: 'https://x.kerala.gov.in' }, light(), { vantage: 'gh-us', today: '2026-09-20' });
+      const freshRun = freshRunResult();
+
+      const first = mergeDeepAuditIntoData(existingData, freshRun, { today: '2026-09-21' });
+      const second = mergeDeepAuditIntoData(first.result, freshRun, { today: '2026-09-21' });
+
+      expect(second.result).toEqual(first.result);
+      expect(second.copyScreenshot).toBe(false);
     });
   });
 });

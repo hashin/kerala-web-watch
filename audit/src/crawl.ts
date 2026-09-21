@@ -21,13 +21,26 @@ export interface CrawlLinkStatus {
   status: number | 'timeout';
 }
 
+/** One outbound (off-host) domain the crawl saw a link to, for WP3.6's `discover.yml` feed --
+ * `count` is the number of distinct link URLs to that host on the pages this crawl visited,
+ * `texts` up to 3 distinct anchor texts (a human skimming a discovery PR reads these, not the
+ * count) sampled in link order. */
+export interface CrawlOutlink {
+  host: string;
+  count: number;
+  texts: string[];
+}
+
 export interface CrawlResult {
   pagesChecked: number;
   brokenLinks: CrawlLinkStatus[];
   pdfsChecked: number;
   brokenPdfs: CrawlLinkStatus[];
   outboundDomains: string[];
+  outlinks: CrawlOutlink[];
 }
+
+const MAX_OUTLINK_TEXTS = 3;
 
 export interface CrawlOptions {
   /** CLAUDE.md's politeness cap: ≤ 30 pages + ≤ 20 PDFs per site per audit. */
@@ -120,6 +133,7 @@ export async function crawl(homepageUrl: string, links: CrawlLink[], opts: Crawl
 
   const resolved = new Set<string>();
   const outboundDomains = new Set<string>();
+  const outlinksByHost = new Map<string, { count: number; texts: string[] }>();
   const samePages: string[] = [];
   const samePdfs: string[] = [];
 
@@ -136,7 +150,14 @@ export async function crawl(homepageUrl: string, links: CrawlLink[], opts: Crawl
 
     const linkDomain = getDomain(new URL(absolute).hostname);
     if (linkDomain !== homeDomain) {
-      if (linkDomain) outboundDomains.add(linkDomain);
+      if (linkDomain) {
+        outboundDomains.add(linkDomain);
+        const entry = outlinksByHost.get(linkDomain) ?? { count: 0, texts: [] };
+        entry.count++;
+        const text = link.text.trim();
+        if (text && entry.texts.length < MAX_OUTLINK_TEXTS && !entry.texts.includes(text)) entry.texts.push(text);
+        outlinksByHost.set(linkDomain, entry);
+      }
       continue;
     }
     if (robots && robots.isAllowed(absolute, opts.userAgent) === false) continue;
@@ -165,6 +186,7 @@ export async function crawl(homepageUrl: string, links: CrawlLink[], opts: Crawl
     pdfsChecked: samePdfs.length,
     brokenPdfs,
     outboundDomains: [...outboundDomains],
+    outlinks: [...outlinksByHost.entries()].map(([host, { count, texts }]) => ({ host, count, texts })),
   };
 }
 

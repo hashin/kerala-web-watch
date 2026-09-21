@@ -65,6 +65,7 @@ function result(overrides: Partial<Result>): Result {
     status: 'unaudited',
     issues: [],
     history: [],
+    deep_bump: false,
     ...overrides,
   };
 }
@@ -101,7 +102,7 @@ describe('computeSummary', () => {
 
   it('carries the deep audit timestamp through to the site summary', () => {
     const registry = registryOf([site({ id: 'a' })]);
-    const results = [result({ id: 'a', deep: { at: '2026-09-20T12:00:00Z', run: '1', vantage: 'gh-us', lighthouse: null, axe: { critical: 0, serious: 0, moderate: 0, minor: 0 }, crawl: { pages: 0, pdfs: 0, broken: 0 }, tech: { cms: null, server: null, jquery: null }, checks: [], screenshot: null } })];
+    const results = [result({ id: 'a', deep: { at: '2026-09-20T12:00:00Z', run: '1', vantage: 'gh-us', lighthouse: null, axe: { critical: 0, serious: 0, moderate: 0, minor: 0 }, crawl: { pages: 0, pdfs: 0, broken: 0 }, tech: { cms: null, server: null, jquery: null }, checks: [], screenshot: null, outlinks: [] } })];
     const summary = computeSummary(registry, results, { now: new Date('2026-09-21T00:00:00Z'), vantages: ['gh-us'] });
     expect(summary.sites.find((s) => s.id === 'a')?.deep_at).toBe('2026-09-20T12:00:00Z');
   });

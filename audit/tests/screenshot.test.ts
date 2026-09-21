@@ -1,6 +1,19 @@
 import sharp from 'sharp';
 import { describe, expect, it } from 'vitest';
-import { averageHash, hammingDistance, toWebp } from '../src/screenshot.js';
+import { averageHash, hammingDistance, PHASH_REPLACE_THRESHOLD, pickScreenshot, toWebp } from '../src/screenshot.js';
+
+// A 16-nibble (64-bit) aHash string exactly `distance` bits away from all-zero, spreading the set
+// bits low-nibble-first -- lets the boundary tests below pin down an exact Hamming distance
+// instead of relying on real screenshot bytes to happen to land there.
+function hashAtDistance(distance: number): string {
+  if (distance < 0 || distance > 64) throw new Error('a 16-nibble hash only has 64 bits');
+  let hex = '';
+  for (let nibble = 0; nibble < 16; nibble++) {
+    const bitsSet = Math.min(4, Math.max(0, distance - nibble * 4));
+    hex += ((1 << bitsSet) - 1).toString(16);
+  }
+  return hex;
+}
 
 function solidPng(hex: { r: number; g: number; b: number }): Promise<Buffer> {
   return sharp({ create: { width: 40, height: 40, channels: 3, background: hex } })
@@ -60,5 +73,28 @@ describe('toWebp', () => {
     expect(meta.format).toBe('webp');
     expect(meta.width).toBe(40);
     expect(meta.height).toBe(40);
+  });
+});
+
+describe('pickScreenshot (ADR-017 / WP3.6 merge step 2)', () => {
+  const existing = { desktop: 'old.webp', mobile: 'old-m.webp', phash: hashAtDistance(0) };
+
+  it('keeps the existing screenshot and does not flag a replacement when there is nothing fresh to consider', () => {
+    expect(pickScreenshot(existing, null)).toEqual({ screenshot: existing, replaced: false });
+  });
+
+  it('uses the fresh screenshot when there is no existing one to compare against', () => {
+    const fresh = { desktop: 'new.webp', mobile: 'new-m.webp', phash: hashAtDistance(0) };
+    expect(pickScreenshot(null, fresh)).toEqual({ screenshot: fresh, replaced: true });
+  });
+
+  it(`keeps the existing screenshot at exactly the threshold distance (${PHASH_REPLACE_THRESHOLD})`, () => {
+    const fresh = { desktop: 'new.webp', mobile: 'new-m.webp', phash: hashAtDistance(PHASH_REPLACE_THRESHOLD) };
+    expect(pickScreenshot(existing, fresh)).toEqual({ screenshot: existing, replaced: false });
+  });
+
+  it(`replaces the screenshot one bit past the threshold distance (${PHASH_REPLACE_THRESHOLD + 1})`, () => {
+    const fresh = { desktop: 'new.webp', mobile: 'new-m.webp', phash: hashAtDistance(PHASH_REPLACE_THRESHOLD + 1) };
+    expect(pickScreenshot(existing, fresh)).toEqual({ screenshot: fresh, replaced: true });
   });
 });

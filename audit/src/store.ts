@@ -1,8 +1,10 @@
 import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
+import type { CrawlOutlink } from './crawl.js';
 import type { CheckResult } from './checks/types.js';
 import type { LightResult } from './light.js';
 import { appendHistory, type HistoryEntry } from './history.js';
+import { pickScreenshot } from './screenshot.js';
 import type { Issue, ScoreBreakdown, ScoreOutcome } from './score.js';
 import { deriveStatus, isBrokenClass, type ResultStatus } from './status.js';
 
@@ -38,6 +40,9 @@ export interface DeepResult {
   tech: DeepTech;
   checks: CheckResult[];
   screenshot: DeepScreenshot | null;
+  /** Off-host links this run's crawl saw (WP3.6/DESIGN §6.6's discovery feed) -- `[]` when
+   * `--no-crawl` ran, or when the run errored before the crawl step. */
+  outlinks: CrawlOutlink[];
   error?: string;
 }
 
@@ -51,6 +56,10 @@ export interface Result {
   status: ResultStatus;
   issues: Issue[];
   history: HistoryEntry[];
+  /** ADR-016: set when a light check sees the homepage change materially since the last one
+   * (`detectMaterialChange` below); read by `scheduler.ts` as the forced tier and cleared by
+   * `mergeDeepAuditIntoData` once a deep audit has actually looked at the new content. */
+  deep_bump: boolean;
 }
 
 function resultPath(dataDir: string, id: string): string {
@@ -78,6 +87,24 @@ export function writeResult(dataDir: string, result: Result): void {
   writeJsonAtomic(resultPath(dataDir, result.id), result);
 }
 
+/** ADR-016: a light check's homepage read is "materially" different from the last one if any of
+ * these moved -- content or title (the page itself changed), final URL (it now redirects
+ * somewhere new), status code, or the certificate (reissued/renewed, read via `issuer`+`expires`
+ * since `light.ts` doesn't keep a full fingerprint). A brand-new site (no `previous`) is never a
+ * bump -- it's already `deep_bump`-irrelevant, since `scheduler.ts`'s tier 2 ("never deep-
+ * audited") already puts it ahead of anything a bump could do. */
+function detectMaterialChange(previous: StoredLight | null, next: LightResult): boolean {
+  if (!previous) return false;
+  return (
+    previous.content_hash !== next.content_hash ||
+    previous.title !== next.title ||
+    previous.status !== next.status ||
+    previous.final_url !== next.final_url ||
+    previous.tls?.issuer !== next.tls?.issuer ||
+    previous.tls?.expires !== next.tls?.expires
+  );
+}
+
 /**
  * Folds one fresh light check into a site's stored result: derives the new status (§5.4),
  * appends today's history entry, and creates the record from scratch (status `unaudited`) if
@@ -95,6 +122,7 @@ export function mergeLightResult(
 
   const { status, lightSuspect } = deriveStatus({ previousStatus, previousLight, newLight: light, hasDeepAudit });
   const historyEntry: HistoryEntry = { d: opts.today, up: !isBrokenClass(status), score: existing?.score?.overall ?? null };
+  const deepBump = (existing?.deep_bump ?? false) || detectMaterialChange(previousLight, light);
 
   return {
     id: site.id,
@@ -105,6 +133,7 @@ export function mergeLightResult(
     status,
     issues: existing?.issues ?? [],
     history: appendHistory(existing?.history ?? [], historyEntry),
+    deep_bump: deepBump,
   };
 }
 
@@ -135,6 +164,9 @@ export function mergeRunResult(
     status: scoreOutcome.status,
     issues: scoreOutcome.issues,
     history: appendHistory(existing?.history ?? [], historyEntry),
+    // A completed deep audit is authoritative evidence about the site as it exists right now --
+    // whatever prompted the bump (if anything) has been looked at.
+    deep_bump: false,
   };
 }
 
@@ -161,6 +193,7 @@ export function mergeErrorResult(
     tech: { cms: null, server: null, jquery: null },
     checks: [],
     screenshot: existing?.deep?.screenshot ?? null,
+    outlinks: existing?.deep?.outlinks ?? [],
     error: err instanceof Error ? err.message : String(err),
   };
   const status = existing?.status ?? 'unaudited';
@@ -174,5 +207,70 @@ export function mergeErrorResult(
     status,
     issues: existing?.issues ?? [],
     history: appendHistory(existing?.history ?? [], historyEntry),
+    // An audit that never finished didn't address whatever prompted the bump, if anything did.
+    deep_bump: existing?.deep_bump ?? false,
+  };
+}
+
+export interface DeepAuditMergeOutcome {
+  result: Result;
+  /** True when `result.deep.screenshot` is the fresh one from `freshRun` and its WebP files still
+   * need to be copied from the shard's `out/screenshots/` into `data/screenshots/` -- `merge.ts`
+   * owns that copy since it's a filesystem operation, not something a pure fold can do. */
+  copyScreenshot: boolean;
+}
+
+/**
+ * WP3.6 merge step 2: folds one shard's freshly-run `out/results/<id>.json` (itself already the
+ * output of `mergeRunResult`/`mergeErrorResult` above) into the site's real `data/results/<id>.json`.
+ * Deliberately NOT the same fold as `mergeRunResult`: `light`/`history` come from `existingData`,
+ * not `freshRun` -- `freshRun.light` is only as current as whenever this shard happened to run,
+ * while `data/`'s own `light` is kept fresh independently by `uptime.yml` every 6h (see
+ * docs/HANDOFF.md's WP3.5 handoff for why overwriting it here would make `data/` *less* current).
+ * When `freshRun.deep.error` is set the audit never actually finished, so -- same principle as
+ * `mergeErrorResult` -- `status`/`score`/`issues` and the screenshot stay whatever `data/` already
+ * had, and `deep_bump` is left set rather than cleared (nothing has actually looked at the change
+ * that caused it yet).
+ */
+export function mergeDeepAuditIntoData(existingData: Result | null, freshRun: Result, opts: { today: string }): DeepAuditMergeOutcome {
+  const erroredRun = freshRun.deep?.error != null;
+  const light = existingData?.light ?? freshRun.light;
+
+  if (erroredRun) {
+    const status = existingData?.status ?? 'unaudited';
+    const deep: DeepResult | null = freshRun.deep && { ...freshRun.deep, screenshot: existingData?.deep?.screenshot ?? null };
+    const historyEntry: HistoryEntry = { d: opts.today, up: !isBrokenClass(status), score: existingData?.score?.overall ?? null };
+    return {
+      result: {
+        id: freshRun.id,
+        url: freshRun.url,
+        light,
+        deep,
+        score: existingData?.score ?? null,
+        status,
+        issues: existingData?.issues ?? [],
+        history: appendHistory(existingData?.history ?? [], historyEntry),
+        deep_bump: existingData?.deep_bump ?? false,
+      },
+      copyScreenshot: false,
+    };
+  }
+
+  const { screenshot, replaced } = pickScreenshot(existingData?.deep?.screenshot ?? null, freshRun.deep?.screenshot ?? null);
+  const deep: DeepResult | null = freshRun.deep && { ...freshRun.deep, screenshot };
+  const historyEntry: HistoryEntry = { d: opts.today, up: !isBrokenClass(freshRun.status), score: freshRun.score?.overall ?? null };
+  return {
+    result: {
+      id: freshRun.id,
+      url: freshRun.url,
+      light,
+      deep,
+      score: freshRun.score,
+      status: freshRun.status,
+      issues: freshRun.issues,
+      history: appendHistory(existingData?.history ?? [], historyEntry),
+      deep_bump: false,
+    },
+    copyScreenshot: replaced,
   };
 }

@@ -9,13 +9,12 @@ import { isFlaggedBySafeBrowsing } from './net/safebrowsing.js';
 import { lightCheck, type LightResult } from './light.js';
 import { runLighthouse, type LighthouseResult } from './lighthouse.js';
 import { checkWwwConsistency, fetchRobotsTxt, fetchSitemapXmlStatus, fetchSoft404Status, registrableDomainOf } from './probes.js';
-import { averageHash, hammingDistance, toWebp } from './screenshot.js';
+import { averageHash, hammingDistance, PHASH_REPLACE_THRESHOLD, toWebp } from './screenshot.js';
 import { scoreSite } from './score.js';
 import { mergeErrorResult, mergeRunResult, type DeepResult, type Result } from './store.js';
 import type { Site } from './types.js';
 
 const JQUERY_VERSION = /jquery[.-]?(\d+\.\d+\.\d+)/i;
-const PHASH_REPLACE_THRESHOLD = 10;
 const DEFAULT_UA = 'KeralaWebWatch/1.0 (+https://govwebsite.hashin.me/about; civic audit)';
 
 export interface RunOptions {
@@ -127,6 +126,7 @@ export async function runDeepAudit(site: Site, existing: Result | null, opts: Ru
       tech: buildTech(captured, light),
       checks,
       screenshot: screenshot.record,
+      outlinks: crawlResult?.outlinks ?? [],
     };
 
     const result = mergeRunResult(existing, site, light, deep, scoreOutcome, { vantage, today: today(now()) });
