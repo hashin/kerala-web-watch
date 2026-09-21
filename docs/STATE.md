@@ -6,8 +6,8 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 ## Now
 
 - **Phase:** 3 — Deep audits
-- **Current WP:** WP3.3 (done) → **Next WP:** WP3.4 (content + GIGW checks, bilingual)
-- **Next action:** Start WP3.4 — read `docs/IMPLEMENTATION.md` WP3.4 and its Read-first list (DESIGN §5.3's `content.*`/`gigw.*` tables, Appendix A.4-A.6's pattern lists). Implement `audit/src/checks/content.ts` and `audit/src/checks/gigw.ts` against fixtures, following the same `Check`-array-plus-fixtures pattern WP3.2/WP3.3 established; these are the first bilingual (en+ml) pattern-matching checks, so budget time for Malayalam fixture text.
+- **Current WP:** WP3.4 (done) → **Next WP:** WP3.5 (Playwright runner: capture, axe, Lighthouse, crawl, screenshots; fixture-server smoke test)
+- **Next action:** Start WP3.5 — read `docs/IMPLEMENTATION.md` WP3.5 and its Read-first list. This is the big one: it builds the actual browser-driven runner that populates almost every optional `CheckContext` field WP3.1-3.4 have been forward-declaring and leaving `na` (`html`, `text`, `headers`, `cssTexts`, `scriptUrls`, `consoleErrors`, `malayalamRatio`, `requests`, `soft404Status`, `robotsTxt`, `sitemapXmlStatus`, `domainExpiryDays`, `wwwConsistent`, `vulnerableLibraries`, `safeBrowsingFlagged`, `history` -- see the WP3.1-3.4 handoff entries below for what each one means and who reads it), plus wires up `a11y.*`/`perf.*` (axe-core, Lighthouse) and the crawl-dependent `content.broken_links`/`broken_pdfs`/`broken_images`/`console_errors`. Read the handoff entries below closely before starting -- there's a lot of accumulated context about exactly what each field is for.
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
 - **Registry size:** 1,500 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated) · **Deep-audited:** 0 · **Light-checked:** 1,500/1,500 (15 down, 19 broken as of first full run 2026-09-21T05:30Z) · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data instead of placeholders
 - **Candidates backlog:** ~2,476 fresh, uncurated candidates as of 2026-09-21 (mostly from a new `kerala-gov-in-subdomains` source — see Handoff below), waiting for a WP1.7-style curation pass. Not yet in `registry/sites/`.
@@ -35,7 +35,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 3.1 | Check framework, `registry.ts` (all ids, EN), `score.ts` | done | 809d32b | 84 check ids (DESIGN §5.3 catalogues ~90); verifier mutation-tested `score.ts`, found 2 undertested paths (issues category-tiebreak, availability-exclusion), both fixed and re-verified by hand |
 | 3.2 | Availability + identity checks + fixtures | done | 8288a64 | 21 checks (11 avail.*, 10 id.*), 571 tests; verifier mutation-tested and found 4 undertested paths (avail.blank boundary, avail.redirect_offsite alias handling, avail.parked pattern coverage, avail.default_page's "It works!" branch), all fixed and re-verified by hand |
 | 3.3 | Security checks + retire.js + fixtures | done | 2035977 | 14 sec.* checks, 634 tests; retire.js wired as a real dependency and shells out to its own CLI in a real (offline, fixture-jsrepo) integration test; verifier mutation-tested and found 3 undertested paths (header-lookup case/substring matching, a TLS major-version branch, the shared hadResponse timeout case), all fixed and re-verified by hand |
-| 3.4 | Content + GIGW checks (bilingual) + fixtures | todo | | |
+| 3.4 | Content + GIGW checks (bilingual) + fixtures | done | f72501c | 11 content.* + 16 gigw.* checks (content.broken_*/console_errors deferred to WP3.5's crawler), 792 tests; new `audit/src/text/{dates,malayalam,patterns}.ts`; verifier mutation-tested and found 3 undertested paths (a threshold "passing by coincidence", a short-circuit never actually forced, gigw.* pattern-to-check wiring unverified per-check), all fixed and re-verified by hand |
 | 3.5 | Playwright runner: capture, axe, Lighthouse, crawl, screenshots; fixture-server smoke test | todo | | |
 | 3.6 | `plan` scheduler + `merge` (outlinks, phash gating) + tests | todo | | |
 | 3.7 | audit.yml live (3 → 50 → cron) | todo | | |
@@ -73,6 +73,39 @@ _None yet. Each entry: what, why, ADR number._
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-09-21 · WP3.4 done** — `audit/src/checks/content.ts` (11 checks) and `audit/src/checks/gigw.ts`
+  (16 checks), the first bilingual (English + Malayalam) checks. Three new pure-function modules:
+  `audit/src/text/dates.ts` (5 date-format parsers, `findLastUpdatedDate`/`findNewestNewsDate`
+  proximity searches, `findCopyrightYear` implementing DESIGN's own literal regex verbatim --
+  deliberately "first year after a marker", not "latest year in a range", since that's the settled
+  spec, not an oversight), `audit/src/text/malayalam.ts` (`malayalamRatio` via `\p{Script=Malayalam}`;
+  `langMismatches` is written and tested but NOT wired into any Check yet -- it's prep for WP3.5's
+  `a11y.lang`, which needs real rendered text/`<html lang>` from the Playwright runner), and
+  `audit/src/text/patterns.ts` (the GIGW element pattern table + `extractInteractiveText()`, which
+  scopes `gigw.*` matching to link/button/heading/title/aria-label text per DESIGN's own step 1, so
+  an article that merely mentions "contact" in prose doesn't count as a real Contact Us link).
+  `gigw.ownership` needed its pattern widened beyond DESIGN's literal single-verb regex (`content
+  (owned|maintained|provided) by`) to also match the much more common real-world "Owned, Maintained
+  and Updated by" chained phrasing -- a small implementation-level fix (a bounded gap between the
+  verb and "by"), not a product-level deviation, so no ADR. `content.broken_links`/`broken_pdfs`/
+  `broken_images`/`console_errors` stay `na` -- they need a real crawl/browser, which is WP3.5's job.
+  **verifier mutation-tested `content.ts`/`gigw.ts`/`dates.ts`** and found 3 real gaps, all a case of
+  a test technically covering a line without actually pinning its behaviour: `content.malayalam`'s
+  0.05 ratio threshold (the only "passes on ratio" test used text at ratio >0.9, nowhere near the
+  boundary) and its toggle-vs-ratio short-circuit (the "toggle" test's anchor text was itself
+  Malayalam, so the ratio alone already would have passed it) were each "passing by coincidence";
+  and the 12 navigation-based `gigw.*` checks' pattern-to-check wiring was never verified per-check,
+  since the `gigw-all-*`/`gigw-none` fixtures have every pattern present or absent simultaneously and
+  can't catch e.g. `gigw.sitemap` accidentally wired to the `'privacy'` pattern. Fixed with two
+  boundary-pinning tests (ratio 0.04 vs 0.06 via a direct `ctx.malayalamRatio` override), an
+  English-only-except-for-the-toggle test, and a single-marker-per-check test asserting each
+  navigation check passes on its own marker while every sibling still fails on that same page --
+  each manually re-broken and re-fixed to confirm. 792 tests, `npm run build` clean, 62 real checks
+  now wired into `CHECK_LIST` (11 avail + 10 id + 14 sec + 11 content + 16 gigw) out of the full
+  84-entry catalogue. **Next: WP3.5** (Playwright runner) -- see the **Next action** line above for
+  the full list of `CheckContext` fields it needs to populate; this is the largest remaining WP in
+  Phase 3 and the one every content/security/identity check's `na` branches have been waiting on.
 
 - **2026-09-21 · WP3.3 done** — `audit/src/checks/security.ts` (14 `sec.*` checks). `sec.https`/
   `http_redirect`/`cert_valid`/`cert_expiry`/`tls_version` read `ctx.light` (the existing TLS/redirect
