@@ -1,16 +1,28 @@
+import { A11Y_CHECKS } from './a11y.js';
 import { AVAILABILITY_CHECKS } from './availability.js';
 import { CONTENT_CHECKS } from './content.js';
 import { GIGW_CHECKS } from './gigw.js';
 import { IDENTITY_CHECKS } from './identity.js';
+import { PERF_CHECKS } from './perf.js';
 import { CHECKS } from './registry.js';
 import { SECURITY_CHECKS } from './security.js';
 import type { Check, CheckContext, CheckId, CheckResult } from './types.js';
 
-/** `avail.*`/`id.*` (WP3.2), `sec.*` (WP3.3) and `content.*`/`gigw.*` (WP3.4) are implemented; the
- * axe/Lighthouse-backed ones (`a11y.*`/`perf.*`) and the crawl-dependent `content.broken_*`/
- * `content.console_errors` land once WP3.5's Playwright runner exists to populate the context
- * fields they need. */
-export const CHECK_LIST: Check[] = [...AVAILABILITY_CHECKS, ...IDENTITY_CHECKS, ...SECURITY_CHECKS, ...CONTENT_CHECKS, ...GIGW_CHECKS];
+/** Every check id in `registry.ts`'s catalogue is implemented as of WP3.5: `avail.*`/`id.*`
+ * (WP3.2), `sec.*` (WP3.3), `content.*`/`gigw.*` (WP3.4), and `a11y.*`/`perf.*` plus the
+ * crawl-dependent `content.broken_*`/`content.console_errors` (WP3.5) -- the latter group's checks
+ * still fall back to `na` on their own whenever the runner didn't populate the `CheckContext`
+ * fields they need (e.g. `--no-lighthouse`/`--no-crawl`, or a context built by an earlier WP's
+ * tests that never sets them). */
+export const CHECK_LIST: Check[] = [
+  ...AVAILABILITY_CHECKS,
+  ...IDENTITY_CHECKS,
+  ...SECURITY_CHECKS,
+  ...CONTENT_CHECKS,
+  ...GIGW_CHECKS,
+  ...A11Y_CHECKS,
+  ...PERF_CHECKS,
+];
 
 /**
  * Runs every check in `CHECK_LIST` against `ctx`, applying its `appliesTo` gate (defaulting to

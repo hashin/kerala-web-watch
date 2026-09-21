@@ -190,4 +190,52 @@ export const CONTENT_CHECKS: Check[] = [
       return hasIcon ? { id: 'content.favicon', r: 'pass' } : { id: 'content.favicon', r: 'fail' };
     },
   },
+  {
+    id: 'content.broken_links',
+    run: (ctx): CheckResult => {
+      if (ctx.crawl === undefined) return { id: 'content.broken_links', r: 'na' };
+      const { brokenLinks, pagesChecked } = ctx.crawl;
+      if (brokenLinks.length === 0) return { id: 'content.broken_links', r: 'pass' };
+      const ratio = pagesChecked > 0 ? brokenLinks.length / pagesChecked : 1;
+      const ev = `${brokenLinks.length}/${pagesChecked} crawled link(s) broken (${brokenLinks
+        .slice(0, 3)
+        .map((l) => l.url)
+        .join(', ')}${brokenLinks.length > 3 ? ', ...' : ''})`;
+      // DESIGN §5.3 leaves the pass/warn/fail split for "count and %" to the implementation -- a
+      // couple of stray broken links on a large site is a lower-confidence problem than a site
+      // where a fifth of everything crawled is dead.
+      return brokenLinks.length >= 5 || ratio >= 0.2
+        ? { id: 'content.broken_links', r: 'fail', ev }
+        : { id: 'content.broken_links', r: 'warn', ev };
+    },
+  },
+  {
+    id: 'content.broken_pdfs',
+    run: (ctx): CheckResult => {
+      if (ctx.crawl === undefined) return { id: 'content.broken_pdfs', r: 'na' };
+      const { brokenPdfs } = ctx.crawl;
+      return brokenPdfs.length > 0
+        ? { id: 'content.broken_pdfs', r: 'fail', ev: `${brokenPdfs.length} linked PDF(s) 404: ${brokenPdfs.map((p) => p.url).join(', ')}` }
+        : { id: 'content.broken_pdfs', r: 'pass' };
+    },
+  },
+  {
+    id: 'content.broken_images',
+    run: (ctx): CheckResult => {
+      if (ctx.requests === undefined) return { id: 'content.broken_images', r: 'na' };
+      const broken = ctx.requests.filter((r) => r.type === 'image' && (r.status === undefined || r.status >= 400));
+      return broken.length > 0
+        ? { id: 'content.broken_images', r: 'fail', ev: `${broken.length} broken image(s)` }
+        : { id: 'content.broken_images', r: 'pass' };
+    },
+  },
+  {
+    id: 'content.console_errors',
+    run: (ctx): CheckResult => {
+      if (ctx.consoleErrors === undefined) return { id: 'content.console_errors', r: 'na' };
+      return ctx.consoleErrors.length > 0
+        ? { id: 'content.console_errors', r: 'fail', ev: `${ctx.consoleErrors.length} console error(s): ${ctx.consoleErrors[0]}` }
+        : { id: 'content.console_errors', r: 'pass' };
+    },
+  },
 ];

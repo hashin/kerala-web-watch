@@ -91,6 +91,21 @@ describe('computeSummary', () => {
     expect(summary.by_district.kottayam).toEqual({ sites: 1, broken: 0, median: null });
   });
 
+  it('computes a real median once scored results exist', () => {
+    const registry = registryOf([site({ id: 'a', district: 'kollam' }), site({ id: 'b', district: 'kollam' }), site({ id: 'c', district: 'kollam' })]);
+    const scoreOf = (overall: number) => ({ overall, security: overall, accessibility: overall, content: overall, gigw: overall, performance: overall, identity: overall });
+    const results = [result({ id: 'a', status: 'healthy', score: scoreOf(80) }), result({ id: 'b', status: 'needs-work', score: scoreOf(60) }), result({ id: 'c', status: 'poor', score: scoreOf(40) })];
+    const summary = computeSummary(registry, results, { now: new Date('2026-09-21T00:00:00Z'), vantages: ['gh-us'] });
+    expect(summary.by_district.kollam.median).toBe(60);
+  });
+
+  it('carries the deep audit timestamp through to the site summary', () => {
+    const registry = registryOf([site({ id: 'a' })]);
+    const results = [result({ id: 'a', deep: { at: '2026-09-20T12:00:00Z', run: '1', vantage: 'gh-us', lighthouse: null, axe: { critical: 0, serious: 0, moderate: 0, minor: 0 }, crawl: { pages: 0, pdfs: 0, broken: 0 }, tech: { cms: null, server: null, jquery: null }, checks: [], screenshot: null } })];
+    const summary = computeSummary(registry, results, { now: new Date('2026-09-21T00:00:00Z'), vantages: ['gh-us'] });
+    expect(summary.sites.find((s) => s.id === 'a')?.deep_at).toBe('2026-09-20T12:00:00Z');
+  });
+
   it('computes a coverage ETA from the remaining sites and the ADR-004 batch cap', () => {
     const registry = registryOf(Array.from({ length: 700 }, (_, i) => site({ id: `s${i}` })));
     const summary = computeSummary(registry, [], { now: new Date('2026-09-21T00:00:00Z'), vantages: ['gh-us'] });

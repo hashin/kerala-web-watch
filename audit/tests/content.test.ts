@@ -245,3 +245,88 @@ describe('content.favicon', () => {
     expect(run('content.favicon', ctx({ html })).r).toBe('pass');
   });
 });
+
+describe('content.broken_links', () => {
+  it('is n/a without a crawl', () => {
+    expect(run('content.broken_links', ctx()).r).toBe('na');
+  });
+  it('passes when the crawl found no broken links', () => {
+    expect(run('content.broken_links', ctx({ crawl: { pagesChecked: 10, brokenLinks: [], pdfsChecked: 0, brokenPdfs: [], outboundDomains: [] } })).r).toBe(
+      'pass',
+    );
+  });
+  it('warns on a couple of broken links out of many crawled', () => {
+    const crawl = { pagesChecked: 30, brokenLinks: [{ url: 'https://test.kerala.gov.in/dead', status: 404 as const }], pdfsChecked: 0, brokenPdfs: [], outboundDomains: [] };
+    expect(run('content.broken_links', ctx({ crawl })).r).toBe('warn');
+  });
+  it('fails when a fifth or more of the crawled links are broken', () => {
+    const crawl = {
+      pagesChecked: 10,
+      brokenLinks: Array.from({ length: 5 }, (_, i) => ({ url: `https://test.kerala.gov.in/dead${i}`, status: 404 as const })),
+      pdfsChecked: 0,
+      brokenPdfs: [],
+      outboundDomains: [],
+    };
+    expect(run('content.broken_links', ctx({ crawl })).r).toBe('fail');
+  });
+  it('fails on a high broken ratio even with fewer than 5 broken links', () => {
+    // 2/10 = 20%, at the ratio threshold, while length (2) is well under the length-based
+    // threshold (5) -- isolates the ratio branch from the length branch above.
+    const crawl = {
+      pagesChecked: 10,
+      brokenLinks: [
+        { url: 'https://test.kerala.gov.in/dead1', status: 404 as const },
+        { url: 'https://test.kerala.gov.in/dead2', status: 404 as const },
+      ],
+      pdfsChecked: 0,
+      brokenPdfs: [],
+      outboundDomains: [],
+    };
+    expect(run('content.broken_links', ctx({ crawl })).r).toBe('fail');
+  });
+});
+
+describe('content.broken_pdfs', () => {
+  it('is n/a without a crawl', () => {
+    expect(run('content.broken_pdfs', ctx()).r).toBe('na');
+  });
+  it('passes when every sampled PDF resolved', () => {
+    expect(run('content.broken_pdfs', ctx({ crawl: { pagesChecked: 1, brokenLinks: [], pdfsChecked: 5, brokenPdfs: [], outboundDomains: [] } })).r).toBe(
+      'pass',
+    );
+  });
+  it('fails when a linked PDF 404s', () => {
+    const crawl = { pagesChecked: 1, brokenLinks: [], pdfsChecked: 5, brokenPdfs: [{ url: 'https://test.kerala.gov.in/notice.pdf', status: 404 as const }], outboundDomains: [] };
+    expect(run('content.broken_pdfs', ctx({ crawl })).r).toBe('fail');
+  });
+});
+
+describe('content.broken_images', () => {
+  it('is n/a without a request log', () => {
+    expect(run('content.broken_images', ctx()).r).toBe('na');
+  });
+  it('passes when every image request succeeded', () => {
+    expect(run('content.broken_images', ctx({ requests: [{ url: 'https://test.kerala.gov.in/logo.png', type: 'image', status: 200 }] })).r).toBe('pass');
+  });
+  it('fails when an image request 404s', () => {
+    expect(run('content.broken_images', ctx({ requests: [{ url: 'https://test.kerala.gov.in/missing.png', type: 'image', status: 404 }] })).r).toBe('fail');
+  });
+  it('does not count a broken non-image request', () => {
+    expect(run('content.broken_images', ctx({ requests: [{ url: 'https://test.kerala.gov.in/script.js', type: 'script', status: 404 }] })).r).toBe('pass');
+  });
+  it('counts an image request that never got a response as broken', () => {
+    expect(run('content.broken_images', ctx({ requests: [{ url: 'https://test.kerala.gov.in/hung.png', type: 'image' }] })).r).toBe('fail');
+  });
+});
+
+describe('content.console_errors', () => {
+  it('is n/a without captured console output', () => {
+    expect(run('content.console_errors', ctx()).r).toBe('na');
+  });
+  it('passes when nothing was logged', () => {
+    expect(run('content.console_errors', ctx({ consoleErrors: [] })).r).toBe('pass');
+  });
+  it('fails when the page logged a console error', () => {
+    expect(run('content.console_errors', ctx({ consoleErrors: ['TypeError: x is not a function'] })).r).toBe('fail');
+  });
+});

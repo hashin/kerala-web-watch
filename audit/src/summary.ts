@@ -121,13 +121,13 @@ function groupByMinistry(registry: Registry, resultsById: Map<string, Result>): 
 
 function groupStat(sites: Site[], resultsById: Map<string, Result>): GroupStat {
   let broken = 0;
+  const scores: number[] = [];
   for (const site of sites) {
-    if (isBrokenClass(resultsById.get(site.id)?.status ?? 'unaudited')) broken++;
+    const result = resultsById.get(site.id);
+    if (isBrokenClass(result?.status ?? 'unaudited')) broken++;
+    if (result?.score) scores.push(result.score.overall);
   }
-  // `Result.score` stays null until Phase 3's deep audit exists (see store.ts), so there is
-  // never a score to average yet. Once it does, collect the non-null ones here and pass them
-  // through `median()` -- kept as a named export so that WP doesn't have to rewrite this file.
-  return { sites: sites.length, broken, median: null };
+  return { sites: sites.length, broken, median: median(scores) };
 }
 
 export function median(values: number[]): number | null {
@@ -179,9 +179,9 @@ function siteSummary(site: Site, result: Result | null): SiteSummary {
   return {
     id: site.id,
     status: result?.status ?? 'unaudited',
-    score: result?.score ?? null,
+    score: result?.score?.overall ?? null,
     light_at: result?.light?.at ?? null,
-    deep_at: null,
+    deep_at: result?.deep?.at ?? null,
     district: site.district,
     department: site.department,
     kind: site.kind,

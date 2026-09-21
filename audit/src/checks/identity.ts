@@ -7,11 +7,22 @@ function isGovDomain(hostname: string): boolean {
   return GOV_SUFFIXES.some((suffix) => lower === suffix || lower.endsWith(`.${suffix}`));
 }
 
-const TECH_SIGNATURES: { name: string; pattern: RegExp; oldMajor: (version: string) => boolean }[] = [
+export const TECH_SIGNATURES: { name: string; pattern: RegExp; oldMajor: (version: string) => boolean }[] = [
   { name: 'WordPress', pattern: /<meta[^>]+name=["']generator["'][^>]+content=["']WordPress ([\d.]+)/i, oldMajor: (v) => Number(v.split('.')[0]) < 6 },
   { name: 'Drupal', pattern: /<meta[^>]+name=["']generator["'][^>]+content=["']Drupal ([\d.]+)/i, oldMajor: (v) => Number(v.split('.')[0]) < 9 },
   { name: 'Joomla', pattern: /<meta[^>]+name=["']generator["'][^>]+content=["']Joomla! - ([\d.]+)/i, oldMajor: (v) => Number(v.split('.')[0]) < 4 },
 ];
+
+/** Reused by `runner.ts` for `deep.tech.cms` -- the same CMS-signature detection `id.tech` uses,
+ * factored out so both read off one implementation instead of two copies drifting apart. */
+export function detectTech(html: string): { name: string; version: string; oldMajor: boolean } | null {
+  for (const sig of TECH_SIGNATURES) {
+    const match = html.match(sig.pattern);
+    if (!match) continue;
+    return { name: sig.name, version: match[1], oldMajor: sig.oldMajor(match[1]) };
+  }
+  return null;
+}
 
 const THIRD_PARTY_HOSTS = [
   'google-analytics.com',
@@ -112,14 +123,11 @@ export const IDENTITY_CHECKS: Check[] = [
     id: 'id.tech',
     run: (ctx): CheckResult => {
       if (ctx.html === undefined) return { id: 'id.tech', r: 'na' };
-      for (const sig of TECH_SIGNATURES) {
-        const match = ctx.html.match(sig.pattern);
-        if (!match) continue;
-        return sig.oldMajor(match[1])
-          ? { id: 'id.tech', r: 'warn', ev: `${sig.name} ${match[1]} (unsupported major version)` }
-          : { id: 'id.tech', r: 'pass', ev: `${sig.name} ${match[1]}` };
-      }
-      return { id: 'id.tech', r: 'pass' };
+      const detected = detectTech(ctx.html);
+      if (!detected) return { id: 'id.tech', r: 'pass' };
+      return detected.oldMajor
+        ? { id: 'id.tech', r: 'warn', ev: `${detected.name} ${detected.version} (unsupported major version)` }
+        : { id: 'id.tech', r: 'pass', ev: `${detected.name} ${detected.version}` };
     },
   },
   {

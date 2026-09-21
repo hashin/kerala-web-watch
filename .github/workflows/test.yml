@@ -27,6 +27,13 @@ jobs:
         run: npm test
       - if: steps.exists.outputs.yes == 'true'
         run: npm run build
+      # WP3.5: the fixture-server smoke test (`self-test`) drives a real Chromium, so it needs the
+      # actual browser binary -- `npx playwright install` alone (as used locally) skips the OS-level
+      # deps a fresh CI runner doesn't already have; `--with-deps` installs both in one step.
+      - if: steps.exists.outputs.yes == 'true'
+        run: npx playwright install --with-deps chromium
+      - if: steps.exists.outputs.yes == 'true'
+        run: npm run self-test
 
   site:
     runs-on: ubuntu-latest

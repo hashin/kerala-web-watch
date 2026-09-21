@@ -1,0 +1,164 @@
+# Registry-shaped (Site interface) fixture entries for `cli self-test` (WP3.5 step 6). Hosts are
+# `*.localhost` with no port -- the actual ephemeral fixture-server port is attached at self-test
+# time via `runner.ts`'s `withFixtureBase`. Not loaded through `registry.ts`'s `loadRegistry` (no
+# departments/districts cross-referencing needed here) -- `self-test.ts` parses this file directly.
+
+- id: fixture-good
+  name: Fixture - Good
+  url: http://good.localhost/
+  aliases: []
+  tier: state
+  kind: portal
+  department: test
+  org_parent: null
+  scope: state
+  district: null
+  place: null
+  lsg_type: null
+  platform: null
+  priority: 3
+  tags: []
+  source: "fixture"
+  added: "2026-09-21"
+  lifecycle: active
+  notes: ""
+
+- id: fixture-parked
+  name: Fixture - Parked
+  url: http://parked.localhost/
+  aliases: []
+  tier: state
+  kind: portal
+  department: test
+  org_parent: null
+  scope: state
+  district: null
+  place: null
+  lsg_type: null
+  platform: null
+  priority: 3
+  tags: []
+  source: "fixture"
+  added: "2026-09-21"
+  lifecycle: active
+  notes: ""
+
+- id: fixture-default-apache
+  name: Fixture - Default Apache Page
+  url: http://default-apache.localhost/
+  aliases: []
+  tier: state
+  kind: portal
+  department: test
+  org_parent: null
+  scope: state
+  district: null
+  place: null
+  lsg_type: null
+  platform: null
+  priority: 3
+  tags: []
+  source: "fixture"
+  added: "2026-09-21"
+  lifecycle: active
+  notes: ""
+
+- id: fixture-blank
+  name: Fixture - Blank
+  url: http://blank.localhost/
+  aliases: []
+  tier: state
+  kind: portal
+  department: test
+  org_parent: null
+  scope: state
+  district: null
+  place: null
+  lsg_type: null
+  platform: null
+  priority: 3
+  tags: []
+  source: "fixture"
+  added: "2026-09-21"
+  lifecycle: active
+  notes: ""
+
+- id: fixture-legacy-font
+  name: Fixture - Legacy Font
+  url: http://legacy-font.localhost/
+  aliases: []
+  tier: state
+  kind: portal
+  department: test
+  org_parent: null
+  scope: state
+  district: null
+  place: null
+  lsg_type: null
+  platform: null
+  priority: 3
+  tags: []
+  source: "fixture"
+  added: "2026-09-21"
+  lifecycle: active
+  notes: ""
+
+- id: fixture-no-gigw
+  name: Fixture - No GIGW Elements
+  url: http://no-gigw.localhost/
+  aliases: []
+  tier: state
+  kind: portal
+  department: test
+  org_parent: null
+  scope: state
+  district: null
+  place: null
+  lsg_type: null
+  platform: null
+  priority: 3
+  tags: []
+  source: "fixture"
+  added: "2026-09-21"
+  lifecycle: active
+  notes: ""
+
+- id: fixture-mixed-content
+  name: Fixture - Mixed Content
+  url: http://mixed-content.localhost/
+  aliases: []
+  tier: state
+  kind: portal
+  department: test
+  org_parent: null
+  scope: state
+  district: null
+  place: null
+  lsg_type: null
+  platform: null
+  priority: 3
+  tags: []
+  source: "fixture"
+  added: "2026-09-21"
+  lifecycle: active
+  notes: ""
+
+- id: fixture-slow-5xx
+  name: Fixture - Slow 5xx
+  url: http://slow-5xx.localhost/
+  aliases: []
+  tier: state
+  kind: portal
+  department: test
+  org_parent: null
+  scope: state
+  district: null
+  place: null
+  lsg_type: null
+  platform: null
+  priority: 3
+  tags: []
+  source: "fixture"
+  added: "2026-09-21"
+  lifecycle: active
+  notes: ""

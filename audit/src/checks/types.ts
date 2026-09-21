@@ -175,10 +175,47 @@ export interface CheckContext {
   /** Whether the `www` and bare-host variants of this site's domain both resolve and one redirects
    * to the other -- a second probe alongside the main fetch that only the runner can make. */
   wwwConsistent?: boolean;
-  /** Every subresource request the page made while loading (WP3.5's Playwright runner), used
-   * alongside a static `ctx.html` scan for `sec.mixed_content` -- an http:// entry here is a
-   * stronger signal than the static scan since it reflects what the browser actually fetched. */
-  requests?: { url: string }[];
+  /** Every subresource request the page made while loading (WP3.5's Playwright runner). `url` backs
+   * `sec.mixed_content` (an http:// entry here is a stronger signal than a static `ctx.html` scan
+   * since it reflects what the browser actually fetched); `type`+`status` back
+   * `content.broken_images` (a `type: 'image'` entry with a failed/4xx/5xx `status`); `bytes` (from
+   * the response's `content-length`, when the server sent one) backs `perf.weight`. */
+  requests?: { url: string; type?: string; status?: number; bytes?: number }[];
+  /** axe-core violation counts by impact, plus a per-rule-id node count so a check that cares about
+   * one specific rule (`content.legacy_font`-style narrow reads) doesn't have to re-derive it from a
+   * raw violations array -- populated once per page by the runner's single axe-core pass. */
+  axe?: {
+    critical: number;
+    serious: number;
+    moderate: number;
+    minor: number;
+    byRule: Record<string, number>;
+  };
+  /** Programmatic Lighthouse run (IMPLEMENTATION.md §A.7) against the same page, mobile/slow-4G
+   * profile. `undefined` means Lighthouse never ran at all (`--no-lighthouse`, or no runner yet);
+   * `null` means it ran and failed (WP3.5 step 2 -- never thrown, always recorded) -- both must be
+   * treated as "no data", distinct from a page that genuinely scored 0. Only the handful of fields
+   * the checks actually need are kept (IMPLEMENTATION.md §A.7 says explicitly: discard the rest). */
+  lighthouse?: {
+    performance: number;
+    accessibility: number;
+    bestPractices: number;
+    seo: number;
+    lcpMs: number | null;
+    cls: number | null;
+    totalByteWeightBytes: number | null;
+    tapTargetsOk: boolean | null;
+    imagesOptimized: boolean | null;
+  } | null;
+  /** The homepage-driven crawl (`crawl.ts`, ≤ 30 pages + ≤ 20 PDFs, CLAUDE.md's politeness cap) --
+   * backs `content.broken_links`/`content.broken_pdfs`. Absent means no crawl ran (`--no-crawl`). */
+  crawl?: {
+    pagesChecked: number;
+    brokenLinks: { url: string; status: number | 'timeout' }[];
+    pdfsChecked: number;
+    brokenPdfs: { url: string; status: number | 'timeout' }[];
+    outboundDomains: string[];
+  };
   /** Vulnerable JS libraries retire.js (net/retire.ts) found among the scripts the page loaded,
    * populated once per audit run by the runner (a pure check can't shell out to a CLI itself). */
   vulnerableLibraries?: { library: string; version: string | null; cve: string[] }[];
