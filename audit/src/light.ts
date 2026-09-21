@@ -209,7 +209,7 @@ function normalizeHeaders(headers: Record<string, string>): LightHeaders {
   };
 }
 
-function registrableDomain(url: string): string | null {
+export function registrableDomain(url: string): string | null {
   try {
     return getDomain(new URL(url).hostname);
   } catch {
@@ -247,7 +247,7 @@ export function extractTitle(html: string): string | null {
   return decoded.length > 0 ? decoded : null;
 }
 
-function decodeEntities(text: string): string {
+export function decodeEntities(text: string): string {
   return text
     .replace(/&#(\d+);/g, (_, dec) => String.fromCodePoint(Number(dec)))
     .replace(/&#x([0-9a-f]+);/gi, (_, hex) => String.fromCodePoint(parseInt(hex, 16)))

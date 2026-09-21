@@ -1,10 +1,12 @@
+import { AVAILABILITY_CHECKS } from './availability.js';
+import { IDENTITY_CHECKS } from './identity.js';
 import { CHECKS } from './registry.js';
 import type { Check, CheckContext, CheckId, CheckResult } from './types.js';
 
-/** Real check functions land here starting WP3.2 (`avail.*`/`id.*`), then WP3.3 (`sec.*`), WP3.4
- * (`content.*`/`gigw.*`), and axe/Lighthouse-backed ones (`a11y.*`/`perf.*`) once WP3.5's
+/** `avail.*`/`id.*` (WP3.2) are implemented; the rest land in WP3.3 (`sec.*`), WP3.4
+ * (`content.*`/`gigw.*`), and the axe/Lighthouse-backed ones (`a11y.*`/`perf.*`) once WP3.5's
  * Playwright runner exists to populate the context fields they need. */
-export const CHECK_LIST: Check[] = [];
+export const CHECK_LIST: Check[] = [...AVAILABILITY_CHECKS, ...IDENTITY_CHECKS];
 
 /**
  * Runs every check in `CHECK_LIST` against `ctx`, applying its `appliesTo` gate (defaulting to

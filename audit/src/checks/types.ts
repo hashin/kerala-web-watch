@@ -1,3 +1,4 @@
+import type { HistoryEntry } from '../history.js';
 import type { Site } from '../types.js';
 
 export type Severity = 'C' | 'H' | 'M' | 'L' | 'I';
@@ -155,6 +156,25 @@ export interface CheckContext {
   scriptUrls?: string[];
   consoleErrors?: string[];
   malayalamRatio?: number;
+  /** One entry per day, newest first (history.ts) -- only avail.flapping reads this. Populated by
+   * the runner from the site's own stored `Result.history` before checks run; a check can't fetch
+   * its own history since that lives in the data store, not on the network. */
+  history?: HistoryEntry[];
+  /** HTTP status from a single fetch of a random non-existent path, e.g. `/kww-check-<random>` --
+   * populated by the runner (WP3.5) since a pure check can't make its own request. */
+  soft404Status?: number;
+  /** robots.txt as fetched by the runner. Absent means it was never fetched (unknown), which must
+   * stay distinct from "fetched and empty" -- id.robots reports `na`, not `fail`, when absent. */
+  robotsTxt?: { status: number; body: string };
+  /** HTTP status from fetching /sitemap.xml, populated by the runner. */
+  sitemapXmlStatus?: number;
+  /** Days until the site's registrable domain expires, from net/rdap.ts, looked up and cached once
+   * per audit run by the runner. `null` means RDAP had no expiry event or the lookup failed -- not
+   * "expiring soon" and not "no domain". */
+  domainExpiryDays?: number | null;
+  /** Whether the `www` and bare-host variants of this site's domain both resolve and one redirects
+   * to the other -- a second probe alongside the main fetch that only the runner can make. */
+  wwwConsistent?: boolean;
 }
 
 export type Check = {
