@@ -58,6 +58,11 @@ cd site  && npm run dev
 - **Never invent URLs.** A registry entry needs a `source` (where it was found) and must pass `validate --resolve`.
 - **The registry is the source of truth.** One entry per organisation. `id` never changes.
 - **Bilingual from day one.** Text‑pattern checks match English and Malayalam. UI strings go through i18n keys.
+- **Plain language, always (ADR-026).** This site's audience is a citizen who has never heard of DNS or a TLS
+  certificate. A status badge or check title is never shown alone — pair `down`/`broken`/`hijacked`/`unverifiable`
+  with the specific, concrete reason (the check's existing `citizen` string, never invented fresh in `site/` —
+  ADR-013 is still the one source). Before calling any citizen-facing text change done, ask: does this state a
+  specific reason, or does it just restate a status word back at the reader? See DESIGN §5.4/§7.4.
 - **No third‑party requests on our own pages.** Self‑hosted fonts, no analytics, no CDNs. We must pass our own audit.
 - **Results live on the `data` branch, never on `main`.**
 

@@ -158,3 +158,30 @@ and a page-count label; a listing that's already small (one district's grama pan
 ships a listing page adds a Lighthouse performance run (mobile, simulated 4G — DESIGN §5's `perf.lighthouse` method)
 against the built page to its Verify step, target ≥ 90, rather than deferring all performance checking to WP4.5's
 self-audit.
+
+## ADR-026 · A status word is never shown alone — every `down`/`broken`/`hijacked`/`unverifiable` badge is paired with the specific, plain-English reason · Accepted · 2026-09-21
+This site's whole audience is a citizen who does not know what "DNS", "TLS certificate" or "default page" mean.
+A bare badge reading "Broken" told them a fact without telling them what it means for them — worse, `broken`
+itself covers four unrelated causes (blank page, default install page, "under construction", invalid certificate)
+that a citizen (and a webmaster trying to fix it) need distinguished, not collapsed into one word. Found live on
+production on 2026-09-21: `HealthBadge.astro` rendered only an icon + status word on both the per-site page and
+the status-listing pages' `<h1>`, with no reason anywhere — for the 15 `down` and 19 `broken` sites already
+showing on https://govwebsite.hashin.me at that moment, a real citizen visiting `/sites/<id>/` saw "🔴 Broken"
+and nothing else.
+**Decision:** every citizen-facing render of `down`/`broken`/`hijacked`/`unverifiable` status must be accompanied
+by the *specific* reason, in plain language, not a generic restatement of the status word. The reason text is
+never invented at the UI layer — it is always the existing `citizen` string from the one check (ADR-013's single
+source, `audit/src/checks/registry.ts`) that actually determined the status: `avail.dns`/`avail.connect`/
+`avail.status` for a light-check-only `down`, `sec.cert_valid` for a light-check-only `broken`,
+`avail.geo_blocked` for `unverifiable`, or (once a deep audit exists) the matching entry in the site's own
+`issues[]`. `audit/src/status.ts` gained `explainLightStatus()`, mirroring `deriveStatus()`'s own conditions
+exactly, so the reason a citizen sees can never drift from the reason the status engine actually used. A
+short, generic one-line description of what each status *category* means (e.g. on `/status/broken/`'s heading,
+before a citizen has clicked into any one site) is not a check explanation and may live in `site/` as ordinary UI
+copy — but it must not contradict or duplicate a check's own `citizen` text, and the existing methodology-page
+table (already written in this plain style) is the reference for its wording.
+**Consequence:** this is retroactive, not just forward-looking — the audit in this same session found and fixed
+`[id].astro` and the status-listing page. Every future WP that adds or changes citizen-facing status/finding text
+(WP4.1's issue cards, WP4.4's methodology page, WP5.3's Malayalam strings) must run the same check before being
+called done: does the text state a specific, plain-language reason, or does it just restate a status word back at
+the reader? CLAUDE.md's Non-negotiables and DESIGN §5.4/§7.4 now carry this rule so it isn't only in this ADR.

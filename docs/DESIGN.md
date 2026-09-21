@@ -325,6 +325,14 @@ Otherwise **score 0–100** = weighted sum of six category scores (each 0–100,
 
 Headline number on the homepage — **"broken"** = `down + hijacked + broken`. "Poor" sites are not "broken"; the distinction keeps us credible.
 
+**A status word is never shown alone (ADR-026).** `down`, `broken`, `hijacked` and `unverifiable` each cover
+one or more distinct, concrete causes — a citizen (and the webmaster who has to fix it) needs to know *which
+one*, in plain language, not just the badge. Every render of one of these four statuses is paired with the
+specific `citizen` string (§5.6) from the check that actually set it — `avail.dns`/`avail.connect`/
+`avail.status` for a light-check `down`, `sec.cert_valid` for a light-check `broken`, `avail.geo_blocked` for
+`unverifiable`, or the matching entry in the site's own `issues[]` once a deep audit exists. Never invent new
+wording for this at the UI layer; the check registry is still the only source (ADR-013).
+
 Rollups for a department/district/ministry: % broken, median score, and the top 3 most common failed checks across its sites ("14 of 22 sites under Health have no HTTPS").
 
 ### 5.5 Result record (one JSON per site, `data/results/<id>.json`)
@@ -621,7 +629,7 @@ Some NIC‑hosted sites block or throttle non‑Indian IPs. GitHub‑hosted runn
 
 ### 7.4 Design principles
 
-Mobile‑first (most citizens will open this on a phone). Bilingual. WCAG AA on our own pages. Status never conveyed by colour alone (icon + word). Calm tone: findings are stated, not mocked — the audience includes the webmasters we want to fix things. Dark mode. No cookie banner because no cookies.
+Mobile‑first (most citizens will open this on a phone). Bilingual. WCAG AA on our own pages. Status never conveyed by colour alone (icon + word). **Plain language, always (ADR-026): a status word or check title is never the whole message — pair it with the specific, concrete reason a non-technical citizen can act on, never jargon left unexplained.** Calm tone: findings are stated, not mocked — the audience includes the webmasters we want to fix things. Dark mode. No cookie banner because no cookies.
 
 ---
 
