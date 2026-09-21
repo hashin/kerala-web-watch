@@ -6,8 +6,8 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 ## Now
 
 - **Phase:** 2 — Light checks live
-- **Current WP:** WP2.4 (done) → **Next WP:** WP2.5 (`validate --resolve` + PR comment)
-- **Next action:** Start WP2.5 — read `docs/IMPLEMENTATION.md` WP2.5. Add `--resolve` to `audit validate` (light-check entries changed vs. `--changed-only origin/main`, rate-limited, 20s timeout; fail on DNS failure or a final registrable domain that differs from the entry's without an alias; warn on non-200), then wire `validate.yml` to run it and post the results table on registry PRs.
+- **Current WP:** WP2.5 (done) — **Phase 2 complete.** → **Next WP:** WP3.1 (check framework, `registry.ts`, `score.ts`)
+- **Next action:** Start WP3.1 — read `docs/IMPLEMENTATION.md` WP3.1 and its Read-first list (DESIGN §5). This is the first Phase 3 WP: the deep-audit check framework, the `registry.ts` check-metadata catalogue (every check id, English explanation), and `score.ts`'s weighted scoring per ADR-006. Pure/fixture-tested, no Playwright yet (that's WP3.5).
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
 - **Registry size:** 1,500 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated) · **Deep-audited:** 0 · **Light-checked:** 1,500/1,500 (15 down, 19 broken as of first full run 2026-09-21T05:30Z) · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data instead of placeholders
 - **Candidates backlog:** ~2,476 fresh, uncurated candidates as of 2026-09-21 (mostly from a new `kerala-gov-in-subdomains` source — see Handoff below), waiting for a WP1.7-style curation pass. Not yet in `registry/sites/`.
@@ -31,7 +31,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 2.2 | `cli light`, data-branch writer, history, summary.json | done | 7e43cf1 | 79 tests; verifier found 4 undertested paths (score/deep/issues carry-forward, deep-audit-preserved status, null-district grouping, coverage-ETA batch cap), all fixed and re-verified by hand |
 | 2.3 | uptime.yml live | live | 52977b4 | cron running; 2 manual `workflow_dispatch` runs (limit=50, then all 1,500) verified end-to-end; "two consecutive *scheduled* runs" gate needs real calendar time — see Open question 8 |
 | 2.4 | Site v1: home + map + status lists + district pages + light-only site page | done | cf7661d | 1,596 pages in ~2.5s; found & fixed a real WP2.2 bug while dogfooding real data (see handoff); Lighthouse perf 100 on the production build (58 on `astro dev` — checked the wrong server first) |
-| 2.5 | validate.yml `--resolve` + PR comment | todo | | |
+| 2.5 | validate.yml `--resolve` + PR comment | done | 7a6ceea | 99 tests; verified live with a real throwaway PR (#2, closed unmerged): bogus host failed with a clear row → fixed to a real URL → same comment updated in place, check passed, entry's name shown |
 | 3.1 | Check framework, `registry.ts` (all ids, EN), `score.ts` | todo | | |
 | 3.2 | Availability + identity checks + fixtures | todo | | |
 | 3.3 | Security checks + retire.js + fixtures | todo | | |
@@ -73,6 +73,28 @@ _None yet. Each entry: what, why, ADR number._
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-09-21 · WP2.5 done — Phase 2 complete** — `audit/src/resolve.ts` (`resolveSite`/`resolveSites`,
+  pure `dnsFailure`/`domainFailure`/`statusWarning` helpers exported for direct unit testing like
+  WP2.1's `tlsToLight`) and `audit/src/changed.ts` (`computeChangedIds`, pure; `changedSiteIds` shells
+  out to `git show <ref>:<path>` to diff url/aliases against a ref). `ValidationFailure` gained a
+  `severity: 'error' | 'warn'` field; only `error` fails the CLI's exit code and the PR check. `--resolve`
+  refuses to run without `--changed-only <ref>` or `--ids` — CLAUDE.md forbids an unbounded live scan
+  outside Actions. `validate.yml` now fetches `origin/main` and runs one combined
+  `validate --resolve --changed-only origin/main --json` call; its PR comment gained a "Live-checked N
+  changed entries" table listing every resolved site (not just failures) so a passing addition shows a
+  visible ✅ with its name, per the WP's own Verify text. **Verified live, not just locally** (mirroring
+  WP0.3's precedent): opened a real throwaway PR (#2) with a bogus-host entry — check failed with the
+  exact expected row — pushed a fix to a real URL (`example.com`, the standard reserved test domain) —
+  the *same* comment updated in place, check passed, entry's name appeared in the resolved table — then
+  closed the PR unmerged and deleted the branch. **Real bug found and fixed while testing against real
+  entries:** `kseb`'s registered url `https://www.kseb.in` doesn't resolve at all (confirmed independently
+  via `dig`/`curl`); the bare `kseb.in` does and is the real KSEB site — fixed in its own `data:` commit
+  (0424c12) before the WP2.5 commit, so the feature commit's own manual testing wasn't muddied by a
+  pre-existing data bug. 99 tests, `npm run build`/`astro`-independent (site untouched this WP). Ran the
+  `explainer` phase-end readability pass on Phase 2's core files (light/store/status/summary/resolve/
+  changed.ts) per CLAUDE.md's convention — see its findings noted separately if any needed fixing.
+  **Next: WP3.1** (check framework, `registry.ts`, `score.ts`) — Phase 3, the largest phase, starts here.
 
 - **2026-09-21 · WP2.4 done** — `site/src/lib/data.ts` rewritten to import the real `Result`/`Summary`
   types from `audit/dist` (`readResult`, `computeSummary`) instead of the WP0.4-era hand-rolled subset,
