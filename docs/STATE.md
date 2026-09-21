@@ -6,8 +6,8 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 ## Now
 
 - **Phase:** 3 — Deep audits
-- **Current WP:** WP3.5 (done) → **Next WP:** WP3.6 (`plan` scheduler + `merge` (outlinks, phash gating) + tests)
-- **Next action:** Start WP3.6 — read `docs/IMPLEMENTATION.md` WP3.6 and its Read-first list. WP3.5 landed `cli run` as a one-site-at-a-time runner with no batching/scheduling of its own; WP3.6 is what turns that into "audit ~250-300 sites/day, rotating through the registry" (ADR-004's cadence) via a `plan` command that picks the day's batch and a `merge` command that folds `cli run`'s per-site output plus outlinks/screenshot-phash bookkeeping into the data branch the way `cli light`'s own merge already does for light checks.
+- **Current WP:** WP3.6 (done) → **Next WP:** WP3.7 (`audit.yml` live: 3 → 50 → cron)
+- **Next action:** Start WP3.7 — read `docs/IMPLEMENTATION.md` WP3.7 and its Read-first list (DESIGN §6.3's YAML — copy it, adjust paths only; §6.5, §6.8). `cli plan`/`cli merge` exist and are tested against synthetic data and the real registry (`plan --dry-run`), but neither has ever run inside real GitHub Actions or touched the real `data` branch — WP3.7 is where that happens for the first time, starting with `workflow_dispatch site_ids=kerala-gov,keralapsc,d-ernakulam` per its own step 1, not a full batch.
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
 - **Registry size:** 1,500 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated) · **Deep-audited:** 0 · **Light-checked:** 1,500/1,500 (15 down, 19 broken as of first full run 2026-09-21T05:30Z) · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data instead of placeholders
 - **Candidates backlog:** ~2,476 fresh, uncurated candidates as of 2026-09-21 (mostly from a new `kerala-gov-in-subdomains` source — see Handoff below), waiting for a WP1.7-style curation pass. Not yet in `registry/sites/`.
@@ -37,7 +37,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 3.3 | Security checks + retire.js + fixtures | done | 2035977 | 14 sec.* checks, 634 tests; retire.js wired as a real dependency and shells out to its own CLI in a real (offline, fixture-jsrepo) integration test; verifier mutation-tested and found 3 undertested paths (header-lookup case/substring matching, a TLS major-version branch, the shared hadResponse timeout case), all fixed and re-verified by hand |
 | 3.4 | Content + GIGW checks (bilingual) + fixtures | done | f72501c | 11 content.* + 16 gigw.* checks (content.broken_*/console_errors deferred to WP3.5's crawler), 792 tests; new `audit/src/text/{dates,malayalam,patterns}.ts`; verifier mutation-tested and found 3 undertested paths (a threshold "passing by coincidence", a short-circuit never actually forced, gigw.* pattern-to-check wiring unverified per-check), all fixed and re-verified by hand |
 | 3.5 | Playwright runner: capture, axe, Lighthouse, crawl, screenshots; fixture-server smoke test | done | 77b8181 | 923 tests; verifier mutation-tested 10 new files, found and fixed 8 real gaps across crawl/lighthouse/screenshot/perf/content/store/fixture-server (all boundary conditions or an untested function), all re-verified; all 84 check ids now implemented |
-| 3.6 | `plan` scheduler + `merge` (outlinks, phash gating) + tests | todo | | |
+| 3.6 | `plan` scheduler + `merge` (outlinks, phash gating) + tests | done | 8a3659c | 979 tests; verifier mutation-tested and found 2 undertested paths (merge fold's history source, screenshot phash-copy gate's exact threshold boundary), both fixed and re-verified by hand |
 | 3.7 | audit.yml live (3 → 50 → cron) | todo | | |
 | 4.1 | Full site page | todo | | |
 | 4.2 | Ministry / department / kind / platform / leaderboard pages | todo | | |
@@ -73,6 +73,23 @@ _None yet. Each entry: what, why, ADR number._
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-09-21 · WP3.6 done — `cli plan`/`cli merge` and the rolling scheduler** — `scheduler.ts`
+  (DESIGN §6.2 tiering/batch-size/sharding), `merge.ts` (folds `cli run`'s `out/` into `data/`),
+  `outlinks.ts` (§6.6's discovery feed, recomputed wholesale from every site's current
+  `deep.outlinks` -- not accumulated, since an incremental fold can't be idempotent and WP3.6
+  requires merging the same `out/` twice to be a no-op), `batches.ts` (`YYYYMMDD-<n>` id
+  bookkeeping). Also filled a real gap from WP2.2: `docs/IMPLEMENTATION.md`'s WP2.2 spec always
+  called for `mergeLightResult` to set `deep_bump` on a material homepage change (ADR-016), but it
+  was never actually wired up -- `store.ts`'s `detectMaterialChange` does that now, since WP3.6's
+  forced tier depends on it. `plan --dry-run` runs clean against the real 1,500-site registry (215
+  = clamp(ceil(1500/7), 50, 300)); `--site-ids`/`--batch-size`/`$GITHUB_OUTPUT` writing all smoke-
+  tested by hand. `verifier` mutation-tested everything and found 2 real gaps -- the merge fold
+  threading a shard's own single-entry history through instead of `data/`'s multi-day history, and
+  an unpinned screenshot phash-copy threshold boundary -- both fixed with targeted tests, re-run to
+  confirm they now catch the mutation, before committing (`8a3659c`, 979 tests). Neither `cli plan`
+  nor `cli merge` has run inside real GitHub Actions yet or touched the real `data` branch -- that's
+  WP3.7's job, starting from a 3-site `workflow_dispatch`, not a full batch.
 
 - **2026-09-21 · WP3.5 done — all 84 check ids now implemented** — `audit/src/capture.ts` (one
   Playwright/Chromium session per site: HTML, rendered text, links, inline+linked CSS, script
