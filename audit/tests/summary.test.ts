@@ -138,6 +138,20 @@ describe('computeSummary', () => {
     expect(summary.recent_fixed).toEqual([]);
   });
 
+  it('does not list a site with only one day of history as recently fixed or recently broken', () => {
+    // A site's very first-ever light check has exactly one history entry. That entry trivially
+    // "matches itself" with nothing before it to compare against -- it must not be reported as a
+    // transition just because there's no older, differing day on record yet.
+    const registry = registryOf([site({ id: 'a' }), site({ id: 'b' })]);
+    const results = [
+      result({ id: 'a', status: 'unaudited', history: [{ d: '2026-09-21', up: true, score: null }] }),
+      result({ id: 'b', status: 'down', history: [{ d: '2026-09-21', up: false, score: null }] }),
+    ];
+    const summary = computeSummary(registry, results, { now: new Date('2026-09-21T00:00:00Z'), vantages: ['gh-us'] });
+    expect(summary.recent_fixed).toEqual([]);
+    expect(summary.recent_broken).toEqual([]);
+  });
+
   it('does not list a long-standing down site as recently broken', () => {
     const registry = registryOf([site({ id: 'a' })]);
     const history = Array.from({ length: 30 }, (_, i) => ({ d: dayOffset(i), up: false, score: null }));

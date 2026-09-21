@@ -152,14 +152,19 @@ function topIssues(results: Result[]): { id: string; count: number }[] {
 
 /** Finds the day a site's `history.up` most recently changed to `toUp` and reports it only if
  * that happened within the last `RECENT_WINDOW_DAYS` -- history is newest-first, so the
- * transition day is the oldest entry still carrying the current value. */
+ * transition day is the oldest entry still carrying the current value. A run of matching entries
+ * that reaches all the way to the end of history is *not* a transition: it just means every day
+ * we've ever recorded already had this value (most visibly, a site's very first-ever check --
+ * one history entry, trivially "unchanged" -- must not be reported as "just came up today"). */
 function recentTransitions(results: Result[], now: Date, toUp: boolean): { id: string; since: string }[] {
   const out: { id: string; since: string }[] = [];
   for (const result of results) {
     const history = result.history;
     if (history.length === 0 || history[0].up !== toUp) continue;
-    let changedAt = history[0].d;
-    for (let i = 1; i < history.length && history[i].up === toUp; i++) changedAt = history[i].d;
+    let i = 0;
+    while (i < history.length && history[i].up === toUp) i++;
+    if (i === history.length) continue;
+    const changedAt = history[i - 1].d;
     if (daysBetween(changedAt, now) <= RECENT_WINDOW_DAYS) out.push({ id: result.id, since: changedAt });
   }
   return out;
