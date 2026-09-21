@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import HealthBadge from '../../components/HealthBadge.astro';
 import AvailabilityStrip from '../../components/AvailabilityStrip.astro';
-import { getSites } from '../../lib/data';
+import { getSites, explainStatus } from '../../lib/data';
 
 export function getStaticPaths() {
   return getSites().map((site) => ({ params: { id: site.id }, props: { site } }));
@@ -10,6 +10,8 @@ export function getStaticPaths() {
 
 const { site } = Astro.props;
 const light = site.result?.light ?? null;
+// ADR-026: a bare "Down"/"Broken"/"Unverifiable" badge tells a citizen nothing they can act on.
+const reason = explainStatus(site);
 ---
 
 <Layout title={site.name} description={`Status and audit findings for ${site.name}.`}>
@@ -22,6 +24,7 @@ const light = site.result?.light ?? null;
     <a href={site.url}>{site.url}</a>
     &nbsp;<HealthBadge status={site.status} />
   </p>
+  {reason && <p class="status-reason">{reason.citizen}</p>}
 
   <dl>
     <dt>Tier</dt>
@@ -79,3 +82,10 @@ const light = site.result?.light ?? null;
 
   <p><a href={`https://github.com/hashin/kerala-web-watch/issues/new?title=${encodeURIComponent(`Correction: ${site.name}`)}`}>Suggest a correction</a></p>
 </Layout>
+
+<style>
+  .status-reason {
+    max-width: 60ch;
+    color: var(--color-text-muted, inherit);
+  }
+</style>

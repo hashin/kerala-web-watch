@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { STATUS_DESCRIPTIONS } from '../lib/data';
 ---
 
 <Layout
@@ -9,10 +10,11 @@ import Layout from '../layouts/Layout.astro';
   <h1>Methodology</h1>
 
   <p>
-    <strong>Current status:</strong> the audit suite itself (Phase 3 of this project) has not been
-    built yet. Every site currently shows "Not yet audited" &mdash; nothing on this site is
-    invented or estimated in the meantime. This page describes the plan so it can be checked
-    against what actually ships.
+    <strong>Current status:</strong> every site's light check (reachability, TLS, response time,
+    security headers) already runs every 6 hours. The deep audit &mdash; accessibility,
+    performance, content and GIGW-compliance checks, plus a screenshot &mdash; is being rolled out
+    site by site; until a site's first deep audit completes, it shows "Not yet audited" below the
+    light-check status. Nothing on this site is invented or estimated in the meantime.
   </p>
 
   <h2>Principles</h2>
@@ -54,14 +56,22 @@ import Layout from '../layouts/Layout.astro';
       <tr><th scope="col">Status</th><th scope="col">Meaning</th></tr>
     </thead>
     <tbody>
-      <tr><td>Down</td><td>Two consecutive failed light checks (DNS, connection, or HTTP status).</td></tr>
-      <tr><td>Possibly hijacked</td><td>The domain now serves a parked page, an off-site redirect, or trips a known-malware check.</td></tr>
-      <tr><td>Broken</td><td>Reachable, but blank, a default install page, "under construction", or an invalid TLS certificate that a browser would block.</td></tr>
-      <tr><td>Unverifiable</td><td>Unreachable only from our vantage point (for example, geo-blocked) &mdash; not counted as down.</td></tr>
-      <tr><td>Healthy / Needs work / Poor</td><td>A deep-audit score of 80+, 50&ndash;79, or below 50 across security, accessibility, content, GIGW compliance, performance and identity.</td></tr>
-      <tr><td>Not yet audited</td><td>No deep audit has run for this site yet.</td></tr>
+      <tr><td>Down</td><td>{STATUS_DESCRIPTIONS.down}</td></tr>
+      <tr><td>Possibly hijacked</td><td>{STATUS_DESCRIPTIONS.hijacked}</td></tr>
+      <tr><td>Broken</td><td>{STATUS_DESCRIPTIONS.broken}</td></tr>
+      <tr><td>Unverifiable</td><td>{STATUS_DESCRIPTIONS.unverifiable}</td></tr>
+      <tr><td>Healthy</td><td>{STATUS_DESCRIPTIONS.healthy}</td></tr>
+      <tr><td>Needs work</td><td>{STATUS_DESCRIPTIONS['needs-work']}</td></tr>
+      <tr><td>Poor</td><td>{STATUS_DESCRIPTIONS.poor}</td></tr>
+      <tr><td>Not yet audited</td><td>{STATUS_DESCRIPTIONS.unaudited}</td></tr>
     </tbody>
   </table>
+
+  <p>
+    A status word is never shown alone on this site (<a href="https://github.com/hashin/kerala-web-watch/blob/main/docs/DECISIONS.md">ADR-026</a>):
+    every "Down" or "Broken" site page states the specific reason &mdash; a DNS failure, a refused
+    connection, an invalid certificate, a blank page, and so on &mdash; not just the badge above.
+  </p>
 
   <p>
     See <a href="https://github.com/hashin/kerala-web-watch/blob/main/docs/DESIGN.md">docs/DESIGN.md</a>

@@ -1,4 +1,5 @@
 import type { LightResult } from './light.js';
+import type { CheckId } from './checks/types.js';
 
 export type ResultStatus = 'unaudited' | 'down' | 'hijacked' | 'broken' | 'unverifiable' | 'healthy' | 'needs-work' | 'poor';
 
@@ -58,4 +59,22 @@ export function deriveStatus(input: StatusInput): StatusOutcome {
     return { status: 'down', lightSuspect: false };
   }
   return { status: previousStatus, lightSuspect: true };
+}
+
+/**
+ * ADR-026: a citizen must never see a bare "Down"/"Broken"/"Unverifiable" badge with no reason.
+ * Before a deep audit exists, `deriveStatus` above is the *only* thing that decided the status, so
+ * this mirrors its conditions exactly (same order, same checks) and names the one check id whose
+ * existing `citizen` text (ADR-013, `checks/registry.ts`) explains that specific condition — never
+ * a fresh description invented here. Returns `null` for `healthy`/`needs-work`/`poor`/`unaudited`,
+ * which don't need a reason, and for a light check that simply passed (a `down`/`broken` status in
+ * that case can only have come from a deep audit, whose own `issues[]` already carries the reason).
+ */
+export function explainLightStatus(light: LightResult): CheckId | null {
+  if (light.geo_block_suspect) return 'avail.geo_blocked';
+  if (light.tls !== null && !light.tls.valid) return 'sec.cert_valid';
+  if (light.status_class === 'dns_fail') return 'avail.dns';
+  if (light.status_class === 'connect_fail' || light.status_class === 'timeout') return 'avail.connect';
+  if (light.status_class.startsWith('http_')) return 'avail.status';
+  return null;
 }

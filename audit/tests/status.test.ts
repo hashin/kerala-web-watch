@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { deriveStatus, isBrokenClass } from '../src/status.js';
+import { deriveStatus, explainLightStatus, isBrokenClass } from '../src/status.js';
 import type { LightResult } from '../src/light.js';
 
 function light(overrides: Partial<LightResult> = {}): LightResult {
@@ -64,6 +64,43 @@ describe('deriveStatus', () => {
     const previouslyGeoBlocked = light({ status_class: 'http_403', status: 403, geo_block_suspect: true });
     const outcome = deriveStatus({ previousStatus: 'unverifiable', previousLight: previouslyGeoBlocked, newLight: geoBlocked, hasDeepAudit: false });
     expect(outcome.status).toBe('unverifiable');
+  });
+});
+
+describe('explainLightStatus', () => {
+  it('names avail.dns for a DNS failure', () => {
+    expect(explainLightStatus(light({ status_class: 'dns_fail', dns: false, status: null, tls: null }))).toBe('avail.dns');
+  });
+
+  it('names avail.connect for a refused connection', () => {
+    expect(explainLightStatus(light({ status_class: 'connect_fail', status: null, tls: null }))).toBe('avail.connect');
+  });
+
+  it('names avail.connect for a timeout, same as a refused connection', () => {
+    expect(explainLightStatus(light({ status_class: 'timeout', status: null, tls: null }))).toBe('avail.connect');
+  });
+
+  it('names avail.status for a non-2xx final response', () => {
+    expect(explainLightStatus(light({ status_class: 'http_503', status: 503 }))).toBe('avail.status');
+  });
+
+  it('names sec.cert_valid for an invalid certificate even when the request itself succeeded', () => {
+    const invalidCert = light({ tls: { valid: false, protocol: 'TLSv1.2', expires: '2020-01-01', days_left: -2000, issuer: 'Test CA' } });
+    expect(explainLightStatus(invalidCert)).toBe('sec.cert_valid');
+  });
+
+  it('names avail.geo_blocked ahead of any other failure, matching deriveStatus\'s own precedence', () => {
+    const geoBlockedWithBadCert = light({
+      status_class: 'http_403',
+      status: 403,
+      geo_block_suspect: true,
+      tls: { valid: false, protocol: 'TLSv1.2', expires: '2020-01-01', days_left: -2000, issuer: 'Test CA' },
+    });
+    expect(explainLightStatus(geoBlockedWithBadCert)).toBe('avail.geo_blocked');
+  });
+
+  it('returns null for a healthy light check', () => {
+    expect(explainLightStatus(light())).toBeNull();
   });
 });
 

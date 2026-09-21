@@ -3,7 +3,7 @@ import Layout from '../../../layouts/Layout.astro';
 import SiteTable from '../../../components/SiteTable.astro';
 import Pagination from '../../../components/Pagination.astro';
 import HealthBadge from '../../../components/HealthBadge.astro';
-import { getSites, STATUSES } from '../../../lib/data';
+import { getSites, STATUSES, STATUS_DESCRIPTIONS } from '../../../lib/data';
 import type { Status } from '../../../lib/data';
 
 export async function getStaticPaths({ paginate }: { paginate: import('astro').PaginateFunction }) {
@@ -26,6 +26,7 @@ const { page } = Astro.props as { page: import('astro').Page<ReturnType<typeof g
 <Layout title={`Status: ${status}`} description={`Government websites currently marked "${status}".`}>
   <p><a href="/">&larr; Home</a></p>
   <h1><HealthBadge status={status} /></h1>
+  <p class="status-description">{STATUS_DESCRIPTIONS[status]}</p>
   <p>{page.total} sites.</p>
   <SiteTable sites={page.data} />
   <Pagination page={page} />
