@@ -1,0 +1,52 @@
+name: Uptime (light checks)
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Only check the first N sites (leave empty for all)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-branch
+  cancel-in-progress: false
+
+jobs:
+  light:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with: { ref: data, path: data }
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: audit/package-lock.json
+      - working-directory: audit
+        run: npm ci
+      - working-directory: audit
+        run: npm run build
+      - run: >
+          node audit/dist/cli.js light --all --data data --registry registry
+          --limit "${{ inputs.limit }}"
+        env:
+          VANTAGE: gh-us
+      - name: Commit results
+        working-directory: data
+        run: |
+          git config user.name  "kerala-web-watch[bot]"
+          git config user.email "kerala-web-watch[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "uptime: $(date -u +%FT%H:%MZ)" || exit 0
+          for i in 1 2 3 4 5; do
+            git push && break
+            git pull --rebase && sleep $((i * 5))
+          done
