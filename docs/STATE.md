@@ -6,12 +6,12 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 ## Now
 
 - **Phase:** 3 — Deep audits
-- **Current WP:** WP3.7 (in progress: step 1 done; step 2 hit a real crash bug, not yet fixed) — `audit.yml` live: 3 → 50 → cron
+- **Current WP:** WP3.7 (in progress: step 1 done; step 2 confirmed a real crash bug, not yet fixed) — `audit.yml` live: 3 → 50 → cron
 - **Next action:** **Read `docs/HANDOFF.md` first — do not just retry step 2.** The `batch_size=50` run (id
-  `35626792354`) found a real bug: an unhandled Lighthouse promise rejection crashes the whole Node process
-  mid-shard (bypassing `runner.ts`'s own `try/catch`), and `audit.yml`'s `upload-artifact` step has no
-  `if: always()`, so a crashed shard's already-completed results are lost, not just the sites after the crash.
-  Check `gh run view 35626792354` for the final outcome (shard 1 was still running when this session ended), fix
+  `35626792354`) confirmed a real bug, twice independently: an unhandled Lighthouse promise rejection crashes the
+  whole Node process mid-shard (bypassing `runner.ts`'s own `try/catch`) — both shards hit the identical error,
+  and because `audit.yml`'s `upload-artifact` step has no `if: always()`, `merge` found 0 artifacts and merged 0
+  sites, losing all 21 sites that *had* audited successfully before the crashes. Fix
   `audit/src/runner.ts` (see HANDOFF.md for the exact diagnosis and a likely fix), add `if: always()` to the
   upload-artifact step, add a regression test, `cd audit && npm test`, commit, push, **then** retry step 2. Only
   after a clean step 2 run: read per-site timing, decide on `--max-batch` (see HANDOFF.md — step 1's timing was

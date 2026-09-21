@@ -1,12 +1,12 @@
-# Session handoff — 2026-09-21, mid-WP3.7 (step 2's batch_size=50 run still in flight)
+# Session handoff — 2026-09-21, mid-WP3.7 (step 2's batch_size=50 run confirmed lost to a crash bug)
 
 _This is a one-time, detailed supplement to `docs/STATE.md`'s normal terse handoff log, written
-because this session is stopping while a real GitHub Actions run it triggered is still executing
-and found a genuine, uninvestigated bug along the way. Read this **in addition to**, not instead
-of, the normal session-start order in `CLAUDE.md` (CLAUDE.md → `docs/STATE.md` → `docs/DECISIONS.md`
-→ the current WP in `docs/IMPLEMENTATION.md` → the `docs/DESIGN.md` sections that WP lists). This
-file is not itself part of that read order and won't be kept up to date -- treat it as a snapshot,
-not a living document. Delete it once WP3.7 is done and its content is stale (same instruction the
+because this session found a genuine, real bug -- confirmed twice, independently, in the same run
+-- and is stopping before fixing it. Read this **in addition to**, not instead of, the normal
+session-start order in `CLAUDE.md` (CLAUDE.md → `docs/STATE.md` → `docs/DECISIONS.md` → the
+current WP in `docs/IMPLEMENTATION.md` → the `docs/DESIGN.md` sections that WP lists). This file is
+not itself part of that read order and won't be kept up to date -- treat it as a snapshot, not a
+living document. Delete it once WP3.7 is done and its content is stale (same instruction the
 previous WP3.6→3.7 handoff carried, which is why it's gone now)._
 
 ## Where things stand
@@ -19,19 +19,21 @@ confirmed against the real `data` branch and the live site (`/sites/kerala-gov/`
 `needs-work` score of 61, `/sites/d-ernakulam/` shows 63, `/sites/keralapsc/` shows `down` — see
 below for why that last one is actually wrong).
 
-**Step 2 -- the `batch_size=50` run (`35626792354`) -- is still running as this session ends.**
-It was triggered to gather real per-site timing for the `--max-batch` tuning decision WP3.7 step 2
-calls for. `plan` succeeded (2 shards, ~25 sites each). **Shard 0 already failed** with a real bug
-(see below) after auditing only 4 of its ~25 sites; **shard 1 was still `in_progress`** when this
-session ended -- a background watcher (this session's Bash task, not something a fresh session
-will have) was tracking it but its notification won't reach a new session. **First thing a fresh
-session must do: `gh run view 35626792354` to see the final outcome**, then act on whichever of the
-two cases below applies.
+**Step 2 -- the `batch_size=50` run (`35626792354`) -- is complete and confirms the crash bug is
+real and repeatable, and cost the whole batch.** `plan` succeeded (2 shards, ~25 sites each). Both
+`audit` shards crashed with the *identical* error signature (`Protocol error (Page.navigate):
+Target closed`, from `lighthouse/core/lib/lh-error.js:160`) -- shard 0 after 4 sites, shard 1 after
+17. Because neither shard reached its `upload-artifact` step, **`merge`'s own log says it plainly:
+`Found 0 artifact(s)` / `merge: batch_id=20260921-2 sites=0`** -- of the 21 sites that were actually
+successfully audited (14 scored, 5 gracefully error-recorded, across both shards) before the
+crashes, **none were saved**. This whole run -- ~25 minutes of two parallel Actions runners, real
+polite traffic against ~46 live government sites -- produced zero merged results. This is not a
+fluke: the same crash, same error, in two independent shards auditing completely different sites,
+confirms the bug below is real and will keep happening on any future batch run until fixed.
 
 ## The one thing this session found that actually matters: a crash bug that loses whole shards
 
-Shard 0's log (`gh api repos/hashin/kerala-web-watch/actions/jobs/106423125352/logs`, or `gh run
-view 35626792354 --job <id> --log` once the whole run is complete) shows:
+Shard 0's log (`gh api repos/hashin/kerala-web-watch/actions/jobs/106423125352/logs`) shows:
 
 1. `aepds` audited fine (poor, 49).
 2. `arogyakeralam` audited fine (needs-work, 51).
@@ -50,6 +52,17 @@ view 35626792354 --job <id> --log` once the whole run is complete) shows:
    ```
    This did **not** go through `runner.ts`'s `try/catch` in `runDeepAudit` -- it's an **unhandled
    promise rejection** that crashed the whole Node process, not a rejection any `await` caught.
+
+**Confirmed a second time, independently, in shard 1's log**
+(`gh api repos/hashin/kerala-web-watch/actions/jobs/106423125517/logs`): 15 sites audited
+successfully (akshaya, cial, cmo, cusat, d-idukki, d-kasaragod, d-kottayam, d-malappuram,
+d-pathanamthitta, d-thrissur, dhs, edistrict, egrantz, etenders) plus 3 more caught gracefully
+(dslr -- timeout, fisherieskerala -- `ERR_CERT_COMMON_NAME_INVALID`, igr -- timeout), then the
+**exact same** `Protocol error (Page.navigate): Target closed` from `lh-error.js:160` while
+auditing the 19th site. Two shards, two completely different sets of real government sites, same
+crash signature -- this rules out "one flaky site" and confirms it's Lighthouse's own async
+behaviour (see root cause below) that's at fault, triggerable by ordinary real-world conditions
+(a slow site, a `Target closed` race) that a batch of dozens of real sites will hit reliably.
 
 **Root cause (read `audit/src/runner.ts` lines ~72-90 to confirm before fixing):**
 `lighthousePromise = opts.noLighthouse ? Promise.resolve(undefined) : runLighthouse(deepUrl)` is
@@ -79,18 +92,21 @@ reproducible in fixtures, at minimum unit-test that `runDeepAudit` doesn't propa
 rejection when `runLighthouse` is mocked to reject early via `vi.fn().mockRejectedValue(...)`
 without the promise being awaited immediately by the caller.
 
-**A second, independent gap this exposed:** `audit.yml`'s `audit` job's `actions/upload-artifact@v4`
-step has no `if: always()` (matching DESIGN §6.3's own snippet, which also lacks it) -- so when
-`cli.js run` crashes, the step after it is skipped by GitHub Actions' default `if: success()`, and
-**every result that shard had already written to `out/` before the crash is never uploaded**,
-including the two sites that audited successfully (`aepds`, `arogyakeralam`) and the two that
-failed gracefully (`civilsupplieskerala`, `collegiateedu`) -- all four are silently lost for this
-batch, not just the ~20 sites after the crash. `merge`'s `if: always()` means it still runs and
-merges whatever *other* shards' artifacts exist, so this fails safe (no corruption, just lost
-coverage for this round), but real Actions compute and real audit work were wasted. **Fix this
-too** once the crash itself is fixed: add `if: always()` (or at least `if: success() ||
-failure()`) to the `upload-artifact` step so a shard that dies partway through still uploads
-whatever it completed.
+**A second, independent gap this exposed -- and confirmed the full cost of:** `audit.yml`'s `audit`
+job's `actions/upload-artifact@v4` step has no `if: always()` (matching DESIGN §6.3's own snippet,
+which also lacks it) -- so when `cli.js run` crashes, the step after it is skipped by GitHub
+Actions' default `if: success()`, and **every result that shard had already written to `out/`
+before the crash is never uploaded.** `merge`'s own log proves this exactly: `Found 0 artifact(s)`
+/ `merge: batch_id=20260921-2 sites=0` -- both shards' artifacts were missing, so all 21 sites that
+*did* audit successfully (2 + 15 scored, 2 + 3 gracefully error-recorded) were thrown away, not
+just the ~46 sites after each crash point. `merge`'s own `if: always()` meant it still ran (so it
+correctly did nothing rather than erroring), which is why this failed safe -- no data corruption,
+`data/` branch untouched by this run at all -- but real Actions compute and real, valid audit
+results were wasted completely. **Fix this too**, and arguably fix it *first* since it's simpler
+and independently valuable regardless of the crash bug's exact fix: add `if: always()` (or at
+least `if: success() || failure()`) to the `upload-artifact` step so a shard that dies partway
+through still uploads whatever it completed -- this alone would have saved all 21 sites' real
+results from this run.
 
 **Do not re-run `batch_size=50` again blind.** If the crash bug isn't fixed first, a retry is
 likely to hit the same failure mode on a different site (any site with a flaky/slow Lighthouse
@@ -99,12 +115,15 @@ ideally add the regression test), rebuild, commit, *then* retry step 2.
 
 ## What step 2 was *for*, still worth extracting once it's fixed
 
-Per-site timing from shard 0 before it crashed: `aepds` 57s, `arogyakeralam` 81s (gaps between
-consecutive `console.error` timestamps in the log). Consistent with the 3-site smoke test's ~55-67
-s/site. Once a clean `batch_size=50` run completes, read real per-shard wall-clock time from the
-job duration and decide whether `--max-batch` (currently 300, ADR-004) needs lowering to keep
-shards ≤ 90 min per WP3.7 step 2's own instruction -- this is tuning, recorded in STATE.md, not an
-ADR.
+Per-site timing across both shards before they crashed (gaps between consecutive `console.error`
+timestamps): shard 0 averaged ~70s/site over 4 sites (57s, 81s, ...); shard 1 averaged ~53s/site
+over 18 sites (a tighter, more representative sample -- 15 clean audits plus 3 graceful errors,
+from `16:39:46` to `17:01:59`, ≈1,333s / 18 ≈ 74s/site including the two Lighthouse-heavy timeout
+cases). All consistent with the 3-site smoke test's ~55-67 s/site. At ~70s/site, a full 40-site
+shard would take ~47 minutes -- comfortably under WP3.7 step 2's 90-minute budget, so `--max-batch`
+(currently 300, ADR-004) likely does *not* need lowering, but this is only an estimate from
+partial, crash-truncated runs. Confirm with a real, *complete* `batch_size=50` run once the crash
+bug is fixed before deciding either way -- this is tuning, recorded in STATE.md, not an ADR.
 
 ## Other findings from step 1, already in `docs/STATE.md`'s Open questions (9 and 10) -- not repeated in full here
 
@@ -138,10 +157,9 @@ along the way. Fully committed, pushed, and verified live on production (commits
 2. Read `CLAUDE.md`, then `docs/STATE.md`'s **Now** section and the two Handoff entries at the top
    (WP3.7 step 1, and this session's ADR-026/findings entries) for fuller context than this file
    repeats.
-3. `gh run view 35626792354` -- see whether shard 1 finished, and how. If it also crashed the same
-   way, that's a second confirmed occurrence, strengthening the case this is a real, recurring bug
-   (not a one-off flake) and raising the priority of fixing it before WP3.7 step 3 (enabling the
-   nightly cron) is trusted.
+3. `gh run view 35626792354` if you want to see the confirmed-failed run for yourself (both shards
+   crashed with the identical error, `merge` logged `sites=0`) -- already fully diagnosed above,
+   no further investigation of *that specific run* is needed, only the fix.
 4. Read `audit/src/runner.ts`'s `runDeepAudit` (~line 63-135) to confirm the unhandled-rejection
    diagnosis above against the actual current code, fix it, add a regression test, run
    `cd audit && npm test`.
