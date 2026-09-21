@@ -119,7 +119,12 @@ Hosting: GitHub Pages at **https://govwebsite.hashin.me** (custom domain; `site/
 2. Commit with a conventional message (`feat(audit): …`, `feat(site): …`, `chore: …`, `data: …`, `docs: …`).
 3. Update `docs/STATE.md`: WP table row (status + commit sha), **Next action**, deviations, open questions.
 4. Append a 3–6 line **Handoff** entry in `docs/STATE.md` (what works, what does not, what to do first next time).
-5. Push if the human has said pushes are fine (see STATE.md); otherwise leave committed.
+5. Push `main` (and `data` once it's in use) if the human has said pushes are fine (see STATE.md).
+   Time it against the **work-package schedule**, not the clock: push at a WP boundary — a WP just
+   finished cleanly, or a natural pause point within a long one — so progress reaches production
+   often enough for the human to actually review it and fold in feedback before more work stacks
+   on top unreviewed. Don't batch several WPs' worth of unpushed commits, and don't push mid-WP in
+   a broken or half-verified state just to hit a cadence.
 
 ## Things only the human can do (ask, do not attempt)
 
