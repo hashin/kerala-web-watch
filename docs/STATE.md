@@ -6,10 +6,10 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 ## Now
 
 - **Phase:** 2 — Light checks live
-- **Current WP:** WP2.2 (done) → **Next WP:** WP2.3 (`uptime.yml` live)
-- **Next action:** Start WP2.3 — read `docs/IMPLEMENTATION.md` WP2.3, DESIGN §6.2/§6.4, ADR-003/ADR-004. Write the scheduled GitHub Actions workflow that runs `cli light` every 6h against all sites and commits `data/results/*.json` + `summary.json` to the orphan `data` branch. This is the first WP where `data` (not just `main`) gets pushed — the push-cadence policy in this file now applies to both.
-- **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. Same for `data` once WP2.2+ starts writing to it.
-- **Registry size:** 1,500 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated) · **Deep-audited:** 0 · **Site live:** yes — https://govwebsite.hashin.me
+- **Current WP:** WP2.3 (live, cron confirmed running; see Open question 8) → **Next WP:** WP2.4 (site v1)
+- **Next action:** Start WP2.4 — read `docs/IMPLEMENTATION.md` WP2.4, DESIGN §7.2 rows `/`/`/districts/…`/`/status/…`/`/departments/<slug>/`/`/sites/<id>/`, §7.4, ADR-011, ADR-025. Build the Kerala district map, `SiteTable`/`Pagination`/`CoverageBar` components, and the home/districts/departments/status pages reading `data/summary.json` — real data now exists on `data` for this to render against.
+- **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
+- **Registry size:** 1,500 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated) · **Deep-audited:** 0 · **Light-checked:** 1,500/1,500 (15 down, 19 broken as of first full run 2026-09-21T05:30Z) · **Site live:** yes — https://govwebsite.hashin.me
 - **Candidates backlog:** ~2,476 fresh, uncurated candidates as of 2026-09-21 (mostly from a new `kerala-gov-in-subdomains` source — see Handoff below), waiting for a WP1.7-style curation pass. Not yet in `registry/sites/`.
 
 ## Work packages
@@ -29,7 +29,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 1.7 | Curation pass → registry/sites/*.yaml; live-resolve; stats | done | 8bbff71 | 16 university, 14 district, 50 psu, 38 statutory, 95 agency, 65 directorate = 290 curated; registry 1,210 → 1,500 exactly (Verify gate met); `drafts/` holds only 5 resolved items with notes |
 | 2.1 | `light.ts` + tests | done | 4b6d5e0 | dns/tls/http primitives + orchestration; 52 tests incl. a verifier-caught redirect-loop cap and TLS-validity gap, both fixed |
 | 2.2 | `cli light`, data-branch writer, history, summary.json | done | 7e43cf1 | 79 tests; verifier found 4 undertested paths (score/deep/issues carry-forward, deep-audit-preserved status, null-district grouping, coverage-ETA batch cap), all fixed and re-verified by hand |
-| 2.3 | uptime.yml live | todo | | |
+| 2.3 | uptime.yml live | live | 52977b4 | cron running; 2 manual `workflow_dispatch` runs (limit=50, then all 1,500) verified end-to-end; "two consecutive *scheduled* runs" gate needs real calendar time — see Open question 8 |
 | 2.4 | Site v1: home + map + status lists + district pages + light-only site page | todo | | |
 | 2.5 | validate.yml `--resolve` + PR comment | todo | | |
 | 3.1 | Check framework, `registry.ts` (all ids, EN), `score.ts` | todo | | |
@@ -64,10 +64,34 @@ _None yet. Each entry: what, why, ADR number._
 5. Provide `SAFE_BROWSING_KEY` secret? (optional; `sec.safe_browsing` is skipped without it)
 6. India self-hosted runner for WP4.7? (optional)
 7. **Reverse-IP search for co-hosted sites** — the human asked (2026-09-21) to find other Kerala govt websites sharing an IP with known ones. A real reverse-IP-to-hostnames lookup needs a paid OSINT API (Shodan/Censys/SecurityTrails/ViewDNS); free/keyless services are rate-limited to a handful of queries, useless against the 866 unique resolved IPs already visible in the human-supplied `kerala.gov.in` subdomain-scan CSV (see WP1.x-continued handoff below). Explicitly deferred at the human's instruction rather than run best-effort. Needs: either an API key from the human, or a decision to skip it permanently. The CSV's top shared IPs if this is picked up later: 103.210.72.94 (95 subdomains), 115.124.98.144 (74), 103.10.168.89 (39), 103.135.130.153 (37), 103.241.147.235 (34), 36.255.252.176 (28), 103.10.168.25 (26), 103.133.180.162 (25), 59.92.70.120 (24), 117.193.73.133 (22).
+8. **Not a question, a bookkeeping note:** WP2.3's "two consecutive scheduled runs succeeded" done-when gate needs
+   real calendar time to pass (cron is `0 */6 * * *`) — no single session can satisfy it. The workflow is live and
+   already verified correct via two manual `workflow_dispatch` runs (limit=50, then all 1,500 — see Handoff). A
+   future session should `gh run list --workflow=uptime.yml` and confirm two consecutive `schedule`-triggered
+   (not `workflow_dispatch`) runs both succeeded, then mark this WP fully closed — not a blocker for WP2.4+.
 
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-09-21 · WP2.3 live** — `.github/workflows/uptime.yml`: cron `0 */6 * * *` + `workflow_dispatch` with a
+  `limit` input, `concurrency: {group: data-branch}` (shared with the future `audit.yml`), checks out `main` +
+  `data`, builds `audit`, runs `cli.js light --all --limit "<n>"`, commits/pushes to `data` with the retry-on-race
+  loop from DESIGN §6.3. Verified live, not just read back: dispatched with `limit=50` (succeeded, 50 results
+  written, `summary.json.totals.sites` correctly stayed 1,500), then a second `limit=50` (correctly re-checked the
+  same first 50, flipping some to `down` via the two-strike rule), then a full `--all` run (23m45s, all 1,500
+  sites, `data/summary.json` → 15 down, 19 broken, 1,466 unaudited). **Found and fixed a real bug via that live
+  verification, not something a local test could have caught:** the first successful push to `data` never
+  triggered `build-deploy.yml` — GitHub's own anti-recursion rule means a push made with the default
+  `GITHUB_TOKEN` (which `actions/checkout` wires up) never fires another workflow's `push` trigger, so every bot
+  commit to `data` would have left Pages stale forever. Fixed by adding a `workflow_run` trigger to
+  `build-deploy.yml` (listens for `uptime.yml`, and pre-emptively for WP3.7's `audit.yml` by name) — `workflow_run`
+  isn't a push event and isn't subject to that rule. Re-verified after the fix: both the limit=50 rerun and the
+  full run's `data` pushes correctly triggered a successful Pages rebuild via `workflow_run`. **Not fully closed:**
+  the WP's own "two consecutive *scheduled* runs succeeded" done-when gate needs real calendar time (6h cron
+  interval) that no single session can wait out — recorded as Open question 8, not a blocker. **Next: WP2.4**
+  (site v1) — `data/summary.json` now has real content to build the home/district/department/status pages
+  against; read ADR-025 first, it adds a pagination step and a per-page Lighthouse budget to this WP's own text.
 
 - **2026-09-21 · WP2.2 done, plus ADR-025 (pagination + performance budgets)** — `cli light --ids/--all --data <dir>`
   now does the real work: runs `lightCheck()` per site (bounded concurrency via `p-limit`), folds each into
