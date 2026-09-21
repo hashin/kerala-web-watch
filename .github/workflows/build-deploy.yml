@@ -3,6 +3,13 @@ name: Build and Deploy
 on:
   push:
     branches: [main, data]
+  # uptime.yml/audit.yml push to `data` using the default GITHUB_TOKEN, and pushes made with that
+  # token never trigger other workflows' `push` events (GitHub's anti-recursion rule) -- so a bot
+  # commit to `data` would otherwise never rebuild Pages. workflow_run isn't a push event and isn't
+  # subject to that rule, so it's the trigger that actually fires for those commits.
+  workflow_run:
+    workflows: ['Uptime (light checks)', 'Deep audit (rolling)']
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -16,6 +23,7 @@ concurrency:
 
 jobs:
   build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
