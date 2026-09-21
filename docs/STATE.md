@@ -85,20 +85,16 @@ _None yet. Each entry: what, why, ADR number._
    either a keralapsc-specific override (a registry/status-model change needing its own ADR, not something to
    improvise solo) or DESIGN §6.7's own proposed fix: the India self-hosted runner (open question 6), which would
    give ground truth instead of a guessed pattern. Recommend prioritising open question 6 partly on this evidence.
-10. **Pages content staleness, found during WP3.7 step 1** — after the audit merge landed, the live site served a
-    stale build (kerala-gov showed "Not yet audited" instead of its fresh `needs-work` score) for several minutes,
-    persisting even through a *clean, solo* `workflow_dispatch` rebuild (id `6573176804`, `updated_at` 16:33:55Z)
-    with nothing else running in the `pages` concurrency group — a request ~40s after that deployment's
-    `updated_at` still got the old `last-modified: 16:23:10Z` content (`age: 32`, confirmed served from GitHub's
-    edge, not a browser cache). This session also made several rapid `main` pushes just before that (each
-    independently triggering `build-deploy.yml` via its `push` trigger, racing the later `workflow_run`-triggered
-    one under `concurrency: {group: pages, cancel-in-progress: true}`), so a genuine cancellation race may still be
-    a contributing factor, but the fact that an *isolated* rebuild didn't immediately take effect either points at
-    plain GitHub Pages propagation lag as at least part of it, not only the race. A background poll was left
-    running to confirm when the fresh content actually appears — see the next Handoff entry for the outcome. Not
-    urgent (any later push/scheduled run self-heals it) but worth a real look if a future session sees the site
-    lagging `data` branch content for more than a few minutes after a deploy reports success. Not an ADR (infra
-    reliability, not a product decision).
+10. **Pages content staleness, found during WP3.7 step 1 — resolved, just propagation lag.** After the audit merge
+    landed, the live site served a stale build (kerala-gov showed "Not yet audited" instead of its fresh
+    `needs-work` score) for several minutes, persisting through a clean, solo `workflow_dispatch` rebuild too. A
+    background poll confirmed the fresh content (`last-modified: 16:33:49Z`, matching that solo rebuild) eventually
+    went live on its own — GitHub Pages' edge network just took a few minutes longer than usual to propagate here,
+    not a real bug in `build-deploy.yml` or a lost deployment. This session's rapid-fire `main` pushes did also
+    trigger several overlapping `build-deploy.yml` runs racing in the shared `concurrency: {group: pages,
+    cancel-in-progress: true}` group, which may have added to the delay, but nothing was actually lost or wrong —
+    every rebuild converged on the correct content within minutes. Nothing to fix; noted here only so a future
+    session doesn't panic and start debugging `build-deploy.yml` if it sees the same few-minutes lag.
 
 ## Handoff log
 
