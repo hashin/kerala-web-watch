@@ -394,9 +394,9 @@ git show origin/data --stat | head`). Then `limit=` (all). Then leave cron on.
 
 ### WP2.4 — Site v1 (light data only)
 **Goal:** a citizen can already see which sites are down, by district and by department.
-**Read first:** DESIGN §7.2 rows `/`, `/districts/…`, `/status/…`, `/departments/<slug>/`, `/sites/<id>/`; §7.4; ADR-011.
+**Read first:** DESIGN §7.2 rows `/`, `/districts/…`, `/status/…`, `/departments/<slug>/`, `/sites/<id>/`; §7.4; ADR-011; ADR-025.
 **Produces:** `site/src/components/KeralaMap.astro` + `site/src/data/kerala-districts.svg.json`, `StatTile`, `SiteTable`
-(server-rendered; sort via tiny inline script or none), `CoverageBar`, pages `districts/index.astro`,
+(server-rendered; sort via tiny inline script or none), `Pagination` component, `CoverageBar`, pages `districts/index.astro`,
 `districts/[district].astro`, `departments/[department].astro`, `status/[status].astro`, upgraded `index.astro`
 and `sites/[id].astro` (light section: status, final URL, TLS expiry, headers, 90-day availability strip).
 **Steps:**
@@ -407,7 +407,12 @@ and `sites/[id].astro` (light section: status, final URL, TLS expiry, headers, 9
 2. Colour by `% broken` per district with an accessible sequential ramp; always show the number in a label.
 3. Every list row: status icon + word + name + URL host + department + district. Never colour alone.
 4. Keep pages under ~150 KB HTML; grama-panchayat lists on district pages inside `<details>` groups.
-**Verify:** `npm run build` under 3 min; open the deployed home and one district; `sites[]` from summary drives the home.
+5. Paginate per ADR-025: any `SiteTable` whose rows would exceed 100 (home's own listing, a district or
+   department page with a long roll) is generated with Astro's `paginate()` at 100 rows/page — build-time pages,
+   no client JS — with `Pagination` rendering prev/next and "page N of M"; a page under the cap stays unpaginated.
+**Verify:** `npm run build` under 3 min; open the deployed home and one district; `sites[]` from summary drives the
+home; `npx lighthouse http://localhost:4321/ --only-categories=performance --form-factor=mobile --throttling-method=simulate
+--quiet --chrome-flags=--headless` scores ≥ 90 on the built home page.
 **Commit:** `feat(site): home, map, districts, departments, status lists (WP2.4)`
 
 ### WP2.5 — `validate --resolve` and the PR comment
@@ -586,18 +591,22 @@ Lighthouse a11y on our own site page ≥ 95 locally (`npx lighthouse http://loca
 **Commit:** `feat(site): full site page with explained issues (WP4.1)`
 
 ### WP4.2 — Ministry, department, kind, platform, leaderboard pages
-**Read first:** DESIGN §4, §7.2 rows ministries/departments/kinds/platforms/leaderboard; ADR-008, ADR-014.
+**Read first:** DESIGN §4, §7.2 rows ministries/departments/kinds/platforms/leaderboard; ADR-008, ADR-014, ADR-025.
 **Produces:** `ministries/index.astro`, `ministries/[ministry].astro`, upgraded `departments/[department].astro`
 (rollup: status counts, median, top-3 failed checks, table), `kinds/[kind].astro`, `platforms/[platform].astro`
 (platform-wide issues = checks failing on ≥ 80 % of member sites; member pages show "Inherited from platform" note —
 implement the note in `sites/[id].astro` here), `leaderboard.astro` (departments and districts ranked by % broken then
 median; "most improved" from history deltas over 30 days), `site/src/lib/rollups.ts` with tests (vitest in `site/`).
-**Verify:** build; a department with zero sites renders an empty state, not an error; rollup tests green.
+Reuse WP2.4's `Pagination`/`paginate()` convention on any of these tables that exceed 100 rows (a large department
+or the `lsgkerala` platform's full member list).
+**Verify:** build; a department with zero sites renders an empty state, not an error; rollup tests green; a page
+whose table exceeds 100 rows actually paginates (check `platforms/lsgkerala`, its largest member list).
 **Commit:** `feat(site): ministry, department, kind, platform and leaderboard views (WP4.2)`
 
 ### WP4.3 — Status pages, feeds, static API, data page
-**Read first:** DESIGN §7.2 rows status/feeds/api/data.
-**Produces:** `status/[status].astro` upgraded (down, hijacked, broken, poor, unverifiable, unaudited), `feeds/broken.xml`
+**Read first:** DESIGN §7.2 rows status/feeds/api/data; ADR-025.
+**Produces:** `status/[status].astro` upgraded (down, hijacked, broken, poor, unverifiable, unaudited; paginated at
+100 rows/page per ADR-025 once a status has that many sites), `feeds/broken.xml`
 and `feeds/fixed.xml` (Atom, last 100 transitions from history), `api/summary.json` (copy), `api/sites/[id].json`,
 `api/sites.csv` (registry + status + score), `api/all.json` (all records minus evidence, gzip-friendly), `data.astro`
 (downloads, schema description, licence, link to monthly Release archives).

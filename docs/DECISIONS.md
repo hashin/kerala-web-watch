@@ -146,3 +146,15 @@ guessed) routing that central/platform noise to `registry/ignore.yaml` rather th
 crawl; this is recorded honestly rather than padded. The 14 collectorate portal URLs themselves are always
 included as one certain candidate per district (`hints.kind: district_admin`), since DESIGN §2's T4 row counts
 them as sites in their own right regardless of what else a given homepage links to.
+
+## ADR-025 · Long listing pages paginate at build time; a Lighthouse performance budget applies to every listing page · Accepted · 2026-09-21
+At 1,500+ sites, an unpaginated table on `/`, `/districts/<d>/`, `/departments/<d>/`, `/status/<s>/` or `/kinds/<k>/`
+would blow past WP2.4's own ~150 KB HTML guidance and hurt the mobile-first citizen this project is for (DESIGN §7.4).
+Client-side fetch/infinite-scroll was rejected: it needs client JS and a data endpoint, against ADR-002's
+zero-JS-by-default static build. Instead, any listing whose full table exceeds 100 rows is split with Astro's
+built-in `paginate()` into build-time pages (e.g. `/departments/<slug>/2/`), 100 rows each, with prev/next links
+and a page-count label; a listing that's already small (one district's grama panchayats) stays one page.
+**Consequence:** WP2.4, WP4.2 and WP4.3 each get an explicit pagination step for their listing pages. Every WP that
+ships a listing page adds a Lighthouse performance run (mobile, simulated 4G — DESIGN §5's `perf.lighthouse` method)
+against the built page to its Verify step, target ≥ 90, rather than deferring all performance checking to WP4.5's
+self-audit.
