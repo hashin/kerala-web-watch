@@ -6,8 +6,8 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 ## Now
 
 - **Phase:** 3 — Deep audits
-- **Current WP:** WP3.1 (done) → **Next WP:** WP3.2 (availability + identity checks + fixtures)
-- **Next action:** Start WP3.2 — read `docs/IMPLEMENTATION.md` WP3.2 and its Read-first list (DESIGN §5.3's avail./id. tables). Implement the real `Check` functions (populating `CHECK_LIST` in `audit/src/checks/index.ts`) for the `avail.*` and `id.*` categories against fixtures, following the `CheckMeta` already defined in `registry.ts`.
+- **Current WP:** WP3.2 (done) → **Next WP:** WP3.3 (security checks + retire.js + fixtures)
+- **Next action:** Start WP3.3 — read `docs/IMPLEMENTATION.md` WP3.3 and its Read-first list (DESIGN §5.3's `sec.*` table). Implement `audit/src/checks/security.ts` against fixtures, following the same `Check`-array-plus-fixtures pattern WP3.2 established in `availability.ts`/`identity.ts`; wire retire.js (or an equivalent CVE dataset) for `sec.vuln_js` against the script URLs a page loads.
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
 - **Registry size:** 1,500 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated) · **Deep-audited:** 0 · **Light-checked:** 1,500/1,500 (15 down, 19 broken as of first full run 2026-09-21T05:30Z) · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data instead of placeholders
 - **Candidates backlog:** ~2,476 fresh, uncurated candidates as of 2026-09-21 (mostly from a new `kerala-gov-in-subdomains` source — see Handoff below), waiting for a WP1.7-style curation pass. Not yet in `registry/sites/`.
@@ -33,7 +33,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 2.4 | Site v1: home + map + status lists + district pages + light-only site page | done | cf7661d | 1,596 pages in ~2.5s; found & fixed a real WP2.2 bug while dogfooding real data (see handoff); Lighthouse perf 100 on the production build (58 on `astro dev` — checked the wrong server first) |
 | 2.5 | validate.yml `--resolve` + PR comment | done | 7a6ceea | 99 tests; verified live with a real throwaway PR (#2, closed unmerged): bogus host failed with a clear row → fixed to a real URL → same comment updated in place, check passed, entry's name shown |
 | 3.1 | Check framework, `registry.ts` (all ids, EN), `score.ts` | done | 809d32b | 84 check ids (DESIGN §5.3 catalogues ~90); verifier mutation-tested `score.ts`, found 2 undertested paths (issues category-tiebreak, availability-exclusion), both fixed and re-verified by hand |
-| 3.2 | Availability + identity checks + fixtures | todo | | |
+| 3.2 | Availability + identity checks + fixtures | done | 8288a64 | 21 checks (11 avail.*, 10 id.*), 571 tests; verifier mutation-tested and found 4 undertested paths (avail.blank boundary, avail.redirect_offsite alias handling, avail.parked pattern coverage, avail.default_page's "It works!" branch), all fixed and re-verified by hand |
 | 3.3 | Security checks + retire.js + fixtures | todo | | |
 | 3.4 | Content + GIGW checks (bilingual) + fixtures | todo | | |
 | 3.5 | Playwright runner: capture, axe, Lighthouse, crawl, screenshots; fixture-server smoke test | todo | | |
@@ -73,6 +73,38 @@ _None yet. Each entry: what, why, ADR number._
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-09-21 · WP3.2 done** — `audit/src/checks/availability.ts` (11 checks) and
+  `audit/src/checks/identity.ts` (10 checks), both real `Check` implementations against DESIGN
+  §5.3's tables, wired into `CHECK_LIST` in `checks/index.ts`. `avail.dns`/`connect`/`status` read
+  the existing light-check result directly; `avail.redirect_offsite`/`parked`/`default_page`/
+  `blank`/`under_construction`/`geo_blocked` use a new `checks/text.ts` (`visibleText()`, a
+  head/script/style/tag-stripping approximation for use before WP3.5's real rendered text exists)
+  and DESIGN's own A.1–A.3/A.9 pattern lists. `avail.flapping` reads a site's daily `history` (a
+  new optional `CheckContext` field) over a 7-day/3-down window -- DESIGN literally says "28 checks
+  (7 days)", but WP2.2 already collapsed history to one entry/day, so 7 days is the correct
+  daily-granularity equivalent of DESIGN's own parenthetical, not a new product decision (documented
+  as a code comment, no ADR needed). `id.gov_domain`/`id.domain_expiry` share a dot-boundary
+  domain-suffix check (`isGovDomain`) so a lookalike like `evilnic.in` can't false-positive.
+  `id.domain_expiry` uses a new `audit/src/net/rdap.ts` (rdap.org lookup, cached per run, a
+  `baseUrl` option so tests hit a local fixture server instead of the real network). Several id.*
+  checks (`www_consistency`, `robots`, `sitemap_xml`, `soft_404`, `domain_expiry`) read new optional
+  `CheckContext` fields that only a future runner (WP3.5) can populate from live probes a pure check
+  function can't make itself -- each documented in `types.ts` with what will fill it and when.
+  **verifier mutation-tested `availability.ts`/`identity.ts`** and found 4 real gaps: `avail.blank`'s
+  80-character boundary was never actually exercised (the only fixture had 0 visible characters, so
+  mutating the threshold to `<8` still passed); `avail.redirect_offsite`'s alias-matching branch was
+  untested because the "matches an alias" test's domains already matched via `ctx.light.domain`
+  regardless; `avail.parked`'s two fixtures each matched 2-3 patterns simultaneously, leaving 10 of
+  15 parking-signature patterns never uniquely exercised; `avail.default_page`'s "It works!"
+  whole-body branch had no fixture at all and could be deleted with zero test failures. Fixed by
+  adding a boundary-pinning pair of tests, a true alias-only redirect test, one isolated inline-html
+  phrase per untested `avail.parked` pattern, and a bare "It works!" case -- each manually re-broken
+  and re-fixed in `availability.ts` to confirm the new tests actually catch them. 571 tests,
+  `npm run build` clean, and a manual end-to-end smoke test (`runChecks` → `scoreSite` against a
+  synthetic healthy site, and against `ok-minimal.html` specifically) confirmed the WP's own Verify
+  criterion: the fixture triggers no check at all. **Next: WP3.3** (`sec.*` checks + retire.js +
+  fixtures) — same `Check`-array-plus-fixtures pattern this WP established.
 
 - **2026-09-21 · WP3.1 done — Phase 3 started** — `audit/src/checks/types.ts` (`CheckId` — 84 ids
   written out by hand from DESIGN §5.3's tables, `~90` is that table's own approximate count so this is
