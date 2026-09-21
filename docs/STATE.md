@@ -6,8 +6,11 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 ## Now
 
 - **Phase:** 3 — Deep audits
-- **Current WP:** WP3.6 (done) → **Next WP:** WP3.7 (`audit.yml` live: 3 → 50 → cron)
-- **Next action:** Start WP3.7 — read `docs/IMPLEMENTATION.md` WP3.7 and its Read-first list (DESIGN §6.3's YAML — copy it, adjust paths only; §6.5, §6.8). `cli plan`/`cli merge` exist and are tested against synthetic data and the real registry (`plan --dry-run`), but neither has ever run inside real GitHub Actions or touched the real `data` branch — WP3.7 is where that happens for the first time, starting with `workflow_dispatch site_ids=kerala-gov,keralapsc,d-ernakulam` per its own step 1, not a full batch.
+- **Current WP:** WP3.7 (in progress: step 1 done, step 2 next) — `audit.yml` live: 3 → 50 → cron
+- **Next action:** WP3.7 step 2 — `gh workflow run "Deep audit (rolling)" -f batch_size=50`, then read per-site
+  timing from the `audit` job log and decide whether `--max-batch` needs lowering (see Handoff for step 1's
+  per-site timing: ~55–65 s/site once Playwright/build overhead is excluded). After that, step 3 (cron is
+  already in the committed file — nothing to do but wait for and confirm the first scheduled run).
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
 - **Registry size:** 1,500 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated) · **Deep-audited:** 0 · **Light-checked:** 1,500/1,500 (15 down, 19 broken as of first full run 2026-09-21T05:30Z) · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data instead of placeholders
 - **Candidates backlog:** ~2,476 fresh, uncurated candidates as of 2026-09-21 (mostly from a new `kerala-gov-in-subdomains` source — see Handoff below), waiting for a WP1.7-style curation pass. Not yet in `registry/sites/`.
@@ -69,6 +72,33 @@ _None yet. Each entry: what, why, ADR number._
    already verified correct via two manual `workflow_dispatch` runs (limit=50, then all 1,500 — see Handoff). A
    future session should `gh run list --workflow=uptime.yml` and confirm two consecutive `schedule`-triggered
    (not `workflow_dispatch`) runs both succeeded, then mark this WP fully closed — not a blocker for WP2.4+.
+9. **Real evidence that `avail.geo_blocked`'s signature list is confirmed incomplete for `keralapsc` specifically**
+   — WP3.7 step 1's first real deep audit (2026-09-21) returned `down` for `keralapsc.gov.in`, not `unverifiable`.
+   A single manual fetch from this session's own (non-CI) network got a normal 200 OK with real page content, so
+   the site is genuinely reachable and this `down` is wrong per ADR-007/DESIGN §6.7's charitable principle — but
+   the CI-side 403 body is a bare, generic Apache "403 Forbidden" page (202 bytes, no Cloudflare/NIC challenge
+   text), which `GEO_BLOCK_SIGNATURES` (`light.ts`) was never designed to catch and, by design ("don't guess more
+   patterns ahead of evidence"), shouldn't be guessed at from a content-free signal — a body-text match broad
+   enough to catch a bare 403 would false-positive on real, legitimate 403s elsewhere. This is the third
+   independent observation of the same behaviour (WP3.5's manual audit, this repo's own prior STATE.md note, and
+   now WP3.7's first live run), so it's a real, persistent pattern, not a fluke. No safe code fix exists without
+   either a keralapsc-specific override (a registry/status-model change needing its own ADR, not something to
+   improvise solo) or DESIGN §6.7's own proposed fix: the India self-hosted runner (open question 6), which would
+   give ground truth instead of a guessed pattern. Recommend prioritising open question 6 partly on this evidence.
+10. **Pages content staleness, found during WP3.7 step 1** — after the audit merge landed, the live site served a
+    stale build (kerala-gov showed "Not yet audited" instead of its fresh `needs-work` score) for several minutes,
+    persisting even through a *clean, solo* `workflow_dispatch` rebuild (id `6573176804`, `updated_at` 16:33:55Z)
+    with nothing else running in the `pages` concurrency group — a request ~40s after that deployment's
+    `updated_at` still got the old `last-modified: 16:23:10Z` content (`age: 32`, confirmed served from GitHub's
+    edge, not a browser cache). This session also made several rapid `main` pushes just before that (each
+    independently triggering `build-deploy.yml` via its `push` trigger, racing the later `workflow_run`-triggered
+    one under `concurrency: {group: pages, cancel-in-progress: true}`), so a genuine cancellation race may still be
+    a contributing factor, but the fact that an *isolated* rebuild didn't immediately take effect either points at
+    plain GitHub Pages propagation lag as at least part of it, not only the race. A background poll was left
+    running to confirm when the fresh content actually appears — see the next Handoff entry for the outcome. Not
+    urgent (any later push/scheduled run self-heals it) but worth a real look if a future session sees the site
+    lagging `data` branch content for more than a few minutes after a deploy reports success. Not an ADR (infra
+    reliability, not a product decision).
 
 ## Handoff log
 
