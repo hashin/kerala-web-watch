@@ -74,6 +74,23 @@ _None yet. Each entry: what, why, ADR number._
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
 
+- **2026-09-21 · Cross-cutting: ADR-026, plain-language status reasons (not a WP, pushed `4a3053d`
+  + `7e59ebf`)** — human instruction, done ahead of WP3.7 since it was already live on production
+  and citizen-facing. `HealthBadge` rendered a bare "Down"/"Broken" with no reason on both
+  `/sites/<id>/` and `/status/<status>/`, even though `broken` alone covers four unrelated causes.
+  `audit/src/status.ts`'s new `explainLightStatus()` mirrors `deriveStatus()`'s own conditions to
+  name the exact check id that set the status; `site/src/lib/data.ts`'s `explainStatus()` looks
+  there (falling back from a deep audit's `issues[]` once those exist) and renders that check's
+  existing `citizen` text (ADR-013) -- never new copy invented in `site/`. Verified against real
+  `data/` on both the dev server and a real `astro build` (1,596 pages): `/sites/arckerala/` now
+  shows "The address resolves, but nothing answers the connection..." under its Down badge;
+  `/status/broken/`'s heading now explains what "broken" covers before listing all 19 sites. Also
+  fixed a stale methodology-page paragraph claiming Phase 3 "has not been built yet" while it was
+  actively shipping. `docs/DECISIONS.md` (ADR-026), `docs/DESIGN.md` (§5.4, §7.4) and this file's
+  own `CLAUDE.md` Non-negotiables now carry the plain-language rule so future WPs (WP4.1's issue
+  cards, WP4.4's methodology generation, WP5.3's Malayalam strings) inherit it rather than
+  reinventing it. `audit npm test`: 986/986 passing (7 new). WP3.7 is next, unaffected by this.
+
 - **2026-09-21 · WP3.6 done — `cli plan`/`cli merge` and the rolling scheduler** — `scheduler.ts`
   (DESIGN §6.2 tiering/batch-size/sharding), `merge.ts` (folds `cli run`'s `out/` into `data/`),
   `outlinks.ts` (§6.6's discovery feed, recomputed wholesale from every site's current
