@@ -6,11 +6,16 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 ## Now
 
 - **Phase:** 3 — Deep audits
-- **Current WP:** WP3.7 (in progress: step 1 done, step 2 next) — `audit.yml` live: 3 → 50 → cron
-- **Next action:** WP3.7 step 2 — `gh workflow run "Deep audit (rolling)" -f batch_size=50`, then read per-site
-  timing from the `audit` job log and decide whether `--max-batch` needs lowering (see Handoff for step 1's
-  per-site timing: ~55–65 s/site once Playwright/build overhead is excluded). After that, step 3 (cron is
-  already in the committed file — nothing to do but wait for and confirm the first scheduled run).
+- **Current WP:** WP3.7 (in progress: step 1 done; step 2 hit a real crash bug, not yet fixed) — `audit.yml` live: 3 → 50 → cron
+- **Next action:** **Read `docs/HANDOFF.md` first — do not just retry step 2.** The `batch_size=50` run (id
+  `35626792354`) found a real bug: an unhandled Lighthouse promise rejection crashes the whole Node process
+  mid-shard (bypassing `runner.ts`'s own `try/catch`), and `audit.yml`'s `upload-artifact` step has no
+  `if: always()`, so a crashed shard's already-completed results are lost, not just the sites after the crash.
+  Check `gh run view 35626792354` for the final outcome (shard 1 was still running when this session ended), fix
+  `audit/src/runner.ts` (see HANDOFF.md for the exact diagnosis and a likely fix), add `if: always()` to the
+  upload-artifact step, add a regression test, `cd audit && npm test`, commit, push, **then** retry step 2. Only
+  after a clean step 2 run: read per-site timing, decide on `--max-batch` (see HANDOFF.md — step 1's timing was
+  ~55–65 s/site), then step 3 (cron is already in the committed file).
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
 - **Registry size:** 1,500 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated) · **Deep-audited:** 0 · **Light-checked:** 1,500/1,500 (15 down, 19 broken as of first full run 2026-09-21T05:30Z) · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data instead of placeholders
 - **Candidates backlog:** ~2,476 fresh, uncurated candidates as of 2026-09-21 (mostly from a new `kerala-gov-in-subdomains` source — see Handoff below), waiting for a WP1.7-style curation pass. Not yet in `registry/sites/`.
