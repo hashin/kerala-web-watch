@@ -34,15 +34,651 @@
     "vantage": "gh-us",
     "suspect": false
   },
-  "deep": null,
-  "score": null,
-  "status": "unaudited",
-  "issues": [],
+  "deep": {
+    "at": "2026-09-21T17:36:18.222Z",
+    "run": "1790012126435",
+    "vantage": "gh-us",
+    "lighthouse": {
+      "performance": 46,
+      "accessibility": 87,
+      "best_practices": 77,
+      "seo": 83
+    },
+    "axe": {
+      "critical": 9,
+      "serious": 0,
+      "moderate": 0,
+      "minor": 15
+    },
+    "crawl": {
+      "pages": 30,
+      "pdfs": 0,
+      "broken": 0
+    },
+    "tech": {
+      "cms": null,
+      "server": "Apache",
+      "jquery": null
+    },
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "pass"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "fail"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "fail",
+        "ev": "href=\"http://gmpg.org/xfn/11\""
+      },
+      {
+        "id": "sec.csp",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "fail"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "fail"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "pass"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "pass"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "fail",
+        "ev": "9 critical violation(s)"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "15 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "87/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "46/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "42462.01450000006ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "pass"
+      },
+      {
+        "id": "perf.weight",
+        "r": "warn",
+        "ev": "7.4MB"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "fail"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "na"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "fail",
+        "ev": "newest dated item: 2023-03-07"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-IN"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "pass"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "pass"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "pass"
+      },
+      {
+        "id": "content.favicon",
+        "r": "fail"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      },
+      {
+        "id": "gigw.contact",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.search",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "pass"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "pass"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "na"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "na"
+      },
+      {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "pass"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "warn",
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-1BVSLPYCVT"
+      }
+    ],
+    "screenshot": {
+      "desktop": "2026-09-21.webp",
+      "mobile": "2026-09-21-m.webp",
+      "phash": "ffff00000000ffff"
+    },
+    "outlinks": [
+      {
+        "host": "kerala.gov.in",
+        "count": 5,
+        "texts": [
+          "കേരളം സർക്കാർ",
+          "SIR 2026 ASD LIST",
+          "E-OFFICE"
+        ]
+      },
+      {
+        "host": "digitalindia.gov.in",
+        "count": 2,
+        "texts": []
+      },
+      {
+        "host": "kswmp.org",
+        "count": 1,
+        "texts": [
+          "Kerala Solid Waste Management Project"
+        ]
+      },
+      {
+        "host": "nceg.gov.in",
+        "count": 1,
+        "texts": [
+          "E-GOVERNANCE KERALA"
+        ]
+      },
+      {
+        "host": "childlineindia.org.in",
+        "count": 1,
+        "texts": [
+          "CHILD LINE"
+        ]
+      },
+      {
+        "host": "keralatourism.org",
+        "count": 1,
+        "texts": [
+          "KERALA TOURISUM"
+        ]
+      },
+      {
+        "host": "eci.gov.in",
+        "count": 1,
+        "texts": [
+          "ELECTION COMMISSION OF INDIA"
+        ]
+      },
+      {
+        "host": "s3waas.gov.in",
+        "count": 7,
+        "texts": []
+      },
+      {
+        "host": "facebook.com",
+        "count": 6,
+        "texts": [
+          "Share on Facebook"
+        ]
+      },
+      {
+        "host": "twitter.com",
+        "count": 6,
+        "texts": [
+          "Share on X"
+        ]
+      },
+      {
+        "host": "digitalindiaawards.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "india.gov.in",
+        "count": 2,
+        "texts": []
+      },
+      {
+        "host": "pmindia.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "pmnrf.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "data.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "mygov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "makeinindia.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "incredibleindia.org",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "www.nic.in",
+        "count": 1,
+        "texts": [
+          "National Informatics Centre"
+        ]
+      },
+      {
+        "host": "meity.gov.in",
+        "count": 1,
+        "texts": [
+          "Ministry of Electronics & Information Technology"
+        ]
+      }
+    ]
+  },
+  "score": {
+    "overall": 63,
+    "security": 48,
+    "accessibility": 74,
+    "content": 42,
+    "gigw": 60,
+    "performance": 71,
+    "identity": 96
+  },
+  "status": "needs-work",
+  "issues": [
+    {
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://gmpg.org/xfn/11\""
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "9 critical violation(s)"
+    },
+    {
+      "id": "content.last_updated",
+      "sev": "H",
+      "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-IN"
+    },
+    {
+      "id": "sec.hsts",
+      "sev": "M"
+    },
+    {
+      "id": "sec.xfo",
+      "sev": "M"
+    },
+    {
+      "id": "content.stale_news",
+      "sev": "M",
+      "ev": "newest dated item: 2023-03-07"
+    },
+    {
+      "id": "gigw.privacy",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.last_updated",
+      "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "42462.01450000006ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "7.4MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
+    },
+    {
+      "id": "sec.csp",
+      "sev": "L"
+    },
+    {
+      "id": "sec.xcto",
+      "sev": "L"
+    },
+    {
+      "id": "sec.referrer",
+      "sev": "L"
+    },
+    {
+      "id": "a11y.axe_moderate_minor",
+      "sev": "L",
+      "ev": "15 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
+    },
+    {
+      "id": "content.favicon",
+      "sev": "L"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "id": "gigw.terms",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.copyright_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.hyperlink_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.disclaimer",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.screen_reader",
+      "sev": "L"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 404"
+    },
+    {
+      "id": "id.third_party",
+      "sev": "I",
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-1BVSLPYCVT"
+    }
+  ],
   "history": [
     {
       "d": "2026-09-21",
       "up": true,
-      "score": null
+      "score": 63
     }
   ],
   "deep_bump": false
