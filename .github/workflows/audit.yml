@@ -1,0 +1,119 @@
+name: Deep audit (rolling)
+
+on:
+  schedule:
+    - cron: '30 21 * * *'          # 03:00 IST
+  workflow_dispatch:
+    inputs:
+      site_ids:
+        description: 'Comma-separated site ids to audit now'
+        required: false
+        default: ''
+      batch_size:
+        description: 'Override batch size'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: audit
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+      batch_id: ${{ steps.plan.outputs.batch_id }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with: { ref: data, path: data }
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: audit/package-lock.json
+      - working-directory: audit
+        run: npm ci
+      - working-directory: audit
+        run: npm run build
+      - id: plan
+        run: >
+          node audit/dist/cli.js plan
+          --registry registry --data data
+          --refresh-days 7 --max-batch 300 --max-shards 6
+          --site-ids "${{ inputs.site_ids }}" --batch-size "${{ inputs.batch_size }}"
+
+  audit:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: audit/package-lock.json
+      - working-directory: audit
+        run: npm ci
+      - working-directory: audit
+        run: npm run build
+      - working-directory: audit
+        run: npx playwright install --with-deps chromium
+      - run: node audit/dist/cli.js run --ids "${{ matrix.ids }}" --out out/
+        env:
+          VANTAGE: gh-us
+          SAFE_BROWSING_KEY: ${{ secrets.SAFE_BROWSING_KEY }}   # optional
+      - uses: actions/upload-artifact@v4
+        with:
+          name: shard-${{ matrix.index }}
+          path: out/
+          retention-days: 3
+
+  merge:
+    # `plan` is a direct dependency (not just transitively, via `audit`) because this job's own
+    # commit step reads `needs.plan.outputs.batch_id` -- the `needs` context only exposes outputs
+    # of jobs listed directly in a job's own `needs:`, not jobs a dependency itself depended on.
+    needs: [plan, audit]
+    if: always()                     # merge whatever shards finished
+    runs-on: ubuntu-latest
+    concurrency:
+      group: data-branch             # shared with uptime.yml so pushes never race
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with: { ref: data, path: data }
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: audit/package-lock.json
+      - working-directory: audit
+        run: npm ci
+      - working-directory: audit
+        run: npm run build
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: shard-*
+          path: out/
+          merge-multiple: true
+      - run: node audit/dist/cli.js merge --in out/ --registry registry --data data
+      - name: Commit results
+        working-directory: data
+        run: |
+          git config user.name  "kerala-web-watch[bot]"
+          git config user.email "kerala-web-watch[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "audit: $(date -u +%F) batch ${{ needs.plan.outputs.batch_id }}" || exit 0
+          for i in 1 2 3 4 5; do
+            git push && break
+            git pull --rebase && sleep $((i * 5))
+          done
