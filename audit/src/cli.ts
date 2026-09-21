@@ -6,28 +6,72 @@ import { loadRegistry } from './registry.js';
 import { lightCheck } from './light.js';
 import { mergeLightResult, readResult, writeJsonAtomic, writeResult, type Result } from './store.js';
 import { computeSummary } from './summary.js';
-
-function parseFlags(argv: string[]): { registry: string; json: boolean } {
-  const registryIndex = argv.indexOf('--registry');
-  return {
-    registry: registryIndex === -1 ? 'registry' : argv[registryIndex + 1],
-    json: argv.includes('--json'),
-  };
-}
-
-function runValidate(argv: string[]): number {
-  const { registry, json } = parseFlags(argv);
-  const failures = validateRegistry(registry);
-  console.log(json ? JSON.stringify(failures, null, 2) : toMarkdownTable(failures));
-  return failures.length === 0 ? 0 : 2;
-}
-
-const LIGHT_USAGE = 'Usage: cli.js light (--ids <id,id,...> | --all) --data <dir> [--registry <dir>] [--limit n] [--concurrency n] [--vantage name]';
+import { changedSiteIds } from './changed.js';
+import { resolveSites, toResolvedTable } from './resolve.js';
 
 function flagValue(argv: string[], name: string): string | undefined {
   const index = argv.indexOf(name);
   return index === -1 ? undefined : argv[index + 1];
 }
+
+function parseFlags(argv: string[]): { registry: string; json: boolean } {
+  return {
+    registry: flagValue(argv, '--registry') ?? 'registry',
+    json: argv.includes('--json'),
+  };
+}
+
+const VALIDATE_USAGE =
+  'Usage: cli.js validate --registry <dir> [--json] [--resolve (--changed-only <ref> | --ids <id,id,...>)]';
+
+/**
+ * Offline schema + cross-reference checks always run. `--resolve` additionally light-checks a
+ * *bounded* set of entries against the live internet -- either everything that changed vs.
+ * `--changed-only <ref>` (validate.yml's use, on a registry PR) or an explicit `--ids` list.
+ * Refusing to run `--resolve` unbounded is deliberate: CLAUDE.md forbids auditing the whole
+ * registry from outside GitHub Actions, and `--resolve` is meant for one PR's worth of entries,
+ * not a full-registry live scan from a dev machine.
+ */
+async function runValidate(argv: string[]): Promise<number> {
+  if (argv.includes('--help')) {
+    console.log(VALIDATE_USAGE);
+    return 0;
+  }
+
+  const { registry, json } = parseFlags(argv);
+  const failures = validateRegistry(registry);
+  let resolved: Awaited<ReturnType<typeof resolveSites>> = [];
+
+  if (argv.includes('--resolve')) {
+    const changedOnlyRef = flagValue(argv, '--changed-only');
+    const idsFlag = flagValue(argv, '--ids');
+    if (!changedOnlyRef && !idsFlag) {
+      console.error(`--resolve needs --changed-only <ref> or --ids <id,id,...> to bound which entries it live-checks\n${VALIDATE_USAGE}`);
+      return 1;
+    }
+
+    const registryData = loadRegistry(registry);
+    const targetIds = idsFlag ? idsFlag.split(',').map((id) => id.trim()) : [...changedSiteIds(registry, changedOnlyRef!)];
+    const targets = targetIds
+      .map((id) => registryData.byId.get(id))
+      .filter((s): s is NonNullable<typeof s> => s !== undefined)
+      .map((s) => ({ id: s.id, url: s.url, aliases: s.aliases, name: s.name }));
+    resolved = await resolveSites(targets);
+    failures.push(...resolved.flatMap((o) => o.failures));
+  }
+
+  if (json) {
+    console.log(JSON.stringify(argv.includes('--resolve') ? { failures, resolved } : failures, null, 2));
+  } else {
+    console.log(toMarkdownTable(failures));
+    const resolvedTable = toResolvedTable(resolved);
+    if (resolvedTable) console.log(`\n${resolvedTable}`);
+  }
+  const hardFailures = failures.filter((f) => f.severity === 'error');
+  return hardFailures.length === 0 ? 0 : 2;
+}
+
+const LIGHT_USAGE = 'Usage: cli.js light (--ids <id,id,...> | --all) --data <dir> [--registry <dir>] [--limit n] [--concurrency n] [--vantage name]';
 
 /**
  * Runs the light check for a set of sites, folds each into its `data/results/<id>.json` (status
@@ -92,7 +136,7 @@ async function main(): Promise<number> {
   const [command, ...rest] = process.argv.slice(2);
   switch (command) {
     case 'validate':
-      return runValidate(rest);
+      return await runValidate(rest);
     case 'light':
       return runLight(rest);
     default:

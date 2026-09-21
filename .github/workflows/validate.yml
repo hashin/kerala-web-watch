@@ -13,36 +13,58 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # --changed-only diffs the PR's tree against origin/main via `git show` -- a shallow fetch
+      # of just that one ref is enough, no full history needed.
+      - run: git fetch origin main --depth=1
       - uses: actions/setup-node@v4
         with: { node-version: 22, cache: npm, cache-dependency-path: audit/package-lock.json }
       - working-directory: audit
         run: npm ci
       - working-directory: audit
         run: npm run build
-      # Offline schema + cross-reference checks only; --resolve (fetching every new URL) is WP2.5.
+      # Offline schema/cross-reference checks always run; --resolve (WP2.5) additionally
+      # live-checks only the entries this PR actually changed, per CLAUDE.md's politeness rules.
       - id: validate
         working-directory: audit
         run: |
           set +e
-          node dist/cli.js validate --registry ../registry --json > ../validate-result.json
+          node dist/cli.js validate --registry ../registry --resolve --changed-only origin/main --json > ../validate-result.json
           echo "exit_code=$?" >> "$GITHUB_OUTPUT"
           set -e
       - uses: actions/github-script@v7
         with:
           script: |
             const fs = require('fs');
-            const failures = JSON.parse(fs.readFileSync('validate-result.json', 'utf8'));
+            const { failures, resolved } = JSON.parse(fs.readFileSync('validate-result.json', 'utf8'));
+            const errors = failures.filter((f) => f.severity === 'error');
+            const warnings = failures.filter((f) => f.severity === 'warn');
             const marker = '<!-- registry-validate -->';
-            const body = failures.length === 0
-              ? `${marker}\n✅ Registry is valid: no failures.`
-              : [
-                  marker,
-                  `### Registry validation failed (${failures.length} issue${failures.length === 1 ? '' : 's'})`,
-                  '',
-                  '| File | Id | Rule | Message |',
-                  '|---|---|---|---|',
-                  ...failures.map((f) => `| ${f.file} | ${f.id ?? ''} | ${f.rule} | ${f.message} |`),
-                ].join('\n');
+
+            const sections = [marker];
+            sections.push(
+              errors.length === 0
+                ? '✅ Registry is valid: no failures.'
+                : `### Registry validation failed (${errors.length} issue${errors.length === 1 ? '' : 's'})`,
+            );
+            if (failures.length > 0) {
+              sections.push(
+                '',
+                '| Severity | File | Id | Rule | Message |',
+                '|---|---|---|---|---|',
+                ...failures.map((f) => `| ${f.severity === 'error' ? 'FAIL' : 'WARN'} | ${f.file} | ${f.id ?? ''} | ${f.rule} | ${f.message} |`),
+              );
+            }
+            if (resolved.length > 0) {
+              sections.push(
+                '',
+                `### Live-checked ${resolved.length} changed ${resolved.length === 1 ? 'entry' : 'entries'}`,
+                '',
+                '| | Id | Name | URL |',
+                '|---|---|---|---|',
+                ...resolved.map((r) => `| ${r.ok ? '✅' : '❌'} | ${r.id} | ${r.name ?? ''} | ${r.url} |`),
+              );
+            }
+            const body = sections.join('\n');
 
             const { data: comments } = await github.rest.issues.listComments({
               owner: context.repo.owner,

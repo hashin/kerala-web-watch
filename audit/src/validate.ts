@@ -12,6 +12,9 @@ export interface ValidationFailure {
   id?: string;
   rule: string;
   message: string;
+  /** `error` fails the PR check; `warn` (WP2.5's `--resolve`, e.g. a non-2xx status) is reported
+   * but doesn't. Offline schema/cross-reference failures are always `error`. */
+  severity: 'error' | 'warn';
 }
 
 // registry/schema.json is versioned with the audit code, not with any one registry instance
@@ -63,6 +66,7 @@ function schemaFailures(
           file,
           id: idOf(entry) ?? `#${index}`,
           rule: 'schema',
+          severity: 'error',
           message: `${error.instancePath || '(root)'} ${error.message ?? 'is invalid'}`,
         });
       }
@@ -142,7 +146,7 @@ function crossReferenceFailures(
   };
 
   for (const { file, site } of rawSites) {
-    const fail = (rule: string, message: string) => failures.push({ file, id: site.id, rule, message });
+    const fail = (rule: string, message: string) => failures.push({ file, id: site.id, rule, message, severity: 'error' });
 
     const priorFile = seenIds.get(site.id);
     if (priorFile) fail('unique-id', `id "${site.id}" also used in ${priorFile}`);
@@ -207,7 +211,7 @@ function crossReferenceFailures(
 
 export function toMarkdownTable(failures: ValidationFailure[]): string {
   if (failures.length === 0) return 'Registry is valid: no failures.';
-  const header = '| File | Id | Rule | Message |\n|---|---|---|---|';
-  const rows = failures.map((f) => `| ${f.file} | ${f.id ?? ''} | ${f.rule} | ${f.message} |`);
+  const header = '| Severity | File | Id | Rule | Message |\n|---|---|---|---|---|';
+  const rows = failures.map((f) => `| ${f.severity === 'error' ? 'FAIL' : 'WARN'} | ${f.file} | ${f.id ?? ''} | ${f.rule} | ${f.message} |`);
   return [header, ...rows].join('\n');
 }
