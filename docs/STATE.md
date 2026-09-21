@@ -6,8 +6,8 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 ## Now
 
 - **Phase:** 2 — Light checks live
-- **Current WP:** WP2.1 (done) → **Next WP:** WP2.2 (`cli light`, data-branch writer, history, summary.json)
-- **Next action:** Start WP2.2 — read `docs/IMPLEMENTATION.md` WP2.2, DESIGN §5.4/§5.5/§6.4, ADR-003/ADR-005/ADR-016, this file's §3.3. Build `audit/src/store.ts` (read/write `data/results/<id>.json` + `summary.json`, atomic writes), `audit/src/history.ts` (90-day cap, one entry/day), `audit/src/status.ts` (two-strike `down`, `unverifiable`), `audit/src/summary.ts`, and real `cli light` wiring on top of WP2.1's `lightCheck()`. This is the WP that first writes to a scratch `data/` checkout and makes real (small, ≤3-site) requests to actual registry sites for manual Verify — still not the scheduled `uptime.yml` run (WP2.3).
+- **Current WP:** WP2.2 (done) → **Next WP:** WP2.3 (`uptime.yml` live)
+- **Next action:** Start WP2.3 — read `docs/IMPLEMENTATION.md` WP2.3, DESIGN §6.2/§6.4, ADR-003/ADR-004. Write the scheduled GitHub Actions workflow that runs `cli light` every 6h against all sites and commits `data/results/*.json` + `summary.json` to the orphan `data` branch. This is the first WP where `data` (not just `main`) gets pushed — the push-cadence policy in this file now applies to both.
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. Same for `data` once WP2.2+ starts writing to it.
 - **Registry size:** 1,500 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated) · **Deep-audited:** 0 · **Site live:** yes — https://govwebsite.hashin.me
 - **Candidates backlog:** ~2,476 fresh, uncurated candidates as of 2026-09-21 (mostly from a new `kerala-gov-in-subdomains` source — see Handoff below), waiting for a WP1.7-style curation pass. Not yet in `registry/sites/`.
@@ -28,7 +28,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 1.6 | PSUs, statutory bodies, universities (curated) | done | 6bef988 | 143 curated candidates: 50 PSU (target ≥80, see Handoff), 78 statutory/mission (target ≥40), 15 university (target ≥15); 1 confirmed no-website org; combined pipeline now 978 candidates, 31 already-registered, 411 duplicate-across-sources, 536 new |
 | 1.7 | Curation pass → registry/sites/*.yaml; live-resolve; stats | done | 8bbff71 | 16 university, 14 district, 50 psu, 38 statutory, 95 agency, 65 directorate = 290 curated; registry 1,210 → 1,500 exactly (Verify gate met); `drafts/` holds only 5 resolved items with notes |
 | 2.1 | `light.ts` + tests | done | 4b6d5e0 | dns/tls/http primitives + orchestration; 52 tests incl. a verifier-caught redirect-loop cap and TLS-validity gap, both fixed |
-| 2.2 | `cli light`, data-branch writer, history, summary.json | todo | | |
+| 2.2 | `cli light`, data-branch writer, history, summary.json | done | 7e43cf1 | 79 tests; verifier found 4 undertested paths (score/deep/issues carry-forward, deep-audit-preserved status, null-district grouping, coverage-ETA batch cap), all fixed and re-verified by hand |
 | 2.3 | uptime.yml live | todo | | |
 | 2.4 | Site v1: home + map + status lists + district pages + light-only site page | todo | | |
 | 2.5 | validate.yml `--resolve` + PR comment | todo | | |
@@ -68,6 +68,28 @@ _None yet. Each entry: what, why, ADR number._
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-09-21 · WP2.2 done, plus ADR-025 (pagination + performance budgets)** — `cli light --ids/--all --data <dir>`
+  now does the real work: runs `lightCheck()` per site (bounded concurrency via `p-limit`), folds each into
+  `data/results/<id>.json` via `mergeLightResult` (two-strike `down`, geo-block/invalid-cert precedence, one
+  history entry/day capped at 90 — `status.ts`/`history.ts`/`store.ts`), then recomputes `data/summary.json`
+  (`summary.ts`: totals, per-district/department/ministry/kind/platform broken counts, ADR-004 coverage ETA,
+  7-day recent_broken/recent_fixed). Atomic writes via temp-file-then-`renameSync`. Manually verified end-to-end
+  against 2 real sites and a fake `nonexistent.invalid` entry (two-strike transitions correct, single history
+  entry per day on a second run same-day) — all scratch dirs deleted after. `verifier` (agent aa31ca624c40dfe14)
+  found 4 real gaps by mutation testing: `mergeLightResult`'s score/deep/issues carry-forward test never set
+  non-null values on the fixture (mutation to hardcode `null`/`[]` survived); no test exercised a site that
+  already has a deep audit staying on its deep-derived status through a fresh healthy light check (`hasDeepAudit`
+  hardcoded `false` survived); `groupBy`'s null-key skip had no null-district fixture (survived); the coverage-ETA
+  test's 700-site fixture never actually made the 300-per-day batch cap bind (removing the cap survived). All
+  four fixed with new tests in `store.test.ts`/`summary.test.ts`, each hand-confirmed to catch its mutation by
+  reintroducing it and reverting. 79/79 tests green, `npm run build` clean. Separately, the human asked to add
+  home-page pagination to the roadmap and optimise the site for loading speed — recorded as **ADR-025**: any
+  listing table (home, district, department, status, kind) that would exceed 100 rows paginates at build time via
+  Astro's `paginate()` (no client JS, consistent with ADR-002), and WP2.4/WP4.2/WP4.3 each gained an explicit
+  pagination step plus a per-page Lighthouse performance check (target ≥ 90) in their own Verify steps, rather
+  than deferring all performance checking to WP4.5's self-audit. **Next: WP2.3** (`uptime.yml` live) — first WP
+  that pushes to the `data` branch, not just `main`.
 
 - **2026-09-21 · Harvest continued (not a WP; between WP2.1 and WP2.2)** — The human supplied 5 new discovery sources (3 igod.gov.in sector pages, kerala.s3waas.gov.in, datahub.kerala.gov.in, plus a subdomain-enumeration CSV of `*.kerala.gov.in`) and asked to add "all websites" from them, plus a reverse-IP search. Followed ADR-018 throughout: everything landed in `registry/candidates/`, nothing was written to `registry/sites/` — that's a curation pass (WP1.7-style), not this session's job, and 2,300+ raw entries is far too much to hand-curate in one sitting anyway. New harvest scripts: `scripts/harvest/igod-sectors.ts` (igod.gov.in's `/sg/KL/{E003,E004,E005}/organizations[_more]` pagination, same markup as the existing goidirectory.ts parser — 66 candidates from Departments/Directorates/Attached-Offices sector pages; igod's own `count` global claimed 62 for Departments but only 52 rows ever came back across all `_more` batches, recorded as-is rather than padded), `scripts/harvest/s3waas-hub.ts` (kerala.s3waas.gov.in is just a landing page to the 14 district `.nic.in` portals already registered since WP1.5 — cross-checked every link's dedupeKey against the live registry + all existing candidates + `ignore.yaml` before emitting anything; only 2 were genuinely new: `kl.cmdashboard.nic.in` and `unnathi.kerala.gov.in`), and `scripts/harvest/kerala-gov-in-subdomains.ts` (parses the human's CSV — no `csv-parse` dependency added, wrote a 25-line quoted-field line splitter since the format doesn't need more; screens out unresolved-at-scan-time rows (2,466 of 4,869) and obvious infra hostnames (mail/ns/ftp/cpanel/cdn/etc., 70 more) and emits everything else, 2,333 candidates, as raw source material for a future curation pass — deliberately did **not** try to guess which of the CSV's many per-organisation dev/staging/beta subdomains are the "real" site, that's a human judgement call). Checked `datahub.kerala.gov.in/datasets` by hand: it's a CKAN-style dataset catalog with no per-dataset publisher-website field, not an organisation directory — its header/footer links (keralacm.gov.in, itmission, spb, prd, health.kerala.gov.in) were already all registered, so it contributed nothing and no script was written for it. Also filed 4 new `ignore.yaml` entries surfaced by the s3waas-hub link sweep (`gandhi.gov.in`, `india.gov.in`, `mygov.in`, `scholarships.gov.in`, `secure.nic.in` — the last three of these are bare-domain variants of already-ignored `www.`-prefixed patterns, a gap worth remembering next time a harvest hits a domain that "looks" already handled). Full `npx tsx scripts/harvest/merge-candidates.ts` after all four new files: **662 already in the registry, 241 duplicate across sources, 2,476 fresh** — almost entirely the CSV. `audit` 52/52 and root 14/14 tests still green (no test changes needed, new scripts follow existing patterns exactly); `validate` exit 0 (candidates aren't validated, but `ignore.yaml` is registry data). **Reverse-IP search explicitly skipped at the human's instruction** — free lookup services can't cover the CSV's 866 unique resolved IPs, and no paid OSINT API key was offered; recorded as Open question 7 with the top-10 shared IPs for whoever picks it up. **Next: WP2.2 remains the next real work package** — the 2,476 fresh candidates are a backlog for a future WP1.7-style curation session, not something to rush through under WP2.2's context budget.
 
