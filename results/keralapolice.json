@@ -34,15 +34,696 @@
     "vantage": "gh-us",
     "suspect": false
   },
-  "deep": null,
-  "score": null,
-  "status": "unaudited",
-  "issues": [],
+  "deep": {
+    "at": "2026-09-22T03:10:24.638Z",
+    "run": "1790046547686",
+    "vantage": "gh-us",
+    "lighthouse": {
+      "performance": 43,
+      "accessibility": 92,
+      "best_practices": 96,
+      "seo": 92
+    },
+    "axe": {
+      "critical": 0,
+      "serious": 28,
+      "moderate": 28,
+      "minor": 3
+    },
+    "crawl": {
+      "pages": 30,
+      "pdfs": 0,
+      "broken": 1
+    },
+    "tech": {
+      "cms": null,
+      "server": null,
+      "jquery": null
+    },
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "pass"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "pass"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "fail",
+        "ev": "href=\"http://ptc.keralapolice.gov.in/\""
+      },
+      {
+        "id": "sec.csp",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "pass"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "pass"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "pass"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "fail",
+        "ev": "swiper 11.2.10, jquery-validation 1.19.1"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "28 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "31 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "fail",
+        "ev": "<html lang=\"en\"> vs. 110% Malayalam content"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "no <h1>"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "92/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "43/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "40927.03575000001ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "pass"
+      },
+      {
+        "id": "perf.weight",
+        "r": "fail",
+        "ev": "67.2MB"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "fail"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "na"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "pass"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "pass"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://keralapolice.gov.in/page/history-of-kerala-police)"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "pass"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "pass"
+      },
+      {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "20 console error(s): Failed to load resource: the server responded with a status of 400 ()"
+      },
+      {
+        "id": "gigw.contact",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.search",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "pass"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "pass"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "na"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "na"
+      },
+      {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "fail"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "warn",
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e69l0h2, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
+      }
+    ],
+    "screenshot": {
+      "desktop": "2026-09-22.webp",
+      "mobile": "2026-09-22-m.webp",
+      "phash": "ffff83008181e03f"
+    },
+    "outlinks": [
+      {
+        "host": "email.gov.in",
+        "count": 1,
+        "texts": [
+          "e-Mail"
+        ]
+      },
+      {
+        "host": "spark.gov.in",
+        "count": 1,
+        "texts": [
+          "SPARK"
+        ]
+      },
+      {
+        "host": "keralapoliceacademy.gov.in",
+        "count": 1,
+        "texts": [
+          "കേരള പോലിസ്  അക്കാദമി"
+        ]
+      },
+      {
+        "host": "kerala.gov.in",
+        "count": 4,
+        "texts": [
+          "ഓണ്‍ലൈന്‍ ദര്‍ഘാസ്‌",
+          "സൈബർ സുരക്ഷാ മാർഗ്ഗനിർദ്ദേശങ്ങൾ",
+          "ഗവണ്മെന്റ് ഓഫ് കേരള"
+        ]
+      },
+      {
+        "host": "google.com",
+        "count": 1,
+        "texts": [
+          "പോൽ - ആപ്"
+        ]
+      },
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "parivahan.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "digitalpolicecitizenservices.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "ddws.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "india.gov.in",
+        "count": 2,
+        "texts": [
+          "india.gov.in National Portal of India"
+        ]
+      },
+      {
+        "host": "digitalindia.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "makeinindia.com",
+        "count": 2,
+        "texts": [
+          "മെയ്ക്ക് ഇൻ ഇന്ത്യ"
+        ]
+      },
+      {
+        "host": "mha.gov.in",
+        "count": 2,
+        "texts": [
+          "കേന്ദ്ര ആഭ്യന്തര മന്ത്രാലയം"
+        ]
+      },
+      {
+        "host": "missingindiankids.com",
+        "count": 1,
+        "texts": [
+          "മിസ്സിംഗ് ഇന്ത്യൻ ചൈൽഡ്"
+        ]
+      },
+      {
+        "host": "ncrb.gov.in",
+        "count": 1,
+        "texts": [
+          "നാഷണൽ ക്രൈം റെക്കോർഡ്‌സ് ബ്യൂറോ"
+        ]
+      },
+      {
+        "host": "cbi.gov.in",
+        "count": 1,
+        "texts": [
+          "സെൻട്രൽ ബ്യൂറോ ഓഫ് ഇൻവെസ്റ്റിഗേഷൻ"
+        ]
+      },
+      {
+        "host": "nia.gov.in",
+        "count": 1,
+        "texts": [
+          "നാഷണൽ ഇൻവെസ്റ്റിഗേഷൻ ഏജൻസി"
+        ]
+      },
+      {
+        "host": "nepa.gov.in",
+        "count": 1,
+        "texts": [
+          "നോർത്ത് ഈസ്റ്റേൺ പോലീസ് അക്കാഡമി"
+        ]
+      },
+      {
+        "host": "nisa.gov.in",
+        "count": 1,
+        "texts": [
+          "നാഷണൽ ഇൻഡസ്ട്രിയൽ സെക്യൂരിറ്റി അക്കാഡമി"
+        ]
+      },
+      {
+        "host": "svpnpa.gov.in",
+        "count": 1,
+        "texts": [
+          "സർദാർ വല്ലഭായ് പട്ടേൽ നാഷണൽ പോലീസ് അക്കാദമി"
+        ]
+      },
+      {
+        "host": "lbsnaa.gov.in",
+        "count": 1,
+        "texts": [
+          "ലാൽ ബഹാദൂർ ശാസ്ത്രി നാഷണൽ അക്കാഡമി ഓഫ് അഡ്‌മിനിസ്‌ട്രേഷൻ"
+        ]
+      },
+      {
+        "host": "bprd.nic.in",
+        "count": 1,
+        "texts": [
+          "ബ്യൂറോ ഓഫ് പോലീസ് റിസേർച് ആൻഡ് ഡെവലപ്മെൻറ്"
+        ]
+      },
+      {
+        "host": "swachhbharatmission.gov.in",
+        "count": 1,
+        "texts": [
+          "സ്വച്ഛ് ഭാരത് ദൗത്യം"
+        ]
+      }
+    ]
+  },
+  "score": {
+    "overall": 55,
+    "security": 50,
+    "accessibility": 60,
+    "content": 46,
+    "gigw": 26,
+    "performance": 66,
+    "identity": 96
+  },
+  "status": "needs-work",
+  "issues": [
+    {
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://ptc.keralapolice.gov.in/\""
+    },
+    {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "swiper 11.2.10, jquery-validation 1.19.1"
+    },
+    {
+      "id": "a11y.lang",
+      "sev": "H",
+      "ev": "<html lang=\"en\"> vs. 110% Malayalam content"
+    },
+    {
+      "id": "content.last_updated",
+      "sev": "H",
+      "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://keralapolice.gov.in/page/history-of-kerala-police)"
+    },
+    {
+      "id": "gigw.contact",
+      "sev": "H"
+    },
+    {
+      "id": "sec.xfo",
+      "sev": "M"
+    },
+    {
+      "id": "a11y.axe_serious",
+      "sev": "M",
+      "ev": "28 serious violation(s)"
+    },
+    {
+      "id": "gigw.accessibility_statement",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.ownership",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.last_updated",
+      "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "40927.03575000001ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "67.2MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
+    },
+    {
+      "id": "a11y.axe_moderate_minor",
+      "sev": "L",
+      "ev": "31 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "no <h1>"
+    },
+    {
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "20 console error(s): Failed to load resource: the server responded with a status of 400 ()"
+    },
+    {
+      "id": "gigw.terms",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.copyright_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.hyperlink_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.disclaimer",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.screen_reader",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.help",
+      "sev": "L"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 404"
+    },
+    {
+      "id": "id.canonical",
+      "sev": "I"
+    },
+    {
+      "id": "id.third_party",
+      "sev": "I",
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e69l0h2, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
+    }
+  ],
   "history": [
     {
       "d": "2026-09-22",
       "up": true,
-      "score": null
+      "score": 55
     },
     {
       "d": "2026-09-21",
@@ -50,5 +731,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

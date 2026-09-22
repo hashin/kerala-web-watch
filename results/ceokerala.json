@@ -34,15 +34,546 @@
     "vantage": "gh-us",
     "suspect": false
   },
-  "deep": null,
-  "score": null,
-  "status": "unaudited",
-  "issues": [],
+  "deep": {
+    "at": "2026-09-22T03:18:51.370Z",
+    "run": "1790047068119",
+    "vantage": "gh-us",
+    "lighthouse": null,
+    "axe": {
+      "critical": 4,
+      "serious": 3,
+      "moderate": 22,
+      "minor": 5
+    },
+    "crawl": {
+      "pages": 30,
+      "pdfs": 4,
+      "broken": 1
+    },
+    "tech": {
+      "cms": null,
+      "server": "Apache",
+      "jquery": null
+    },
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "pass"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "pass"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "fail",
+        "ev": "href=\"http://www.kerala.gov.in/\""
+      },
+      {
+        "id": "sec.csp",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "pass"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "pass"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "pass"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "pass"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "fail",
+        "ev": "4 critical violation(s)"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "3 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "27 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "fail",
+        "ev": "1 low-contrast element(s)"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "heading levels skipped"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "na"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "na"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "na"
+      },
+      {
+        "id": "perf.cls",
+        "r": "na"
+      },
+      {
+        "id": "perf.weight",
+        "r": "pass"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "na"
+      },
+      {
+        "id": "perf.images",
+        "r": "na"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "na"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "pass"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-user"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "pass"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://sutharyam.ceo.kerala.gov.in/)"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "na"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "pass"
+      },
+      {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "11 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      },
+      {
+        "id": "gigw.contact",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.search",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "pass"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "pass"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "na"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "pass"
+      },
+      {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "pass"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "fail"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "warn",
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-7WH4ZDGVFD"
+      }
+    ],
+    "screenshot": {
+      "desktop": "2026-09-22.webp",
+      "mobile": "2026-09-22-m.webp",
+      "phash": "ff00000200ffffff"
+    },
+    "outlinks": [
+      {
+        "host": "eci.gov.in",
+        "count": 10,
+        "texts": [
+          "NewSupplement-3 2026",
+          "Read more",
+          "Overseas Voters\n                            Single window for NRI voters\n                            Read more"
+        ]
+      },
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "instagram.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "youtube.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "x.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "india.gov.in",
+        "count": 1,
+        "texts": [
+          "Government of India"
+        ]
+      }
+    ]
+  },
+  "score": {
+    "overall": 64,
+    "security": 80,
+    "accessibility": 50,
+    "content": 46,
+    "gigw": 32,
+    "performance": 100,
+    "identity": 100
+  },
+  "status": "needs-work",
+  "issues": [
+    {
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://www.kerala.gov.in/\""
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "4 critical violation(s)"
+    },
+    {
+      "id": "content.last_updated",
+      "sev": "H",
+      "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://sutharyam.ceo.kerala.gov.in/)"
+    },
+    {
+      "id": "a11y.axe_serious",
+      "sev": "M",
+      "ev": "3 serious violation(s)"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "1 low-contrast element(s)"
+    },
+    {
+      "id": "gigw.sitemap",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.privacy",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.ownership",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.last_updated",
+      "sev": "M"
+    },
+    {
+      "id": "a11y.axe_moderate_minor",
+      "sev": "L",
+      "ev": "27 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
+    },
+    {
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "11 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "id": "gigw.feedback",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.terms",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.copyright_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.hyperlink_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.disclaimer",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.screen_reader",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.help",
+      "sev": "L"
+    },
+    {
+      "id": "id.canonical",
+      "sev": "I"
+    },
+    {
+      "id": "id.third_party",
+      "sev": "I",
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-7WH4ZDGVFD"
+    }
+  ],
   "history": [
     {
       "d": "2026-09-22",
       "up": true,
-      "score": null
+      "score": 64
     },
     {
       "d": "2026-09-21",
@@ -50,5 +581,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

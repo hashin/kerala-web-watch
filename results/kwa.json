@@ -36,15 +36,569 @@
     "vantage": "gh-us",
     "suspect": false
   },
-  "deep": null,
-  "score": null,
-  "status": "unaudited",
-  "issues": [],
+  "deep": {
+    "at": "2026-09-22T03:12:56.198Z",
+    "run": "1790046666387",
+    "vantage": "gh-us",
+    "lighthouse": {
+      "performance": 46,
+      "accessibility": 85,
+      "best_practices": 100,
+      "seo": 85
+    },
+    "axe": {
+      "critical": 3,
+      "serious": 25,
+      "moderate": 3,
+      "minor": 1
+    },
+    "crawl": {
+      "pages": 30,
+      "pdfs": 0,
+      "broken": 3
+    },
+    "tech": {
+      "cms": "WordPress 6.1.13",
+      "server": "nginx",
+      "jquery": null
+    },
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "pass"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "fail"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "pass"
+      },
+      {
+        "id": "sec.csp",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "pass"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "fail"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "pass"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "fail",
+        "ev": "moment.js 2.24.0, chart.js 2.9.3"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "fail",
+        "ev": "3 critical violation(s)"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "25 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "4 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "fail",
+        "ev": "2 image(s) missing alt text"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "heading levels skipped"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "85/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "46/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "20072.515999999996ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "pass"
+      },
+      {
+        "id": "perf.weight",
+        "r": "pass"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "pass"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "na"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "pass"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-IN"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "pass"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "warn",
+        "ev": "3/30 crawled link(s) broken (https://eoffice.kerala.gov.in/eFileCIKWA/, https://pravahak.kwa.kerala.gov.in/, https://itmission.kerala.gov.in/)"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "na"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "fail"
+      },
+      {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.contact",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.search",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "pass"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "pass"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "na"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "pass"
+      },
+      {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "pass"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "pass"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass",
+        "ev": "WordPress 6.1.13"
+      },
+      {
+        "id": "id.third_party",
+        "r": "pass"
+      }
+    ],
+    "screenshot": {
+      "desktop": "2026-09-22.webp",
+      "mobile": "2026-09-22-m.webp",
+      "phash": "fff7400000ffff7f"
+    },
+    "outlinks": [
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "twitter.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "instagram.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "youtube.com",
+        "count": 3,
+        "texts": [
+          "കൂടുതൽ വീഡിയോകൾ"
+        ]
+      },
+      {
+        "host": "forms.gle",
+        "count": 1,
+        "texts": [
+          "Contractor's complaints & Suggestions"
+        ]
+      },
+      {
+        "host": "google.com",
+        "count": 1,
+        "texts": [
+          "NPS PRAN ACCOUNT NUMBER ACTIVATED LIST FROM NPS CELL"
+        ]
+      },
+      {
+        "host": "jalshakti-ddws.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "jaljeevanmission.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "india.gov.in",
+        "count": 1,
+        "texts": []
+      }
+    ]
+  },
+  "score": {
+    "overall": 61,
+    "security": 62,
+    "accessibility": 50,
+    "content": 66,
+    "gigw": 32,
+    "performance": 86,
+    "identity": 100
+  },
+  "status": "needs-work",
+  "issues": [
+    {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "moment.js 2.24.0, chart.js 2.9.3"
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "3 critical violation(s)"
+    },
+    {
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-IN"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "3/30 crawled link(s) broken (https://eoffice.kerala.gov.in/eFileCIKWA/, https://pravahak.kwa.kerala.gov.in/, https://itmission.kerala.gov.in/)"
+    },
+    {
+      "id": "gigw.rti",
+      "sev": "H"
+    },
+    {
+      "id": "sec.hsts",
+      "sev": "M"
+    },
+    {
+      "id": "a11y.axe_serious",
+      "sev": "M",
+      "ev": "25 serious violation(s)"
+    },
+    {
+      "id": "a11y.alt",
+      "sev": "M",
+      "ev": "2 image(s) missing alt text"
+    },
+    {
+      "id": "gigw.privacy",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.ownership",
+      "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "20072.515999999996ms"
+    },
+    {
+      "id": "sec.csp",
+      "sev": "L"
+    },
+    {
+      "id": "sec.referrer",
+      "sev": "L"
+    },
+    {
+      "id": "a11y.axe_moderate_minor",
+      "sev": "L",
+      "ev": "4 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
+    },
+    {
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
+    },
+    {
+      "id": "content.meta_desc",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.feedback",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.terms",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.copyright_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.hyperlink_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.disclaimer",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.screen_reader",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.help",
+      "sev": "L"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    }
+  ],
   "history": [
     {
       "d": "2026-09-22",
       "up": true,
-      "score": null
+      "score": 61
     },
     {
       "d": "2026-09-21",
@@ -52,5 +606,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

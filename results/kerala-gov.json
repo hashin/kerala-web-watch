@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-21T16:24:48.823Z",
-    "run": "1790007793111",
+    "at": "2026-09-22T03:11:06.147Z",
+    "run": "1790046591967",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 51,
+      "performance": 54,
       "accessibility": 75,
       "best_practices": 92,
       "seo": 73
@@ -48,7 +48,7 @@
       "critical": 4,
       "serious": 12,
       "moderate": 76,
-      "minor": 0
+      "minor": 1
     },
     "crawl": {
       "pages": 30,
@@ -175,7 +175,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "76 moderate/minor violation(s)"
+        "ev": "77 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -215,12 +215,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "51/100"
+        "ev": "54/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11863.587000000001ms"
+        "ev": "14318.74455ms"
       },
       {
         "id": "perf.cls",
@@ -229,7 +229,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "20.0MB"
+        "ev": "10.1MB"
       },
       {
         "id": "perf.viewport",
@@ -306,7 +306,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "4 console error(s): Connecting to 'https://www.youtube.com/s/player/4fd832e7/www-player.css' violates the following Content Security Policy directive: \"connect-src 'self' blob: data: image/svg+xml *.userway.org chat.kerala.gov.in *.google-analytics.com\". The action has been blocked."
+        "ev": "4 console error(s): Connecting to 'https://www.youtube.com/s/player/ecb23058/www-player.css' violates the following Content Security Policy directive: \"connect-src 'self' blob: data: image/svg+xml *.userway.org chat.kerala.gov.in *.google-analytics.com\". The action has been blocked."
       },
       {
         "id": "gigw.contact",
@@ -342,7 +342,7 @@
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.screen_reader",
@@ -512,11 +512,11 @@
     ]
   },
   "score": {
-    "overall": 61,
+    "overall": 62,
     "security": 80,
     "accessibility": 60,
     "content": 32,
-    "gigw": 34,
+    "gigw": 44,
     "performance": 66,
     "identity": 92
   },
@@ -562,10 +562,6 @@
       "ev": "missing <title>"
     },
     {
-      "id": "gigw.accessibility_statement",
-      "sev": "M"
-    },
-    {
       "id": "gigw.ownership",
       "sev": "M"
     },
@@ -576,12 +572,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11863.587000000001ms"
+      "ev": "14318.74455ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "20.0MB"
+      "ev": "10.1MB"
     },
     {
       "id": "perf.tap_targets",
@@ -590,7 +586,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "76 moderate/minor violation(s)"
+      "ev": "77 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -609,7 +605,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "4 console error(s): Connecting to 'https://www.youtube.com/s/player/4fd832e7/www-player.css' violates the following Content Security Policy directive: \"connect-src 'self' blob: data: image/svg+xml *.userway.org chat.kerala.gov.in *.google-analytics.com\". The action has been blocked."
+      "ev": "4 console error(s): Connecting to 'https://www.youtube.com/s/player/ecb23058/www-player.css' violates the following Content Security Policy directive: \"connect-src 'self' blob: data: image/svg+xml *.userway.org chat.kerala.gov.in *.google-analytics.com\". The action has been blocked."
     },
     {
       "id": "gigw.terms",
@@ -649,7 +645,7 @@
     {
       "d": "2026-09-22",
       "up": true,
-      "score": 61
+      "score": 62
     },
     {
       "d": "2026-09-21",
@@ -657,5 +653,5 @@
       "score": 61
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

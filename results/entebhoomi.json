@@ -36,15 +36,602 @@
     "vantage": "gh-us",
     "suspect": false
   },
-  "deep": null,
-  "score": null,
-  "status": "unaudited",
-  "issues": [],
+  "deep": {
+    "at": "2026-09-22T03:09:10.405Z",
+    "run": "1790046466835",
+    "vantage": "gh-us",
+    "lighthouse": {
+      "performance": 58,
+      "accessibility": 70,
+      "best_practices": 92,
+      "seo": 77
+    },
+    "axe": {
+      "critical": 20,
+      "serious": 16,
+      "moderate": 70,
+      "minor": 0
+    },
+    "crawl": {
+      "pages": 28,
+      "pdfs": 5,
+      "broken": 1
+    },
+    "tech": {
+      "cms": null,
+      "server": "Apache",
+      "jquery": "3.7.1"
+    },
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "pass"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "fail"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "pass"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "pass"
+      },
+      {
+        "id": "sec.csp",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "pass"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "pass"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "pass"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "pass"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "fail",
+        "ev": "20 critical violation(s)"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "16 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "70 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "fail",
+        "ev": "<html lang=\"en\"> vs. 165% Malayalam content"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "fail",
+        "ev": "18 image(s) missing alt text"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "fail",
+        "ev": "2 low-contrast element(s)"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "heading levels skipped"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "70/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "58/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "6528.469999999999ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "pass"
+      },
+      {
+        "id": "perf.weight",
+        "r": "pass"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "fail"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "na"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-container"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "pass"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "warn",
+        "ev": "1/28 crawled link(s) broken (https://services.kerala.gov.in/)"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "pass"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "pass"
+      },
+      {
+        "id": "content.favicon",
+        "r": "fail"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "7 console error(s): Loading the script 'https://translation-plugin.bhashini.co.in/v3/website_translation_utility.js' violates the following Content Security Policy directive: \"script-src-elem 'self' https://dev.virtualearth.net\". The action has been blocked."
+      },
+      {
+        "id": "gigw.contact",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.search",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "warn"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "pass"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "na"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "na"
+      },
+      {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "pass"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
+      },
+      {
+        "id": "id.canonical",
+        "r": "pass"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "pass"
+      }
+    ],
+    "screenshot": {
+      "desktop": "2026-09-22.webp",
+      "mobile": "2026-09-22-m.webp",
+      "phash": "007e7e7e7e7e7e00"
+    },
+    "outlinks": [
+      {
+        "host": "sandes.gov.in",
+        "count": 1,
+        "texts": [
+          "സന്ദേശ്  ഡൌൺലോഡ് ചെയ്യുക"
+        ]
+      },
+      {
+        "host": "india.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "keralaregistration.gov.in",
+        "count": 1,
+        "texts": [
+          "രജിസ്ട്രേഷൻ വകുപ്പ്"
+        ]
+      },
+      {
+        "host": "digilocker.gov.in",
+        "count": 1,
+        "texts": [
+          "ഡിജി ലോക്കർ"
+        ]
+      },
+      {
+        "host": "digitalindia.gov.in",
+        "count": 1,
+        "texts": [
+          "ഡിജിറ്റൽ ഇന്ത്യ"
+        ]
+      },
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "instagram.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "youtube.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "www.nic.in",
+        "count": 1,
+        "texts": []
+      }
+    ]
+  },
+  "score": {
+    "overall": 49,
+    "security": 80,
+    "accessibility": 20,
+    "content": 42,
+    "gigw": 0,
+    "performance": 76,
+    "identity": 96
+  },
+  "status": "poor",
+  "issues": [
+    {
+      "id": "sec.http_redirect",
+      "sev": "H"
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "20 critical violation(s)"
+    },
+    {
+      "id": "a11y.lang",
+      "sev": "H",
+      "ev": "<html lang=\"en\"> vs. 165% Malayalam content"
+    },
+    {
+      "id": "content.last_updated",
+      "sev": "H",
+      "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-container"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/28 crawled link(s) broken (https://services.kerala.gov.in/)"
+    },
+    {
+      "id": "gigw.contact",
+      "sev": "H"
+    },
+    {
+      "id": "gigw.rti",
+      "sev": "H"
+    },
+    {
+      "id": "a11y.axe_serious",
+      "sev": "M",
+      "ev": "16 serious violation(s)"
+    },
+    {
+      "id": "a11y.alt",
+      "sev": "M",
+      "ev": "18 image(s) missing alt text"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "2 low-contrast element(s)"
+    },
+    {
+      "id": "gigw.sitemap",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.privacy",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.ownership",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.last_updated",
+      "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "6528.469999999999ms"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
+    },
+    {
+      "id": "a11y.axe_moderate_minor",
+      "sev": "L",
+      "ev": "70 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
+    },
+    {
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
+    },
+    {
+      "id": "content.favicon",
+      "sev": "L"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "7 console error(s): Loading the script 'https://translation-plugin.bhashini.co.in/v3/website_translation_utility.js' violates the following Content Security Policy directive: \"script-src-elem 'self' https://dev.virtualearth.net\". The action has been blocked."
+    },
+    {
+      "id": "gigw.feedback",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.copyright_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.hyperlink_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.disclaimer",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.screen_reader",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.help",
+      "sev": "L"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
+      "id": "id.soft_404",
+      "sev": "L",
+      "ev": "a nonexistent path returned 200"
+    },
+    {
+      "id": "gigw.emblem",
+      "sev": "I"
+    }
+  ],
   "history": [
     {
       "d": "2026-09-22",
       "up": true,
-      "score": null
+      "score": 49
     },
     {
       "d": "2026-09-21",
@@ -52,5 +639,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

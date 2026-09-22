@@ -34,15 +34,619 @@
     "vantage": "gh-us",
     "suspect": false
   },
-  "deep": null,
-  "score": null,
-  "status": "unaudited",
-  "issues": [],
+  "deep": {
+    "at": "2026-09-22T03:28:23.329Z",
+    "run": "1790047662697",
+    "vantage": "gh-us",
+    "lighthouse": {
+      "performance": 30,
+      "accessibility": 37,
+      "best_practices": 77,
+      "seo": 67
+    },
+    "axe": {
+      "critical": 10,
+      "serious": 15,
+      "moderate": 11,
+      "minor": 4
+    },
+    "crawl": {
+      "pages": 30,
+      "pdfs": 0,
+      "broken": 0
+    },
+    "tech": {
+      "cms": null,
+      "server": "cloudflare",
+      "jquery": null
+    },
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "pass"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "fail"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "pass"
+      },
+      {
+        "id": "sec.csp",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "fail"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "fail"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "pass"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "fail",
+        "ev": "jquery 1.12.0, bootstrap 3.3.6"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "fail",
+        "ev": "10 critical violation(s)"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "15 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "15 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "fail",
+        "ev": "10 image(s) missing alt text"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "fail",
+        "ev": "9 low-contrast element(s)"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "37/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "30/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "28736.550500000005ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "fail",
+        "ev": "0.44"
+      },
+      {
+        "id": "perf.weight",
+        "r": "fail",
+        "ev": "18.0MB"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "fail"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "pass"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-user"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "fail",
+        "ev": "<marquee"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "fail",
+        "ev": "2 broken image(s)"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "na"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "fail"
+      },
+      {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      },
+      {
+        "id": "gigw.contact",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.search",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "warn"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "fail",
+        "ev": "www.oushadhi.org"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "fail"
+      },
+      {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "pass"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
+      },
+      {
+        "id": "id.canonical",
+        "r": "fail"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "warn",
+        "ev": "https://www.googletagmanager.com/gtm.js?id=GTM-NWB7Q8J, https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+      }
+    ],
+    "screenshot": {
+      "desktop": "2026-09-22.webp",
+      "mobile": "2026-09-22-m.webp",
+      "phash": "ff00fe79f8d8f8fc"
+    },
+    "outlinks": [
+      {
+        "host": "oushadhipanchakarma.in",
+        "count": 1,
+        "texts": [
+          "Hospital"
+        ]
+      },
+      {
+        "host": "oushadhionlinestore.org",
+        "count": 1,
+        "texts": [
+          "SHOP ONLINE"
+        ]
+      },
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "instagram.com",
+        "count": 1,
+        "texts": []
+      }
+    ]
+  },
+  "score": {
+    "overall": 45,
+    "security": 48,
+    "accessibility": 46,
+    "content": 38,
+    "gigw": 18,
+    "performance": 62,
+    "identity": 72
+  },
+  "status": "poor",
+  "issues": [
+    {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "jquery 1.12.0, bootstrap 3.3.6"
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "10 critical violation(s)"
+    },
+    {
+      "id": "content.last_updated",
+      "sev": "H",
+      "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-user"
+    },
+    {
+      "id": "id.gov_domain",
+      "sev": "H",
+      "ev": "www.oushadhi.org"
+    },
+    {
+      "id": "sec.hsts",
+      "sev": "M"
+    },
+    {
+      "id": "sec.xfo",
+      "sev": "M"
+    },
+    {
+      "id": "a11y.axe_serious",
+      "sev": "M",
+      "ev": "15 serious violation(s)"
+    },
+    {
+      "id": "a11y.alt",
+      "sev": "M",
+      "ev": "10 image(s) missing alt text"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "9 low-contrast element(s)"
+    },
+    {
+      "id": "content.obsolete_tech",
+      "sev": "M",
+      "ev": "<marquee"
+    },
+    {
+      "id": "gigw.sitemap",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.privacy",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.accessibility_statement",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.ownership",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.last_updated",
+      "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "28736.550500000005ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "18.0MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
+    },
+    {
+      "id": "sec.csp",
+      "sev": "L"
+    },
+    {
+      "id": "sec.xcto",
+      "sev": "L"
+    },
+    {
+      "id": "sec.referrer",
+      "sev": "L"
+    },
+    {
+      "id": "a11y.axe_moderate_minor",
+      "sev": "L",
+      "ev": "15 moderate/minor violation(s)"
+    },
+    {
+      "id": "content.broken_images",
+      "sev": "L",
+      "ev": "2 broken image(s)"
+    },
+    {
+      "id": "content.meta_desc",
+      "sev": "L"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+    },
+    {
+      "id": "gigw.feedback",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.terms",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.copyright_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.hyperlink_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.disclaimer",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.screen_reader",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.help",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.search",
+      "sev": "L"
+    },
+    {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.44"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
+      "id": "id.soft_404",
+      "sev": "L",
+      "ev": "a nonexistent path returned 200"
+    },
+    {
+      "id": "gigw.emblem",
+      "sev": "I"
+    },
+    {
+      "id": "id.canonical",
+      "sev": "I"
+    },
+    {
+      "id": "id.third_party",
+      "sev": "I",
+      "ev": "https://www.googletagmanager.com/gtm.js?id=GTM-NWB7Q8J, https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+    }
+  ],
   "history": [
     {
       "d": "2026-09-22",
       "up": true,
-      "score": null
+      "score": 45
     },
     {
       "d": "2026-09-21",
@@ -50,5 +654,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
