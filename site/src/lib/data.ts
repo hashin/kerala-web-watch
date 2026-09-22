@@ -4,13 +4,14 @@ import { readResult } from '../../../audit/dist/store.js';
 import { computeSummary } from '../../../audit/dist/summary.js';
 import { explainLightStatus } from '../../../audit/dist/status.js';
 import { CHECKS } from '../../../audit/dist/checks/registry.js';
-import type { Site, District, Department, Registry } from '../../../audit/dist/types.js';
+import type { Site, District, Department, Place, Minister, Registry } from '../../../audit/dist/types.js';
 import type { Result } from '../../../audit/dist/store.js';
 import type { ResultStatus } from '../../../audit/dist/status.js';
 import type { Summary, GroupStat } from '../../../audit/dist/summary.js';
 
 export type { Result, GroupStat, Summary };
 export type Status = ResultStatus;
+export { CHECKS };
 
 // Resolved from process.cwd(), not import.meta.url: Vite relocates this module into
 // dist/.prerender/chunks/ at build time, which would change a URL-relative path's meaning.
@@ -83,6 +84,26 @@ export function getDepartments(): Department[] {
 
 export function getDepartment(id: string): Department | undefined {
   return getDepartments().find((d) => d.id === id);
+}
+
+export function getPlaces(): Place[] {
+  return getRegistry().places;
+}
+
+export function getPlace(id: string): Place | undefined {
+  return getPlaces().find((p) => p.id === id);
+}
+
+export function getMinisters(): Minister[] {
+  return getRegistry().ministers;
+}
+
+/** `ministers.yaml` maps a portfolio to the departments it covers (ADR-014) -- there's no
+ * department -> ministry field to read directly, so this is the one place that inverts the
+ * lookup, for the site page's breadcrumb (DESIGN §7.3). Ministries don't have their own pages
+ * yet (that's WP4.2), so callers render the name as plain text, not a link. */
+export function getMinistryForDepartment(departmentId: string): Minister | undefined {
+  return getMinisters().find((m) => m.departments.includes(departmentId));
 }
 
 export const STATUSES: Status[] = ['down', 'hijacked', 'broken', 'poor', 'unverifiable', 'unaudited', 'needs-work', 'healthy'];

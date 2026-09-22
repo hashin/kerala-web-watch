@@ -1,0 +1,62 @@
+---
+import { CHECKS } from '../../../audit/dist/checks/registry.js';
+import type { Issue } from '../../../audit/dist/score.js';
+
+interface Props {
+  issue: Issue;
+}
+
+const { issue } = Astro.props;
+const meta = CHECKS[issue.id];
+
+const SEVERITY_LABEL: Record<Issue['sev'], string> = { C: 'Critical', H: 'High', M: 'Medium', L: 'Low', I: 'Info' };
+const SEVERITY_TONE: Record<Issue['sev'], 'bad' | 'warn' | 'neutral'> = { C: 'bad', H: 'bad', M: 'warn', L: 'warn', I: 'neutral' };
+---
+
+<article class={`issue-card issue-card--${SEVERITY_TONE[issue.sev]}`}>
+  <h4 class="issue-card__title">
+    <span class="issue-card__sev">{SEVERITY_LABEL[issue.sev]}</span> {meta.title.en}
+  </h4>
+  <p class="issue-card__citizen">{meta.citizen.en}</p>
+  {issue.ev && <p class="issue-card__evidence"><code>{issue.ev}</code></p>}
+  <details>
+    <summary>How to fix it{meta.ref && ' & reference'}</summary>
+    <p>{meta.fix.en}</p>
+    {meta.ref && <p class="issue-card__ref">Reference: {meta.ref}</p>}
+  </details>
+</article>
+
+<style>
+  .issue-card {
+    border: 1px solid var(--color-border);
+    border-left-width: 4px;
+    border-radius: 0.25rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem;
+  }
+  .issue-card--bad { border-left-color: var(--color-bad); }
+  .issue-card--warn { border-left-color: var(--color-warn); }
+  .issue-card--neutral { border-left-color: var(--color-neutral); }
+  .issue-card__title {
+    margin: 0 0 0.35rem;
+    font-size: 1rem;
+  }
+  .issue-card__sev {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+  .issue-card__citizen {
+    margin: 0 0 0.35rem;
+  }
+  .issue-card__evidence {
+    margin: 0 0 0.35rem;
+    font-size: 0.9rem;
+    color: var(--color-muted);
+  }
+  .issue-card__ref {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+  }
+</style>

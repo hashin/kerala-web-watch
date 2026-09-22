@@ -1,0 +1,39 @@
+---
+import type { HistoryEntry } from '../../../audit/dist/history.js';
+
+interface Props {
+  history: HistoryEntry[];
+}
+
+const { history } = Astro.props;
+// history is newest-first (audit/src/history.ts); plot oldest -> newest, left to right, same
+// convention as AvailabilityStrip.
+const days = [...history].reverse();
+
+const W = 300;
+const H = 48;
+const lastIndex = Math.max(days.length - 1, 1);
+const x = (i: number) => (i / lastIndex) * W;
+const y = (score: number) => H - (score / 100) * H;
+
+const points = days
+  .map((d, i) => (d.score === null ? null : { x: x(i), y: y(d.score) }))
+  .filter((p): p is { x: number; y: number } => p !== null);
+
+const path = points.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x.toFixed(1)} ${p.y.toFixed(1)}`).join(' ');
+const latestScore = [...days].reverse().find((d) => d.score !== null)?.score ?? null;
+---
+
+{points.length >= 2 ? (
+  <svg
+    viewBox={`0 0 ${W} ${H}`}
+    width={W}
+    height={H}
+    role="img"
+    aria-label={`Score trend over the last ${days.length} days, currently ${latestScore}`}
+  >
+    <path d={path} fill="none" stroke="var(--color-link)" stroke-width="2" />
+  </svg>
+) : (
+  <p>Not enough score history yet to chart a trend.</p>
+)}

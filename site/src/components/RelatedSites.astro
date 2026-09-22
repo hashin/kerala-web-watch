@@ -1,0 +1,23 @@
+---
+import SiteTable from './SiteTable.astro';
+import type { SiteView } from '../lib/data';
+
+interface Props {
+  headingId: string;
+  title: string;
+  sites: SiteView[];
+  seeAllHref: string;
+  seeAllLabel: string;
+}
+
+const { headingId, title, sites, seeAllHref, seeAllLabel } = Astro.props;
+const SHOWN = 8;
+---
+
+{sites.length > 0 && (
+  <section aria-labelledby={headingId}>
+    <h2 id={headingId}>{title}</h2>
+    <SiteTable sites={sites.slice(0, SHOWN)} showDistrict={false} showDepartment={false} />
+    {sites.length > SHOWN && <p><a href={seeAllHref}>{seeAllLabel}</a></p>}
+  </section>
+)}

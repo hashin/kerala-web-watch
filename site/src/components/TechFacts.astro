@@ -1,0 +1,51 @@
+---
+import { isGovDomain } from '../../../audit/dist/checks/identity.js';
+import type { StoredLight, DeepTech } from '../../../audit/dist/store.js';
+
+interface Props {
+  light: StoredLight | null;
+  tech: DeepTech | null;
+  platform: string | null;
+}
+
+const { light, tech, platform } = Astro.props;
+const domain = light?.final_domain ?? null;
+---
+
+<dl class="tech-facts">
+  <dt>Final URL</dt>
+  <dd>{light?.final_url ?? '—'}</dd>
+
+  <dt>Server</dt>
+  <dd>{tech?.server ?? '—'}</dd>
+
+  <dt>Content management system</dt>
+  <dd>{tech?.cms ?? 'Not detected'}</dd>
+
+  <dt>Security certificate</dt>
+  <dd>
+    {light?.tls
+      ? `${light.tls.valid ? 'Valid' : 'Invalid'}${light.tls.days_left !== null ? ` — expires in ${light.tls.days_left} days (${light.tls.expires})` : ''}`
+      : '—'}
+  </dd>
+
+  <dt>Domain</dt>
+  <dd>{domain ? `${domain} — ${isGovDomain(domain) ? 'a government (.gov.in/.nic.in-class) domain' : 'not a government-class domain'}` : '—'}</dd>
+
+  <dt>Platform</dt>
+  <dd>{platform ?? 'None — independently hosted'}</dd>
+</dl>
+
+<style>
+  .tech-facts {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.25rem 1rem;
+  }
+  .tech-facts dt {
+    color: var(--color-muted);
+  }
+  .tech-facts dd {
+    margin: 0;
+  }
+</style>

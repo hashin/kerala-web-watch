@@ -1,0 +1,89 @@
+---
+import type { DeepScreenshot } from '../../../audit/dist/store.js';
+import type { StatusReason } from '../lib/data';
+
+interface Props {
+  id: string;
+  siteName: string;
+  screenshot: DeepScreenshot | null;
+  // ADR-026: never invent a fresh "why" here -- reuse the same reason already computed for the
+  // status badge, so a missing screenshot and the badge above it can't tell a citizen two
+  // different stories about the same site.
+  reason: StatusReason | null;
+}
+
+const { id, siteName, screenshot, reason } = Astro.props;
+const toggleId = `${id}-screenshot-mobile`;
+---
+
+{screenshot ? (
+  <div class="screenshot">
+    <input type="checkbox" id={toggleId} class="screenshot__toggle-input" />
+    <label for={toggleId} class="screenshot__toggle-label">Show mobile view</label>
+    <img
+      class="screenshot__img screenshot__img--desktop"
+      src={`/screenshots/${screenshot.desktop}`}
+      width="1280"
+      height="800"
+      loading="lazy"
+      alt={`Desktop screenshot of ${siteName}`}
+    />
+    <img
+      class="screenshot__img screenshot__img--mobile"
+      src={`/screenshots/${screenshot.mobile}`}
+      width="390"
+      height="844"
+      loading="lazy"
+      alt={`Mobile screenshot of ${siteName}`}
+    />
+  </div>
+) : (
+  <p class="screenshot__missing">No screenshot available{reason ? `: ${reason.citizen}` : ' yet.'}</p>
+)}
+
+<style>
+  .screenshot {
+    max-width: 40rem;
+  }
+  .screenshot__toggle-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .screenshot__toggle-label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    padding: 0.3rem 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.85rem;
+  }
+  .screenshot__toggle-input:focus-visible ~ .screenshot__toggle-label {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+  .screenshot__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--color-border);
+    border-radius: 0.25rem;
+  }
+  .screenshot__img--mobile {
+    display: none;
+    max-width: 20rem;
+  }
+  .screenshot__toggle-input:checked ~ .screenshot__img--desktop {
+    display: none;
+  }
+  .screenshot__toggle-input:checked ~ .screenshot__img--mobile {
+    display: block;
+  }
+  .screenshot__toggle-input:checked ~ .screenshot__toggle-label {
+    background: var(--color-border);
+  }
+  .screenshot__missing {
+    color: var(--color-muted);
+  }
+</style>

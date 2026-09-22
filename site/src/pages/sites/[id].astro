@@ -1,8 +1,25 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import HealthBadge from '../../components/HealthBadge.astro';
+import ScoreRing from '../../components/ScoreRing.astro';
+import CategoryBars from '../../components/CategoryBars.astro';
+import IssueCard from '../../components/IssueCard.astro';
+import Sparkline from '../../components/Sparkline.astro';
 import AvailabilityStrip from '../../components/AvailabilityStrip.astro';
-import { getSites, explainStatus } from '../../lib/data';
+import Screenshot from '../../components/Screenshot.astro';
+import TechFacts from '../../components/TechFacts.astro';
+import SiteActions from '../../components/SiteActions.astro';
+import RelatedSites from '../../components/RelatedSites.astro';
+import {
+  getSites,
+  getDepartment,
+  getDistrict,
+  getMinistryForDepartment,
+  explainStatus,
+  CHECKS,
+} from '../../lib/data';
+import type { Issue } from '../../../../audit/dist/score.js';
+import { timeAgo } from '../../lib/format';
 
 export function getStaticPaths() {
   return getSites().map((site) => ({ params: { id: site.id }, props: { site } }));
@@ -10,82 +27,193 @@ export function getStaticPaths() {
 
 const { site } = Astro.props;
 const light = site.result?.light ?? null;
+const deep = site.result?.deep ?? null;
 // ADR-026: a bare "Down"/"Broken"/"Unverifiable" badge tells a citizen nothing they can act on.
 const reason = explainStatus(site);
+
+const department = getDepartment(site.department);
+const ministry = getMinistryForDepartment(site.department);
+const district = site.district ? getDistrict(site.district) : null;
+
+// `deep.error` (WP3.5 step 5) means the run itself never finished -- e.g. the site timed out
+// mid-crawl -- as distinct from a run that completed and legitimately found zero issues. Scores
+// and issues shown below are always the *last successful* audit's (store.ts's mergeErrorResult
+// leaves them untouched), which can be null/empty for a site that has never once finished a deep
+// audit; without this distinction "No issues found" would misleadingly read as a clean bill of
+// health for a site whose only audit attempt actually failed to run at all.
+const auditErrored = deep?.error != null;
+
+const SEVERITY_LABEL: Record<Issue['sev'], string> = { C: 'Critical', H: 'High', M: 'Medium', L: 'Low', I: 'Info' };
+const issueGroups = (['C', 'H', 'M', 'L', 'I'] as const)
+  .map((sev) => ({ sev, label: SEVERITY_LABEL[sev], issues: (site.result?.issues ?? []).filter((i) => i.sev === sev) }))
+  .filter((g) => g.issues.length > 0);
+
+const passedChecks = deep?.checks.filter((c) => c.r === 'pass') ?? [];
+
+const otherInDepartment = getSites()
+  .filter((s) => s.department === site.department && s.id !== site.id)
+  .sort((a, b) => a.name.localeCompare(b.name));
+const otherInDistrict = site.district
+  ? getSites()
+      .filter((s) => s.district === site.district && s.id !== site.id)
+      .sort((a, b) => a.name.localeCompare(b.name))
+  : [];
 ---
 
 <Layout title={site.name} description={`Status and audit findings for ${site.name}.`}>
   <p><a href="/">&larr; All sites</a></p>
+
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    {ministry && <span>{ministry.name} &rsaquo; </span>}
+    {department && <a href={`/departments/${department.id}/`}>{department.name}</a>}
+    {district && (
+      <span>
+        {' · '}
+        <a href={`/districts/${district.id}/`}>{district.name}</a>
+      </span>
+    )}
+  </nav>
+
   <h1>
     {site.name}
     {site.name_ml && <span lang="ml"> &middot; {site.name_ml}</span>}
   </h1>
-  <p>
-    <a href={site.url}>{site.url}</a>
-    &nbsp;<HealthBadge status={site.status} />
-  </p>
-  {reason && <p class="status-reason">{reason.citizen}</p>}
 
-  <dl>
-    <dt>Tier</dt>
-    <dd>{site.tier}</dd>
-    <dt>Kind</dt>
-    <dd>{site.kind}</dd>
-    <dt>Department</dt>
-    <dd><a href={`/departments/${site.department}/`}>{site.department}</a></dd>
-    {site.district && (
-      <>
-        <dt>District</dt>
-        <dd><a href={`/districts/${site.district}/`}>{site.district}</a></dd>
-      </>
-    )}
-  </dl>
-
-  {light ? (
-    <section aria-labelledby="light-heading">
-      <h2 id="light-heading">Light check</h2>
-      <p>Last checked {new Date(light.at).toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' })}.</p>
-      <dl>
-        <dt>Final URL</dt>
-        <dd>{light.final_url ?? '—'}</dd>
-        {light.tls && (
-          <>
-            <dt>TLS certificate</dt>
-            <dd>
-              {light.tls.valid ? 'Valid' : 'Invalid'}
-              {light.tls.days_left !== null && ` — expires in ${light.tls.days_left} days (${light.tls.expires})`}
-              {light.tls.issuer && ` — issued by ${light.tls.issuer}`}
-            </dd>
-          </>
+  <div class="site-header">
+    <ScoreRing score={site.result?.score?.overall ?? null} />
+    <div>
+      <p>
+        {site.status === 'hijacked' ? (
+          <span class="hijacked-url">{site.url}</span>
+        ) : (
+          <a href={site.url}>{site.url}</a>
         )}
-        <dt>Security headers</dt>
-        <dd>
-          HSTS {light.headers.hsts ? '✓' : '✗'} &middot;
-          CSP {light.headers.csp ? '✓' : '✗'} &middot;
-          X-Frame-Options {light.headers.xfo ? '✓' : '✗'} &middot;
-          X-Content-Type-Options {light.headers.xcto ? '✓' : '✗'}
-        </dd>
-      </dl>
-      <h3>Last 90 days</h3>
-      <AvailabilityStrip history={site.result?.history ?? []} />
-    </section>
-  ) : (
-    <p>This site has not been light-checked yet — the next scheduled run is within 6 hours.</p>
-  )}
+        &nbsp;<HealthBadge status={site.status} />
+      </p>
+      {reason && <p class="status-reason">{reason.citizen}</p>}
+      <p class="audit-times">
+        {deep && <>Audited {timeAgo(deep.at)}</>}
+        {deep && light && ' · '}
+        {light && <>Checked {timeAgo(light.at)}</>}
+      </p>
+    </div>
+  </div>
 
-  {site.status === 'unaudited' && (
-    <p>
-      This site has not been deep-audited yet. Findings will appear here once Phase 3's audit
-      checks are running (see the <a href="/methodology/">methodology</a> page).
+  {auditErrored && (
+    <p class="audit-error-note">
+      The most recent attempt to fully audit this site didn't finish ({timeAgo(deep!.at)}) — the scores
+      and issues below, if any, are from the last audit that did complete.
     </p>
   )}
 
-  <p><a href={`https://github.com/hashin/kerala-web-watch/issues/new?title=${encodeURIComponent(`Correction: ${site.name}`)}`}>Suggest a correction</a></p>
+  <section aria-labelledby="screenshot-heading">
+    <h2 id="screenshot-heading">Screenshot</h2>
+    <Screenshot id={site.id} siteName={site.name} screenshot={deep?.screenshot ?? null} reason={reason} />
+  </section>
+
+  {deep && (
+    <section aria-labelledby="scores-heading">
+      <h2 id="scores-heading">Scores</h2>
+      <CategoryBars score={site.result?.score ?? null} />
+    </section>
+  )}
+
+  {deep && (
+    <section aria-labelledby="issues-heading">
+      <h2 id="issues-heading">Issues</h2>
+      {issueGroups.length === 0 && !auditErrored && <p>No issues found in the most recent audit.</p>}
+      {issueGroups.length === 0 && auditErrored && <p>No issues on record from a completed audit yet.</p>}
+      {issueGroups.map((group) => (
+        <div>
+          <h3>{group.label}</h3>
+          {group.issues.map((issue) => <IssueCard issue={issue} />)}
+        </div>
+      ))}
+      {passedChecks.length > 0 && (
+        <details class="passed-checks">
+          <summary>{passedChecks.length} checks passed</summary>
+          <ul>
+            {passedChecks.map((c) => <li>{CHECKS[c.id].title.en}</li>)}
+          </ul>
+        </details>
+      )}
+    </section>
+  )}
+
+  <section aria-labelledby="availability-heading">
+    <h2 id="availability-heading">Last 90 days</h2>
+    <AvailabilityStrip history={site.result?.history ?? []} />
+    {deep && <Sparkline history={site.result?.history ?? []} />}
+  </section>
+
+  <section aria-labelledby="tech-heading">
+    <h2 id="tech-heading">Technical facts</h2>
+    <TechFacts light={light} tech={deep?.tech ?? null} platform={site.platform} />
+  </section>
+
+  {!light && <p>This site has not been light-checked yet — the next scheduled run is within 6 hours.</p>}
+  {light && !deep && site.status === 'unaudited' && (
+    <p>
+      This site has not been deep-audited yet. Findings will appear here once the rolling deep audit
+      reaches it (see the <a href="/methodology/">methodology</a> page).
+    </p>
+  )}
+
+  <section aria-labelledby="actions-heading">
+    <h2 id="actions-heading">Actions</h2>
+    <SiteActions id={site.id} name={site.name} />
+  </section>
+
+  <RelatedSites
+    headingId="related-department"
+    title={`Other sites under ${department?.name ?? site.department}`}
+    sites={otherInDepartment}
+    seeAllHref={`/departments/${site.department}/`}
+    seeAllLabel={`See all sites in ${department?.name ?? site.department}`}
+  />
+
+  {district && (
+    <RelatedSites
+      headingId="related-district"
+      title={`Other sites in ${district.name}`}
+      sites={otherInDistrict}
+      seeAllHref={`/districts/${district.id}/`}
+      seeAllLabel={`See all sites in ${district.name}`}
+    />
+  )}
 </Layout>
 
 <style>
+  .breadcrumb {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+  }
+  .site-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
   .status-reason {
     max-width: 60ch;
     color: var(--color-text-muted, inherit);
+  }
+  .audit-times {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+  }
+  .hijacked-url {
+    color: var(--color-bad);
+    font-weight: 600;
+  }
+  .audit-error-note {
+    max-width: 60ch;
+    padding: 0.6rem 0.9rem;
+    border: 1px solid var(--color-warn);
+    border-radius: 0.25rem;
+    color: var(--color-warn);
+  }
+  .passed-checks ul {
+    columns: 2;
   }
 </style>

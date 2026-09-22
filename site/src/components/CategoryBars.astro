@@ -1,0 +1,61 @@
+---
+import type { ScoreBreakdown } from '../../../audit/dist/score.js';
+
+interface Props {
+  score: ScoreBreakdown | null;
+}
+
+const { score } = Astro.props;
+
+const CATEGORIES: { key: Exclude<keyof ScoreBreakdown, 'overall'>; label: string }[] = [
+  { key: 'security', label: 'Security' },
+  { key: 'accessibility', label: 'Accessibility' },
+  { key: 'content', label: 'Content' },
+  { key: 'gigw', label: 'Government guidelines' },
+  { key: 'performance', label: 'Performance' },
+  { key: 'identity', label: 'Identity' },
+];
+---
+
+{score ? (
+  <ul class="category-bars">
+    {CATEGORIES.map(({ key, label }) => (
+      <li>
+        <span class="category-bars__label">{label}</span>
+        <div class="coverage-bar" role="img" aria-label={`${label}: ${score[key]} out of 100`}>
+          <span style={`width: ${score[key]}%`}></span>
+        </div>
+        <span class="category-bars__value">{score[key]}</span>
+      </li>
+    ))}
+  </ul>
+) : (
+  // Null here means either DESIGN §5.4's availability gate (a ★ check failed and skipped
+  // scoring entirely) or that no deep audit has completed successfully yet -- the page's own
+  // status reason / audit-error note above already says which, so this stays generic rather
+  // than guessing.
+  <p>Not scored.</p>
+)}
+
+<style>
+  .category-bars {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.6rem;
+  }
+  .category-bars li {
+    display: grid;
+    grid-template-columns: 9rem 1fr 2.5rem;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .category-bars__label {
+    font-size: 0.9rem;
+  }
+  .category-bars__value {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+</style>

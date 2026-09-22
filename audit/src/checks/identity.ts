@@ -2,7 +2,10 @@ import type { Check, CheckResult } from './types.js';
 
 const GOV_SUFFIXES = ['gov.in', 'nic.in', 'ac.in', 'edu.in', 'res.in'];
 
-function isGovDomain(hostname: string): boolean {
+/** Exported for `site/`'s TechFacts component (WP4.1), which shows a site's domain class as a
+ * plain fact -- reusing this instead of a second copy of `GOV_SUFFIXES` keeps the two from
+ * drifting apart the same way `detectTech` below is shared with `runner.ts`. */
+export function isGovDomain(hostname: string): boolean {
   const lower = hostname.toLowerCase();
   return GOV_SUFFIXES.some((suffix) => lower === suffix || lower.endsWith(`.${suffix}`));
 }

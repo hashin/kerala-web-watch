@@ -1,0 +1,50 @@
+---
+import { statusFromScore } from '../../../audit/dist/score.js';
+
+interface Props {
+  score: number | null;
+}
+
+const { score } = Astro.props;
+const tone = score === null ? 'neutral' : { healthy: 'good', 'needs-work': 'warn', poor: 'bad' }[statusFromScore(score)];
+
+const RADIUS = 40;
+const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
+const offset = CIRCUMFERENCE * (1 - (score ?? 0) / 100);
+---
+
+<div
+  class={`score-ring score-ring--${tone}`}
+  role="img"
+  aria-label={score === null ? 'Not scored' : `Score ${score} out of 100`}
+>
+  <svg viewBox="0 0 100 100" width="96" height="96" aria-hidden="true">
+    <circle cx="50" cy="50" r={RADIUS} fill="none" stroke="var(--color-border)" stroke-width="10" />
+    {score !== null && (
+      <circle
+        cx="50"
+        cy="50"
+        r={RADIUS}
+        fill="none"
+        stroke="currentColor"
+        stroke-width="10"
+        stroke-linecap="round"
+        stroke-dasharray={CIRCUMFERENCE}
+        stroke-dashoffset={offset}
+        transform="rotate(-90 50 50)"
+      />
+    )}
+    <text x="50" y="58" text-anchor="middle" font-size="28" fill="currentColor">{score ?? '—'}</text>
+  </svg>
+</div>
+
+<style>
+  .score-ring {
+    display: inline-block;
+    line-height: 0;
+  }
+  .score-ring--good { color: var(--color-good); }
+  .score-ring--warn { color: var(--color-warn); }
+  .score-ring--bad { color: var(--color-bad); }
+  .score-ring--neutral { color: var(--color-neutral); }
+</style>

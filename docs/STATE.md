@@ -5,18 +5,18 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 
 ## Now
 
-- **Phase:** 3 — Deep audits
-- **Current WP:** WP3.7 (in progress: steps 1 and 2 done; step 3's cron gate is the only thing left) — `audit.yml` live: 3 → 50 → cron
-- **Next action:** Step 3: `audit.yml`'s cron (`30 21 * * *`, 03:00 IST) is already live and needs **two consecutive
-  *scheduled*-triggered runs to succeed** to close WP3.7 (same kind of multi-day gate as WP2.3's open question 8
-  — no single session can satisfy this). `gh run list --workflow=audit.yml` and look for two `schedule`-trigger
-  rows in a row with `success`. Note: the `schedule` run from the night of 2026-09-21→22 (`35671067666`) failed
-  — it ran *before* this session's two crash fixes landed, so it doesn't count; the counter starts from the next
-  scheduled firing after today. `--max-batch` (300, ADR-004) needs no change: a clean `batch_size=50` run
-  (`35681566429`, 2026-09-22) took ~28 min/shard for 25 sites each (~64–70 s/site), comfortably under the 90-min
-  budget even at a full 50-site shard.
+- **Phase:** 4 — Full site
+- **Current WP:** WP4.1 done this session — full site page. WP3.7 is unaffected and still open on its own:
+  steps 1–2 done, step 3's cron gate is the only thing left (see below).
+- **Next action:** WP4.2 (ministry/department/kind/platform/leaderboard pages + `rollups.ts`). Separately,
+  still check WP3.7's gate opportunistically: `audit.yml`'s cron (`30 21 * * *`, 03:00 IST) needs **two
+  consecutive *scheduled*-triggered runs to succeed** to close WP3.7 (same kind of multi-day gate as WP2.3's
+  open question 8 — no single session can satisfy this). `gh run list --workflow=audit.yml` and look for two
+  `schedule`-trigger rows in a row with `success`. As of this session (2026-09-22, daytime) the next scheduled
+  firing after the crash fixes landed hasn't happened yet — don't force it with `workflow_dispatch`, the gate
+  specifically requires the cron trigger.
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
-- **Registry size:** 1,500 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated) · **Deep-audited:** 97/1,500 (as of the clean `batch_size=50` run, 2026-09-22) · **Light-checked:** 1,500/1,500 (15 down, 19 broken as of first full run 2026-09-21T05:30Z) · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data instead of placeholders. Note: the site's own `/sites/<id>/` page only renders light-check detail today (WP2.4 was explicitly "light-only") — a deep-audited site's badge/status is correct but its score, issues, screenshots and Lighthouse numbers aren't shown yet; that's WP4.1, not a bug.
+- **Registry size:** 1,500 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated) · **Deep-audited:** 97/1,500 (as of the clean `batch_size=50` run, 2026-09-22) · **Light-checked:** 1,500/1,500 (15 down, 19 broken as of first full run 2026-09-21T05:30Z) · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data, and (as of WP4.1) full deep-audit findings — score ring, category bars, issue cards, screenshots, tech facts, sparkline — on every audited site's own page.
 - **Candidates backlog:** ~2,476 fresh, uncurated candidates as of 2026-09-21 (mostly from a new `kerala-gov-in-subdomains` source — see Handoff below), waiting for a WP1.7-style curation pass. Not yet in `registry/sites/`.
 
 ## Work packages
@@ -46,7 +46,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 3.5 | Playwright runner: capture, axe, Lighthouse, crawl, screenshots; fixture-server smoke test | done | 77b8181 | 923 tests; verifier mutation-tested 10 new files, found and fixed 8 real gaps across crawl/lighthouse/screenshot/perf/content/store/fixture-server (all boundary conditions or an untested function), all re-verified; all 84 check ids now implemented |
 | 3.6 | `plan` scheduler + `merge` (outlinks, phash gating) + tests | done | 8a3659c | 979 tests; verifier mutation-tested and found 2 undertested paths (merge fold's history source, screenshot phash-copy gate's exact threshold boundary), both fixed and re-verified by hand |
 | 3.7 | audit.yml live (3 → 50 → cron) | in progress | ae87b71 (workflow), 97be5e0 + 24d5f02 (two crash fixes), run 35681566429 (clean batch_size=50) | steps 1–2 done; step 3's two-consecutive-scheduled-runs gate remains |
-| 4.1 | Full site page | todo | | |
+| 4.1 | Full site page | done | (pending commit) | 9 components (ScoreRing, CategoryBars, IssueCard, Sparkline, Screenshot, TechFacts, SiteActions, RelatedSites + reused AvailabilityStrip); found & fixed a real production bug while dogfooding (see Handoff): `runner.ts`'s screenshot filenames were date-only, not per-site, so every site captured the same day shared (and clobbered) the same two `.webp` files — fixed to `<site.id>.webp`, 3 new tests; Lighthouse a11y 100 on a poor and a down site page; verified hijacked/healthy rendering with temporary synthetic data (reverted, not committed) since no live site has either status yet |
 | 4.2 | Ministry / department / kind / platform / leaderboard pages | todo | | |
 | 4.3 | Status pages, feeds, static API, data page | todo | | |
 | 4.4 | Methodology page generated from registry.ts | todo | | |
@@ -99,10 +99,51 @@ _None yet. Each entry: what, why, ADR number._
     cancel-in-progress: true}` group, which may have added to the delay, but nothing was actually lost or wrong —
     every rebuild converged on the correct content within minutes. Nothing to fix; noted here only so a future
     session doesn't panic and start debugging `build-deploy.yml` if it sees the same few-minutes lag.
+11. **Bookkeeping, not a question for the human — a data-migration follow-up.** WP4.1 fixed a bug where
+    `runner.ts` named screenshots by date instead of by site id (see Handoff below), but the ~90 sites
+    already deep-audited before the fix still have `deep.screenshot` pointing at the old shared
+    `2026-09-21.webp`/`2026-09-22.webp` files, and ADR-017's phash gate won't rename them on its own
+    unless that site's homepage happens to look different enough next time. A future session could null
+    out `deep.screenshot` for those ~90 records (forcing a fresh, correctly-named capture on their next
+    scheduled deep audit) — not done this session since it means hand-editing the bot-managed `data`
+    branch mid-WP, which felt like it wanted the human's sign-off first rather than a unilateral call.
 
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-09-22 · WP4.1 done: full site page** — session started by checking WP3.7's cron gate (not
+  ready yet — no `schedule`-triggered `audit.yml` run has fired since the crash fixes landed, still
+  daytime; don't force it) and moved to WP4.1 rather than sit idle. Built all 9 anatomy parts (DESIGN
+  §7.3): `ScoreRing`, `CategoryBars`, `IssueCard`, `Sparkline`, `Screenshot` (checkbox-hack mobile
+  toggle, no JS), `TechFacts`, `SiteActions` (correction/re-audit issue links, JSON link, Share via
+  `navigator.share`/clipboard), `RelatedSites`, breadcrumbs (ministry as plain text — no `/ministries/`
+  page until WP4.2, same "acceptable for one WP" precedent as the JSON link 404ing until WP4.3).
+  Screenshots are copied from `../data/screenshots` into `site/public/screenshots/` by a new
+  `site/scripts/copy-screenshots.mjs`, wired into `predev`/`prebuild` (no-ops if `data/` is absent).
+  **Found and fixed a real production bug while dogfooding real deep-audit data**: `runner.ts`'s
+  `buildScreenshot` named screenshots `${today}.webp` — the *date*, not the site — so every site
+  captured on the same calendar day shared (and silently overwrote) the same two files; confirmed
+  live on `aepds`'s page, which was showing `kerala-gov`'s Tenders-portal screenshot. Fixed to
+  `${site.id}.webp` (matches DESIGN §5.5's own `keralapsc.webp` example, which the original code had
+  drifted from), exported `buildScreenshot`/`ScreenshotOutcome` for testing, added 3 regression tests
+  (`runner-screenshot-filename.test.ts`). **Known follow-up, not done this session**: the ~90 already
+  deep-audited sites' stored records still point at the old shared date-named files — the phash gate
+  only replaces a screenshot when the visual hash actually moves, so a site whose homepage doesn't
+  change won't self-heal to the new per-site filename on its own. Not touched this session (didn't
+  want to hand-edit the bot-managed `data` branch mid-WP without the human's sign-off); a future
+  session could null out `deep.screenshot` for the affected sites to force a fresh capture next audit.
+  Verified: `audit`'s 991 tests green, `site`'s `astro check` clean, full `astro build` (1,595 pages),
+  Lighthouse a11y **100** on a `poor` (`aepds`) and a `down`-with-errored-audit (`d-alappuzha`) page.
+  No live site is currently `healthy` or `hijacked`, so those two branches (unlinked red URL text for
+  hijacked; full score ring + collapsed "N checks passed" for healthy) were verified with temporary
+  synthetic `data/results/*.json` edits on two real, currently-unaudited registry sites, screenshotted,
+  then reverted with `git checkout` before finishing (never committed). Also caught and fixed a real
+  UX bug of my own along the way: a `deep.error` (audit attempt that never finished, e.g. a timeout)
+  was rendering "No issues found in the most recent audit" — misleadingly implying a clean bill of
+  health — now shows a distinct amber notice explaining the audit didn't complete.
+  **Next time:** WP4.2 (ministry/department/kind/platform/leaderboard pages, `site/src/lib/rollups.ts`
+  with vitest — the first tests in `site/`). Separately, keep an eye on WP3.7's cron gate.
 
 - **2026-09-22 · WP3.7 step 2 done: a clean, complete `batch_size=50` run** — retry #2 (run
   `35681566429`, with both crash fixes from the entries below in place) succeeded end-to-end: both
