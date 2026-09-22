@@ -2,6 +2,7 @@
 import { appendFileSync } from 'node:fs';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import pLimit from 'p-limit';
 import { toMarkdownTable, validateRegistry } from './validate.js';
 import { loadRegistry } from './registry.js';
@@ -150,7 +151,7 @@ const RUN_USAGE =
  * use, and a developer's local fixture-server run) never touches a real government site at all, so
  * it's exempt.
  */
-async function runRun(argv: string[]): Promise<number> {
+export async function runRun(argv: string[]): Promise<number> {
   if (argv.length === 0 || argv.includes('--help')) {
     console.log(RUN_USAGE);
     return 0;
@@ -192,17 +193,38 @@ async function runRun(argv: string[]): Promise<number> {
         return site;
       });
 
-  for (const site of sites) {
-    const existing = readResult(outDir, site.id);
-    const { result, screenshots } = await runDeepAudit(site, existing, { vantage, noLighthouse, noCrawl, fixtureBase: fixtureBase ?? undefined });
-    writeResult(outDir, result);
-    if (screenshots && result.deep?.screenshot) {
-      const screenshotsDir = join(outDir, 'screenshots');
-      await mkdir(screenshotsDir, { recursive: true });
-      await writeFile(join(screenshotsDir, result.deep.screenshot.desktop), screenshots.desktop);
-      await writeFile(join(screenshotsDir, result.deep.screenshot.mobile), screenshots.mobile);
+  // Lighthouse/puppeteer-core's own internals (e.g. a CDP session's pending callbacks getting
+  // rejected by a "Target closed" mid-navigation) can reject a promise that neither they nor
+  // `runDeepAudit` ever awaits directly -- an unhandled rejection Node treats as fatal by default,
+  // crashing this whole batch over one site's flaky browser session (confirmed in production: run
+  // 35631713466 crashed a shard on the same site, `d-alappuzha`, via a `TargetCloseError` from deep
+  // inside `lighthouse/core/gather/driver/target-manager.js`, distinct from the `lighthousePromise`
+  // race `runner.ts` already guards against). `runDeepAudit`'s own try/catch can't reach this --
+  // it's not thrown inside anything it awaits -- so this is a last-resort net at the batch level:
+  // log it loudly (never swallow a finding silently) and keep auditing the rest of the batch.
+  let currentSiteId: string | null = null;
+  const logStrayRejection = (reason: unknown): void => {
+    const detail = reason instanceof Error ? (reason.stack ?? reason.message) : String(reason);
+    console.error(`unhandled rejection while auditing ${currentSiteId ?? '(unknown site)'} -- logged, continuing batch: ${detail}`);
+  };
+  process.on('unhandledRejection', logStrayRejection);
+
+  try {
+    for (const site of sites) {
+      currentSiteId = site.id;
+      const existing = readResult(outDir, site.id);
+      const { result, screenshots } = await runDeepAudit(site, existing, { vantage, noLighthouse, noCrawl, fixtureBase: fixtureBase ?? undefined });
+      writeResult(outDir, result);
+      if (screenshots && result.deep?.screenshot) {
+        const screenshotsDir = join(outDir, 'screenshots');
+        await mkdir(screenshotsDir, { recursive: true });
+        await writeFile(join(screenshotsDir, result.deep.screenshot.desktop), screenshots.desktop);
+        await writeFile(join(screenshotsDir, result.deep.screenshot.mobile), screenshots.mobile);
+      }
+      console.error(`${site.id} ${result.status} score=${result.score?.overall ?? '-'}${result.deep?.error ? ` error=${result.deep.error}` : ''}`);
     }
-    console.error(`${site.id} ${result.status} score=${result.score?.overall ?? '-'}${result.deep?.error ? ` error=${result.deep.error}` : ''}`);
+  } finally {
+    process.off('unhandledRejection', logStrayRejection);
   }
 
   return 0;
@@ -357,4 +379,8 @@ async function main(): Promise<number> {
   }
 }
 
-process.exit(await main());
+// Guards the CLI's own `process.exit` so importing this module (e.g. to unit-test `runRun`) never
+// triggers a real run -- only executing it directly (`node dist/cli.js ...`) does.
+if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
+  process.exit(await main());
+}
