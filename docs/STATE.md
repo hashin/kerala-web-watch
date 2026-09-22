@@ -6,12 +6,13 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 ## Now
 
 - **Phase:** 4 — Full site
-- **Current WP:** WP4.1 done this session — full site page. WP3.7 is unaffected and still open on its own:
-  steps 1–2 done, step 3's cron gate is the only thing left (see below).
-- **Next action:** WP4.2 (ministry/department/kind/platform/leaderboard pages + `rollups.ts`). Separately,
-  still check WP3.7's gate opportunistically: `audit.yml`'s cron (`30 21 * * *`, 03:00 IST) needs **two
-  consecutive *scheduled*-triggered runs to succeed** to close WP3.7 (same kind of multi-day gate as WP2.3's
-  open question 8 — no single session can satisfy this). `gh run list --workflow=audit.yml` and look for two
+- **Current WP:** WP4.1 and WP4.2 both done this session — full site page, then ministry/department/kind/
+  platform/leaderboard pages. WP3.7 is unaffected and still open on its own: steps 1–2 done, step 3's cron
+  gate is the only thing left (see below).
+- **Next action:** WP4.3 (status pages upgrade, feeds, static API, data page). Separately, still check
+  WP3.7's gate opportunistically: `audit.yml`'s cron (`30 21 * * *`, 03:00 IST) needs **two consecutive
+  *scheduled*-triggered runs to succeed** to close WP3.7 (same kind of multi-day gate as WP2.3's open
+  question 8 — no single session can satisfy this). `gh run list --workflow=audit.yml` and look for two
   `schedule`-trigger rows in a row with `success`. As of this session (2026-09-22, daytime) the next scheduled
   firing after the crash fixes landed hasn't happened yet — don't force it with `workflow_dispatch`, the gate
   specifically requires the cron trigger.
@@ -47,7 +48,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 3.6 | `plan` scheduler + `merge` (outlinks, phash gating) + tests | done | 8a3659c | 979 tests; verifier mutation-tested and found 2 undertested paths (merge fold's history source, screenshot phash-copy gate's exact threshold boundary), both fixed and re-verified by hand |
 | 3.7 | audit.yml live (3 → 50 → cron) | in progress | ae87b71 (workflow), 97be5e0 + 24d5f02 (two crash fixes), run 35681566429 (clean batch_size=50) | steps 1–2 done; step 3's two-consecutive-scheduled-runs gate remains |
 | 4.1 | Full site page | done | 884c89d (25db56a: screenshot-filename fix) | 9 components (ScoreRing, CategoryBars, IssueCard, Sparkline, Screenshot, TechFacts, SiteActions, RelatedSites + reused AvailabilityStrip); found & fixed a real production bug while dogfooding (see Handoff): `runner.ts`'s screenshot filenames were date-only, not per-site, so every site captured the same day shared (and clobbered) the same two `.webp` files — fixed to `<site.id>.webp`, 3 new tests; Lighthouse a11y 100 on a poor and a down site page; verified hijacked/healthy rendering with temporary synthetic data (reverted, not committed) since no live site has either status yet |
-| 4.2 | Ministry / department / kind / platform / leaderboard pages | todo | | |
+| 4.2 | Ministry / department / kind / platform / leaderboard pages | done | (pending commit) | `site/src/lib/rollups.ts` (countByStatus, medianScore, failedCheckCounts, percentBroken, platformWideIssues, scoreDelta) + first vitest suite in `site/` (17 tests); new `ministries/index.astro` + `ministries/[ministry].astro`, `kinds/[kind]/[...page].astro`, `platforms/[platform]/[...page].astro`, `leaderboard.astro`; upgraded `departments/[department]/[...page].astro` with a `GroupRollup` (status counts, median, top-3 issues) and fixed it to generate a page for every department, including one with zero sites (`minority`) — previously 404'd, now shows an empty state (this WP's own Verify criterion); `sites/[id].astro` gained the "inherited from platform" note; Lighthouse mobile/4G performance 100 on `/platforms/lsgkerala/` (1,200 members, the largest listing), `/leaderboard/` and `/departments/lsgd/` (ADR-025) |
 | 4.3 | Status pages, feeds, static API, data page | todo | | |
 | 4.4 | Methodology page generated from registry.ts | todo | | |
 | 4.5 | Pagefind, i18n scaffold, self-audit ≥ 80 | todo | | |
@@ -111,6 +112,33 @@ _None yet. Each entry: what, why, ADR number._
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-09-22 · WP4.2 done: ministry/department/kind/platform/leaderboard pages** — continued straight
+  from WP4.1 in the same session (context budget still had headroom). New `site/src/lib/rollups.ts`
+  (`countByStatus`, `medianScore`, `failedCheckCounts`, `percentBroken`, `platformWideIssues`, `scoreDelta`)
+  with `site`'s first-ever vitest suite (17 tests, `site/tests/rollups.test.ts`) — wired up `site/package.json`'s
+  `test`/`pretest` scripts and `vitest.config.ts` matching `audit/`'s own convention; `.github/workflows/test.yml`
+  needed no change, its `site` job already runs `npm test --if-present`. New pages: `/ministries/` (portfolio
+  cards with health %), `/ministries/<id>/` (departments -> each department's own already-paginated page,
+  deliberately not a second full site table, since `lsgd`'s alone is 1,200+ sites), `/kinds/<kind>/[...page]`,
+  `/platforms/<platform>/[...page]` (shows platform-wide issues -- checks failing on >=80% of deep-audited
+  members -- above a `GroupRollup` + paginated member table), `/leaderboard/` (departments and districts
+  ranked by %-broken then median score, plus a "most improved" 30-day-delta section that's empty right now
+  since deep-audit history doesn't go back that far yet -- correctly renders nothing rather than an empty
+  heading). New shared `GroupRollup.astro` (status-count badges, median, top-3 issues) used by departments/
+  kinds/platforms. **Found and fixed a second real bug while building this**: `/departments/<id>/`'s
+  `getStaticPaths` skipped any department with zero sites entirely (`if (rows.length === 0) return []`), so
+  `minority` (Minority Welfare, currently 0 sites) 404'd instead of showing an empty state -- exactly what
+  this WP's own Verify bullet asks for, so worth being extra sure it's covered: fixed to always `paginate()`
+  every department, `GroupRollup` renders "No sites tracked here yet." for the empty case. Also added the
+  "inherited from platform" note to `sites/[id].astro` (checked live on `lsg-gp-azhiyur`, which shares 31
+  issues with the rest of `lsgkerala`) and refreshed the homepage's stale "Ministry/department/kind browsing
+  arrive in a later phase" copy + Phase-2-only intro paragraph, now that they exist. Verified: `audit` 991
+  tests green, `site` 17 tests green, `astro check` clean, full build (1,664 pages), Lighthouse mobile/
+  simulated-4G performance **100** on `/platforms/lsgkerala/` (1,200 members, the largest listing page in the
+  whole site), `/leaderboard/` and `/departments/lsgd/` (ADR-025's own per-listing-page Lighthouse
+  requirement). **Next time:** WP4.3 (status pages upgrade, feeds, static API, `/data/`). Separately, keep an
+  eye on WP3.7's cron gate.
 
 - **2026-09-22 · WP4.1 done: full site page** — session started by checking WP3.7's cron gate (not
   ready yet — no `schedule`-triggered `audit.yml` run has fired since the crash fixes landed, still

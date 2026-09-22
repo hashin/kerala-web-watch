@@ -1,0 +1,151 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getSites, getDepartments, getDistricts } from '../lib/data';
+import { medianScore, percentBroken, scoreDelta } from '../lib/rollups';
+
+interface Row {
+  id: string;
+  name: string;
+  href: string;
+  count: number;
+  broken: number;
+  median: number | null;
+}
+
+function rank<T extends { id: string; name: string }>(
+  groups: T[],
+  hrefOf: (g: T) => string,
+  sitesOf: (g: T) => ReturnType<typeof getSites>,
+): Row[] {
+  return groups
+    .map((g) => {
+      const sites = sitesOf(g);
+      return { id: g.id, name: g.name, href: hrefOf(g), count: sites.length, broken: percentBroken(sites), median: medianScore(sites) };
+    })
+    .filter((row) => row.count > 0)
+    // DESIGN §7.2: ranked by % broken (ascending = best), then median score (descending) as the tiebreak.
+    .sort((a, b) => a.broken - b.broken || (b.median ?? -1) - (a.median ?? -1));
+}
+
+const departmentRows = rank(
+  getDepartments(),
+  (d) => `/departments/${d.id}/`,
+  (d) => getSites().filter((s) => s.department === d.id),
+);
+const districtRows = rank(
+  getDistricts(),
+  (d) => `/districts/${d.id}/`,
+  (d) => getSites().filter((s) => s.district === d.id),
+);
+
+interface ImprovedRow {
+  id: string;
+  name: string;
+  href: string;
+  delta: number;
+}
+
+function mostImproved<T extends { id: string; name: string }>(
+  groups: T[],
+  hrefOf: (g: T) => string,
+  sitesOf: (g: T) => ReturnType<typeof getSites>,
+): ImprovedRow[] {
+  return groups
+    .map((g) => ({ id: g.id, name: g.name, href: hrefOf(g), delta: scoreDelta(sitesOf(g)) }))
+    .filter((row): row is ImprovedRow => row.delta != null && row.delta > 0)
+    .sort((a, b) => b.delta - a.delta)
+    .slice(0, 5);
+}
+
+const improvedDepartments = mostImproved(
+  getDepartments(),
+  (d) => `/departments/${d.id}/`,
+  (d) => getSites().filter((s) => s.department === d.id),
+);
+const improvedDistricts = mostImproved(
+  getDistricts(),
+  (d) => `/districts/${d.id}/`,
+  (d) => getSites().filter((s) => s.district === d.id),
+);
+---
+
+<Layout title="Leaderboard" description="Departments and districts ranked by how many of their websites are broken.">
+  <p><a href="/">&larr; Home</a></p>
+  <h1>Leaderboard</h1>
+  <p>Ranked by the share of sites currently down, hijacked or broken (lower is better), then by median score.</p>
+
+  <section aria-labelledby="departments-heading">
+    <h2 id="departments-heading">Departments</h2>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Department</th>
+          <th scope="col">Sites</th>
+          <th scope="col">% broken</th>
+          <th scope="col">Median score</th>
+        </tr>
+      </thead>
+      <tbody>
+        {departmentRows.map((row) => (
+          <tr>
+            <td><a href={row.href}>{row.name}</a></td>
+            <td>{row.count}</td>
+            <td>{row.broken}%</td>
+            <td>{row.median ?? '—'}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+
+  <section aria-labelledby="districts-heading">
+    <h2 id="districts-heading">Districts</h2>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">District</th>
+          <th scope="col">Sites</th>
+          <th scope="col">% broken</th>
+          <th scope="col">Median score</th>
+        </tr>
+      </thead>
+      <tbody>
+        {districtRows.map((row) => (
+          <tr>
+            <td><a href={row.href}>{row.name}</a></td>
+            <td>{row.count}</td>
+            <td>{row.broken}%</td>
+            <td>{row.median ?? '—'}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+
+  {(improvedDepartments.length > 0 || improvedDistricts.length > 0) && (
+    <section aria-labelledby="improved-heading">
+      <h2 id="improved-heading">Most improved this month</h2>
+      <p>Median score change over the last 30 days, among departments/districts with enough audit history to compare.</p>
+      {improvedDepartments.length > 0 && (
+        <>
+          <h3>Departments</h3>
+          <ul>
+            {improvedDepartments.map((row) => (
+              <li><a href={row.href}>{row.name}</a> &mdash; +{row.delta}</li>
+            ))}
+          </ul>
+        </>
+      )}
+      {improvedDistricts.length > 0 && (
+        <>
+          <h3>Districts</h3>
+          <ul>
+            {improvedDistricts.map((row) => (
+              <li><a href={row.href}>{row.name}</a> &mdash; +{row.delta}</li>
+            ))}
+          </ul>
+        </>
+      )}
+    </section>
+  )}
+</Layout>

@@ -28,9 +28,9 @@ const recentFixed = summary.recent_fixed
     <strong>{brokenHeadline}</strong> of <strong>{totals.sites}</strong> Kerala government websites are broken right now.
   </p>
   <p>
-    This is Phase 2: every site gets a light check (is it up? valid HTTPS? redirecting somewhere odd?)
-    every 6 hours. Deep audits (accessibility, security headers, content quality) start in Phase 3 —
-    until then, every site not already flagged shows as <HealthBadge status="unaudited" />.
+    Every site gets a light check (is it up? valid HTTPS? redirecting somewhere odd?) every 6 hours,
+    and a deep audit (accessibility, security headers, content quality, GIGW compliance) on a rolling
+    basis. A site not yet reached by the deep audit shows as <HealthBadge status="unaudited" />.
   </p>
 
   <section aria-labelledby="map-heading">
@@ -89,11 +89,15 @@ const recentFixed = summary.recent_fixed
     <h2 id="browse-heading">Browse</h2>
     <ul>
       <li><a href="/districts/">By district</a> ({districts.length} districts)</li>
+      <li><a href="/ministries/">By ministry</a></li>
+      <li><a href="/leaderboard/">Leaderboard</a></li>
       <li><a href="/status/down/">Down sites</a></li>
       <li><a href="/status/broken/">Broken sites</a></li>
       <li><a href="/status/unaudited/">Not yet audited</a></li>
+      <li><a href="/kinds/grama_panchayat/">All grama panchayats</a></li>
+      <li><a href="/kinds/university/">All universities</a></li>
+      <li><a href="/platforms/lsgkerala/">The lsgkerala platform</a></li>
     </ul>
-    <p class="muted">Ministry, department and kind browsing arrive in a later phase.</p>
   </section>
 </Layout>
 
@@ -105,9 +109,5 @@ const recentFixed = summary.recent_fixed
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
     gap: 0.75rem;
-  }
-  .muted {
-    color: var(--color-muted);
-    font-size: 0.9rem;
   }
 </style>

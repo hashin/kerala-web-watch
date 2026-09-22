@@ -20,6 +20,7 @@ import {
 } from '../../lib/data';
 import type { Issue } from '../../../../audit/dist/score.js';
 import { timeAgo } from '../../lib/format';
+import { platformWideIssues } from '../../lib/rollups';
 
 export function getStaticPaths() {
   return getSites().map((site) => ({ params: { id: site.id }, props: { site } }));
@@ -47,6 +48,14 @@ const SEVERITY_LABEL: Record<Issue['sev'], string> = { C: 'Critical', H: 'High',
 const issueGroups = (['C', 'H', 'M', 'L', 'I'] as const)
   .map((sev) => ({ sev, label: SEVERITY_LABEL[sev], issues: (site.result?.issues ?? []).filter((i) => i.sev === sev) }))
   .filter((g) => g.issues.length > 0);
+
+// ADR-008: platform-wide findings are reported once at /platforms/<p>/ -- a member page just
+// notes when one of its own issues is part of that shared pattern, instead of repeating the
+// platform's own explanation.
+const platformSharedIssueIds = site.platform
+  ? new Set(platformWideIssues(getSites().filter((s) => s.platform === site.platform)).map((f) => f.id))
+  : new Set<string>();
+const hasInheritedIssues = site.result?.issues.some((i) => platformSharedIssueIds.has(i.id)) ?? false;
 
 const passedChecks = deep?.checks.filter((c) => c.r === 'pass') ?? [];
 
@@ -121,6 +130,12 @@ const otherInDistrict = site.district
   {deep && (
     <section aria-labelledby="issues-heading">
       <h2 id="issues-heading">Issues</h2>
+      {hasInheritedIssues && (
+        <p class="inherited-note">
+          Some of these issues are shared by most sites on the {site.platform} platform &mdash;
+          see the <a href={`/platforms/${site.platform}/`}>platform page</a> for the platform-wide findings.
+        </p>
+      )}
       {issueGroups.length === 0 && !auditErrored && <p>No issues found in the most recent audit.</p>}
       {issueGroups.length === 0 && auditErrored && <p>No issues on record from a completed audit yet.</p>}
       {issueGroups.map((group) => (
@@ -205,6 +220,11 @@ const otherInDistrict = site.district
   .hijacked-url {
     color: var(--color-bad);
     font-weight: 600;
+  }
+  .inherited-note {
+    max-width: 60ch;
+    color: var(--color-muted);
+    font-size: 0.9rem;
   }
   .audit-error-note {
     max-width: 60ch;

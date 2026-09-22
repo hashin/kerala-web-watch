@@ -1,0 +1,47 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import SiteTable from '../../../components/SiteTable.astro';
+import Pagination from '../../../components/Pagination.astro';
+import GroupRollup from '../../../components/GroupRollup.astro';
+import { CHECKS } from '../../../../../audit/dist/checks/registry.js';
+import { getSites, getPlatforms } from '../../../lib/data';
+import { platformWideIssues } from '../../../lib/rollups';
+
+export async function getStaticPaths({ paginate }: { paginate: import('astro').PaginateFunction }) {
+  // ADR-025: lsgkerala alone has 1,200 member sites.
+  const PAGE_SIZE = 100;
+  const sites = getSites();
+  return getPlatforms().flatMap((platform) => {
+    const rows = sites.filter((s) => s.platform === platform).sort((a, b) => a.name.localeCompare(b.name));
+    return paginate(rows, { params: { platform }, pageSize: PAGE_SIZE });
+  });
+}
+
+const { platform } = Astro.params as { platform: string };
+const { page } = Astro.props as { page: import('astro').Page<ReturnType<typeof getSites>[number]> };
+const allMembers = getSites().filter((s) => s.platform === platform);
+// ADR-008: a platform-wide finding is reported once here instead of once per member site.
+const sharedIssues = platformWideIssues(allMembers);
+---
+
+<Layout title={platform} description={`Websites on the ${platform} platform.`}>
+  <p><a href="/">&larr; Home</a></p>
+  <h1>{platform}</h1>
+  <p>{page.total} member site{page.total === 1 ? '' : 's'}.</p>
+
+  {sharedIssues.length > 0 && (
+    <section aria-labelledby="platform-issues-heading">
+      <h2 id="platform-issues-heading">Platform-wide issues</h2>
+      <p>Found on at least 80% of this platform's deep-audited member sites -- fixing it once, at the platform level, fixes it everywhere.</p>
+      <ul>
+        {sharedIssues.map((f) => (
+          <li>{CHECKS[f.id].title.en} ({f.count} sites)</li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  <GroupRollup sites={allMembers} />
+  <SiteTable sites={page.data} showDistrict={false} />
+  <Pagination page={page} />
+</Layout>

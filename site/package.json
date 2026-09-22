@@ -11,7 +11,9 @@
     "build": "astro build",
     "prelint": "cd ../audit && npm ci && npm run build",
     "lint": "astro check",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "pretest": "cd ../audit && npm ci && npm run build",
+    "test": "vitest run"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
@@ -19,6 +21,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "vitest": "^5.0.1"
   }
 }

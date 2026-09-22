@@ -1,0 +1,54 @@
+---
+import HealthBadge from './HealthBadge.astro';
+import { CHECKS } from '../../../audit/dist/checks/registry.js';
+import { countByStatus, failedCheckCounts, medianScore, STATUS_ORDER } from '../lib/rollups';
+import type { SiteView } from '../lib/data';
+
+interface Props {
+  sites: SiteView[];
+}
+
+const { sites } = Astro.props;
+const counts = countByStatus(sites);
+const median = medianScore(sites);
+const topIssues = failedCheckCounts(sites).slice(0, 3);
+---
+
+{sites.length === 0 ? (
+  <p>No sites tracked here yet.</p>
+) : (
+  <div class="group-rollup">
+    <ul class="group-rollup__statuses">
+      {STATUS_ORDER.filter((s) => counts[s] > 0).map((s) => (
+        <li><HealthBadge status={s} /> &times;&nbsp;{counts[s]}</li>
+      ))}
+    </ul>
+    <p>Median score: {median ?? '—'}</p>
+    {topIssues.length > 0 && (
+      <div>
+        <p>Most common issues:</p>
+        <ol>
+          {topIssues.map((f) => (
+            <li>{CHECKS[f.id].title.en} ({f.count} site{f.count === 1 ? '' : 's'})</li>
+          ))}
+        </ol>
+      </div>
+    )}
+  </div>
+)}
+
+<style>
+  .group-rollup__statuses {
+    list-style: none;
+    margin: 0 0 0.5rem;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+  }
+  .group-rollup__statuses li {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+</style>

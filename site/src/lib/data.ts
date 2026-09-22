@@ -86,6 +86,19 @@ export function getDepartment(id: string): Department | undefined {
   return getDepartments().find((d) => d.id === id);
 }
 
+export function getKinds(): string[] {
+  return getRegistry().kinds;
+}
+
+/** Distinct `platform` values actually in use by the registry, not the full `Platform` union --
+ * a platform with zero current members shouldn't get a page (DESIGN §7.2's `/platforms/<p>/`). */
+export function getPlatforms(): string[] {
+  const platforms = getSites()
+    .map((s) => s.platform)
+    .filter((p): p is NonNullable<typeof p> => p !== null);
+  return [...new Set(platforms)].sort();
+}
+
 export function getPlaces(): Place[] {
   return getRegistry().places;
 }
@@ -96,6 +109,15 @@ export function getPlace(id: string): Place | undefined {
 
 export function getMinisters(): Minister[] {
   return getRegistry().ministers;
+}
+
+export function getMinister(id: string): Minister | undefined {
+  return getMinisters().find((m) => m.id === id);
+}
+
+export function getMinistrySites(minister: Minister): SiteView[] {
+  const departments = new Set(minister.departments);
+  return getSites().filter((s) => departments.has(s.department));
 }
 
 /** `ministers.yaml` maps a portfolio to the departments it covers (ADR-014) -- there's no

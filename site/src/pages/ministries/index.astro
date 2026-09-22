@@ -1,0 +1,49 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getMinisters, getMinistrySites } from '../../lib/data';
+import { percentBroken } from '../../lib/rollups';
+
+const cards = getMinisters()
+  .map((minister) => {
+    const sites = getMinistrySites(minister);
+    return { minister, count: sites.length, health: 100 - percentBroken(sites) };
+  })
+  .sort((a, b) => a.minister.name.localeCompare(b.minister.name));
+---
+
+<Layout title="Ministries" description="Government of Kerala portfolios, and the health of the websites under each.">
+  <p><a href="/">&larr; Home</a></p>
+  <h1>Ministries</h1>
+  <p>Kerala's cabinet portfolios, each covering one or more Secretariat departments.</p>
+
+  <ul class="ministry-cards">
+    {cards.map(({ minister, count, health }) => (
+      <li>
+        <a href={`/ministries/${minister.id}/`}>
+          <strong>{minister.name}</strong>
+          {minister.holder && <span class="ministry-cards__holder"> &middot; {minister.holder}</span>}
+        </a>
+        <p>{count} tracked site{count === 1 ? '' : 's'} &middot; {health}% not broken</p>
+      </li>
+    ))}
+  </ul>
+</Layout>
+
+<style>
+  .ministry-cards {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.75rem;
+  }
+  .ministry-cards li {
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+  }
+  .ministry-cards__holder {
+    color: var(--color-muted);
+    font-weight: 400;
+  }
+</style>

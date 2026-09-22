@@ -1,0 +1,55 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getMinisters, getMinister, getMinistrySites, getDepartment } from '../../lib/data';
+import { percentBroken } from '../../lib/rollups';
+
+export function getStaticPaths() {
+  return getMinisters().map((minister) => ({ params: { ministry: minister.id } }));
+}
+
+const { ministry: ministryId } = Astro.params;
+const minister = getMinister(ministryId as string)!;
+const sites = getMinistrySites(minister);
+
+// Portfolio -> departments -> sites (DESIGN §4/§7.2): each department here links through to its
+// own (already-paginated) /departments/<id>/ page rather than repeating a possibly huge table --
+// `lsgd`'s department alone covers 1,200+ sites, well past ADR-025's pagination threshold.
+const departmentRows = minister.departments
+  .map((deptId) => {
+    const department = getDepartment(deptId);
+    const deptSites = sites.filter((s) => s.department === deptId);
+    return department ? { department, count: deptSites.length, health: 100 - percentBroken(deptSites) } : null;
+  })
+  .filter((row): row is NonNullable<typeof row> => row !== null)
+  .sort((a, b) => a.department.name.localeCompare(b.department.name));
+---
+
+<Layout title={minister.name} description={`Government websites under the ${minister.name} portfolio.`}>
+  <p><a href="/ministries/">&larr; All ministries</a></p>
+  <h1>{minister.name}</h1>
+  {minister.holder && <p>Held by {minister.holder}.</p>}
+  <p>{sites.length} tracked site{sites.length === 1 ? '' : 's'} across {departmentRows.length} department{departmentRows.length === 1 ? '' : 's'}.</p>
+
+  {departmentRows.length === 0 ? (
+    <p>No departments with tracked sites under this portfolio yet.</p>
+  ) : (
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Department</th>
+          <th scope="col">Sites</th>
+          <th scope="col">Not broken</th>
+        </tr>
+      </thead>
+      <tbody>
+        {departmentRows.map(({ department, count, health }) => (
+          <tr>
+            <td><a href={`/departments/${department.id}/`}>{department.name}</a></td>
+            <td>{count}</td>
+            <td>{count > 0 ? `${health}%` : '—'}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  )}
+</Layout>

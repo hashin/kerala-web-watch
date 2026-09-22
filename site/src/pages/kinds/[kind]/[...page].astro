@@ -1,0 +1,35 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import SiteTable from '../../../components/SiteTable.astro';
+import Pagination from '../../../components/Pagination.astro';
+import GroupRollup from '../../../components/GroupRollup.astro';
+import { getSites, getKinds } from '../../../lib/data';
+
+// A kind like "police" or "office" reads oddly in a heading -- this is display text only, the
+// underlying value (`site.kind`, matched against `registry/kinds.yaml`) is untouched.
+function label(kind: string): string {
+  return kind.replace(/_/g, ' ').replace(/^./, (c) => c.toUpperCase());
+}
+
+export async function getStaticPaths({ paginate }: { paginate: import('astro').PaginateFunction }) {
+  // ADR-025: `grama_panchayat` alone is 941 sites, well past the 100-row threshold.
+  const PAGE_SIZE = 100;
+  const sites = getSites();
+  return getKinds().flatMap((kind) => {
+    const rows = sites.filter((s) => s.kind === kind).sort((a, b) => a.name.localeCompare(b.name));
+    return paginate(rows, { params: { kind }, pageSize: PAGE_SIZE });
+  });
+}
+
+const { kind } = Astro.params as { kind: string };
+const { page } = Astro.props as { page: import('astro').Page<ReturnType<typeof getSites>[number]> };
+---
+
+<Layout title={label(kind)} description={`Every ${label(kind).toLowerCase()} tracked by Kerala Web Watch.`}>
+  <p><a href="/">&larr; Home</a></p>
+  <h1>{label(kind)}</h1>
+  <p>{page.total} tracked site{page.total === 1 ? '' : 's'}.</p>
+  <GroupRollup sites={page.total > 0 ? getSites().filter((s) => s.kind === kind) : []} />
+  <SiteTable sites={page.data} />
+  <Pagination page={page} />
+</Layout>

@@ -2,18 +2,20 @@
 import Layout from '../../../layouts/Layout.astro';
 import SiteTable from '../../../components/SiteTable.astro';
 import Pagination from '../../../components/Pagination.astro';
+import GroupRollup from '../../../components/GroupRollup.astro';
 import { getSites, getDepartments, getDepartment } from '../../../lib/data';
 
 export async function getStaticPaths({ paginate }: { paginate: import('astro').PaginateFunction }) {
   // ADR-025: paginate at 100 rows/page once a listing exceeds it (e.g. `lsgd`, whose ~1,210 LSGI
   // sites would otherwise be one enormous page). A small department's page never reaches page 2.
+  // Every department gets at least a page-1 -- including one with zero sites (`minority` today) --
+  // rather than 404ing, so GroupRollup's empty state is reachable instead of a dead link.
   // Defined inside this function, not at module scope: Astro's build otherwise tree-shakes an
   // outer const that only getStaticPaths references, leaving it undefined at build time.
   const PAGE_SIZE = 100;
   const sites = getSites();
   return getDepartments().flatMap((department) => {
     const rows = sites.filter((s) => s.department === department.id).sort((a, b) => a.name.localeCompare(b.name));
-    if (rows.length === 0) return [];
     return paginate(rows, { params: { department: department.id }, pageSize: PAGE_SIZE });
   });
 }
@@ -27,6 +29,7 @@ const { page } = Astro.props as { page: import('astro').Page<ReturnType<typeof g
   <p><a href="/">&larr; Home</a></p>
   <h1>{department.name}{department.name_ml && <span lang="ml"> &middot; {department.name_ml}</span>}</h1>
   <p>{page.total} tracked sites.</p>
+  <GroupRollup sites={page.total > 0 ? getSites().filter((s) => s.department === department.id) : []} />
   <SiteTable sites={page.data} />
   <Pagination page={page} />
 </Layout>
