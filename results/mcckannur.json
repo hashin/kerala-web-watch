@@ -2,8 +2,8 @@
   "id": "mcckannur",
   "url": "https://mcc.kerala.gov.in",
   "light": {
-    "at": "2026-09-22T02:40:07.536Z",
-    "status_class": "timeout",
+    "at": "2026-09-22T10:42:02.712Z",
+    "status_class": "connect_fail",
     "dns": true,
     "status": null,
     "final_url": null,
@@ -11,7 +11,13 @@
     "ttfb_ms": null,
     "title": null,
     "byte_size": null,
-    "tls": null,
+    "tls": {
+      "valid": false,
+      "protocol": "TLSv1.3",
+      "expires": "Sep  8 23:59:59 2026 GMT",
+      "days_left": -13,
+      "issuer": "Sectigo Limited"
+    },
     "headers": {
       "hsts": false,
       "csp": false,
@@ -21,7 +27,7 @@
       "server": null
     },
     "content_hash": null,
-    "http_redirects_to_https": false,
+    "http_redirects_to_https": true,
     "geo_block_suspect": false,
     "domain": "kerala.gov.in",
     "final_domain": null,
@@ -30,7 +36,7 @@
   },
   "deep": null,
   "score": null,
-  "status": "down",
+  "status": "broken",
   "issues": [],
   "history": [
     {
@@ -44,5 +50,5 @@
       "score": null
     }
   ],
-  "deep_bump": false
+  "deep_bump": true
 }
