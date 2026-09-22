@@ -120,7 +120,7 @@ export async function runDeepAudit(site: Site, existing: Result | null, opts: Ru
 
     const checks = runChecks(ctx);
     const scoreOutcome = scoreSite(checks);
-    const screenshot = await buildScreenshot(existing, captured, now);
+    const screenshot = await buildScreenshot(site.id, existing, captured);
     const deep: DeepResult = {
       at: now().toISOString(),
       run: runId,
@@ -156,15 +156,20 @@ export function buildTech(captured: CaptureResult, light: LightResult): DeepResu
   };
 }
 
-interface ScreenshotOutcome {
+export interface ScreenshotOutcome {
   record: DeepResult['screenshot'];
   buffers: { desktop: Buffer; mobile: Buffer } | null;
 }
 
 /** ADR-017: only replace the stored screenshot when the desktop view's aHash moved by more than
  * `PHASH_REPLACE_THRESHOLD` bits from last time -- otherwise keep the previous record (and don't
- * hand the caller fresh buffers to write) so a cosmetic non-change doesn't touch the data branch. */
-async function buildScreenshot(existing: Result | null, captured: CaptureResult, now: () => Date): Promise<ScreenshotOutcome> {
+ * hand the caller fresh buffers to write) so a cosmetic non-change doesn't touch the data branch.
+ * The filename is keyed by site id, not by date (DESIGN §5.5's own example is `keralapsc.webp`):
+ * a date-only name is shared by every site captured that day, so every site's fresh screenshot
+ * would overwrite the same two files in `out/screenshots/` and every site's stored record would
+ * point at whichever capture wrote last -- found live in WP4.1 (site page dogfooding) once real
+ * multi-site batches made the collision visible. */
+export async function buildScreenshot(siteId: string, existing: Result | null, captured: CaptureResult): Promise<ScreenshotOutcome> {
   const phash = await averageHash(captured.desktopScreenshot);
   const previous = existing?.deep?.screenshot;
   if (previous && hammingDistance(previous.phash, phash) <= PHASH_REPLACE_THRESHOLD) {
@@ -172,7 +177,7 @@ async function buildScreenshot(existing: Result | null, captured: CaptureResult,
   }
   const [desktop, mobile] = await Promise.all([toWebp(captured.desktopScreenshot), toWebp(captured.mobileScreenshot)]);
   return {
-    record: { desktop: `${today(now())}.webp`, mobile: `${today(now())}-m.webp`, phash },
+    record: { desktop: `${siteId}.webp`, mobile: `${siteId}-m.webp`, phash },
     buffers: { desktop, mobile },
   };
 }
