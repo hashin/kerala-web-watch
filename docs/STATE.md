@@ -6,19 +6,17 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 ## Now
 
 - **Phase:** 3 — Deep audits
-- **Current WP:** WP3.7 (in progress: step 1 done; step 2 hit two distinct crash bugs, both fixed this session — retry not yet run) — `audit.yml` live: 3 → 50 → cron
-- **Next action:** Retry step 2 again: `gh workflow run "Deep audit (rolling)" -f batch_size=50`. The first retry
-  (run `35631713466`, after only the `runner.ts` fix) still crashed both shards, but that run's own logs proved
-  the fix works as designed and exposed exactly why a second, more general fix was needed (see Handoff below) —
-  both fixes are now in place. If a *third* distinct unhandled-rejection signature turns up, don't chase it
-  site-by-site again; the cli.ts safety net should already catch anything of this shape, so a further crash would
-  mean something categorically different (OOM, a real timeout, disk space) worth checking `gh run view` for
-  first. Once step 2 completes cleanly: read per-site timing, decide on `--max-batch` (300, ADR-004) — step 1's
-  timing was ~55–65 s/site, both crash-truncated step-2 attempts stayed consistent with that (~53–74 s/site
-  across the sites that did complete). Then step 3 (cron is already in the committed file; needs two consecutive
-  scheduled runs over real calendar days to close WP3.7, same kind of multi-day gate as WP2.3's open question 8).
+- **Current WP:** WP3.7 (in progress: steps 1 and 2 done; step 3's cron gate is the only thing left) — `audit.yml` live: 3 → 50 → cron
+- **Next action:** Step 3: `audit.yml`'s cron (`30 21 * * *`, 03:00 IST) is already live and needs **two consecutive
+  *scheduled*-triggered runs to succeed** to close WP3.7 (same kind of multi-day gate as WP2.3's open question 8
+  — no single session can satisfy this). `gh run list --workflow=audit.yml` and look for two `schedule`-trigger
+  rows in a row with `success`. Note: the `schedule` run from the night of 2026-09-21→22 (`35671067666`) failed
+  — it ran *before* this session's two crash fixes landed, so it doesn't count; the counter starts from the next
+  scheduled firing after today. `--max-batch` (300, ADR-004) needs no change: a clean `batch_size=50` run
+  (`35681566429`, 2026-09-22) took ~28 min/shard for 25 sites each (~64–70 s/site), comfortably under the 90-min
+  budget even at a full 50-site shard.
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
-- **Registry size:** 1,500 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated) · **Deep-audited:** 0 · **Light-checked:** 1,500/1,500 (15 down, 19 broken as of first full run 2026-09-21T05:30Z) · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data instead of placeholders
+- **Registry size:** 1,500 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated) · **Deep-audited:** 97/1,500 (as of the clean `batch_size=50` run, 2026-09-22) · **Light-checked:** 1,500/1,500 (15 down, 19 broken as of first full run 2026-09-21T05:30Z) · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data instead of placeholders. Note: the site's own `/sites/<id>/` page only renders light-check detail today (WP2.4 was explicitly "light-only") — a deep-audited site's badge/status is correct but its score, issues, screenshots and Lighthouse numbers aren't shown yet; that's WP4.1, not a bug.
 - **Candidates backlog:** ~2,476 fresh, uncurated candidates as of 2026-09-21 (mostly from a new `kerala-gov-in-subdomains` source — see Handoff below), waiting for a WP1.7-style curation pass. Not yet in `registry/sites/`.
 
 ## Work packages
@@ -47,7 +45,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 3.4 | Content + GIGW checks (bilingual) + fixtures | done | f72501c | 11 content.* + 16 gigw.* checks (content.broken_*/console_errors deferred to WP3.5's crawler), 792 tests; new `audit/src/text/{dates,malayalam,patterns}.ts`; verifier mutation-tested and found 3 undertested paths (a threshold "passing by coincidence", a short-circuit never actually forced, gigw.* pattern-to-check wiring unverified per-check), all fixed and re-verified by hand |
 | 3.5 | Playwright runner: capture, axe, Lighthouse, crawl, screenshots; fixture-server smoke test | done | 77b8181 | 923 tests; verifier mutation-tested 10 new files, found and fixed 8 real gaps across crawl/lighthouse/screenshot/perf/content/store/fixture-server (all boundary conditions or an untested function), all re-verified; all 84 check ids now implemented |
 | 3.6 | `plan` scheduler + `merge` (outlinks, phash gating) + tests | done | 8a3659c | 979 tests; verifier mutation-tested and found 2 undertested paths (merge fold's history source, screenshot phash-copy gate's exact threshold boundary), both fixed and re-verified by hand |
-| 3.7 | audit.yml live (3 → 50 → cron) | in progress | ae87b71 (workflow), 97be5e0 + see handoff (two crash fixes) | step 1 done; step 2's two crash bugs fixed, retry pending |
+| 3.7 | audit.yml live (3 → 50 → cron) | in progress | ae87b71 (workflow), 97be5e0 + 24d5f02 (two crash fixes), run 35681566429 (clean batch_size=50) | steps 1–2 done; step 3's two-consecutive-scheduled-runs gate remains |
 | 4.1 | Full site page | todo | | |
 | 4.2 | Ministry / department / kind / platform / leaderboard pages | todo | | |
 | 4.3 | Status pages, feeds, static API, data page | todo | | |
@@ -105,6 +103,21 @@ _None yet. Each entry: what, why, ADR number._
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-09-22 · WP3.7 step 2 done: a clean, complete `batch_size=50` run** — retry #2 (run
+  `35681566429`, with both crash fixes from the entries below in place) succeeded end-to-end: both
+  shards completed all 25 of their sites (including `d-alappuzha`, the exact site that crashed both
+  prior attempts — this time it just failed gracefully with a plain `page.goto` timeout, recorded
+  normally, no crash), merge logged `sites=50`, and `data`'s commit (`33b6128`) triggered a clean
+  Pages rebuild. Per-site timing: ~64–70 s/site across both shards (28-ish minutes for 25 sites
+  each), consistent with step 1's ~55–65 s/site estimate and comfortably under the 90-min/shard
+  budget even at a full 50 — no reason to touch `--max-batch` (300, ADR-004). `summary.json` now
+  shows `deep_audited: 97` (cumulative across step 1's 3-site smoke test and every partial/complete
+  run since, deduped by site id). Spot-checked live: `/sites/infopark/` and `/sites/kerala-gov/`
+  show the right badge; confirmed (not a bug) that neither shows a numeric score or Lighthouse/issue
+  detail yet, because WP2.4's site page was explicitly built light-check-only — that richer view is
+  WP4.1. **What's left for WP3.7:** only step 3, the two-consecutive-scheduled-runs gate (see Now
+  section above) — a real multi-day wait, not something to force in one session.
 
 - **2026-09-21 (later) · WP3.7 step 2, retry #1 crashed again — a *second*, distinct
   unhandled-rejection bug found, fixed and verified; general safety net added** — after the
