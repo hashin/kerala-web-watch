@@ -6,10 +6,11 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 ## Now
 
 - **Phase:** 4 — Full site
-- **Current WP:** WP4.1 and WP4.2 both done this session — full site page, then ministry/department/kind/
-  platform/leaderboard pages. WP3.7 is unaffected and still open on its own: steps 1–2 done, step 3's cron
-  gate is the only thing left (see below).
-- **Next action:** WP4.3 (status pages upgrade, feeds, static API, data page). Separately, still check
+- **Current WP:** WP4.3 done this session (verification only — the code was already committed by a prior
+  session that deferred its test run to a cloud session; this session ran that verification, found and fixed
+  two real test-fixture bugs, and closed it out). WP3.7 is unaffected and still open on its own: steps 1–2
+  done, step 3's cron gate is the only thing left (see below).
+- **Next action:** WP4.4 (methodology page generated from `registry.ts`). Separately, still check
   WP3.7's gate opportunistically: `audit.yml`'s cron (`30 21 * * *`, 03:00 IST) needs **two consecutive
   *scheduled*-triggered runs to succeed** to close WP3.7 (same kind of multi-day gate as WP2.3's open
   question 8 — no single session can satisfy this). `gh run list --workflow=audit.yml` and look for two
@@ -49,7 +50,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 3.7 | audit.yml live (3 → 50 → cron) | in progress | ae87b71 (workflow), 97be5e0 + 24d5f02 (two crash fixes), run 35681566429 (clean batch_size=50) | steps 1–2 done; step 3's two-consecutive-scheduled-runs gate remains |
 | 4.1 | Full site page | done | 884c89d (25db56a: screenshot-filename fix) | 9 components (ScoreRing, CategoryBars, IssueCard, Sparkline, Screenshot, TechFacts, SiteActions, RelatedSites + reused AvailabilityStrip); found & fixed a real production bug while dogfooding (see Handoff): `runner.ts`'s screenshot filenames were date-only, not per-site, so every site captured the same day shared (and clobbered) the same two `.webp` files — fixed to `<site.id>.webp`, 3 new tests; Lighthouse a11y 100 on a poor and a down site page; verified hijacked/healthy rendering with temporary synthetic data (reverted, not committed) since no live site has either status yet |
 | 4.2 | Ministry / department / kind / platform / leaderboard pages | done | 5f63fd7 | `site/src/lib/rollups.ts` (countByStatus, medianScore, failedCheckCounts, percentBroken, platformWideIssues, scoreDelta) + first vitest suite in `site/` (17 tests); new `ministries/index.astro` + `ministries/[ministry].astro`, `kinds/[kind]/[...page].astro`, `platforms/[platform]/[...page].astro`, `leaderboard.astro`; upgraded `departments/[department]/[...page].astro` with a `GroupRollup` (status counts, median, top-3 issues) and fixed it to generate a page for every department, including one with zero sites (`minority`) — previously 404'd, now shows an empty state (this WP's own Verify criterion); `sites/[id].astro` gained the "inherited from platform" note; Lighthouse mobile/4G performance 100 on `/platforms/lsgkerala/` (1,200 members, the largest listing), `/leaderboard/` and `/departments/lsgd/` (ADR-025) |
-| 4.3 | Status pages, feeds, static API, data page | todo | | |
+| 4.3 | Status pages, feeds, static API, data page | done | 97cae21 (+ d6e2ea3 test-fixture fixes) | `api/summary.json`, `api/sites.csv`, `api/all.json` (evidence stripped for gzip-friendly bulk export), `api/sites/<id>.json` (full evidence), `feeds/broken.xml` + `feeds/fixed.xml` (Atom, last 100 transitions via new `allTransitions()`), `/data/` page; new `audit/src/summary.ts` `transitionDay()` helper shared by `recentTransitions`/`allTransitions`, new `site/src/lib/api.ts` pure builders + first `site` API test file; this session picked up verification a prior session had explicitly deferred to a cloud session (commit message said so) and found + fixed two real test-only bugs: `site/tests/api.test.ts` expected a hardcoded URL but its fixture's `result()` override supplied its own auto-generated one, and `audit/tests/summary.test.ts`'s `allTransitions` test had an inverted `up: i < 20` boolean that tested the opposite transition direction from what it claimed to; both fixed, not the implementation — 994 audit + 26 site tests, `astro check` 0/0/0, `astro build` 1665 pages all green |
 | 4.4 | Methodology page generated from registry.ts | todo | | |
 | 4.5 | Pagefind, i18n scaffold, self-audit ≥ 80 | todo | | |
 | 4.6 | squash-data.yml, report.yml, issue forms | todo | | |
@@ -112,6 +113,26 @@ _None yet. Each entry: what, why, ADR number._
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-09-24 · WP4.3 closed out (verification only)** — the feature itself (`api/*`, `feeds/*.xml`,
+  `/data/`, `allTransitions()`) was written and committed by a prior session (`97cae21`) that explicitly
+  deferred its test run to a cloud session because the local sandbox was too slow (a plain `tsc` build alone
+  took ~20 min). This session ran that deferred verification and found two real bugs, both in tests, not
+  the implementation: `site/tests/api.test.ts`'s `sitesToCsv` test expected a hardcoded URL but its
+  `site()`/`result()` fixture builder auto-generates its own URL once a full `result()` override is passed,
+  so it silently returned the wrong value (added an explicit `url:` override); `audit/tests/summary.test.ts`'s
+  `allTransitions` test constructed history with an inverted `up: i < 20` boolean, which actually encoded an
+  up-transition while the test claimed (and asserted) a down-transition — CI's `Test` workflow had already
+  failed on `main` for this (`push` run 35864919498) since 2026-09-23, unnoticed until now. Also hit two
+  environment-only flakes worth noting so a future session doesn't chase them: a `sharp`/libvips
+  `Unknown system error -70` in `runner-screenshot-filename.test.ts` under the full 991-test parallel run
+  (passed clean in isolation, passed clean on re-run — a transient macOS sandbox IO glitch, not a real bug),
+  and a `vitest-pool-runner` worker-timeout on the first `site` test attempt (passed clean on retry). Full
+  local verification now green: 994 audit tests, 26 site tests, `astro check` (0/0/0, 47 files), `astro
+  build` (1665 pages, ~75 min in this sandbox — do not read into that wall-clock number, it's this specific
+  sandboxed environment, not representative of CI or a normal dev machine). Commit `d6e2ea3`. **Next: WP4.4**
+  (methodology page generated from `registry.ts`, per DESIGN and `audit/src/checks/registry.ts`'s own
+  "single source of truth for citizen-facing check explanations" convention).
 
 - **2026-09-22 · WP4.2 done: ministry/department/kind/platform/leaderboard pages** — continued straight
   from WP4.1 in the same session (context budget still had headroom). New `site/src/lib/rollups.ts`
