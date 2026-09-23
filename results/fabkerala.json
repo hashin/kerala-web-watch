@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-22T03:23:07.873Z",
-    "run": "1790047262035",
+    "at": "2026-09-22T23:55:41.079Z",
+    "run": "1790121162405",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 22,
-      "accessibility": 79,
+      "performance": 23,
+      "accessibility": 78,
       "best_practices": 92,
       "seo": 73
     },
     "axe": {
       "critical": 8,
-      "serious": 28,
+      "serious": 27,
       "moderate": 94,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 11,
-      "broken": 11
+      "broken": 13
     },
     "tech": {
       "cms": null,
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3752ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -171,7 +170,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "28 serious violation(s)"
+        "ev": "27 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -191,7 +190,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "9 low-contrast element(s)"
+        "ev": "8 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -213,17 +212,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "79/100"
+        "ev": "78/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "22/100"
+        "ev": "23/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "30789.72049999999ms"
+        "ev": "26432.35724999999ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +232,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "1167.7MB"
+        "ev": "503.6MB"
       },
       {
         "id": "perf.viewport",
@@ -280,7 +279,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "2/30 crawled link(s) broken (https://fabkerala.gov.in/index.php/at-a-glance/our-offices/jd-shipyard, https://fabkerala.gov.in/index.php/orders/government-orders/orders-govt)"
       },
       {
         "id": "content.broken_pdfs",
@@ -290,7 +290,7 @@
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "2 broken image(s)"
+        "ev": "1 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -311,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "329 console error(s): Refused to apply style from 'https://fabkerala.gov.in/media/com_sppagebuilder/assets/iconfont/icoffzony/style.css?143fb2b8f5d98f82feb246ecc61db33d' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+        "ev": "312 console error(s): Refused to apply style from 'https://fabkerala.gov.in/media/com_sppagebuilder/assets/iconfont/icoffzony/style.css?143fb2b8f5d98f82feb246ecc61db33d' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       },
       {
         "id": "gigw.contact",
@@ -387,7 +387,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "id.robots",
@@ -485,13 +485,13 @@
     ]
   },
   "score": {
-    "overall": 55,
+    "overall": 54,
     "security": 76,
     "accessibility": 22,
-    "content": 38,
+    "content": 28,
     "gigw": 56,
     "performance": 72,
-    "identity": 88
+    "identity": 92
   },
   "status": "needs-work",
   "issues": [
@@ -516,14 +516,14 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3752ms"
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "2/30 crawled link(s) broken (https://fabkerala.gov.in/index.php/at-a-glance/our-offices/jd-shipyard, https://fabkerala.gov.in/index.php/orders/government-orders/orders-govt)"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "28 serious violation(s)"
+      "ev": "27 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -533,7 +533,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "9 low-contrast element(s)"
+      "ev": "8 low-contrast element(s)"
     },
     {
       "id": "content.copyright_year",
@@ -561,12 +561,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "30789.72049999999ms"
+      "ev": "26432.35724999999ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "1167.7MB"
+      "ev": "503.6MB"
     },
     {
       "id": "sec.csp",
@@ -585,7 +585,7 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "2 broken image(s)"
+      "ev": "1 broken image(s)"
     },
     {
       "id": "content.meta_desc",
@@ -594,7 +594,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "329 console error(s): Refused to apply style from 'https://fabkerala.gov.in/media/com_sppagebuilder/assets/iconfont/icoffzony/style.css?143fb2b8f5d98f82feb246ecc61db33d' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+      "ev": "312 console error(s): Refused to apply style from 'https://fabkerala.gov.in/media/com_sppagebuilder/assets/iconfont/icoffzony/style.css?143fb2b8f5d98f82feb246ecc61db33d' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
     },
     {
       "id": "gigw.feedback",
@@ -630,10 +630,6 @@
       "sev": "L"
     },
     {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
       "id": "id.robots",
       "sev": "L",
       "ev": "robots.txt returned 404"
@@ -650,6 +646,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-23",
+      "up": true,
+      "score": 54
+    },
+    {
       "d": "2026-09-22",
       "up": true,
       "score": 55
@@ -660,5 +661,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

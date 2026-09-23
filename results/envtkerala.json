@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-22T03:21:30.253Z",
-    "run": "1790047141884",
+    "at": "2026-09-23T00:04:17.082Z",
+    "run": "1790121707312",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 61,
+      "performance": 60,
       "accessibility": 87,
       "best_practices": 96,
       "seo": 77
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 7,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "WordPress 6.5.8",
@@ -98,7 +98,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "6369ms"
+        "ev": "6476ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -217,12 +217,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "61/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7702.370500000001ms"
+        "ev": "11416.764499999997ms"
       },
       {
         "id": "perf.cls",
@@ -276,8 +276,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://envt.kerala.gov.in/contact-us/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -461,10 +460,10 @@
     ]
   },
   "score": {
-    "overall": 55,
+    "overall": 56,
     "security": 38,
     "accessibility": 72,
-    "content": 42,
+    "content": 52,
     "gigw": 22,
     "performance": 76,
     "identity": 100
@@ -491,14 +490,9 @@
       "ev": "ML-NILA"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://envt.kerala.gov.in/contact-us/)"
-    },
-    {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "6369ms"
+      "ev": "6476ms"
     },
     {
       "id": "sec.hsts",
@@ -537,7 +531,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7702.370500000001ms"
+      "ev": "11416.764499999997ms"
     },
     {
       "id": "perf.tap_targets",
@@ -608,6 +602,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-23",
+      "up": true,
+      "score": 56
+    },
+    {
       "d": "2026-09-22",
       "up": true,
       "score": 55
@@ -618,5 +617,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

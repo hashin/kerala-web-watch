@@ -37,18 +37,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-22T03:14:41.561Z",
-    "run": "1790046830182",
+    "at": "2026-09-22T23:55:10.718Z",
+    "run": "1790121259066",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 54,
+      "performance": 55,
       "accessibility": 81,
       "best_practices": 65,
       "seo": 77
     },
     "axe": {
-      "critical": 2,
-      "serious": 40,
+      "critical": 1,
+      "serious": 23,
       "moderate": 2,
       "minor": 0
     },
@@ -167,12 +167,12 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "2 critical violation(s)"
+        "ev": "1 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "40 serious violation(s)"
+        "ev": "23 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -190,7 +190,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "18 low-contrast element(s)"
+        "ev": "13 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -217,12 +217,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "54/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10534.459499999999ms"
+        "ev": "9370.021999999999ms"
       },
       {
         "id": "perf.cls",
@@ -306,7 +306,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "41 console error(s): Unrecognized Content-Security-Policy directive 'base-url'."
+        "ev": "42 console error(s): Unrecognized Content-Security-Policy directive 'base-url'."
       },
       {
         "id": "gigw.contact",
@@ -412,7 +412,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://connect.facebook.net/en_US/all.js?hash=3f6ba3dbd0c71cc83007e2256a9839a5, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
+        "ev": "https://connect.facebook.net/en_US/all.js?hash=01d1760ff5a07152839903bd493b2312, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
       }
     ],
     "screenshot": {
@@ -478,7 +478,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "2 critical violation(s)"
+      "ev": "1 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -493,12 +493,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "40 serious violation(s)"
+      "ev": "23 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "18 low-contrast element(s)"
+      "ev": "13 low-contrast element(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -524,7 +524,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10534.459499999999ms"
+      "ev": "9370.021999999999ms"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -539,7 +539,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "41 console error(s): Unrecognized Content-Security-Policy directive 'base-url'."
+      "ev": "42 console error(s): Unrecognized Content-Security-Policy directive 'base-url'."
     },
     {
       "id": "gigw.feedback",
@@ -580,10 +580,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://connect.facebook.net/en_US/all.js?hash=3f6ba3dbd0c71cc83007e2256a9839a5, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
+      "ev": "https://connect.facebook.net/en_US/all.js?hash=01d1760ff5a07152839903bd493b2312, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
     }
   ],
   "history": [
+    {
+      "d": "2026-09-23",
+      "up": true,
+      "score": 64
+    },
     {
       "d": "2026-09-22",
       "up": true,
@@ -595,5 +600,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

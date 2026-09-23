@@ -35,19 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-22T00:28:03.006Z",
-    "run": "1790036814996",
+    "at": "2026-09-23T00:00:45.919Z",
+    "run": "1790121550610",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 29,
+      "performance": 33,
       "accessibility": 78,
-      "best_practices": 88,
+      "best_practices": 96,
       "seo": 69
     },
     "axe": {
       "critical": 6,
-      "serious": 29,
-      "moderate": 3,
+      "serious": 30,
+      "moderate": 4,
       "minor": 1
     },
     "crawl": {
@@ -170,12 +170,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "29 serious violation(s)"
+        "ev": "30 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "4 moderate/minor violation(s)"
+        "ev": "5 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -217,12 +217,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "29/100"
+        "ev": "33/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8346.657500000001ms"
+        "ev": "8790.029999999999ms"
       },
       {
         "id": "perf.cls",
@@ -231,8 +231,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "4.2MB"
+        "r": "fail",
+        "ev": "9.7MB"
       },
       {
         "id": "perf.viewport",
@@ -266,7 +266,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-user"
+        "ev": "ml-content"
       },
       {
         "id": "content.obsolete_tech",
@@ -308,7 +308,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "3 console error(s): jQuery(...).vTicker is not a function"
+        "ev": "4 console error(s): Failed to load resource: the server responded with a status of 400 ()"
       },
       {
         "id": "gigw.contact",
@@ -417,9 +417,9 @@
       }
     ],
     "screenshot": {
-      "desktop": "2026-09-22.webp",
-      "mobile": "2026-09-22-m.webp",
-      "phash": "20fffff9f1f9f900"
+      "desktop": "ksotto.webp",
+      "mobile": "ksotto-m.webp",
+      "phash": "003c3c1c1c1c3c00"
     },
     "outlinks": [
       {
@@ -463,6 +463,11 @@
         "texts": []
       },
       {
+        "host": "x.com",
+        "count": 1,
+        "texts": []
+      },
+      {
         "host": "cdit.org",
         "count": 1,
         "texts": [
@@ -477,7 +482,7 @@
     "accessibility": 40,
     "content": 46,
     "gigw": 22,
-    "performance": 77,
+    "performance": 72,
     "identity": 100
   },
   "status": "needs-work",
@@ -500,7 +505,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-user"
+      "ev": "ml-content"
     },
     {
       "id": "content.broken_links",
@@ -514,7 +519,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "29 serious violation(s)"
+      "ev": "30 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -549,12 +554,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8346.657500000001ms"
+      "ev": "8790.029999999999ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "4.2MB"
+      "ev": "9.7MB"
     },
     {
       "id": "sec.xcto",
@@ -567,7 +572,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "4 moderate/minor violation(s)"
+      "ev": "5 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -582,7 +587,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "3 console error(s): jQuery(...).vTicker is not a function"
+      "ev": "4 console error(s): Failed to load resource: the server responded with a status of 400 ()"
     },
     {
       "id": "gigw.feedback",
@@ -633,6 +638,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-23",
+      "up": true,
+      "score": 53
+    },
+    {
       "d": "2026-09-22",
       "up": true,
       "score": 53
@@ -643,5 +653,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

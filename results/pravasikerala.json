@@ -35,13 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-22T03:30:17.829Z",
-    "run": "1790047703330",
+    "at": "2026-09-23T00:02:53.809Z",
+    "run": "1790121649498",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 31,
+      "performance": 34,
       "accessibility": 84,
-      "best_practices": 92,
+      "best_practices": 88,
       "seo": 92
     },
     "axe": {
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4034ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -215,22 +216,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "31/100"
+        "ev": "34/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "42952.291000000085ms"
+        "ev": "41562.23399999998ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.83"
+        "ev": "0.51"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "51.4MB"
+        "ev": "54.6MB"
       },
       {
         "id": "perf.viewport",
@@ -485,6 +486,11 @@
       "ev": "pravasikerala.org"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "4034ms"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
       "ev": "24 serious violation(s)"
@@ -510,12 +516,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "42952.291000000085ms"
+      "ev": "41562.23399999998ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "51.4MB"
+      "ev": "54.6MB"
     },
     {
       "id": "sec.csp",
@@ -558,7 +564,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.83"
+      "ev": "0.51"
     },
     {
       "id": "perf.images",
@@ -585,6 +591,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-23",
+      "up": true,
+      "score": 68
+    },
+    {
       "d": "2026-09-22",
       "up": true,
       "score": 68
@@ -595,5 +606,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,18 +35,23 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-22T03:05:46.103Z",
-    "run": "1790046226012",
+    "at": "2026-09-22T23:45:59.690Z",
+    "run": "1790120713809",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 50,
+      "accessibility": 90,
+      "best_practices": 73,
+      "seo": 92
+    },
     "axe": {
-      "critical": 0,
-      "serious": 0,
+      "critical": 9,
+      "serious": 1,
       "moderate": 0,
-      "minor": 0
+      "minor": 17
     },
     "crawl": {
-      "pages": 0,
+      "pages": 30,
       "pdfs": 0,
       "broken": 0
     },
@@ -55,14 +60,462 @@
       "server": null,
       "jquery": null
     },
-    "checks": [],
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "pass"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "pass"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "fail",
+        "ev": "href=\"http://gmpg.org/xfn/11\""
+      },
+      {
+        "id": "sec.csp",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "pass"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "pass"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "pass"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "pass"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "fail",
+        "ev": "9 critical violation(s)"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "1 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "17 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "fail",
+        "ev": "1 low-contrast element(s)"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "90/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "50/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "24913.426999999996ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "pass"
+      },
+      {
+        "id": "perf.weight",
+        "r": "warn",
+        "ev": "7.8MB"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "pass"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "na"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-IN"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "pass"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "pass"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "pass"
+      },
+      {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "7 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      },
+      {
+        "id": "gigw.contact",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.search",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "pass"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "pass"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "na"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "na"
+      },
+      {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "pass"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "warn",
+        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-041NGNDMW5&amp;cx=c&amp;gtm=4e69l1, https://www.googletagmanager.com/gtag/js?id=UA-131905579-1"
+      }
+    ],
     "screenshot": {
       "desktop": "2026-09-21.webp",
       "mobile": "2026-09-21-m.webp",
       "phash": "ff1f01000000bfff"
     },
-    "outlinks": [],
-    "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://kasargod.nic.in/en/\", waiting until \"load\"\n"
+    "outlinks": [
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "kerala.gov.in",
+        "count": 10,
+        "texts": [
+          "കേരള സര്‍ക്കാര്‍",
+          "SIR 2026 ASD List",
+          "Bekal Fort and Beach\n                        A Panaromic View of Bekal Beach from the Fort"
+        ]
+      },
+      {
+        "host": "digitalindia.gov.in",
+        "count": 2,
+        "texts": []
+      },
+      {
+        "host": "youtube.com",
+        "count": 1,
+        "texts": [
+          "e-Office Video Tutorials"
+        ]
+      },
+      {
+        "host": "rti.gov.in",
+        "count": 1,
+        "texts": [
+          "Right to Information Act"
+        ]
+      },
+      {
+        "host": "censusindia.gov.in",
+        "count": 1,
+        "texts": [
+          "Census"
+        ]
+      },
+      {
+        "host": "forms.gle",
+        "count": 1,
+        "texts": [
+          "Aspirational Block Fellow-Link"
+        ]
+      },
+      {
+        "host": "india.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "pmindia.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "pmnrf.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "data.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "mygov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "incredibleindia.org",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "www.nic.in",
+        "count": 1,
+        "texts": [
+          "National Informatics Centre"
+        ]
+      },
+      {
+        "host": "meity.gov.in",
+        "count": 1,
+        "texts": [
+          "Ministry of Electronics & Information Technology"
+        ]
+      },
+      {
+        "host": "s3waas.gov.in",
+        "count": 1,
+        "texts": []
+      }
+    ]
   },
   "score": {
     "overall": 69,
@@ -73,7 +526,7 @@
     "performance": 81,
     "identity": 96
   },
-  "status": "down",
+  "status": "needs-work",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -116,7 +569,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "28248.409999999996ms"
+      "ev": "24913.426999999996ms"
     },
     {
       "id": "perf.weight",
@@ -170,10 +623,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-041NGNDMW5&amp;cx=c&amp;gtm=4e69h0, https://www.googletagmanager.com/gtag/js?id=UA-131905579-1"
+      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-041NGNDMW5&amp;cx=c&amp;gtm=4e69l1, https://www.googletagmanager.com/gtag/js?id=UA-131905579-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-09-23",
+      "up": true,
+      "score": 69
+    },
     {
       "d": "2026-09-22",
       "up": false,
@@ -185,5 +643,5 @@
       "score": 69
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

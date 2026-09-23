@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-22T00:31:44.486Z",
-    "run": "1790037036855",
+    "at": "2026-09-23T00:04:32.468Z",
+    "run": "1790121848345",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 59,
+      "performance": 55,
       "accessibility": 92,
       "best_practices": 92,
       "seo": 92
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 13,
       "pdfs": 0,
-      "broken": 3
+      "broken": 0
     },
     "tech": {
       "cms": "WordPress 7.0.5",
@@ -97,8 +97,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3894ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -122,7 +121,8 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "warn",
+        "ev": "29 days left"
       },
       {
         "id": "sec.tls_version",
@@ -218,12 +218,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "59/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "23031.6155ms"
+        "ev": "26293.674679999996ms"
       },
       {
         "id": "perf.cls",
@@ -280,8 +280,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "3/13 crawled link(s) broken (http://basheersmarakatrust.com/members/, http://basheersmarakatrust.com/gallery/, http://basheersmarakatrust.com/photos/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -387,7 +386,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -443,15 +442,20 @@
   },
   "score": {
     "overall": 44,
-    "security": 48,
+    "security": 38,
     "accessibility": 56,
-    "content": 16,
+    "content": 36,
     "gigw": 0,
     "performance": 76,
-    "identity": 80
+    "identity": 76
   },
   "status": "poor",
   "issues": [
+    {
+      "id": "sec.cert_expiry",
+      "sev": "H",
+      "ev": "29 days left"
+    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -473,11 +477,6 @@
       "ev": "ml-lg"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "3/13 crawled link(s) broken (http://basheersmarakatrust.com/members/, http://basheersmarakatrust.com/gallery/, http://basheersmarakatrust.com/photos/)"
-    },
-    {
       "id": "gigw.rti",
       "sev": "H"
     },
@@ -485,11 +484,6 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "www.basheersmarakatrust.com"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3894ms"
     },
     {
       "id": "sec.hsts",
@@ -542,7 +536,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "23031.6155ms"
+      "ev": "26293.674679999996ms"
     },
     {
       "id": "perf.weight",
@@ -609,11 +603,20 @@
       "sev": "L"
     },
     {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
       "id": "gigw.emblem",
       "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-09-23",
+      "up": true,
+      "score": 44
+    },
     {
       "d": "2026-09-22",
       "up": true,
@@ -625,5 +628,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

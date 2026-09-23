@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-22T03:10:24.638Z",
-    "run": "1790046547686",
+    "at": "2026-09-22T23:48:51.661Z",
+    "run": "1790120874174",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 43,
+      "performance": 45,
       "accessibility": 92,
       "best_practices": 96,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -216,12 +216,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "43/100"
+        "ev": "45/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "40927.03575000001ms"
+        "ev": "39366.64325ms"
       },
       {
         "id": "perf.cls",
@@ -276,8 +276,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://keralapolice.gov.in/page/history-of-kerala-police)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -412,13 +411,13 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e69l0h2, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e69l1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
       }
     ],
     "screenshot": {
-      "desktop": "2026-09-22.webp",
-      "mobile": "2026-09-22-m.webp",
-      "phash": "ffff83008181e03f"
+      "desktop": "keralapolice.webp",
+      "mobile": "keralapolice-m.webp",
+      "phash": "ffbf8b00070f833f"
     },
     "outlinks": [
       {
@@ -577,10 +576,10 @@
     ]
   },
   "score": {
-    "overall": 55,
+    "overall": 56,
     "security": 50,
     "accessibility": 60,
-    "content": 46,
+    "content": 56,
     "gigw": 26,
     "performance": 66,
     "identity": 96
@@ -613,11 +612,6 @@
       "ev": "ml-"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://keralapolice.gov.in/page/history-of-kerala-police)"
-    },
-    {
       "id": "gigw.contact",
       "sev": "H"
     },
@@ -645,7 +639,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "40927.03575000001ms"
+      "ev": "39366.64325ms"
     },
     {
       "id": "perf.weight",
@@ -716,10 +710,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e69l0h2, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e69l1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
     }
   ],
   "history": [
+    {
+      "d": "2026-09-23",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-09-22",
       "up": true,
@@ -731,5 +730,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,18 +35,23 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-22T03:03:46.011Z",
-    "run": "1790046101910",
+    "at": "2026-09-22T23:44:55.171Z",
+    "run": "1790120641151",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 52,
+      "accessibility": 81,
+      "best_practices": 77,
+      "seo": 92
+    },
     "axe": {
-      "critical": 0,
-      "serious": 0,
-      "moderate": 0,
-      "minor": 0
+      "critical": 21,
+      "serious": 7,
+      "moderate": 1,
+      "minor": 12
     },
     "crawl": {
-      "pages": 0,
+      "pages": 30,
       "pdfs": 0,
       "broken": 0
     },
@@ -55,15 +60,601 @@
       "server": null,
       "jquery": null
     },
-    "checks": [],
-    "screenshot": null,
-    "outlinks": [],
-    "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://alappuzha.nic.in/en/\", waiting until \"load\"\n"
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "pass"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "pass"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "fail",
+        "ev": "href=\"http://gmpg.org/xfn/11\""
+      },
+      {
+        "id": "sec.csp",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "pass"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "pass"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "pass"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "pass"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "fail",
+        "ev": "21 critical violation(s)"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "7 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "13 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "heading levels skipped"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "81/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "52/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "18594.296000000002ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "pass"
+      },
+      {
+        "id": "perf.weight",
+        "r": "warn",
+        "ev": "5.7MB"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "pass"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "na"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "pass"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-IN"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "pass"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "pass"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "pass"
+      },
+      {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "3 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      },
+      {
+        "id": "gigw.contact",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.search",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "pass"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "pass"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "na"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "na"
+      },
+      {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "pass"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "warn",
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-DD5DLD9S6M"
+      }
+    ],
+    "screenshot": {
+      "desktop": "d-alappuzha.webp",
+      "mobile": "d-alappuzha-m.webp",
+      "phash": "ffff00000002ffff"
+    },
+    "outlinks": [
+      {
+        "host": "kerala.gov.in",
+        "count": 6,
+        "texts": [
+          "കേരള സര്‍ക്കാര്‍",
+          "E Office",
+          "Government of Kerala"
+        ]
+      },
+      {
+        "host": "digitalindia.gov.in",
+        "count": 2,
+        "texts": []
+      },
+      {
+        "host": "s3waas.gov.in",
+        "count": 10,
+        "texts": [
+          "Woman Empowerment",
+          "District Environment Plan",
+          "Furnishing District Enviornmental Plan"
+        ]
+      },
+      {
+        "host": "dtpcalappuzha.com",
+        "count": 1,
+        "texts": [
+          "DTPC Alappuzha"
+        ]
+      },
+      {
+        "host": "eci.gov.in",
+        "count": 1,
+        "texts": [
+          "Election Commission"
+        ]
+      },
+      {
+        "host": "keralacm.gov.in",
+        "count": 1,
+        "texts": [
+          "Public Grievance"
+        ]
+      },
+      {
+        "host": "keralasic.gov.in",
+        "count": 1,
+        "texts": [
+          "Right to Information Act"
+        ]
+      },
+      {
+        "host": "nehrutrophy.nic.in",
+        "count": 2,
+        "texts": [
+          "Nehru Trophy Boat Race"
+        ]
+      },
+      {
+        "host": "kswmp.org",
+        "count": 1,
+        "texts": [
+          "KSWMP - Kerala solid waste management project"
+        ]
+      },
+      {
+        "host": "india.gov.in",
+        "count": 2,
+        "texts": []
+      },
+      {
+        "host": "pmindia.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "pmnrf.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "data.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "mygov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "incredibleindia.org",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "childlineindia.org.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "keralaregistration.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "www.nic.in",
+        "count": 1,
+        "texts": [
+          "National Informatics Centre"
+        ]
+      },
+      {
+        "host": "meity.gov.in",
+        "count": 1,
+        "texts": [
+          "Ministry of Electronics & Information Technology"
+        ]
+      }
+    ]
   },
-  "score": null,
-  "status": "down",
-  "issues": [],
+  "score": {
+    "overall": 70,
+    "security": 80,
+    "accessibility": 60,
+    "content": 56,
+    "gigw": 60,
+    "performance": 81,
+    "identity": 96
+  },
+  "status": "needs-work",
+  "issues": [
+    {
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://gmpg.org/xfn/11\""
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "21 critical violation(s)"
+    },
+    {
+      "id": "content.last_updated",
+      "sev": "H",
+      "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-IN"
+    },
+    {
+      "id": "a11y.axe_serious",
+      "sev": "M",
+      "ev": "7 serious violation(s)"
+    },
+    {
+      "id": "gigw.privacy",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.last_updated",
+      "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "18594.296000000002ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "5.7MB"
+    },
+    {
+      "id": "a11y.axe_moderate_minor",
+      "sev": "L",
+      "ev": "13 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
+    },
+    {
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "3 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+    },
+    {
+      "id": "gigw.terms",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.copyright_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.hyperlink_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.disclaimer",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.screen_reader",
+      "sev": "L"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 404"
+    },
+    {
+      "id": "id.third_party",
+      "sev": "I",
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-DD5DLD9S6M"
+    }
+  ],
   "history": [
+    {
+      "d": "2026-09-23",
+      "up": true,
+      "score": 70
+    },
     {
       "d": "2026-09-22",
       "up": false,
@@ -75,5 +666,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

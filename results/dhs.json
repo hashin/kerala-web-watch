@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-21T17:40:43.294Z",
-    "run": "1790012178223",
+    "at": "2026-09-22T23:48:52.531Z",
+    "run": "1790120690035",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 55,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 1,
-      "broken": 7
+      "broken": 0
     },
     "tech": {
       "cms": "WordPress 5.0.28",
@@ -95,8 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "fail",
-        "ev": "8421ms"
+        "r": "warn",
+        "ev": "6186ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -223,7 +223,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "17435.93ms"
+        "ev": "16765.029000000002ms"
       },
       {
         "id": "perf.cls",
@@ -278,8 +278,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "7/30 crawled link(s) broken (https://dhs.kerala.gov.in/en/non-communicable-diseases-ncds/, https://dhs.kerala.gov.in/en/climate-change-diseases/, https://dhs.kerala.gov.in/en/animal-bite/, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -308,7 +307,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/4fd832e7/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/7460dd14/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -450,10 +449,10 @@
     ]
   },
   "score": {
-    "overall": 45,
+    "overall": 48,
     "security": 46,
     "accessibility": 44,
-    "content": 32,
+    "content": 52,
     "gigw": 12,
     "performance": 66,
     "identity": 91
@@ -486,18 +485,13 @@
       "ev": "ml-IN"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "7/30 crawled link(s) broken (https://dhs.kerala.gov.in/en/non-communicable-diseases-ncds/, https://dhs.kerala.gov.in/en/climate-change-diseases/, https://dhs.kerala.gov.in/en/animal-bite/, ...)"
-    },
-    {
       "id": "gigw.contact",
       "sev": "H"
     },
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "8421ms"
+      "ev": "6186ms"
     },
     {
       "id": "sec.hsts",
@@ -537,7 +531,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "17435.93ms"
+      "ev": "16765.029000000002ms"
     },
     {
       "id": "perf.weight",
@@ -574,7 +568,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/4fd832e7/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/7460dd14/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -620,6 +614,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-23",
+      "up": true,
+      "score": 48
+    },
+    {
       "d": "2026-09-22",
       "up": true,
       "score": 45
@@ -630,5 +629,5 @@
       "score": 45
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

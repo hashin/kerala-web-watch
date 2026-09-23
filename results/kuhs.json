@@ -29,11 +29,11 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-09-22T00:20:32.782Z",
-    "run": "1790036361407",
+    "at": "2026-09-22T23:54:19.065Z",
+    "run": "1790120931663",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 40,
+      "performance": 42,
       "accessibility": 56,
       "best_practices": 69,
       "seo": 82
@@ -47,11 +47,11 @@
     "crawl": {
       "pages": 30,
       "pdfs": 2,
-      "broken": 0
+      "broken": 20
     },
     "tech": {
       "cms": null,
-      "server": "Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.33",
+      "server": null,
       "jquery": "2.1.4"
     },
     "checks": [
@@ -61,15 +61,16 @@
       },
       {
         "id": "avail.connect",
-        "r": "pass"
+        "r": "fail",
+        "ev": "timeout"
       },
       {
         "id": "avail.status",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.parked",
@@ -89,7 +90,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.geo_blocked",
@@ -101,23 +102,23 @@
       },
       {
         "id": "sec.https",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.http_redirect",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.cert_valid",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.tls_version",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.hsts",
@@ -125,8 +126,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://14.139.185.154/kuhs_old?site=old\""
+        "r": "na"
       },
       {
         "id": "sec.csp",
@@ -213,22 +213,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "40/100"
+        "ev": "42/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "20240.582000000006ms"
+        "ev": "20394.288ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.31"
+        "ev": "0.26"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "7.9MB"
+        "ev": "7.7MB"
       },
       {
         "id": "perf.viewport",
@@ -275,7 +275,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "20/30 crawled link(s) broken (https://kuhs.ac.in/kuhs_new/, https://kuhs.ac.in/#, https://kuhs.ac.in/kuhs_new/index.php, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -381,7 +382,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "id.robots",
@@ -395,7 +396,7 @@
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.canonical",
@@ -442,21 +443,17 @@
       }
     ]
   },
-  "score": {
-    "overall": 43,
-    "security": 24,
-    "accessibility": 40,
-    "content": 42,
-    "gigw": 30,
-    "performance": 77,
-    "identity": 88
-  },
+  "score": null,
   "status": "down",
   "issues": [
     {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://14.139.185.154/kuhs_old?site=old\""
+      "id": "avail.connect",
+      "sev": "C",
+      "ev": "timeout"
+    },
+    {
+      "id": "sec.http_redirect",
+      "sev": "H"
     },
     {
       "id": "sec.vuln_js",
@@ -477,6 +474,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "20/30 crawled link(s) broken (https://kuhs.ac.in/kuhs_new/, https://kuhs.ac.in/#, https://kuhs.ac.in/kuhs_new/index.php, ...)"
     },
     {
       "id": "sec.hsts",
@@ -529,12 +531,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "20240.582000000006ms"
+      "ev": "20394.288ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.9MB"
+      "ev": "7.7MB"
     },
     {
       "id": "sec.csp",
@@ -601,14 +603,10 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.31"
+      "ev": "0.26"
     },
     {
       "id": "perf.images",
-      "sev": "L"
-    },
-    {
-      "id": "id.www_consistency",
       "sev": "L"
     },
     {
@@ -632,6 +630,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-23",
+      "up": false,
+      "score": null
+    },
+    {
       "d": "2026-09-22",
       "up": false,
       "score": 43
@@ -642,5 +645,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

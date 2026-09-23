@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-22T03:11:06.147Z",
-    "run": "1790046591967",
+    "at": "2026-09-22T23:49:34.493Z",
+    "run": "1790120876626",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 54,
+      "performance": 51,
       "accessibility": 75,
       "best_practices": 92,
       "seo": 73
@@ -48,7 +48,7 @@
       "critical": 4,
       "serious": 12,
       "moderate": 76,
-      "minor": 1
+      "minor": 0
     },
     "crawl": {
       "pages": 30,
@@ -175,7 +175,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "77 moderate/minor violation(s)"
+        "ev": "76 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -215,12 +215,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "54/100"
+        "ev": "51/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "14318.74455ms"
+        "ev": "21322.124499999998ms"
       },
       {
         "id": "perf.cls",
@@ -229,7 +229,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "10.1MB"
+        "ev": "20.0MB"
       },
       {
         "id": "perf.viewport",
@@ -306,7 +306,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "4 console error(s): Connecting to 'https://www.youtube.com/s/player/ecb23058/www-player.css' violates the following Content Security Policy directive: \"connect-src 'self' blob: data: image/svg+xml *.userway.org chat.kerala.gov.in *.google-analytics.com\". The action has been blocked."
+        "ev": "4 console error(s): Connecting to 'https://www.youtube.com/s/player/dac2d7b2/www-player.css' violates the following Content Security Policy directive: \"connect-src 'self' blob: data: image/svg+xml *.userway.org chat.kerala.gov.in *.google-analytics.com\". The action has been blocked."
       },
       {
         "id": "gigw.contact",
@@ -342,7 +342,7 @@
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.screen_reader",
@@ -512,11 +512,11 @@
     ]
   },
   "score": {
-    "overall": 62,
+    "overall": 61,
     "security": 80,
     "accessibility": 60,
     "content": 32,
-    "gigw": 44,
+    "gigw": 34,
     "performance": 66,
     "identity": 92
   },
@@ -562,6 +562,10 @@
       "ev": "missing <title>"
     },
     {
+      "id": "gigw.accessibility_statement",
+      "sev": "M"
+    },
+    {
       "id": "gigw.ownership",
       "sev": "M"
     },
@@ -572,12 +576,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "14318.74455ms"
+      "ev": "21322.124499999998ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "10.1MB"
+      "ev": "20.0MB"
     },
     {
       "id": "perf.tap_targets",
@@ -586,7 +590,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "77 moderate/minor violation(s)"
+      "ev": "76 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -605,7 +609,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "4 console error(s): Connecting to 'https://www.youtube.com/s/player/ecb23058/www-player.css' violates the following Content Security Policy directive: \"connect-src 'self' blob: data: image/svg+xml *.userway.org chat.kerala.gov.in *.google-analytics.com\". The action has been blocked."
+      "ev": "4 console error(s): Connecting to 'https://www.youtube.com/s/player/dac2d7b2/www-player.css' violates the following Content Security Policy directive: \"connect-src 'self' blob: data: image/svg+xml *.userway.org chat.kerala.gov.in *.google-analytics.com\". The action has been blocked."
     },
     {
       "id": "gigw.terms",
@@ -643,6 +647,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-23",
+      "up": true,
+      "score": 61
+    },
+    {
       "d": "2026-09-22",
       "up": true,
       "score": 62
@@ -653,5 +662,5 @@
       "score": 61
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
