@@ -1,20 +1,36 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import HealthBadge from '../components/HealthBadge.astro';
 import { STATUS_DESCRIPTIONS } from '../lib/data';
+import { checksByCategory } from '../lib/methodology';
+import { WEIGHTS, FAIL_DEDUCTION, HEALTHY_THRESHOLD, NEEDS_WORK_THRESHOLD } from '../../../audit/dist/score.js';
+
+const groups = checksByCategory();
+const totalChecks = groups.reduce((sum, g) => sum + g.checks.length, 0);
+
+const SEVERITY_LABEL: Record<string, string> = { C: 'Critical', H: 'High', M: 'Medium', L: 'Low', I: 'Info' };
+const DEDUCTION_ORDER: (keyof typeof FAIL_DEDUCTION)[] = ['C', 'H', 'M', 'L', 'I'];
+const WEIGHT_ORDER: (keyof typeof WEIGHTS)[] = ['security', 'accessibility', 'content', 'gigw', 'performance', 'identity'];
+const WEIGHT_LABEL: Record<keyof typeof WEIGHTS, string> = {
+  security: 'Security',
+  accessibility: 'Accessibility',
+  content: 'Content & maintenance',
+  gigw: 'Government guidelines (GIGW)',
+  performance: 'Performance & mobile',
+  identity: 'Identity & hygiene',
+};
 ---
 
 <Layout
   title="Methodology"
-  description="How Kerala Web Watch audits government websites: what it checks, and its limits."
+  description="How Kerala Web Watch audits government websites: every check, how scoring works, and its limits."
 >
   <h1>Methodology</h1>
 
   <p>
-    <strong>Current status:</strong> every site's light check (reachability, TLS, response time,
-    security headers) already runs every 6 hours. The deep audit &mdash; accessibility,
-    performance, content and GIGW-compliance checks, plus a screenshot &mdash; is being rolled out
-    site by site; until a site's first deep audit completes, it shows "Not yet audited" below the
-    light-check status. Nothing on this site is invented or estimated in the meantime.
+    This page is generated from the same source code that runs the audits (<a
+      href="https://github.com/hashin/kerala-web-watch/blob/main/audit/src/checks/registry.ts">audit/src/checks/registry.ts</a
+    >) &mdash; the check list below is never hand-copied and cannot drift out of date with what the site actually runs.
   </p>
 
   <h2>Principles</h2>
@@ -25,29 +41,68 @@ import { STATUS_DESCRIPTIONS } from '../lib/data';
       login attempts. Security findings come only from response headers and page contents.
     </li>
     <li>
-      <strong>Polite.</strong> At most one request per second per site, bounded page/PDF counts
-      per audit, and a `robots.txt`-respecting, self-identifying User-Agent.
+      <strong>Polite.</strong> At most one request per second per site, at most 30 pages and 20
+      PDFs per audit, `robots.txt` honoured beyond the homepage, and a self-identifying User-Agent.
     </li>
     <li>
       <strong>Reproducible.</strong> Every check is a pure function of the fetched response to a
-      pass/warn/fail/not-applicable result with evidence attached.
+      pass/warn/fail/not-applicable result with evidence attached, and has its own automated test.
     </li>
     <li>
-      <strong>Explainable.</strong> Every finding will show what it means for a citizen and how a
+      <strong>Explainable.</strong> Every finding states what it means for a citizen and how a
       webmaster can fix it &mdash; never a bare internal check id.
     </li>
     <li>
       <strong>Charitable.</strong> A site is only called "down" after two consecutive failed
-      checks. A site unreachable only from our vantage point is "unverifiable", not "down".
+      light checks. A site unreachable only from our vantage point is "unverifiable", not "down".
     </li>
   </ul>
 
   <h2>Two tiers of checks</h2>
   <p>
-    A <strong>light check</strong> (planned every 6 hours, for every site) will look at
-    reachability, HTTP status, redirects, TLS certificate validity, response time and security
-    headers. A <strong>deep audit</strong> (planned daily, on a rolling batch) will add
-    accessibility, performance, content and GIGW-compliance checks, plus a screenshot.
+    A <strong>light check</strong> runs every 6 hours, for every registered site: reachability,
+    HTTP status, redirects, TLS certificate validity, response time and security headers. A
+    <strong>deep audit</strong> runs daily on a rolling batch of the sites most overdue or most
+    recently changed, adding accessibility, performance, content and GIGW-compliance checks, plus
+    a screenshot. A site whose homepage changes materially between light checks is bumped to the
+    front of the next deep-audit batch, so the system reacts to change instead of waiting its turn.
+  </p>
+
+  <h2>Scoring</h2>
+  <p>
+    Availability is a gate, not a component: if a check marked <strong>&#9733; status-setting</strong>
+    below fails, the site's status is set directly (see the table under "Every check" for which
+    status each one sets) and no score is shown. Otherwise, each of six categories scores 0&ndash;100
+    (100 minus deductions from its failed/warned checks, floored at 0), combined into a weighted
+    overall score:
+  </p>
+  <table>
+    <thead>
+      <tr><th scope="col">Category</th><th scope="col">Weight</th></tr>
+    </thead>
+    <tbody>
+      {WEIGHT_ORDER.map((key) => (
+        <tr><td>{WEIGHT_LABEL[key]}</td><td>{WEIGHTS[key]}%</td></tr>
+      ))}
+    </tbody>
+  </table>
+  <p>A failed or warned check deducts from its category's score by severity:</p>
+  <table>
+    <thead>
+      <tr><th scope="col">Severity</th><th scope="col">Deduction on fail</th><th scope="col">Deduction on warn</th></tr>
+    </thead>
+    <tbody>
+      {DEDUCTION_ORDER.map((sev) => (
+        <tr><td>{SEVERITY_LABEL[sev]}</td><td>&minus;{FAIL_DEDUCTION[sev]}</td><td>&minus;{FAIL_DEDUCTION[sev] / 2}</td></tr>
+      ))}
+    </tbody>
+  </table>
+  <p>
+    The overall score decides the status: <strong>{HEALTHY_THRESHOLD}</strong> or above is
+    Healthy, <strong>{NEEDS_WORK_THRESHOLD}&ndash;{HEALTHY_THRESHOLD - 1}</strong> is Needs work,
+    below <strong>{NEEDS_WORK_THRESHOLD}</strong> is Poor. Changing any weight or threshold needs a
+    recorded decision (<a href="https://github.com/hashin/kerala-web-watch/blob/main/docs/DECISIONS.md">ADR-006</a>)
+    and a note on this page.
   </p>
 
   <h2>Status definitions</h2>
@@ -56,25 +111,111 @@ import { STATUS_DESCRIPTIONS } from '../lib/data';
       <tr><th scope="col">Status</th><th scope="col">Meaning</th></tr>
     </thead>
     <tbody>
-      <tr><td>Down</td><td>{STATUS_DESCRIPTIONS.down}</td></tr>
-      <tr><td>Possibly hijacked</td><td>{STATUS_DESCRIPTIONS.hijacked}</td></tr>
-      <tr><td>Broken</td><td>{STATUS_DESCRIPTIONS.broken}</td></tr>
-      <tr><td>Unverifiable</td><td>{STATUS_DESCRIPTIONS.unverifiable}</td></tr>
-      <tr><td>Healthy</td><td>{STATUS_DESCRIPTIONS.healthy}</td></tr>
-      <tr><td>Needs work</td><td>{STATUS_DESCRIPTIONS['needs-work']}</td></tr>
-      <tr><td>Poor</td><td>{STATUS_DESCRIPTIONS.poor}</td></tr>
-      <tr><td>Not yet audited</td><td>{STATUS_DESCRIPTIONS.unaudited}</td></tr>
+      <tr><td><HealthBadge status="down" /></td><td>{STATUS_DESCRIPTIONS.down}</td></tr>
+      <tr><td><HealthBadge status="hijacked" /></td><td>{STATUS_DESCRIPTIONS.hijacked}</td></tr>
+      <tr><td><HealthBadge status="broken" /></td><td>{STATUS_DESCRIPTIONS.broken}</td></tr>
+      <tr><td><HealthBadge status="unverifiable" /></td><td>{STATUS_DESCRIPTIONS.unverifiable}</td></tr>
+      <tr><td><HealthBadge status="healthy" /></td><td>{STATUS_DESCRIPTIONS.healthy}</td></tr>
+      <tr><td><HealthBadge status="needs-work" /></td><td>{STATUS_DESCRIPTIONS['needs-work']}</td></tr>
+      <tr><td><HealthBadge status="poor" /></td><td>{STATUS_DESCRIPTIONS.poor}</td></tr>
+      <tr><td><HealthBadge status="unaudited" /></td><td>{STATUS_DESCRIPTIONS.unaudited}</td></tr>
     </tbody>
   </table>
-
   <p>
     A status word is never shown alone on this site (<a href="https://github.com/hashin/kerala-web-watch/blob/main/docs/DECISIONS.md">ADR-026</a>):
-    every "Down" or "Broken" site page states the specific reason &mdash; a DNS failure, a refused
+    every Down or Broken site page states the specific reason &mdash; a DNS failure, a refused
     connection, an invalid certificate, a blank page, and so on &mdash; not just the badge above.
   </p>
 
+  <h2>Vantage point and geo-blocking</h2>
   <p>
-    See <a href="https://github.com/hashin/kerala-web-watch/blob/main/docs/DESIGN.md">docs/DESIGN.md</a>
-    in the repository for the full design, including the complete check catalogue once it exists.
+    Our checks run from GitHub Actions runners in the US/EU. Some Kerala government sites are
+    hosted behind infrastructure that blocks or throttles non-Indian traffic; calling those sites
+    "down" would be wrong and unfair to a working site. When a check sees a block signature
+    consistent with this (a specific 403 page, or a timeout on a host that other evidence shows is
+    up), the site is marked <strong>Unverifiable</strong> instead &mdash; listed separately, never
+    counted as broken. A self-hosted monitoring point inside India, once available, would resolve
+    these to a real answer; until then the site honestly reports what it could not check.
+  </p>
+
+  <h2>How to contest a finding</h2>
+  <p>
+    Every status-setting finding stores the evidence that produced it (the exact response code,
+    matched text, or final URL) on the site's own page, so anyone can verify it independently. If a
+    finding looks wrong, or a site has since been fixed, open an issue on
+    <a href="https://github.com/hashin/kerala-web-watch/issues">the project's issue tracker</a>
+    describing what changed &mdash; a re-check can then be run within the hour rather than waiting
+    for the site's next scheduled turn.
+  </p>
+
+  <h2>Limitations</h2>
+  <ul>
+    <li>
+      <strong>Passive checks cannot see behaviour behind a login or a form submission.</strong> A
+      site that looks fine on its public pages can still have broken functionality we have no way
+      to observe without acting like an authenticated user, which we deliberately do not do.
+    </li>
+    <li>
+      <strong>Lighthouse scores are indicative only</strong> and never set a status or fail a
+      check outright &mdash; shared CI runners have too much run-to-run variance to trust as a hard
+      gate (<a href="https://github.com/hashin/kerala-web-watch/blob/main/docs/DECISIONS.md">ADR-015</a>).
+    </li>
+    <li>
+      <strong>Not every registered site has a deep audit yet.</strong> Deep audits run on a
+      rolling batch; a site shows "Not yet audited" for its full score until its first one
+      completes, even though its light up/down status is already real and current.
+    </li>
+    <li>
+      <strong>GIGW-compliance checks are heuristic.</strong> They look for expected link/heading
+      text in English and Malayalam (Contact Us, Sitemap, Privacy Policy, and so on) on the
+      homepage; a compliant page using unusual wording could be missed.
+    </li>
+    <li>
+      <strong>This is an independent project, not an official audit.</strong> It has no legal or
+      administrative authority over any department, and every finding is a starting point for a
+      department to investigate, not a final verdict.
+    </li>
+  </ul>
+
+  <h2>Every check ({totalChecks})</h2>
+  <p>
+    &#9733; means the check sets the site's status directly on failure, instead of only affecting
+    its category's score (see Scoring, above).
+  </p>
+  {groups.map((group) => (
+    <>
+      <h3>{group.label} ({group.checks.length})</h3>
+      {group.checks.length === 0 ? (
+        <p>No checks in this category yet.</p>
+      ) : (
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Check</th>
+              <th scope="col">Severity</th>
+              <th scope="col">Sets status</th>
+              <th scope="col">Reference</th>
+            </tr>
+          </thead>
+          <tbody>
+            {group.checks.map(({ id, meta }) => (
+              <tr>
+                <td><code>{id}</code> {meta.title.en}</td>
+                <td>{SEVERITY_LABEL[meta.severity]}</td>
+                <td>{meta.statusSetting ? <HealthBadge status={meta.statusSetting} /> : '—'}</td>
+                <td>{meta.ref || '—'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
+    </>
+  ))}
+
+  <p>
+    Full check explanations (what a finding means for a citizen, and how to fix it) are shown on
+    each audited site's own page as they apply. See
+    <a href="https://github.com/hashin/kerala-web-watch/blob/main/docs/DESIGN.md">docs/DESIGN.md</a>
+    for the full design.
   </p>
 </Layout>

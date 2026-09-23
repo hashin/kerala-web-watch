@@ -30,8 +30,10 @@ export interface ScoreOutcome {
   issues: Issue[];
 }
 
-const FAIL_DEDUCTION: Record<Severity, number> = { C: 40, H: 20, M: 10, L: 4, I: 0 };
-const WEIGHTS: Record<ScoredCategory, number> = {
+/** Exported alongside `WEIGHTS` so the methodology page (WP4.4, ADR-006) states the actual
+ * current values instead of a hand-copied number that could drift out of sync. */
+export const FAIL_DEDUCTION: Record<Severity, number> = { C: 40, H: 20, M: 10, L: 4, I: 0 };
+export const WEIGHTS: Record<ScoredCategory, number> = {
   security: 25,
   accessibility: 25,
   content: 15,
@@ -39,6 +41,10 @@ const WEIGHTS: Record<ScoredCategory, number> = {
   performance: 10,
   identity: 10,
 };
+/** The two boundaries `statusFromScore` applies, exported so the methodology page can state them
+ * (ADR-006's "healthy ≥ 80, needs-work 50-79, poor < 50") without a second hand-copied number. */
+export const HEALTHY_THRESHOLD = 80;
+export const NEEDS_WORK_THRESHOLD = 50;
 const SEVERITY_ORDER: Severity[] = ['C', 'H', 'M', 'L', 'I'];
 const CATEGORY_ORDER: (ScoredCategory | 'availability')[] = [
   'availability',
@@ -107,8 +113,8 @@ function computeCategoryScores(checks: CheckResult[], meta: Record<CheckId, Chec
  * assert on this in isolation than to construct a check combination landing on a precise overall
  * score through six weighted categories' worth of deductions. */
 export function statusFromScore(overall: number): 'healthy' | 'needs-work' | 'poor' {
-  if (overall >= 80) return 'healthy';
-  if (overall >= 50) return 'needs-work';
+  if (overall >= HEALTHY_THRESHOLD) return 'healthy';
+  if (overall >= NEEDS_WORK_THRESHOLD) return 'needs-work';
   return 'poor';
 }
 
