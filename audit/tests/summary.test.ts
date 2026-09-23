@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { computeSummary } from '../src/summary.js';
+import { allTransitions, computeSummary } from '../src/summary.js';
 import type { Result } from '../src/store.js';
 import type { Registry, Site } from '../src/types.js';
 
@@ -174,6 +174,43 @@ describe('computeSummary', () => {
     const results = [result({ id: 'a', status: 'down', history })];
     const summary = computeSummary(registry, results, { now: new Date('2026-09-21T00:00:00Z'), vantages: ['gh-us'] });
     expect(summary.recent_broken).toEqual([]);
+  });
+});
+
+describe('allTransitions', () => {
+  it('reports a transition far outside the 7-day recent window, unlike recentTransitions', () => {
+    const history = Array.from({ length: 30 }, (_, i) => ({ d: dayOffset(i), up: i < 20, score: null }));
+    const results = [result({ id: 'a', status: 'down', history })];
+    expect(allTransitions(results, false)).toEqual([{ id: 'a', since: dayOffset(19) }]);
+  });
+
+  it('sorts transitions newest first across multiple sites', () => {
+    const results = [
+      result({
+        id: 'older',
+        history: [
+          { d: '2026-08-01', up: false, score: null },
+          { d: '2026-07-31', up: true, score: null },
+        ],
+      }),
+      result({
+        id: 'newer',
+        history: [
+          { d: '2026-09-15', up: false, score: null },
+          { d: '2026-09-14', up: true, score: null },
+        ],
+      }),
+    ];
+    expect(allTransitions(results, false)).toEqual([
+      { id: 'newer', since: '2026-09-15' },
+      { id: 'older', since: '2026-08-01' },
+    ]);
+  });
+
+  it('omits a site whose history never actually changed value', () => {
+    const results = [result({ id: 'a', history: [{ d: '2026-09-21', up: true, score: null }] })];
+    expect(allTransitions(results, true)).toEqual([]);
+    expect(allTransitions(results, false)).toEqual([]);
   });
 });
 

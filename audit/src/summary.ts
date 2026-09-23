@@ -150,24 +150,40 @@ function topIssues(results: Result[]): { id: string; count: number }[] {
     .map(([id, count]) => ({ id, count }));
 }
 
-/** Finds the day a site's `history.up` most recently changed to `toUp` and reports it only if
- * that happened within the last `RECENT_WINDOW_DAYS` -- history is newest-first, so the
- * transition day is the oldest entry still carrying the current value. A run of matching entries
- * that reaches all the way to the end of history is *not* a transition: it just means every day
- * we've ever recorded already had this value (most visibly, a site's very first-ever check --
- * one history entry, trivially "unchanged" -- must not be reported as "just came up today"). */
+/** Finds the day a site's `history.up` most recently changed to `toUp`, or `null` if there's no
+ * such transition recorded -- history is newest-first, so the transition day is the oldest entry
+ * still carrying the current value. A run of matching entries that reaches all the way to the end
+ * of history is *not* a transition: it just means every day we've ever recorded already had this
+ * value (most visibly, a site's very first-ever check -- one history entry, trivially "unchanged"
+ * -- must not be reported as "just came up today"). */
+function transitionDay(history: Result['history'], toUp: boolean): string | null {
+  if (history.length === 0 || history[0].up !== toUp) return null;
+  let i = 0;
+  while (i < history.length && history[i].up === toUp) i++;
+  if (i === history.length) return null;
+  return history[i - 1].d;
+}
+
 function recentTransitions(results: Result[], now: Date, toUp: boolean): { id: string; since: string }[] {
   const out: { id: string; since: string }[] = [];
   for (const result of results) {
-    const history = result.history;
-    if (history.length === 0 || history[0].up !== toUp) continue;
-    let i = 0;
-    while (i < history.length && history[i].up === toUp) i++;
-    if (i === history.length) continue;
-    const changedAt = history[i - 1].d;
-    if (daysBetween(changedAt, now) <= RECENT_WINDOW_DAYS) out.push({ id: result.id, since: changedAt });
+    const changedAt = transitionDay(result.history, toUp);
+    if (changedAt && daysBetween(changedAt, now) <= RECENT_WINDOW_DAYS) out.push({ id: result.id, since: changedAt });
   }
   return out;
+}
+
+/** Every recorded transition to `toUp`, not just the last `RECENT_WINDOW_DAYS` -- unlike
+ * `recentTransitions` (the homepage's "this week" rollup), the `/feeds/broken.xml` and
+ * `/feeds/fixed.xml` Atom feeds (DESIGN §7.2, WP4.3) want a scrollback a feed reader can catch up
+ * on, not just this week's. Newest first. */
+export function allTransitions(results: Result[], toUp: boolean): { id: string; since: string }[] {
+  const out: { id: string; since: string }[] = [];
+  for (const result of results) {
+    const changedAt = transitionDay(result.history, toUp);
+    if (changedAt) out.push({ id: result.id, since: changedAt });
+  }
+  return out.sort((a, b) => b.since.localeCompare(a.since));
 }
 
 function daysBetween(isoDate: string, now: Date): number {

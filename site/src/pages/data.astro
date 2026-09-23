@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getSites, getSummary } from '../lib/data';
+
+const summary = getSummary();
+const buildDate = new Date().toISOString().slice(0, 10);
+// A real id, not a made-up example -- so the link below always resolves rather than risking a 404.
+const exampleSiteId = getSites()[0]?.id ?? 'example';
+---
+
+<Layout
+  title="Data"
+  description="Download Kerala Web Watch's audit data, read the static API and feeds, and see the licence it's released under."
+>
+  <p><a href="/">&larr; Home</a></p>
+  <h1>Data</h1>
+  <p>
+    Every number on this site comes from {summary.totals.sites.toLocaleString()} government
+    websites we monitor, {summary.totals.deep_audited.toLocaleString()} of them deep-audited so
+    far. All of it is open data &mdash; use it in a story, a dashboard, a dissertation, or your own
+    department's dashboard.
+  </p>
+
+  <h2>Downloads</h2>
+  <ul>
+    <li><a href="/api/summary.json"><code>/api/summary.json</code></a> &mdash; the same headline rollup the homepage renders (totals, coverage, top issues, this week's transitions).</li>
+    <li><a href="/api/sites.csv"><code>/api/sites.csv</code></a> &mdash; one row per site: id, name, URL, district, department, kind, platform, status, score. Opens in any spreadsheet.</li>
+    <li><a href="/api/all.json"><code>/api/all.json</code></a> &mdash; every site's full record (status, score, issues, 90-day history), evidence strings stripped to keep the file small. Gzip it before fetching at this size.</li>
+    <li><a href={`/api/sites/${exampleSiteId}.json`}><code>/api/sites/&lt;id&gt;.json</code></a> &mdash; one site's complete record, evidence included &mdash; linked from every site page's own "Download JSON" action.</li>
+  </ul>
+
+  <h2>Feeds</h2>
+  <p>Subscribe in any feed reader to watch sites change status without polling the site yourself.</p>
+  <ul>
+    <li><a href="/feeds/broken.xml"><code>/feeds/broken.xml</code></a> &mdash; the last 100 sites that went down, broken, hijacked or unverifiable.</li>
+    <li><a href="/feeds/fixed.xml"><code>/feeds/fixed.xml</code></a> &mdash; the last 100 sites that came back up.</li>
+  </ul>
+
+  <h2>Schema</h2>
+  <p>
+    The list of sites we track (the "registry") is a set of YAML files validated against a JSON
+    Schema:
+    <a href="https://github.com/hashin/kerala-web-watch/blob/main/registry/schema.json">registry/schema.json</a>.
+    Every audit's own result shape (what an <code>issues[]</code> entry or a <code>history[]</code>
+    day looks like) is documented in
+    <a href="https://github.com/hashin/kerala-web-watch/blob/main/docs/DESIGN.md">docs/DESIGN.md §5.5</a>,
+    and every check's id, severity and category comes from the single source at
+    <a href="https://github.com/hashin/kerala-web-watch/blob/main/audit/src/checks/registry.ts">audit/src/checks/registry.ts</a>
+    &mdash; also readable, explained in plain language, on the <a href="/methodology/">methodology page</a>.
+  </p>
+
+  <h2>Monthly archives</h2>
+  <p>
+    On the 1st of every month, the full dataset (every result, at that point in time) is zipped and
+    published as a dated <a href="https://github.com/hashin/kerala-web-watch/releases">GitHub
+    Release</a> &mdash; the citable snapshot for anyone who wants a fixed point in time rather than
+    a moving live feed. The repository's git history for results is squashed monthly right after
+    (DESIGN §6.4), so the Release archive, not git log, is the record of what changed.
+  </p>
+
+  <h2>Licence</h2>
+  <p>
+    Code is <a href="https://github.com/hashin/kerala-web-watch/blob/main/LICENSE">MIT-licensed</a>;
+    the registry and every audit result are
+    <a href="https://github.com/hashin/kerala-web-watch/blob/main/LICENSE-DATA">CC-BY-4.0</a> &mdash;
+    reuse it freely, with attribution to Kerala Web Watch.
+  </p>
+
+  <p>Last updated {buildDate}.</p>
+</Layout>
