@@ -2,16 +2,24 @@
   "id": "kuhs",
   "url": "https://kuhs.ac.in",
   "light": {
-    "at": "2026-09-22T21:07:19.228Z",
+    "at": "2026-09-23T03:01:32.409Z",
     "status_class": "timeout",
     "dns": true,
     "status": null,
     "final_url": null,
-    "redirects": [],
+    "redirects": [
+      "https://kuhs.ac.in -> https://kuhs.ac.in/kuhs_new"
+    ],
     "ttfb_ms": null,
     "title": null,
     "byte_size": null,
-    "tls": null,
+    "tls": {
+      "valid": true,
+      "protocol": "TLSv1.2",
+      "expires": "Mar 20 23:59:59 2027 GMT",
+      "days_left": 179,
+      "issuer": "Sectigo Limited"
+    },
     "headers": {
       "hsts": false,
       "csp": false,
@@ -21,12 +29,12 @@
       "server": null
     },
     "content_hash": null,
-    "http_redirects_to_https": true,
+    "http_redirects_to_https": false,
     "geo_block_suspect": false,
     "domain": "kuhs.ac.in",
     "final_domain": null,
     "vantage": "gh-us",
-    "suspect": true
+    "suspect": false
   },
   "deep": {
     "at": "2026-09-22T23:54:19.065Z",
@@ -645,5 +653,5 @@
       "score": null
     }
   ],
-  "deep_bump": false
+  "deep_bump": true
 }
