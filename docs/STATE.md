@@ -6,11 +6,11 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 ## Now
 
 - **Phase:** 4 — Full site
-- **Current WP:** WP4.3 done this session (verification only — the code was already committed by a prior
-  session that deferred its test run to a cloud session; this session ran that verification, found and fixed
-  two real test-fixture bugs, and closed it out). WP3.7 is unaffected and still open on its own: steps 1–2
+- **Current WP:** WP4.3 and WP4.4 both done this session — WP4.3 was verification-only (the code was already
+  committed by a prior session that deferred its test run to a cloud session); WP4.4 (methodology page
+  generated from `registry.ts`) was built fresh. WP3.7 is unaffected and still open on its own: steps 1–2
   done, step 3's cron gate is the only thing left (see below).
-- **Next action:** WP4.4 (methodology page generated from `registry.ts`). Separately, still check
+- **Next action:** WP4.5 (Pagefind search, i18n scaffold, self-audit ≥ 80). Separately, still check
   WP3.7's gate opportunistically: `audit.yml`'s cron (`30 21 * * *`, 03:00 IST) needs **two consecutive
   *scheduled*-triggered runs to succeed** to close WP3.7 (same kind of multi-day gate as WP2.3's open
   question 8 — no single session can satisfy this). `gh run list --workflow=audit.yml` and look for two
@@ -51,7 +51,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 4.1 | Full site page | done | 884c89d (25db56a: screenshot-filename fix) | 9 components (ScoreRing, CategoryBars, IssueCard, Sparkline, Screenshot, TechFacts, SiteActions, RelatedSites + reused AvailabilityStrip); found & fixed a real production bug while dogfooding (see Handoff): `runner.ts`'s screenshot filenames were date-only, not per-site, so every site captured the same day shared (and clobbered) the same two `.webp` files — fixed to `<site.id>.webp`, 3 new tests; Lighthouse a11y 100 on a poor and a down site page; verified hijacked/healthy rendering with temporary synthetic data (reverted, not committed) since no live site has either status yet |
 | 4.2 | Ministry / department / kind / platform / leaderboard pages | done | 5f63fd7 | `site/src/lib/rollups.ts` (countByStatus, medianScore, failedCheckCounts, percentBroken, platformWideIssues, scoreDelta) + first vitest suite in `site/` (17 tests); new `ministries/index.astro` + `ministries/[ministry].astro`, `kinds/[kind]/[...page].astro`, `platforms/[platform]/[...page].astro`, `leaderboard.astro`; upgraded `departments/[department]/[...page].astro` with a `GroupRollup` (status counts, median, top-3 issues) and fixed it to generate a page for every department, including one with zero sites (`minority`) — previously 404'd, now shows an empty state (this WP's own Verify criterion); `sites/[id].astro` gained the "inherited from platform" note; Lighthouse mobile/4G performance 100 on `/platforms/lsgkerala/` (1,200 members, the largest listing), `/leaderboard/` and `/departments/lsgd/` (ADR-025) |
 | 4.3 | Status pages, feeds, static API, data page | done | 97cae21 (+ d6e2ea3 test-fixture fixes) | `api/summary.json`, `api/sites.csv`, `api/all.json` (evidence stripped for gzip-friendly bulk export), `api/sites/<id>.json` (full evidence), `feeds/broken.xml` + `feeds/fixed.xml` (Atom, last 100 transitions via new `allTransitions()`), `/data/` page; new `audit/src/summary.ts` `transitionDay()` helper shared by `recentTransitions`/`allTransitions`, new `site/src/lib/api.ts` pure builders + first `site` API test file; this session picked up verification a prior session had explicitly deferred to a cloud session (commit message said so) and found + fixed two real test-only bugs: `site/tests/api.test.ts` expected a hardcoded URL but its fixture's `result()` override supplied its own auto-generated one, and `audit/tests/summary.test.ts`'s `allTransitions` test had an inverted `up: i < 20` boolean that tested the opposite transition direction from what it claimed to; both fixed, not the implementation — 994 audit + 26 site tests, `astro check` 0/0/0, `astro build` 1665 pages all green |
-| 4.4 | Methodology page generated from registry.ts | todo | | |
+| 4.4 | Methodology page generated from `registry.ts` | done | 36e4dea | rewrote the pre-Phase-3 placeholder (still said "planned"/"once it exists") into a page generated from `CHECKS`: principles, two tiers, scoring (weights/deductions/thresholds newly exported from `score.ts`), status definitions, vantage/geo-blocking, how to contest, limitations, and all 84 checks grouped by category via new `site/src/lib/methodology.ts` (`checksByCategory`) — never hand-copied; `robots.txt` + `humans.txt` added; verified all 84 ids present in the built HTML and ~10 min reading time (2,030 words), matching the WP's own target; `verifier` mutation-tested the new test file and found one real gap (category-mix-up test only covered 2 of 7 categories), fixed and re-verified by hand |
 | 4.5 | Pagefind, i18n scaffold, self-audit ≥ 80 | todo | | |
 | 4.6 | squash-data.yml, report.yml, issue forms | todo | | |
 | 4.7 | India vantage runner (optional) | todo | | |
@@ -113,6 +113,32 @@ _None yet. Each entry: what, why, ADR number._
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-09-24 · WP4.4 done: methodology page generated from `registry.ts`** — continued straight from
+  WP4.3 in the same session (context still had headroom). Replaced the pre-Phase-3 placeholder
+  `methodology.astro` (dated language: "planned every 6 hours", "once it exists" — written before any
+  checks existed) with a page built from the real `CHECKS` registry: principles, the two check tiers,
+  a scoring section (category weights, per-severity deductions, healthy/needs-work/poor thresholds —
+  `audit/src/score.ts`'s `WEIGHTS`/`FAIL_DEDUCTION` were private consts, now exported alongside two new
+  named constants `HEALTHY_THRESHOLD`/`NEEDS_WORK_THRESHOLD` so the page states real current values, not
+  a second hand-copied set of numbers), status definitions (reused `HealthBadge`), vantage-point/geo-
+  blocking explanation, how to contest a finding, limitations, and a full catalogue of all 84 checks
+  grouped by category (Check/Severity/Sets status/Reference) — via new `site/src/lib/methodology.ts`'s
+  `checksByCategory()`, a pure function so the WP's own Verify criterion ("every id in CHECKS appears on
+  the page") is a real test, not an eyeball check. Also added `site/public/robots.txt` (points at the
+  existing sitemap) and `site/public/humans.txt`. Verified beyond the test suite: grepped the *built*
+  HTML for all 84 real check ids (confirmed present, not just asserted against a fixture) and measured
+  the rendered page at ~2,030 words (~10 min reading time — the WP's explicit "10 min, not 40" target);
+  screenshotted the live dev-server page to confirm the scoring tables and category catalogue actually
+  render as designed. Ran the `verifier` subagent per convention (this WP added tests) — it mutation-
+  tested `site/tests/methodology.test.ts` and found one real gap: the "groups checks under their own
+  category" test only exercised security/accessibility, so a content&harr;gigw category mix-up (the
+  check would still appear on the page, just under the wrong heading) would have shipped silently;
+  fixed by adding a test covering all seven categories, confirmed by hand that it now catches that exact
+  injected mutation, then reverted the mutation. Full suite: 994 audit tests, 31 site tests, `astro
+  check` 0/0/0, `astro build` 1665 pages, all green. Commit `36e4dea`. **Next: WP4.5** (Pagefind search,
+  i18n scaffold `defaultLocale: 'en'`/`locales: ['en','ml']`, add the site itself to the registry as a
+  dogfood entry, and self-audit it to ≥ 80 with no ★ failures).
 
 - **2026-09-24 · WP4.3 closed out (verification only)** — the feature itself (`api/*`, `feeds/*.xml`,
   `/data/`, `allTransitions()`) was written and committed by a prior session (`97cae21`) that explicitly
