@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { allSitesRecords, buildTransitionFeed, siteApiRecord, sitesToCsv } from '../src/lib/api';
+import { allSitesRecords, buildTransitionFeed, siteApiRecord, siteTransitions, sitesToCsv } from '../src/lib/api';
 import type { Result, SiteView } from '../src/lib/data';
 
 let nextId = 0;
@@ -148,5 +148,43 @@ describe('buildTransitionFeed', () => {
     const xml = buildTransitionFeed({ title: 'Feed', description: 'Desc', feedPath: '/feeds/fixed.xml', updated: '2026-09-21T00:00:00Z', transitions: [] });
     expect(xml).not.toContain('<entry>');
     expect(xml).toContain('</feed>');
+  });
+});
+
+/** A two-day history whose most recent day carries `toUp` and whose older day carries the
+ * opposite value -- the minimal shape `allTransitions` (audit/src/summary.ts) recognises as a
+ * transition to `toUp`, dated `since`. */
+function transitionHistory(toUp: boolean, since: string): Result['history'] {
+  return [
+    { d: since, up: toUp, score: null },
+    { d: '2020-01-01', up: !toUp, score: null },
+  ];
+}
+
+describe('siteTransitions', () => {
+  it("joins each transition back to the site's own name, not its id", () => {
+    const sites = [
+      site({ id: 'a', name: 'Alpha', result: result({ id: 'a', history: transitionHistory(false, '2026-09-20') }) }),
+      site({ id: 'b', name: 'Beta', result: result({ id: 'b', history: transitionHistory(false, '2026-09-19') }) }),
+    ];
+    const transitions = siteTransitions(sites, false);
+    expect(transitions.find((t) => t.id === 'a')?.name).toBe('Alpha');
+    expect(transitions.find((t) => t.id === 'b')?.name).toBe('Beta');
+  });
+
+  it("falls back to the transition's own id when it has no matching site name", () => {
+    // The result's id (what allTransitions keys transitions by) doesn't match any site.id in the
+    // list -- a data mismatch that must degrade to showing the id, not a blank or crashing lookup.
+    const sites = [site({ id: 'a', name: 'Alpha', result: result({ id: 'mismatched-id', history: transitionHistory(false, '2026-09-20') }) })];
+    const transitions = siteTransitions(sites, false);
+    expect(transitions).toEqual([{ id: 'mismatched-id', name: 'mismatched-id', since: '2026-09-20' }]);
+  });
+
+  it('caps the number of transitions at 100 even when more sites changed status', () => {
+    const sites = Array.from({ length: 150 }, (_, i) =>
+      site({ id: `s${i}`, name: `Site ${i}`, result: result({ id: `s${i}`, history: transitionHistory(false, `2026-01-${String((i % 28) + 1).padStart(2, '0')}`) }) }),
+    );
+    const transitions = siteTransitions(sites, false);
+    expect(transitions.length).toBe(100);
   });
 });
