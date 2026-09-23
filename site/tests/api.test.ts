@@ -52,7 +52,7 @@ const scoreOf = (overall: number) => ({ overall, security: overall, accessibilit
 
 describe('sitesToCsv', () => {
   it('writes a header row followed by one row per site with the registry, status and score fields', () => {
-    const s = site({ id: 'a', name: 'Alpha', district: 'kollam', department: 'gad', kind: 'directorate', platform: null, status: 'healthy', result: result({ id: 'a', status: 'healthy', score: scoreOf(85) }) });
+    const s = site({ id: 'a', name: 'Alpha', url: 'https://test.kerala.gov.in', district: 'kollam', department: 'gad', kind: 'directorate', platform: null, status: 'healthy', result: result({ id: 'a', status: 'healthy', score: scoreOf(85) }) });
     const csv = sitesToCsv([s]);
     const [header, row] = csv.trim().split('\n');
     expect(header).toBe('id,name,url,district,department,kind,platform,status,score');

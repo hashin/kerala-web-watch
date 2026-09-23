@@ -179,7 +179,7 @@ describe('computeSummary', () => {
 
 describe('allTransitions', () => {
   it('reports a transition far outside the 7-day recent window, unlike recentTransitions', () => {
-    const history = Array.from({ length: 30 }, (_, i) => ({ d: dayOffset(i), up: i < 20, score: null }));
+    const history = Array.from({ length: 30 }, (_, i) => ({ d: dayOffset(i), up: i >= 20, score: null }));
     const results = [result({ id: 'a', status: 'down', history })];
     expect(allTransitions(results, false)).toEqual([{ id: 'a', since: dayOffset(19) }]);
   });
