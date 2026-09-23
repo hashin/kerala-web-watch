@@ -6,11 +6,11 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 ## Now
 
 - **Phase:** 4 — Full site
-- **Current WP:** WP4.3 and WP4.4 both done this session — WP4.3 was verification-only (the code was already
-  committed by a prior session that deferred its test run to a cloud session); WP4.4 (methodology page
-  generated from `registry.ts`) was built fresh. WP3.7 is unaffected and still open on its own: steps 1–2
-  done, step 3's cron gate is the only thing left (see below).
-- **Next action:** WP4.5 (Pagefind search, i18n scaffold, self-audit ≥ 80). Separately, still check
+- **Current WP:** WP4.3, WP4.4 and WP4.5 all done this session — WP4.3 was verification-only (the code was
+  already committed by a prior session that deferred its test run to a cloud session); WP4.4 (methodology
+  page) and WP4.5 (search, i18n scaffold, self-audit) were built fresh. WP3.7 is unaffected and still open
+  on its own: steps 1–2 done, step 3's cron gate is the only thing left (see below).
+- **Next action:** WP4.6 (`squash-data.yml`, `report.yml`, issue forms). Separately, still check
   WP3.7's gate opportunistically: `audit.yml`'s cron (`30 21 * * *`, 03:00 IST) needs **two consecutive
   *scheduled*-triggered runs to succeed** to close WP3.7 (same kind of multi-day gate as WP2.3's open
   question 8 — no single session can satisfy this). `gh run list --workflow=audit.yml` and look for two
@@ -18,7 +18,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
   firing after the crash fixes landed hasn't happened yet — don't force it with `workflow_dispatch`, the gate
   specifically requires the cron trigger.
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
-- **Registry size:** 1,500 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated) · **Deep-audited:** 97/1,500 (as of the clean `batch_size=50` run, 2026-09-22) · **Light-checked:** 1,500/1,500 (15 down, 19 broken as of first full run 2026-09-21T05:30Z) · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data, and (as of WP4.1) full deep-audit findings — score ring, category bars, issue cards, screenshots, tech facts, sparkline — on every audited site's own page.
+- **Registry size:** 1,501 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated + 1 dogfood entry, WP4.5's own `kerala-web-watch`) · **Deep-audited:** 97/1,501 (as of the clean `batch_size=50` run, 2026-09-22; `kerala-web-watch` itself not yet deep-audited by real CI — see WP4.5's Handoff entry) · **Light-checked:** 1,500/1,500 (15 down, 19 broken as of first full run 2026-09-21T05:30Z) · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data, and (as of WP4.1) full deep-audit findings — score ring, category bars, issue cards, screenshots, tech facts, sparkline — on every audited site's own page. As of WP4.5 also has a self-hosted Pagefind search (home page + collapsed header toggle) and a `/ml/` route prefix wired (two pages so far, `home` and `about`, still English text pending WP5.3's translation).
 - **Candidates backlog:** ~2,476 fresh, uncurated candidates as of 2026-09-21 (mostly from a new `kerala-gov-in-subdomains` source — see Handoff below), waiting for a WP1.7-style curation pass. Not yet in `registry/sites/`.
 
 ## Work packages
@@ -52,7 +52,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 4.2 | Ministry / department / kind / platform / leaderboard pages | done | 5f63fd7 | `site/src/lib/rollups.ts` (countByStatus, medianScore, failedCheckCounts, percentBroken, platformWideIssues, scoreDelta) + first vitest suite in `site/` (17 tests); new `ministries/index.astro` + `ministries/[ministry].astro`, `kinds/[kind]/[...page].astro`, `platforms/[platform]/[...page].astro`, `leaderboard.astro`; upgraded `departments/[department]/[...page].astro` with a `GroupRollup` (status counts, median, top-3 issues) and fixed it to generate a page for every department, including one with zero sites (`minority`) — previously 404'd, now shows an empty state (this WP's own Verify criterion); `sites/[id].astro` gained the "inherited from platform" note; Lighthouse mobile/4G performance 100 on `/platforms/lsgkerala/` (1,200 members, the largest listing), `/leaderboard/` and `/departments/lsgd/` (ADR-025) |
 | 4.3 | Status pages, feeds, static API, data page | done | 97cae21 (+ d6e2ea3 test-fixture fixes) | `api/summary.json`, `api/sites.csv`, `api/all.json` (evidence stripped for gzip-friendly bulk export), `api/sites/<id>.json` (full evidence), `feeds/broken.xml` + `feeds/fixed.xml` (Atom, last 100 transitions via new `allTransitions()`), `/data/` page; new `audit/src/summary.ts` `transitionDay()` helper shared by `recentTransitions`/`allTransitions`, new `site/src/lib/api.ts` pure builders + first `site` API test file; this session picked up verification a prior session had explicitly deferred to a cloud session (commit message said so) and found + fixed two real test-only bugs: `site/tests/api.test.ts` expected a hardcoded URL but its fixture's `result()` override supplied its own auto-generated one, and `audit/tests/summary.test.ts`'s `allTransitions` test had an inverted `up: i < 20` boolean that tested the opposite transition direction from what it claimed to; both fixed, not the implementation — 994 audit + 26 site tests, `astro check` 0/0/0, `astro build` 1665 pages all green |
 | 4.4 | Methodology page generated from `registry.ts` | done | 36e4dea | rewrote the pre-Phase-3 placeholder (still said "planned"/"once it exists") into a page generated from `CHECKS`: principles, two tiers, scoring (weights/deductions/thresholds newly exported from `score.ts`), status definitions, vantage/geo-blocking, how to contest, limitations, and all 84 checks grouped by category via new `site/src/lib/methodology.ts` (`checksByCategory`) — never hand-copied; `robots.txt` + `humans.txt` added; verified all 84 ids present in the built HTML and ~10 min reading time (2,030 words), matching the WP's own target; `verifier` mutation-tested the new test file and found one real gap (category-mix-up test only covered 2 of 7 categories), fixed and re-verified by hand |
-| 4.5 | Pagefind, i18n scaffold, self-audit ≥ 80 | todo | | |
+| 4.5 | Pagefind, i18n scaffold, self-audit ≥ 80 | done | e123288 | `postbuild: pagefind --site dist`, new `PagefindSearch.astro` (home page + collapsed header toggle); `astro.config.mjs` i18n (`en`/`ml`), new `src/i18n/{en,ml}.json` + `t()` + 2 `/ml/` pages (home, about — still `lang="en"`, real English text, since ml.json intentionally isn't translated yet); site added to registry (`kerala-web-watch`, `tags:[self]`), validated + live-resolved; ran the real deep-audit CLI locally and found 3 genuine bugs while dogfooding (KeralaMap dark-mode text-colour override was dead CSS from source order + no safe single text colour for the reddest bucket in either scheme — both fixed with a foreground colour per bucket; `role="img"` wrapping real links — fixed to a plain list; Pagefind's own widget markup failing `label-title-only`/`landmark-unique` — fixed in `PagefindSearch.astro`), plus fixed 13 failing GIGW element checks, `id.canonical`, `id.sitemap_xml`, `content.last_updated`/`gigw.last_updated`; confirmed (not assumed) two permanent, unfixable-here findings — `sec.https` only fails locally via `--fixture-base`'s necessary plain-HTTP (same documented artifact as `self-test.ts`'s own fixtures), and GitHub Pages sends no custom headers at all (`curl -I` against the real live site), so `sec.hsts`/`csp`/`xfo`/`xcto`/`referrer` (non-★, M/L) and `id.gov_domain` (H, correctly — this project isn't `.gov.in`) will always fail; re-scoring the same real check output with only `sec.https` excluded via the actual `scoreSite()` gives **90/healthy, zero ★ failures** — this WP's own bar, met; the local audit run was deliberately not merged into `data/` (see Handoff and open question 12) |
 | 4.6 | squash-data.yml, report.yml, issue forms | todo | | |
 | 4.7 | India vantage runner (optional) | todo | | |
 | 5.1 | discover.yml → candidates PR | todo | | |
@@ -109,10 +109,74 @@ _None yet. Each entry: what, why, ADR number._
     out `deep.screenshot` for those ~90 records (forcing a fresh, correctly-named capture on their next
     scheduled deep audit) — not done this session since it means hand-editing the bot-managed `data`
     branch mid-WP, which felt like it wanted the human's sign-off first rather than a unilateral call.
+12. **Bookkeeping, not a question for the human — WP4.5's self-audit is real but not yet in `data/`.**
+    `kerala-web-watch` is now in the registry and was deep-audited locally against a production build
+    (`run --ids kerala-web-watch --fixture-base http://localhost:4321`), but that run necessarily goes
+    over plain HTTP (no local TLS), so `sec.https` fails and the ★ gate reports the whole site `broken`
+    with no numeric score — a known, precedented artifact of `--fixture-base` testing (`self-test.ts`
+    documents the identical thing for its own fixtures), not a real defect. Re-scoring the same real
+    check output with only that one check excluded, via the actual `scoreSite()` function, gives
+    90/healthy — see WP4.5's row above and its Handoff entry for the full reasoning. That local result
+    was deliberately **not** merged into `data/`, since doing so would show the live site as falsely
+    "broken" from a testing artifact. The real first audit will happen on its own through the normal
+    `audit.yml` rolling batch once this deploys and is checked over genuine HTTPS — nothing to do here,
+    just don't be surprised if `kerala-web-watch` shows "not yet audited" on the live site for a day or
+    two after this lands, same as any other freshly-registered site.
 
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-09-24 · WP4.5 done: Pagefind search, i18n scaffold, self-audit** — continued straight from WP4.4
+  in the same session. Pagefind wired via its own CLI's `postbuild` step (fully self-hosted, ADR-011 —
+  its `pagefind-ui.js`/`.css` are generated into our own `dist/pagefind/`, no CDN); new
+  `PagefindSearch.astro` used on the home page (inline) and sitewide in the header (behind a `<details>`
+  toggle, so the ~1,668-page build doesn't load search JS/WASM on every page view) — verified against a
+  real `astro build` + `astro preview` (not `astro dev`, which has no index) that searching a Malayalam
+  district name returns the right page with the term highlighted. i18n scaffold: `astro.config.mjs`'s
+  `i18n` block, `src/i18n/{en,ml}.json` + `t()`, two `/ml/` pages (home, about) — both stay `lang="en"`
+  on purpose since `ml.json` is still literal English text (WP5.3 translates; this WP only wires the
+  routing and lookup), and marking English text `lang="ml"` would itself fail `a11y.lang`. Registered
+  the site itself (`kerala-web-watch`, `tags:[self]`), validated + live-resolved (real network check,
+  1 site, well under the ≤3 local-live-run cap).
+  **Ran the real deep-audit CLI locally and found three genuine bugs while dogfooding, not testing
+  artifacts:** (1) `KeralaMap.astro`'s dark-mode text-colour override was dead CSS — a later,
+  unconditional `.kerala-map__row { color: #14181f }` rule always won on source order regardless of the
+  media query, so every district link failed WCAG contrast in dark mode, and separately the reddest
+  bucket had no single text colour safe in *either* scheme — fixed with a computed foreground colour per
+  bucket (verified against the real hex pairs with the WCAG contrast formula, not eyeballed); (2) the
+  map's `role="img"` wrapped real interactive `<a>` links (axe's `nested-interactive`) — replaced with a
+  plain `<ul>`/`<li>` list; (3) Pagefind's own default-UI markup fails `label-title-only` (its `<input>`
+  has only a `title` attribute) and, once a page has two widget instances, `landmark-unique` (both
+  instances share one fixed `aria-label`) — both fixed inside `PagefindSearch.astro` post-mount, without
+  forking the widget. All three confirmed fixed with axe-core re-run directly against the built page (0
+  violations), not just inferred from the code change.
+  Also fixed 13 failing GIGW element checks (Layout.astro's footer gained genuine
+  Contact/Feedback/Sitemap/Privacy/Terms/Copyright/Hyperlinking/Disclaimer/Accessibility/Screen-reader/
+  Help/RTI links plus an ownership statement, each backed by real content on `about.astro` — including an
+  honest RTI section explaining the Act doesn't apply to a non-government project, rather than gaming the
+  pattern-match with empty text), a missing "last updated" date, `id.canonical` (now emitted per page),
+  and `id.sitemap_xml` (`public/sitemap.xml`, a valid sitemap index pointing at the real
+  `sitemap-index.xml` — Astro's sitemap integration never emits that literal filename itself).
+  **Two findings confirmed permanent and unfixable here, not assumed:** `sec.https` fails locally only
+  because `--fixture-base` necessarily tests over plain HTTP (`self-test.ts` already documents this exact
+  artifact for its own fixtures — this isn't new); `curl -I https://govwebsite.hashin.me/` against the
+  real live site came back with no `Strict-Transport-Security`/`Content-Security-Policy`/
+  `X-Frame-Options`/`X-Content-Type-Options`/`Referrer-Policy` at all — GitHub Pages has no mechanism to
+  set custom response headers, so those five checks (all non-★, M/L severity) and `id.gov_domain` (H,
+  correctly — this project's domain genuinely isn't `.gov.in`) will always fail on this host. Re-scoring
+  the real check output with only the one confirmed fixture artifact (`sec.https`) excluded, via the
+  actual `scoreSite()` function (not a guess), gives **90/healthy, zero ★ failures** — this WP's own
+  "score ≥ 80, no ★ failures" bar, genuinely met. The local audit run itself was deliberately **not**
+  merged into `data/` — doing so would show the live site as falsely "broken" from a testing artifact;
+  the real first audit happens through the normal `audit.yml` rolling batch once this deploys (see Open
+  question 12). 994 audit tests, 35 site tests (4 new, `i18n.test.ts`), `astro check` 0/0/0, `astro
+  build` 1668 pages + Pagefind index, all green. One honest test-coverage note: `i18n.test.ts`'s en/ml
+  lookup tests can't currently distinguish a locale-swap bug from correct behaviour, since `ml.json`'s
+  values are still identical to `en.json`'s by design — confirmed by deliberately swapping the two
+  dictionaries and re-running the suite (all 4 tests stayed green); not a fixable gap today, but worth
+  re-checking once WP5.3 gives the two dictionaries genuinely different values. Commit `e123288`.
+  **Next: WP4.6** (`squash-data.yml`, `report.yml`, issue forms).
 
 - **2026-09-24 · WP4.4 done: methodology page generated from `registry.ts`** — continued straight from
   WP4.3 in the same session (context still had headroom). Replaced the pre-Phase-3 placeholder
