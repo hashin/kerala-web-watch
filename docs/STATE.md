@@ -6,16 +6,17 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 ## Now
 
 - **Phase:** 4 — Full site
-- **Current WP:** WP4.1 and WP4.2 both done this session — full site page, then ministry/department/kind/
-  platform/leaderboard pages. WP3.7 is unaffected and still open on its own: steps 1–2 done, step 3's cron
-  gate is the only thing left (see below).
-- **Next action:** WP4.3 (status pages upgrade, feeds, static API, data page). Separately, still check
-  WP3.7's gate opportunistically: `audit.yml`'s cron (`30 21 * * *`, 03:00 IST) needs **two consecutive
+- **Current WP:** WP4.3 done this session (verified and pushed from a cloud session — local dev had become
+  pathologically slow). WP3.7 is unaffected and still open on its own: steps 1–2 done, step 3's cron gate is
+  the only thing left (see below).
+- **Next action:** WP4.4 (methodology page generated from `audit/src/checks/registry.ts`). Separately, still
+  check WP3.7's gate opportunistically: `audit.yml`'s cron (`30 21 * * *`, 03:00 IST) needs **two consecutive
   *scheduled*-triggered runs to succeed** to close WP3.7 (same kind of multi-day gate as WP2.3's open
-  question 8 — no single session can satisfy this). `gh run list --workflow=audit.yml` and look for two
-  `schedule`-trigger rows in a row with `success`. As of this session (2026-09-22, daytime) the next scheduled
-  firing after the crash fixes landed hasn't happened yet — don't force it with `workflow_dispatch`, the gate
-  specifically requires the cron trigger.
+  question 8 — no single session can satisfy this). As of this session (2026-09-23), `list_workflow_runs`
+  filtered to `event=schedule` shows only 2 scheduled runs ever: one `failure` (2026-09-22, the crash WP3.6's
+  handoff already documents) followed by one `success` (2026-09-22→23, run #6) — that's one scheduled
+  success, not yet two *consecutive* ones. Don't force it with `workflow_dispatch`, the gate specifically
+  requires the cron trigger; just check again next session.
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
 - **Registry size:** 1,500 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated) · **Deep-audited:** 97/1,500 (as of the clean `batch_size=50` run, 2026-09-22) · **Light-checked:** 1,500/1,500 (15 down, 19 broken as of first full run 2026-09-21T05:30Z) · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data, and (as of WP4.1) full deep-audit findings — score ring, category bars, issue cards, screenshots, tech facts, sparkline — on every audited site's own page.
 - **Candidates backlog:** ~2,476 fresh, uncurated candidates as of 2026-09-21 (mostly from a new `kerala-gov-in-subdomains` source — see Handoff below), waiting for a WP1.7-style curation pass. Not yet in `registry/sites/`.
@@ -49,7 +50,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 3.7 | audit.yml live (3 → 50 → cron) | in progress | ae87b71 (workflow), 97be5e0 + 24d5f02 (two crash fixes), run 35681566429 (clean batch_size=50) | steps 1–2 done; step 3's two-consecutive-scheduled-runs gate remains |
 | 4.1 | Full site page | done | 884c89d (25db56a: screenshot-filename fix) | 9 components (ScoreRing, CategoryBars, IssueCard, Sparkline, Screenshot, TechFacts, SiteActions, RelatedSites + reused AvailabilityStrip); found & fixed a real production bug while dogfooding (see Handoff): `runner.ts`'s screenshot filenames were date-only, not per-site, so every site captured the same day shared (and clobbered) the same two `.webp` files — fixed to `<site.id>.webp`, 3 new tests; Lighthouse a11y 100 on a poor and a down site page; verified hijacked/healthy rendering with temporary synthetic data (reverted, not committed) since no live site has either status yet |
 | 4.2 | Ministry / department / kind / platform / leaderboard pages | done | 5f63fd7 | `site/src/lib/rollups.ts` (countByStatus, medianScore, failedCheckCounts, percentBroken, platformWideIssues, scoreDelta) + first vitest suite in `site/` (17 tests); new `ministries/index.astro` + `ministries/[ministry].astro`, `kinds/[kind]/[...page].astro`, `platforms/[platform]/[...page].astro`, `leaderboard.astro`; upgraded `departments/[department]/[...page].astro` with a `GroupRollup` (status counts, median, top-3 issues) and fixed it to generate a page for every department, including one with zero sites (`minority`) — previously 404'd, now shows an empty state (this WP's own Verify criterion); `sites/[id].astro` gained the "inherited from platform" note; Lighthouse mobile/4G performance 100 on `/platforms/lsgkerala/` (1,200 members, the largest listing), `/leaderboard/` and `/departments/lsgd/` (ADR-025) |
-| 4.3 | Status pages, feeds, static API, data page | todo | | |
+| 4.3 | Status pages, feeds, static API, data page | done | 97cae21 (5b1e5f2, 29819d2: test fixes) | `api/summary.json`, `api/sites.csv`, `api/all.json` (evidence-stripped), `api/sites/<id>.json`, `feeds/broken.xml`, `feeds/fixed.xml`, `/data/`; status pages themselves were already paginated in an earlier WP, so this WP's own scope was the rest of DESIGN §7.2 — no new listing page, so no new Lighthouse run needed (ADR-025's requirement is per new listing page). New `audit/src/summary.ts` export `allTransitions()` (full-scrollback sibling of the existing 7-day `recentTransitions()`) and `site/src/lib/api.ts` (pure builders: `sitesToCsv`, `siteApiRecord`, `allSitesRecords`, `siteTransitions`, `buildTransitionFeed`). Verified in cloud (local dev was pathologically slow — a plain `tsc` build took ~20 min): `audit` 994 tests (987 pass; 7 pre-existing `fixture-server.test.ts` failures are this sandbox's own inability to resolve `*.localhost` over DNS, confirmed via a direct `dns.lookup` ENOTFOUND, unrelated to this WP and last touched in WP3.5 — would pass on a real CI runner), `audit` lint + build clean; `site` 29 tests green, `astro check` 0 errors, full build 1,666 pages. Found and fixed two bugs *in the tests themselves* while verifying (not the implementation — see commit 5b1e5f2): `allTransitions`'s own test fixture had an inverted boolean, and `sitesToCsv`'s test hardcoded a URL that didn't match its own fixture's actual output. `verifier` subagent then mutation-tested the new suite: confirmed the `allTransitions`/CSV-escaping/evidence-stripping/XML-escaping tests all catch their real breaks, but found `siteTransitions` (the function both feed endpoints call for the 100-entry cap and id→name join) had zero direct coverage — added 3 tests for it (commit 29819d2), each hand-confirmed to catch its break. Spot-checked built output: `api/summary.json` (357 KB), `api/sites.csv` (205 KB), `api/all.json` (452 KB raw / 28 KB gzipped), `api/sites/<id>.json` × 1,500, `feeds/broken.xml` and `feeds/fixed.xml` (both parse as well-formed XML via `xml.etree.ElementTree`, empty `<feed>` since there's no `../data` checkout locally — degrades gracefully as designed), `data/index.html` (5.9 KB). |
 | 4.4 | Methodology page generated from registry.ts | todo | | |
 | 4.5 | Pagefind, i18n scaffold, self-audit ≥ 80 | todo | | |
 | 4.6 | squash-data.yml, report.yml, issue forms | todo | | |
@@ -112,6 +113,29 @@ _None yet. Each entry: what, why, ADR number._
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-09-23 · WP4.3 done: static API, Atom feeds, `/data/`** — implemented in a local session
+  that then moved to a cloud session for verification because local `tsc`/`vitest` had become
+  pathologically slow (a plain build took ~20 min; 991 tests still running after ~50 min). New
+  endpoints: `api/summary.json`, `api/sites.csv`, `api/all.json` (evidence stripped for size —
+  452 KB raw / 28 KB gzipped), `api/sites/<id>.json` (evidence kept, one per site, 1,500 files),
+  `feeds/broken.xml`/`feeds/fixed.xml` (Atom, last 100 transitions, both parse clean, empty locally
+  since there's no `../data` checkout — correct, not a bug), `/data/` (downloads index). New
+  `audit/src/summary.ts` export `allTransitions()` and `site/src/lib/api.ts`'s pure builders.
+  Status pages themselves weren't touched — already paginated in an earlier WP — so no new
+  Lighthouse run was owed under ADR-025. **Found two real bugs, both in the tests, not the
+  implementation, while verifying**: `audit/tests/summary.test.ts`'s `allTransitions` fixture had
+  an inverted boolean (asserted a value its own history array couldn't produce), and
+  `site/tests/api.test.ts`'s `sitesToCsv` test hardcoded a URL that didn't match what its own
+  fixture actually generates unless `url` is passed explicitly — fixed both (commit 5b1e5f2),
+  didn't touch the implementation since it was already correct and consistent with sibling tests.
+  Ran `verifier` per convention: it mutation-tested the new suite and confirmed most of it holds,
+  but caught a real gap — `siteTransitions` (the 100-entry cap and id→name join both feed
+  endpoints depend on) had zero direct coverage; removing the cap or breaking the name lookup left
+  the suite green. Added 3 tests for it, each hand-confirmed to catch its own break (commit
+  29819d2). **Next time:** WP4.4 (methodology page from `registry.ts`'s check metadata — DESIGN
+  §5.1/§5.3/§5.4/§6.7/§6.8, ADR-006/007/013/015). Separately, WP3.7's cron gate is now at 1 of the
+  2 consecutive scheduled successes it needs — check again next session, don't force it.
 
 - **2026-09-22 · WP4.2 done: ministry/department/kind/platform/leaderboard pages** — continued straight
   from WP4.1 in the same session (context budget still had headroom). New `site/src/lib/rollups.ts`
