@@ -209,3 +209,25 @@
   added: "2026-09-20"
   lifecycle: active
   notes: "Primary url serves a self-signed/untrusted TLS certificate as of 2026-09-20 (found during WP1.7 curation, not yet audited by Phase 2/3 checks) -- the alias mvd.kerala.gov.in works and is the same department (matching page title)."
+
+# WP4.5: this project's own site, added so it audits itself (DESIGN §7.1's "the site must pass
+# its own audit and is listed in the registry as a dogfood entry"). ADR-011.
+- id: kerala-web-watch
+  name: Kerala Web Watch
+  url: https://govwebsite.hashin.me
+  aliases: []
+  tier: state
+  kind: portal
+  department: gad
+  org_parent: null
+  scope: state
+  district: null
+  place: null
+  lsg_type: null
+  platform: null
+  priority: 3
+  tags: [self]
+  source: "WP4.5 -- this project's own site, added to dogfood its own audit"
+  added: "2026-09-24"
+  lifecycle: active
+  notes: "This is Kerala Web Watch itself -- an independent civic project, not a Government of Kerala service. It is included here so the site audits its own work (ADR-011)."

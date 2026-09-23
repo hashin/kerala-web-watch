@@ -8,4 +8,11 @@ export default defineConfig({
   site: process.env.SITE_URL ?? 'https://govwebsite.hashin.me',
   base: process.env.SITE_BASE ?? '/',
   integrations: [sitemap()],
+  // WP4.5: routing only -- `/` stays English (defaultLocale, unprefixed), `/ml/<page>` is
+  // Malayalam. Only a handful of pages have a `/ml/` counterpart so far (WP5.3 covers the rest);
+  // Astro's i18n routing doesn't require every page to exist in every locale.
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'ml'],
+  },
 });

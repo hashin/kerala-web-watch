@@ -1,0 +1,44 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PagefindSearch from '../../components/PagefindSearch.astro';
+import { t } from '../../i18n';
+
+const locale = 'ml';
+// `ml.json`'s values are still literal English text (WP4.5 wires the routing and lookup; WP5.3
+// does the actual translation). Marking this page `lang="ml"` before that would be wrong -- a
+// citizen's screen reader would try to pronounce English words with Malayalam phonetics, and it's
+// exactly the mismatch `a11y.lang` exists to catch (DESIGN §5.3: "Malayalam page with lang="en"
+// fails" -- the same check fails the other way round too). Stays `lang="en"` until WP5.3 lands.
+---
+
+<Layout
+  title={t(locale, 'home.title')}
+  description={t(locale, 'home.intro')}
+  lang="en"
+  altLangHref="/"
+  altLangLabel="English"
+>
+  <h1>{t(locale, 'home.heading')}</h1>
+  <p>{t(locale, 'home.intro')}</p>
+
+  <section aria-labelledby="search-heading">
+    <h2 id="search-heading">{t(locale, 'home.searchHeading')}</h2>
+    <PagefindSearch id="ml-home-search" />
+  </section>
+
+  <p class="partial-notice">
+    <strong>{t(locale, 'home.partialNoticeHeading')}:</strong>
+    {t(locale, 'home.partialNotice')}
+    {' '}<a href="/">{t(locale, 'home.fullSiteLink')}</a>
+  </p>
+</Layout>
+
+<style>
+  .partial-notice {
+    max-width: 60ch;
+    padding: 0.6rem 0.9rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.25rem;
+    color: var(--color-muted);
+  }
+</style>

@@ -115,6 +115,8 @@ const otherInDistrict = site.district
     </p>
   )}
 
+  {site.notes && <p class="site-note">{site.notes}</p>}
+
   <section aria-labelledby="screenshot-heading">
     <h2 id="screenshot-heading">Screenshot</h2>
     <Screenshot id={site.id} siteName={site.name} screenshot={deep?.screenshot ?? null} reason={reason} />
@@ -232,6 +234,13 @@ const otherInDistrict = site.district
     border: 1px solid var(--color-warn);
     border-radius: 0.25rem;
     color: var(--color-warn);
+  }
+  .site-note {
+    max-width: 60ch;
+    padding: 0.6rem 0.9rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.25rem;
+    color: var(--color-muted);
   }
   .passed-checks ul {
     columns: 2;

@@ -1,0 +1,89 @@
+---
+/**
+ * Pagefind's static index only exists after `astro build`'s `postbuild` step runs (`pagefind
+ * --site dist`, package.json) -- in `astro dev` this widget renders but finds no index (self-
+ * hosted assets 404, matching every other Astro+Pagefind site; there is no dev-time index to
+ * serve). No third-party request either way: `pagefind-ui.js`/`.css` are generated into our own
+ * `dist/pagefind/` by that build step, not fetched from a CDN (ADR-011).
+ */
+interface Props {
+  id: string;
+  /** Header instance: collapsed behind a toggle so the ~1666-page sitewide widget doesn't load
+   * Pagefind's JS/WASM on every single page view. Home instance (`lazy={false}`) loads immediately
+   * since a visitor landing there is expected to want search right away (DESIGN §7.2). */
+  lazy?: boolean;
+}
+
+const { id, lazy = false } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+{lazy ? (
+  <details class="pagefind-toggle">
+    <summary>Search</summary>
+    <div id={id} class="pagefind-search"></div>
+  </details>
+) : (
+  <div id={id} class="pagefind-search"></div>
+)}
+
+<script define:vars={{ id, lazy, base }}>
+  // One shared loader per page: if both the header's and the homepage's widgets are present on
+  // the same page (the home page has both), `pagefind-ui.js` is only fetched and evaluated once.
+  function loadPagefindUI() {
+    if (window.__pagefindUILoading) return window.__pagefindUILoading;
+    window.__pagefindUILoading = new Promise((resolve, reject) => {
+      if (window.PagefindUI) return resolve();
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = `${base}/pagefind/pagefind-ui.css`;
+      document.head.appendChild(link);
+      const script = document.createElement('script');
+      script.src = `${base}/pagefind/pagefind-ui.js`;
+      script.onload = () => resolve();
+      script.onerror = () => reject(new Error('Pagefind index not found (dev server has none until a production build)'));
+      document.head.appendChild(script);
+    });
+    return window.__pagefindUILoading;
+  }
+
+  function mount() {
+    loadPagefindUI()
+      .then(() => {
+        new window.PagefindUI({ element: `#${id}`, showSubResults: true, showImages: false });
+        // Pagefind's default UI gives its <input> a `title` attribute only, which several screen
+        // readers don't treat as a real accessible name (axe-core's label-title-only rule, found
+        // during WP4.5's self-audit) -- an explicit aria-label fixes it without forking the widget.
+        document.querySelector(`#${id} input`)?.setAttribute('aria-label', 'Search this site');
+        // The home page carries both a header and a home-page instance of this widget; Pagefind
+        // gives every instance's <form role="search"> the same fixed aria-label, which makes two
+        // same-page search landmarks indistinguishable (axe-core's landmark-unique rule, found the
+        // same self-audit run) -- disambiguate by this instance's own element id.
+        document.querySelector(`#${id} form`)?.setAttribute('aria-label', `Search this site (${id})`);
+      })
+      .catch(() => {}); // Silent in dev; see the component's own comment above.
+  }
+
+  if (lazy) {
+    const el = document.getElementById(id).closest('details');
+    el.addEventListener('toggle', function onToggle() {
+      if (el.open) {
+        mount();
+        el.removeEventListener('toggle', onToggle);
+      }
+    });
+  } else {
+    mount();
+  }
+</script>
+
+<style>
+  .pagefind-toggle summary {
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .pagefind-search {
+    margin-top: 0.5rem;
+    max-width: 40rem;
+  }
+</style>

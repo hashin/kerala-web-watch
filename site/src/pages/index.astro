@@ -4,6 +4,7 @@ import HealthBadge from '../components/HealthBadge.astro';
 import StatTile from '../components/StatTile.astro';
 import CoverageBar from '../components/CoverageBar.astro';
 import KeralaMap from '../components/KeralaMap.astro';
+import PagefindSearch from '../components/PagefindSearch.astro';
 import { getDistricts, getSite, getSummary } from '../lib/data';
 
 const summary = getSummary();
@@ -22,6 +23,8 @@ const recentFixed = summary.recent_fixed
 <Layout
   title="Home"
   description="Tracking which Government of Kerala websites are up, down or broken, and why."
+  altLangHref="/ml/"
+  altLangLabel="മലയാളം"
 >
   <h1>Kerala Web Watch</h1>
   <p class="headline">
@@ -32,6 +35,11 @@ const recentFixed = summary.recent_fixed
     and a deep audit (accessibility, security headers, content quality, GIGW compliance) on a rolling
     basis. A site not yet reached by the deep audit shows as <HealthBadge status="unaudited" />.
   </p>
+
+  <section aria-labelledby="search-heading">
+    <h2 id="search-heading">Search</h2>
+    <PagefindSearch id="home-search" />
+  </section>
 
   <section aria-labelledby="map-heading">
     <h2 id="map-heading">By district</h2>

@@ -19,48 +19,65 @@ const rows = (districtLayout.order as string[]).map((id) => {
 
 // Accessible 5-step sequential ramp (light -> dark, distinguishable without colour vision) --
 // the percentage number is always rendered too, so colour is never the only signal (DESIGN §7.4).
-function bucket(pct: number): string {
-  if (pct === 0) return 'var(--map-0)';
-  if (pct < 5) return 'var(--map-1)';
-  if (pct < 15) return 'var(--map-2)';
-  if (pct < 30) return 'var(--map-3)';
-  return 'var(--map-4)';
+// Each bucket carries its own foreground colour, not a single fixed one: a background ramp that
+// spans near-white to saturated red can't share one text colour and keep WCAG AA contrast at both
+// ends (found via axe-core during WP4.5's self-audit -- the fixed dark text this used to have
+// passed on the light buckets but failed against the darkest one in both colour schemes).
+function bucket(pct: number): { bg: string; fg: string } {
+  if (pct === 0) return { bg: 'var(--map-0)', fg: 'var(--map-0-fg)' };
+  if (pct < 5) return { bg: 'var(--map-1)', fg: 'var(--map-1-fg)' };
+  if (pct < 15) return { bg: 'var(--map-2)', fg: 'var(--map-2-fg)' };
+  if (pct < 30) return { bg: 'var(--map-3)', fg: 'var(--map-3-fg)' };
+  return { bg: 'var(--map-4)', fg: 'var(--map-4-fg)' };
 }
 ---
 
-<div class="kerala-map" role="img" aria-label="Percentage of broken government websites by district, north to south">
-  <p class="kerala-map__note">Schematic, not to scale — districts ordered north to south.</p>
-  {rows.map((row) => (
-    <a class="kerala-map__row" href={`/districts/${row.id}/`} style={`background: ${bucket(row.pct)}`}>
-      <span class="kerala-map__name">{row.name}</span>
-      <span class="kerala-map__pct">{row.pct}% broken ({row.broken}/{row.sites})</span>
-    </a>
-  ))}
+<div class="kerala-map">
+  <p class="kerala-map__note">Percentage of broken government websites by district. Schematic, not to scale — districts ordered north to south.</p>
+  <ul class="kerala-map__list">
+    {rows.map((row) => {
+      const { bg, fg } = bucket(row.pct);
+      return (
+        <li>
+          <a class="kerala-map__row" href={`/districts/${row.id}/`} style={`background: ${bg}; color: ${fg}`}>
+            <span class="kerala-map__name">{row.name}</span>
+            <span class="kerala-map__pct">{row.pct}% broken ({row.broken}/{row.sites})</span>
+          </a>
+        </li>
+      );
+    })}
+  </ul>
 </div>
 
 <style>
   :root {
-    --map-0: #e6f4ea;
-    --map-1: #b7e0c3;
-    --map-2: #f4d35e;
-    --map-3: #ef8354;
-    --map-4: #c4281c;
+    --map-0: #e6f4ea; --map-0-fg: #14181f;
+    --map-1: #b7e0c3; --map-1-fg: #14181f;
+    --map-2: #f4d35e; --map-2-fg: #14181f;
+    --map-3: #ef8354; --map-3-fg: #14181f;
+    /* The reddest bucket is dark enough in both colour schemes that white text is the one that
+       always passes -- verified against both hex values below, not assumed. */
+    --map-4: #c4281c; --map-4-fg: #ffffff;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --map-0: #1e3324;
-      --map-1: #2c4a35;
-      --map-2: #5c4a1f;
-      --map-3: #7a3f26;
-      --map-4: #5c1712;
+      --map-0: #1e3324; --map-0-fg: #e8ecf1;
+      --map-1: #2c4a35; --map-1-fg: #e8ecf1;
+      --map-2: #5c4a1f; --map-2-fg: #e8ecf1;
+      --map-3: #7a3f26; --map-3-fg: #e8ecf1;
+      --map-4: #5c1712; --map-4-fg: #ffffff;
     }
-    .kerala-map__row { color: #e8ecf1; }
   }
   .kerala-map {
+    max-width: 26rem;
+  }
+  .kerala-map__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 2px;
-    max-width: 26rem;
   }
   .kerala-map__note {
     font-size: 0.8rem;
@@ -72,7 +89,6 @@ function bucket(pct: number): string {
     justify-content: space-between;
     gap: 1rem;
     padding: 0.4rem 0.75rem;
-    color: #14181f;
     text-decoration: none;
     border-radius: 0.25rem;
   }

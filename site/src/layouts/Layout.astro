@@ -1,13 +1,23 @@
 ---
 import '../styles/global.css';
+import PagefindSearch from '../components/PagefindSearch.astro';
 
 interface Props {
   title: string;
   description?: string;
   lang?: string;
+  /** This page's counterpart in the other language, if one exists yet -- most pages don't (WP5.3
+   * covers full translation), so this is omitted far more often than it's set. */
+  altLangHref?: string;
+  altLangLabel?: string;
 }
 
-const { title, description, lang = 'en' } = Astro.props;
+const { title, description, lang = 'en', altLangHref, altLangLabel } = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
+// Static build timestamp, not per-request -- accurate to "when this deployment was built", which
+// is what GIGW's "last updated" element is asking a citizen (DESIGN §5.3: `gigw.last_updated`).
+const lastUpdated = new Date().toISOString().slice(0, 10);
 ---
 
 <!doctype html>
@@ -17,6 +27,7 @@ const { title, description, lang = 'en' } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title} · Kerala Web Watch</title>
     {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href="data:," />
   </head>
   <body>
@@ -26,7 +37,14 @@ const { title, description, lang = 'en' } = Astro.props;
         <a href="/">Kerala Web Watch</a>
         · <a href="/methodology/">Methodology</a>
         · <a href="/about/">About</a>
+        {altLangHref && (
+          <>
+            {' · '}
+            <a href={altLangHref} hreflang={altLangLabel === 'English' ? 'en' : 'ml'}>{altLangLabel}</a>
+          </>
+        )}
       </nav>
+      <PagefindSearch id="header-search" lazy />
     </header>
     <main id="main">
       <slot />
@@ -34,8 +52,23 @@ const { title, description, lang = 'en' } = Astro.props;
     <footer class="site-footer">
       <p>
         Kerala Web Watch is an independent, open-data civic audit. No cookies, no analytics, no
-        third-party requests. <a href="/about/">About &amp; contact</a>.
+        third-party requests. Content owned and maintained by Hashin Jithu; designed, developed
+        and hosted by Hashin Jithu. Last updated {lastUpdated}.
       </p>
+      <nav aria-label="Policies and help" class="site-footer__policies">
+        <a href="/about/#contact">Contact Us</a>
+        <a href="https://github.com/hashin/kerala-web-watch/issues">Feedback</a>
+        <a href="/sitemap-index.xml">Sitemap</a>
+        <a href="/about/#privacy">Privacy Policy</a>
+        <a href="/about/#terms">Terms and Conditions</a>
+        <a href="/about/#copyright-policy">Copyright Policy</a>
+        <a href="/about/#hyperlinking-policy">Hyperlinking Policy</a>
+        <a href="/about/#disclaimer">Disclaimer</a>
+        <a href="/about/#accessibility">Accessibility Statement</a>
+        <a href="/about/#screen-reader">Screen Reader Access</a>
+        <a href="/methodology/">Help</a>
+        <a href="/about/#rti">Right to Information (RTI)</a>
+      </nav>
     </footer>
   </body>
 </html>

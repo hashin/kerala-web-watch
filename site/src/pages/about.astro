@@ -7,6 +7,8 @@ const buildDate = new Date().toISOString().slice(0, 10);
 <Layout
   title="About"
   description="Who runs Kerala Web Watch, why it exists, and how to contact or contribute."
+  altLangHref="/ml/about/"
+  altLangLabel="മലയാളം"
 >
   <h1>About Kerala Web Watch</h1>
 
@@ -17,7 +19,7 @@ const buildDate = new Date().toISOString().slice(0, 10);
     now, and so a webmaster can see exactly what to fix.
   </p>
 
-  <h2>Contact</h2>
+  <h2 id="contact">Contact</h2>
   <p>
     Source and issue tracker:
     <a href="https://github.com/hashin/kerala-web-watch">github.com/hashin/kerala-web-watch</a>.
@@ -32,22 +34,69 @@ const buildDate = new Date().toISOString().slice(0, 10);
     <a href="https://github.com/hashin/kerala-web-watch/tree/main/registry">registry</a>.
   </p>
 
-  <h2>Accessibility</h2>
+  <h2 id="accessibility">Accessibility</h2>
   <p>
     We aim for WCAG 2.1 AA on our own pages: semantic HTML, a skip link, visible keyboard focus,
-    and status that is never conveyed by colour alone. This is a stub statement &mdash; a full
-    accessibility statement with a way to report barriers will replace it once the site's own
-    audit results exist (we intend to pass our own checks).
+    and status that is never conveyed by colour alone. This site is itself entered in the registry
+    (id <code>kerala-web-watch</code>) and audited like any other, so its own accessibility score
+    is a real, checkable number on <a href="/sites/kerala-web-watch/">its own site page</a>, not a
+    claim taken on trust. Found a barrier? Please <a href="#contact">tell us</a>.
   </p>
 
-  <h2>Privacy</h2>
+  <h2 id="screen-reader">Screen reader access</h2>
+  <p>
+    This site is built from plain semantic HTML (headings, lists, tables, landmarks) with no
+    custom widgets that override standard screen-reader behaviour, other than the search box
+    (a third-party "Pagefind" search widget, self-hosted, keyboard operable). A skip link at the
+    top of every page jumps straight to the main content.
+  </p>
+
+  <h2 id="privacy">Privacy</h2>
   <p>
     No cookies, no analytics, no third-party requests of any kind on this site. Fonts are
     self-hosted. See <a href="/fonts/OFL.txt">/fonts/OFL.txt</a> for the Malayalam typeface's
     licence.
   </p>
 
-  <h2>Licence</h2>
+  <h2 id="terms">Terms and conditions</h2>
+  <p>
+    Use this site and its published data as you like, within the licences below. There is no
+    account to create and nothing to agree to before reading it. This project accepts no liability
+    for decisions made based on its findings &mdash; see the Disclaimer below.
+  </p>
+
+  <h2 id="copyright-policy">Copyright policy</h2>
+  <p>
+    Code is MIT-licensed; the registry and audit data are CC-BY-4.0. Both are in the
+    <a href="https://github.com/hashin/kerala-web-watch">repository</a>, including each licence's
+    full text. Screenshots of audited government websites are included only as audit evidence.
+  </p>
+
+  <h2 id="hyperlinking-policy">Hyperlinking policy</h2>
+  <p>
+    Every government website this project links to is public information already; you're welcome
+    to link to any page on this site without asking first. We are not responsible for the content
+    of external sites we link to, government or otherwise, and a link from us is not an endorsement.
+  </p>
+
+  <h2 id="disclaimer">Disclaimer</h2>
+  <p>
+    This is an independent, unofficial project, not a Government of Kerala service. It has no
+    legal or administrative authority over any department. Every finding is a starting point for a
+    department to verify and fix, not a final verdict &mdash; see the
+    <a href="/methodology/">methodology page</a> for exactly how each check works and its
+    limitations.
+  </p>
+
+  <h2 id="rti">Right to Information (RTI)</h2>
+  <p>
+    This project is not a government body or a "public authority" under the Right to Information
+    Act, so RTI requests do not apply to it. For RTI requests about a specific department, use
+    that department's own RTI/PIO contact &mdash; audited government sites are checked
+    (<code>gigw.rti</code>) for whether they publish one.
+  </p>
+
+  <h2 id="licence">Licence</h2>
   <p>
     Code is MIT-licensed; the registry and audit data are CC-BY-4.0. Both are in the
     <a href="https://github.com/hashin/kerala-web-watch">repository</a>.

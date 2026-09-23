@@ -3,12 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "predev": "cd ../audit && npm ci && npm run build && cd ../site && node scripts/copy-screenshots.mjs",
     "dev": "astro dev",
     "prebuild": "cd ../audit && npm ci && npm run build && cd ../site && node scripts/copy-screenshots.mjs",
     "build": "astro build",
+    "postbuild": "pagefind --site dist",
     "prelint": "cd ../audit && npm ci && npm run build",
     "lint": "astro check",
     "preview": "astro preview",
@@ -21,6 +24,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
+    "pagefind": "^1.5.2",
     "typescript": "^5.7.2",
     "vitest": "^5.0.1"
   }
