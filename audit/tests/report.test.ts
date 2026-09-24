@@ -120,6 +120,27 @@ describe('buildReportData', () => {
     expect(data.best.some((s) => s.id === 'c')).toBe(false);
   });
 
+  it('breaks equal scores by id so ties are stable', () => {
+    const registry = registryOf([site({ id: 'b' }), site({ id: 'a' })]);
+    const results = [scored('b', 50), scored('a', 50)];
+    const summary = computeSummary(registry, results, { now: new Date('2026-09-24'), vantages: ['gh-us'] });
+    const data = buildReportData(registry, summary, null, '2026-09', new Date('2026-09-24'));
+
+    expect(data.best.map((s) => s.id)).toEqual(['a', 'b']);
+    expect(data.worst.map((s) => s.id)).toEqual(['a', 'b']);
+  });
+
+  it('caps best/worst at 5 sites even when more are deep-audited', () => {
+    const ids = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+    const registry = registryOf(ids.map((id) => site({ id })));
+    const results = ids.map((id, i) => scored(id, (i + 1) * 10)); // a:10 .. g:70
+    const summary = computeSummary(registry, results, { now: new Date('2026-09-24'), vantages: ['gh-us'] });
+    const data = buildReportData(registry, summary, null, '2026-09', new Date('2026-09-24'));
+
+    expect(data.best.map((s) => s.id)).toEqual(['g', 'f', 'e', 'd', 'c']);
+    expect(data.worst.map((s) => s.id)).toEqual(['a', 'b', 'c', 'd', 'e']);
+  });
+
   it('carries deltas through unchanged when a previous snapshot is given', () => {
     const registry = registryOf([site({ id: 'a' })]);
     const summary = computeSummary(registry, [], { now: new Date('2026-09-24'), vantages: ['gh-us'] });
@@ -142,6 +163,27 @@ describe('renderReportMarkdown + parseSnapshot', () => {
 
   it('returns null for markdown with no frontmatter block', () => {
     expect(parseSnapshot('# Just a heading\n\nNo frontmatter here.')).toBeNull();
+  });
+
+  it('states an increase as "up" and a decrease as "down" in the delta summary', () => {
+    // sites rose from 90 to 100 (up); down count fell from 5 to 2 (down).
+    const current = snapshot({ sites: 100, down: 2 });
+    const previous = snapshot({ sites: 90, down: 5 });
+    const data = {
+      month: '2026-09',
+      generated: new Date('2026-09-24T00:00:00Z').toISOString(),
+      totals: current,
+      coverage: { deep_audited: current.deep_audited, total: current.sites, eta: null },
+      median_score: current.median_score,
+      deltas: computeDeltas(current, previous),
+      top_issues: [],
+      best: [],
+      worst: [],
+    };
+    const markdown = renderReportMarkdown(data);
+
+    expect(markdown).toContain('Sites tracked up 10');
+    expect(markdown).toContain('Down down 3');
   });
 });
 
