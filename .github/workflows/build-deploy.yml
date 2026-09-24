@@ -3,12 +3,14 @@ name: Build and Deploy
 on:
   push:
     branches: [main, data]
-  # uptime.yml/audit.yml push to `data` using the default GITHUB_TOKEN, and pushes made with that
-  # token never trigger other workflows' `push` events (GitHub's anti-recursion rule) -- so a bot
-  # commit to `data` would otherwise never rebuild Pages. workflow_run isn't a push event and isn't
-  # subject to that rule, so it's the trigger that actually fires for those commits.
+  # uptime.yml/audit.yml push to `data`, and report.yml pushes to `main`, all using the default
+  # GITHUB_TOKEN -- pushes made with that token never trigger other workflows' `push` events
+  # (GitHub's anti-recursion rule), so a bot commit would otherwise never rebuild Pages.
+  # workflow_run isn't a push event and isn't subject to that rule, so it's the trigger that
+  # actually fires for those commits. squash-data.yml isn't listed: it only rewrites `data`'s
+  # history, never its content, so there's nothing new to deploy.
   workflow_run:
-    workflows: ['Uptime (light checks)', 'Deep audit (rolling)']
+    workflows: ['Uptime (light checks)', 'Deep audit (rolling)', 'Monthly report']
     types: [completed]
   workflow_dispatch:
 

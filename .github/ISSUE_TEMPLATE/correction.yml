@@ -1,0 +1,33 @@
+name: Correct a listed website
+description: Report wrong or outdated information about a site already on Kerala Web Watch -- wrong department, wrong district, a dead entry, a changed URL.
+title: '[correction] '
+labels: [correction, registry]
+body:
+  - type: input
+    id: site
+    attributes:
+      label: Which site?
+      description: Paste the Kerala Web Watch page URL (e.g. https://govwebsite.hashin.me/sites/<id>/) or the site's own URL.
+      placeholder: https://
+    validations:
+      required: true
+  - type: dropdown
+    id: field
+    attributes:
+      label: What's wrong?
+      options:
+        - The URL has changed / is wrong
+        - Wrong department or ministry
+        - Wrong district or place
+        - This organisation no longer exists / has merged with another
+        - Duplicate of another entry already on the site
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: correct_info
+    attributes:
+      label: What's the correct information?
+      description: Include a source (an official page or notification) where possible -- see CLAUDE.md's "never invent URLs" rule.
+    validations:
+      required: true

@@ -1,0 +1,44 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const reports = (await getCollection('reports')).sort((a, b) => b.data.month.localeCompare(a.data.month));
+---
+
+<Layout title="Monthly reports" description="The state of Kerala government websites, one month at a time -- totals, month-over-month deltas, and the best- and worst-scoring sites.">
+  <p><a href="/">&larr; Home</a></p>
+  <h1>Monthly reports</h1>
+  <p>
+    On the 1st of every month we publish a snapshot: how many sites we track, how many are down,
+    broken or unverifiable, the median deep-audit score, and how those numbers moved since last
+    month. Each report is a fixed point in time -- for the live, moving numbers, see the
+    <a href="/">home page</a> or the <a href="/data/">open data</a>.
+  </p>
+
+  {reports.length === 0 ? (
+    <p>No reports published yet -- check back after the 1st of the month.</p>
+  ) : (
+    <ul class="report-list">
+      {reports.map((report) => (
+        <li>
+          <a href={`/reports/${report.data.month}/`}>{report.data.title}</a>
+        </li>
+      ))}
+    </ul>
+  )}
+</Layout>
+
+<style>
+  .report-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+  }
+  .report-list li {
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+  }
+</style>

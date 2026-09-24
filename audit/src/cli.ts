@@ -16,6 +16,7 @@ import { runSelfTest } from './self-test.js';
 import { deriveScheduleState, planBatch, toPlanTable } from './scheduler.js';
 import { nextBatchId, readBatches } from './batches.js';
 import { mergeAll } from './merge.js';
+import { buildReportData, readPreviousSnapshot, renderReportMarkdown } from './report.js';
 
 function flagValue(argv: string[], name: string): string | undefined {
   const index = argv.indexOf(name);
@@ -347,6 +348,45 @@ async function runMerge(argv: string[]): Promise<number> {
   return 0;
 }
 
+const REPORT_USAGE = 'Usage: cli.js report --registry <dir> --data <dir> --out <dir> [--month YYYY-MM]';
+
+/**
+ * WP4.6's monthly "State of Kerala Government Websites" page: recomputes the summary the same way
+ * `light`/site's own `getSummary` do (never trusts a stale `summary.json` verbatim), reads last
+ * month's snapshot back out of whatever `<out>/YYYY-MM.md` sorts immediately before this month
+ * (`report.ts`'s `readPreviousSnapshot`), and writes this month's file -- a content-collection
+ * entry `report.yml` commits straight to `main`. Never touches the live internet.
+ */
+async function runReport(argv: string[]): Promise<number> {
+  if (argv.includes('--help')) {
+    console.log(REPORT_USAGE);
+    return 0;
+  }
+
+  const registryDir = flagValue(argv, '--registry') ?? 'registry';
+  const dataDir = flagValue(argv, '--data');
+  const outDir = flagValue(argv, '--out');
+  const month = flagValue(argv, '--month') || new Date().toISOString().slice(0, 7);
+
+  if (!dataDir || !outDir) {
+    console.error(`Missing --data <dir> or --out <dir>\n${REPORT_USAGE}`);
+    return 1;
+  }
+
+  const registry = loadRegistry(registryDir);
+  const results = registry.sites.map((s) => readResult(dataDir, s.id)).filter((r): r is Result => r !== null);
+  const summary = computeSummary(registry, results, { now: new Date(), vantages: ['gh-us'] });
+  const previous = readPreviousSnapshot(outDir, month);
+  const data = buildReportData(registry, summary, previous, month, new Date());
+  const markdown = renderReportMarkdown(data);
+
+  await mkdir(outDir, { recursive: true });
+  await writeFile(join(outDir, `${month}.md`), markdown);
+  console.error(`report: month=${month} sites=${summary.totals.sites} deep_audited=${summary.totals.deep_audited} healthy=${summary.totals.healthy}`);
+
+  return 0;
+}
+
 async function runSelfTestCommand(argv: string[]): Promise<number> {
   if (argv.includes('--help')) {
     console.log('Usage: cli.js self-test [--with-lighthouse]');
@@ -369,11 +409,13 @@ async function main(): Promise<number> {
       return runPlan(rest);
     case 'merge':
       return runMerge(rest);
+    case 'report':
+      return runReport(rest);
     case 'self-test':
       return runSelfTestCommand(rest);
     default:
       console.error(
-        `Unknown command: ${command ?? '(none)'}\nUsage: cli.js validate --registry <dir> [--json] | cli.js light --help | cli.js run --help | cli.js plan --help | cli.js merge --help | cli.js self-test --help`,
+        `Unknown command: ${command ?? '(none)'}\nUsage: cli.js validate --registry <dir> [--json] | cli.js light --help | cli.js run --help | cli.js plan --help | cli.js merge --help | cli.js report --help | cli.js self-test --help`,
       );
       return 1;
   }

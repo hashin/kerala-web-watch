@@ -1,0 +1,33 @@
+name: Request a re-audit
+description: You (or your department) fixed something a Kerala Web Watch report flagged, and want us to check again sooner than the next scheduled audit.
+title: '[reaudit] '
+labels: [reaudit]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every site is re-checked automatically -- a light up/down check every 6 hours, a full deep
+        audit on a rolling schedule (see the [methodology page](https://govwebsite.hashin.me/methodology/)).
+        Use this form only if you need a fix verified sooner than that.
+  - type: input
+    id: site
+    attributes:
+      label: Which site?
+      description: Paste the Kerala Web Watch page URL (e.g. https://govwebsite.hashin.me/sites/<id>/) or the site's own URL.
+      placeholder: https://
+    validations:
+      required: true
+  - type: textarea
+    id: what_changed
+    attributes:
+      label: What did you fix?
+      description: List the specific issue(s) from the site's Kerala Web Watch page, and what was done about each.
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Before you submit
+      options:
+        - label: I've checked the site loads correctly myself, from a normal browser, since making the fix.
+          required: true

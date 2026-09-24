@@ -1,0 +1,51 @@
+name: Squash data branch
+
+on:
+  schedule:
+    - cron: '30 0 1 * *'           # 1st of the month, 00:30 UTC -- after report.yml's 00:10 run
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-branch               # shared with uptime.yml/audit.yml so pushes never race
+  cancel-in-progress: false
+
+jobs:
+  squash:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: data, path: data }
+
+      # DESIGN §6.4: the open-data archive journalists and researchers can cite -- `results/`,
+      # `summary.json`, `outlinks.json` only. `screenshots/` and `batches.json` are working state,
+      # not part of the dataset, and would make every monthly zip tens of MB larger for no reason.
+      - name: Build the dataset archive
+        working-directory: data
+        run: zip -r "../dataset-$(date -u +%Y-%m).zip" results summary.json outlinks.json
+
+      - name: Publish the Release
+        run: |
+          month="$(date -u +%Y-%m)"
+          gh release create "dataset-${month}" "dataset-${month}.zip" \
+            --repo "${{ github.repository }}" \
+            --title "Dataset — ${month}" \
+            --notes "Kerala Web Watch's full audit dataset as of $(date -u +%F), CC-BY-4.0. See /data/ on the site for the schema."
+
+      # Trend data lives inside each result's own `history[]`, not in git history (DESIGN §6.4), so
+      # collapsing `data` to one commit loses nothing the site or the archive above still needs --
+      # it just bounds how large the repository grows from ~5 bot commits/day.
+      - name: Rewrite data as a single-commit orphan branch
+        working-directory: data
+        run: |
+          git config user.name  "kerala-web-watch[bot]"
+          git config user.email "kerala-web-watch[bot]@users.noreply.github.com"
+          git checkout --orphan data-squashed
+          git add -A
+          git commit -m "data: squashed $(date -u +%F)"
+          git push --force origin data-squashed:data

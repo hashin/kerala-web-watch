@@ -1,0 +1,29 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const reports = await getCollection('reports');
+  return reports.map((entry) => ({ params: { month: entry.data.month }, props: { entry } }));
+}
+
+interface Props {
+  entry: CollectionEntry<'reports'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<Layout title={entry.data.title} description={`Kerala Web Watch's monthly report for ${entry.data.month}: totals, month-over-month deltas, top issues, and the best- and worst-scoring sites.`}>
+  <p><a href="/reports/">&larr; All reports</a></p>
+  <h1>{entry.data.title}</h1>
+  <p class="report-generated">Generated {entry.data.generated.slice(0, 10)}.</p>
+  <Content />
+</Layout>
+
+<style>
+  .report-generated {
+    color: var(--color-muted);
+  }
+</style>

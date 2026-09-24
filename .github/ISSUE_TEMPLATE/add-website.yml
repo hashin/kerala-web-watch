@@ -1,0 +1,61 @@
+name: Add a government website
+description: Tell us about a Kerala government website that isn't on Kerala Web Watch yet.
+title: '[add-website] '
+labels: [add-website, registry]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Only official Government of Kerala websites belong here -- state departments, directorates,
+        PSUs, statutory bodies, universities, district administrations, and local self-government
+        institutions (panchayats, municipalities, corporations). Not central government sites, not
+        private or NGO sites.
+  - type: input
+    id: name
+    attributes:
+      label: Organisation name
+      placeholder: e.g. Kollam Municipal Corporation
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Website URL
+      placeholder: https://
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of organisation is this?
+      options:
+        - Secretariat department / directorate
+        - Public sector undertaking (PSU)
+        - Statutory body / mission / authority
+        - University or college
+        - District administration
+        - Local self-government (panchayat / municipality / corporation)
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: district
+    attributes:
+      label: District (if this is a local or district-level office)
+      placeholder: e.g. Kollam
+    validations:
+      required: false
+  - type: input
+    id: source
+    attributes:
+      label: Where did you find this URL?
+      description: A link to an official directory, a department page, or a notification that lists it -- we don't add unverified URLs (CLAUDE.md's "never invent URLs" rule).
+      placeholder: https://
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else we should know?
+    validations:
+      required: false
