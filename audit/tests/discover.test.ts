@@ -189,20 +189,57 @@ describe('discoverCandidates against a local HTTP server', () => {
     expect(candidates).toEqual([]);
   });
 
-  it('waits between requests so a batch of hosts is checked no faster than 1/second', async () => {
-    const registry = registryOf([]);
-    const host = `127.0.0.1:${port}`;
-    const outlinks: OutlinksData = { [host]: outlink(), 'this-host-does-not-exist.invalid': outlink() };
-    const waits: number[] = [];
-
-    await discoverCandidates([host, 'this-host-does-not-exist.invalid'], outlinks, registry, {
-      scheme: 'http',
-      sleep: async (ms) => {
-        waits.push(ms);
-      },
+  it('checks hosts concurrently rather than one at a time', async () => {
+    const slowServer = createServer((req, res) => {
+      setTimeout(() => {
+        res.writeHead(200, { 'content-type': 'text/html' });
+        res.end('<html><head><title>Slow</title></head></html>');
+      }, 300);
     });
+    await new Promise<void>((resolve) => slowServer.listen(0, '127.0.0.1', resolve));
+    const slowPort = (slowServer.address() as AddressInfo).port;
 
-    expect(waits).toEqual([1000]);
+    try {
+      const registry = registryOf([]);
+      const hostA = `127.0.0.1:${slowPort}`;
+      const hostB = `localhost:${slowPort}`;
+      const outlinks: OutlinksData = { [hostA]: outlink(), [hostB]: outlink() };
+
+      const start = Date.now();
+      const candidates = await discoverCandidates([hostA, hostB], outlinks, registry, { scheme: 'http', concurrency: 2 });
+      const elapsed = Date.now() - start;
+
+      expect(candidates).toHaveLength(2);
+      expect(elapsed).toBeLessThan(550); // well under 2x300ms, which sequential checking would take
+    } finally {
+      await new Promise<void>((resolve) => slowServer.close(() => resolve()));
+    }
+  });
+
+  it('honours a concurrency of 1 by checking hosts one at a time', async () => {
+    const slowServer = createServer((req, res) => {
+      setTimeout(() => {
+        res.writeHead(200, { 'content-type': 'text/html' });
+        res.end('<html><head><title>Slow</title></head></html>');
+      }, 200);
+    });
+    await new Promise<void>((resolve) => slowServer.listen(0, '127.0.0.1', resolve));
+    const slowPort = (slowServer.address() as AddressInfo).port;
+
+    try {
+      const registry = registryOf([]);
+      const hostA = `127.0.0.1:${slowPort}`;
+      const hostB = `localhost:${slowPort}`;
+      const outlinks: OutlinksData = { [hostA]: outlink(), [hostB]: outlink() };
+
+      const start = Date.now();
+      await discoverCandidates([hostA, hostB], outlinks, registry, { scheme: 'http', concurrency: 1 });
+      const elapsed = Date.now() - start;
+
+      expect(elapsed).toBeGreaterThanOrEqual(380); // two 200ms checks, one at a time
+    } finally {
+      await new Promise<void>((resolve) => slowServer.close(() => resolve()));
+    }
   });
 });
 

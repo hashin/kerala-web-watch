@@ -1,4 +1,5 @@
 import { dump as dumpYaml } from 'js-yaml';
+import pLimit from 'p-limit';
 import { lightCheck } from './light.js';
 import { normalizeUrl } from './url.js';
 import type { OutlinksData } from './outlinks.js';
@@ -77,8 +78,14 @@ export interface DiscoveredCandidate {
 }
 
 export interface DiscoverOptions {
-  delayMs?: number;
-  sleep?: (ms: number) => Promise<void>;
+  /** How many hosts to check at once. CLAUDE.md's <=1 req/s politeness limit is stated *per
+   * host*, and discovery only ever sends one request to a given host in a run, so checking
+   * several *different* hosts concurrently (same pattern `cli light --concurrency` already uses
+   * across all 1,501 registered sites) never violates it -- a real run against 138 candidate
+   * hosts strictly one-at-a-time timed out a 30-minute CI job, confirming sequential-with-delay
+   * doesn't scale to discovery's batch sizes the way it's fine for `resolve.ts`'s handful-of-PR-
+   * entries case. */
+  concurrency?: number;
   now?: () => Date;
   /** `https` in production; a test overrides this to `http` so `hosts` can be a local test
    * server's `127.0.0.1:<port>` address without needing real TLS. */
@@ -86,41 +93,42 @@ export interface DiscoverOptions {
 }
 
 /**
- * DESIGN §6.6 steps 3-4: light-checks each surviving host, sequentially, at least a second apart
- * -- the same politeness limit every other live check in this project honours, applied here too
- * since discovery is still a real request to a real site, not exempt just because it's a script.
- * Only hosts that actually answered (`light.status !== null` -- got some HTTP response, even a
- * 4xx/5xx) become candidates; a DNS-dead or connection-refused host isn't a government website
- * worth a human's curation time.
+ * DESIGN §6.6 steps 3-4: light-checks each surviving host (bounded concurrency, distinct hosts
+ * only -- see `DiscoverOptions.concurrency`) and keeps only the ones that actually answered
+ * (`light.status !== null` -- got some HTTP response, even a 4xx/5xx); a DNS-dead or connection-
+ * refused host isn't a government website worth a human's curation time.
  */
 export async function discoverCandidates(hosts: string[], outlinks: OutlinksData, registry: Registry, opts: DiscoverOptions = {}): Promise<DiscoveredCandidate[]> {
-  const sleep = opts.sleep ?? ((ms: number) => new Promise<void>((resolve) => setTimeout(resolve, ms)));
-  const delayMs = opts.delayMs ?? 1000;
   const now = opts.now ?? (() => new Date());
   const scheme = opts.scheme ?? 'https';
+  const limit = pLimit(opts.concurrency ?? 6);
   const out: DiscoveredCandidate[] = [];
 
-  for (const [index, host] of hosts.entries()) {
-    if (index > 0) await sleep(delayMs);
-    const entry = outlinks[host];
-    const homepage = `${scheme}://${host}/`;
-    const light = await lightCheck(homepage);
-    if (light.status === null) continue;
+  await Promise.all(
+    hosts.map((host) =>
+      limit(async () => {
+        const entry = outlinks[host];
+        const homepage = `${scheme}://${host}/`;
+        const light = await lightCheck(homepage);
+        if (light.status === null) return;
 
-    const primaryFromId = entry.from[0];
-    const sourcePage = primaryFromId ? (registry.byId.get(primaryFromId)?.url ?? homepage) : homepage;
+        const primaryFromId = entry.from[0];
+        const sourcePage = primaryFromId ? (registry.byId.get(primaryFromId)?.url ?? homepage) : homepage;
 
-    out.push({
-      url: normalizeUrl(light.final_url ?? homepage),
-      name: light.title?.trim() || host,
-      source: 'discover',
-      source_page: sourcePage,
-      hints: {},
-      fetched_at: now().toISOString(),
-      seen_from: entry.from,
-      link_count: entry.count,
-    });
-  }
+        out.push({
+          url: normalizeUrl(light.final_url ?? homepage),
+          name: light.title?.trim() || host,
+          source: 'discover',
+          source_page: sourcePage,
+          hints: {},
+          fetched_at: now().toISOString(),
+          seen_from: entry.from,
+          link_count: entry.count,
+        });
+      }),
+    ),
+  );
+
   return out;
 }
 

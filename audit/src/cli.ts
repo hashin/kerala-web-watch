@@ -393,8 +393,9 @@ const DISCOVER_USAGE = 'Usage: cli.js discover --registry <dir> --data <dir> [--
 
 /**
  * WP5.1/DESIGN §6.6: filters `data/outlinks.json` down to hosts that look like a Kerala
- * government site and aren't already registered or ignored, light-checks the survivors (the
- * same <=1 req/s politeness every other live check here honours), and writes whatever answered
+ * government site and aren't already registered or ignored, light-checks the survivors
+ * (bounded concurrency across distinct hosts -- see `discoverCandidates`'s own comment for why
+ * that still honours CLAUDE.md's <=1 req/s-per-host limit), and writes whatever answered
  * to `registry/candidates/discovered.yaml` -- recomputed wholesale each run (like
  * `summary.json`/`outlinks.json`), never accumulated, so merging a candidate into `sites/` (or
  * moving it to `ignore.yaml`) makes it stop being proposed on its own, with no separate cleanup
