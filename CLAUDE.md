@@ -134,7 +134,9 @@ Hosting: GitHub Pages at **https://govwebsite.hashin.me** (custom domain; `site/
 ## Things only the human can do (ask, do not attempt)
 
 Enable Pages (Source: GitHub Actions) and set the custom domain + Enforce HTTPS · point DNS `govwebsite.hashin.me` CNAME → `hashin.github.io` · set Actions workflow permissions to
-read/write · add secrets (`SAFE_BROWSING_KEY`) · register a self‑hosted `india` runner · merge discovery PRs ·
+read/write · enable "Allow GitHub Actions to create and approve pull requests" (Settings → Actions →
+General — `discover.yml`'s `create-pull-request` step needs this; confirmed blocking a real run 2026-09-24,
+see STATE.md) · add secrets (`SAFE_BROWSING_KEY`) · register a self‑hosted `india` runner · merge discovery PRs ·
 choose the public name/domain and the contact email · decide whether `ministers.yaml` carries names.
 
 ## Conventions

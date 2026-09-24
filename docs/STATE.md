@@ -6,13 +6,18 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 ## Now
 
 - **Phase:** 4 — Full site
-- **Current WP:** WP4.6 done this session (`squash-data.yml`, `report.yml`, issue forms, `cli report`). Also
-  closed two long-open multi-day gates opportunistically while checking Actions history: WP2.3's and WP3.7's
-  "two consecutive scheduled runs" done-when criteria both passed calendar time and succeeded (see their WP
-  table rows) — both are now fully `done`, not just `live`/`in progress`.
-- **Next action:** WP5.1 (`discover.yml` → candidates PR). WP4.7 (India vantage runner) stays blocked/optional
-  on Open question 6 (needs the human to register a self-hosted `india` runner first) — skip it and come back
-  only if that's answered.
+- **Current WP:** WP4.6 and WP5.1 both done this session. Also closed two long-open multi-day gates
+  opportunistically while checking Actions history: WP2.3's and WP3.7's "two consecutive scheduled runs"
+  done-when criteria both passed calendar time and succeeded (see their WP table rows) — both are now fully
+  `done`, not just `live`/`in progress`.
+- **Next action:** WP5.2 (`issue-to-pr.yml`) — parses the three WP4.6 issue forms into a registry PR, same
+  general shape as `discover.yml`'s own PR-opening step. WP4.7 (India vantage runner) stays blocked/optional
+  on Open question 6 (needs the human to register a self-hosted `india` runner first) — skip it and come
+  back only if that's answered. Separately: WP5.1's live verification found that this repo can't actually
+  open PRs from Actions yet (`peter-evans/create-pull-request` failed with "GitHub Actions is not permitted
+  to create or approve pull requests") — the human needs to flip Settings → Actions → General → "Allow
+  GitHub Actions to create and approve pull requests" before `discover.yml`'s next scheduled run, or
+  `issue-to-pr.yml` (WP5.2), can actually open one. See Open question 14.
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
 - **Registry size:** 1,501 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated + 1 dogfood entry, WP4.5's own `kerala-web-watch`) · **Deep-audited:** 299/1,501 (as of the `data` checkout pulled 2026-09-24 for WP4.6's report generation; `kerala-web-watch` itself not yet deep-audited by real CI — see WP4.5's Handoff entry) · **Light-checked:** 1,501/1,501 · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data, and (as of WP4.1) full deep-audit findings — score ring, category bars, issue cards, screenshots, tech facts, sparkline — on every audited site's own page. As of WP4.5 also has a self-hosted Pagefind search (home page + collapsed header toggle) and a `/ml/` route prefix wired (two pages so far, `home` and `about`, still English text pending WP5.3's translation).
 - **Candidates backlog:** ~2,476 fresh, uncurated candidates as of 2026-09-21 (mostly from a new `kerala-gov-in-subdomains` source — see Handoff below), waiting for a WP1.7-style curation pass. Not yet in `registry/sites/`.
@@ -51,7 +56,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 4.5 | Pagefind, i18n scaffold, self-audit ≥ 80 | done | e123288 | `postbuild: pagefind --site dist`, new `PagefindSearch.astro` (home page + collapsed header toggle); `astro.config.mjs` i18n (`en`/`ml`), new `src/i18n/{en,ml}.json` + `t()` + 2 `/ml/` pages (home, about — still `lang="en"`, real English text, since ml.json intentionally isn't translated yet); site added to registry (`kerala-web-watch`, `tags:[self]`), validated + live-resolved; ran the real deep-audit CLI locally and found 3 genuine bugs while dogfooding (KeralaMap dark-mode text-colour override was dead CSS from source order + no safe single text colour for the reddest bucket in either scheme — both fixed with a foreground colour per bucket; `role="img"` wrapping real links — fixed to a plain list; Pagefind's own widget markup failing `label-title-only`/`landmark-unique` — fixed in `PagefindSearch.astro`), plus fixed 13 failing GIGW element checks, `id.canonical`, `id.sitemap_xml`, `content.last_updated`/`gigw.last_updated`; confirmed (not assumed) two permanent, unfixable-here findings — `sec.https` only fails locally via `--fixture-base`'s necessary plain-HTTP (same documented artifact as `self-test.ts`'s own fixtures), and GitHub Pages sends no custom headers at all (`curl -I` against the real live site), so `sec.hsts`/`csp`/`xfo`/`xcto`/`referrer` (non-★, M/L) and `id.gov_domain` (H, correctly — this project isn't `.gov.in`) will always fail; re-scoring the same real check output with only `sec.https` excluded via the actual `scoreSite()` gives **90/healthy, zero ★ failures** — this WP's own bar, met; the local audit run was deliberately not merged into `data/` (see Handoff and open question 12) |
 | 4.6 | squash-data.yml, report.yml, issue forms | done | 8c226a8 | new `cli report` (audit/src/report.ts, 12 tests after verifier) recomputes the summary and diffs it against last month's snapshot, read back out of that month's own report frontmatter (no separate cache); `reports` content collection + `/reports/` and `/reports/<month>/` pages; generated and committed the real first report (2026-09) locally rather than via a live dispatch; verifier mutation-tested report.ts, see Handoff; `squash-data.yml`'s own live `workflow_dispatch` verification (force-pushes `data`, creates a public Release) deliberately not run this session — needs the human's explicit go-ahead first, see Open question 13 |
 | 4.7 | India vantage runner (optional) | todo | | |
-| 5.1 | discover.yml → candidates PR | todo | | |
+| 5.1 | discover.yml → candidates PR | done | 84dc0929 | `cli discover` (audit/src/discover.ts, 18 tests after verifier) filters `data/outlinks.json` to gov-looking hosts, drops registered/ignored ones, light-checks survivors (`p-limit`-bounded concurrency, not sequential — see Handoff, a real run timed out at 30min sequential), writes `registry/candidates/discovered.yaml` wholesale each run; verified live twice via `workflow_dispatch` against real production data (392 outlink hosts → 138 candidates → 73 reachable) — correctly separates central-gov noise (cea.nic.in, cpcb.gov.in) from real Kerala orgs (bptkerala.in, cee-kerala.org, erckerala.org); PR-opening step itself blocked on a repo setting the human needs to flip — see Open question 14 |
 | 5.2 | issue-to-pr.yml | todo | | |
 | 5.3 | Malayalam explanations + UI | todo | | |
 | 5.4 | Government colleges tier | todo | | |
@@ -122,10 +127,40 @@ _None yet. Each entry: what, why, ADR number._
     unattended the way an ordinary `uptime.yml`/`audit.yml` dispatch is. This session wrote and
     typechecked the workflow but deliberately did not dispatch it. Ask the human before running it the
     first time; after that first confirmed-safe run, later monthly runs are just the cron doing its job.
+14. **Repo setting needed: "Allow GitHub Actions to create and approve pull requests."** Confirmed missing
+    by a real `workflow_dispatch` of `discover.yml` (run 36003876316, 2026-09-24): `cli discover` itself ran
+    correctly end-to-end (392 outlink hosts → 138 candidates → 73 reachable, written to
+    `registry/candidates/discovered.yaml`), but the `peter-evans/create-pull-request` step failed outright
+    with "GitHub Actions is not permitted to create or approve pull requests." This is a repo Settings →
+    Actions → General toggle, not something fixable in code or via this session's token (added to CLAUDE.md's
+    "Things only the human can do" list). Blocks `discover.yml` actually landing a PR on its next scheduled
+    run, and will block WP5.2's `issue-to-pr.yml` the same way — worth the human flipping it before WP5.2
+    needs live verification too.
 
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-09-24 · WP5.1 done: `discover.yml`, `cli discover`** — continued straight from WP4.6 in the same
+  session. `audit/src/discover.ts`'s pure half (`looksLikeKeralaGovHost`, `filterCandidateHosts`,
+  `registeredHosts`, `isIgnoredHost`, `newCandidateHosts`) is offline and got 100% real-data sanity-checked
+  (392 real outlink hosts → 138 candidates, correctly keeping `.gov.in`/`.nic.in`/`.ac.in` domains and
+  Kerala-mentioning ones, correctly excluding anything already in the 1,501-site registry). First real
+  `workflow_dispatch` (36000257060) hit a genuine design bug: `discoverCandidates` light-checked hosts
+  strictly sequentially with a 1s gap (copying `resolve.ts`'s pattern for its own much smaller PR-review
+  batches), which timed out a 30-minute CI job against 138 real hosts. Fixed by switching to `p-limit`-bounded
+  concurrency (default 6, same mechanism `cli light --all` already uses) — CLAUDE.md's ≤1 req/s politeness
+  rule is stated *per host*, and discovery only ever sends one request per host per run, so concurrent
+  *different* hosts never violates it. Rewrote the resulting two timing tests as concurrency proofs (2 slow
+  hosts finish in ~1x the delay at concurrency 2, ~2x at concurrency 1) rather than deleting coverage.
+  Second real dispatch (36003876316) finished in 7m54s, well inside the new 45-minute timeout, and correctly
+  found 73 reachable candidates — but failed at the very last step: this repo doesn't have "Allow GitHub
+  Actions to create and approve pull requests" enabled, so `peter-evans/create-pull-request` can't actually
+  open the PR yet. Not fixable from a session (see Open question 14 and CLAUDE.md's human-only list) — the
+  discovery pipeline itself is proven correct and complete; only the last mile needs the human. `verifier` ran
+  on `discover.test.ts` before the concurrency fix and found one real gap (candidate name falls back to the
+  host when a fetched homepage has no `<title>` tag), fixed in the test file only. 1,024 audit tests, all
+  green; `astro build`/site untouched this WP (no site-facing change).
 
 - **2026-09-24 · WP4.6 done: `squash-data.yml`, `report.yml`, `cli report`, issue forms — plus WP2.3/WP3.7's
   long-open gates both closed.** New `audit/src/report.ts` (12 tests after `verifier`'s pass, see below):
