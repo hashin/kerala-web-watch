@@ -6,19 +6,15 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 ## Now
 
 - **Phase:** 4 — Full site
-- **Current WP:** WP4.3, WP4.4 and WP4.5 all done this session — WP4.3 was verification-only (the code was
-  already committed by a prior session that deferred its test run to a cloud session); WP4.4 (methodology
-  page) and WP4.5 (search, i18n scaffold, self-audit) were built fresh. WP3.7 is unaffected and still open
-  on its own: steps 1–2 done, step 3's cron gate is the only thing left (see below).
-- **Next action:** WP4.6 (`squash-data.yml`, `report.yml`, issue forms). Separately, still check
-  WP3.7's gate opportunistically: `audit.yml`'s cron (`30 21 * * *`, 03:00 IST) needs **two consecutive
-  *scheduled*-triggered runs to succeed** to close WP3.7 (same kind of multi-day gate as WP2.3's open
-  question 8 — no single session can satisfy this). `gh run list --workflow=audit.yml` and look for two
-  `schedule`-trigger rows in a row with `success`. As of this session (2026-09-22, daytime) the next scheduled
-  firing after the crash fixes landed hasn't happened yet — don't force it with `workflow_dispatch`, the gate
-  specifically requires the cron trigger.
+- **Current WP:** WP4.6 done this session (`squash-data.yml`, `report.yml`, issue forms, `cli report`). Also
+  closed two long-open multi-day gates opportunistically while checking Actions history: WP2.3's and WP3.7's
+  "two consecutive scheduled runs" done-when criteria both passed calendar time and succeeded (see their WP
+  table rows) — both are now fully `done`, not just `live`/`in progress`.
+- **Next action:** WP5.1 (`discover.yml` → candidates PR). WP4.7 (India vantage runner) stays blocked/optional
+  on Open question 6 (needs the human to register a self-hosted `india` runner first) — skip it and come back
+  only if that's answered.
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
-- **Registry size:** 1,501 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated + 1 dogfood entry, WP4.5's own `kerala-web-watch`) · **Deep-audited:** 97/1,501 (as of the clean `batch_size=50` run, 2026-09-22; `kerala-web-watch` itself not yet deep-audited by real CI — see WP4.5's Handoff entry) · **Light-checked:** 1,500/1,500 (15 down, 19 broken as of first full run 2026-09-21T05:30Z) · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data, and (as of WP4.1) full deep-audit findings — score ring, category bars, issue cards, screenshots, tech facts, sparkline — on every audited site's own page. As of WP4.5 also has a self-hosted Pagefind search (home page + collapsed header toggle) and a `/ml/` route prefix wired (two pages so far, `home` and `about`, still English text pending WP5.3's translation).
+- **Registry size:** 1,501 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated + 1 dogfood entry, WP4.5's own `kerala-web-watch`) · **Deep-audited:** 299/1,501 (as of the `data` checkout pulled 2026-09-24 for WP4.6's report generation; `kerala-web-watch` itself not yet deep-audited by real CI — see WP4.5's Handoff entry) · **Light-checked:** 1,501/1,501 · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data, and (as of WP4.1) full deep-audit findings — score ring, category bars, issue cards, screenshots, tech facts, sparkline — on every audited site's own page. As of WP4.5 also has a self-hosted Pagefind search (home page + collapsed header toggle) and a `/ml/` route prefix wired (two pages so far, `home` and `about`, still English text pending WP5.3's translation).
 - **Candidates backlog:** ~2,476 fresh, uncurated candidates as of 2026-09-21 (mostly from a new `kerala-gov-in-subdomains` source — see Handoff below), waiting for a WP1.7-style curation pass. Not yet in `registry/sites/`.
 
 ## Work packages
@@ -38,7 +34,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 1.7 | Curation pass → registry/sites/*.yaml; live-resolve; stats | done | 8bbff71 | 16 university, 14 district, 50 psu, 38 statutory, 95 agency, 65 directorate = 290 curated; registry 1,210 → 1,500 exactly (Verify gate met); `drafts/` holds only 5 resolved items with notes |
 | 2.1 | `light.ts` + tests | done | 4b6d5e0 | dns/tls/http primitives + orchestration; 52 tests incl. a verifier-caught redirect-loop cap and TLS-validity gap, both fixed |
 | 2.2 | `cli light`, data-branch writer, history, summary.json | done | 7e43cf1 | 79 tests; verifier found 4 undertested paths (score/deep/issues carry-forward, deep-audit-preserved status, null-district grouping, coverage-ETA batch cap), all fixed and re-verified by hand |
-| 2.3 | uptime.yml live | live | 52977b4 | cron running; 2 manual `workflow_dispatch` runs (limit=50, then all 1,500) verified end-to-end; "two consecutive *scheduled* runs" gate needs real calendar time — see Open question 8 |
+| 2.3 | uptime.yml live | done | 52977b4 | cron running; 2 manual `workflow_dispatch` runs (limit=50, then all 1,500) verified end-to-end; "two consecutive *scheduled* runs" gate closed 2026-09-24 (WP4.6 session) — 6 consecutive scheduled runs 2026-09-23T02:38Z through 2026-09-24T10:50Z all `success`, `gh run list --workflow=uptime.yml` |
 | 2.4 | Site v1: home + map + status lists + district pages + light-only site page | done | cf7661d | 1,596 pages in ~2.5s; found & fixed a real WP2.2 bug while dogfooding real data (see handoff); Lighthouse perf 100 on the production build (58 on `astro dev` — checked the wrong server first) |
 | 2.5 | validate.yml `--resolve` + PR comment | done | 7a6ceea | 99 tests; verified live with a real throwaway PR (#2, closed unmerged): bogus host failed with a clear row → fixed to a real URL → same comment updated in place, check passed, entry's name shown |
 | 3.1 | Check framework, `registry.ts` (all ids, EN), `score.ts` | done | 809d32b | 84 check ids (DESIGN §5.3 catalogues ~90); verifier mutation-tested `score.ts`, found 2 undertested paths (issues category-tiebreak, availability-exclusion), both fixed and re-verified by hand |
@@ -47,13 +43,13 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 3.4 | Content + GIGW checks (bilingual) + fixtures | done | f72501c | 11 content.* + 16 gigw.* checks (content.broken_*/console_errors deferred to WP3.5's crawler), 792 tests; new `audit/src/text/{dates,malayalam,patterns}.ts`; verifier mutation-tested and found 3 undertested paths (a threshold "passing by coincidence", a short-circuit never actually forced, gigw.* pattern-to-check wiring unverified per-check), all fixed and re-verified by hand |
 | 3.5 | Playwright runner: capture, axe, Lighthouse, crawl, screenshots; fixture-server smoke test | done | 77b8181 | 923 tests; verifier mutation-tested 10 new files, found and fixed 8 real gaps across crawl/lighthouse/screenshot/perf/content/store/fixture-server (all boundary conditions or an untested function), all re-verified; all 84 check ids now implemented |
 | 3.6 | `plan` scheduler + `merge` (outlinks, phash gating) + tests | done | 8a3659c | 979 tests; verifier mutation-tested and found 2 undertested paths (merge fold's history source, screenshot phash-copy gate's exact threshold boundary), both fixed and re-verified by hand |
-| 3.7 | audit.yml live (3 → 50 → cron) | in progress | ae87b71 (workflow), 97be5e0 + 24d5f02 (two crash fixes), run 35681566429 (clean batch_size=50) | steps 1–2 done; step 3's two-consecutive-scheduled-runs gate remains |
+| 3.7 | audit.yml live (3 → 50 → cron) | done | ae87b71 (workflow), 97be5e0 + 24d5f02 (two crash fixes), run 35681566429 (clean batch_size=50) | step 3's gate closed 2026-09-24 (WP4.6 session): two consecutive *scheduled*-triggered runs both `success` (35798741908 on 2026-09-22T23:43Z, 35935725599 on 2026-09-23T23:52Z), confirmed via `gh run list --workflow=audit.yml` |
 | 4.1 | Full site page | done | 884c89d (25db56a: screenshot-filename fix) | 9 components (ScoreRing, CategoryBars, IssueCard, Sparkline, Screenshot, TechFacts, SiteActions, RelatedSites + reused AvailabilityStrip); found & fixed a real production bug while dogfooding (see Handoff): `runner.ts`'s screenshot filenames were date-only, not per-site, so every site captured the same day shared (and clobbered) the same two `.webp` files — fixed to `<site.id>.webp`, 3 new tests; Lighthouse a11y 100 on a poor and a down site page; verified hijacked/healthy rendering with temporary synthetic data (reverted, not committed) since no live site has either status yet |
 | 4.2 | Ministry / department / kind / platform / leaderboard pages | done | 5f63fd7 | `site/src/lib/rollups.ts` (countByStatus, medianScore, failedCheckCounts, percentBroken, platformWideIssues, scoreDelta) + first vitest suite in `site/` (17 tests); new `ministries/index.astro` + `ministries/[ministry].astro`, `kinds/[kind]/[...page].astro`, `platforms/[platform]/[...page].astro`, `leaderboard.astro`; upgraded `departments/[department]/[...page].astro` with a `GroupRollup` (status counts, median, top-3 issues) and fixed it to generate a page for every department, including one with zero sites (`minority`) — previously 404'd, now shows an empty state (this WP's own Verify criterion); `sites/[id].astro` gained the "inherited from platform" note; Lighthouse mobile/4G performance 100 on `/platforms/lsgkerala/` (1,200 members, the largest listing), `/leaderboard/` and `/departments/lsgd/` (ADR-025) |
 | 4.3 | Status pages, feeds, static API, data page | done | 97cae21 (+ d6e2ea3 test-fixture fixes) | `api/summary.json`, `api/sites.csv`, `api/all.json` (evidence stripped for gzip-friendly bulk export), `api/sites/<id>.json` (full evidence), `feeds/broken.xml` + `feeds/fixed.xml` (Atom, last 100 transitions via new `allTransitions()`), `/data/` page; new `audit/src/summary.ts` `transitionDay()` helper shared by `recentTransitions`/`allTransitions`, new `site/src/lib/api.ts` pure builders + first `site` API test file; this session picked up verification a prior session had explicitly deferred to a cloud session (commit message said so) and found + fixed two real test-only bugs: `site/tests/api.test.ts` expected a hardcoded URL but its fixture's `result()` override supplied its own auto-generated one, and `audit/tests/summary.test.ts`'s `allTransitions` test had an inverted `up: i < 20` boolean that tested the opposite transition direction from what it claimed to; both fixed, not the implementation — 994 audit + 26 site tests, `astro check` 0/0/0, `astro build` 1665 pages all green |
 | 4.4 | Methodology page generated from `registry.ts` | done | 36e4dea | rewrote the pre-Phase-3 placeholder (still said "planned"/"once it exists") into a page generated from `CHECKS`: principles, two tiers, scoring (weights/deductions/thresholds newly exported from `score.ts`), status definitions, vantage/geo-blocking, how to contest, limitations, and all 84 checks grouped by category via new `site/src/lib/methodology.ts` (`checksByCategory`) — never hand-copied; `robots.txt` + `humans.txt` added; verified all 84 ids present in the built HTML and ~10 min reading time (2,030 words), matching the WP's own target; `verifier` mutation-tested the new test file and found one real gap (category-mix-up test only covered 2 of 7 categories), fixed and re-verified by hand |
 | 4.5 | Pagefind, i18n scaffold, self-audit ≥ 80 | done | e123288 | `postbuild: pagefind --site dist`, new `PagefindSearch.astro` (home page + collapsed header toggle); `astro.config.mjs` i18n (`en`/`ml`), new `src/i18n/{en,ml}.json` + `t()` + 2 `/ml/` pages (home, about — still `lang="en"`, real English text, since ml.json intentionally isn't translated yet); site added to registry (`kerala-web-watch`, `tags:[self]`), validated + live-resolved; ran the real deep-audit CLI locally and found 3 genuine bugs while dogfooding (KeralaMap dark-mode text-colour override was dead CSS from source order + no safe single text colour for the reddest bucket in either scheme — both fixed with a foreground colour per bucket; `role="img"` wrapping real links — fixed to a plain list; Pagefind's own widget markup failing `label-title-only`/`landmark-unique` — fixed in `PagefindSearch.astro`), plus fixed 13 failing GIGW element checks, `id.canonical`, `id.sitemap_xml`, `content.last_updated`/`gigw.last_updated`; confirmed (not assumed) two permanent, unfixable-here findings — `sec.https` only fails locally via `--fixture-base`'s necessary plain-HTTP (same documented artifact as `self-test.ts`'s own fixtures), and GitHub Pages sends no custom headers at all (`curl -I` against the real live site), so `sec.hsts`/`csp`/`xfo`/`xcto`/`referrer` (non-★, M/L) and `id.gov_domain` (H, correctly — this project isn't `.gov.in`) will always fail; re-scoring the same real check output with only `sec.https` excluded via the actual `scoreSite()` gives **90/healthy, zero ★ failures** — this WP's own bar, met; the local audit run was deliberately not merged into `data/` (see Handoff and open question 12) |
-| 4.6 | squash-data.yml, report.yml, issue forms | todo | | |
+| 4.6 | squash-data.yml, report.yml, issue forms | done | 8c226a8 | new `cli report` (audit/src/report.ts, 12 tests after verifier) recomputes the summary and diffs it against last month's snapshot, read back out of that month's own report frontmatter (no separate cache); `reports` content collection + `/reports/` and `/reports/<month>/` pages; generated and committed the real first report (2026-09) locally rather than via a live dispatch; verifier mutation-tested report.ts, see Handoff; `squash-data.yml`'s own live `workflow_dispatch` verification (force-pushes `data`, creates a public Release) deliberately not run this session — needs the human's explicit go-ahead first, see Open question 13 |
 | 4.7 | India vantage runner (optional) | todo | | |
 | 5.1 | discover.yml → candidates PR | todo | | |
 | 5.2 | issue-to-pr.yml | todo | | |
@@ -73,11 +69,8 @@ _None yet. Each entry: what, why, ADR number._
 5. Provide `SAFE_BROWSING_KEY` secret? (optional; `sec.safe_browsing` is skipped without it)
 6. India self-hosted runner for WP4.7? (optional)
 7. **Reverse-IP search for co-hosted sites** — the human asked (2026-09-21) to find other Kerala govt websites sharing an IP with known ones. A real reverse-IP-to-hostnames lookup needs a paid OSINT API (Shodan/Censys/SecurityTrails/ViewDNS); free/keyless services are rate-limited to a handful of queries, useless against the 866 unique resolved IPs already visible in the human-supplied `kerala.gov.in` subdomain-scan CSV (see WP1.x-continued handoff below). Explicitly deferred at the human's instruction rather than run best-effort. Needs: either an API key from the human, or a decision to skip it permanently. The CSV's top shared IPs if this is picked up later: 103.210.72.94 (95 subdomains), 115.124.98.144 (74), 103.10.168.89 (39), 103.135.130.153 (37), 103.241.147.235 (34), 36.255.252.176 (28), 103.10.168.25 (26), 103.133.180.162 (25), 59.92.70.120 (24), 117.193.73.133 (22).
-8. **Not a question, a bookkeeping note:** WP2.3's "two consecutive scheduled runs succeeded" done-when gate needs
-   real calendar time to pass (cron is `0 */6 * * *`) — no single session can satisfy it. The workflow is live and
-   already verified correct via two manual `workflow_dispatch` runs (limit=50, then all 1,500 — see Handoff). A
-   future session should `gh run list --workflow=uptime.yml` and confirm two consecutive `schedule`-triggered
-   (not `workflow_dispatch`) runs both succeeded, then mark this WP fully closed — not a blocker for WP2.4+.
+8. ~~WP2.3's "two consecutive scheduled runs succeeded" gate~~ — resolved 2026-09-24 (WP4.6 session): 6
+   consecutive scheduled `uptime.yml` runs all `success`. WP2.3 marked `done` in the WP table above.
 9. **Real evidence that `avail.geo_blocked`'s signature list is confirmed incomplete for `keralapsc` specifically**
    — WP3.7 step 1's first real deep audit (2026-09-21) returned `down` for `keralapsc.gov.in`, not `unverifiable`.
    A single manual fetch from this session's own (non-CI) network got a normal 200 OK with real page content, so
@@ -122,10 +115,47 @@ _None yet. Each entry: what, why, ADR number._
     `audit.yml` rolling batch once this deploys and is checked over genuine HTTPS — nothing to do here,
     just don't be surprised if `kerala-web-watch` shows "not yet audited" on the live site for a day or
     two after this lands, same as any other freshly-registered site.
+13. **`squash-data.yml`'s own Verify step needs the human's go-ahead before a session runs it for real.**
+    WP4.6's IMPLEMENTATION.md text says to verify it by `workflow_dispatch`, but that's a genuinely
+    destructive, hard-to-reverse production action — it force-pushes the real `data` branch (rewriting
+    its history to one commit) and publishes a public GitHub Release — not something to trigger
+    unattended the way an ordinary `uptime.yml`/`audit.yml` dispatch is. This session wrote and
+    typechecked the workflow but deliberately did not dispatch it. Ask the human before running it the
+    first time; after that first confirmed-safe run, later monthly runs are just the cron doing its job.
 
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-09-24 · WP4.6 done: `squash-data.yml`, `report.yml`, `cli report`, issue forms — plus WP2.3/WP3.7's
+  long-open gates both closed.** New `audit/src/report.ts` (12 tests after `verifier`'s pass, see below):
+  `buildReportData` recomputes the summary fresh (never trusts a stale `summary.json`, same principle as
+  site's own `getSummary`), ranks best/worst-5 deep-audited sites (ties broken by id), and diffs against
+  last month's numbers — read back out of *that month's own report file's frontmatter* via
+  `readPreviousSnapshot`/`parseSnapshot`, not a separate cache, so there's exactly one place month-over-
+  month state lives. `verifier` mutation-tested it and found 3 real gaps, all fixed in the test file only
+  (`report.ts` itself untouched): tie-break-by-id had no coverage, the 5-item best/worst cap had no
+  fixture with >2 scored sites to actually exercise it, and — the one that mattered most, given ADR-026's
+  "plain language always" rule — the citizen-facing "up"/"down" wording in the delta summary had *zero*
+  test calling `renderReportMarkdown` with real deltas, so an inverted direction word (telling citizens
+  things got better when they got worse) would have shipped silently. New `reports` content collection
+  (`site/src/content.config.ts`, first collection in this project) + `/reports/` index and
+  `/reports/<month>/` pages, linked from the header nav and `/data/`'s "Monthly archives" section.
+  `squash-data.yml` and `report.yml` workflows written and typechecked but **not dispatched live this
+  session** — squash-data force-pushes the real `data` branch and publishes a public Release, a
+  genuinely destructive, hard-to-reverse action that needs the human's explicit go-ahead first (Open
+  question 13); report.yml's own commit-to-main was instead exercised locally (`cli report` run for
+  real against a freshly-pulled `data` checkout, output committed as this session's real first report,
+  `site/src/content/reports/2026-09.md`). Also, opportunistically, while reading Actions history for an
+  unrelated reason: found WP2.3's and WP3.7's "two consecutive scheduled runs" done-when gates had both
+  quietly passed calendar time and succeeded since the last session — marked both fully `done`. One
+  gotcha hit and fixed: this session's local `data` worktree was 2 days stale (last synced 2026-09-22)
+  from a *previous* session, which would have made the first report understate `deep_audited` by 3x
+  (97 vs the real 299) — caught by comparing against `git fetch origin data`, fast-forwarded, regenerated
+  the report with real numbers before committing. `astro check`: 0 errors, 0 warnings, 17 hints (all
+  `'z' is deprecated' ts(6385)` notices from `astro:content`'s own zod re-export — a known upstream
+  cosmetic quirk, not from this project's schema). 1006 audit tests (994 + `report.test.ts`'s 12, after
+  `verifier`'s pass), 35 site tests, `astro build` 1670 pages, all green.
 
 - **2026-09-24 · WP4.5 done: Pagefind search, i18n scaffold, self-audit** — continued straight from WP4.4
   in the same session. Pagefind wired via its own CLI's `postbuild` step (fully self-hosted, ADR-011 —
