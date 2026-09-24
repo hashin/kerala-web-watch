@@ -1,0 +1,52 @@
+name: Discovery
+
+on:
+  schedule:
+    - cron: '0 3 * * 1'            # weekly, Monday 03:00 UTC / 08:30 IST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with: { ref: data, path: data }
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: audit/package-lock.json
+      - working-directory: audit
+        run: npm ci
+      - working-directory: audit
+        run: npm run build
+      - id: discover
+        run: node audit/dist/cli.js discover --registry registry --data data
+
+      # DESIGN §6.6: zero new candidates is the common case once the registry converges, and
+      # doesn't need a PR -- `create-pull-request` would still open one for "0 candidates" if it
+      # ran unconditionally, since the recomputed file's content can differ from git's copy (a
+      # merged/ignored candidate dropping out) even when nothing *new* was found this week.
+      - name: Open a PR with this week's candidates
+        if: steps.discover.outputs.count != '0'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          add-paths: registry/candidates/discovered.yaml
+          commit-message: 'data: weekly discovery of unregistered government sites'
+          branch: discovery/weekly
+          title: 'Discovery: ${{ steps.discover.outputs.count }} candidate sites'
+          labels: discovery
+          body: |
+            Found via outbound links seen during recent deep audits (DESIGN.md §6.6), not yet in
+            the registry or `registry/ignore.yaml`.
+
+            ${{ steps.discover.outputs.table }}
+
+            Merge what's real into `registry/sites/*.yaml` (fill in `department`/`district`/`kind`
+            hints during curation), and move the rest to `registry/ignore.yaml` with a reason.

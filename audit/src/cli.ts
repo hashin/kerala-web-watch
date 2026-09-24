@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-import { appendFileSync } from 'node:fs';
+import { appendFileSync, existsSync, readFileSync } from 'node:fs';
 import { mkdir, writeFile } from 'node:fs/promises';
-import { join } from 'node:path';
+import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import pLimit from 'p-limit';
 import { toMarkdownTable, validateRegistry } from './validate.js';
@@ -17,6 +17,8 @@ import { deriveScheduleState, planBatch, toPlanTable } from './scheduler.js';
 import { nextBatchId, readBatches } from './batches.js';
 import { mergeAll } from './merge.js';
 import { buildReportData, readPreviousSnapshot, renderReportMarkdown } from './report.js';
+import { discoverCandidates, newCandidateHosts, renderCandidatesYaml, toDiscoveryTable } from './discover.js';
+import type { OutlinksData } from './outlinks.js';
 
 function flagValue(argv: string[], name: string): string | undefined {
   const index = argv.indexOf(name);
@@ -387,6 +389,58 @@ async function runReport(argv: string[]): Promise<number> {
   return 0;
 }
 
+const DISCOVER_USAGE = 'Usage: cli.js discover --registry <dir> --data <dir> [--out <path>]';
+
+/**
+ * WP5.1/DESIGN §6.6: filters `data/outlinks.json` down to hosts that look like a Kerala
+ * government site and aren't already registered or ignored, light-checks the survivors (the
+ * same <=1 req/s politeness every other live check here honours), and writes whatever answered
+ * to `registry/candidates/discovered.yaml` -- recomputed wholesale each run (like
+ * `summary.json`/`outlinks.json`), never accumulated, so merging a candidate into `sites/` (or
+ * moving it to `ignore.yaml`) makes it stop being proposed on its own, with no separate cleanup
+ * step. Refuses an unbounded run outside GitHub Actions for the same CLAUDE.md reason `run`/
+ * `validate --resolve` do -- this is still real traffic to real government sites.
+ */
+async function runDiscover(argv: string[]): Promise<number> {
+  if (argv.includes('--help')) {
+    console.log(DISCOVER_USAGE);
+    return 0;
+  }
+
+  const registryDir = flagValue(argv, '--registry') ?? 'registry';
+  const dataDir = flagValue(argv, '--data');
+  const outPath = flagValue(argv, '--out') ?? 'registry/candidates/discovered.yaml';
+
+  if (!dataDir) {
+    console.error(`Missing --data <dir>\n${DISCOVER_USAGE}`);
+    return 1;
+  }
+
+  const registry = loadRegistry(registryDir);
+  const outlinksPath = join(dataDir, 'outlinks.json');
+  const outlinks: OutlinksData = existsSync(outlinksPath) ? JSON.parse(readFileSync(outlinksPath, 'utf-8')) : {};
+  const hosts = newCandidateHosts(outlinks, registry, registry.ignore);
+
+  const insideActions = process.env.GITHUB_ACTIONS === 'true';
+  if (!insideActions && hosts.length > 3) {
+    console.error(
+      `Refusing to light-check ${hosts.length} discovered hosts from outside GitHub Actions -- CLAUDE.md caps a local run at <= 3 real sites.\n${DISCOVER_USAGE}`,
+    );
+    return 1;
+  }
+
+  const candidates = await discoverCandidates(hosts, outlinks, registry);
+  await mkdir(dirname(outPath), { recursive: true });
+  await writeFile(outPath, renderCandidatesYaml(candidates));
+
+  console.error(`discover: ${Object.keys(outlinks).length} outlink hosts -> ${hosts.length} candidate hosts -> ${candidates.length} reachable, written to ${outPath}`);
+  console.error(toDiscoveryTable(candidates));
+  writeGithubOutput('count', String(candidates.length));
+  writeGithubOutput('table', toDiscoveryTable(candidates));
+
+  return 0;
+}
+
 async function runSelfTestCommand(argv: string[]): Promise<number> {
   if (argv.includes('--help')) {
     console.log('Usage: cli.js self-test [--with-lighthouse]');
@@ -411,11 +465,13 @@ async function main(): Promise<number> {
       return runMerge(rest);
     case 'report':
       return runReport(rest);
+    case 'discover':
+      return runDiscover(rest);
     case 'self-test':
       return runSelfTestCommand(rest);
     default:
       console.error(
-        `Unknown command: ${command ?? '(none)'}\nUsage: cli.js validate --registry <dir> [--json] | cli.js light --help | cli.js run --help | cli.js plan --help | cli.js merge --help | cli.js report --help | cli.js self-test --help`,
+        `Unknown command: ${command ?? '(none)'}\nUsage: cli.js validate --registry <dir> [--json] | cli.js light --help | cli.js run --help | cli.js plan --help | cli.js merge --help | cli.js report --help | cli.js discover --help | cli.js self-test --help`,
       );
       return 1;
   }
