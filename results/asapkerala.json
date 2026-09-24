@@ -35,19 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-22T23:56:04.679Z",
-    "run": "1790121183278",
+    "at": "2026-09-24T00:06:38.090Z",
+    "run": "1790208187403",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 27,
+      "performance": 23,
       "accessibility": 83,
-      "best_practices": 77,
+      "best_practices": 73,
       "seo": 69
     },
     "axe": {
-      "critical": 2,
-      "serious": 14,
-      "moderate": 4,
+      "critical": 0,
+      "serious": 13,
+      "moderate": 1,
       "minor": 9
     },
     "crawl": {
@@ -127,7 +127,7 @@
       },
       {
         "id": "sec.hsts",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.mixed_content",
@@ -165,18 +165,17 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "fail",
-        "ev": "2 critical violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "14 serious violation(s)"
+        "ev": "13 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "13 moderate/minor violation(s)"
+        "ev": "10 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -184,8 +183,7 @@
       },
       {
         "id": "a11y.alt",
-        "r": "fail",
-        "ev": "2 image(s) missing alt text"
+        "r": "pass"
       },
       {
         "id": "a11y.contrast",
@@ -217,12 +215,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "27/100"
+        "ev": "23/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "26655.16366ms"
+        "ev": "20866.734999999993ms"
       },
       {
         "id": "perf.cls",
@@ -230,8 +228,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "7.7MB"
+        "r": "fail",
+        "ev": "13.6MB"
       },
       {
         "id": "perf.viewport",
@@ -307,7 +305,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "11 console error(s): requestStorageAccess: Permission denied."
+        "ev": "13 console error(s): requestStorageAccess: Permission denied."
       },
       {
         "id": "gigw.contact",
@@ -413,7 +411,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/destination?id=AW-10874463688&amp;cx=c&amp;gtm=4e69l1, https://connect.facebook.net/signals/config/778306650723406?v=2.9.406&amp;r=stable&amp;domain=asapkerala.gov.in&amp;hme=8a9e6a9b82926b8f07fd0a2edd8b8f1ef075648059d1bb52ec651feab764c219&amp;ex_m=117%2C236%2C168%2C27%2C81%2C82%2C160%2C77%2C76%2C11%2C178%2C101%2C20%2C152%2C140%2C46%2C84%2C89%2C148%2C173%2C180%2C8%2C4%2C5%2C7%2C6%2C3%2C102%2C114%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C37%2C55%2C161%2C86%2C125%2C22%2C24%2C51%2C47%2C49%2C48%2C94%2C103%2C107%2C123%2C159%2C162%2C53%2C124%2C29%2C26%2C132%2C78%2C43%2C164%2C163%2C165%2C156%2C154%2C30%2C42%2C66%2C122%2C175%2C79%2C21%2C127%2C92%2C75%2C23%2C96%2C97%2C129%2C95%2C150%2C149%2C153%2C108%2C174%2C177%2C41%2C56%2C126%2C54%2C182%2C109%2C181%2C203%2C250%2C83%2C264%2C263%2C262%2C14%2C25%2C28%2C40%2C62%2C116%2C68%2C10%2C72%2C110%2C111%2C112%2C118%2C143%2C38%2C36%2C145%2C146%2C147%2C142%2C141%2C169%2C85%2C172%2C170%2C171%2C57%2C67%2C136%2C19%2C176%2C52%2C313%2C314%2C315%2C312%2C328%2C353%2C243%2C232%2C69%2C233%2C231%2C356%2C347%2C59%2C244%2C120%2C144%2C91%2C134%2C61%2C133%2C139%2C138%2C65%2C73%2C71%2C166%2C87%2C88%2C128%2C44%2C39%2C60%2C63%2C113%2C179%2C1%2C137%2C16%2C135%2C12%2C2%2C64%2C104%2C15%2C74%2C70%2C131%2C100%2C99%2C184%2C185%2C105%2C106%2C9%2C115%2C183%2C58%2C157%2C98%2C90%2C80%2C130%2C119%2C50%2C158%2C0%2C93%2C151%2C155%2C167%2C45%2C121%2C13%2C186, https://connect.facebook.net/en_US/fbevents.js, https://www.googletagmanager.com/gtag/js?id=G-4EHT62GRK7&amp;cx=c&amp;gtm=4e69l1, https://www.googletagmanager.com/gtag/js?id=G-4C11NLKBKN&amp;cx=c&amp;gtm=4e69l1, https://connect.facebook.net/en_US/fbevents.js, https://www.googletagmanager.com/gtm.js?id=GTM-5MBT2H6R, https://www.googletagmanager.com/gtm.js?id=GTM-KVRDB4V7, https://www.googletagmanager.com/gtag/js?id=G-GVCZFZ6DCC, https://googleads.g.doubleclick.net/pagead/viewthroughconversion/10874463688/?random=1790121190770&amp;cv=11&amp;fst=1790121190770&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be69l1v9218194902z89173739260za20gzb9173739260zd9173739260xeaxf1&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115938465~115938468~118897920~118897930~120213116~120385423~120469145~120469153&amp;u_w=1280&amp;u_h=800&amp;url=https%3A%2F%2Fasapkerala.gov.in%2F&amp;rcb=11&amp;frm=0&amp;tiba=Additional%20Skill%20Acquisition%20Programme%20Kerala&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=722019206.1790121191&amp;uaa=x86&amp;uab=64&amp;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=&amp;uaw=0&amp;_tu=CA&amp;ept=9&amp;rfmt=3&amp;fmt=4"
+        "ev": "https://www.googletagmanager.com/gtag/destination?id=AW-10874463688&amp;cx=c&amp;gtm=4e69n0h2, https://connect.facebook.net/en_US/fbevents.js, https://www.googletagmanager.com/gtag/js?id=G-4EHT62GRK7&amp;cx=c&amp;gtm=4e69n0h2, https://www.googletagmanager.com/gtag/js?id=G-GVCZFZ6DCC&amp;cx=c&amp;gtm=4e69m1, https://www.googletagmanager.com/gtag/js?id=G-4C11NLKBKN&amp;cx=c&amp;gtm=4e69m1, https://connect.facebook.net/signals/config/778306650723406?v=2.9.408&amp;r=stable&amp;domain=asapkerala.gov.in&amp;hme=f9ad993bedcdbb3fffd47532e189463ba18afe816a0bd364070ce559e4a6ac26&amp;ex_m=117%2C239%2C169%2C27%2C81%2C82%2C160%2C77%2C76%2C11%2C179%2C101%2C20%2C152%2C140%2C46%2C84%2C89%2C148%2C174%2C181%2C8%2C4%2C5%2C7%2C6%2C3%2C102%2C114%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C37%2C55%2C161%2C86%2C125%2C22%2C24%2C51%2C47%2C49%2C48%2C94%2C103%2C107%2C123%2C159%2C162%2C53%2C124%2C29%2C26%2C132%2C78%2C43%2C164%2C163%2C165%2C156%2C154%2C30%2C42%2C66%2C122%2C176%2C79%2C21%2C127%2C92%2C75%2C23%2C96%2C97%2C129%2C95%2C150%2C149%2C153%2C108%2C175%2C178%2C41%2C56%2C126%2C54%2C183%2C109%2C182%2C208%2C253%2C83%2C267%2C266%2C265%2C14%2C25%2C28%2C40%2C62%2C116%2C68%2C10%2C72%2C110%2C111%2C112%2C118%2C143%2C38%2C36%2C145%2C146%2C147%2C142%2C141%2C170%2C85%2C173%2C171%2C172%2C57%2C67%2C136%2C19%2C177%2C52%2C316%2C317%2C318%2C315%2C331%2C356%2C246%2C235%2C69%2C236%2C234%2C359%2C350%2C59%2C247%2C120%2C144%2C91%2C134%2C61%2C133%2C139%2C138%2C65%2C73%2C71%2C166%2C87%2C88%2C128%2C44%2C39%2C60%2C63%2C113%2C180%2C1%2C137%2C16%2C135%2C12%2C2%2C64%2C104%2C15%2C74%2C70%2C131%2C100%2C99%2C185%2C186%2C105%2C106%2C9%2C115%2C184%2C58%2C157%2C98%2C90%2C80%2C130%2C119%2C167%2C50%2C158%2C0%2C93%2C151%2C155%2C168%2C45%2C121%2C13%2C187, https://connect.facebook.net/en_US/fbevents.js, https://www.googletagmanager.com/gtm.js?id=GTM-5MBT2H6R, https://www.googletagmanager.com/gtm.js?id=GTM-KVRDB4V7, https://www.googletagmanager.com/gtag/js?id=G-GVCZFZ6DCC, https://googleads.g.doubleclick.net/pagead/viewthroughconversion/10874463688/?random=1790208224610&amp;cv=11&amp;fst=1790208224610&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be69n0h2v9218194902z89173739260za20gzb9173739260zd9173739260xeaxf1&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115616985~115938465~115938469~118897920~118897930~119381662~120213116~120385423~120469145~120469153&amp;u_w=1280&amp;u_h=800&amp;url=https%3A%2F%2Fasapkerala.gov.in%2F&amp;rcb=17&amp;frm=0&amp;tiba=Additional%20Skill%20Acquisition%20Programme%20Kerala&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=475386163.1790208195&amp;uaa=x86&amp;uab=64&amp;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=&amp;uaw=0&amp;_tu=CA&amp;gap.plf=5&amp;ept=9&amp;rfmt=3&amp;fmt=4"
       }
     ],
     "screenshot": {
@@ -422,11 +420,6 @@
       "phash": "003c3c3c3c3c3c01"
     },
     "outlinks": [
-      {
-        "host": "gspeech.io",
-        "count": 1,
-        "texts": []
-      },
       {
         "host": "bhashini.gov.in",
         "count": 1,
@@ -490,12 +483,12 @@
     ]
   },
   "score": {
-    "overall": 60,
-    "security": 72,
-    "accessibility": 50,
+    "overall": 64,
+    "security": 62,
+    "accessibility": 80,
     "content": 36,
     "gigw": 46,
-    "performance": 71,
+    "performance": 66,
     "identity": 100
   },
   "status": "needs-work",
@@ -504,11 +497,6 @@
       "id": "sec.mixed_content",
       "sev": "H",
       "ev": "href=\"http://highereducation.kerala.gov.in/\""
-    },
-    {
-      "id": "a11y.axe_critical",
-      "sev": "H",
-      "ev": "2 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -526,14 +514,13 @@
       "ev": "13/30 crawled link(s) broken (https://asapkerala.gov.in/#primary, https://asapkerala.gov.in/, https://asapkerala.gov.in/about-us/, ...)"
     },
     {
-      "id": "a11y.axe_serious",
-      "sev": "M",
-      "ev": "14 serious violation(s)"
+      "id": "sec.hsts",
+      "sev": "M"
     },
     {
-      "id": "a11y.alt",
+      "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "2 image(s) missing alt text"
+      "ev": "13 serious violation(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -550,12 +537,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "26655.16366ms"
+      "ev": "20866.734999999993ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.7MB"
+      "ev": "13.6MB"
     },
     {
       "id": "perf.tap_targets",
@@ -573,7 +560,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "13 moderate/minor violation(s)"
+      "ev": "10 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -588,7 +575,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "11 console error(s): requestStorageAccess: Permission denied."
+      "ev": "13 console error(s): requestStorageAccess: Permission denied."
     },
     {
       "id": "gigw.copyright_policy",
@@ -621,10 +608,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/destination?id=AW-10874463688&amp;cx=c&amp;gtm=4e69l1, https://connect.facebook.net/signals/config/778306650723406?v=2.9.406&amp;r=stable&amp;domain=asapkerala.gov.in&amp;hme=8a9e6a9b82926b8f07fd0a2edd8b8f1ef075648059d1bb52ec651feab764c219&amp;ex_m=117%2C236%2C168%2C27%2C81%2C82%2C160%2C77%2C76%2C11%2C178%2C101%2C20%2C152%2C140%2C46%2C84%2C89%2C148%2C173%2C180%2C8%2C4%2C5%2C7%2C6%2C3%2C102%2C114%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C37%2C55%2C161%2C86%2C125%2C22%2C24%2C51%2C47%2C49%2C48%2C94%2C103%2C107%2C123%2C159%2C162%2C53%2C124%2C29%2C26%2C132%2C78%2C43%2C164%2C163%2C165%2C156%2C154%2C30%2C42%2C66%2C122%2C175%2C79%2C21%2C127%2C92%2C75%2C23%2C96%2C97%2C129%2C95%2C150%2C149%2C153%2C108%2C174%2C177%2C41%2C56%2C126%2C54%2C182%2C109%2C181%2C203%2C250%2C83%2C264%2C263%2C262%2C14%2C25%2C28%2C40%2C62%2C116%2C68%2C10%2C72%2C110%2C111%2C112%2C118%2C143%2C38%2C36%2C145%2C146%2C147%2C142%2C141%2C169%2C85%2C172%2C170%2C171%2C57%2C67%2C136%2C19%2C176%2C52%2C313%2C314%2C315%2C312%2C328%2C353%2C243%2C232%2C69%2C233%2C231%2C356%2C347%2C59%2C244%2C120%2C144%2C91%2C134%2C61%2C133%2C139%2C138%2C65%2C73%2C71%2C166%2C87%2C88%2C128%2C44%2C39%2C60%2C63%2C113%2C179%2C1%2C137%2C16%2C135%2C12%2C2%2C64%2C104%2C15%2C74%2C70%2C131%2C100%2C99%2C184%2C185%2C105%2C106%2C9%2C115%2C183%2C58%2C157%2C98%2C90%2C80%2C130%2C119%2C50%2C158%2C0%2C93%2C151%2C155%2C167%2C45%2C121%2C13%2C186, https://connect.facebook.net/en_US/fbevents.js, https://www.googletagmanager.com/gtag/js?id=G-4EHT62GRK7&amp;cx=c&amp;gtm=4e69l1, https://www.googletagmanager.com/gtag/js?id=G-4C11NLKBKN&amp;cx=c&amp;gtm=4e69l1, https://connect.facebook.net/en_US/fbevents.js, https://www.googletagmanager.com/gtm.js?id=GTM-5MBT2H6R, https://www.googletagmanager.com/gtm.js?id=GTM-KVRDB4V7, https://www.googletagmanager.com/gtag/js?id=G-GVCZFZ6DCC, https://googleads.g.doubleclick.net/pagead/viewthroughconversion/10874463688/?random=1790121190770&amp;cv=11&amp;fst=1790121190770&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be69l1v9218194902z89173739260za20gzb9173739260zd9173739260xeaxf1&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115938465~115938468~118897920~118897930~120213116~120385423~120469145~120469153&amp;u_w=1280&amp;u_h=800&amp;url=https%3A%2F%2Fasapkerala.gov.in%2F&amp;rcb=11&amp;frm=0&amp;tiba=Additional%20Skill%20Acquisition%20Programme%20Kerala&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=722019206.1790121191&amp;uaa=x86&amp;uab=64&amp;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=&amp;uaw=0&amp;_tu=CA&amp;ept=9&amp;rfmt=3&amp;fmt=4"
+      "ev": "https://www.googletagmanager.com/gtag/destination?id=AW-10874463688&amp;cx=c&amp;gtm=4e69n0h2, https://connect.facebook.net/en_US/fbevents.js, https://www.googletagmanager.com/gtag/js?id=G-4EHT62GRK7&amp;cx=c&amp;gtm=4e69n0h2, https://www.googletagmanager.com/gtag/js?id=G-GVCZFZ6DCC&amp;cx=c&amp;gtm=4e69m1, https://www.googletagmanager.com/gtag/js?id=G-4C11NLKBKN&amp;cx=c&amp;gtm=4e69m1, https://connect.facebook.net/signals/config/778306650723406?v=2.9.408&amp;r=stable&amp;domain=asapkerala.gov.in&amp;hme=f9ad993bedcdbb3fffd47532e189463ba18afe816a0bd364070ce559e4a6ac26&amp;ex_m=117%2C239%2C169%2C27%2C81%2C82%2C160%2C77%2C76%2C11%2C179%2C101%2C20%2C152%2C140%2C46%2C84%2C89%2C148%2C174%2C181%2C8%2C4%2C5%2C7%2C6%2C3%2C102%2C114%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C37%2C55%2C161%2C86%2C125%2C22%2C24%2C51%2C47%2C49%2C48%2C94%2C103%2C107%2C123%2C159%2C162%2C53%2C124%2C29%2C26%2C132%2C78%2C43%2C164%2C163%2C165%2C156%2C154%2C30%2C42%2C66%2C122%2C176%2C79%2C21%2C127%2C92%2C75%2C23%2C96%2C97%2C129%2C95%2C150%2C149%2C153%2C108%2C175%2C178%2C41%2C56%2C126%2C54%2C183%2C109%2C182%2C208%2C253%2C83%2C267%2C266%2C265%2C14%2C25%2C28%2C40%2C62%2C116%2C68%2C10%2C72%2C110%2C111%2C112%2C118%2C143%2C38%2C36%2C145%2C146%2C147%2C142%2C141%2C170%2C85%2C173%2C171%2C172%2C57%2C67%2C136%2C19%2C177%2C52%2C316%2C317%2C318%2C315%2C331%2C356%2C246%2C235%2C69%2C236%2C234%2C359%2C350%2C59%2C247%2C120%2C144%2C91%2C134%2C61%2C133%2C139%2C138%2C65%2C73%2C71%2C166%2C87%2C88%2C128%2C44%2C39%2C60%2C63%2C113%2C180%2C1%2C137%2C16%2C135%2C12%2C2%2C64%2C104%2C15%2C74%2C70%2C131%2C100%2C99%2C185%2C186%2C105%2C106%2C9%2C115%2C184%2C58%2C157%2C98%2C90%2C80%2C130%2C119%2C167%2C50%2C158%2C0%2C93%2C151%2C155%2C168%2C45%2C121%2C13%2C187, https://connect.facebook.net/en_US/fbevents.js, https://www.googletagmanager.com/gtm.js?id=GTM-5MBT2H6R, https://www.googletagmanager.com/gtm.js?id=GTM-KVRDB4V7, https://www.googletagmanager.com/gtag/js?id=G-GVCZFZ6DCC, https://googleads.g.doubleclick.net/pagead/viewthroughconversion/10874463688/?random=1790208224610&amp;cv=11&amp;fst=1790208224610&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be69n0h2v9218194902z89173739260za20gzb9173739260zd9173739260xeaxf1&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115616985~115938465~115938469~118897920~118897930~119381662~120213116~120385423~120469145~120469153&amp;u_w=1280&amp;u_h=800&amp;url=https%3A%2F%2Fasapkerala.gov.in%2F&amp;rcb=17&amp;frm=0&amp;tiba=Additional%20Skill%20Acquisition%20Programme%20Kerala&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=475386163.1790208195&amp;uaa=x86&amp;uab=64&amp;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=&amp;uaw=0&amp;_tu=CA&amp;gap.plf=5&amp;ept=9&amp;rfmt=3&amp;fmt=4"
     }
   ],
   "history": [
+    {
+      "d": "2026-09-24",
+      "up": true,
+      "score": 64
+    },
     {
       "d": "2026-09-23",
       "up": true,
@@ -641,5 +633,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

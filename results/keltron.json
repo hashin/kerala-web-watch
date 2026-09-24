@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-22T23:51:37.370Z",
-    "run": "1790121004309",
+    "at": "2026-09-23T23:57:51.318Z",
+    "run": "1790207775895",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 29,
+      "performance": 40,
       "accessibility": 89,
       "best_practices": 96,
       "seo": 92
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3525ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -213,22 +214,21 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "29/100"
+        "ev": "40/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "51890.147000000004ms"
+        "ev": "34096.14200000001ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.80"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "702.0MB"
+        "ev": "748.8MB"
       },
       {
         "id": "perf.viewport",
@@ -445,7 +445,7 @@
     "accessibility": 72,
     "content": 46,
     "gigw": 64,
-    "performance": 72,
+    "performance": 76,
     "identity": 76
   },
   "status": "needs-work",
@@ -468,6 +468,11 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "www.keltron.org"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3525ms"
     },
     {
       "id": "sec.hsts",
@@ -504,12 +509,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "51890.147000000004ms"
+      "ev": "34096.14200000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "702.0MB"
+      "ev": "748.8MB"
     },
     {
       "id": "sec.csp",
@@ -547,11 +552,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.80"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -575,6 +575,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-24",
+      "up": true,
+      "score": 66
+    },
+    {
       "d": "2026-09-23",
       "up": true,
       "score": 66
@@ -590,5 +595,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-22T23:55:37.456Z",
-    "run": "1790121291158",
+    "at": "2026-09-23T23:57:45.005Z",
+    "run": "1790207760501",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 60,
+      "performance": 57,
       "accessibility": 78,
       "best_practices": 85,
-      "seo": 85
+      "seo": 77
     },
     "axe": {
       "critical": 13,
-      "serious": 17,
+      "serious": 15,
       "moderate": 2,
       "minor": 1
     },
@@ -171,7 +171,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "17 serious violation(s)"
+        "ev": "15 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -190,8 +190,7 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "2 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
@@ -218,12 +217,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "60/100"
+        "ev": "57/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "18991.679ms"
+        "ev": "10099.057ms"
       },
       {
         "id": "perf.cls",
@@ -231,8 +230,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "6.0MB"
+        "r": "fail",
+        "ev": "11.9MB"
       },
       {
         "id": "perf.viewport",
@@ -307,7 +306,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "2 console error(s): Connecting to 'https://spreadsheets.google.com/feeds/cells/1AC1uazMT9dyPgbzg9l-w-Eg_OGBIpBuv22LHy98VFIs/1/public/full?alt=json' violates the following Content Security Policy directive: \"connect-src 'self' https://docs.google.com\". The action has been blocked."
+        "ev": "5 console error(s): Connecting to 'https://spreadsheets.google.com/feeds/cells/1AC1uazMT9dyPgbzg9l-w-Eg_OGBIpBuv22LHy98VFIs/1/public/full?alt=json' violates the following Content Security Policy directive: \"connect-src 'self' https://docs.google.com\". The action has been blocked."
       },
       {
         "id": "gigw.contact",
@@ -461,12 +460,12 @@
     ]
   },
   "score": {
-    "overall": 52,
+    "overall": 54,
     "security": 60,
-    "accessibility": 22,
+    "accessibility": 32,
     "content": 62,
     "gigw": 36,
-    "performance": 71,
+    "performance": 66,
     "identity": 96
   },
   "status": "needs-work",
@@ -499,17 +498,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "17 serious violation(s)"
+      "ev": "15 serious violation(s)"
     },
     {
       "id": "a11y.alt",
       "sev": "M",
       "ev": "12 image(s) missing alt text"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "2 low-contrast element(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -535,12 +529,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "18991.679ms"
+      "ev": "10099.057ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "6.0MB"
+      "ev": "11.9MB"
     },
     {
       "id": "perf.tap_targets",
@@ -563,7 +557,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "2 console error(s): Connecting to 'https://spreadsheets.google.com/feeds/cells/1AC1uazMT9dyPgbzg9l-w-Eg_OGBIpBuv22LHy98VFIs/1/public/full?alt=json' violates the following Content Security Policy directive: \"connect-src 'self' https://docs.google.com\". The action has been blocked."
+      "ev": "5 console error(s): Connecting to 'https://spreadsheets.google.com/feeds/cells/1AC1uazMT9dyPgbzg9l-w-Eg_OGBIpBuv22LHy98VFIs/1/public/full?alt=json' violates the following Content Security Policy directive: \"connect-src 'self' https://docs.google.com\". The action has been blocked."
     },
     {
       "id": "gigw.feedback",
@@ -605,6 +599,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-24",
+      "up": true,
+      "score": 54
+    },
+    {
       "d": "2026-09-23",
       "up": true,
       "score": 52
@@ -620,5 +619,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

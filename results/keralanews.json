@@ -35,17 +35,17 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-23T00:09:38.043Z",
-    "run": "1790122067173",
+    "at": "2026-09-24T00:18:23.852Z",
+    "run": "1790208962203",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 38,
+      "performance": 43,
       "accessibility": 73,
       "best_practices": 92,
       "seo": 83
     },
     "axe": {
-      "critical": 10,
+      "critical": 12,
       "serious": 51,
       "moderate": 31,
       "minor": 0
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4333ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -166,7 +167,7 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "10 critical violation(s)"
+        "ev": "12 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
@@ -181,7 +182,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 156% Malayalam content"
+        "ev": "<html lang=\"en\"> vs. 157% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -219,22 +220,21 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "38/100"
+        "ev": "43/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "5824.977ms"
+        "ev": "6406.926499999999ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.30"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "3.0MB"
+        "ev": "3.1MB"
       },
       {
         "id": "perf.viewport",
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://keralanews.gov.in/allothernews.php?cat=1)"
       },
       {
         "id": "content.broken_pdfs",
@@ -471,12 +472,12 @@
     ]
   },
   "score": {
-    "overall": 47,
+    "overall": 46,
     "security": 56,
     "accessibility": 20,
-    "content": 42,
+    "content": 32,
     "gigw": 26,
-    "performance": 77,
+    "performance": 81,
     "identity": 100
   },
   "status": "poor",
@@ -494,12 +495,12 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "10 critical violation(s)"
+      "ev": "12 critical violation(s)"
     },
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 156% Malayalam content"
+      "ev": "<html lang=\"en\"> vs. 157% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -512,8 +513,18 @@
       "ev": "ML-"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://keralanews.gov.in/allothernews.php?cat=1)"
+    },
+    {
       "id": "gigw.rti",
       "sev": "H"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "4333ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -550,12 +561,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "5824.977ms"
+      "ev": "6406.926499999999ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "3.0MB"
+      "ev": "3.1MB"
     },
     {
       "id": "sec.csp",
@@ -611,11 +622,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.30"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -629,6 +635,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-09-24",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-09-23",
       "up": true,
@@ -645,5 +656,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

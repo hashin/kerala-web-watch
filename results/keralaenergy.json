@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-22T00:35:07.030Z",
-    "run": "1790037215822",
+    "at": "2026-09-24T00:20:02.551Z",
+    "run": "1790209002542",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 35,
+      "performance": 44,
       "accessibility": 83,
       "best_practices": 69,
       "seo": 58
@@ -59,7 +59,7 @@
     },
     "tech": {
       "cms": null,
-      "server": "Apache",
+      "server": null,
       "jquery": null
     },
     "checks": [
@@ -69,15 +69,16 @@
       },
       {
         "id": "avail.connect",
-        "r": "pass"
+        "r": "fail",
+        "ev": "timeout"
       },
       {
         "id": "avail.status",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.parked",
@@ -97,7 +98,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.geo_blocked",
@@ -109,7 +110,7 @@
       },
       {
         "id": "sec.https",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.http_redirect",
@@ -133,8 +134,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "src=\"http://localhost/keralaenergy/wp-content/uploads/2023/06/logo.png\""
+        "r": "na"
       },
       {
         "id": "sec.csp",
@@ -220,21 +220,21 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "35/100"
+        "ev": "44/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11824.144ms"
+        "ev": "8834.386740000002ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "1.09"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4.6MB"
       },
       {
         "id": "perf.viewport",
@@ -310,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "3 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
+        "ev": "4 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
       },
       {
         "id": "gigw.contact",
@@ -386,7 +386,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.robots",
@@ -489,21 +489,13 @@
       }
     ]
   },
-  "score": {
-    "overall": 56,
-    "security": 56,
-    "accessibility": 40,
-    "content": 42,
-    "gigw": 58,
-    "performance": 82,
-    "identity": 92
-  },
-  "status": "needs-work",
+  "score": null,
+  "status": "down",
   "issues": [
     {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "src=\"http://localhost/keralaenergy/wp-content/uploads/2023/06/logo.png\""
+      "id": "avail.connect",
+      "sev": "C",
+      "ev": "timeout"
     },
     {
       "id": "sec.vuln_js",
@@ -560,7 +552,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11824.144ms"
+      "ev": "8834.386740000002ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "4.6MB"
     },
     {
       "id": "sec.referrer",
@@ -588,7 +585,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "3 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
+      "ev": "4 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
     },
     {
       "id": "gigw.feedback",
@@ -601,11 +598,6 @@
     {
       "id": "gigw.help",
       "sev": "L"
-    },
-    {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "1.09"
     },
     {
       "id": "perf.images",
@@ -624,6 +616,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-24",
+      "up": false,
+      "score": null
+    },
+    {
       "d": "2026-09-23",
       "up": true,
       "score": 56
@@ -639,5 +636,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

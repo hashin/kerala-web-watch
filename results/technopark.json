@@ -37,11 +37,658 @@
     "vantage": "gh-us",
     "suspect": false
   },
-  "deep": null,
+  "deep": {
+    "at": "2026-09-24T00:01:07.829Z",
+    "run": "1790207995544",
+    "vantage": "gh-us",
+    "lighthouse": {
+      "performance": 61,
+      "accessibility": 82,
+      "best_practices": 100,
+      "seo": 92
+    },
+    "axe": {
+      "critical": 2,
+      "serious": 14,
+      "moderate": 30,
+      "minor": 3
+    },
+    "crawl": {
+      "pages": 30,
+      "pdfs": 2,
+      "broken": 0
+    },
+    "tech": {
+      "cms": null,
+      "server": "nginx/1.24.0 (Ubuntu)",
+      "jquery": null
+    },
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "fail",
+        "ev": "now resolves to technopark.in"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "pass"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "pass"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "pass"
+      },
+      {
+        "id": "sec.csp",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "pass"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "pass"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "fail",
+        "ev": "nginx/1.24.0 (Ubuntu)"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "pass"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "fail",
+        "ev": "2 critical violation(s)"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "14 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "33 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "fail",
+        "ev": "2 low-contrast element(s)"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "heading levels skipped"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "82/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "61/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "4376.216ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "pass"
+      },
+      {
+        "id": "perf.weight",
+        "r": "fail",
+        "ev": "25.9MB"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "pass"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "fail",
+        "ev": "copyright year 2024"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "pass"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "na"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "pass"
+      },
+      {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.contact",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.search",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "pass"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "fail",
+        "ev": "www.technopark.org"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "pass"
+      },
+      {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "pass"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "fail"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "warn",
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-TT0T0YCJ4M"
+      }
+    ],
+    "screenshot": {
+      "desktop": "technopark.webp",
+      "mobile": "technopark-m.webp",
+      "phash": "ffe0b0f0fffffffe"
+    },
+    "outlinks": [
+      {
+        "host": "infosys.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "ust.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "tcs.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "tataelxsi.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "oracle.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "allianz.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "quest-global.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "nissanmotor.jobs",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "ey.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "guidehouse.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "rrd.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "envestnet.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "ibsplc.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "hrblock.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "kerala.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "apple.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "google.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "twitter.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "youtube.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "instagram.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "linkedin.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "keralait.org",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "xocortx.com",
+        "count": 1,
+        "texts": [
+          "Xocortx"
+        ]
+      }
+    ]
+  },
   "score": null,
-  "status": "unaudited",
-  "issues": [],
+  "status": "hijacked",
+  "issues": [
+    {
+      "id": "avail.redirect_offsite",
+      "sev": "C",
+      "ev": "now resolves to technopark.in"
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "2 critical violation(s)"
+    },
+    {
+      "id": "content.last_updated",
+      "sev": "H",
+      "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-"
+    },
+    {
+      "id": "gigw.rti",
+      "sev": "H"
+    },
+    {
+      "id": "id.gov_domain",
+      "sev": "H",
+      "ev": "www.technopark.org"
+    },
+    {
+      "id": "a11y.axe_serious",
+      "sev": "M",
+      "ev": "14 serious violation(s)"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "2 low-contrast element(s)"
+    },
+    {
+      "id": "content.copyright_year",
+      "sev": "M",
+      "ev": "copyright year 2024"
+    },
+    {
+      "id": "gigw.ownership",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.last_updated",
+      "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "4376.216ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "25.9MB"
+    },
+    {
+      "id": "sec.csp",
+      "sev": "L"
+    },
+    {
+      "id": "sec.server_banner",
+      "sev": "L",
+      "ev": "nginx/1.24.0 (Ubuntu)"
+    },
+    {
+      "id": "a11y.axe_moderate_minor",
+      "sev": "L",
+      "ev": "33 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
+    },
+    {
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
+    },
+    {
+      "id": "gigw.feedback",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.terms",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.copyright_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.hyperlink_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.disclaimer",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.screen_reader",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.help",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.search",
+      "sev": "L"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
+      "id": "id.canonical",
+      "sev": "I"
+    },
+    {
+      "id": "id.third_party",
+      "sev": "I",
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-TT0T0YCJ4M"
+    }
+  ],
   "history": [
+    {
+      "d": "2026-09-24",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-09-23",
       "up": true,
@@ -58,5 +705,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -34,11 +34,593 @@
     "vantage": "gh-us",
     "suspect": false
   },
-  "deep": null,
-  "score": null,
-  "status": "unaudited",
-  "issues": [],
+  "deep": {
+    "at": "2026-09-24T00:02:30.825Z",
+    "run": "1790208050658",
+    "vantage": "gh-us",
+    "lighthouse": null,
+    "axe": {
+      "critical": 1,
+      "serious": 0,
+      "moderate": 6,
+      "minor": 1
+    },
+    "crawl": {
+      "pages": 30,
+      "pdfs": 0,
+      "broken": 0
+    },
+    "tech": {
+      "cms": null,
+      "server": "Apache",
+      "jquery": null
+    },
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "warn",
+        "ev": "5301ms"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "fail"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "fail"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "fail",
+        "ev": "href=\"http://duk.ac.in/regulatory_bodies/\""
+      },
+      {
+        "id": "sec.csp",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "pass"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "pass"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "pass"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "fail",
+        "ev": "DOMPurify 3.2.6"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "fail",
+        "ev": "1 critical violation(s)"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "7 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "no <h1>"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "na"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "na"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "na"
+      },
+      {
+        "id": "perf.cls",
+        "r": "na"
+      },
+      {
+        "id": "perf.weight",
+        "r": "fail",
+        "ev": "104.5MB"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "na"
+      },
+      {
+        "id": "perf.images",
+        "r": "na"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "pass"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-ls"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "pass"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "na"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "fail"
+      },
+      {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "31 console error(s): Refused to apply style from 'https://duk.ac.in/supporting_asset/popup-maker/dist/packages/block-library-style.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+      },
+      {
+        "id": "gigw.contact",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.search",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "pass"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "pass"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "na"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "pass"
+      },
+      {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "pass"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "fail"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "warn",
+        "ev": "https://connect.facebook.net/signals/config/822673059423436?v=2.9.408&amp;r=stable&amp;domain=duk.ac.in&amp;hme=f9ad993bedcdbb3fffd47532e189463ba18afe816a0bd364070ce559e4a6ac26&amp;ex_m=117%2C239%2C169%2C27%2C81%2C82%2C160%2C77%2C76%2C11%2C179%2C101%2C20%2C152%2C140%2C46%2C84%2C89%2C148%2C174%2C181%2C8%2C4%2C5%2C7%2C6%2C3%2C102%2C114%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C37%2C55%2C161%2C86%2C125%2C22%2C24%2C51%2C47%2C49%2C48%2C94%2C103%2C107%2C123%2C159%2C162%2C53%2C124%2C29%2C26%2C132%2C78%2C43%2C164%2C163%2C165%2C156%2C154%2C30%2C42%2C66%2C122%2C176%2C79%2C21%2C127%2C92%2C75%2C23%2C96%2C97%2C129%2C95%2C150%2C149%2C153%2C108%2C175%2C178%2C41%2C56%2C126%2C54%2C183%2C109%2C182%2C208%2C253%2C83%2C267%2C266%2C265%2C14%2C25%2C28%2C40%2C62%2C116%2C68%2C10%2C72%2C110%2C111%2C112%2C118%2C143%2C38%2C36%2C145%2C146%2C147%2C142%2C141%2C170%2C85%2C173%2C171%2C172%2C57%2C67%2C136%2C19%2C177%2C52%2C316%2C317%2C318%2C315%2C331%2C356%2C246%2C235%2C69%2C236%2C234%2C359%2C350%2C59%2C247%2C120%2C144%2C91%2C134%2C61%2C133%2C139%2C138%2C65%2C73%2C71%2C166%2C87%2C88%2C128%2C44%2C39%2C60%2C63%2C113%2C180%2C1%2C137%2C16%2C135%2C12%2C2%2C64%2C104%2C15%2C74%2C70%2C131%2C100%2C99%2C185%2C186%2C105%2C106%2C9%2C115%2C184%2C58%2C157%2C98%2C90%2C80%2C130%2C119%2C167%2C50%2C158%2C0%2C93%2C151%2C155%2C168%2C45%2C121%2C13%2C187, https://connect.facebook.net/en_US/fbevents.js, https://www.googletagmanager.com/gtag/js?id=G-CV4Y6M1VG8&amp;cx=c&amp;gtm=4e69m1, https://www.googletagmanager.com/gtm.js?id=GTM-PK9PXSF, https://googleads.g.doubleclick.net/pagead/viewthroughconversion/319645081/?random=1790208100737&amp;cv=11&amp;fst=1790208100737&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45je69m1v871607663z8863910943za20gzb863910943zd863910943xecxf1&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115938466~115938468~118897920~118897930~119793973~120213116~120385422~120469145~120469153~121046262~121046270&amp;u_w=1280&amp;u_h=800&amp;url=https%3A%2F%2Fduk.ac.in%2F&amp;rcb=18&amp;frm=0&amp;tiba=Digital%20University%20Kerala%20%E2%80%93%20Curating%20a%20responsible%20digital%20world&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=2019240369.1790208071&amp;uaa=x86&amp;uab=64&amp;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=&amp;uaw=0&amp;data=event%3Dgtag.config&amp;ept=9&amp;rfmt=3&amp;fmt=4, https://googleads.g.doubleclick.net/pagead/viewthroughconversion/319645081/?random=1790208100759&amp;cv=11&amp;fst=1790208100759&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45je69m1v871607663z8863910943za20gzb863910943zd863910943xeaxf1&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115938466~115938468~118897920~118897930~119793973~120213116~120385422~120469145~120469153~121046262~121046270&amp;u_w=1280&amp;u_h=800&amp;url=https%3A%2F%2Fduk.ac.in%2F&amp;rcb=18&amp;frm=0&amp;tiba=Digital%20University%20Kerala%20%E2%80%93%20Curating%20a%20responsible%20digital%20world&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=2019240369.1790208071&amp;uaa=x86&amp;uab=64&amp;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=&amp;uaw=0&amp;_tu=CA&amp;ept=9&amp;rfmt=3&amp;fmt=4"
+      }
+    ],
+    "screenshot": {
+      "desktop": "duk.webp",
+      "mobile": "duk-m.webp",
+      "phash": "ffffff0000083800"
+    },
+    "outlinks": [
+      {
+        "host": "ieee.org",
+        "count": 1,
+        "texts": [
+          "IEEE STUDENT BRANCH"
+        ]
+      },
+      {
+        "host": "cmet.gov.in",
+        "count": 1,
+        "texts": [
+          "C-MET Thrissur"
+        ]
+      },
+      {
+        "host": "ctcri.org",
+        "count": 1,
+        "texts": [
+          "ICAR-CTCRI Thiruvananthapuram"
+        ]
+      },
+      {
+        "host": "makervillage.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "graphenecentre.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "kba.ai",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "twitter.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "instagram.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "youtube.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "linkedin.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "wponetap.com",
+        "count": 1,
+        "texts": [
+          "OneTap"
+        ]
+      }
+    ]
+  },
+  "score": {
+    "overall": 53,
+    "security": 26,
+    "accessibility": 72,
+    "content": 52,
+    "gigw": 12,
+    "performance": 90,
+    "identity": 100
+  },
+  "status": "needs-work",
+  "issues": [
+    {
+      "id": "sec.http_redirect",
+      "sev": "H"
+    },
+    {
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://duk.ac.in/regulatory_bodies/\""
+    },
+    {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "DOMPurify 3.2.6"
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "1 critical violation(s)"
+    },
+    {
+      "id": "content.last_updated",
+      "sev": "H",
+      "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-ls"
+    },
+    {
+      "id": "gigw.contact",
+      "sev": "H"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "5301ms"
+    },
+    {
+      "id": "sec.hsts",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.sitemap",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.privacy",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.ownership",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.last_updated",
+      "sev": "M"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "104.5MB"
+    },
+    {
+      "id": "sec.csp",
+      "sev": "L"
+    },
+    {
+      "id": "a11y.axe_moderate_minor",
+      "sev": "L",
+      "ev": "7 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "no <h1>"
+    },
+    {
+      "id": "content.meta_desc",
+      "sev": "L"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "31 console error(s): Refused to apply style from 'https://duk.ac.in/supporting_asset/popup-maker/dist/packages/block-library-style.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+    },
+    {
+      "id": "gigw.feedback",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.terms",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.copyright_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.hyperlink_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.disclaimer",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.screen_reader",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.help",
+      "sev": "L"
+    },
+    {
+      "id": "id.canonical",
+      "sev": "I"
+    },
+    {
+      "id": "id.third_party",
+      "sev": "I",
+      "ev": "https://connect.facebook.net/signals/config/822673059423436?v=2.9.408&amp;r=stable&amp;domain=duk.ac.in&amp;hme=f9ad993bedcdbb3fffd47532e189463ba18afe816a0bd364070ce559e4a6ac26&amp;ex_m=117%2C239%2C169%2C27%2C81%2C82%2C160%2C77%2C76%2C11%2C179%2C101%2C20%2C152%2C140%2C46%2C84%2C89%2C148%2C174%2C181%2C8%2C4%2C5%2C7%2C6%2C3%2C102%2C114%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C37%2C55%2C161%2C86%2C125%2C22%2C24%2C51%2C47%2C49%2C48%2C94%2C103%2C107%2C123%2C159%2C162%2C53%2C124%2C29%2C26%2C132%2C78%2C43%2C164%2C163%2C165%2C156%2C154%2C30%2C42%2C66%2C122%2C176%2C79%2C21%2C127%2C92%2C75%2C23%2C96%2C97%2C129%2C95%2C150%2C149%2C153%2C108%2C175%2C178%2C41%2C56%2C126%2C54%2C183%2C109%2C182%2C208%2C253%2C83%2C267%2C266%2C265%2C14%2C25%2C28%2C40%2C62%2C116%2C68%2C10%2C72%2C110%2C111%2C112%2C118%2C143%2C38%2C36%2C145%2C146%2C147%2C142%2C141%2C170%2C85%2C173%2C171%2C172%2C57%2C67%2C136%2C19%2C177%2C52%2C316%2C317%2C318%2C315%2C331%2C356%2C246%2C235%2C69%2C236%2C234%2C359%2C350%2C59%2C247%2C120%2C144%2C91%2C134%2C61%2C133%2C139%2C138%2C65%2C73%2C71%2C166%2C87%2C88%2C128%2C44%2C39%2C60%2C63%2C113%2C180%2C1%2C137%2C16%2C135%2C12%2C2%2C64%2C104%2C15%2C74%2C70%2C131%2C100%2C99%2C185%2C186%2C105%2C106%2C9%2C115%2C184%2C58%2C157%2C98%2C90%2C80%2C130%2C119%2C167%2C50%2C158%2C0%2C93%2C151%2C155%2C168%2C45%2C121%2C13%2C187, https://connect.facebook.net/en_US/fbevents.js, https://www.googletagmanager.com/gtag/js?id=G-CV4Y6M1VG8&amp;cx=c&amp;gtm=4e69m1, https://www.googletagmanager.com/gtm.js?id=GTM-PK9PXSF, https://googleads.g.doubleclick.net/pagead/viewthroughconversion/319645081/?random=1790208100737&amp;cv=11&amp;fst=1790208100737&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45je69m1v871607663z8863910943za20gzb863910943zd863910943xecxf1&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115938466~115938468~118897920~118897930~119793973~120213116~120385422~120469145~120469153~121046262~121046270&amp;u_w=1280&amp;u_h=800&amp;url=https%3A%2F%2Fduk.ac.in%2F&amp;rcb=18&amp;frm=0&amp;tiba=Digital%20University%20Kerala%20%E2%80%93%20Curating%20a%20responsible%20digital%20world&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=2019240369.1790208071&amp;uaa=x86&amp;uab=64&amp;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=&amp;uaw=0&amp;data=event%3Dgtag.config&amp;ept=9&amp;rfmt=3&amp;fmt=4, https://googleads.g.doubleclick.net/pagead/viewthroughconversion/319645081/?random=1790208100759&amp;cv=11&amp;fst=1790208100759&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45je69m1v871607663z8863910943za20gzb863910943zd863910943xeaxf1&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115938466~115938468~118897920~118897930~119793973~120213116~120385422~120469145~120469153~121046262~121046270&amp;u_w=1280&amp;u_h=800&amp;url=https%3A%2F%2Fduk.ac.in%2F&amp;rcb=18&amp;frm=0&amp;tiba=Digital%20University%20Kerala%20%E2%80%93%20Curating%20a%20responsible%20digital%20world&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=2019240369.1790208071&amp;uaa=x86&amp;uab=64&amp;uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=&amp;uaw=0&amp;_tu=CA&amp;ept=9&amp;rfmt=3&amp;fmt=4"
+    }
+  ],
   "history": [
+    {
+      "d": "2026-09-24",
+      "up": true,
+      "score": 53
+    },
     {
       "d": "2026-09-23",
       "up": true,
@@ -55,5 +637,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

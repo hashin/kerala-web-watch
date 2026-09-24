@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-23T00:06:43.193Z",
-    "run": "1790121939019",
+    "at": "2026-09-24T00:20:04.658Z",
+    "run": "1790209140317",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 29,
+      "performance": 28,
       "accessibility": 83,
-      "best_practices": 96,
+      "best_practices": 73,
       "seo": 85
     },
     "axe": {
       "critical": 1,
-      "serious": 14,
+      "serious": 17,
       "moderate": 5,
       "minor": 0
     },
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4673ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -171,7 +172,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "14 serious violation(s)"
+        "ev": "17 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -218,17 +219,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "29/100"
+        "ev": "28/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "21825.189000000006ms"
+        "ev": "24563.676000000007ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.95"
+        "ev": "1.56"
       },
       {
         "id": "perf.weight",
@@ -483,13 +484,18 @@
       "ev": "homcokerala.com"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "4673ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "14 serious violation(s)"
+      "ev": "17 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -520,7 +526,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "21825.189000000006ms"
+      "ev": "24563.676000000007ms"
     },
     {
       "id": "perf.weight",
@@ -585,7 +591,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.95"
+      "ev": "1.56"
     },
     {
       "id": "perf.images",
@@ -603,6 +609,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-24",
+      "up": true,
+      "score": 43
+    },
+    {
       "d": "2026-09-23",
       "up": true,
       "score": 43
@@ -618,5 +629,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

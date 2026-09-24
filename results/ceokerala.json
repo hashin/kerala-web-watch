@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-23T00:01:47.310Z",
-    "run": "1790121650145",
+    "at": "2026-09-24T00:02:02.746Z",
+    "run": "1790208067832",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 59,
+      "performance": 60,
       "accessibility": 76,
       "best_practices": 92,
       "seo": 92
     },
     "axe": {
       "critical": 4,
-      "serious": 2,
+      "serious": 3,
       "moderate": 22,
       "minor": 5
     },
@@ -170,7 +170,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "2 serious violation(s)"
+        "ev": "3 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -187,7 +187,8 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -215,12 +216,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "59/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9719.77ms"
+        "ev": "9147.53825ms"
       },
       {
         "id": "perf.cls",
@@ -457,9 +458,9 @@
     ]
   },
   "score": {
-    "overall": 64,
+    "overall": 62,
     "security": 80,
-    "accessibility": 60,
+    "accessibility": 50,
     "content": 46,
     "gigw": 32,
     "performance": 76,
@@ -495,7 +496,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "2 serious violation(s)"
+      "ev": "3 serious violation(s)"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "1 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -516,7 +522,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9719.77ms"
+      "ev": "9147.53825ms"
     },
     {
       "id": "perf.tap_targets",
@@ -586,6 +592,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-24",
+      "up": true,
+      "score": 62
+    },
+    {
       "d": "2026-09-23",
       "up": true,
       "score": 64
@@ -601,5 +612,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

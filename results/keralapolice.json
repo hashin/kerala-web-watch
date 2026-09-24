@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-22T23:48:51.661Z",
-    "run": "1790120874174",
+    "at": "2026-09-23T23:59:45.081Z",
+    "run": "1790207865007",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 45,
+      "performance": 33,
       "accessibility": 92,
       "best_practices": 96,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -216,12 +216,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "45/100"
+        "ev": "33/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "39366.64325ms"
+        "ev": "28411.063750000005ms"
       },
       {
         "id": "perf.cls",
@@ -230,7 +230,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "67.2MB"
+        "ev": "104.9MB"
       },
       {
         "id": "perf.viewport",
@@ -276,7 +276,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "2/30 crawled link(s) broken (https://keralapolice.gov.in/, https://keralapolice.gov.in/page/roll-of-honour)"
       },
       {
         "id": "content.broken_pdfs",
@@ -305,7 +306,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "20 console error(s): Failed to load resource: the server responded with a status of 400 ()"
+        "ev": "22 console error(s): Failed to load resource: the server responded with a status of 400 ()"
       },
       {
         "id": "gigw.contact",
@@ -411,13 +412,13 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e69l1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K&amp;cx=c&amp;gtm=4e69m1, https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e69m1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
       }
     ],
     "screenshot": {
       "desktop": "keralapolice.webp",
       "mobile": "keralapolice-m.webp",
-      "phash": "ffbf8b00070f833f"
+      "phash": "ffff8080e0e0f03f"
     },
     "outlinks": [
       {
@@ -576,10 +577,10 @@
     ]
   },
   "score": {
-    "overall": 56,
+    "overall": 55,
     "security": 50,
     "accessibility": 60,
-    "content": 56,
+    "content": 46,
     "gigw": 26,
     "performance": 66,
     "identity": 96
@@ -612,6 +613,11 @@
       "ev": "ml-"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "2/30 crawled link(s) broken (https://keralapolice.gov.in/, https://keralapolice.gov.in/page/roll-of-honour)"
+    },
+    {
       "id": "gigw.contact",
       "sev": "H"
     },
@@ -639,12 +645,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "39366.64325ms"
+      "ev": "28411.063750000005ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "67.2MB"
+      "ev": "104.9MB"
     },
     {
       "id": "perf.tap_targets",
@@ -668,7 +674,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "20 console error(s): Failed to load resource: the server responded with a status of 400 ()"
+      "ev": "22 console error(s): Failed to load resource: the server responded with a status of 400 ()"
     },
     {
       "id": "gigw.terms",
@@ -710,10 +716,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e69l1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K&amp;cx=c&amp;gtm=4e69m1, https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e69m1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
     }
   ],
   "history": [
+    {
+      "d": "2026-09-24",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-09-23",
       "up": true,
@@ -730,5 +741,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

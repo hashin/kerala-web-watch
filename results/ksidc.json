@@ -35,14 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-22T23:48:58.121Z",
-    "run": "1790120894340",
+    "at": "2026-09-23T23:59:00.259Z",
+    "run": "1790207871320",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 56,
+      "accessibility": 94,
+      "best_practices": 92,
+      "seo": 91
+    },
     "axe": {
       "critical": 0,
       "serious": 2,
-      "moderate": 5,
+      "moderate": 4,
       "minor": 0
     },
     "crawl": {
@@ -168,7 +173,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "5 moderate/minor violation(s)"
+        "ev": "4 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -185,7 +190,7 @@
       {
         "id": "a11y.headings",
         "r": "fail",
-        "ev": "no <h1>, heading levels skipped"
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -201,24 +206,27 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "94/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "56/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "8120.860500000001ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "8.8MB"
+        "ev": "17.3MB"
       },
       {
         "id": "perf.viewport",
@@ -226,11 +234,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -274,7 +282,7 @@
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "3 broken image(s)"
+        "ev": "6 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -295,7 +303,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "4 console error(s): Cannot read properties of null (reading 'addEventListener')"
+        "ev": "8 console error(s): Cannot read properties of null (reading 'addEventListener')"
       },
       {
         "id": "gigw.contact",
@@ -407,9 +415,9 @@
       }
     ],
     "screenshot": {
-      "desktop": "2026-09-22.webp",
-      "mobile": "2026-09-22-m.webp",
-      "phash": "00ffff9b1f27fffe"
+      "desktop": "ksidc.webp",
+      "mobile": "ksidc-m.webp",
+      "phash": "0001011b1f1f1fff"
     },
     "outlinks": [
       {
@@ -440,12 +448,12 @@
     ]
   },
   "score": {
-    "overall": 71,
+    "overall": 68,
     "security": 96,
     "accessibility": 82,
     "content": 38,
     "gigw": 32,
-    "performance": 90,
+    "performance": 66,
     "identity": 68
   },
   "status": "needs-work",
@@ -492,9 +500,18 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "8120.860500000001ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "8.8MB"
+      "ev": "17.3MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -503,17 +520,17 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "5 moderate/minor violation(s)"
+      "ev": "4 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "no <h1>, heading levels skipped"
+      "ev": "heading levels skipped"
     },
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "3 broken image(s)"
+      "ev": "6 broken image(s)"
     },
     {
       "id": "content.meta_desc",
@@ -522,7 +539,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "4 console error(s): Cannot read properties of null (reading 'addEventListener')"
+      "ev": "8 console error(s): Cannot read properties of null (reading 'addEventListener')"
     },
     {
       "id": "gigw.feedback",
@@ -553,6 +570,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -578,6 +599,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-24",
+      "up": true,
+      "score": 68
+    },
+    {
       "d": "2026-09-23",
       "up": true,
       "score": 71
@@ -593,5 +619,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

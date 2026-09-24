@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-23T00:01:50.527Z",
-    "run": "1790121670891",
+    "at": "2026-09-24T00:14:08.252Z",
+    "run": "1790208804953",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 58,
+      "performance": 62,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 85
@@ -49,7 +49,7 @@
     "axe": {
       "critical": 0,
       "serious": 5,
-      "moderate": 11,
+      "moderate": 10,
       "minor": 0
     },
     "crawl": {
@@ -93,8 +93,7 @@
       },
       {
         "id": "avail.under_construction",
-        "r": "warn",
-        "ev": "\"under construction\" alongside 477 other characters"
+        "r": "pass"
       },
       {
         "id": "avail.ttfb",
@@ -177,7 +176,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "11 moderate/minor violation(s)"
+        "ev": "10 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -218,12 +217,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "58/100"
+        "ev": "62/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "16994.383ms"
+        "ev": "14866.853500000001ms"
       },
       {
         "id": "perf.cls",
@@ -568,11 +567,6 @@
   "status": "needs-work",
   "issues": [
     {
-      "id": "avail.under_construction",
-      "sev": "H",
-      "ev": "\"under construction\" alongside 477 other characters"
-    },
-    {
       "id": "sec.mixed_content",
       "sev": "H",
       "ev": "href=\"http://shornurmunicipality.lsgkerala.gov.in/en\""
@@ -616,7 +610,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "16994.383ms"
+      "ev": "14866.853500000001ms"
     },
     {
       "id": "perf.weight",
@@ -630,7 +624,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "11 moderate/minor violation(s)"
+      "ev": "10 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -678,6 +672,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-24",
+      "up": true,
+      "score": 69
+    },
+    {
       "d": "2026-09-23",
       "up": true,
       "score": 69
@@ -693,5 +692,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-22T23:48:52.531Z",
-    "run": "1790120690035",
+    "at": "2026-09-23T23:58:35.534Z",
+    "run": "1790207662981",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 31,
       "accessibility": 81,
       "best_practices": 73,
       "seo": 62
@@ -56,7 +56,7 @@
       "broken": 0
     },
     "tech": {
-      "cms": "WordPress 5.0.28",
+      "cms": "WordPress 5.0.29",
       "server": "Apache",
       "jquery": null
     },
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "6186ms"
+        "ev": "7275ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -218,16 +218,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "31/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "16765.029000000002ms"
+        "ev": "17007.389499999997ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.77"
       },
       {
         "id": "perf.weight",
@@ -409,7 +410,7 @@
       {
         "id": "id.tech",
         "r": "warn",
-        "ev": "WordPress 5.0.28 (unsupported major version)"
+        "ev": "WordPress 5.0.29 (unsupported major version)"
       },
       {
         "id": "id.third_party",
@@ -449,12 +450,12 @@
     ]
   },
   "score": {
-    "overall": 48,
+    "overall": 47,
     "security": 46,
     "accessibility": 44,
     "content": 52,
     "gigw": 12,
-    "performance": 66,
+    "performance": 62,
     "identity": 91
   },
   "status": "poor",
@@ -491,7 +492,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "6186ms"
+      "ev": "7275ms"
     },
     {
       "id": "sec.hsts",
@@ -531,7 +532,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "16765.029000000002ms"
+      "ev": "17007.389499999997ms"
     },
     {
       "id": "perf.weight",
@@ -545,7 +546,7 @@
     {
       "id": "id.tech",
       "sev": "M",
-      "ev": "WordPress 5.0.28 (unsupported major version)"
+      "ev": "WordPress 5.0.29 (unsupported major version)"
     },
     {
       "id": "sec.csp",
@@ -599,6 +600,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.77"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -613,6 +619,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-09-24",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-09-23",
       "up": true,
@@ -629,5 +640,5 @@
       "score": 45
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

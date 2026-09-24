@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-23T00:15:54.809Z",
-    "run": "1790122474658",
+    "at": "2026-09-24T00:14:24.440Z",
+    "run": "1790208687202",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 53,
-      "accessibility": 83,
-      "best_practices": 88,
-      "seo": 92
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
     },
     "axe": {
       "critical": 0,
@@ -57,7 +57,7 @@
     },
     "tech": {
       "cms": null,
-      "server": "Apache",
+      "server": null,
       "jquery": null
     },
     "checks": [
@@ -67,15 +67,16 @@
       },
       {
         "id": "avail.connect",
-        "r": "pass"
+        "r": "fail",
+        "ev": "timeout"
       },
       {
         "id": "avail.status",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.parked",
@@ -95,7 +96,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.geo_blocked",
@@ -107,7 +108,7 @@
       },
       {
         "id": "sec.https",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.http_redirect",
@@ -131,8 +132,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://online.fliphtml5.com/tbqs/uaix/#p=1\""
+        "r": "na"
       },
       {
         "id": "sec.csp",
@@ -210,26 +210,24 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "83/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "53/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "11841.205ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "3.7MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
@@ -237,7 +235,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -284,7 +282,7 @@
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "2 broken image(s)"
+        "ev": "1 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -305,7 +303,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "4 console error(s): Failed to load resource: the server responded with a status of 400 ()"
+        "ev": "3 console error(s): Failed to load resource: the server responded with a status of 400 ()"
       },
       {
         "id": "gigw.contact",
@@ -381,7 +379,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.robots",
@@ -389,12 +387,11 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 404"
+        "r": "na"
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.canonical",
@@ -502,21 +499,13 @@
       }
     ]
   },
-  "score": {
-    "overall": 65,
-    "security": 46,
-    "accessibility": 74,
-    "content": 62,
-    "gigw": 56,
-    "performance": 81,
-    "identity": 96
-  },
-  "status": "needs-work",
+  "score": null,
+  "status": "down",
   "issues": [
     {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://online.fliphtml5.com/tbqs/uaix/#p=1\""
+      "id": "avail.connect",
+      "sev": "C",
+      "ev": "timeout"
     },
     {
       "id": "sec.vuln_js",
@@ -556,14 +545,8 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "11841.205ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "3.7MB"
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.referrer",
@@ -582,12 +565,12 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "2 broken image(s)"
+      "ev": "1 broken image(s)"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "4 console error(s): Failed to load resource: the server responded with a status of 400 ()"
+      "ev": "3 console error(s): Failed to load resource: the server responded with a status of 400 ()"
     },
     {
       "id": "gigw.feedback",
@@ -618,16 +601,16 @@
       "sev": "L"
     },
     {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 404"
-    },
-    {
       "id": "gigw.emblem",
       "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-09-24",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-09-23",
       "up": true,
@@ -644,5 +627,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

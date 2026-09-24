@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-23T00:08:13.285Z",
-    "run": "1790122025218",
+    "at": "2026-09-24T00:14:26.096Z",
+    "run": "1790208769597",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 36,
-      "accessibility": 84,
+      "performance": 57,
+      "accessibility": 80,
       "best_practices": 88,
       "seo": 85
     },
     "axe": {
       "critical": 0,
-      "serious": 14,
+      "serious": 13,
       "moderate": 31,
       "minor": 8
     },
@@ -170,7 +170,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "14 serious violation(s)"
+        "ev": "13 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -188,7 +188,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "11 low-contrast element(s)"
+        "ev": "10 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -211,27 +211,26 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "84/100"
+        "ev": "80/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "36/100"
+        "ev": "57/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8062.505999999999ms"
+        "ev": "6184.5695ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.49"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "202.1MB"
+        "ev": "350.7MB"
       },
       {
         "id": "perf.viewport",
@@ -306,7 +305,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "12 console error(s): Cannot read properties of null (reading 'add')"
+        "ev": "13 console error(s): Cannot read properties of null (reading 'add')"
       },
       {
         "id": "gigw.contact",
@@ -419,7 +418,7 @@
     "screenshot": {
       "desktop": "dtpckollam.webp",
       "mobile": "dtpckollam-m.webp",
-      "phash": "ff080808080808ff"
+      "phash": "ffffff000c0000ff"
     },
     "outlinks": [
       {
@@ -449,12 +448,12 @@
     ]
   },
   "score": {
-    "overall": 54,
+    "overall": 55,
     "security": 38,
     "accessibility": 70,
     "content": 56,
     "gigw": 26,
-    "performance": 72,
+    "performance": 76,
     "identity": 76
   },
   "status": "needs-work",
@@ -495,12 +494,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "14 serious violation(s)"
+      "ev": "13 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "11 low-contrast element(s)"
+      "ev": "10 low-contrast element(s)"
     },
     {
       "id": "gigw.privacy",
@@ -517,12 +516,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8062.505999999999ms"
+      "ev": "6184.5695ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "202.1MB"
+      "ev": "350.7MB"
     },
     {
       "id": "sec.csp",
@@ -554,7 +553,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "12 console error(s): Cannot read properties of null (reading 'add')"
+      "ev": "13 console error(s): Cannot read properties of null (reading 'add')"
     },
     {
       "id": "gigw.terms",
@@ -581,11 +580,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.49"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -602,6 +596,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-24",
+      "up": true,
+      "score": 55
+    },
+    {
       "d": "2026-09-23",
       "up": true,
       "score": 54
@@ -617,5 +616,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

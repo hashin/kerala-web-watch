@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-22T23:46:29.221Z",
-    "run": "1790120729964",
+    "at": "2026-09-23T23:54:41.626Z",
+    "run": "1790207605232",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 49,
+      "performance": 48,
       "accessibility": 87,
       "best_practices": 73,
       "seo": 83
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -215,12 +215,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "49/100"
+        "ev": "48/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "19201.344500000003ms"
+        "ev": "21322.861999999997ms"
       },
       {
         "id": "perf.cls",
@@ -229,7 +229,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "38.1MB"
+        "ev": "38.4MB"
       },
       {
         "id": "perf.viewport",
@@ -275,7 +275,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://trivandrum.nic.in/en/police/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -436,9 +437,9 @@
         "host": "s3waas.gov.in",
         "count": 16,
         "texts": [
-          "21/09/2026-01",
-          "19/09/2026-02",
-          "19/09/2026-01"
+          "23/09/2026-01",
+          "22/09/2026-02",
+          "22/09/2026-01"
         ]
       },
       {
@@ -523,10 +524,10 @@
     ]
   },
   "score": {
-    "overall": 60,
+    "overall": 59,
     "security": 48,
     "accessibility": 54,
-    "content": 56,
+    "content": 46,
     "gigw": 60,
     "performance": 76,
     "identity": 96
@@ -552,6 +553,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://trivandrum.nic.in/en/police/)"
     },
     {
       "id": "sec.hsts",
@@ -582,12 +588,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "19201.344500000003ms"
+      "ev": "21322.861999999997ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "38.1MB"
+      "ev": "38.4MB"
     },
     {
       "id": "sec.csp",
@@ -652,6 +658,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-24",
+      "up": true,
+      "score": 59
+    },
+    {
       "d": "2026-09-23",
       "up": true,
       "score": 60
@@ -667,5 +678,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

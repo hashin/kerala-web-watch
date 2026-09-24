@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-21T17:34:23.869Z",
-    "run": "1790012014417",
+    "at": "2026-09-23T23:55:00.540Z",
+    "run": "1790207616868",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 49,
+      "performance": 51,
       "accessibility": 87,
       "best_practices": 73,
       "seo": 83
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 3
     },
     "tech": {
       "cms": null,
@@ -215,12 +215,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "49/100"
+        "ev": "51/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "21067.8411875ms"
+        "ev": "19422.055500000002ms"
       },
       {
         "id": "perf.cls",
@@ -275,7 +275,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3/30 crawled link(s) broken (https://malappuram.nic.in/en, https://malappuram.nic.in/en/history/, https://malappuram.nic.in/en/std-pin-codes/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -414,9 +415,9 @@
       }
     ],
     "screenshot": {
-      "desktop": "2026-09-21.webp",
-      "mobile": "2026-09-21-m.webp",
-      "phash": "ff7fcf0304007f7f"
+      "desktop": "d-malappuram.webp",
+      "mobile": "d-malappuram-m.webp",
+      "phash": "ffff00000000ffff"
     },
     "outlinks": [
       {
@@ -531,10 +532,10 @@
     ]
   },
   "score": {
-    "overall": 60,
+    "overall": 59,
     "security": 48,
     "accessibility": 54,
-    "content": 52,
+    "content": 42,
     "gigw": 60,
     "performance": 81,
     "identity": 96
@@ -560,6 +561,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "3/30 crawled link(s) broken (https://malappuram.nic.in/en, https://malappuram.nic.in/en/history/, https://malappuram.nic.in/en/std-pin-codes/)"
     },
     {
       "id": "sec.hsts",
@@ -590,7 +596,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "21067.8411875ms"
+      "ev": "19422.055500000002ms"
     },
     {
       "id": "perf.weight",
@@ -665,6 +671,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-24",
+      "up": true,
+      "score": 59
+    },
+    {
       "d": "2026-09-23",
       "up": true,
       "score": 60
@@ -680,5 +691,5 @@
       "score": 60
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-23T00:00:27.841Z",
-    "run": "1790121581135",
+    "at": "2026-09-24T00:08:31.644Z",
+    "run": "1790208438141",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 65,
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 2
     },
     "tech": {
       "cms": "Drupal 8",
@@ -122,7 +122,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "24 days left"
+        "ev": "23 days left"
       },
       {
         "id": "sec.tls_version",
@@ -224,7 +224,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "14293.144000000002ms"
+        "ev": "13169.236ms"
       },
       {
         "id": "perf.cls",
@@ -279,7 +279,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://malappuramdp.lsgkerala.gov.in/ml/Plan_details)"
+        "ev": "2/30 crawled link(s) broken (https://malappuramdp.lsgkerala.gov.in/ml/Plan_details, http://kpepf.lsgkerala.gov.in/Contents/Login.aspx)"
       },
       {
         "id": "content.broken_pdfs",
@@ -471,7 +471,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "24 days left"
+      "ev": "23 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -501,7 +501,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://malappuramdp.lsgkerala.gov.in/ml/Plan_details)"
+      "ev": "2/30 crawled link(s) broken (https://malappuramdp.lsgkerala.gov.in/ml/Plan_details, http://kpepf.lsgkerala.gov.in/Contents/Login.aspx)"
     },
     {
       "id": "sec.hsts",
@@ -536,7 +536,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "14293.144000000002ms"
+      "ev": "13169.236ms"
     },
     {
       "id": "id.tech",
@@ -619,6 +619,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-24",
+      "up": true,
+      "score": 49
+    },
+    {
       "d": "2026-09-23",
       "up": true,
       "score": 49
@@ -634,5 +639,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -29,11 +29,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-22T23:54:19.065Z",
-    "run": "1790120931663",
+    "at": "2026-09-24T00:02:22.442Z",
+    "run": "1790207985084",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 42,
+      "performance": 38,
       "accessibility": 56,
       "best_practices": 69,
       "seo": 82
@@ -47,11 +47,11 @@
     "crawl": {
       "pages": 30,
       "pdfs": 2,
-      "broken": 20
+      "broken": 6
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.33",
       "jquery": "2.1.4"
     },
     "checks": [
@@ -61,16 +61,15 @@
       },
       {
         "id": "avail.connect",
-        "r": "fail",
-        "ev": "timeout"
+        "r": "pass"
       },
       {
         "id": "avail.status",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -90,7 +89,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -102,7 +101,7 @@
       },
       {
         "id": "sec.https",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
@@ -110,15 +109,15 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.hsts",
@@ -126,7 +125,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "fail",
+        "ev": "href=\"http://14.139.185.154/kuhs_old?site=old\""
       },
       {
         "id": "sec.csp",
@@ -213,22 +213,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "42/100"
+        "ev": "38/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "20394.288ms"
+        "ev": "15618.046999999995ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.26"
+        "ev": "0.31"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "7.7MB"
+        "ev": "7.8MB"
       },
       {
         "id": "perf.viewport",
@@ -276,11 +276,12 @@
       {
         "id": "content.broken_links",
         "r": "fail",
-        "ev": "20/30 crawled link(s) broken (https://kuhs.ac.in/kuhs_new/, https://kuhs.ac.in/#, https://kuhs.ac.in/kuhs_new/index.php, ...)"
+        "ev": "5/30 crawled link(s) broken (https://kuhs.ac.in/kuhs_new/, https://kuhs.ac.in/kuhs_new/images/uploads/audio/KUHS-Anthem-Karaoke.wav, https://kuhs.ac.in/kuhs_new/index.php?view=article&id=17696, ...)"
       },
       {
         "id": "content.broken_pdfs",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 linked PDF(s) 404: https://kuhs.ac.in/kuhs_new/images/uploads/pdf/general/anthem/kuhs_anthem_lyrics.pdf"
       },
       {
         "id": "content.broken_images",
@@ -386,8 +387,7 @@
       },
       {
         "id": "id.robots",
-        "r": "fail",
-        "ev": "robots.txt returned 404"
+        "r": "na"
       },
       {
         "id": "id.sitemap_xml",
@@ -443,17 +443,25 @@
       }
     ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 35,
+    "security": 4,
+    "accessibility": 40,
+    "content": 12,
+    "gigw": 30,
+    "performance": 77,
+    "identity": 96
+  },
+  "status": "poor",
   "issues": [
-    {
-      "id": "avail.connect",
-      "sev": "C",
-      "ev": "timeout"
-    },
     {
       "id": "sec.http_redirect",
       "sev": "H"
+    },
+    {
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://14.139.185.154/kuhs_old?site=old\""
     },
     {
       "id": "sec.vuln_js",
@@ -478,7 +486,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "20/30 crawled link(s) broken (https://kuhs.ac.in/kuhs_new/, https://kuhs.ac.in/#, https://kuhs.ac.in/kuhs_new/index.php, ...)"
+      "ev": "5/30 crawled link(s) broken (https://kuhs.ac.in/kuhs_new/, https://kuhs.ac.in/kuhs_new/images/uploads/audio/KUHS-Anthem-Karaoke.wav, https://kuhs.ac.in/kuhs_new/index.php?view=article&id=17696, ...)"
     },
     {
       "id": "sec.hsts",
@@ -509,6 +517,11 @@
       "ev": "<marquee"
     },
     {
+      "id": "content.broken_pdfs",
+      "sev": "M",
+      "ev": "1 linked PDF(s) 404: https://kuhs.ac.in/kuhs_new/images/uploads/pdf/general/anthem/kuhs_anthem_lyrics.pdf"
+    },
+    {
       "id": "gigw.sitemap",
       "sev": "M"
     },
@@ -531,12 +544,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "20394.288ms"
+      "ev": "15618.046999999995ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.7MB"
+      "ev": "7.8MB"
     },
     {
       "id": "sec.csp",
@@ -603,16 +616,11 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.26"
+      "ev": "0.31"
     },
     {
       "id": "perf.images",
       "sev": "L"
-    },
-    {
-      "id": "id.robots",
-      "sev": "L",
-      "ev": "robots.txt returned 404"
     },
     {
       "id": "id.sitemap_xml",
@@ -630,6 +638,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-24",
+      "up": true,
+      "score": 35
+    },
+    {
       "d": "2026-09-23",
       "up": false,
       "score": null
@@ -645,5 +658,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

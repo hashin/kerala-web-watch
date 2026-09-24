@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-23T00:01:37.523Z",
-    "run": "1790121652596",
+    "at": "2026-09-24T00:19:00.316Z",
+    "run": "1790208983925",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 59,
-      "accessibility": 88,
-      "best_practices": 92,
-      "seo": 62
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
     },
     "axe": {
       "critical": 1,
@@ -57,7 +57,7 @@
     },
     "tech": {
       "cms": "WordPress 5.7.15",
-      "server": "Apache",
+      "server": null,
       "jquery": null
     },
     "checks": [
@@ -67,15 +67,16 @@
       },
       {
         "id": "avail.connect",
-        "r": "pass"
+        "r": "fail",
+        "ev": "timeout"
       },
       {
         "id": "avail.status",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.parked",
@@ -95,7 +96,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.geo_blocked",
@@ -107,7 +108,7 @@
       },
       {
         "id": "sec.https",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.http_redirect",
@@ -131,8 +132,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://gmpg.org/xfn/11\""
+        "r": "na"
       },
       {
         "id": "sec.csp",
@@ -211,21 +211,20 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "88/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "59/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "1.40"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -238,7 +237,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -305,7 +304,8 @@
       },
       {
         "id": "content.console_errors",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 console error(s): Cannot read properties of undefined (reading 'split')"
       },
       {
         "id": "gigw.contact",
@@ -381,19 +381,19 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.robots",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.canonical",
@@ -443,25 +443,17 @@
       }
     ]
   },
-  "score": {
-    "overall": 50,
-    "security": 28,
-    "accessibility": 50,
-    "content": 46,
-    "gigw": 38,
-    "performance": 87,
-    "identity": 95
-  },
-  "status": "needs-work",
+  "score": null,
+  "status": "down",
   "issues": [
+    {
+      "id": "avail.connect",
+      "sev": "C",
+      "ev": "timeout"
+    },
     {
       "id": "sec.http_redirect",
       "sev": "H"
-    },
-    {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://gmpg.org/xfn/11\""
     },
     {
       "id": "a11y.axe_critical",
@@ -523,6 +515,10 @@
       "ev": "3.0MB"
     },
     {
+      "id": "perf.tap_targets",
+      "sev": "M"
+    },
+    {
       "id": "id.tech",
       "sev": "M",
       "ev": "WordPress 5.7.15 (unsupported major version)"
@@ -559,6 +555,11 @@
       "sev": "L"
     },
     {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "1 console error(s): Cannot read properties of undefined (reading 'split')"
+    },
+    {
       "id": "gigw.disclaimer",
       "sev": "L"
     },
@@ -571,11 +572,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "1.40"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -585,6 +581,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-09-24",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-09-23",
       "up": true,
@@ -601,5 +602,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

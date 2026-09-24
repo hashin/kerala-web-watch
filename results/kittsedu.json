@@ -35,410 +35,34 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-23T00:05:06.753Z",
-    "run": "1790121853727",
+    "at": "2026-09-24T00:23:49.735Z",
+    "run": "1790209310116",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 50,
-      "accessibility": 86,
-      "best_practices": 92,
-      "seo": 77
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 0,
-      "serious": 28,
-      "moderate": 24,
-      "minor": 4
+      "serious": 0,
+      "moderate": 0,
+      "minor": 0
     },
     "crawl": {
-      "pages": 30,
-      "pdfs": 12,
+      "pages": 0,
+      "pdfs": 0,
       "broken": 0
     },
     "tech": {
       "cms": null,
-      "server": "Apache",
+      "server": null,
       "jquery": null
     },
-    "checks": [
-      {
-        "id": "avail.dns",
-        "r": "pass"
-      },
-      {
-        "id": "avail.connect",
-        "r": "pass"
-      },
-      {
-        "id": "avail.status",
-        "r": "pass"
-      },
-      {
-        "id": "avail.redirect_offsite",
-        "r": "pass"
-      },
-      {
-        "id": "avail.parked",
-        "r": "pass"
-      },
-      {
-        "id": "avail.default_page",
-        "r": "pass"
-      },
-      {
-        "id": "avail.blank",
-        "r": "pass"
-      },
-      {
-        "id": "avail.under_construction",
-        "r": "pass"
-      },
-      {
-        "id": "avail.ttfb",
-        "r": "pass"
-      },
-      {
-        "id": "avail.geo_blocked",
-        "r": "pass"
-      },
-      {
-        "id": "avail.flapping",
-        "r": "na"
-      },
-      {
-        "id": "sec.https",
-        "r": "pass"
-      },
-      {
-        "id": "sec.http_redirect",
-        "r": "fail"
-      },
-      {
-        "id": "sec.cert_valid",
-        "r": "pass"
-      },
-      {
-        "id": "sec.cert_expiry",
-        "r": "pass"
-      },
-      {
-        "id": "sec.tls_version",
-        "r": "pass"
-      },
-      {
-        "id": "sec.hsts",
-        "r": "fail"
-      },
-      {
-        "id": "sec.mixed_content",
-        "r": "pass"
-      },
-      {
-        "id": "sec.csp",
-        "r": "fail"
-      },
-      {
-        "id": "sec.xfo",
-        "r": "pass"
-      },
-      {
-        "id": "sec.xcto",
-        "r": "pass"
-      },
-      {
-        "id": "sec.referrer",
-        "r": "pass"
-      },
-      {
-        "id": "sec.server_banner",
-        "r": "pass"
-      },
-      {
-        "id": "sec.vuln_js",
-        "r": "fail",
-        "ev": "jquery 1.12.4, jquery 2.2.4"
-      },
-      {
-        "id": "sec.safe_browsing",
-        "r": "na"
-      },
-      {
-        "id": "a11y.axe_critical",
-        "r": "pass"
-      },
-      {
-        "id": "a11y.axe_serious",
-        "r": "fail",
-        "ev": "28 serious violation(s)"
-      },
-      {
-        "id": "a11y.axe_moderate_minor",
-        "r": "fail",
-        "ev": "28 moderate/minor violation(s)"
-      },
-      {
-        "id": "a11y.lang",
-        "r": "pass"
-      },
-      {
-        "id": "a11y.alt",
-        "r": "pass"
-      },
-      {
-        "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "24 low-contrast element(s)"
-      },
-      {
-        "id": "a11y.headings",
-        "r": "fail",
-        "ev": "heading levels skipped"
-      },
-      {
-        "id": "a11y.labels",
-        "r": "pass"
-      },
-      {
-        "id": "a11y.skip_link",
-        "r": "pass"
-      },
-      {
-        "id": "a11y.keyboard",
-        "r": "warn",
-        "ev": "tabindex=\"-1\" alongside outline:none"
-      },
-      {
-        "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "86/100"
-      },
-      {
-        "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "50/100"
-      },
-      {
-        "id": "perf.lcp",
-        "r": "fail",
-        "ev": "19545.961000000007ms"
-      },
-      {
-        "id": "perf.cls",
-        "r": "pass"
-      },
-      {
-        "id": "perf.weight",
-        "r": "warn",
-        "ev": "5.0MB"
-      },
-      {
-        "id": "perf.viewport",
-        "r": "pass"
-      },
-      {
-        "id": "perf.tap_targets",
-        "r": "fail"
-      },
-      {
-        "id": "perf.images",
-        "r": "fail"
-      },
-      {
-        "id": "content.copyright_year",
-        "r": "pass"
-      },
-      {
-        "id": "content.last_updated",
-        "r": "fail",
-        "ev": "no \"last updated\" date found"
-      },
-      {
-        "id": "content.stale_news",
-        "r": "pass"
-      },
-      {
-        "id": "content.placeholder",
-        "r": "pass"
-      },
-      {
-        "id": "content.legacy_font",
-        "r": "fail",
-        "ev": "ml-container"
-      },
-      {
-        "id": "content.obsolete_tech",
-        "r": "pass"
-      },
-      {
-        "id": "content.best_viewed",
-        "r": "pass"
-      },
-      {
-        "id": "content.broken_links",
-        "r": "pass"
-      },
-      {
-        "id": "content.broken_pdfs",
-        "r": "pass"
-      },
-      {
-        "id": "content.broken_images",
-        "r": "fail",
-        "ev": "1 broken image(s)"
-      },
-      {
-        "id": "content.malayalam",
-        "r": "na"
-      },
-      {
-        "id": "content.title",
-        "r": "pass"
-      },
-      {
-        "id": "content.meta_desc",
-        "r": "pass"
-      },
-      {
-        "id": "content.favicon",
-        "r": "pass"
-      },
-      {
-        "id": "content.console_errors",
-        "r": "fail",
-        "ev": "2 console error(s): Refused to execute script from 'https://www.kittsedu.org/assets/js/jquery.min' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled."
-      },
-      {
-        "id": "gigw.contact",
-        "r": "pass"
-      },
-      {
-        "id": "gigw.feedback",
-        "r": "fail"
-      },
-      {
-        "id": "gigw.sitemap",
-        "r": "fail"
-      },
-      {
-        "id": "gigw.privacy",
-        "r": "pass"
-      },
-      {
-        "id": "gigw.terms",
-        "r": "pass"
-      },
-      {
-        "id": "gigw.copyright_policy",
-        "r": "fail"
-      },
-      {
-        "id": "gigw.hyperlink_policy",
-        "r": "fail"
-      },
-      {
-        "id": "gigw.disclaimer",
-        "r": "fail"
-      },
-      {
-        "id": "gigw.accessibility_statement",
-        "r": "fail"
-      },
-      {
-        "id": "gigw.screen_reader",
-        "r": "fail"
-      },
-      {
-        "id": "gigw.help",
-        "r": "fail"
-      },
-      {
-        "id": "gigw.rti",
-        "r": "pass"
-      },
-      {
-        "id": "gigw.search",
-        "r": "pass"
-      },
-      {
-        "id": "gigw.ownership",
-        "r": "fail"
-      },
-      {
-        "id": "gigw.last_updated",
-        "r": "fail"
-      },
-      {
-        "id": "gigw.emblem",
-        "r": "pass"
-      },
-      {
-        "id": "id.gov_domain",
-        "r": "fail",
-        "ev": "www.kittsedu.org"
-      },
-      {
-        "id": "id.domain_expiry",
-        "r": "pass"
-      },
-      {
-        "id": "id.www_consistency",
-        "r": "fail"
-      },
-      {
-        "id": "id.robots",
-        "r": "pass"
-      },
-      {
-        "id": "id.sitemap_xml",
-        "r": "pass"
-      },
-      {
-        "id": "id.soft_404",
-        "r": "fail",
-        "ev": "a nonexistent path returned 200"
-      },
-      {
-        "id": "id.canonical",
-        "r": "pass"
-      },
-      {
-        "id": "id.charset_doctype",
-        "r": "pass"
-      },
-      {
-        "id": "id.tech",
-        "r": "pass"
-      },
-      {
-        "id": "id.third_party",
-        "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-42NBYE60Y6"
-      }
-    ],
+    "checks": [],
     "screenshot": {
       "desktop": "kittsedu.webp",
       "mobile": "kittsedu-m.webp",
       "phash": "ffff0000000000ff"
     },
-    "outlinks": [
-      {
-        "host": "forms.gle",
-        "count": 1,
-        "texts": [
-          "Read more..."
-        ]
-      },
-      {
-        "host": "facebook.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "instagram.com",
-        "count": 1,
-        "texts": []
-      }
-    ]
+    "outlinks": [],
+    "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.kittsedu.org/\", waiting until \"load\"\n"
   },
   "score": {
     "overall": 57,
@@ -592,6 +216,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-09-24",
+      "up": true,
+      "score": 57
+    },
     {
       "d": "2026-09-23",
       "up": true,

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-23T00:12:39.422Z",
-    "run": "1790122238765",
+    "at": "2026-09-24T00:22:03.795Z",
+    "run": "1790209204660",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
+      "performance": 55,
       "accessibility": 98,
       "best_practices": 100,
       "seo": 92
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "5952ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -112,7 +111,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.cert_valid",
@@ -216,12 +215,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11675.966499999995ms"
+        "ev": "12693.714999999995ms"
       },
       {
         "id": "perf.cls",
@@ -435,8 +434,8 @@
     ]
   },
   "score": {
-    "overall": 60,
-    "security": 64,
+    "overall": 55,
+    "security": 44,
     "accessibility": 70,
     "content": 50,
     "gigw": 18,
@@ -445,6 +444,10 @@
   },
   "status": "needs-work",
   "issues": [
+    {
+      "id": "sec.http_redirect",
+      "sev": "H"
+    },
     {
       "id": "content.last_updated",
       "sev": "H",
@@ -464,11 +467,6 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "kaicltd.com"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "5952ms"
     },
     {
       "id": "sec.hsts",
@@ -511,7 +509,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11675.966499999995ms"
+      "ev": "12693.714999999995ms"
     },
     {
       "id": "perf.weight",
@@ -589,6 +587,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-24",
+      "up": true,
+      "score": 55
+    },
+    {
       "d": "2026-09-23",
       "up": true,
       "score": 60
@@ -604,5 +607,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
