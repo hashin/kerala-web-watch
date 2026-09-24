@@ -160,6 +160,28 @@ describe('discoverCandidates against a local HTTP server', () => {
     expect(candidates[0].source_page).toBe('https://x.kerala.gov.in');
   });
 
+  it('falls back to the host itself as the name when the fetched page has no title', async () => {
+    const noTitleServer = createServer((req, res) => {
+      res.writeHead(200, { 'content-type': 'text/html' });
+      res.end('<html><body>hi, no title tag here</body></html>');
+    });
+    await new Promise<void>((resolve) => noTitleServer.listen(0, '127.0.0.1', resolve));
+    const noTitlePort = (noTitleServer.address() as AddressInfo).port;
+
+    try {
+      const registry = registryOf([]);
+      const host = `127.0.0.1:${noTitlePort}`;
+      const outlinks: OutlinksData = { [host]: outlink() };
+
+      const candidates = await discoverCandidates([host], outlinks, registry, { scheme: 'http' });
+
+      expect(candidates).toHaveLength(1);
+      expect(candidates[0].name).toBe(host);
+    } finally {
+      await new Promise<void>((resolve) => noTitleServer.close(() => resolve()));
+    }
+  });
+
   it('skips a host that does not resolve at all', async () => {
     const registry = registryOf([]);
     const outlinks: OutlinksData = { 'this-host-does-not-exist.invalid': outlink() };
