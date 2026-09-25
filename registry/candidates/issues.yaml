@@ -1,0 +1,17 @@
+# Candidates submitted through the "Add a government website" issue form (WP5.2), one entry per
+# issue, appended by issue-to-pr.yml as each issue is opened. A human merges what is real into
+# registry/sites/*.yaml (with department/district/kind hints filled in) and moves the rest to
+# ignore.yaml with a reason -- this file itself is never read by the audit suite.
+- url: https://example.org
+  name: WP5.2 Live Verification 3 -- always-comment fix (throwaway test, safe to ignore)
+  source: 'issue #5'
+  source_page: https://example.org
+  hints:
+    kind: Other
+  fetched_at: '2026-09-25T08:13:40.808Z'
+  issue: 5
+  issue_url: https://github.com/hashin/kerala-web-watch/issues/5
+  reported_by: hashin
+  notes: Third throwaway issue opened by a Claude Code session to confirm the always()-comment fix posts a comment even when the create-pull-request step fails. Will be closed once verified.
+  reachable: true
+  checked_status: 200
