@@ -1,23 +1,26 @@
 ---
 import type { HistoryEntry } from '../../../audit/dist/history.js';
+import { t, type Locale } from '../i18n';
 
 interface Props {
   history: HistoryEntry[];
+  locale?: Locale;
 }
 
-const { history } = Astro.props;
+const { history, locale = 'en' } = Astro.props;
 // history is newest-first (see audit/src/history.ts); render oldest -> newest, left to right.
 const days = [...history].reverse();
+const label = t(locale, 'availability.label').replace('{n}', String(days.length));
 ---
 
 {days.length > 0 ? (
-  <div class="availability-strip" role="img" aria-label={`Availability over the last ${days.length} days`}>
+  <div class="availability-strip" role="img" aria-label={label}>
     {days.map((d) => (
-      <span class={`availability-strip__day ${d.up ? 'availability-strip__day--up' : 'availability-strip__day--down'}`} title={`${d.d}: ${d.up ? 'up' : 'down'}`}></span>
+      <span class={`availability-strip__day ${d.up ? 'availability-strip__day--up' : 'availability-strip__day--down'}`} title={`${d.d}: ${d.up ? t(locale, 'availability.up') : t(locale, 'availability.down')}`}></span>
     ))}
   </div>
 ) : (
-  <p>No history yet.</p>
+  <p>{t(locale, 'availability.noHistory')}</p>
 )}
 
 <style>

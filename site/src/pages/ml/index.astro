@@ -4,17 +4,13 @@ import PagefindSearch from '../../components/PagefindSearch.astro';
 import { t } from '../../i18n';
 
 const locale = 'ml';
-// `ml.json`'s values are still literal English text (WP4.5 wires the routing and lookup; WP5.3
-// does the actual translation). Marking this page `lang="ml"` before that would be wrong -- a
-// citizen's screen reader would try to pronounce English words with Malayalam phonetics, and it's
-// exactly the mismatch `a11y.lang` exists to catch (DESIGN §5.3: "Malayalam page with lang="en"
-// fails" -- the same check fails the other way round too). Stays `lang="en"` until WP5.3 lands.
 ---
 
 <Layout
   title={t(locale, 'home.title')}
   description={t(locale, 'home.intro')}
-  lang="en"
+  lang="ml"
+  locale={locale}
   altLangHref="/"
   altLangLabel="English"
 >

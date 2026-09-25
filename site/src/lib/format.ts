@@ -1,4 +1,11 @@
-const RTF = new Intl.RelativeTimeFormat('en-IN', { numeric: 'auto' });
+import type { Locale } from '../i18n';
+
+const RTF: Record<Locale, Intl.RelativeTimeFormat> = {
+  en: new Intl.RelativeTimeFormat('en-IN', { numeric: 'auto' }),
+  // Node/browser ICU data covers 'ml' out of the box -- no manual translation needed here, unlike
+  // the hand-written check/UI strings elsewhere.
+  ml: new Intl.RelativeTimeFormat('ml', { numeric: 'auto' }),
+};
 
 const MINUTE = 60_000;
 const HOUR = 60 * MINUTE;
@@ -10,13 +17,14 @@ const YEAR = 365 * DAY;
  * (DESIGN §7.3 part 1). `now` is a parameter, not a fresh `Date` read inside, so a test can pin
  * it; the site itself never passes one and gets build time, which is fine since the whole page
  * rebuilds every time new audit data lands. */
-export function timeAgo(iso: string, now: Date = new Date()): string {
+export function timeAgo(iso: string, now: Date = new Date(), locale: Locale = 'en'): string {
+  const rtf = RTF[locale];
   const diffMs = new Date(iso).getTime() - now.getTime();
   const abs = Math.abs(diffMs);
-  if (abs < MINUTE) return RTF.format(Math.round(diffMs / 1000), 'second');
-  if (abs < HOUR) return RTF.format(Math.round(diffMs / MINUTE), 'minute');
-  if (abs < DAY) return RTF.format(Math.round(diffMs / HOUR), 'hour');
-  if (abs < MONTH) return RTF.format(Math.round(diffMs / DAY), 'day');
-  if (abs < YEAR) return RTF.format(Math.round(diffMs / MONTH), 'month');
-  return RTF.format(Math.round(diffMs / YEAR), 'year');
+  if (abs < MINUTE) return rtf.format(Math.round(diffMs / 1000), 'second');
+  if (abs < HOUR) return rtf.format(Math.round(diffMs / MINUTE), 'minute');
+  if (abs < DAY) return rtf.format(Math.round(diffMs / HOUR), 'hour');
+  if (abs < MONTH) return rtf.format(Math.round(diffMs / DAY), 'day');
+  if (abs < YEAR) return rtf.format(Math.round(diffMs / MONTH), 'month');
+  return rtf.format(Math.round(diffMs / YEAR), 'year');
 }

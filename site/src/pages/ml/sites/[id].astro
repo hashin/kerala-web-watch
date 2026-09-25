@@ -1,0 +1,228 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import HealthBadge from '../../../components/HealthBadge.astro';
+import ScoreRing from '../../../components/ScoreRing.astro';
+import CategoryBars from '../../../components/CategoryBars.astro';
+import IssueCard from '../../../components/IssueCard.astro';
+import Sparkline from '../../../components/Sparkline.astro';
+import AvailabilityStrip from '../../../components/AvailabilityStrip.astro';
+import Screenshot from '../../../components/Screenshot.astro';
+import TechFacts from '../../../components/TechFacts.astro';
+import SiteActions from '../../../components/SiteActions.astro';
+import {
+  getSites,
+  getDepartment,
+  getDistrict,
+  getMinistryForDepartment,
+  explainStatus,
+  CHECKS,
+} from '../../../lib/data';
+import { t } from '../../../i18n';
+import { timeAgo } from '../../../lib/format';
+import { platformWideIssues } from '../../../lib/rollups';
+
+const locale = 'ml';
+
+export function getStaticPaths() {
+  return getSites().map((site) => ({ params: { id: site.id }, props: { site } }));
+}
+
+const { site } = Astro.props;
+const light = site.result?.light ?? null;
+const deep = site.result?.deep ?? null;
+// ADR-026: a bare status badge tells a citizen nothing they can act on -- explainStatus's own
+// `locale` argument is what makes this page's reason text Malayalam instead of the English
+// `/sites/<id>/` page's own call to the same function.
+const reason = explainStatus(site, locale);
+
+const department = getDepartment(site.department);
+const ministry = getMinistryForDepartment(site.department);
+const district = site.district ? getDistrict(site.district) : null;
+
+const auditErrored = deep?.error != null;
+
+const issueGroups = (['C', 'H', 'M', 'L', 'I'] as const)
+  .map((sev) => ({ sev, issues: (site.result?.issues ?? []).filter((i) => i.sev === sev) }))
+  .filter((g) => g.issues.length > 0);
+
+const platformSharedIssueIds = site.platform
+  ? new Set(platformWideIssues(getSites().filter((s) => s.platform === site.platform)).map((f) => f.id))
+  : new Set<string>();
+const hasInheritedIssues = site.result?.issues.some((i) => platformSharedIssueIds.has(i.id)) ?? false;
+
+const passedChecks = deep?.checks.filter((c) => c.r === 'pass') ?? [];
+
+const SEVERITY_KEY = {
+  C: 'severity.C',
+  H: 'severity.H',
+  M: 'severity.M',
+  L: 'severity.L',
+  I: 'severity.I',
+} as const satisfies Record<(typeof issueGroups)[number]['sev'], Parameters<typeof t>[1]>;
+---
+
+<Layout
+  title={site.name}
+  description={`Status and audit findings for ${site.name}.`}
+  lang="ml"
+  locale={locale}
+  altLangHref={`/sites/${site.id}/`}
+  altLangLabel="English"
+>
+  <p><a href="/ml/">{t(locale, 'site.allSites')}</a></p>
+
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    {ministry && <span>{ministry.name} &rsaquo; </span>}
+    {department && <a href={`/departments/${department.id}/`}>{department.name}</a>}
+    {district && (
+      <span>
+        {' · '}
+        <a href={`/districts/${district.id}/`}>{district.name}</a>
+      </span>
+    )}
+  </nav>
+
+  <h1>
+    {site.name}
+    {site.name_ml && <span> &middot; {site.name_ml}</span>}
+  </h1>
+
+  <div class="site-header">
+    <ScoreRing score={site.result?.score?.overall ?? null} locale={locale} />
+    <div>
+      <p>
+        {site.status === 'hijacked' ? (
+          <span class="hijacked-url">{site.url}</span>
+        ) : (
+          <a href={site.url}>{site.url}</a>
+        )}
+        &nbsp;<HealthBadge status={site.status} locale={locale} />
+      </p>
+      {reason && <p class="status-reason">{reason.citizen}</p>}
+      <p class="audit-times">
+        {deep && <>{t(locale, 'site.auditedPrefix')} {timeAgo(deep.at, new Date(), locale)}</>}
+        {deep && light && ' · '}
+        {light && <>{t(locale, 'site.checkedPrefix')} {timeAgo(light.at, new Date(), locale)}</>}
+      </p>
+    </div>
+  </div>
+
+  {auditErrored && (
+    <p class="audit-error-note">
+      {t(locale, 'site.auditErrorNote').replace('{time}', timeAgo(deep!.at, new Date(), locale))}
+    </p>
+  )}
+
+  {site.notes && <p class="site-note">{site.notes}</p>}
+
+  <section aria-labelledby="screenshot-heading">
+    <h2 id="screenshot-heading">{t(locale, 'site.screenshotHeading')}</h2>
+    <Screenshot id={site.id} siteName={site.name} screenshot={deep?.screenshot ?? null} reason={reason} locale={locale} />
+  </section>
+
+  {deep && (
+    <section aria-labelledby="scores-heading">
+      <h2 id="scores-heading">{t(locale, 'site.scoresHeading')}</h2>
+      <CategoryBars score={site.result?.score ?? null} locale={locale} />
+    </section>
+  )}
+
+  {deep && (
+    <section aria-labelledby="issues-heading">
+      <h2 id="issues-heading">{t(locale, 'site.issuesHeading')}</h2>
+      {hasInheritedIssues && (
+        <p class="inherited-note">
+          {t(locale, 'site.inheritedIssuesNote').replace('{platform}', site.platform ?? '')}
+          {' '}<a href={`/platforms/${site.platform}/`}>{t(locale, 'site.seePlatformPage')}</a>
+        </p>
+      )}
+      {issueGroups.length === 0 && !auditErrored && <p>{t(locale, 'site.noIssuesFound')}</p>}
+      {issueGroups.length === 0 && auditErrored && <p>{t(locale, 'site.noIssuesRecorded')}</p>}
+      {issueGroups.map((group) => (
+        <div>
+          <h3>{t(locale, SEVERITY_KEY[group.sev])}</h3>
+          {group.issues.map((issue) => <IssueCard issue={issue} locale={locale} />)}
+        </div>
+      ))}
+      {passedChecks.length > 0 && (
+        <details class="passed-checks">
+          <summary>{passedChecks.length} {t(locale, 'site.checksPassed')}</summary>
+          <ul>
+            {passedChecks.map((c) => <li>{CHECKS[c.id].title[locale]}</li>)}
+          </ul>
+        </details>
+      )}
+    </section>
+  )}
+
+  <section aria-labelledby="availability-heading">
+    <h2 id="availability-heading">{t(locale, 'site.last90DaysHeading')}</h2>
+    <AvailabilityStrip history={site.result?.history ?? []} locale={locale} />
+    {deep && <Sparkline history={site.result?.history ?? []} />}
+  </section>
+
+  <section aria-labelledby="tech-heading">
+    <h2 id="tech-heading">{t(locale, 'site.technicalFactsHeading')}</h2>
+    <TechFacts light={light} tech={deep?.tech ?? null} platform={site.platform} locale={locale} />
+  </section>
+
+  {!light && <p>{t(locale, 'site.notLightChecked')}</p>}
+  {light && !deep && site.status === 'unaudited' && (
+    <p>
+      {t(locale, 'site.notDeepAudited')}
+      {' '}<a href="/methodology/">{t(locale, 'site.seeMethodologyPage')}</a>
+    </p>
+  )}
+
+  <section aria-labelledby="actions-heading">
+    <h2 id="actions-heading">{t(locale, 'site.actionsHeading')}</h2>
+    <SiteActions id={site.id} name={site.name} locale={locale} />
+  </section>
+</Layout>
+
+<style>
+  .breadcrumb {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+  }
+  .site-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .status-reason {
+    max-width: 60ch;
+    color: var(--color-text-muted, inherit);
+  }
+  .audit-times {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+  }
+  .hijacked-url {
+    color: var(--color-bad);
+    font-weight: 600;
+  }
+  .inherited-note {
+    max-width: 60ch;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+  }
+  .audit-error-note {
+    max-width: 60ch;
+    padding: 0.6rem 0.9rem;
+    border: 1px solid var(--color-warn);
+    border-radius: 0.25rem;
+    color: var(--color-warn);
+  }
+  .site-note {
+    max-width: 60ch;
+    padding: 0.6rem 0.9rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.25rem;
+    color: var(--color-muted);
+  }
+  .passed-checks ul {
+    columns: 2;
+  }
+</style>

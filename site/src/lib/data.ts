@@ -8,6 +8,7 @@ import type { Site, District, Department, Place, Minister, Registry } from '../.
 import type { Result } from '../../../audit/dist/store.js';
 import type { ResultStatus } from '../../../audit/dist/status.js';
 import type { Summary, GroupStat } from '../../../audit/dist/summary.js';
+import type { Locale } from '../i18n';
 
 export type { Result, GroupStat, Summary };
 export type Status = ResultStatus;
@@ -164,7 +165,7 @@ export interface StatusReason {
  * really decided the badge. Returns `null` for `healthy`/`needs-work`/`poor`/`unaudited`, and for
  * `hijacked`, whose badge word ("Possibly hijacked — do not visit") is already the full warning.
  */
-export function explainStatus(site: SiteView): StatusReason | null {
+export function explainStatus(site: SiteView, locale: Locale = 'en'): StatusReason | null {
   if (site.status !== 'down' && site.status !== 'broken' && site.status !== 'unverifiable') return null;
 
   const fromIssues = site.result?.issues.find((issue) => CHECKS[issue.id].statusSetting === site.status);
@@ -172,5 +173,5 @@ export function explainStatus(site: SiteView): StatusReason | null {
   if (!id) return null;
 
   const meta = CHECKS[id];
-  return { title: meta.title.en, citizen: meta.citizen.en };
+  return { title: meta.title[locale], citizen: meta.citizen[locale] };
 }

@@ -1,28 +1,36 @@
 ---
 import { CHECKS } from '../../../audit/dist/checks/registry.js';
 import type { Issue } from '../../../audit/dist/score.js';
+import { t, type Locale } from '../i18n';
 
 interface Props {
   issue: Issue;
+  locale?: Locale;
 }
 
-const { issue } = Astro.props;
+const { issue, locale = 'en' } = Astro.props;
 const meta = CHECKS[issue.id];
 
-const SEVERITY_LABEL: Record<Issue['sev'], string> = { C: 'Critical', H: 'High', M: 'Medium', L: 'Low', I: 'Info' };
 const SEVERITY_TONE: Record<Issue['sev'], 'bad' | 'warn' | 'neutral'> = { C: 'bad', H: 'bad', M: 'warn', L: 'warn', I: 'neutral' };
+const SEVERITY_KEY = {
+  C: 'severity.C',
+  H: 'severity.H',
+  M: 'severity.M',
+  L: 'severity.L',
+  I: 'severity.I',
+} as const satisfies Record<Issue['sev'], Parameters<typeof t>[1]>;
 ---
 
 <article class={`issue-card issue-card--${SEVERITY_TONE[issue.sev]}`}>
   <h4 class="issue-card__title">
-    <span class="issue-card__sev">{SEVERITY_LABEL[issue.sev]}</span> {meta.title.en}
+    <span class="issue-card__sev">{t(locale, SEVERITY_KEY[issue.sev])}</span> {meta.title[locale]}
   </h4>
-  <p class="issue-card__citizen">{meta.citizen.en}</p>
+  <p class="issue-card__citizen">{meta.citizen[locale]}</p>
   {issue.ev && <p class="issue-card__evidence"><code>{issue.ev}</code></p>}
   <details>
-    <summary>How to fix it{meta.ref && ' & reference'}</summary>
-    <p>{meta.fix.en}</p>
-    {meta.ref && <p class="issue-card__ref">Reference: {meta.ref}</p>}
+    <summary>{t(locale, 'issue.howToFix')}{meta.ref && t(locale, 'issue.andReference')}</summary>
+    <p>{meta.fix[locale]}</p>
+    {meta.ref && <p class="issue-card__ref">{t(locale, 'issue.reference')}: {meta.ref}</p>}
   </details>
 </article>
 

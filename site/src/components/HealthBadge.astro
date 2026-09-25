@@ -1,25 +1,39 @@
 ---
 import type { Status } from '../lib/data';
+import type { Locale } from '../i18n';
 
 interface Props {
   status: Status;
+  locale?: Locale;
 }
 
-const { status } = Astro.props;
+const { status, locale = 'en' } = Astro.props;
 
 // Status is never conveyed by colour alone (DESIGN §7.4): each badge pairs an icon with a word.
-const LABELS: Record<Status, { icon: string; word: string; tone: string }> = {
-  down: { icon: '\u{1F534}', word: 'Down', tone: 'bad' },
-  hijacked: { icon: '⛔', word: 'Possibly hijacked — do not visit', tone: 'bad' },
-  broken: { icon: '\u{1F534}', word: 'Broken', tone: 'bad' },
-  unverifiable: { icon: '⚪', word: 'Unverifiable', tone: 'neutral' },
-  unaudited: { icon: '⚪', word: 'Not yet audited', tone: 'neutral' },
-  healthy: { icon: '\u{1F7E2}', word: 'Healthy', tone: 'good' },
-  'needs-work': { icon: '\u{1F7E1}', word: 'Needs work', tone: 'warn' },
-  poor: { icon: '\u{1F7E0}', word: 'Poor', tone: 'bad' },
+const LABELS: Record<Locale, Record<Status, { icon: string; word: string; tone: string }>> = {
+  en: {
+    down: { icon: '\u{1F534}', word: 'Down', tone: 'bad' },
+    hijacked: { icon: '⛔', word: 'Possibly hijacked — do not visit', tone: 'bad' },
+    broken: { icon: '\u{1F534}', word: 'Broken', tone: 'bad' },
+    unverifiable: { icon: '⚪', word: 'Unverifiable', tone: 'neutral' },
+    unaudited: { icon: '⚪', word: 'Not yet audited', tone: 'neutral' },
+    healthy: { icon: '\u{1F7E2}', word: 'Healthy', tone: 'good' },
+    'needs-work': { icon: '\u{1F7E1}', word: 'Needs work', tone: 'warn' },
+    poor: { icon: '\u{1F7E0}', word: 'Poor', tone: 'bad' },
+  },
+  ml: {
+    down: { icon: '\u{1F534}', word: 'പ്രവർത്തനരഹിതം', tone: 'bad' },
+    hijacked: { icon: '⛔', word: 'ഹൈജാക്ക് ചെയ്തിരിക്കാം — സന്ദർശിക്കരുത്', tone: 'bad' },
+    broken: { icon: '\u{1F534}', word: 'തകരാറിലാണ്', tone: 'bad' },
+    unverifiable: { icon: '⚪', word: 'സ്ഥിരീകരിക്കാൻ കഴിയില്ല', tone: 'neutral' },
+    unaudited: { icon: '⚪', word: 'ഇതുവരെ ഓഡിറ്റ് ചെയ്തിട്ടില്ല', tone: 'neutral' },
+    healthy: { icon: '\u{1F7E2}', word: 'ആരോഗ്യകരം', tone: 'good' },
+    'needs-work': { icon: '\u{1F7E1}', word: 'പണി ആവശ്യമാണ്', tone: 'warn' },
+    poor: { icon: '\u{1F7E0}', word: 'മോശം', tone: 'bad' },
+  },
 };
 
-const label = LABELS[status];
+const label = LABELS[locale][status];
 ---
 
 <span class={`health-badge health-badge--${label.tone}`}>

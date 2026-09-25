@@ -1,10 +1,13 @@
 ---
+import { t, type Locale } from '../i18n';
+
 interface Props {
   id: string;
   name: string;
+  locale?: Locale;
 }
 
-const { id, name } = Astro.props;
+const { id, name, locale = 'en' } = Astro.props;
 const REPO = 'https://github.com/hashin/kerala-web-watch';
 // template=correction.yml/reaudit-request.yml (WP4.6) don't exist as issue forms yet -- GitHub
 // falls back to a plain pre-titled issue when the template is missing, so these links work today
@@ -13,13 +16,15 @@ const REPO = 'https://github.com/hashin/kerala-web-watch';
 const correctionUrl = `${REPO}/issues/new?template=correction.yml&title=${encodeURIComponent(`[${id}] Correction: ${name}`)}`;
 const reauditUrl = `${REPO}/issues/new?template=reaudit-request.yml&title=${encodeURIComponent(`[${id}] Re-audit request: ${name}`)}`;
 const jsonUrl = `/api/sites/${id}.json`;
+const shareLabel = t(locale, 'siteActions.share');
+const linkCopiedLabel = t(locale, 'siteActions.linkCopied');
 ---
 
 <ul class="site-actions">
-  <li><a href={correctionUrl}>Suggest a correction</a></li>
-  <li><a href={reauditUrl}>Request re-audit</a></li>
-  <li><a href={jsonUrl}>Download JSON</a></li>
-  <li><button type="button" class="site-actions__share" data-share-title={name}>Share</button></li>
+  <li><a href={correctionUrl}>{t(locale, 'siteActions.correction')}</a></li>
+  <li><a href={reauditUrl}>{t(locale, 'siteActions.reaudit')}</a></li>
+  <li><a href={jsonUrl}>{t(locale, 'siteActions.downloadJson')}</a></li>
+  <li><button type="button" class="site-actions__share" data-share-title={name} data-link-copied-label={linkCopiedLabel}>{shareLabel}</button></li>
 </ul>
 
 <script>
@@ -41,7 +46,7 @@ const jsonUrl = `/api/sites/${id}.json`;
       try {
         await navigator.clipboard.writeText(url);
         const original = btn.textContent;
-        btn.textContent = 'Link copied';
+        btn.textContent = btn.getAttribute('data-link-copied-label') || 'Link copied';
         setTimeout(() => {
           btn.textContent = original;
         }, 2000);

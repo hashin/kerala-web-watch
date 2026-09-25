@@ -1,40 +1,45 @@
 ---
 import type { ScoreBreakdown } from '../../../audit/dist/score.js';
+import { t, type Locale } from '../i18n';
 
 interface Props {
   score: ScoreBreakdown | null;
+  locale?: Locale;
 }
 
-const { score } = Astro.props;
+const { score, locale = 'en' } = Astro.props;
 
-const CATEGORIES: { key: Exclude<keyof ScoreBreakdown, 'overall'>; label: string }[] = [
-  { key: 'security', label: 'Security' },
-  { key: 'accessibility', label: 'Accessibility' },
-  { key: 'content', label: 'Content' },
-  { key: 'gigw', label: 'Government guidelines' },
-  { key: 'performance', label: 'Performance' },
-  { key: 'identity', label: 'Identity' },
+const CATEGORIES: { key: Exclude<keyof ScoreBreakdown, 'overall'>; labelKey: Parameters<typeof t>[1] }[] = [
+  { key: 'security', labelKey: 'category.security' },
+  { key: 'accessibility', labelKey: 'category.accessibility' },
+  { key: 'content', labelKey: 'category.content' },
+  { key: 'gigw', labelKey: 'category.gigw' },
+  { key: 'performance', labelKey: 'category.performance' },
+  { key: 'identity', labelKey: 'category.identity' },
 ];
 ---
 
 {score ? (
   <ul class="category-bars">
-    {CATEGORIES.map(({ key, label }) => (
-      <li>
-        <span class="category-bars__label">{label}</span>
-        <div class="coverage-bar" role="img" aria-label={`${label}: ${score[key]} out of 100`}>
-          <span style={`width: ${score[key]}%`}></span>
-        </div>
-        <span class="category-bars__value">{score[key]}</span>
-      </li>
-    ))}
+    {CATEGORIES.map(({ key, labelKey }) => {
+      const label = t(locale, labelKey);
+      return (
+        <li>
+          <span class="category-bars__label">{label}</span>
+          <div class="coverage-bar" role="img" aria-label={`${label}: ${score[key]} ${t(locale, 'score.outOf100')}`}>
+            <span style={`width: ${score[key]}%`}></span>
+          </div>
+          <span class="category-bars__value">{score[key]}</span>
+        </li>
+      );
+    })}
   </ul>
 ) : (
   // Null here means either DESIGN §5.4's availability gate (a ★ check failed and skipped
   // scoring entirely) or that no deep audit has completed successfully yet -- the page's own
   // status reason / audit-error note above already says which, so this stays generic rather
   // than guessing.
-  <p>Not scored.</p>
+  <p>{t(locale, 'score.notScored')}</p>
 )}
 
 <style>

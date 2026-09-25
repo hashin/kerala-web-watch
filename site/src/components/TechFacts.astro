@@ -1,39 +1,46 @@
 ---
 import { isGovDomain } from '../../../audit/dist/checks/identity.js';
 import type { StoredLight, DeepTech } from '../../../audit/dist/store.js';
+import { t, type Locale } from '../i18n';
 
 interface Props {
   light: StoredLight | null;
   tech: DeepTech | null;
   platform: string | null;
+  locale?: Locale;
 }
 
-const { light, tech, platform } = Astro.props;
+const { light, tech, platform, locale = 'en' } = Astro.props;
 const domain = light?.final_domain ?? null;
+
+const certificateText = light?.tls
+  ? `${light.tls.valid ? t(locale, 'tech.valid') : t(locale, 'tech.invalid')}${
+      light.tls.days_left !== null
+        ? t(locale, 'tech.expiresIn').replace('{n}', String(light.tls.days_left)).replace('{date}', light.tls.expires)
+        : ''
+    }`
+  : '—';
+const domainText = domain ? `${domain} — ${isGovDomain(domain) ? t(locale, 'tech.govDomain') : t(locale, 'tech.notGovDomain')}` : '—';
 ---
 
 <dl class="tech-facts">
-  <dt>Final URL</dt>
+  <dt>{t(locale, 'tech.finalUrl')}</dt>
   <dd>{light?.final_url ?? '—'}</dd>
 
-  <dt>Server</dt>
+  <dt>{t(locale, 'tech.server')}</dt>
   <dd>{tech?.server ?? '—'}</dd>
 
-  <dt>Content management system</dt>
-  <dd>{tech?.cms ?? 'Not detected'}</dd>
+  <dt>{t(locale, 'tech.cms')}</dt>
+  <dd>{tech?.cms ?? t(locale, 'tech.notDetected')}</dd>
 
-  <dt>Security certificate</dt>
-  <dd>
-    {light?.tls
-      ? `${light.tls.valid ? 'Valid' : 'Invalid'}${light.tls.days_left !== null ? ` — expires in ${light.tls.days_left} days (${light.tls.expires})` : ''}`
-      : '—'}
-  </dd>
+  <dt>{t(locale, 'tech.certificate')}</dt>
+  <dd>{certificateText}</dd>
 
-  <dt>Domain</dt>
-  <dd>{domain ? `${domain} — ${isGovDomain(domain) ? 'a government (.gov.in/.nic.in-class) domain' : 'not a government-class domain'}` : '—'}</dd>
+  <dt>{t(locale, 'tech.domain')}</dt>
+  <dd>{domainText}</dd>
 
-  <dt>Platform</dt>
-  <dd>{platform ?? 'None — independently hosted'}</dd>
+  <dt>{t(locale, 'tech.platform')}</dt>
+  <dd>{platform ?? t(locale, 'tech.noPlatform')}</dd>
 </dl>
 
 <style>

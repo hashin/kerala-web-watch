@@ -4,14 +4,13 @@ import { t } from '../../i18n';
 
 const locale = 'ml';
 const buildDate = new Date().toISOString().slice(0, 10);
-// See src/pages/ml/index.astro's comment: `ml.json` is still English text, so this page stays
-// `lang="en"` until WP5.3 provides real Malayalam values.
 ---
 
 <Layout
   title={t(locale, 'about.title')}
   description={t(locale, 'about.intro')}
-  lang="en"
+  lang="ml"
+  locale={locale}
   altLangHref="/about/"
   altLangLabel="English"
 >

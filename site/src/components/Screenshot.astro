@@ -1,6 +1,7 @@
 ---
 import type { DeepScreenshot } from '../../../audit/dist/store.js';
 import type { StatusReason } from '../lib/data';
+import { t, type Locale } from '../i18n';
 
 interface Props {
   id: string;
@@ -10,16 +11,17 @@ interface Props {
   // status badge, so a missing screenshot and the badge above it can't tell a citizen two
   // different stories about the same site.
   reason: StatusReason | null;
+  locale?: Locale;
 }
 
-const { id, siteName, screenshot, reason } = Astro.props;
+const { id, siteName, screenshot, reason, locale = 'en' } = Astro.props;
 const toggleId = `${id}-screenshot-mobile`;
 ---
 
 {screenshot ? (
   <div class="screenshot">
     <input type="checkbox" id={toggleId} class="screenshot__toggle-input" />
-    <label for={toggleId} class="screenshot__toggle-label">Show mobile view</label>
+    <label for={toggleId} class="screenshot__toggle-label">{t(locale, 'screenshot.showMobileView')}</label>
     <img
       class="screenshot__img screenshot__img--desktop"
       src={`/screenshots/${screenshot.desktop}`}
@@ -38,7 +40,7 @@ const toggleId = `${id}-screenshot-mobile`;
     />
   </div>
 ) : (
-  <p class="screenshot__missing">No screenshot available{reason ? `: ${reason.citizen}` : ' yet.'}</p>
+  <p class="screenshot__missing">{reason ? `${t(locale, 'screenshot.noneWithReason')}${reason.citizen}` : t(locale, 'screenshot.noneYet')}</p>
 )}
 
 <style>

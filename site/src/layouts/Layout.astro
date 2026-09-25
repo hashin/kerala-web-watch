@@ -1,18 +1,25 @@
 ---
 import '../styles/global.css';
 import PagefindSearch from '../components/PagefindSearch.astro';
+import { t, type Locale } from '../i18n';
 
 interface Props {
   title: string;
   description?: string;
   lang?: string;
-  /** This page's counterpart in the other language, if one exists yet -- most pages don't (WP5.3
-   * covers full translation), so this is omitted far more often than it's set. */
+  /** Drives the header nav's labels and, for the Home/About links, their href -- Methodology and
+   * Reports have no `/ml/` counterpart yet, so those two stay in English on every page regardless
+   * of locale (same honest partial-translation pattern as the home page's own notice banner). */
+  locale?: Locale;
+  /** This page's counterpart in the other language, if one exists yet -- most pages don't (some
+   * pages remain English-only even after WP5.3), so this is omitted more often than it's set. */
   altLangHref?: string;
   altLangLabel?: string;
 }
 
-const { title, description, lang = 'en', altLangHref, altLangLabel } = Astro.props;
+const { title, description, lang = 'en', locale = 'en', altLangHref, altLangLabel } = Astro.props;
+const homeHref = locale === 'ml' ? '/ml/' : '/';
+const aboutHref = locale === 'ml' ? '/ml/about/' : '/about/';
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 // Static build timestamp, not per-request -- accurate to "when this deployment was built", which
@@ -34,10 +41,10 @@ const lastUpdated = new Date().toISOString().slice(0, 10);
     <a class="skip-link" href="#main">Skip to main content</a>
     <header class="site-header">
       <nav aria-label="Primary">
-        <a href="/">Kerala Web Watch</a>
+        <a href={homeHref}>Kerala Web Watch</a>
         · <a href="/methodology/">Methodology</a>
         · <a href="/reports/">Reports</a>
-        · <a href="/about/">About</a>
+        · <a href={aboutHref}>{t(locale, 'nav.about')}</a>
         {altLangHref && (
           <>
             {' · '}
