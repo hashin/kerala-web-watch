@@ -6,18 +6,15 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 ## Now
 
 - **Phase:** 4 — Full site
-- **Current WP:** WP4.6 and WP5.1 both done this session. Also closed two long-open multi-day gates
-  opportunistically while checking Actions history: WP2.3's and WP3.7's "two consecutive scheduled runs"
-  done-when criteria both passed calendar time and succeeded (see their WP table rows) — both are now fully
-  `done`, not just `live`/`in progress`.
-- **Next action:** WP5.2 (`issue-to-pr.yml`) — parses the three WP4.6 issue forms into a registry PR, same
-  general shape as `discover.yml`'s own PR-opening step. WP4.7 (India vantage runner) stays blocked/optional
-  on Open question 6 (needs the human to register a self-hosted `india` runner first) — skip it and come
-  back only if that's answered. Separately: WP5.1's live verification found that this repo can't actually
-  open PRs from Actions yet (`peter-evans/create-pull-request` failed with "GitHub Actions is not permitted
-  to create or approve pull requests") — the human needs to flip Settings → Actions → General → "Allow
-  GitHub Actions to create and approve pull requests" before `discover.yml`'s next scheduled run, or
-  `issue-to-pr.yml` (WP5.2), can actually open one. See Open question 14.
+- **Current WP:** WP5.2 done this session.
+- **Next action:** WP5.3 (Malayalam explanations and UI) — `ml` strings for `title`/`citizen`/`fix` of every
+  check in `registry.ts`, translated `ml.json`, `/ml/` navigation, language toggle; its own spec says to
+  translate a sample of 20 checks and ask the human to review before translating the rest, so that session
+  will hit a real stop-and-ask point partway through, not a design deviation. WP4.7 (India vantage runner)
+  stays blocked/optional on Open question 6 — skip it and come back only if that's answered. Separately:
+  the repo still can't open PRs from Actions (Settings → Actions → General → "Allow GitHub Actions to create
+  and approve pull requests" is off) — now confirmed live to block both `discover.yml` (WP5.1) and
+  `issue-to-pr.yml` (WP5.2) identically. See Open question 14.
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
 - **Registry size:** 1,501 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated + 1 dogfood entry, WP4.5's own `kerala-web-watch`) · **Deep-audited:** 299/1,501 (as of the `data` checkout pulled 2026-09-24 for WP4.6's report generation; `kerala-web-watch` itself not yet deep-audited by real CI — see WP4.5's Handoff entry) · **Light-checked:** 1,501/1,501 · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data, and (as of WP4.1) full deep-audit findings — score ring, category bars, issue cards, screenshots, tech facts, sparkline — on every audited site's own page. As of WP4.5 also has a self-hosted Pagefind search (home page + collapsed header toggle) and a `/ml/` route prefix wired (two pages so far, `home` and `about`, still English text pending WP5.3's translation).
 - **Candidates backlog:** ~2,476 fresh, uncurated candidates as of 2026-09-21 (mostly from a new `kerala-gov-in-subdomains` source — see Handoff below), waiting for a WP1.7-style curation pass. Not yet in `registry/sites/`.
@@ -57,7 +54,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 4.6 | squash-data.yml, report.yml, issue forms | done | 8c226a8 | new `cli report` (audit/src/report.ts, 12 tests after verifier) recomputes the summary and diffs it against last month's snapshot, read back out of that month's own report frontmatter (no separate cache); `reports` content collection + `/reports/` and `/reports/<month>/` pages; generated and committed the real first report (2026-09) locally rather than via a live dispatch; verifier mutation-tested report.ts, see Handoff; `squash-data.yml`'s own live `workflow_dispatch` verification (force-pushes `data`, creates a public Release) deliberately not run this session — needs the human's explicit go-ahead first, see Open question 13 |
 | 4.7 | India vantage runner (optional) | todo | | |
 | 5.1 | discover.yml → candidates PR | done | 84dc0929 | `cli discover` (audit/src/discover.ts, 18 tests after verifier) filters `data/outlinks.json` to gov-looking hosts, drops registered/ignored ones, light-checks survivors (`p-limit`-bounded concurrency, not sequential — see Handoff, a real run timed out at 30min sequential), writes `registry/candidates/discovered.yaml` wholesale each run; verified live twice via `workflow_dispatch` against real production data (392 outlink hosts → 138 candidates → 73 reachable) — correctly separates central-gov noise (cea.nic.in, cpcb.gov.in) from real Kerala orgs (bptkerala.in, cee-kerala.org, erckerala.org); PR-opening step itself blocked on a repo setting the human needs to flip — see Open question 14 |
-| 5.2 | issue-to-pr.yml | todo | | |
+| 5.2 | issue-to-pr.yml | done | 493b2f61 (feat) + a7a7c265 (fix) | new `cli issue-to-pr` (audit/src/issue-to-pr.ts, 26 tests): parses the rendered add-website form body, light-checks the submitted URL, short-circuits with an explanatory issue comment (no PR) for a malformed form/unparseable URL/already-registered host, else appends to `registry/candidates/issues.yaml` (replacing any earlier entry for the same URL); new `.github/workflows/issue-to-pr.yml` writes the untrusted issue body to a file via `actions/github-script`'s context object rather than shell-interpolating it (a real injection-class risk for free citizen text); verifier mutation-tested and found 1 real gap (`toEqual({})` doesn't distinguish `{kind: undefined}` from `{}` in vitest — the "omits a hint key" test couldn't fail no matter what, fixed to `toStrictEqual`); discovered and fixed a real gap while live-verifying: the 5 labels every issue template/workflow references (`add-website`, `registry`, `correction`, `reaudit`, `discovery`) had never actually been created as repo labels, so `gh issue create --label add-website` failed outright and `peter-evans/create-pull-request`'s own `labels: discovery` step would have too — created all 5 live; live-verified with 3 real throwaway issues (#3/#4/#5, all closed after): #3 (kerala.gov.in) correctly recognised as already-registered (`kerala-gov`), no PR opened; #4 (example.com) correctly attempted a PR for a genuinely new candidate but hit the same repo-setting block WP5.1 found (Open question 14) — and that failure silently swallowed the issue comment too, a real bug, fixed with `if: always()`; #5 (example.org) confirmed the fix posts a comment even when the PR step fails |
 | 5.3 | Malayalam explanations + UI | todo | | |
 | 5.4 | Government colleges tier | todo | | |
 
@@ -134,12 +131,24 @@ _None yet. Each entry: what, why, ADR number._
     with "GitHub Actions is not permitted to create or approve pull requests." This is a repo Settings →
     Actions → General toggle, not something fixable in code or via this session's token (added to CLAUDE.md's
     "Things only the human can do" list). Blocks `discover.yml` actually landing a PR on its next scheduled
-    run, and will block WP5.2's `issue-to-pr.yml` the same way — worth the human flipping it before WP5.2
-    needs live verification too.
+    run. **Confirmed 2026-09-25 (WP5.2 session) to block `issue-to-pr.yml` identically** — a real throwaway
+    issue (#4, `example.com`) correctly reached the PR-opening step and hit the exact same error. Worth
+    flipping before either workflow can land a real PR; nothing else is blocked on it right now.
 
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-09-25 · WP5.2 done: `issue-to-pr.yml`, `cli issue-to-pr`** — new `audit/src/issue-to-pr.ts` (26
+  tests, verifier found and fixed 1 real gap — see WP table row) turns an add-website issue into a candidate
+  entry in `registry/candidates/issues.yaml`, or a plain-language comment explaining why not (malformed,
+  bad URL, already registered). Live-verified with 3 real throwaway issues against production: found and
+  fixed two real bugs along the way — 5 missing repo labels (`add-website`/`registry`/`correction`/`reaudit`/
+  `discovery` were referenced everywhere but never actually created, now fixed) and a workflow bug where the
+  PR step failing outright (not just being skipped) silently ate the issue comment too, fixed with
+  `if: always()`. Still blocked on Open question 14 (repo can't open Actions PRs yet) for the actual PR, same
+  as `discover.yml` — everything up to that point works. Next: WP5.3 (Malayalam), which has its own built-in
+  stop-and-ask point (translate a sample of 20, then ask the human before doing the rest).
 
 - **2026-09-24 · WP5.1 done: `discover.yml`, `cli discover`** — continued straight from WP4.6 in the same
   session. `audit/src/discover.ts`'s pure half (`looksLikeKeralaGovHost`, `filterCandidateHosts`,
