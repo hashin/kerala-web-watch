@@ -60,9 +60,15 @@ jobs:
           labels: discovery
           body-path: issue-pr-body.md
 
-      # Always comments, whether or not a PR was opened -- issue-to-pr.js writes issue-comment.md
-      # either way (malformed form, invalid URL, already-tracked site, or a real new candidate).
+      # Always comments, whether or not a PR was opened -- the CLI writes issue-comment.md either
+      # way (malformed form, invalid URL, already-tracked site, or a real new candidate). `always()`
+      # matters here specifically: a real live run against a still-open repo-setting gap (see
+      # STATE.md's open question 14) found that when the PR step *fails* outright (as opposed to
+      # being skipped by its own `if:`), the default `if:` on this step would never run at all,
+      # leaving the citizen with no response whatsoever -- worse than a comment that's briefly
+      # optimistic about a PR landing during that known, already-tracked, temporary gap.
       - name: Comment on the issue
+        if: always() && steps.issue-to-pr.outcome == 'success'
         uses: actions/github-script@v7
         with:
           script: |
