@@ -185,3 +185,28 @@ table (already written in this plain style) is the reference for its wording.
 (WP4.1's issue cards, WP4.4's methodology page, WP5.3's Malayalam strings) must run the same check before being
 called done: does the text state a specific, plain-language reason, or does it just restate a status word back at
 the reader? CLAUDE.md's Non-negotiables and DESIGN §5.4/§7.4 now carry this rule so it isn't only in this ADR.
+
+## ADR-027 · Should college harvests generate straight into `registry/sites/`, like LSGI? · Proposed · 2026-09-25
+**Problem:** WP5.4's text says to produce `registry/sites/colleges.yaml` "via the harvest framework", and
+DESIGN.md §3.2's source table lists the colleges row's method as "scrape" (matching LSGI's row, not the
+"scrape once, curate" wording used for every source that feeds WP1.7's curation pass). But ADR-018 restricts
+direct-to-`sites/` generation to LSGI alone ("whose source is fully structured"), and `scripts/harvest/lib.ts`'s
+shared `writeCandidates()` — what "via the harvest framework" means everywhere else in this codebase — writes
+`registry/candidates/<source>.yaml` only, by design, with a code comment citing ADR-018 by name.
+**Options:** (A) extend ADR-018's exception to colleges: DTE's engineering/polytechnic tables are genuinely as
+structured as LSGI's directory (name + real distinct URL per row), and WP5.4 pre-specifies the exact
+`tier: college`/`priority: 1`/`department` values, leaving no curation judgment call the way WP1.6's PSU/
+university classification needed one. (B) treat colleges like every other harvest source: candidates only, plus
+a follow-up curation pass (manual, or a mechanical "promote a structured source verbatim" script) before
+anything reaches `sites/`.
+**What this session did instead of guessing:** harvested for real (DTE engineering + polytechnic tables, and
+Collegiate Education's Arts & Science page filtered to rows with a real, non-homepage link) into
+`registry/candidates/colleges.yaml` (72 candidates) — Option B's destination, the current ADR-018-compliant
+default — so the work isn't lost regardless of how this resolves; promoting it into `sites/colleges.yaml`
+verbatim is a small follow-up either way. Two real data-quality findings from the harvest itself bear on this
+choice: Collegiate Education's 11 "real-link" rows all currently 404 even over an insecure fetch (its own TLS
+cert is expired too), and DTE's counts (12 engineering, 49 polytechnic) match the *government-plus-aided*
+totals, not government-only — a genuine college-by-college classification neither table's own data supports
+mechanically. **Recommendation:** Option A for DTE's two sources once the aided/pure-government split is
+resolved by a human (not guessed); Collegiate Education's near-100%-dead links make it a poor case for either
+option right now and may need a different, more current source page. See docs/STATE.md's open questions.
