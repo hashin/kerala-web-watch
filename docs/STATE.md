@@ -5,20 +5,18 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 
 ## Now
 
-- **Phase:** 5 — Self-maintenance and reach (last phase; WP5.4 is the final WP in `docs/IMPLEMENTATION.md`)
-- **Current WP:** WP5.4 (government colleges) harvested and committed this session, stopped short of
-  promoting into `registry/sites/` — see Open question 15 (ADR-027, Proposed).
-- **Next action:** Get the human's decision on ADR-027 (candidates-first curation vs. direct-to-`sites/`
-  like LSGI) and on Open question 16 (government-vs-aided college split; Collegiate Education's 11
-  real-link rows all 404ing). Once answered, promote `registry/candidates/colleges.yaml`'s (still-valid)
-  entries into `registry/sites/colleges.yaml` accordingly — this is the last piece of the last WP in the
-  plan; after that, remaining work is Phase 4's optional WP4.7 (Open question 6) and the open questions
-  list, not a new WP. WP4.7 stays blocked/optional — skip it and come back only if Open question 6 is
-  answered. Separately: the repo still can't open PRs from Actions (Settings → Actions → General →
-  "Allow GitHub Actions to create and approve pull requests" is off) — confirmed live to block both
-  `discover.yml` (WP5.1) and `issue-to-pr.yml` (WP5.2) identically. See Open question 14.
+- **Phase:** 5 — Self-maintenance and reach, **all WPs in `docs/IMPLEMENTATION.md` now done.**
+- **Current WP:** WP5.4 (government colleges) done, committed, ADR-027 accepted and resolved this session.
+- **Next action:** No WP is queued — `docs/IMPLEMENTATION.md`'s last WP (5.4) is done. Remaining work is
+  the open-questions list: Phase 4's optional WP4.7 (Open question 6, India vantage runner — skip unless
+  answered), Open question 16 (government-vs-aided college split — non-blocking, notes: caveat already on
+  every affected record), and the repo-settings items only the human can do (Open question 14: "Allow
+  GitHub Actions to create and approve pull requests" is still off, blocking `discover.yml`/`issue-to-pr.yml`
+  from landing a real PR). A future session's own judgment call (not a plan deviation) would be starting a
+  Collegiate Education re-harvest from a more current source page, since all 11 of its "real-link" rows
+  turned out to be dead — see WP5.4's STATE.md row.
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
-- **Registry size:** 1,501 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated + 1 dogfood entry, WP4.5's own `kerala-web-watch`) · **Deep-audited:** 299/1,501 (as of the `data` checkout pulled 2026-09-24 for WP4.6's report generation; `kerala-web-watch` itself not yet deep-audited by real CI — see WP4.5's Handoff entry) · **Light-checked:** 1,501/1,501 · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data, and (as of WP4.1) full deep-audit findings — score ring, category bars, issue cards, screenshots, tech facts, sparkline — on every audited site's own page. As of WP4.5 also has a self-hosted Pagefind search (home page + collapsed header toggle) and a `/ml/` route prefix wired (two pages so far, `home` and `about`, still English text pending WP5.3's translation).
+- **Registry size:** 1,550 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated + 1 dogfood entry + 49 WP5.4 colleges) · **Deep-audited:** 299/1,550 (as of the `data` checkout pulled 2026-09-24 for WP4.6's report generation, before WP5.4 landed; `kerala-web-watch` itself not yet deep-audited by real CI — see WP4.5's Handoff entry) · **Light-checked:** 1,501/1,550 (WP5.4's 49 colleges not yet through a light-check cycle) · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data, and (as of WP4.1) full deep-audit findings — score ring, category bars, issue cards, screenshots, tech facts, sparkline — on every audited site's own page. As of WP4.5 also has a self-hosted Pagefind search (home page + collapsed header toggle) and a `/ml/` route prefix wired, and as of WP5.3 full Malayalam translation on every `/ml/sites/<id>/` page.
 - **Candidates backlog:** ~2,476 fresh, uncurated candidates as of 2026-09-21 (mostly from a new `kerala-gov-in-subdomains` source — see Handoff below), waiting for a WP1.7-style curation pass. Not yet in `registry/sites/`.
 
 ## Work packages
@@ -58,7 +56,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 5.1 | discover.yml → candidates PR | done | 84dc0929 | `cli discover` (audit/src/discover.ts, 18 tests after verifier) filters `data/outlinks.json` to gov-looking hosts, drops registered/ignored ones, light-checks survivors (`p-limit`-bounded concurrency, not sequential — see Handoff, a real run timed out at 30min sequential), writes `registry/candidates/discovered.yaml` wholesale each run; verified live twice via `workflow_dispatch` against real production data (392 outlink hosts → 138 candidates → 73 reachable) — correctly separates central-gov noise (cea.nic.in, cpcb.gov.in) from real Kerala orgs (bptkerala.in, cee-kerala.org, erckerala.org); PR-opening step itself blocked on a repo setting the human needs to flip — see Open question 14 |
 | 5.2 | issue-to-pr.yml | done | 493b2f61 (feat) + a7a7c265 (fix) | new `cli issue-to-pr` (audit/src/issue-to-pr.ts, 26 tests): parses the rendered add-website form body, light-checks the submitted URL, short-circuits with an explanatory issue comment (no PR) for a malformed form/unparseable URL/already-registered host, else appends to `registry/candidates/issues.yaml` (replacing any earlier entry for the same URL); new `.github/workflows/issue-to-pr.yml` writes the untrusted issue body to a file via `actions/github-script`'s context object rather than shell-interpolating it (a real injection-class risk for free citizen text); verifier mutation-tested and found 1 real gap (`toEqual({})` doesn't distinguish `{kind: undefined}` from `{}` in vitest — the "omits a hint key" test couldn't fail no matter what, fixed to `toStrictEqual`); discovered and fixed a real gap while live-verifying: the 5 labels every issue template/workflow references (`add-website`, `registry`, `correction`, `reaudit`, `discovery`) had never actually been created as repo labels, so `gh issue create --label add-website` failed outright and `peter-evans/create-pull-request`'s own `labels: discovery` step would have too — created all 5 live; live-verified with 3 real throwaway issues (#3/#4/#5, all closed after): #3 (kerala.gov.in) correctly recognised as already-registered (`kerala-gov`), no PR opened; #4 (example.com) correctly attempted a PR for a genuinely new candidate but hit the same repo-setting block WP5.1 found (Open question 14) — and that failure silently swallowed the issue comment too, a real bug, fixed with `if: always()`; #5 (example.org) confirmed the fix posts a comment even when the PR step fails |
 | 5.3 | Malayalam explanations + UI | done | 32081dfd (audit) + 0610b595 (site) | all 84 checks' `title`/`citizen`/`fix` translated (20-check sample approved in 64d1065b, remaining 64 done this session); new `site/src/pages/ml/sites/[id].astro` (~1,501 pages) fully localized; `en.json`/`ml.json` at 80 keys each; optional `locale` prop threaded through 8 components + `Layout`, `explainStatus()`, `timeAgo()`; verifier mutation-tested the new metadata test (blanked a C-severity check's `ml` title, test went red as designed) and confirmed ml coverage/quality, i18n key parity, and safe locale-prop threading, all PASS; browser-verified live (`astro dev`): `/ml/`, `/ml/about/`, `/ml/sites/industrykerala/` all render real Malayalam (not mojibake), language toggle round-trips correctly to the English page; footer and related-sites tables deliberately stay English-only (scope note below) |
-| 5.4 | Government colleges tier | in progress | (pending) | harvested for real (not simulated): DTE's engineering (12) + polytechnic (49) institutiondetail tables and Collegiate Education's Arts & Science page (11, filtered to real non-homepage links) → 72 candidates in `registry/candidates/colleges.yaml`, new `scripts/harvest/colleges.ts` (7 tests: scheme-typo repair including a doubled-scheme case, domain-typo pass-through, "/" placeholder-link filtering); hit a real conflict between WP5.4's text (`registry/sites/colleges.yaml` directly) and ADR-018 (candidates-only except LSGI) — wrote **Proposed ADR-027** rather than guess, did the harvest into candidates (the ADR-018-compliant default, no work lost either way this resolves) and stopped short of promoting to `sites/`; Directorate of Medical Education checked by hand across 3 pages and yields zero per-college website links (only phone/email), so medical/dental/nursing colleges aren't in this pass; DTE's 12+49 counts match *government-plus-aided* totals, not government-only, a real classification gap no table data resolves mechanically — see Open questions 15/16 |
+| 5.4 | Government colleges tier | done | (pending push) | ADR-027 accepted (human chose Option A, extending ADR-018's LSGI exception to colleges) — `scripts/harvest/colleges.ts` now writes directly to `registry/sites/colleges.yaml` (49 entries: 12 engineering, 37 polytechnic) plus keeps the full raw harvest (70 candidates, before resolve-filtering) in `registry/candidates/colleges.yaml` for transparency; live resolve-checks every candidate itself (DNS lookup first — a real failure there is excluded, mirroring `audit/src/resolve.ts`'s `dnsFailure`/error-severity treatment; an HTTP-level failure once DNS resolves is kept as unverified, mirroring `resolve-status`'s warn-severity charitable treatment) rather than trusting a static snapshot; also caught and excluded 2 rows where the source's own Website column actually held an email address (`http://user@host` shape) instead of a URL. 21 of 70 raw candidates excluded as confirmed dead (11 Collegiate Education subpages, all genuinely 404; several DTE polytechics with no real DNS record, cross-confirmed with `dig`; one real DNS-dead DTE domain the audit's own `validate --resolve` also flagged). `validate` exits clean on the full registry (1,550 sites now). Directorate of Medical Education still yields zero per-college website links (checked 3 pages by hand) — not in this pass. DTE's counts still mix government-aided institutions in with pure government ones (Open question 16, unresolved but non-blocking — every DTE-sourced entry carries a `notes:` caveat saying so) |
 
 ## Deviations from DESIGN.md
 
@@ -141,46 +139,63 @@ nothing citizen-critical depends on it and it's easy to pick up later.
     run. **Confirmed 2026-09-25 (WP5.2 session) to block `issue-to-pr.yml` identically** — a real throwaway
     issue (#4, `example.com`) correctly reached the PR-opening step and hit the exact same error. Worth
     flipping before either workflow can land a real PR; nothing else is blocked on it right now.
-15. **ADR-027 (Proposed): should the WP5.4 college harvest generate straight into `registry/sites/colleges.yaml`,**
-    **like LSGI, or go through candidates + a curation pass like every other harvest?** WP5.4's own text and
-    DESIGN.md §3.2's source table both read like the former; ADR-018's text and `scripts/harvest/lib.ts`'s
-    shared `writeCandidates()` both say only LSGI gets that exception. Full reasoning and a recommendation are
-    in `docs/DECISIONS.md`'s ADR-027. The harvest itself already ran either way (72 candidates in
-    `registry/candidates/colleges.yaml`), so this only blocks the last step (promoting them into `sites/`).
-16. **Government-vs-government-aided colleges aren't distinguished in DTE's own tables.** The WP5.4 harvest's
-    DTE counts (12 engineering, 49 polytechnic) match the *government-plus-aided* totals a web search reported
-    (9 govt + 3 aided engineering; 43 govt + 6 aided polytechnic), not government-only, and neither
-    `institutiondetail/1/` nor `/2/`'s own HTML marks which is which — would need either a different DTE page/
-    document or a name-by-name lookup to split them. Registry scope (this project audits *government* sites)
-    suggests aided colleges may not belong, but that's the human's call, not a pattern to guess at. Also open:
-    Collegiate Education's 11 real-link rows (the only ones with somewhere to audit) all return **404**, even
-    over the insecure fetch its own expired TLS cert requires — that source may need a different, more current
-    page before it's worth harvesting again.
+15. ~~ADR-027: should the WP5.4 college harvest generate straight into `registry/sites/colleges.yaml`, like~~
+    ~~LSGI?~~ — **resolved 2026-09-25: human chose Option A** (extend ADR-018's LSGI exception to colleges).
+    `scripts/harvest/colleges.ts` now writes `registry/sites/colleges.yaml` directly (49 entries), after its
+    own live resolve-check (DNS failure or a confirmed HTTP error excludes; a network-level hiccup once DNS
+    resolves does not — mirrors `audit/src/resolve.ts`'s own error-vs-warn split). See ADR-027's Resolved note.
+16. **Government-vs-government-aided colleges still aren't distinguished in DTE's own tables — unresolved,**
+    **not blocking.** The WP5.4 harvest's DTE counts (12 engineering, 37 polytechnic after resolve-filtering)
+    match the *government-plus-aided* totals a web search reported (9 govt + 3 aided engineering; 43 govt + 6
+    aided polytechnic), not government-only, and neither `institutiondetail/1/` nor `/2/`'s own HTML marks
+    which is which — would need either a different DTE page/document or a name-by-name lookup to split them.
+    Registry scope (this project audits *government* sites) suggests aided colleges may not belong, but
+    that's the human's call, not a pattern to guess at — every DTE-sourced record in `sites/colleges.yaml`
+    carries a `notes:` field saying so, so the caveat travels with the data rather than living only here.
+    Separately (now closed, not a follow-up): Collegiate Education's Arts & Science page turned out to have
+    zero currently-working per-college links at all — all 11 of its "real-link" rows resolve-checked as
+    genuine 404s and were excluded, leaving 0 `arts_science_college` entries in `sites/colleges.yaml`. That
+    source would need a different, more current page before it's worth harvesting again; not attempted this
+    session since it's a fresh discovery task, not a WP5.4 fix.
 
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
 
-- **2026-09-25 · WP5.4 harvested and committed, stopped at a genuine design conflict (ADR-027, Proposed).**
-  New `scripts/harvest/colleges.ts` (7 tests) scraped three real Directorate-of-Higher-Education sources by
-  hand-verified structure: DTE's engineering (12) and polytechnic (49) `institutiondetail` tables (clean,
-  real `.ac.in`-style URLs per row, two copy-paste scheme typos repaired mechanically — one doubled
-  "http://http://", one missing colon — a third, a comma-for-dot domain typo, deliberately left as-is rather
-  than guessed at) and Collegiate Education's Arts & Science page (66 rows, only 11 with a real non-homepage
-  link — the rest point at "/" and were skipped). Directorate of Medical Education was checked across its
-  Educational-Institutions/dental/nursing pages and genuinely has no per-college website links at all (only
-  principal phone/email), so medical/dental/nursing colleges aren't harvested this pass. WP5.4's own text says
-  to produce `registry/sites/colleges.yaml` directly, like LSGI's WP1.4 exception — but ADR-018 and
-  `lib.ts`'s shared `writeCandidates()` both say only LSGI gets that, and DESIGN.md's source table reads
-  ambiguously between the two. Rather than pick a side, wrote Proposed ADR-027 with the tradeoffs and a
-  recommendation, harvested for real into `registry/candidates/colleges.yaml` (72 candidates, the
-  ADR-018-compliant default so nothing is lost either way this resolves), and stopped short of the
-  `sites/` promotion per CLAUDE.md's deviation protocol. Two more real findings while harvesting, both
-  recorded as Open question 16: DTE's counts match *government-plus-aided* totals, not government-only, with
-  no mechanical way to split them from this table's own data; and all 11 of Collegiate Education's real-link
-  rows currently 404 even over the insecure fetch its own expired TLS cert requires. **This is the last WP in
-  `docs/IMPLEMENTATION.md`** — next real work is the human's ADR-027/Q16 decision, then the promotion step;
-  after that, only Phase 4's optional WP4.7 and the open-questions list remain, not a new WP.
+- **2026-09-25 · WP5.4 done: government colleges tier, ADR-027 accepted, all in one session.** First pass
+  hit a genuine conflict (WP5.4's text says generate straight into `registry/sites/colleges.yaml`, like
+  LSGI's WP1.4 exception; ADR-018 and `lib.ts`'s shared `writeCandidates()` say only LSGI gets that) —
+  wrote Proposed ADR-027 with the tradeoffs rather than pick a side, harvested into
+  `registry/candidates/colleges.yaml` (the ADR-018-compliant default) and stopped per CLAUDE.md's deviation
+  protocol. The human answered immediately: **Option A** — extend ADR-018's exception to colleges. ADR-027
+  flipped to Accepted; `scripts/harvest/colleges.ts` rewritten to write `registry/sites/colleges.yaml`
+  directly (still also keeps the full raw harvest in `candidates/colleges.yaml`, unlike LSGI, since this
+  source is messy enough that the excluded rows are worth keeping visible).
+  New `scripts/harvest/colleges.ts` (11 tests) scraped three real Directorate-of-Higher-Education sources
+  by hand-verified structure: DTE's engineering and polytechnic `institutiondetail` tables (clean, real
+  `.ac.in`-style URLs, several copy-paste scheme typos repaired mechanically — a doubled "http://http://",
+  a missing colon — while a comma-for-dot domain typo and two rows where the Website column actually held
+  an email address were deliberately left/dropped rather than guessed at) and Collegiate Education's Arts &
+  Science page (66 rows, only 11 with a real non-homepage link, plus its own District column captured
+  directly rather than inferred). Directorate of Medical Education still has no per-college website links
+  at all (checked 3 pages by hand) — medical/dental/nursing colleges aren't in this pass.
+  Before promoting, every one of the 70 raw candidates gets its own live resolve-check: a DNS lookup
+  failure or a confirmed HTTP error (>=400) excludes an entry; a network-level hiccup once DNS resolves does
+  not, mirroring `audit/src/resolve.ts`'s own error-vs-warn split (`resolve-dns` is `error`, `resolve-status`
+  is `warn`) instead of trusting one snapshot from one machine. This mattered in practice — an earlier,
+  HTTP-only version of the check produced a *different* kept/excluded split across two otherwise-identical
+  runs (TKM College of Engineering and NSS College of Engineering both timed out once, then resolved fine
+  moments later), and the project's own `cli validate --resolve` confirmed both are genuinely reachable.
+  Cross-checked several DNS-dead exclusions independently with `dig` to make sure the DNS check itself
+  wasn't the flaky part, not just this sandbox's HTTP path — it wasn't; those domains really don't resolve.
+  Final result: **49 of 70 promoted** (12 engineering, 37 polytechnic, **0 arts_science_college** — all 11
+  Collegiate Education rows turned out to be genuine 404s, a real finding recorded in Open question 16, not
+  a bug); 21 excluded as confirmed dead. `validate` (schema + cross-reference) exits clean on the full,
+  now-1,550-site registry. Two new `kinds.yaml` entries (`engineering_college`, `polytechnic` — no
+  `arts_science_college` survived to actually appear in the registry, but it's still a legitimate kind for
+  a future re-harvest). Open question 16 (government-vs-aided split) is unresolved but non-blocking — every
+  DTE-sourced record carries a `notes:` caveat saying so. **This was the last WP in `docs/IMPLEMENTATION.md`**
+  — no WP is queued next; see STATE.md's Now section for what's actually left (open questions only).
 
 - **2026-09-25 · WP5.3 done, committed (`32081dfd`, `0610b595`), pushed.** Picked up mid-verification from
   `docs/HANDOFF.md` (now deleted, per its own instruction, since it's stale). Two concurrent peer sessions

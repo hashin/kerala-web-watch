@@ -76,6 +76,9 @@ Bounds `data` branch size (≤ ~230 MB worst case) and Pages bandwidth.
 ## ADR-018 · Registry harvests write to `registry/candidates/<source>.yaml`, never directly to `registry/sites/` · Accepted · 2026-09-19
 Curation (department, district, place, kind, dedupe) is a deliberate step with review. Only LSGIs, whose source is
 fully structured, are generated straight into `registry/sites/lsg-*.yaml`.
+**Extended by ADR-027 (2026-09-25):** government colleges (`registry/sites/colleges.yaml`) get the same exception,
+for the same reason — a structured directorate source plus WP5.4's pre-specified tier/priority/department leave no
+curation judgment call. Live resolve-checked before writing, unlike LSGI's harvest.
 
 ## ADR-019 · Hosted at https://govwebsite.hashin.me on GitHub Pages; repo github.com/hashin/kerala-web-watch (public) · Accepted · 2026-09-19
 Custom domain via `site/public/CNAME`; Astro builds with `SITE_BASE=/`. Public repo is required for free Actions minutes
@@ -186,7 +189,7 @@ table (already written in this plain style) is the reference for its wording.
 called done: does the text state a specific, plain-language reason, or does it just restate a status word back at
 the reader? CLAUDE.md's Non-negotiables and DESIGN §5.4/§7.4 now carry this rule so it isn't only in this ADR.
 
-## ADR-027 · Should college harvests generate straight into `registry/sites/`, like LSGI? · Proposed · 2026-09-25
+## ADR-027 · Should college harvests generate straight into `registry/sites/`, like LSGI? · Accepted · 2026-09-25
 **Problem:** WP5.4's text says to produce `registry/sites/colleges.yaml` "via the harvest framework", and
 DESIGN.md §3.2's source table lists the colleges row's method as "scrape" (matching LSGI's row, not the
 "scrape once, curate" wording used for every source that feeds WP1.7's curation pass). But ADR-018 restricts
@@ -210,3 +213,9 @@ totals, not government-only — a genuine college-by-college classification neit
 mechanically. **Recommendation:** Option A for DTE's two sources once the aided/pure-government split is
 resolved by a human (not guessed); Collegiate Education's near-100%-dead links make it a poor case for either
 option right now and may need a different, more current source page. See docs/STATE.md's open questions.
+**Resolved 2026-09-25:** human chose Option A. `colleges.ts` now resolve-checks every candidate live (unlike
+LSGI's harvest, which trusts its source outright) and writes only the reachable ones straight to
+`registry/sites/colleges.yaml` — this cleared Collegiate Education's dead 404 rows automatically, without
+needing a separate decision. The government-vs-aided split (Open question 16) is still unresolved and not
+blocking: every DTE-sourced entry carries a `notes:` caveat saying so, visible on the record itself rather than
+silently assumed away.

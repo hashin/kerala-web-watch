@@ -40,6 +40,12 @@ const DTE_FIXTURE = `
       <td>1990</td>
       <td><a href="http://www,carmelpoly.in" target="_blank"><b>http://www,carmelpoly.in</b></a></td>
     </tr>
+    <tr>
+      <td>6</td>
+      <td>Government Polytechnic College, Attingal</td>
+      <td>1994</td>
+      <td><a href="http://gptcatl@gmail.com" target="_blank"><b>http://gptcatl@gmail.com</b></a></td>
+    </tr>
   </tbody>
 </table>
 `;
@@ -48,6 +54,18 @@ test('parseDteTable repairs a source row missing the URL scheme colon', () => {
   const rows = parseDteTable(DTE_FIXTURE);
   const idukki = rows.find((r) => r.name === 'Government Engineering College Idukki');
   assert.equal(idukki?.url, 'http://gecidukki.ac.in');
+});
+
+test('parseDteTable infers a district from the college title when the table has no district column', () => {
+  const rows = parseDteTable(DTE_FIXTURE);
+  const idukki = rows.find((r) => r.name === 'Government Engineering College Idukki');
+  assert.equal(idukki?.district, 'idukki');
+});
+
+test('parseDteTable leaves district null when no known district name appears in the title', () => {
+  const rows = parseDteTable(DTE_FIXTURE);
+  const mananthavady = rows.find((r) => r.name === 'Government Polytechnic College Mananthavady');
+  assert.equal(mananthavady?.district, null);
 });
 
 test('parseDteTable keeps a well-formed row untouched', () => {
@@ -77,13 +95,23 @@ test('parseDteTable passes a domain-level typo through unchanged rather than gue
   assert.equal(carmel?.url, 'http://www,carmelpoly.in');
 });
 
+test('parseDteTable drops a row whose "website" is really an email address with embedded userinfo', () => {
+  // "http://gptcatl@gmail.com" is the source's own mistake (an email pasted with an http:// prefix,
+  // confirmed against the real page 2026-09-25) -- syntactically a valid URL, but a public college
+  // site is never legitimately linked with credentials before the host, so this is dropped as "not a
+  // website" rather than promoted as one.
+  const rows = parseDteTable(DTE_FIXTURE);
+  assert.equal(rows.some((r) => r.name === 'Government Polytechnic College, Attingal'), false);
+});
+
 // Fixture shape copied from a real fetch of collegiateedu.kerala.gov.in/?page_id=223 (2026-09-25):
-// most rows' link is a bare "/" back to the directorate homepage, not a real per-college site.
+// columns Sl No / College Name / Email / Phone / District / College Type; most rows' link is a bare
+// "/" back to the directorate homepage, not a real per-college site.
 const COLLEGIATE_FIXTURE = `
 <table class='table table-striped table-bordered table-responsive table-hover'>
-  <tr style='background:#34D293'><td>Sl No</td><td>College Name</td><td>Email</td></tr>
-  <tr><td>1</td><td><a href='/' target='_blank'>Government Arts College Thycadu</a></td><td>x@example.com</td><tr>
-  <tr><td>2</td><td><a href='/dcekerala/nedumangad/' target='_blank'>Government College Nedumangad</a></td><td>y@example.com</td><tr>
+  <tr style='background:#34D293'><td>Sl No</td><td>College Name</td><td>Email</td><td>Phone</td><td>District</td><td>Type</td></tr>
+  <tr><td>1</td><td><a href='/' target='_blank'>Government Arts College Thycadu</a></td><td>x@example.com</td><td>0471</td><td>Thiruvananthapuram</td><td>Arts and Science</td><tr>
+  <tr><td>2</td><td><a href='/dcekerala/nedumangad/' target='_blank'>Government College Nedumangad</a></td><td>y@example.com</td><td>0472</td><td>Thiruvananthapuram</td><td>Arts and Science</td><tr>
 </table>
 `;
 
@@ -96,4 +124,10 @@ test('parseCollegiateTable resolves a real subpage against the directorate domai
   const rows = parseCollegiateTable(COLLEGIATE_FIXTURE);
   const nedumangad = rows.find((r) => r.name === 'Government College Nedumangad');
   assert.equal(nedumangad?.url, 'https://collegiateedu.kerala.gov.in/dcekerala/nedumangad/');
+});
+
+test('parseCollegiateTable reads district from the source\'s own District column', () => {
+  const rows = parseCollegiateTable(COLLEGIATE_FIXTURE);
+  const nedumangad = rows.find((r) => r.name === 'Government College Nedumangad');
+  assert.equal(nedumangad?.district, 'thiruvananthapuram');
 });
