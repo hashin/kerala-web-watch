@@ -397,7 +397,8 @@
 - id: rcctvm
   name: Regional Cancer Centre, Thiruvananthapuram
   url: https://www.rcctvm.gov.in
-  aliases: [https://www.rcctvm.org]
+  aliases:
+    - https://www.rcctvm.org
   tier: agency
   kind: agency
   department: health
@@ -433,7 +434,8 @@
 - id: keralaenergy
   name: Energy Management Centre, Kerala
   url: https://www.keralaenergy.gov.in
-  aliases: []
+  aliases:
+    - https://keralaenergy.gov.in
   tier: agency
   kind: agency
   department: power
@@ -595,7 +597,9 @@
 - id: ikm
   name: Information Kerala Mission (IKM)
   url: https://www.ikm.gov.in
-  aliases: [https://www.infokerala.org]
+  aliases:
+    - https://www.infokerala.org
+    - https://ikm.gov.in
   tier: agency
   kind: mission
   department: lsgd
@@ -609,7 +613,7 @@
   source: registry/candidates (WP1.2/1.3 crawls, WP1.6 curation)
   added: '2026-09-20'
   lifecycle: active
-  notes: "WP1.7: the primary url (www.ikm.gov.in) returned HTTP 400 at verification (2026-09-21) -- it was a DESIGN.md Appendix A 'from memory' guess, never confirmed live. The alias infokerala.org is live and correctly titled. Left the primary url as-is per ADR-005 (flag, don't silently fix); a human should decide whether to promote the alias to primary."
+  notes: 'WP1.7: the primary url (www.ikm.gov.in) returned HTTP 400 at verification (2026-09-21) -- it was a DESIGN.md Appendix A ''from memory'' guess, never confirmed live. The alias infokerala.org is live and correctly titled. Left the primary url as-is per ADR-005 (flag, don''t silently fix); a human should decide whether to promote the alias to primary.'
 - id: keralahousedelhi
   name: Kerala House, New Delhi (Office of the Resident Commissioner)
   url: https://keralahouse.kerala.gov.in
@@ -1294,7 +1298,7 @@
   source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
   added: '2026-09-21'
   lifecycle: active
-  notes: "WP1.7: returned 503 at verification time (2026-09-21); registered anyway per ADR-005 (a temporary outage is a finding for the light check, not a reason to omit a real government portal)."
+  notes: 'WP1.7: returned 503 at verification time (2026-09-21); registered anyway per ADR-005 (a temporary outage is a finding for the light check, not a reason to omit a real government portal).'
 - id: nregskerala
   name: MGNREGS Kerala
   url: https://nregs.kerala.gov.in
@@ -1348,7 +1352,7 @@
   source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
   added: '2026-09-21'
   lifecycle: active
-  notes: "WP1.7: distinct citizen/officer payment portal from the Treasury Department site (id treasury) -- same department, different e-service."
+  notes: 'WP1.7: distinct citizen/officer payment portal from the Treasury Department site (id treasury) -- same department, different e-service.'
 - id: parambikulam
   name: Parambikulam Tiger Reserve
   url: https://www.parambikulam.org
@@ -1366,7 +1370,7 @@
   source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
   added: '2026-09-21'
   lifecycle: active
-  notes: "WP1.7: the reserve itself is not in places.yaml -- filed under the district town (Palakkad) instead of inventing a place record, same approach as kalamandalam."
+  notes: 'WP1.7: the reserve itself is not in places.yaml -- filed under the district town (Palakkad) instead of inventing a place record, same approach as kalamandalam.'
 - id: selfkerala
   name: SELF (System for Easy and Legal issuance of Fuel permit)
   url: https://self.kerala.gov.in
@@ -1402,7 +1406,7 @@
   source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
   added: '2026-09-21'
   lifecycle: active
-  notes: "WP1.7: Government Presses e-service; no dedicated Printing & Stationery department id exists in departments.yaml, filed under General Administration."
+  notes: 'WP1.7: Government Presses e-service; no dedicated Printing & Stationery department id exists in departments.yaml, filed under General Administration.'
 - id: kcis
   name: K-CIS (Kerala Central Inspection System)
   url: https://kcis.kerala.gov.in
@@ -1456,7 +1460,7 @@
   source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
   added: '2026-09-21'
   lifecycle: active
-  notes: "WP1.7: exact HQ location unconfirmed; filed under state default (Thiruvananthapuram) per WP1.7 step 2. A near-identical domain without the \"h\" (vastuvidyagurukulam.com) failed to connect -- not registered."
+  notes: 'WP1.7: exact HQ location unconfirmed; filed under state default (Thiruvananthapuram) per WP1.7 step 2. A near-identical domain without the "h" (vastuvidyagurukulam.com) failed to connect -- not registered.'
 - id: auegskerala
   name: AUEGS (Ayyankali Urban Employment Guarantee Scheme)
   url: https://auegsmis.kerala.gov.in
@@ -1510,7 +1514,7 @@
   source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
   added: '2026-09-21'
   lifecycle: active
-  notes: "WP1.7: site content appears to still reference a 2015-2016 edition of the festival as of verification -- flagged per ADR-005, not silently updated."
+  notes: 'WP1.7: site content appears to still reference a 2015-2016 edition of the festival as of verification -- flagged per ADR-005, not silently updated.'
 - id: ehousingkerala
   name: e-Housing (Disbursement of Housing Assistance to SC/ST)
   url: https://e-housing.kerala.gov.in
@@ -1654,7 +1658,7 @@
   source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
   added: '2026-09-21'
   lifecycle: active
-  notes: "WP1.7: Basheer Smaraka is at Thalayolaparambu near Vaikom; filed under the district town (Kottayam), same approach as kalamandalam."
+  notes: 'WP1.7: Basheer Smaraka is at Thalayolaparambu near Vaikom; filed under the district town (Kottayam), same approach as kalamandalam.'
 - id: malayalammission
   name: Malayalam Mission
   url: https://www.mm.kerala.gov.in
@@ -1708,7 +1712,7 @@
   source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
   added: '2026-09-21'
   lifecycle: active
-  notes: "WP1.7: located at Kunnamangalam, Kozhikode; filed under the district town, same approach as kalamandalam."
+  notes: 'WP1.7: located at Kunnamangalam, Kozhikode; filed under the district town, same approach as kalamandalam.'
 - id: thulasi
   name: Thulasi (Kerala Public Service Commission Online Application System)
   url: https://thulasi.psc.kerala.gov.in
@@ -1780,4 +1784,94 @@
   source: registry/candidates (WP1.2/1.3/1.5 crawls, WP1.7 curation continued -- English + hand-translated Malayalam candidates)
   added: '2026-09-21'
   lifecycle: active
-  notes: "WP1.7: temple itself is not in places.yaml -- filed under the district town (Pathanamthitta) instead of inventing a place record, same approach as kalamandalam."
+  notes: 'WP1.7: temple itself is not in places.yaml -- filed under the district town (Pathanamthitta) instead of inventing a place record, same approach as kalamandalam.'
+- id: kila
+  name: Kerala Institute of Local Administration (KILA)
+  url: https://kila.ac.in
+  aliases: []
+  tier: agency
+  kind: society
+  department: lsgd
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 1
+  tags: []
+  source: 'registry/candidates/discovered.yaml (PR #6, discover.yml workflow_dispatch 2026-09-25) -- individually verified live before merge'
+  added: '2026-09-25'
+  lifecycle: active
+  notes: Site returns 403 to a plain curl (bot-protection challenge, matching the crawler's own "Just a moment..." title) -- 161 real LSGI sites link to it, confirmed genuine.
+- id: nish
+  name: National Institute of Speech and Hearing (NISH)
+  url: https://nish.ac.in
+  aliases: []
+  tier: agency
+  kind: society
+  department: sjd
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 1
+  tags: []
+  source: 'registry/candidates/discovered.yaml (PR #6, discover.yml workflow_dispatch 2026-09-25) -- individually verified live before merge'
+  added: '2026-09-25'
+  lifecycle: active
+  notes: 'Despite the "National" name, confirmed via web search: an autonomous society under Kerala''s Social Justice Department, not a central institute.'
+- id: acsti
+  name: Agriculture Co-operative Staff Training Institute (ACSTI)
+  url: https://www.acstikerala.com
+  aliases: []
+  tier: agency
+  kind: society
+  department: coop
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 1
+  tags: []
+  source: 'registry/candidates/discovered.yaml (PR #6, discover.yml workflow_dispatch 2026-09-25) -- individually verified live before merge'
+  added: '2026-09-25'
+  lifecycle: active
+  notes: ''
+- id: sameti
+  name: State Agriculture Management and Extension Training Institute (SAMETI) Kerala
+  url: https://sametikerala.com
+  aliases: []
+  tier: agency
+  kind: society
+  department: agri
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 1
+  tags: []
+  source: 'registry/candidates/discovered.yaml (PR #6, discover.yml workflow_dispatch 2026-09-25) -- individually verified live before merge'
+  added: '2026-09-25'
+  lifecycle: active
+  notes: ''
+- id: ktms
+  name: Kerala Travel Mart Society
+  url: https://www.keralatravelmart.org
+  aliases: []
+  tier: agency
+  kind: society
+  department: tourism
+  org_parent: null
+  scope: state
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  platform: null
+  priority: 1
+  tags: []
+  source: 'registry/candidates/discovered.yaml (PR #6, discover.yml workflow_dispatch 2026-09-25) -- individually verified live before merge'
+  added: '2026-09-25'
+  lifecycle: active
+  notes: ''
