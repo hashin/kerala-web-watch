@@ -37,11 +37,625 @@
     "vantage": "gh-us",
     "suspect": false
   },
-  "deep": null,
-  "score": null,
-  "status": "unaudited",
-  "issues": [],
+  "deep": {
+    "at": "2026-09-25T00:23:23.520Z",
+    "run": "1790295760922",
+    "vantage": "gh-us",
+    "lighthouse": {
+      "performance": 26,
+      "accessibility": 52,
+      "best_practices": 54,
+      "seo": 82
+    },
+    "axe": {
+      "critical": 18,
+      "serious": 20,
+      "moderate": 17,
+      "minor": 0
+    },
+    "crawl": {
+      "pages": 8,
+      "pdfs": 0,
+      "broken": 1
+    },
+    "tech": {
+      "cms": null,
+      "server": "Apache",
+      "jquery": "1.9.1"
+    },
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "pass"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "pass"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "fail",
+        "ev": "href=\"http://safa-reader.software.informer.com/download/\""
+      },
+      {
+        "id": "sec.csp",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "pass"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "fail"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "pass"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "fail",
+        "ev": "jquery 1.9.1, bootstrap 3.3.6, jquery 3.4.1, jquery 3.2.1"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "fail",
+        "ev": "18 critical violation(s)"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "20 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "17 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "fail",
+        "ev": "18 image(s) missing alt text"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "fail",
+        "ev": "17 low-contrast element(s)"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "no <h1>, heading levels skipped"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "52/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "26/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "9491.599ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "pass"
+      },
+      {
+        "id": "perf.weight",
+        "r": "pass"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "fail"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "na"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-box"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "fail",
+        "ev": "<marquee"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "warn",
+        "ev": "1/8 crawled link(s) broken (https://gazette.kerala.gov.in/)"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "pass"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "pass"
+      },
+      {
+        "id": "content.favicon",
+        "r": "fail"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "10 console error(s): The Content-Security-Policy directive name ''unsafe-inline'' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names."
+      },
+      {
+        "id": "gigw.contact",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.help",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.search",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "warn"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "pass"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "na"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "na"
+      },
+      {
+        "id": "id.robots",
+        "r": "fail",
+        "ev": "robots.txt returned 404"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "fail"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "fail",
+        "ev": "missing HTML5 doctype"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "pass"
+      }
+    ],
+    "screenshot": {
+      "desktop": "compose.webp",
+      "mobile": "compose-m.webp",
+      "phash": "0001ffffbfbf819f"
+    },
+    "outlinks": [
+      {
+        "host": "informer.com",
+        "count": 1,
+        "texts": [
+          "http://safa-reader.software.informer.com/download/ (External website that opens in a new window)"
+        ]
+      },
+      {
+        "host": "nvda-project.org",
+        "count": 1,
+        "texts": [
+          "http://www.nvda-project.org/ (External website that opens in a new window)"
+        ]
+      },
+      {
+        "host": "satogo.com",
+        "count": 1,
+        "texts": [
+          "http://www.satogo.com/ (External website that opens in a new window)"
+        ]
+      },
+      {
+        "host": "screenreader.net",
+        "count": 1,
+        "texts": [
+          "http://www.screenreader.net/index.php?pageid=11 (External website that opens in a new window)"
+        ]
+      },
+      {
+        "host": "washington.edu",
+        "count": 1,
+        "texts": [
+          "http://webanywhere.cs.washington.edu/wa.php (External website that opens in a new window)"
+        ]
+      },
+      {
+        "host": "yourdolphin.co.uk",
+        "count": 2,
+        "texts": [
+          "http://www.yourdolphin.co.uk/productdetail.asp?id=5 (External website that opens in a new window)",
+          "http://www.yourdolphin.co.uk/productdetail.asp?id=1 (External website that opens in a new window)"
+        ]
+      },
+      {
+        "host": "freedomscientific.com",
+        "count": 1,
+        "texts": [
+          "http://www.freedomscientific.com/Products/Blindness/JAWS (External website that opens in a new window)"
+        ]
+      },
+      {
+        "host": "gwmicro.com",
+        "count": 1,
+        "texts": [
+          "http://www.gwmicro.com/Window-Eyes/ (External website that opens in a new window)"
+        ]
+      }
+    ]
+  },
+  "score": {
+    "overall": 48,
+    "security": 56,
+    "accessibility": 42,
+    "content": 32,
+    "gigw": 16,
+    "performance": 76,
+    "identity": 88
+  },
+  "status": "poor",
+  "issues": [
+    {
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://safa-reader.software.informer.com/download/\""
+    },
+    {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "jquery 1.9.1, bootstrap 3.3.6, jquery 3.4.1, jquery 3.2.1"
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "18 critical violation(s)"
+    },
+    {
+      "id": "content.last_updated",
+      "sev": "H",
+      "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-box"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/8 crawled link(s) broken (https://gazette.kerala.gov.in/)"
+    },
+    {
+      "id": "gigw.rti",
+      "sev": "H"
+    },
+    {
+      "id": "a11y.axe_serious",
+      "sev": "M",
+      "ev": "20 serious violation(s)"
+    },
+    {
+      "id": "a11y.alt",
+      "sev": "M",
+      "ev": "18 image(s) missing alt text"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "17 low-contrast element(s)"
+    },
+    {
+      "id": "content.obsolete_tech",
+      "sev": "M",
+      "ev": "<marquee"
+    },
+    {
+      "id": "gigw.sitemap",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.privacy",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.ownership",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.last_updated",
+      "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "9491.599ms"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
+    },
+    {
+      "id": "sec.referrer",
+      "sev": "L"
+    },
+    {
+      "id": "a11y.axe_moderate_minor",
+      "sev": "L",
+      "ev": "17 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "no <h1>, heading levels skipped"
+    },
+    {
+      "id": "content.favicon",
+      "sev": "L"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "10 console error(s): The Content-Security-Policy directive name ''unsafe-inline'' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names."
+    },
+    {
+      "id": "gigw.feedback",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.terms",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.copyright_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.hyperlink_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.disclaimer",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.help",
+      "sev": "L"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
+      "id": "id.robots",
+      "sev": "L",
+      "ev": "robots.txt returned 404"
+    },
+    {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 404"
+    },
+    {
+      "id": "id.charset_doctype",
+      "sev": "L",
+      "ev": "missing HTML5 doctype"
+    },
+    {
+      "id": "gigw.emblem",
+      "sev": "I"
+    },
+    {
+      "id": "id.canonical",
+      "sev": "I"
+    }
+  ],
   "history": [
+    {
+      "d": "2026-09-25",
+      "up": true,
+      "score": 48
+    },
     {
       "d": "2026-09-24",
       "up": true,
@@ -63,5 +677,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

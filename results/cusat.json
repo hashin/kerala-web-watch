@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-21T17:30:55.772Z",
-    "run": "1790011719758",
+    "at": "2026-09-25T00:00:17.166Z",
+    "run": "1790294303408",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 22,
+      "performance": 10,
       "accessibility": 72,
       "best_practices": 85,
       "seo": 67
@@ -120,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "18 days left"
+        "ev": "15 days left"
       },
       {
         "id": "sec.tls_version",
@@ -219,22 +219,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "22/100"
+        "ev": "10/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "31655.080500000004ms"
+        "ev": "32442.136ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "1.13"
+        "ev": "0.78"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "26.2MB"
+        "ev": "13.8MB"
       },
       {
         "id": "perf.viewport",
@@ -311,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "30 console error(s): Cannot set properties of null (setting 'selectedIndex')"
+        "ev": "29 console error(s): Cannot set properties of null (setting 'selectedIndex')"
       },
       {
         "id": "gigw.contact",
@@ -419,7 +419,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-EMZ51MZYMX&amp;cx=c&amp;gtm=4e69h0, https://www.googletagmanager.com/gtag/js?id=UA-107202370-1&amp;cx=c&amp;gtm=4e69h0, https://www.googletagmanager.com/gtag/js?id=G-M9S46V4SPV, https://www.googletagmanager.com/gtag/js?id=G-5H355DLSZT, https://www.googletagmanager.com/gtag/js?id=UA-107202370-1"
+        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-EMZ51MZYMX&amp;cx=c&amp;gtm=4e69n1, https://www.googletagmanager.com/gtag/js?id=UA-107202370-1&amp;cx=c&amp;gtm=4e69n1, https://www.googletagmanager.com/gtag/js?id=G-M9S46V4SPV, https://www.googletagmanager.com/gtag/js?id=G-5H355DLSZT, https://www.googletagmanager.com/gtag/js?id=UA-107202370-1"
       }
     ],
     "screenshot": {
@@ -579,7 +579,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "18 days left"
+      "ev": "15 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -662,12 +662,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "31655.080500000004ms"
+      "ev": "32442.136ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "26.2MB"
+      "ev": "13.8MB"
     },
     {
       "id": "sec.csp",
@@ -699,7 +699,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "30 console error(s): Cannot set properties of null (setting 'selectedIndex')"
+      "ev": "29 console error(s): Cannot set properties of null (setting 'selectedIndex')"
     },
     {
       "id": "gigw.feedback",
@@ -728,7 +728,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "1.13"
+      "ev": "0.78"
     },
     {
       "id": "perf.images",
@@ -764,10 +764,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-EMZ51MZYMX&amp;cx=c&amp;gtm=4e69h0, https://www.googletagmanager.com/gtag/js?id=UA-107202370-1&amp;cx=c&amp;gtm=4e69h0, https://www.googletagmanager.com/gtag/js?id=G-M9S46V4SPV, https://www.googletagmanager.com/gtag/js?id=G-5H355DLSZT, https://www.googletagmanager.com/gtag/js?id=UA-107202370-1"
+      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-EMZ51MZYMX&amp;cx=c&amp;gtm=4e69n1, https://www.googletagmanager.com/gtag/js?id=UA-107202370-1&amp;cx=c&amp;gtm=4e69n1, https://www.googletagmanager.com/gtag/js?id=G-M9S46V4SPV, https://www.googletagmanager.com/gtag/js?id=G-5H355DLSZT, https://www.googletagmanager.com/gtag/js?id=UA-107202370-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-09-25",
+      "up": true,
+      "score": 34
+    },
     {
       "d": "2026-09-24",
       "up": true,
@@ -789,5 +794,5 @@
       "score": 34
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

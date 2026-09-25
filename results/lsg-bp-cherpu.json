@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-23T00:08:56.113Z",
-    "run": "1790122094959",
+    "at": "2026-09-25T00:32:16.705Z",
+    "run": "1790296294643",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 57,
+      "performance": 55,
       "accessibility": 85,
       "best_practices": 74,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -218,12 +218,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "57/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6890.531999999999ms"
+        "ev": "7766.164000000001ms"
       },
       {
         "id": "perf.cls",
@@ -278,8 +278,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (http://cherpublockpanchayat.lsgkerala.gov.in/ml/page/saekaratatarai)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -355,7 +354,7 @@
       },
       {
         "id": "gigw.rti",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.search",
@@ -544,15 +543,6 @@
       "ev": "ml-user"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (http://cherpublockpanchayat.lsgkerala.gov.in/ml/page/saekaratatarai)"
-    },
-    {
-      "id": "gigw.rti",
-      "sev": "H"
-    },
-    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -586,7 +576,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6890.531999999999ms"
+      "ev": "7766.164000000001ms"
     },
     {
       "id": "perf.weight",
@@ -668,6 +658,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-25",
+      "up": false,
+      "score": null
+    },
+    {
       "d": "2026-09-24",
       "up": false,
       "score": null
@@ -688,5 +683,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

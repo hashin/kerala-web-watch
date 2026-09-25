@@ -35,34 +35,457 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-24T00:13:30.581Z",
-    "run": "1790208690368",
+    "at": "2026-09-25T00:17:48.741Z",
+    "run": "1790295418220",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 29,
+      "accessibility": 82,
+      "best_practices": 92,
+      "seo": 62
+    },
     "axe": {
-      "critical": 0,
-      "serious": 0,
-      "moderate": 0,
+      "critical": 3,
+      "serious": 15,
+      "moderate": 5,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
-      "pdfs": 0,
+      "pages": 30,
+      "pdfs": 1,
       "broken": 0
     },
     "tech": {
-      "cms": null,
-      "server": null,
+      "cms": "WordPress 6.8.1",
+      "server": "Apache",
       "jquery": null
     },
-    "checks": [],
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "warn",
+        "ev": "3371ms"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "warn",
+        "ev": "21 days left"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "fail"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "fail",
+        "ev": "href=\"http://gmpg.org/xfn/11\""
+      },
+      {
+        "id": "sec.csp",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "fail"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "fail"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "pass"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "pass"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "fail",
+        "ev": "3 critical violation(s)"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "15 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "5 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "fail",
+        "ev": "1 image(s) missing alt text"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "fail",
+        "ev": "1 low-contrast element(s)"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "heading levels skipped"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "82/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "29/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "16756.155ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "fail",
+        "ev": "1.23"
+      },
+      {
+        "id": "perf.weight",
+        "r": "pass"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "pass"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "pass"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-IN"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "pass"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "pass"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "fail"
+      },
+      {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.contact",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.search",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "warn"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "pass"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "na"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "pass"
+      },
+      {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "pass"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "pass"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass",
+        "ev": "WordPress 6.8.1"
+      },
+      {
+        "id": "id.third_party",
+        "r": "pass"
+      }
+    ],
     "screenshot": {
       "desktop": "sainikwelfarekerala.webp",
       "mobile": "sainikwelfarekerala-m.webp",
       "phash": "ffffff1e1a0000ff"
     },
-    "outlinks": [],
-    "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://sainikwelfare.kerala.gov.in/\", waiting until \"load\"\n"
+    "outlinks": [
+      {
+        "host": "india.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "mod.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "swachhbharatmission.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "g20.org",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "twitter.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "youtube.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "dgrindia.com",
+        "count": 1,
+        "texts": [
+          "ഡയറക്ടറേറ്റ് ജനറൽ ഓഫ് റീസെറ്റിൽമെന്റ്"
+        ]
+      },
+      {
+        "host": "ksb.gov.in",
+        "count": 1,
+        "texts": [
+          "കേന്ദ്രീയ സൈനിക് ബോർഡ്, ഇന്ത്യാ ഗവൺമെന്റ്"
+        ]
+      },
+      {
+        "host": "serviceonline.gov.in",
+        "count": 1,
+        "texts": [
+          "സർവീസ് പ്ലസ്  (ക്ഷേമ പദ്ധതികൾ )"
+        ]
+      },
+      {
+        "host": "cdit.org",
+        "count": 2,
+        "texts": [
+          "CDIT",
+          "SAINIK"
+        ]
+      }
+    ]
   },
   "score": {
     "overall": 53,
@@ -73,12 +496,12 @@
     "performance": 82,
     "identity": 100
   },
-  "status": "down",
+  "status": "needs-work",
   "issues": [
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "23 days left"
+      "ev": "21 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -103,7 +526,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "3943ms"
+      "ev": "3371ms"
     },
     {
       "id": "sec.hsts",
@@ -143,7 +566,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "16284.405999999999ms"
+      "ev": "16756.155ms"
     },
     {
       "id": "sec.csp",
@@ -220,6 +643,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-25",
+      "up": true,
+      "score": 53
+    },
+    {
       "d": "2026-09-24",
       "up": false,
       "score": 53
@@ -240,5 +668,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-24T00:31:02.205Z",
-    "run": "1790209808822",
+    "at": "2026-09-25T00:35:43.253Z",
+    "run": "1790296498900",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 59,
@@ -46,14 +46,14 @@
     },
     "axe": {
       "critical": 1,
-      "serious": 15,
+      "serious": 16,
       "moderate": 28,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 4
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -171,7 +171,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "15 serious violation(s)"
+        "ev": "16 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -223,7 +223,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9585.734500000002ms"
+        "ev": "11346.057499999999ms"
       },
       {
         "id": "perf.cls",
@@ -278,8 +278,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "4/30 crawled link(s) broken (http://vellangallurblockpanchayat.lsgkerala.gov.in/about, http://vellangallurblockpanchayat.lsgkerala.gov.in/contact-us, http://vellangallurblockpanchayat.lsgkerala.gov.in/terms, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -428,6 +427,11 @@
         "texts": []
       },
       {
+        "host": "wa.me",
+        "count": 1,
+        "texts": []
+      },
+      {
         "host": "facebook.com",
         "count": 1,
         "texts": []
@@ -544,11 +548,6 @@
       "ev": "ml-user"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "4/30 crawled link(s) broken (http://vellangallurblockpanchayat.lsgkerala.gov.in/about, http://vellangallurblockpanchayat.lsgkerala.gov.in/contact-us, http://vellangallurblockpanchayat.lsgkerala.gov.in/terms, ...)"
-    },
-    {
       "id": "gigw.rti",
       "sev": "H"
     },
@@ -559,7 +558,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "15 serious violation(s)"
+      "ev": "16 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -586,7 +585,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9585.734500000002ms"
+      "ev": "11346.057499999999ms"
     },
     {
       "id": "perf.weight",
@@ -664,6 +663,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-25",
+      "up": false,
+      "score": null
+    },
+    {
       "d": "2026-09-24",
       "up": false,
       "score": null
@@ -684,5 +688,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

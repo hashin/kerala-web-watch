@@ -29,11 +29,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-23T00:07:05.217Z",
-    "run": "1790121982718",
+    "at": "2026-09-25T00:21:36.125Z",
+    "run": "1790295653530",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 36,
+      "performance": 33,
       "accessibility": 68,
       "best_practices": 65,
       "seo": 83
@@ -210,22 +210,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "36/100"
+        "ev": "33/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "37788.963340000024ms"
+        "ev": "37552.72596000001ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.41"
+        "ev": "0.45"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "7.3MB"
+        "ev": "7.2MB"
       },
       {
         "id": "perf.viewport",
@@ -302,7 +302,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "77 console error(s): Mixed Content: The page at 'https://www.archaeology.kerala.gov.in/' was loaded over HTTPS, but requested an insecure font 'http://server1/archaeology/font/NotoSansMalayalam-Regular.woff2'. This request has been blocked; the content must be served over HTTPS."
+        "ev": "75 console error(s): Mixed Content: The page at 'https://www.archaeology.kerala.gov.in/' was loaded over HTTPS, but requested an insecure font 'http://server1/archaeology/font/NotoSansMalayalam-Regular.woff2'. This request has been blocked; the content must be served over HTTPS."
       },
       {
         "id": "gigw.contact",
@@ -408,7 +408,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-1GCEHHMMVW&amp;cx=c&amp;gtm=4e69l1, https://www.googletagmanager.com/gtag/js?id=UA-133465339-2"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-1GCEHHMMVW&amp;cx=c&amp;gtm=4e69n1h1, https://www.googletagmanager.com/gtag/js?id=UA-133465339-2"
       }
     ],
     "screenshot": {
@@ -438,7 +438,7 @@
     "performance": 77,
     "identity": 92
   },
-  "status": "down",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.http_redirect",
@@ -516,12 +516,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "37788.963340000024ms"
+      "ev": "37552.72596000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.3MB"
+      "ev": "7.2MB"
     },
     {
       "id": "sec.csp",
@@ -548,7 +548,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "77 console error(s): Mixed Content: The page at 'https://www.archaeology.kerala.gov.in/' was loaded over HTTPS, but requested an insecure font 'http://server1/archaeology/font/NotoSansMalayalam-Regular.woff2'. This request has been blocked; the content must be served over HTTPS."
+      "ev": "75 console error(s): Mixed Content: The page at 'https://www.archaeology.kerala.gov.in/' was loaded over HTTPS, but requested an insecure font 'http://server1/archaeology/font/NotoSansMalayalam-Regular.woff2'. This request has been blocked; the content must be served over HTTPS."
     },
     {
       "id": "gigw.feedback",
@@ -585,7 +585,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.41"
+      "ev": "0.45"
     },
     {
       "id": "perf.images",
@@ -607,10 +607,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-1GCEHHMMVW&amp;cx=c&amp;gtm=4e69l1, https://www.googletagmanager.com/gtag/js?id=UA-133465339-2"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-1GCEHHMMVW&amp;cx=c&amp;gtm=4e69n1h1, https://www.googletagmanager.com/gtag/js?id=UA-133465339-2"
     }
   ],
   "history": [
+    {
+      "d": "2026-09-25",
+      "up": true,
+      "score": 45
+    },
     {
       "d": "2026-09-24",
       "up": false,
@@ -632,5 +637,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,19 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-23T23:59:00.259Z",
-    "run": "1790207871320",
+    "at": "2026-09-25T00:04:27.117Z",
+    "run": "1790294624043",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
-      "accessibility": 94,
+      "performance": 61,
+      "accessibility": 93,
       "best_practices": 92,
       "seo": 91
     },
     "axe": {
       "critical": 0,
-      "serious": 2,
-      "moderate": 4,
+      "serious": 3,
+      "moderate": 5,
       "minor": 0
     },
     "crawl": {
@@ -168,12 +168,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "2 serious violation(s)"
+        "ev": "3 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "4 moderate/minor violation(s)"
+        "ev": "5 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -185,12 +185,13 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
         "r": "fail",
-        "ev": "heading levels skipped"
+        "ev": "no <h1>, heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -207,17 +208,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "94/100"
+        "ev": "93/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "61/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8120.860500000001ms"
+        "ev": "6639.683999999999ms"
       },
       {
         "id": "perf.cls",
@@ -226,7 +227,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "17.3MB"
+        "ev": "8.8MB"
       },
       {
         "id": "perf.viewport",
@@ -282,7 +283,7 @@
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "6 broken image(s)"
+        "ev": "3 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -303,7 +304,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "8 console error(s): Cannot read properties of null (reading 'addEventListener')"
+        "ev": "4 console error(s): Cannot read properties of null (reading 'addEventListener')"
       },
       {
         "id": "gigw.contact",
@@ -417,7 +418,7 @@
     "screenshot": {
       "desktop": "ksidc.webp",
       "mobile": "ksidc-m.webp",
-      "phash": "0001011b1f1f1fff"
+      "phash": "00ffff9b1f27fffe"
     },
     "outlinks": [
       {
@@ -448,9 +449,9 @@
     ]
   },
   "score": {
-    "overall": 68,
+    "overall": 66,
     "security": 96,
-    "accessibility": 82,
+    "accessibility": 72,
     "content": 38,
     "gigw": 32,
     "performance": 66,
@@ -476,7 +477,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "2 serious violation(s)"
+      "ev": "3 serious violation(s)"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "1 low-contrast element(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -502,12 +508,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8120.860500000001ms"
+      "ev": "6639.683999999999ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "17.3MB"
+      "ev": "8.8MB"
     },
     {
       "id": "perf.tap_targets",
@@ -520,17 +526,17 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "4 moderate/minor violation(s)"
+      "ev": "5 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "heading levels skipped"
+      "ev": "no <h1>, heading levels skipped"
     },
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "6 broken image(s)"
+      "ev": "3 broken image(s)"
     },
     {
       "id": "content.meta_desc",
@@ -539,7 +545,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "8 console error(s): Cannot read properties of null (reading 'addEventListener')"
+      "ev": "4 console error(s): Cannot read properties of null (reading 'addEventListener')"
     },
     {
       "id": "gigw.feedback",
@@ -599,6 +605,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-25",
+      "up": true,
+      "score": 66
+    },
+    {
       "d": "2026-09-24",
       "up": true,
       "score": 68
@@ -619,5 +630,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

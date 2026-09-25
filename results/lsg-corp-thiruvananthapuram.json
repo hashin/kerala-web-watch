@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-24T00:11:33.809Z",
-    "run": "1790208649442",
+    "at": "2026-09-25T00:12:41.696Z",
+    "run": "1790295119052",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 59,
+      "performance": 56,
       "accessibility": 82,
       "best_practices": 81,
       "seo": 85
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -215,12 +215,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "59/100"
+        "ev": "56/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "22848.186ms"
+        "ev": "28476.380500000007ms"
       },
       {
         "id": "perf.cls",
@@ -229,7 +229,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "14.3MB"
+        "ev": "9.5MB"
       },
       {
         "id": "perf.viewport",
@@ -275,8 +275,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (http://trivandrumcorporation.web.lsgkerala.gov.in/Localbody%20Map)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -437,6 +436,13 @@
         "texts": []
       },
       {
+        "host": "ksmart.live",
+        "count": 1,
+        "texts": [
+          "Localbody Map"
+        ]
+      },
+      {
         "host": "kerala.gov.in",
         "count": 5,
         "texts": [
@@ -565,11 +571,6 @@
       "ev": "ml-user"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (http://trivandrumcorporation.web.lsgkerala.gov.in/Localbody%20Map)"
-    },
-    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -606,12 +607,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "22848.186ms"
+      "ev": "28476.380500000007ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "14.3MB"
+      "ev": "9.5MB"
     },
     {
       "id": "sec.csp",
@@ -672,6 +673,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-25",
+      "up": false,
+      "score": null
+    },
+    {
       "d": "2026-09-24",
       "up": false,
       "score": null
@@ -692,5 +698,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

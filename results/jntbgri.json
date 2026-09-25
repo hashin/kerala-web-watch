@@ -29,11 +29,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-24T00:16:42.540Z",
-    "run": "1790208943930",
+    "at": "2026-09-25T00:29:02.013Z",
+    "run": "1790296085112",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 29,
+      "performance": 30,
       "accessibility": 86,
       "best_practices": 88,
       "seo": 77
@@ -47,7 +47,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 27
     },
     "tech": {
       "cms": "WordPress 6.9.8",
@@ -89,7 +89,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "fail",
+        "ev": "9815ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -209,12 +210,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "29/100"
+        "ev": "30/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "25946.353ms"
+        "ev": "26762.807000000008ms"
       },
       {
         "id": "perf.cls",
@@ -223,7 +224,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "8.3MB"
+        "ev": "8.4MB"
       },
       {
         "id": "perf.viewport",
@@ -269,7 +270,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "27/30 crawled link(s) broken (https://jntbgri.res.in/about-jntbgri/, https://jntbgri.res.in/director-message/, https://jntbgri.res.in/previous-directors/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -405,7 +407,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-X0BSV06SMK&amp;cx=c&amp;gtm=4e69m1, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2&amp;cx=c&amp;gtm=4e69m1, https://www.googletagmanager.com/gtag/js?id=G-6YPTV5TC0F&amp;cx=c&amp;_slc=1, https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtm.js?id=GTM-KWK3DSF, https://www.googletagmanager.com/gtag/js?id&amp;ver=6.9.8, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2"
+        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-6YPTV5TC0F&amp;cx=c&amp;_slc=1, https://www.googletagmanager.com/gtag/js?id=G-X0BSV06SMK&amp;cx=c&amp;gtm=4e69n1h1, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2&amp;cx=c&amp;gtm=4e69n1h1, https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtm.js?id=GTM-KWK3DSF, https://www.googletagmanager.com/gtag/js?id&amp;ver=6.9.8, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2"
       }
     ],
     "screenshot": {
@@ -492,15 +494,15 @@
     ]
   },
   "score": {
-    "overall": 59,
+    "overall": 56,
     "security": 64,
     "accessibility": 70,
-    "content": 48,
+    "content": 28,
     "gigw": 12,
     "performance": 66,
     "identity": 100
   },
-  "status": "down",
+  "status": "needs-work",
   "issues": [
     {
       "id": "content.last_updated",
@@ -513,8 +515,18 @@
       "ev": "ml-element"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "27/30 crawled link(s) broken (https://jntbgri.res.in/about-jntbgri/, https://jntbgri.res.in/director-message/, https://jntbgri.res.in/previous-directors/, ...)"
+    },
+    {
       "id": "gigw.rti",
       "sev": "H"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "9815ms"
     },
     {
       "id": "sec.hsts",
@@ -553,12 +565,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "25946.353ms"
+      "ev": "26762.807000000008ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "8.3MB"
+      "ev": "8.4MB"
     },
     {
       "id": "perf.tap_targets",
@@ -649,10 +661,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-X0BSV06SMK&amp;cx=c&amp;gtm=4e69m1, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2&amp;cx=c&amp;gtm=4e69m1, https://www.googletagmanager.com/gtag/js?id=G-6YPTV5TC0F&amp;cx=c&amp;_slc=1, https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtm.js?id=GTM-KWK3DSF, https://www.googletagmanager.com/gtag/js?id&amp;ver=6.9.8, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2"
+      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-6YPTV5TC0F&amp;cx=c&amp;_slc=1, https://www.googletagmanager.com/gtag/js?id=G-X0BSV06SMK&amp;cx=c&amp;gtm=4e69n1h1, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2&amp;cx=c&amp;gtm=4e69n1h1, https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtm.js?id=GTM-KWK3DSF, https://www.googletagmanager.com/gtag/js?id&amp;ver=6.9.8, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2"
     }
   ],
   "history": [
+    {
+      "d": "2026-09-25",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-09-24",
       "up": false,
@@ -674,5 +691,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

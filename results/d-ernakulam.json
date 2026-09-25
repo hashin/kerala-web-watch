@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-21T16:26:50.080Z",
-    "run": "1790007943916",
+    "at": "2026-09-24T23:59:54.570Z",
+    "run": "1790294318021",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 58,
+      "performance": 50,
       "accessibility": 84,
       "best_practices": 73,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -214,12 +214,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "58/100"
+        "ev": "50/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "5753.3730000000005ms"
+        "ev": "21364.197914628057ms"
       },
       {
         "id": "perf.cls",
@@ -274,7 +274,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://ernakulam.nic.in/en/tehsil/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -422,7 +423,7 @@
         "host": "kerala.gov.in",
         "count": 5,
         "texts": [
-          "കേരള സർക്കാർ",
+          "കേരളം സർക്കാർ",
           "District News",
           "E-District"
         ]
@@ -533,10 +534,10 @@
     ]
   },
   "score": {
-    "overall": 63,
+    "overall": 61,
     "security": 48,
     "accessibility": 64,
-    "content": 56,
+    "content": 46,
     "gigw": 60,
     "performance": 76,
     "identity": 96
@@ -564,6 +565,11 @@
       "ev": "ml-IN"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://ernakulam.nic.in/en/tehsil/)"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -587,7 +593,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "5753.3730000000005ms"
+      "ev": "21364.197914628057ms"
     },
     {
       "id": "perf.weight",
@@ -662,6 +668,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-25",
+      "up": true,
+      "score": 61
+    },
+    {
       "d": "2026-09-24",
       "up": true,
       "score": 63
@@ -682,5 +693,5 @@
       "score": 63
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-23T23:59:45.208Z",
-    "run": "1790207933465",
+    "at": "2026-09-25T00:05:43.060Z",
+    "run": "1790294690345",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 54,
+      "performance": 52,
       "accessibility": 81,
       "best_practices": 65,
       "seo": 77
@@ -181,7 +181,8 @@
       },
       {
         "id": "a11y.lang",
-        "r": "pass"
+        "r": "fail",
+        "ev": "<html lang=\"en-GB\"> vs. 36% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -217,12 +218,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "54/100"
+        "ev": "52/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9573.367ms"
+        "ev": "10288.830999999996ms"
       },
       {
         "id": "perf.cls",
@@ -412,7 +413,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://connect.facebook.net/en_US/all.js?hash=a22543537b112a511f701c94a68b695b, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
+        "ev": "https://connect.facebook.net/en_US/all.js?hash=de8837bd51d1a3285f72f92e61a2436d, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
       }
     ],
     "screenshot": {
@@ -460,9 +461,9 @@
     ]
   },
   "score": {
-    "overall": 64,
+    "overall": 59,
     "security": 80,
-    "accessibility": 54,
+    "accessibility": 34,
     "content": 46,
     "gigw": 32,
     "performance": 86,
@@ -479,6 +480,11 @@
       "id": "a11y.axe_critical",
       "sev": "H",
       "ev": "1 critical violation(s)"
+    },
+    {
+      "id": "a11y.lang",
+      "sev": "H",
+      "ev": "<html lang=\"en-GB\"> vs. 36% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -524,7 +530,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9573.367ms"
+      "ev": "10288.830999999996ms"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -580,10 +586,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://connect.facebook.net/en_US/all.js?hash=a22543537b112a511f701c94a68b695b, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
+      "ev": "https://connect.facebook.net/en_US/all.js?hash=de8837bd51d1a3285f72f92e61a2436d, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
     }
   ],
   "history": [
+    {
+      "d": "2026-09-25",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-09-24",
       "up": true,
@@ -605,5 +616,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

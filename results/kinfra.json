@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-24T00:10:03.219Z",
-    "run": "1790208545294",
+    "at": "2026-09-25T00:11:38.968Z",
+    "run": "1790295036484",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 20,
-      "accessibility": 47,
+      "performance": 36,
+      "accessibility": 42,
       "best_practices": 50,
       "seo": 85
     },
@@ -214,22 +214,21 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "47/100"
+        "ev": "42/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "20/100"
+        "ev": "36/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "61375.513000000006ms"
+        "ev": "61291.353499999976ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.31"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -242,7 +241,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -383,7 +382,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "25 days left"
+        "ev": "24 days left"
       },
       {
         "id": "id.www_consistency",
@@ -478,12 +477,12 @@
     ]
   },
   "score": {
-    "overall": 38,
+    "overall": 37,
     "security": 24,
     "accessibility": 32,
     "content": 56,
     "gigw": 18,
-    "performance": 72,
+    "performance": 66,
     "identity": 55
   },
   "status": "poor",
@@ -521,7 +520,7 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "25 days left"
+      "ev": "24 days left"
     },
     {
       "id": "sec.hsts",
@@ -574,12 +573,16 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "61375.513000000006ms"
+      "ev": "61291.353499999976ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
       "ev": "18.6MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "id.tech",
@@ -651,11 +654,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.31"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -666,6 +664,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-09-25",
+      "up": true,
+      "score": 37
+    },
     {
       "d": "2026-09-24",
       "up": true,
@@ -687,5 +690,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

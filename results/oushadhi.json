@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-24T00:09:56.663Z",
-    "run": "1790208557743",
+    "at": "2026-09-25T00:19:40.144Z",
+    "run": "1790295502966",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 54,
+      "performance": 48,
       "accessibility": 37,
       "best_practices": 77,
       "seo": 67
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -215,12 +215,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "54/100"
+        "ev": "48/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "26349.568000000003ms"
+        "ev": "23980.3525ms"
       },
       {
         "id": "perf.cls",
@@ -229,7 +229,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "17.7MB"
+        "ev": "18.0MB"
       },
       {
         "id": "perf.viewport",
@@ -276,7 +276,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://www.oushadhi.org/product/ayush-kwath)"
       },
       {
         "id": "content.broken_pdfs",
@@ -306,7 +307,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "7 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+        "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
@@ -449,10 +450,10 @@
     ]
   },
   "score": {
-    "overall": 46,
+    "overall": 44,
     "security": 48,
     "accessibility": 46,
-    "content": 38,
+    "content": 28,
     "gigw": 18,
     "performance": 66,
     "identity": 72
@@ -478,6 +479,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://www.oushadhi.org/product/ayush-kwath)"
     },
     {
       "id": "id.gov_domain",
@@ -535,12 +541,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "26349.568000000003ms"
+      "ev": "23980.3525ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "17.7MB"
+      "ev": "18.0MB"
     },
     {
       "id": "perf.tap_targets",
@@ -575,7 +581,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "7 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
@@ -638,6 +644,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-25",
+      "up": true,
+      "score": 44
+    },
+    {
       "d": "2026-09-24",
       "up": true,
       "score": 46
@@ -658,5 +669,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

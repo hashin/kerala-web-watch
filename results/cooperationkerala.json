@@ -37,19 +37,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-24T00:03:29.976Z",
-    "run": "1790208100953",
+    "at": "2026-09-25T00:12:25.075Z",
+    "run": "1790295036327",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 26,
+      "performance": 25,
       "accessibility": 81,
       "best_practices": 54,
       "seo": 77
     },
     "axe": {
-      "critical": 0,
-      "serious": 10,
-      "moderate": 5,
+      "critical": 2,
+      "serious": 11,
+      "moderate": 4,
       "minor": 0
     },
     "crawl": {
@@ -167,17 +167,18 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "pass"
+        "r": "fail",
+        "ev": "2 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "10 serious violation(s)"
+        "ev": "11 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "5 moderate/minor violation(s)"
+        "ev": "4 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -194,8 +195,7 @@
       },
       {
         "id": "a11y.headings",
-        "r": "fail",
-        "ev": "no <h1>"
+        "r": "pass"
       },
       {
         "id": "a11y.labels",
@@ -218,12 +218,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "26/100"
+        "ev": "25/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "230279.6240000002ms"
+        "ev": "234726.32475000006ms"
       },
       {
         "id": "perf.cls",
@@ -417,7 +417,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-L1XGWRVKHS&amp;cx=c&amp;gtm=4e69m1h1, https://www.googletagmanager.com/gtag/js?id=UA-103783083-39"
+        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-L1XGWRVKHS&amp;cx=c&amp;gtm=4e69n1, https://www.googletagmanager.com/gtag/js?id=UA-103783083-39"
       }
     ],
     "screenshot": {
@@ -446,9 +446,9 @@
     ]
   },
   "score": {
-    "overall": 42,
+    "overall": 38,
     "security": 18,
-    "accessibility": 70,
+    "accessibility": 54,
     "content": 18,
     "gigw": 8,
     "performance": 66,
@@ -469,6 +469,11 @@
       "id": "sec.vuln_js",
       "sev": "H",
       "ev": "jquery 1.12.4, bootstrap 3.3.7, bootstrap 3.4.1"
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "2 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -496,7 +501,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "10 serious violation(s)"
+      "ev": "11 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -532,7 +537,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "230279.6240000002ms"
+      "ev": "234726.32475000006ms"
     },
     {
       "id": "perf.weight",
@@ -558,12 +563,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "5 moderate/minor violation(s)"
-    },
-    {
-      "id": "a11y.headings",
-      "sev": "L",
-      "ev": "no <h1>"
+      "ev": "4 moderate/minor violation(s)"
     },
     {
       "id": "a11y.keyboard",
@@ -628,10 +628,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-L1XGWRVKHS&amp;cx=c&amp;gtm=4e69m1h1, https://www.googletagmanager.com/gtag/js?id=UA-103783083-39"
+      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-L1XGWRVKHS&amp;cx=c&amp;gtm=4e69n1, https://www.googletagmanager.com/gtag/js?id=UA-103783083-39"
     }
   ],
   "history": [
+    {
+      "d": "2026-09-25",
+      "up": true,
+      "score": 38
+    },
     {
       "d": "2026-09-24",
       "up": true,
@@ -653,5 +658,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

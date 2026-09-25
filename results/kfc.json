@@ -29,11 +29,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-22T23:59:10.609Z",
-    "run": "1790121508461",
+    "at": "2026-09-25T00:12:06.952Z",
+    "run": "1790295080839",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 31,
+      "performance": 29,
       "accessibility": 77,
       "best_practices": 92,
       "seo": 92
@@ -89,7 +89,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3927ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -210,17 +211,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "31/100"
+        "ev": "29/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9799.719880000002ms"
+        "ev": "22556.146319999985ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.84"
+        "ev": "0.85"
       },
       {
         "id": "perf.weight",
@@ -491,7 +492,7 @@
     "performance": 77,
     "identity": 76
   },
-  "status": "down",
+  "status": "needs-work",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -517,6 +518,11 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "www.kfc.org"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3927ms"
     },
     {
       "id": "sec.hsts",
@@ -556,7 +562,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9799.719880000002ms"
+      "ev": "22556.146319999985ms"
     },
     {
       "id": "perf.weight",
@@ -617,7 +623,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.84"
+      "ev": "0.85"
     },
     {
       "id": "perf.images",
@@ -637,6 +643,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-09-25",
+      "up": true,
+      "score": 54
+    },
     {
       "d": "2026-09-24",
       "up": false,
@@ -658,5 +669,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

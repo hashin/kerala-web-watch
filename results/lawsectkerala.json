@@ -37,17 +37,17 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-24T00:08:06.877Z",
-    "run": "1790208394484",
+    "at": "2026-09-25T00:11:59.050Z",
+    "run": "1790295030352",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
+      "performance": 57,
       "accessibility": 87,
       "best_practices": 92,
       "seo": 64
     },
     "axe": {
-      "critical": 7,
+      "critical": 8,
       "serious": 7,
       "moderate": 9,
       "minor": 0
@@ -122,7 +122,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "25 days left"
+        "ev": "24 days left"
       },
       {
         "id": "sec.tls_version",
@@ -169,7 +169,7 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "7 critical violation(s)"
+        "ev": "8 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
@@ -188,7 +188,7 @@
       {
         "id": "a11y.alt",
         "r": "fail",
-        "ev": "7 image(s) missing alt text"
+        "ev": "8 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
@@ -218,12 +218,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "57/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10546.066500000003ms"
+        "ev": "12719.024ms"
       },
       {
         "id": "perf.cls",
@@ -484,7 +484,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "25 days left"
+      "ev": "24 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -499,7 +499,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "7 critical violation(s)"
+      "ev": "8 critical violation(s)"
     },
     {
       "id": "content.broken_links",
@@ -518,7 +518,7 @@
     {
       "id": "a11y.alt",
       "sev": "M",
-      "ev": "7 image(s) missing alt text"
+      "ev": "8 image(s) missing alt text"
     },
     {
       "id": "content.copyright_year",
@@ -541,7 +541,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10546.066500000003ms"
+      "ev": "12719.024ms"
     },
     {
       "id": "sec.csp",
@@ -613,6 +613,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-25",
+      "up": true,
+      "score": 53
+    },
+    {
       "d": "2026-09-24",
       "up": true,
       "score": 53
@@ -633,5 +638,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

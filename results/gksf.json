@@ -29,11 +29,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-23T00:16:06.417Z",
-    "run": "1790122554811",
+    "at": "2026-09-25T00:22:59.373Z",
+    "run": "1790295768630",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 83,
+      "performance": 86,
       "accessibility": 60,
       "best_practices": 65,
       "seo": 91
@@ -209,12 +209,11 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "83/100"
+        "ev": "86/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "4307.8835ms"
+        "r": "pass"
       },
       {
         "id": "perf.cls",
@@ -424,15 +423,15 @@
     ]
   },
   "score": {
-    "overall": 42,
+    "overall": 43,
     "security": 28,
     "accessibility": 46,
     "content": 72,
     "gigw": 0,
-    "performance": 66,
+    "performance": 76,
     "identity": 64
   },
-  "status": "down",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.http_redirect",
@@ -512,11 +511,6 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "4307.8835ms"
     },
     {
       "id": "sec.csp",
@@ -615,6 +609,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-25",
+      "up": true,
+      "score": 43
+    },
+    {
       "d": "2026-09-24",
       "up": false,
       "score": 42
@@ -635,5 +634,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

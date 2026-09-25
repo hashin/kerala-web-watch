@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-24T00:27:14.755Z",
-    "run": "1790209429735",
+    "at": "2026-09-25T00:29:10.586Z",
+    "run": "1790296088301",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 31,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 7
+      "broken": 0
     },
     "tech": {
       "cms": "WordPress 6.9.7",
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "5712ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -223,12 +222,12 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "13679.32ms"
+        "ev": "16020.031000000003ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.89"
+        "ev": "0.88"
       },
       {
         "id": "perf.weight",
@@ -279,8 +278,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "7/30 crawled link(s) broken (https://ksdp.co.in/about/, https://ksdp.co.in/who-is-who/, https://ksdp.co.in/company-profile/, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -485,10 +483,10 @@
     ]
   },
   "score": {
-    "overall": 44,
+    "overall": 47,
     "security": 48,
     "accessibility": 40,
-    "content": 28,
+    "content": 48,
     "gigw": 22,
     "performance": 67,
     "identity": 80
@@ -516,19 +514,9 @@
       "ev": "ml-"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "7/30 crawled link(s) broken (https://ksdp.co.in/about/, https://ksdp.co.in/who-is-who/, https://ksdp.co.in/company-profile/, ...)"
-    },
-    {
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "ksdp.co.in"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "5712ms"
     },
     {
       "id": "sec.hsts",
@@ -576,7 +564,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "13679.32ms"
+      "ev": "16020.031000000003ms"
     },
     {
       "id": "perf.weight",
@@ -659,7 +647,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.89"
+      "ev": "0.88"
     },
     {
       "id": "perf.images",
@@ -671,6 +659,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-09-25",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-09-24",
       "up": true,
@@ -692,5 +685,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

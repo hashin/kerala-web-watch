@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-24T00:19:03.763Z",
-    "run": "1790209072480",
+    "at": "2026-09-25T00:29:13.249Z",
+    "run": "1790296087280",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 46,
-      "accessibility": 67,
+      "performance": 30,
+      "accessibility": 76,
       "best_practices": 65,
       "seo": 77
     },
@@ -56,7 +56,7 @@
       "broken": 0
     },
     "tech": {
-      "cms": null,
+      "cms": "Drupal 11",
       "server": "Apache",
       "jquery": null
     },
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3139ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -121,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "22 days left"
+        "ev": "21 days left"
       },
       {
         "id": "sec.tls_version",
@@ -215,26 +214,27 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "67/100"
+        "ev": "76/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "46/100"
+        "ev": "30/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "23266.1695ms"
+        "ev": "19743.4965ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1.24"
       },
       {
         "id": "perf.weight",
-        "r": "fail",
-        "ev": "8.2MB"
+        "r": "warn",
+        "ev": "7.9MB"
       },
       {
         "id": "perf.viewport",
@@ -242,7 +242,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -309,7 +309,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "11 console error(s): Cannot read properties of null (reading 'addEventListener')"
+        "ev": "10 console error(s): Cannot read properties of null (reading 'addEventListener')"
       },
       {
         "id": "gigw.contact",
@@ -410,7 +410,8 @@
       },
       {
         "id": "id.tech",
-        "r": "pass"
+        "r": "pass",
+        "ev": "Drupal 11"
       },
       {
         "id": "id.third_party",
@@ -501,12 +502,12 @@
     ]
   },
   "score": {
-    "overall": 41,
+    "overall": 42,
     "security": 22,
     "accessibility": 30,
     "content": 52,
     "gigw": 36,
-    "performance": 66,
+    "performance": 77,
     "identity": 80
   },
   "status": "poor",
@@ -518,7 +519,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "22 days left"
+      "ev": "21 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -544,11 +545,6 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "ksbcdc.com"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3139ms"
     },
     {
       "id": "sec.hsts",
@@ -597,16 +593,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "23266.1695ms"
+      "ev": "19743.4965ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "8.2MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "ev": "7.9MB"
     },
     {
       "id": "sec.xcto",
@@ -638,7 +630,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "11 console error(s): Cannot read properties of null (reading 'addEventListener')"
+      "ev": "10 console error(s): Cannot read properties of null (reading 'addEventListener')"
     },
     {
       "id": "gigw.feedback",
@@ -665,6 +657,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "1.24"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -674,6 +671,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-09-25",
+      "up": true,
+      "score": 42
+    },
     {
       "d": "2026-09-24",
       "up": true,
@@ -695,5 +697,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

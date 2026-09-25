@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-22T23:44:55.171Z",
-    "run": "1790120641151",
+    "at": "2026-09-25T00:00:30.371Z",
+    "run": "1790294312407",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 52,
+      "performance": 50,
       "accessibility": 81,
       "best_practices": 77,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 3
     },
     "tech": {
       "cms": null,
@@ -215,12 +215,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "52/100"
+        "ev": "50/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "18594.296000000002ms"
+        "ev": "15082.134000000004ms"
       },
       {
         "id": "perf.cls",
@@ -275,7 +275,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3/30 crawled link(s) broken (https://alappuzha.nic.in/en/document-category/assembly-election-2026/, https://alappuzha.nic.in/en/document-category/candidates-expenditure-statements/, https://alappuzha.nic.in/en/document-category/102-aroor/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -423,7 +424,7 @@
         "host": "kerala.gov.in",
         "count": 6,
         "texts": [
-          "കേരള സര്‍ക്കാര്‍",
+          "കേരളം സര്‍ക്കാര്‍",
           "E Office",
           "Government of Kerala"
         ]
@@ -541,10 +542,10 @@
     ]
   },
   "score": {
-    "overall": 70,
+    "overall": 69,
     "security": 80,
     "accessibility": 60,
-    "content": 56,
+    "content": 46,
     "gigw": 60,
     "performance": 81,
     "identity": 96
@@ -572,6 +573,11 @@
       "ev": "ml-IN"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "3/30 crawled link(s) broken (https://alappuzha.nic.in/en/document-category/assembly-election-2026/, https://alappuzha.nic.in/en/document-category/candidates-expenditure-statements/, https://alappuzha.nic.in/en/document-category/102-aroor/)"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
       "ev": "7 serious violation(s)"
@@ -587,7 +593,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "18594.296000000002ms"
+      "ev": "15082.134000000004ms"
     },
     {
       "id": "perf.weight",
@@ -651,6 +657,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-25",
+      "up": true,
+      "score": 69
+    },
+    {
       "d": "2026-09-24",
       "up": true,
       "score": 70
@@ -671,5 +682,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-23T23:55:00.540Z",
-    "run": "1790207616868",
+    "at": "2026-09-25T00:00:49.103Z",
+    "run": "1790294375788",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 51,
+      "performance": 49,
       "accessibility": 87,
       "best_practices": 73,
       "seo": 83
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 3
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3435ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -215,12 +216,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "51/100"
+        "ev": "49/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "19422.055500000002ms"
+        "ev": "20566.949749999996ms"
       },
       {
         "id": "perf.cls",
@@ -275,8 +276,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "3/30 crawled link(s) broken (https://malappuram.nic.in/en, https://malappuram.nic.in/en/history/, https://malappuram.nic.in/en/std-pin-codes/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -431,7 +431,7 @@
         "host": "kerala.gov.in",
         "count": 9,
         "texts": [
-          "കേരള സര്‍ക്കാര്‍",
+          "കേരളം സര്‍ക്കാര്‍",
           "SIR 2026 ASD LIST",
           "Flood Relief 2018 -Search Partially/Fully damaged"
         ]
@@ -532,10 +532,10 @@
     ]
   },
   "score": {
-    "overall": 59,
+    "overall": 60,
     "security": 48,
     "accessibility": 54,
-    "content": 42,
+    "content": 52,
     "gigw": 60,
     "performance": 81,
     "identity": 96
@@ -563,9 +563,9 @@
       "ev": "ml-IN"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "3/30 crawled link(s) broken (https://malappuram.nic.in/en, https://malappuram.nic.in/en/history/, https://malappuram.nic.in/en/std-pin-codes/)"
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3435ms"
     },
     {
       "id": "sec.hsts",
@@ -596,7 +596,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "19422.055500000002ms"
+      "ev": "20566.949749999996ms"
     },
     {
       "id": "perf.weight",
@@ -671,6 +671,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-25",
+      "up": true,
+      "score": 60
+    },
+    {
       "d": "2026-09-24",
       "up": true,
       "score": 59
@@ -691,5 +696,5 @@
       "score": 60
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

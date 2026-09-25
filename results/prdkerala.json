@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-24T00:10:34.655Z",
-    "run": "1790208575751",
+    "at": "2026-09-25T00:20:14.677Z",
+    "run": "1790295556231",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 15,
+      "performance": 12,
       "accessibility": 80,
-      "best_practices": 92,
+      "best_practices": 96,
       "seo": 85
     },
     "axe": {
       "critical": 11,
-      "serious": 24,
+      "serious": 23,
       "moderate": 2,
       "minor": 1
     },
@@ -171,7 +171,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "24 serious violation(s)"
+        "ev": "23 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -189,7 +189,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "5 low-contrast element(s)"
+        "ev": "4 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -217,22 +217,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "15/100"
+        "ev": "12/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "18883.746499999994ms"
+        "ev": "17750.272000000004ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.63"
+        "ev": "0.73"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "18.9MB"
+        "ev": "19.5MB"
       },
       {
         "id": "perf.viewport",
@@ -286,8 +286,7 @@
       },
       {
         "id": "content.broken_images",
-        "r": "fail",
-        "ev": "1 broken image(s)"
+        "r": "pass"
       },
       {
         "id": "content.malayalam",
@@ -308,7 +307,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "25 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/player/2c1fb55e/www-player.css' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -535,10 +534,10 @@
     ]
   },
   "score": {
-    "overall": 51,
+    "overall": 52,
     "security": 42,
     "accessibility": 50,
-    "content": 48,
+    "content": 52,
     "gigw": 32,
     "performance": 72,
     "identity": 91
@@ -577,12 +576,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "24 serious violation(s)"
+      "ev": "23 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "5 low-contrast element(s)"
+      "ev": "4 low-contrast element(s)"
     },
     {
       "id": "gigw.privacy",
@@ -603,12 +602,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "18883.746499999994ms"
+      "ev": "17750.272000000004ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "18.9MB"
+      "ev": "19.5MB"
     },
     {
       "id": "id.tech",
@@ -639,18 +638,13 @@
       "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
-      "id": "content.broken_images",
-      "sev": "L",
-      "ev": "1 broken image(s)"
-    },
-    {
       "id": "content.meta_desc",
       "sev": "L"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "25 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/player/2c1fb55e/www-player.css' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -683,7 +677,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.63"
+      "ev": "0.73"
     },
     {
       "id": "perf.images",
@@ -705,6 +699,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-25",
+      "up": true,
+      "score": 52
+    },
+    {
       "d": "2026-09-24",
       "up": true,
       "score": 51
@@ -725,5 +724,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

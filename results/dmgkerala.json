@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-24T00:19:00.316Z",
-    "run": "1790208983925",
+    "at": "2026-09-25T00:27:01.834Z",
+    "run": "1790295976396",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 58,
+      "accessibility": 88,
+      "best_practices": 92,
+      "seo": 62
     },
     "axe": {
       "critical": 1,
@@ -57,7 +57,7 @@
     },
     "tech": {
       "cms": "WordPress 5.7.15",
-      "server": null,
+      "server": "Apache",
       "jquery": null
     },
     "checks": [
@@ -67,16 +67,15 @@
       },
       {
         "id": "avail.connect",
-        "r": "fail",
-        "ev": "timeout"
+        "r": "pass"
       },
       {
         "id": "avail.status",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -96,7 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -108,7 +107,7 @@
       },
       {
         "id": "sec.https",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
@@ -132,7 +131,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "fail",
+        "ev": "href=\"http://gmpg.org/xfn/11\""
       },
       {
         "id": "sec.csp",
@@ -211,20 +211,21 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "88/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "58/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "1.40"
       },
       {
         "id": "perf.weight",
@@ -237,7 +238,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -381,19 +382,19 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.robots",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.soft_404",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
@@ -443,17 +444,25 @@
       }
     ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 50,
+    "security": 28,
+    "accessibility": 50,
+    "content": 42,
+    "gigw": 38,
+    "performance": 87,
+    "identity": 95
+  },
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "avail.connect",
-      "sev": "C",
-      "ev": "timeout"
-    },
     {
       "id": "sec.http_redirect",
       "sev": "H"
+    },
+    {
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://gmpg.org/xfn/11\""
     },
     {
       "id": "a11y.axe_critical",
@@ -515,10 +524,6 @@
       "ev": "3.0MB"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
-    },
-    {
       "id": "id.tech",
       "sev": "M",
       "ev": "WordPress 5.7.15 (unsupported major version)"
@@ -572,6 +577,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "1.40"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -581,6 +591,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-09-25",
+      "up": true,
+      "score": 50
+    },
     {
       "d": "2026-09-24",
       "up": false,
@@ -602,5 +617,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

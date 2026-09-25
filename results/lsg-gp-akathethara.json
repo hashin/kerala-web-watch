@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-23T00:22:52.657Z",
-    "run": "1790122928989",
+    "at": "2026-09-25T00:35:26.404Z",
+    "run": "1790296482166",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 60,
+      "performance": 59,
       "accessibility": 89,
       "best_practices": 78,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -218,12 +218,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "60/100"
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7158.177999999999ms"
+        "ev": "8679.849ms"
       },
       {
         "id": "perf.cls",
@@ -278,8 +278,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (http://akathetharapanchayat.lsgkerala.gov.in/node/03790406-d7e7-4ec2-91cf-3966d10bcd9a)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -536,11 +535,6 @@
       "ev": "ml-user"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (http://akathetharapanchayat.lsgkerala.gov.in/node/03790406-d7e7-4ec2-91cf-3966d10bcd9a)"
-    },
-    {
       "id": "gigw.rti",
       "sev": "H"
     },
@@ -578,7 +572,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7158.177999999999ms"
+      "ev": "8679.849ms"
     },
     {
       "id": "perf.weight",
@@ -656,6 +650,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-25",
+      "up": false,
+      "score": null
+    },
+    {
       "d": "2026-09-24",
       "up": false,
       "score": null
@@ -676,5 +675,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

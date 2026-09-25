@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-24T00:09:35.749Z",
-    "run": "1790208528895",
+    "at": "2026-09-25T00:19:16.230Z",
+    "run": "1790295513401",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 47,
+      "performance": 43,
       "accessibility": 88,
       "best_practices": 92,
       "seo": 100
@@ -216,12 +216,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "47/100"
+        "ev": "43/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "14668.703ms"
+        "ev": "15161.119999999999ms"
       },
       {
         "id": "perf.cls",
@@ -286,7 +286,8 @@
       },
       {
         "id": "content.broken_images",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -307,7 +308,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "1 console error(s): Cannot read properties of undefined (reading 'length')"
+        "ev": "3 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
@@ -453,10 +454,10 @@
     ]
   },
   "score": {
-    "overall": 46,
+    "overall": 45,
     "security": 14,
     "accessibility": 62,
-    "content": 36,
+    "content": 32,
     "gigw": 42,
     "performance": 76,
     "identity": 76
@@ -531,7 +532,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "14668.703ms"
+      "ev": "15161.119999999999ms"
     },
     {
       "id": "perf.weight",
@@ -566,9 +567,14 @@
       "ev": "heading levels skipped"
     },
     {
+      "id": "content.broken_images",
+      "sev": "L",
+      "ev": "1 broken image(s)"
+    },
+    {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "1 console error(s): Cannot read properties of undefined (reading 'length')"
+      "ev": "3 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
@@ -613,6 +619,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-25",
+      "up": true,
+      "score": 45
+    },
+    {
       "d": "2026-09-24",
       "up": true,
       "score": 46
@@ -633,5 +644,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

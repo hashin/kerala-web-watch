@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-24T00:20:02.551Z",
-    "run": "1790209002542",
+    "at": "2026-09-25T00:30:39.170Z",
+    "run": "1790296142014",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 44,
+      "performance": 34,
       "accessibility": 83,
       "best_practices": 69,
       "seo": 58
@@ -59,7 +59,7 @@
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "Apache",
       "jquery": null
     },
     "checks": [
@@ -69,16 +69,15 @@
       },
       {
         "id": "avail.connect",
-        "r": "fail",
-        "ev": "timeout"
+        "r": "pass"
       },
       {
         "id": "avail.status",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -98,7 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "na"
+        "r": "warn",
+        "ev": "3397ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -110,7 +110,7 @@
       },
       {
         "id": "sec.https",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
@@ -134,7 +134,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "fail",
+        "ev": "src=\"http://localhost/keralaenergy/wp-content/uploads/2023/06/logo.png\""
       },
       {
         "id": "sec.csp",
@@ -220,21 +221,21 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "44/100"
+        "ev": "34/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8834.386740000002ms"
+        "ev": "11887.270499999999ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1.10"
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "4.6MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
@@ -310,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "4 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
+        "ev": "3 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
       },
       {
         "id": "gigw.contact",
@@ -386,7 +387,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.robots",
@@ -489,13 +490,21 @@
       }
     ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 56,
+    "security": 56,
+    "accessibility": 40,
+    "content": 42,
+    "gigw": 58,
+    "performance": 82,
+    "identity": 92
+  },
+  "status": "needs-work",
   "issues": [
     {
-      "id": "avail.connect",
-      "sev": "C",
-      "ev": "timeout"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "src=\"http://localhost/keralaenergy/wp-content/uploads/2023/06/logo.png\""
     },
     {
       "id": "sec.vuln_js",
@@ -516,6 +525,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-widget"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3397ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -552,12 +566,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8834.386740000002ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "4.6MB"
+      "ev": "11887.270499999999ms"
     },
     {
       "id": "sec.referrer",
@@ -585,7 +594,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "4 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
+      "ev": "3 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
     },
     {
       "id": "gigw.feedback",
@@ -598,6 +607,11 @@
     {
       "id": "gigw.help",
       "sev": "L"
+    },
+    {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "1.10"
     },
     {
       "id": "perf.images",
@@ -615,6 +629,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-09-25",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-09-24",
       "up": false,
@@ -636,5 +655,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

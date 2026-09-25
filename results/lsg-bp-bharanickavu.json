@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-23T00:20:01.057Z",
-    "run": "1790122759119",
+    "at": "2026-09-25T00:29:29.394Z",
+    "run": "1790296104740",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 61,
+      "performance": 60,
       "accessibility": 85,
       "best_practices": 74,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 29,
       "pdfs": 0,
-      "broken": 4
+      "broken": 5
     },
     "tech": {
       "cms": "Drupal 11",
@@ -218,12 +218,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "61/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6915.709999999999ms"
+        "ev": "8127.1715ms"
       },
       {
         "id": "perf.cls",
@@ -278,8 +278,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "4/29 crawled link(s) broken (http://bharanickavublockpanchayat.lsgkerala.gov.in/about, http://bharanickavublockpanchayat.lsgkerala.gov.in/contact-us, http://bharanickavublockpanchayat.lsgkerala.gov.in/terms, ...)"
+        "r": "fail",
+        "ev": "5/29 crawled link(s) broken (https://plan.lsgkerala.gov.in/formulation/Public.aspx, http://bharanickavublockpanchayat.lsgkerala.gov.in/about, http://bharanickavublockpanchayat.lsgkerala.gov.in/contact-us, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -541,7 +541,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "4/29 crawled link(s) broken (http://bharanickavublockpanchayat.lsgkerala.gov.in/about, http://bharanickavublockpanchayat.lsgkerala.gov.in/contact-us, http://bharanickavublockpanchayat.lsgkerala.gov.in/terms, ...)"
+      "ev": "5/29 crawled link(s) broken (https://plan.lsgkerala.gov.in/formulation/Public.aspx, http://bharanickavublockpanchayat.lsgkerala.gov.in/about, http://bharanickavublockpanchayat.lsgkerala.gov.in/contact-us, ...)"
     },
     {
       "id": "gigw.rti",
@@ -581,7 +581,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6915.709999999999ms"
+      "ev": "8127.1715ms"
     },
     {
       "id": "perf.weight",
@@ -659,6 +659,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-25",
+      "up": false,
+      "score": null
+    },
+    {
       "d": "2026-09-24",
       "up": false,
       "score": null
@@ -679,5 +684,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

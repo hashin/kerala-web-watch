@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-24T00:29:42.840Z",
-    "run": "1790209738574",
+    "at": "2026-09-25T00:34:42.165Z",
+    "run": "1790296432379",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 61,
+      "performance": 59,
       "accessibility": 89,
       "best_practices": 74,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -218,12 +218,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "61/100"
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8124.349500000002ms"
+        "ev": "9951.607ms"
       },
       {
         "id": "perf.cls",
@@ -278,8 +278,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://veliyanadblockpanchayat.lsgkerala.gov.in/ml/report/jaivanakakaara)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -539,11 +538,6 @@
       "ev": "ml-user"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://veliyanadblockpanchayat.lsgkerala.gov.in/ml/report/jaivanakakaara)"
-    },
-    {
       "id": "gigw.rti",
       "sev": "H"
     },
@@ -581,7 +575,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8124.349500000002ms"
+      "ev": "9951.607ms"
     },
     {
       "id": "perf.weight",
@@ -659,6 +653,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-25",
+      "up": false,
+      "score": null
+    },
+    {
       "d": "2026-09-24",
       "up": false,
       "score": null
@@ -679,5 +678,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
