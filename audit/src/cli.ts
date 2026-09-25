@@ -19,6 +19,19 @@ import { mergeAll } from './merge.js';
 import { buildReportData, readPreviousSnapshot, renderReportMarkdown } from './report.js';
 import { discoverCandidates, newCandidateHosts, renderCandidatesYaml, toDiscoveryTable } from './discover.js';
 import type { OutlinksData } from './outlinks.js';
+import {
+  alreadyRegisteredSite,
+  buildIssueCandidate,
+  normalizeFormUrl,
+  parseIssueForm,
+  renderIssueCandidatesYaml,
+  toAlreadyTrackedComment,
+  toInvalidUrlComment,
+  toIssueComment,
+  toIssuePrBody,
+  toMalformedComment,
+  upsertIssueCandidate,
+} from './issue-to-pr.js';
 
 function flagValue(argv: string[], name: string): string | undefined {
   const index = argv.indexOf(name);
@@ -442,6 +455,87 @@ async function runDiscover(argv: string[]): Promise<number> {
   return 0;
 }
 
+const ISSUE_TO_PR_USAGE =
+  'Usage: cli.js issue-to-pr --registry <dir> --body-file <path> --issue <n> --issue-url <url> --reported-by <login> [--out <path>]';
+
+/** issue-to-pr.yml passes the untrusted issue body only as a file (`--body-file`, written by a
+ * github-script step from `context.payload.issue.body` -- never interpolated into a shell
+ * command) and the handful of GitHub-supplied fields as plain flags. This writes its own two
+ * result files (never `$GITHUB_OUTPUT`) for the same reason: `name`/`notes` in the body are a
+ * citizen's free text, and a later workflow step must never re-interpolate that text into a
+ * `run:` shell command -- reading it back from a file avoids that class of injection entirely. */
+async function writeIssueResultFiles(prBody: string, comment: string): Promise<void> {
+  await writeFile('issue-pr-body.md', prBody);
+  await writeFile('issue-comment.md', comment);
+}
+
+/**
+ * WP5.2: turns one "Add a government website" issue into a candidate PR. Parses the rendered
+ * form body, skips (with an explanatory comment, no PR) a malformed body, an unparseable URL, or
+ * a host that's already in the registry -- only a genuinely new, well-formed submission gets
+ * light-checked and appended to `registry/candidates/issues.yaml`.
+ */
+async function runIssueToPr(argv: string[]): Promise<number> {
+  if (argv.includes('--help')) {
+    console.log(ISSUE_TO_PR_USAGE);
+    return 0;
+  }
+
+  const registryDir = flagValue(argv, '--registry') ?? 'registry';
+  const bodyFile = flagValue(argv, '--body-file');
+  const issueRaw = flagValue(argv, '--issue');
+  const issueUrl = flagValue(argv, '--issue-url');
+  const reportedBy = flagValue(argv, '--reported-by');
+  const outPath = flagValue(argv, '--out') ?? 'registry/candidates/issues.yaml';
+
+  if (!bodyFile || !issueRaw || !issueUrl || !reportedBy) {
+    console.error(`Missing a required flag\n${ISSUE_TO_PR_USAGE}`);
+    return 1;
+  }
+  const issue = Number(issueRaw);
+
+  const body = readFileSync(bodyFile, 'utf-8');
+  const form = parseIssueForm(body);
+  if (!form) {
+    writeGithubOutput('ok', 'false');
+    await writeIssueResultFiles('', toMalformedComment());
+    console.error(`issue-to-pr: issue #${issue} body did not parse as a filled-in add-website form`);
+    return 0;
+  }
+
+  const normalizedUrl = normalizeFormUrl(form.url);
+  if (!normalizedUrl) {
+    writeGithubOutput('ok', 'false');
+    await writeIssueResultFiles('', toInvalidUrlComment(form.url));
+    console.error(`issue-to-pr: issue #${issue} submitted an unparseable URL "${form.url}"`);
+    return 0;
+  }
+
+  const registry = loadRegistry(registryDir);
+  const existingSite = alreadyRegisteredSite(normalizedUrl, registry);
+  if (existingSite) {
+    writeGithubOutput('ok', 'false');
+    await writeIssueResultFiles('', toAlreadyTrackedComment(existingSite));
+    console.error(`issue-to-pr: issue #${issue}'s ${normalizedUrl} already registered as ${existingSite.id}`);
+    return 0;
+  }
+
+  const light = await lightCheck(form.url, { timeoutMs: 20_000 });
+  const candidate = buildIssueCandidate(form, normalizedUrl, light, { issue, issueUrl, reportedBy });
+
+  const existingYaml = existsSync(outPath) ? readFileSync(outPath, 'utf-8') : '';
+  const candidates = upsertIssueCandidate(existingYaml, candidate);
+  await mkdir(dirname(outPath), { recursive: true });
+  await writeFile(outPath, renderIssueCandidatesYaml(candidates));
+
+  writeGithubOutput('ok', 'true');
+  await writeIssueResultFiles(toIssuePrBody(candidate), toIssueComment(candidate));
+  console.error(
+    `issue-to-pr: issue #${issue} -> ${candidate.url} (${candidate.reachable ? `HTTP ${candidate.checked_status}` : 'unreachable'}), written to ${outPath}`,
+  );
+  return 0;
+}
+
 async function runSelfTestCommand(argv: string[]): Promise<number> {
   if (argv.includes('--help')) {
     console.log('Usage: cli.js self-test [--with-lighthouse]');
@@ -468,11 +562,13 @@ async function main(): Promise<number> {
       return runReport(rest);
     case 'discover':
       return runDiscover(rest);
+    case 'issue-to-pr':
+      return runIssueToPr(rest);
     case 'self-test':
       return runSelfTestCommand(rest);
     default:
       console.error(
-        `Unknown command: ${command ?? '(none)'}\nUsage: cli.js validate --registry <dir> [--json] | cli.js light --help | cli.js run --help | cli.js plan --help | cli.js merge --help | cli.js report --help | cli.js discover --help | cli.js self-test --help`,
+        `Unknown command: ${command ?? '(none)'}\nUsage: cli.js validate --registry <dir> [--json] | cli.js light --help | cli.js run --help | cli.js plan --help | cli.js merge --help | cli.js report --help | cli.js discover --help | cli.js issue-to-pr --help | cli.js self-test --help`,
       );
       return 1;
   }

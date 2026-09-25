@@ -1,0 +1,76 @@
+name: Add-website issue to PR
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  issue-to-pr:
+    if: contains(github.event.issue.labels.*.name, 'add-website')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: audit/package-lock.json
+      - working-directory: audit
+        run: npm ci
+      - working-directory: audit
+        run: npm run build
+
+      # Writes the issue body to a file via the JS context object, not shell interpolation -- the
+      # body is a citizen's free text and could contain anything, so it never touches a `run:`
+      # command string (see cli.ts's own comment on issue-to-pr's result files for the same reason).
+      - name: Save the issue body
+        uses: actions/github-script@v7
+        with:
+          script: |
+            require('fs').writeFileSync('issue-body.txt', context.payload.issue.body ?? '');
+
+      - id: issue-to-pr
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+          REPORTED_BY: ${{ github.event.issue.user.login }}
+        run: |
+          node audit/dist/cli.js issue-to-pr \
+            --registry registry \
+            --body-file issue-body.txt \
+            --issue "$ISSUE_NUMBER" \
+            --issue-url "$ISSUE_URL" \
+            --reported-by "$REPORTED_BY" \
+            --out registry/candidates/issues.yaml
+
+      - name: Open a PR with this candidate
+        if: steps.issue-to-pr.outputs.ok == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          add-paths: registry/candidates/issues.yaml
+          commit-message: 'data: candidate from add-website issue #${{ github.event.issue.number }}'
+          branch: issue-candidate/${{ github.event.issue.number }}
+          title: 'Candidate from issue #${{ github.event.issue.number }}'
+          labels: discovery
+          body-path: issue-pr-body.md
+
+      # Always comments, whether or not a PR was opened -- issue-to-pr.js writes issue-comment.md
+      # either way (malformed form, invalid URL, already-tracked site, or a real new candidate).
+      - name: Comment on the issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const body = fs.readFileSync('issue-comment.md', 'utf8');
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body,
+            });
