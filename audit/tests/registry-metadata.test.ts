@@ -28,11 +28,20 @@ describe('CHECKS metadata', () => {
     expect(meta.fix.en.length, `${id} has empty fix.en`).toBeGreaterThan(0);
   });
 
-  it.each(entries)('%s has an ml field present (may be empty until WP5.3)', (id, meta) => {
+  it.each(entries)('%s has an ml field present', (id, meta) => {
     expect(typeof meta.title.ml, `${id} title.ml`).toBe('string');
     expect(typeof meta.citizen.ml, `${id} citizen.ml`).toBe('string');
     expect(typeof meta.fix.ml, `${id} fix.ml`).toBe('string');
   });
+
+  it.each(entries.filter(([, meta]) => meta.severity === 'C' || meta.severity === 'H'))(
+    '%s (C/H severity) has non-empty Malayalam title, citizen and fix text',
+    (id, meta) => {
+      expect(meta.title.ml.length, `${id} has empty title.ml`).toBeGreaterThan(0);
+      expect(meta.citizen.ml.length, `${id} has empty citizen.ml`).toBeGreaterThan(0);
+      expect(meta.fix.ml.length, `${id} has empty fix.ml`).toBeGreaterThan(0);
+    },
+  );
 
   it.each(entries)('%s has a defined (possibly empty) ref', (id, meta) => {
     expect(typeof meta.ref, `${id} ref`).toBe('string');
