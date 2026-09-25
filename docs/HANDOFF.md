@@ -1,107 +1,112 @@
-# Session handoff — 2026-09-24, WP4.6 + WP5.1 done, clean stop on context budget
+# Session handoff — 2026-09-25, WP5.2 done + pushed; WP5.3 fully implemented but UNVERIFIED and UNCOMMITTED
 
-_A one-time supplement to `docs/STATE.md`'s normal terse handoff log (which already has the full
-detail for both WPs below, in its own terser form — read that first). This file exists only
-because the session stopped specifically on a context-budget instruction (human's rule: after every
-WP is committed and pushed, check context, and if it's over 350k tokens, overwrite this file and
-stop) rather than because there was nothing left to do. Read this **in addition to**, not instead
-of, the normal session-start order in `CLAUDE.md` (CLAUDE.md → `docs/STATE.md` → `docs/DECISIONS.md`
-→ the current WP in `docs/IMPLEMENTATION.md` → the `docs/DESIGN.md` sections that WP lists). Delete
-this file once it's stale — same instruction every previous handoff in this slot has carried.
+_A one-time supplement to `docs/STATE.md`'s normal terse handoff log — read that first (its top
+entry covers WP5.2 in full; WP5.3's own entry there is now stale, written for the 20-check-sample
+checkpoint, and needs replacing once this uncommitted work is verified). This file exists because
+the human asked mid-WP for a handoff to be written right now, not at a natural stopping point — an
+`astro check` run was still in progress and unread when this was written, so **the working tree has
+real, substantial, uncommitted changes whose correctness has not been confirmed.** Read this **in
+addition to**, not instead of, the normal session-start order in `CLAUDE.md`. Delete this file once
+it's stale, per every previous handoff in this slot.
 
 ## Why this session stopped here
 
-Two work packages finished cleanly, each committed and pushed (WP4.6 in two feature/fix commits plus
-a STATE.md commit, WP5.1 the same), each with CI (`Test` + `Build and Deploy`) confirmed green on
-GitHub Actions before moving on. After WP5.1's STATE.md commit pushed and its `Build and Deploy` run
-came back `success`, `mcp__ccd_session_mgmt__get_usage` reported 352,180 tokens (35% of a 1M window)
-— just over the human's 350k threshold — so this session stops here per that instruction rather than
-starting WP5.2.
+Not a clean WP boundary. The human said "write a handoff" while a backgrounded `astro check` was
+still running against a large, freshly-written set of site changes (see below). Rather than guess
+at whether it passed, this file documents exactly what's done, what's unverified, and the precise
+next steps — so the next session (or this one, resumed) picks up correctly instead of assuming
+green and pushing broken code.
 
-## What this session did, in commit order
+## What this session did
 
-1. **WP4.6 — `squash-data.yml`, `report.yml`, `cli report`, issue forms.** New `audit/src/report.ts`
-   (12 tests after `verifier`): `buildReportData` recomputes the summary fresh (never trusts a stale
-   `summary.json`), ranks best/worst-5 deep-audited sites (ties broken by id), and diffs against last
-   month's numbers — read back out of *that month's own report file's frontmatter*
-   (`readPreviousSnapshot`/`parseSnapshot`), not a separate cache, so there's exactly one place
-   month-over-month state lives. `verifier` found 3 real test-coverage gaps, all fixed in the test
-   file only (`report.ts` itself untouched): tie-break-by-id, the 5-item best/worst cap, and — the
-   one that mattered most given ADR-026's plain-language rule — the citizen-facing "up"/"down"
-   wording in the delta summary had zero test coverage calling `renderReportMarkdown` with real
-   deltas. New `reports` content collection (`site/src/content.config.ts`, first collection in this
-   project) + `/reports/` index and `/reports/<month>/` pages, linked from the header nav and
-   `/data/`'s "Monthly archives" section. `squash-data.yml`/`report.yml` workflows written and
-   typechecked but **squash-data was deliberately never dispatched live this session** — it
-   force-pushes the real `data` branch and publishes a public Release, a genuinely destructive,
-   hard-to-reverse action that needs the human's go-ahead first (see STATE.md Open question 13).
-   `report.yml`'s own commit-to-main path was instead exercised locally: `cli report` run for real
-   against a freshly-pulled `data` checkout (this session's local `data/` worktree was 2 days stale
-   from a *previous* session, which would have understated `deep_audited` by 3x — 97 vs the real 299
-   — caught by `git fetch origin data` before committing), output committed as the real first report,
-   `site/src/content/reports/2026-09.md`. Also, opportunistically, while reading Actions history for
-   an unrelated reason: found WP2.3's and WP3.7's "two consecutive scheduled runs" done-when gates
-   had both quietly passed calendar time and succeeded since the last session — marked both fully
-   `done` in the WP table (real evidence, `gh run list --workflow=uptime.yml`/`audit.yml`, not
-   assumed). Commits `8c226a8` (feature) + `63c3b32e` (verifier fixes + refreshed report data) +
-   `c239d593` (STATE.md).
-2. **WP5.1 — `discover.yml`, `cli discover`.** `audit/src/discover.ts`'s pure half
-   (`looksLikeKeralaGovHost`, `filterCandidateHosts`, `registeredHosts`, `isIgnoredHost`,
-   `newCandidateHosts`) sanity-checked against real production data: 392 real outlink hosts → 138
-   candidates, correctly keeping `.gov.in`/`.nic.in`/`.ac.in` domains and Kerala-mentioning ones,
-   correctly excluding anything already in the 1,501-site registry. **First real `workflow_dispatch`
-   (run 36000257060) hit a genuine design bug and timed out**: `discoverCandidates` light-checked
-   hosts strictly sequentially with a 1s gap (copying `resolve.ts`'s pattern, which is fine for its
-   own much smaller PR-review batches), and 138 real hosts blew past the 30-minute CI job timeout.
-   Fixed by switching to `p-limit`-bounded concurrency (default 6, the same mechanism `cli light
-   --all` already uses across all 1,501 sites) — CLAUDE.md's ≤1 req/s politeness rule is stated *per
-   host*, and discovery only ever sends one request per host per run, so checking several different
-   hosts concurrently never violates it. Rewrote the two timing-dependent tests as concurrency proofs
-   rather than deleting coverage. `verifier` ran on `discover.test.ts` before this fix and found one
-   real gap (candidate name should fall back to the host when a fetched homepage has no `<title>`
-   tag), fixed in the test file only. **Second real dispatch (run 36003876316) finished in 7m54s**,
-   well inside the new 45-minute timeout, and correctly found 73 reachable candidates out of 138 —
-   real Kerala orgs (bptkerala.in, cee-kerala.org, erckerala.org) correctly mixed in with central-gov
-   noise (cea.nic.in, cpcb.gov.in) a human will move to `ignore.yaml` — **but the PR-opening step
-   itself failed**: this repo doesn't have "Allow GitHub Actions to create and approve pull requests"
-   enabled (Settings → Actions → General), so `peter-evans/create-pull-request` can't actually open
-   anything yet. Not fixable from a session — added to CLAUDE.md's "Things only the human can do"
-   list and STATE.md's Open question 14. The discovery pipeline itself is proven correct and complete
-   end-to-end; only the last mile (the actual PR) needs the human to flip that one setting. This will
-   also block WP5.2's `issue-to-pr.yml` the same way. Commits `a7b2d1e3` (feature) + `15bc4e19`
-   (verifier fix) + `84dc0929` (concurrency fix, found by the live run) + `936d72f7` (STATE.md +
-   CLAUDE.md).
+1. **WP5.2 — `issue-to-pr.yml`, `cli issue-to-pr` — done, committed, pushed, CI green.** Full detail
+   in `docs/STATE.md`'s top Handoff entry as of this writing. Summary: new `audit/src/issue-to-pr.ts`
+   (26 tests) turns an add-website issue into a candidate PR or an explanatory comment; live-verified
+   with 3 real throwaway GitHub issues (#3/#4/#5, all closed); found and fixed two real bugs along
+   the way (5 missing repo labels, a workflow bug where a failed PR step silently ate the issue
+   comment). Commits `493b2f61`, `a7a7c265`, `da632ab2`. **This part is solid — nothing to redo.**
 
-Both WPs: full local verification before each push — 1,024 audit tests (was 994 at session start),
-`astro check` 0 errors/0 warnings/17 hints (the hints are a known cosmetic `astro:content`/zod
-re-export quirk, not from this project's own schema — see WP4.6's STATE.md row), `astro build`
-succeeding (1668→1670 pages, the two new `/reports/` pages). Every push's CI (`Build and Deploy`,
-and `Test` when `audit/**`/`site/**` changed — a docs-only push correctly doesn't trigger `Test`,
-per `test.yml`'s own path filter) was explicitly checked and confirmed `success` before moving on.
+2. **WP5.3 — Malayalam explanations and UI — implemented, NOT verified, NOT committed.**
+   - Translated all **84 checks'** `title`/`citizen`/`fix` in `audit/src/checks/registry.ts` into
+     Malayalam (committed in two steps: a 20-check sample first — commit `64d1065b`, human-reviewed
+     and explicitly approved ("translations look good, go ahead and do the rest") — then the
+     remaining 64 checks, applied via two throwaway Node scripts in the scratchpad directory that
+     did find/replace on `ml: ''` → `ml: '<translation>'` per check id/field, with a `tsLit()` helper
+     escaping single quotes. **The 64-check batch is only on disk, not yet committed.**
+   - Built out real `/ml/` site plumbing well beyond the two existing pages (home, about):
+     - New `site/src/pages/ml/sites/[id].astro` — a Malayalam counterpart to `/sites/[id].astro`,
+       generated for all ~1,501 sites via the same `getStaticPaths`. Fully localizes: name, status
+       badge, the ADR-026 citizen-facing reason, section headings, every issue's title/citizen/fix
+       (via the newly-translated `registry.ts`), severity labels, "how to fix"/"reference" text,
+       screenshot captions, availability-strip labels, technical-facts labels and values, action
+       button labels, and relative-time strings (`Intl.RelativeTimeFormat('ml')` — free via ICU, no
+       hand translation needed). **Deliberately omits** the "Other sites in this department/district"
+       (`RelatedSites`) sections — including them would need `SiteTable`'s hardcoded English column
+       headers translated too, and a half-translated table looked worse than leaving it out; noted
+       inline in the page, not silently dropped.
+     - `site/src/i18n/en.json` / `ml.json` grew from 24 keys each to **83 keys each** (verified equal
+       key sets after every edit via a one-line Node check) — added `nav.reports` (was missing
+       entirely), and a full set of `site.*`/`severity.*`/`issue.*`/`screenshot.*`/`siteActions.*`/
+       `category.*`/`availability.*`/`tech.*`/`score.*` keys. Rewrote `home.partialNotice`, which was
+       self-referentially stale ("will be translated as part of a later work package" — that WP is
+       this one).
+     - Added an optional `locale` prop (default `'en'`, so every existing English call site keeps
+       working unchanged) to: `HealthBadge`, `IssueCard`, `Screenshot`, `SiteActions`, `ScoreRing`,
+       `CategoryBars`, `AvailabilityStrip`, `TechFacts`, and `Layout` (which now also localizes the
+       header nav — Home/About links and labels swap with locale; Methodology/Reports stay English
+       since no `/ml/` version of those exists yet, matching the project's existing
+       partial-translation precedent from WP4.5's own notice banner).
+     - `site/src/lib/data.ts`'s `explainStatus()` and `site/src/lib/format.ts`'s `timeAgo()` both
+       gained an optional `locale` parameter.
+     - `site/src/pages/ml/index.astro` and `ml/about.astro` switched from `lang="en"` (deliberately
+       wrong, per their own old code comments, until real Malayalam text existed) to `lang="ml"`, now
+       that it does.
+   - **Not done yet, deliberately**: `CategoryBars`'/`TechFacts`' one remaining internal detail —
+     already handled, see above, this bullet is a placeholder in case a re-read finds otherwise.
+     Genuinely not done: the persistent site-wide **footer** (Layout.astro's own `<footer>`, with
+     ~11 policy links plus a boilerplate sentence) stays English-only on every locale — same
+     "secondary chrome can wait" scoping call as `RelatedSites`, not yet written down as an explicit
+     STATE.md scope note (do that before calling WP5.3 done).
+
+## What is NOT verified — do this first
+
+1. **`cd site && npx astro check` was running in the background and never read.** Run it (or check
+   its saved output if the background task is still alive/cached) and fix whatever it finds. The
+   `locale` prop plumbing above touches ~10 files; a type mismatch anywhere is plausible and would be
+   this session's own bug, not a pre-existing one.
+2. **No test suite has been run since these changes landed.** Run `cd audit && npx vitest run
+   --reporter=dot` and `cd site && npx vitest run --reporter=dot`. Note: this sandboxed environment
+   has shown spurious timeouts under full-parallel load earlier in this same session (confirmed
+   environment noise, not real failures, by re-running the affected files alone) — don't panic at a
+   full-suite failure without first re-running just that file.
+3. **No `astro build` has been run.** ~1,501 new `/ml/sites/<id>/` pages is a real jump in page count
+   (from ~1,670 to ~3,170-ish) — confirm the build actually completes and check the page count is
+   sane, not just that it doesn't error.
+4. **Nothing has been visually checked in a browser.** Preview the dev server and actually look at a
+   real audited site's `/ml/sites/<id>/` page (pick one with deep-audit data — check `/leaderboard/`
+   or `/status/broken/` on the English site for a real id), `/ml/`, and `/ml/about/`. Confirm the
+   language toggle works both directions and nothing reads as mixed-up or mistranslated garbage.
+5. **`audit/tests/registry-metadata.test.ts` still needs its Verify-criterion update**: WP5.3's own
+   Verify line says "metadata test now requires non-empty `ml` for C/H checks" — that assertion
+   hasn't been added yet. All 28 C/H checks are translated, so it should pass once added; add it,
+   don't skip it.
+6. **`verifier` has not run on any of this.** Run it against the WP5.3 diff (translation-application
+   scripts' correctness, the `locale` prop threading, the new test) before committing.
+7. **Nothing is committed.** `git status --short` at the top of this file is the literal list of
+   what's sitting on disk right now. Once 1–6 above are clean, commit (probably as more than one
+   commit — e.g. one for the audit-side translation completion + metadata test, one for the site i18n
+   plumbing), update `docs/STATE.md` (WP5.3 row → `done`, replace its stale in-progress Handoff entry,
+   Next action → WP5.4), and push per the usual work-package-boundary cadence.
 
 ## Where to actually start next
 
 1. `cd /Users/hashin/Documents/GitHub/kerala-web-watch`
-2. Read `CLAUDE.md` (note the new "Allow GitHub Actions to create and approve pull requests" line
-   in its human-only list), then `docs/STATE.md`'s **Now** section and its top two Handoff entries
-   (WP5.1's, WP4.6's, in that order) for full detail on what landed this session.
-3. **Next WP is WP5.2** (`issue-to-pr.yml`) per `docs/IMPLEMENTATION.md` — parses the three WP4.6
-   issue forms (`add-website`, `correction`, `reaudit-request`) into a registry PR, same general
-   shape as `discover.yml`'s own PR-opening step. **It will hit the exact same blocker WP5.1 just
-   found** (repo Settings → Actions → General → "Allow GitHub Actions to create and approve pull
-   requests" is off) when it tries to live-verify — worth asking the human to flip that setting
-   before starting WP5.2's live verification, so it isn't rediscovered from scratch.
-4. Separately, ask the human (don't just do it) whether it's OK to dispatch `squash-data.yml` for
-   its own Verify step — it force-pushes the real `data` branch (rewrites history to one commit) and
-   publishes a public GitHub Release, which is why this session wrote and typechecked it but
-   deliberately did not run it live. See STATE.md Open question 13.
-5. Not blocking, just a bookkeeping note: `docs/STATE.md`'s Open question 12 still applies —
-   `kerala-web-watch` (this project's own registry entry) hasn't had a real CI-run deep audit yet;
-   it'll get one automatically through the normal `audit.yml` rolling batch, no action needed.
-6. Heads-up on account usage, not a blocker: this session's weekly usage (all models) was at 100%
-   with about 12.5 hours until reset, and the 5-hour window was at 33% with ~2h47m until reset, both
-   as of the last check in this session. Worth knowing if a near-term session runs into usage limits
-   sooner than expected — possibly immediately, given the weekly window was already exhausted here.
-7. `git status --short` was clean and the three stray untracked files noted in earlier handoffs
-   (`.claude/scheduled_tasks 2.lock`, `docs/HANDOFF 2.md`, `docs/STATE 2.md`) no longer exist on this
-   machine — that loose end from prior sessions is resolved, nothing to check there any more.
+2. Read `CLAUDE.md`, then `docs/STATE.md`'s **Now** section (still says WP5.3 is paused at the
+   20-check review checkpoint — that's stale; the human already approved and this session did the
+   rest, per above).
+3. Work through the "What is NOT verified" list above, in order, top to bottom. Do not skip to
+   committing without doing 1–6 first — this is genuinely unverified work, not a formality.
+4. Once WP5.3 is actually confirmed done and pushed, next is **WP5.4** (government colleges tier)
+   per `docs/IMPLEMENTATION.md`.
+5. Open question 14 (repo can't open Actions PRs yet — `discover.yml` and `issue-to-pr.yml` both
+   blocked on it) is unchanged from last session; still needs the human to flip a Settings toggle.
