@@ -6,16 +6,11 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 ## Now
 
 - **Phase:** 4 — Full site
-- **Current WP:** WP5.2 done this session; WP5.3 (Malayalam) in progress, paused at its own planned
-  stop-and-ask point.
-- **Next action:** WP5.3 is stopped waiting on the human's review of a 20-check `ml` translation sample
-  (commit `64d1065b`) — spot-check word choice/register there (or ask this session to re-show the diff)
-  before the next session translates the remaining ~64 checks the same way and builds the `/ml/` site
-  plumbing (`ml.json`, navigation, language toggle) around it. This is the WP's own designed checkpoint,
-  not a design deviation — see its **Read first**/spec in `docs/IMPLEMENTATION.md`. WP4.7 (India vantage
-  runner) stays blocked/optional on Open question 6 — skip it and come back only if that's answered.
-  Separately: the repo still can't open PRs from Actions (Settings → Actions → General → "Allow GitHub
-  Actions to create and approve pull requests" is off) — confirmed live this session to block both
+- **Current WP:** WP5.3 (Malayalam) done and pushed this session.
+- **Next action:** Start WP5.4 (government colleges tier) per `docs/IMPLEMENTATION.md`. WP4.7 (India
+  vantage runner) stays blocked/optional on Open question 6 — skip it and come back only if that's
+  answered. Separately: the repo still can't open PRs from Actions (Settings → Actions → General →
+  "Allow GitHub Actions to create and approve pull requests" is off) — confirmed live to block both
   `discover.yml` (WP5.1) and `issue-to-pr.yml` (WP5.2) identically. See Open question 14.
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
 - **Registry size:** 1,501 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated + 1 dogfood entry, WP4.5's own `kerala-web-watch`) · **Deep-audited:** 299/1,501 (as of the `data` checkout pulled 2026-09-24 for WP4.6's report generation; `kerala-web-watch` itself not yet deep-audited by real CI — see WP4.5's Handoff entry) · **Light-checked:** 1,501/1,501 · **Site live:** yes — https://govwebsite.hashin.me, now showing real status/district/department data, and (as of WP4.1) full deep-audit findings — score ring, category bars, issue cards, screenshots, tech facts, sparkline — on every audited site's own page. As of WP4.5 also has a self-hosted Pagefind search (home page + collapsed header toggle) and a `/ml/` route prefix wired (two pages so far, `home` and `about`, still English text pending WP5.3's translation).
@@ -57,12 +52,17 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 4.7 | India vantage runner (optional) | todo | | |
 | 5.1 | discover.yml → candidates PR | done | 84dc0929 | `cli discover` (audit/src/discover.ts, 18 tests after verifier) filters `data/outlinks.json` to gov-looking hosts, drops registered/ignored ones, light-checks survivors (`p-limit`-bounded concurrency, not sequential — see Handoff, a real run timed out at 30min sequential), writes `registry/candidates/discovered.yaml` wholesale each run; verified live twice via `workflow_dispatch` against real production data (392 outlink hosts → 138 candidates → 73 reachable) — correctly separates central-gov noise (cea.nic.in, cpcb.gov.in) from real Kerala orgs (bptkerala.in, cee-kerala.org, erckerala.org); PR-opening step itself blocked on a repo setting the human needs to flip — see Open question 14 |
 | 5.2 | issue-to-pr.yml | done | 493b2f61 (feat) + a7a7c265 (fix) | new `cli issue-to-pr` (audit/src/issue-to-pr.ts, 26 tests): parses the rendered add-website form body, light-checks the submitted URL, short-circuits with an explanatory issue comment (no PR) for a malformed form/unparseable URL/already-registered host, else appends to `registry/candidates/issues.yaml` (replacing any earlier entry for the same URL); new `.github/workflows/issue-to-pr.yml` writes the untrusted issue body to a file via `actions/github-script`'s context object rather than shell-interpolating it (a real injection-class risk for free citizen text); verifier mutation-tested and found 1 real gap (`toEqual({})` doesn't distinguish `{kind: undefined}` from `{}` in vitest — the "omits a hint key" test couldn't fail no matter what, fixed to `toStrictEqual`); discovered and fixed a real gap while live-verifying: the 5 labels every issue template/workflow references (`add-website`, `registry`, `correction`, `reaudit`, `discovery`) had never actually been created as repo labels, so `gh issue create --label add-website` failed outright and `peter-evans/create-pull-request`'s own `labels: discovery` step would have too — created all 5 live; live-verified with 3 real throwaway issues (#3/#4/#5, all closed after): #3 (kerala.gov.in) correctly recognised as already-registered (`kerala-gov`), no PR opened; #4 (example.com) correctly attempted a PR for a genuinely new candidate but hit the same repo-setting block WP5.1 found (Open question 14) — and that failure silently swallowed the issue comment too, a real bug, fixed with `if: always()`; #5 (example.org) confirmed the fix posts a comment even when the PR step fails |
-| 5.3 | Malayalam explanations + UI | in progress | 64d1065b | 20 of 84 checks translated (`title`/`citizen`/`fix`), spanning all 7 categories and weighted toward C/H severity (16 of 28 C/H done); stopped here per the WP's own instruction to get the human's review of the sample before translating the rest and building `/ml/` site plumbing — see STATE.md's Next action |
+| 5.3 | Malayalam explanations + UI | done | 32081dfd (audit) + 0610b595 (site) | all 84 checks' `title`/`citizen`/`fix` translated (20-check sample approved in 64d1065b, remaining 64 done this session); new `site/src/pages/ml/sites/[id].astro` (~1,501 pages) fully localized; `en.json`/`ml.json` at 80 keys each; optional `locale` prop threaded through 8 components + `Layout`, `explainStatus()`, `timeAgo()`; verifier mutation-tested the new metadata test (blanked a C-severity check's `ml` title, test went red as designed) and confirmed ml coverage/quality, i18n key parity, and safe locale-prop threading, all PASS; browser-verified live (`astro dev`): `/ml/`, `/ml/about/`, `/ml/sites/industrykerala/` all render real Malayalam (not mojibake), language toggle round-trips correctly to the English page; footer and related-sites tables deliberately stay English-only (scope note below) |
 | 5.4 | Government colleges tier | todo | | |
 
 ## Deviations from DESIGN.md
 
 _None yet. Each entry: what, why, ADR number._
+
+**Scope note (not a deviation, just recorded per WP5.3's Handoff):** the site-wide footer (policy links +
+boilerplate sentence in `Layout.astro`) and the related-sites tables (`SiteTable`'s column headers) stay
+English-only on every locale for now — same "secondary chrome can wait" call, not tracked as an ADR since
+nothing citizen-critical depends on it and it's easy to pick up later.
 
 ## Open questions for the human
 
@@ -140,6 +140,22 @@ _None yet. Each entry: what, why, ADR number._
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-09-25 · WP5.3 done, committed (`32081dfd`, `0610b595`), pushed.** Picked up mid-verification from
+  `docs/HANDOFF.md` (now deleted, per its own instruction, since it's stale). Two concurrent peer sessions
+  on this same working tree confirmed clean/idle before anything was touched (see that file's collision
+  note — resolved, no repeat this time). Ran both test suites solo (1,078 audit + 35 site, all green),
+  browser-verified live via `astro dev` (dev server took a few minutes to boot in this resource-constrained
+  sandbox, then worked fine): `/ml/`, `/ml/about/`, `/ml/sites/industrykerala/` all render real Malayalam
+  (not mojibake), findings read as specific ADR-026-style reasons not just status words, language toggle
+  round-trips correctly to the matching English page. Ran `verifier` on the translation/locale-threading
+  work: mutation-tested the new metadata test (blanked a C-severity check's `ml` title, confirmed it goes
+  red), confirmed all 84 checks' `ml` fields are non-empty and read as real Malayalam, `en.json`/`ml.json`
+  key parity, and safe `locale`-prop default threading — all PASS, no weak tests found. Split into two
+  commits (audit-side translations + test, then site-side i18n plumbing) rather than one, per the prior
+  handoff's suggestion. Did not re-run the full production `astro build` (43 min in this sandbox last
+  time) since nothing changed since the prior session's clean, zero-error solo run of this exact content —
+  only the `astro dev` spot-check above is new this session. **Next: WP5.4** (government colleges tier).
 
 - **2026-09-25 · WP5.3 in progress, paused at its own review checkpoint: Malayalam translation sample** —
   translated `title`/`citizen`/`fix` for 20 of 84 checks in `audit/src/checks/registry.ts` (one JS script,
