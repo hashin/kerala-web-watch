@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-22T23:54:51.156Z",
-    "run": "1790120758978",
+    "at": "2026-09-26T00:11:09.080Z",
+    "run": "1790381018901",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 50,
+      "performance": 46,
       "accessibility": 76,
       "best_practices": 100,
       "seo": 77
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 9,
-      "broken": 24
+      "broken": 20
     },
     "tech": {
       "cms": "WordPress 5.0.3",
@@ -218,16 +218,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "50/100"
+        "ev": "46/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8426.567000000001ms"
+        "ev": "8021.3205ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.28"
       },
       {
         "id": "perf.weight",
@@ -278,7 +279,7 @@
       {
         "id": "content.broken_links",
         "r": "fail",
-        "ev": "24/30 crawled link(s) broken (https://education.kerala.gov.in/vhse-2/, https://education.kerala.gov.in/dhse-2, http://archive.education.kerala.gov.in/, ...)"
+        "ev": "20/30 crawled link(s) broken (https://education.kerala.gov.in/dhse-2, http://archive.education.kerala.gov.in/, https://education.kerala.gov.in/kiteitschool-project/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -472,12 +473,12 @@
     ]
   },
   "score": {
-    "overall": 43,
+    "overall": 42,
     "security": 38,
     "accessibility": 22,
     "content": 36,
     "gigw": 30,
-    "performance": 86,
+    "performance": 82,
     "identity": 91
   },
   "status": "poor",
@@ -515,7 +516,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "24/30 crawled link(s) broken (https://education.kerala.gov.in/vhse-2/, https://education.kerala.gov.in/dhse-2, http://archive.education.kerala.gov.in/, ...)"
+      "ev": "20/30 crawled link(s) broken (https://education.kerala.gov.in/dhse-2, http://archive.education.kerala.gov.in/, https://education.kerala.gov.in/kiteitschool-project/, ...)"
     },
     {
       "id": "sec.hsts",
@@ -559,7 +560,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8426.567000000001ms"
+      "ev": "8021.3205ms"
     },
     {
       "id": "id.tech",
@@ -613,6 +614,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.28"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -622,6 +628,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-09-26",
+      "up": true,
+      "score": 42
+    },
     {
       "d": "2026-09-25",
       "up": true,
@@ -648,5 +659,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

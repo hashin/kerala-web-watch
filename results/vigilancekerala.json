@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-23T00:14:34.656Z",
-    "run": "1790122399319",
+    "at": "2026-09-26T00:25:50.962Z",
+    "run": "1790382273883",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 57,
+      "performance": 58,
       "accessibility": 100,
       "best_practices": 77,
       "seo": 100
@@ -52,7 +52,7 @@
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 7,
+      "pdfs": 10,
       "broken": 0
     },
     "tech": {
@@ -91,7 +91,8 @@
       },
       {
         "id": "avail.under_construction",
-        "r": "pass"
+        "r": "warn",
+        "ev": "\"അറ്റകുറ്റപ്പണി\" alongside 13812 other characters"
       },
       {
         "id": "avail.ttfb",
@@ -212,7 +213,7 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "57/100"
+        "ev": "58/100"
       },
       {
         "id": "perf.lcp",
@@ -225,7 +226,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "15.2MB"
+        "ev": "11.9MB"
       },
       {
         "id": "perf.viewport",
@@ -404,7 +405,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-CMG1G06L24&amp;cx=c&amp;gtm=4e69l1, https://www.googletagmanager.com/gtm.js?id=GTM-PFLTDP3B"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-CMG1G06L24&amp;cx=c&amp;gtm=4e69n1, https://www.googletagmanager.com/gtm.js?id=GTM-PFLTDP3B"
       }
     ],
     "screenshot": {
@@ -491,6 +492,11 @@
   "status": "needs-work",
   "issues": [
     {
+      "id": "avail.under_construction",
+      "sev": "H",
+      "ev": "\"അറ്റകുറ്റപ്പണി\" alongside 13812 other characters"
+    },
+    {
       "id": "sec.http_redirect",
       "sev": "H"
     },
@@ -531,7 +537,7 @@
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "15.2MB"
+      "ev": "11.9MB"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -587,10 +593,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-CMG1G06L24&amp;cx=c&amp;gtm=4e69l1, https://www.googletagmanager.com/gtm.js?id=GTM-PFLTDP3B"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-CMG1G06L24&amp;cx=c&amp;gtm=4e69n1, https://www.googletagmanager.com/gtm.js?id=GTM-PFLTDP3B"
     }
   ],
   "history": [
+    {
+      "d": "2026-09-26",
+      "up": true,
+      "score": 71
+    },
     {
       "d": "2026-09-25",
       "up": true,
@@ -617,5 +628,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

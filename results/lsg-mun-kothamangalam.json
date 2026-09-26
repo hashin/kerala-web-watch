@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-25T00:22:16.750Z",
-    "run": "1790295691867",
+    "at": "2026-09-26T00:18:00.664Z",
+    "run": "1790381840022",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 61,
+      "performance": 63,
       "accessibility": 88,
       "best_practices": 100,
       "seo": 85
@@ -217,12 +217,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "61/100"
+        "ev": "63/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6088.7325ms"
+        "ev": "6238.187ms"
       },
       {
         "id": "perf.cls",
@@ -313,7 +313,7 @@
       },
       {
         "id": "gigw.feedback",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.sitemap",
@@ -353,7 +353,7 @@
       },
       {
         "id": "gigw.rti",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.search",
@@ -433,6 +433,15 @@
         "texts": []
       },
       {
+        "host": "kerala.gov.in",
+        "count": 4,
+        "texts": [
+          "E-Tenders",
+          "State Government",
+          "E-Tender"
+        ]
+      },
+      {
         "host": "indiacode.nic.in",
         "count": 1,
         "texts": [
@@ -452,15 +461,6 @@
         "texts": [
           "Central Government",
           "Govt. of India"
-        ]
-      },
-      {
-        "host": "kerala.gov.in",
-        "count": 3,
-        "texts": [
-          "State Government",
-          "E-Tender",
-          "Govt. of Kerala"
         ]
       },
       {
@@ -546,11 +546,11 @@
     ]
   },
   "score": {
-    "overall": 65,
+    "overall": 68,
     "security": 76,
     "accessibility": 70,
     "content": 56,
-    "gigw": 16,
+    "gigw": 40,
     "performance": 76,
     "identity": 96
   },
@@ -570,10 +570,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "gigw.rti",
-      "sev": "H"
     },
     {
       "id": "a11y.axe_serious",
@@ -604,7 +600,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6088.7325ms"
+      "ev": "6238.187ms"
     },
     {
       "id": "perf.weight",
@@ -632,10 +628,6 @@
     },
     {
       "id": "content.meta_desc",
-      "sev": "L"
-    },
-    {
-      "id": "gigw.feedback",
       "sev": "L"
     },
     {
@@ -670,6 +662,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-26",
+      "up": true,
+      "score": 68
+    },
+    {
       "d": "2026-09-25",
       "up": true,
       "score": 65
@@ -695,5 +692,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

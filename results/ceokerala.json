@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-25T00:08:58.032Z",
-    "run": "1790294882161",
+    "at": "2026-09-26T00:09:48.868Z",
+    "run": "1790381331978",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 58,
@@ -46,7 +46,7 @@
     },
     "axe": {
       "critical": 4,
-      "serious": 2,
+      "serious": 3,
       "moderate": 22,
       "minor": 5
     },
@@ -170,7 +170,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "2 serious violation(s)"
+        "ev": "3 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -187,7 +187,8 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -220,7 +221,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9494.417000000001ms"
+        "ev": "8712.733500000002ms"
       },
       {
         "id": "perf.cls",
@@ -457,9 +458,9 @@
     ]
   },
   "score": {
-    "overall": 64,
+    "overall": 62,
     "security": 80,
-    "accessibility": 60,
+    "accessibility": 50,
     "content": 46,
     "gigw": 32,
     "performance": 76,
@@ -495,7 +496,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "2 serious violation(s)"
+      "ev": "3 serious violation(s)"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "1 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -516,7 +522,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9494.417000000001ms"
+      "ev": "8712.733500000002ms"
     },
     {
       "id": "perf.tap_targets",
@@ -586,6 +592,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-26",
+      "up": true,
+      "score": 62
+    },
+    {
       "d": "2026-09-25",
       "up": true,
       "score": 64
@@ -611,5 +622,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

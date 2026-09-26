@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-25T00:20:45.439Z",
-    "run": "1790295578115",
+    "at": "2026-09-26T00:30:51.183Z",
+    "run": "1790382571820",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 28,
       "accessibility": 83,
-      "best_practices": 96,
+      "best_practices": 73,
       "seo": 85
     },
     "axe": {
       "critical": 1,
-      "serious": 14,
+      "serious": 17,
       "moderate": 5,
       "minor": 0
     },
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3891ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -171,7 +172,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "14 serious violation(s)"
+        "ev": "17 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -223,7 +224,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "21288.283500000005ms"
+        "ev": "21777.688000000006ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +234,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "5.3MB"
+        "ev": "5.4MB"
       },
       {
         "id": "perf.viewport",
@@ -267,7 +268,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-user"
+        "ev": "ml-transform"
       },
       {
         "id": "content.obsolete_tech",
@@ -470,7 +471,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-user"
+      "ev": "ml-transform"
     },
     {
       "id": "content.broken_links",
@@ -483,13 +484,18 @@
       "ev": "homcokerala.com"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3891ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "14 serious violation(s)"
+      "ev": "17 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -520,12 +526,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "21288.283500000005ms"
+      "ev": "21777.688000000006ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "5.3MB"
+      "ev": "5.4MB"
     },
     {
       "id": "sec.xcto",
@@ -603,6 +609,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-26",
+      "up": true,
+      "score": 43
+    },
+    {
       "d": "2026-09-25",
       "up": true,
       "score": 43
@@ -628,5 +639,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

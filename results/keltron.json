@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-25T00:03:44.041Z",
-    "run": "1790294525605",
+    "at": "2026-09-26T00:07:01.624Z",
+    "run": "1790381131104",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 42,
+      "performance": 44,
       "accessibility": 89,
       "best_practices": 96,
       "seo": 92
     },
     "axe": {
       "critical": 0,
-      "serious": 11,
+      "serious": 12,
       "moderate": 24,
       "minor": 1
     },
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3190ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -169,7 +168,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "11 serious violation(s)"
+        "ev": "12 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -187,7 +186,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "5 low-contrast element(s)"
+        "ev": "6 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -214,12 +213,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "42/100"
+        "ev": "44/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "38300.864499999996ms"
+        "ev": "57455.323999999986ms"
       },
       {
         "id": "perf.cls",
@@ -228,7 +227,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "1981.6MB"
+        "ev": "754.8MB"
       },
       {
         "id": "perf.viewport",
@@ -305,7 +304,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "8 console error(s): Failed to load resource: the server responded with a status of 400 ()"
+        "ev": "6 console error(s): Failed to load resource: the server responded with a status of 400 ()"
       },
       {
         "id": "gigw.contact",
@@ -417,7 +416,7 @@
     "screenshot": {
       "desktop": "keltron.webp",
       "mobile": "keltron-m.webp",
-      "phash": "fffc980000e400c0"
+      "phash": "ff61003070f02020"
     },
     "outlinks": [
       {
@@ -470,23 +469,18 @@
       "ev": "www.keltron.org"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3190ms"
-    },
-    {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "11 serious violation(s)"
+      "ev": "12 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "5 low-contrast element(s)"
+      "ev": "6 low-contrast element(s)"
     },
     {
       "id": "content.copyright_year",
@@ -509,12 +503,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "38300.864499999996ms"
+      "ev": "57455.323999999986ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "1981.6MB"
+      "ev": "754.8MB"
     },
     {
       "id": "sec.csp",
@@ -533,7 +527,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "8 console error(s): Failed to load resource: the server responded with a status of 400 ()"
+      "ev": "6 console error(s): Failed to load resource: the server responded with a status of 400 ()"
     },
     {
       "id": "gigw.feedback",
@@ -575,6 +569,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-26",
+      "up": true,
+      "score": 66
+    },
+    {
       "d": "2026-09-25",
       "up": true,
       "score": 66
@@ -600,5 +599,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

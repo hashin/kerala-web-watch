@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-25T00:11:20.838Z",
-    "run": "1790295002577",
+    "at": "2026-09-26T00:11:53.185Z",
+    "run": "1790381437150",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 31,
+      "performance": 33,
       "accessibility": 83,
       "best_practices": 92,
       "seo": 69
@@ -53,10 +53,10 @@
     "crawl": {
       "pages": 21,
       "pdfs": 0,
-      "broken": 4
+      "broken": 5
     },
     "tech": {
-      "cms": null,
+      "cms": "WordPress 7.1",
       "server": "Apache",
       "jquery": null
     },
@@ -217,17 +217,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "31/100"
+        "ev": "33/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6712.826ms"
+        "ev": "7307.282ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "1.47"
+        "ev": "0.83"
       },
       {
         "id": "perf.weight",
@@ -277,8 +277,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "4/21 crawled link(s) broken (https://hsgtechdept.kerala.gov.in/category/whatsnew/, https://lifemission.kerala.gov.in/, http://www.crd.kerala.gov.in/, ...)"
+        "r": "fail",
+        "ev": "5/21 crawled link(s) broken (https://hsgtechdept.kerala.gov.in/category/whatsnew/, https://kshb.kerala.gov.in/, https://lifemission.kerala.gov.in/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -407,7 +407,8 @@
       },
       {
         "id": "id.tech",
-        "r": "pass"
+        "r": "pass",
+        "ev": "WordPress 7.1"
       },
       {
         "id": "id.third_party",
@@ -464,10 +465,10 @@
     ]
   },
   "score": {
-    "overall": 47,
+    "overall": 46,
     "security": 48,
     "accessibility": 40,
-    "content": 46,
+    "content": 36,
     "gigw": 2,
     "performance": 82,
     "identity": 100
@@ -497,7 +498,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "4/21 crawled link(s) broken (https://hsgtechdept.kerala.gov.in/category/whatsnew/, https://lifemission.kerala.gov.in/, http://www.crd.kerala.gov.in/, ...)"
+      "ev": "5/21 crawled link(s) broken (https://hsgtechdept.kerala.gov.in/category/whatsnew/, https://kshb.kerala.gov.in/, https://lifemission.kerala.gov.in/, ...)"
     },
     {
       "id": "gigw.rti",
@@ -549,7 +550,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6712.826ms"
+      "ev": "7307.282ms"
     },
     {
       "id": "sec.csp",
@@ -614,7 +615,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "1.47"
+      "ev": "0.83"
     },
     {
       "id": "perf.images",
@@ -631,6 +632,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-09-26",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-09-25",
       "up": true,
@@ -657,5 +663,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

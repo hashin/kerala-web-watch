@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-25T00:12:54.717Z",
-    "run": "1790295110145",
+    "at": "2026-09-26T00:15:54.637Z",
+    "run": "1790381690446",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 25,
+      "performance": 27,
       "accessibility": 72,
       "best_practices": 96,
       "seo": 75
@@ -219,17 +219,16 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "25/100"
+        "ev": "27/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "49075.512ms"
+        "ev": "48062.064ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.29"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -465,7 +464,7 @@
     "accessibility": 42,
     "content": 42,
     "gigw": 26,
-    "performance": 62,
+    "performance": 66,
     "identity": 96
   },
   "status": "needs-work",
@@ -538,7 +537,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "49075.512ms"
+      "ev": "48062.064ms"
     },
     {
       "id": "perf.weight",
@@ -600,11 +599,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.29"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -623,6 +617,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-09-26",
+      "up": true,
+      "score": 50
+    },
     {
       "d": "2026-09-25",
       "up": true,
@@ -649,5 +648,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

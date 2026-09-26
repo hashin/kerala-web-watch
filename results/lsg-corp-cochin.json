@@ -35,15 +35,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-25T00:16:32.509Z",
-    "run": "1790295333060",
+    "at": "2026-09-26T00:17:51.241Z",
+    "run": "1790381807941",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 62,
-      "accessibility": 82,
-      "best_practices": 81,
-      "seo": 85
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 0,
       "serious": 6,
@@ -53,7 +48,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 2
     },
     "tech": {
       "cms": "Drupal 11",
@@ -209,22 +204,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "82/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "62/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "8916.455999999998ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -237,11 +229,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -276,7 +268,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://nedumangad.lsgkerala.gov.in/node/87)"
+        "ev": "2/30 crawled link(s) broken (https://nedumangad.lsgkerala.gov.in/node/87, https://meeting.lsgkerala.gov.in/Pages/LBWiseDashBoard.aspx)"
       },
       {
         "id": "content.broken_pdfs",
@@ -545,7 +537,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://nedumangad.lsgkerala.gov.in/node/87)"
+      "ev": "2/30 crawled link(s) broken (https://nedumangad.lsgkerala.gov.in/node/87, https://meeting.lsgkerala.gov.in/Pages/LBWiseDashBoard.aspx)"
     },
     {
       "id": "gigw.rti",
@@ -584,11 +576,6 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "8916.455999999998ms"
     },
     {
       "id": "perf.weight",
@@ -647,16 +634,17 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
     }
   ],
   "history": [
+    {
+      "d": "2026-09-26",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-09-25",
       "up": false,
@@ -683,5 +671,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

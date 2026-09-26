@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-25T00:01:42.166Z",
-    "run": "1790294449105",
+    "at": "2026-09-26T00:05:05.547Z",
+    "run": "1790381052023",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 78,
+      "performance": 77,
       "accessibility": 78,
       "best_practices": 69,
       "seo": 73
@@ -119,7 +119,8 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "warn",
+        "ev": "29 days left"
       },
       {
         "id": "sec.tls_version",
@@ -216,7 +217,7 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "78/100"
+        "ev": "77/100"
       },
       {
         "id": "perf.lcp",
@@ -276,7 +277,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "3/16 crawled link(s) broken (https://edistrict.kerala.gov.in/generalService.htm?event=dashboard&token=17902944543494312889873805141857, https://www.kerala.gov.in/, https://services.kerala.gov.in/)"
+        "ev": "3/16 crawled link(s) broken (https://edistrict.kerala.gov.in/generalService.htm?event=dashboard&token=17903810573197609666990310713610, https://www.kerala.gov.in/, https://services.kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -444,16 +445,21 @@
     ]
   },
   "score": {
-    "overall": 51,
-    "security": 62,
+    "overall": 48,
+    "security": 52,
     "accessibility": 42,
     "content": 26,
     "gigw": 22,
     "performance": 86,
     "identity": 88
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
+    {
+      "id": "sec.cert_expiry",
+      "sev": "H",
+      "ev": "29 days left"
+    },
     {
       "id": "sec.vuln_js",
       "sev": "H",
@@ -477,7 +483,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "3/16 crawled link(s) broken (https://edistrict.kerala.gov.in/generalService.htm?event=dashboard&token=17902944543494312889873805141857, https://www.kerala.gov.in/, https://services.kerala.gov.in/)"
+      "ev": "3/16 crawled link(s) broken (https://edistrict.kerala.gov.in/generalService.htm?event=dashboard&token=17903810573197609666990310713610, https://www.kerala.gov.in/, https://services.kerala.gov.in/)"
     },
     {
       "id": "gigw.rti",
@@ -608,6 +614,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-26",
+      "up": true,
+      "score": 48
+    },
+    {
       "d": "2026-09-25",
       "up": true,
       "score": 51
@@ -633,5 +644,5 @@
       "score": 51
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

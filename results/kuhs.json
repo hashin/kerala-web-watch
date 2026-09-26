@@ -38,11 +38,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-25T00:07:58.353Z",
-    "run": "1790294610720",
+    "at": "2026-09-26T00:11:01.141Z",
+    "run": "1790381403335",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 43,
+      "performance": 30,
       "accessibility": 56,
       "best_practices": 69,
       "seo": 82
@@ -56,11 +56,11 @@
     "crawl": {
       "pages": 30,
       "pdfs": 2,
-      "broken": 16
+      "broken": 0
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/7.1.33",
       "jquery": "2.1.4"
     },
     "checks": [
@@ -70,16 +70,15 @@
       },
       {
         "id": "avail.connect",
-        "r": "fail",
-        "ev": "timeout"
+        "r": "pass"
       },
       {
         "id": "avail.status",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -99,7 +98,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -111,11 +110,11 @@
       },
       {
         "id": "sec.https",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
@@ -135,7 +134,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "fail",
+        "ev": "href=\"http://14.139.185.154/kuhs_old?site=old\""
       },
       {
         "id": "sec.csp",
@@ -222,21 +222,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "43/100"
+        "ev": "30/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "18580.957500000008ms"
+        "ev": "22903.352000000014ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.38"
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "7.6MB"
+        "r": "fail",
+        "ev": "8.0MB"
       },
       {
         "id": "perf.viewport",
@@ -283,8 +284,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "16/30 crawled link(s) broken (https://kuhs.ac.in/kuhs_new/, https://kuhs.ac.in/#, https://kuhs.ac.in/kuhs_new/index.php/login, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -390,19 +390,21 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "id.robots",
-        "r": "na"
+        "r": "fail",
+        "ev": "robots.txt returned 404"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "na"
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.canonical",
@@ -449,17 +451,21 @@
       }
     ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 43,
+    "security": 24,
+    "accessibility": 40,
+    "content": 42,
+    "gigw": 30,
+    "performance": 72,
+    "identity": 88
+  },
+  "status": "poor",
   "issues": [
     {
-      "id": "avail.connect",
-      "sev": "C",
-      "ev": "timeout"
-    },
-    {
-      "id": "sec.http_redirect",
-      "sev": "H"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://14.139.185.154/kuhs_old?site=old\""
     },
     {
       "id": "sec.vuln_js",
@@ -480,11 +486,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "16/30 crawled link(s) broken (https://kuhs.ac.in/kuhs_new/, https://kuhs.ac.in/#, https://kuhs.ac.in/kuhs_new/index.php/login, ...)"
     },
     {
       "id": "sec.hsts",
@@ -537,12 +538,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "18580.957500000008ms"
+      "ev": "22903.352000000014ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.6MB"
+      "ev": "8.0MB"
     },
     {
       "id": "sec.csp",
@@ -607,8 +608,27 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.38"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
+    },
+    {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
+      "id": "id.robots",
+      "sev": "L",
+      "ev": "robots.txt returned 404"
+    },
+    {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 404"
     },
     {
       "id": "gigw.emblem",
@@ -620,6 +640,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-09-26",
+      "up": true,
+      "score": 43
+    },
     {
       "d": "2026-09-25",
       "up": false,
@@ -646,5 +671,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

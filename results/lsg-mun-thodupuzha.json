@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-25T00:15:20.860Z",
-    "run": "1790295251603",
+    "at": "2026-09-26T00:20:03.065Z",
+    "run": "1790381962197",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 61,
+      "performance": 58,
       "accessibility": 88,
       "best_practices": 100,
       "seo": 85
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -218,12 +218,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "61/100"
+        "ev": "58/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "22813.430000000008ms"
+        "ev": "23044.604000000003ms"
       },
       {
         "id": "perf.cls",
@@ -278,8 +278,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://thodupuzhamunicipality.lsgkerala.gov.in/contact-us)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -540,10 +539,10 @@
     ]
   },
   "score": {
-    "overall": 64,
+    "overall": 65,
     "security": 76,
     "accessibility": 70,
-    "content": 46,
+    "content": 56,
     "gigw": 16,
     "performance": 81,
     "identity": 96
@@ -569,11 +568,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://thodupuzhamunicipality.lsgkerala.gov.in/contact-us)"
     },
     {
       "id": "gigw.rti",
@@ -608,7 +602,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "22813.430000000008ms"
+      "ev": "23044.604000000003ms"
     },
     {
       "id": "perf.weight",
@@ -674,6 +668,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-26",
+      "up": true,
+      "score": 65
+    },
+    {
       "d": "2026-09-25",
       "up": true,
       "score": 64
@@ -699,5 +698,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

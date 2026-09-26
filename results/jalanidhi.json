@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-25T00:23:54.944Z",
-    "run": "1790295779374",
+    "at": "2026-09-26T00:35:37.386Z",
+    "run": "1790382826844",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 54,
+      "performance": 51,
       "accessibility": 74,
       "best_practices": 50,
       "seo": 91
@@ -47,13 +47,13 @@
     "axe": {
       "critical": 2,
       "serious": 50,
-      "moderate": 2,
-      "minor": 1
+      "moderate": 1,
+      "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -119,7 +119,8 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "warn",
+        "ev": "29 days left"
       },
       {
         "id": "sec.tls_version",
@@ -176,7 +177,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "3 moderate/minor violation(s)"
+        "ev": "1 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -194,8 +195,7 @@
       },
       {
         "id": "a11y.headings",
-        "r": "fail",
-        "ev": "heading levels skipped"
+        "r": "pass"
       },
       {
         "id": "a11y.labels",
@@ -218,12 +218,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "54/100"
+        "ev": "51/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11609.751499999998ms"
+        "ev": "14204.289499999999ms"
       },
       {
         "id": "perf.cls",
@@ -232,7 +232,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "14.9MB"
+        "ev": "27.6MB"
       },
       {
         "id": "perf.viewport",
@@ -278,7 +278,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "2/30 crawled link(s) broken (https://pms.jalanidhi.kerala.gov.in/, http://pms.jalanidhi.kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -307,7 +308,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "3 console error(s): ZDBExpViewHandler is not defined"
+        "ev": "2 console error(s): ZDBExpViewHandler is not defined"
       },
       {
         "id": "gigw.contact",
@@ -415,13 +416,13 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e69n1, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e69n1, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
       }
     ],
     "screenshot": {
       "desktop": "jalanidhi.webp",
       "mobile": "jalanidhi-m.webp",
-      "phash": "ffff000000f7ff01"
+      "phash": "ffff003f123eff00"
     },
     "outlinks": [
       {
@@ -444,8 +445,15 @@
         "count": 13,
         "texts": [
           "WSP ജലനിധി ജി പി കൾ",
-          "Plan schemes 2025-26",
+          "പ്ലാൻ  സ്കീംസ്  2025-26",
           "പ്ലാൻ  സ്കീംസ്  2024-25"
+        ]
+      },
+      {
+        "host": "zoho.in",
+        "count": 1,
+        "texts": [
+          "പ്ലാൻ  സ്കീംസ്  2026-27"
         ]
       },
       {
@@ -473,16 +481,21 @@
     ]
   },
   "score": {
-    "overall": 48,
-    "security": 28,
-    "accessibility": 30,
-    "content": 62,
+    "overall": 45,
+    "security": 18,
+    "accessibility": 34,
+    "content": 52,
     "gigw": 52,
     "performance": 76,
     "identity": 88
   },
   "status": "poor",
   "issues": [
+    {
+      "id": "sec.cert_expiry",
+      "sev": "H",
+      "ev": "29 days left"
+    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -507,6 +520,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "2/30 crawled link(s) broken (https://pms.jalanidhi.kerala.gov.in/, http://pms.jalanidhi.kerala.gov.in/)"
     },
     {
       "id": "sec.hsts",
@@ -542,12 +560,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11609.751499999998ms"
+      "ev": "14204.289499999999ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "14.9MB"
+      "ev": "27.6MB"
     },
     {
       "id": "sec.csp",
@@ -564,12 +582,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "3 moderate/minor violation(s)"
-    },
-    {
-      "id": "a11y.headings",
-      "sev": "L",
-      "ev": "heading levels skipped"
+      "ev": "1 moderate/minor violation(s)"
     },
     {
       "id": "a11y.keyboard",
@@ -583,7 +596,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "3 console error(s): ZDBExpViewHandler is not defined"
+      "ev": "2 console error(s): ZDBExpViewHandler is not defined"
     },
     {
       "id": "gigw.feedback",
@@ -643,10 +656,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e69n1, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e69n1, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-09-26",
+      "up": true,
+      "score": 45
+    },
     {
       "d": "2026-09-25",
       "up": true,
@@ -673,5 +691,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

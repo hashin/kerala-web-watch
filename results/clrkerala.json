@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-25T00:07:37.599Z",
-    "run": "1790294785119",
+    "at": "2026-09-26T00:13:39.954Z",
+    "run": "1790381530634",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 31,
+      "performance": 25,
       "accessibility": 82,
       "best_practices": 88,
       "seo": 91
@@ -47,7 +47,7 @@
     "axe": {
       "critical": 3,
       "serious": 6,
-      "moderate": 66,
+      "moderate": 65,
       "minor": 0
     },
     "crawl": {
@@ -175,12 +175,12 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "66 moderate/minor violation(s)"
+        "ev": "65 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en-gb\"> vs. 138% Malayalam content"
+        "ev": "<html lang=\"en-gb\"> vs. 141% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -216,12 +216,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "31/100"
+        "ev": "25/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6860.1585ms"
+        "ev": "23697.806999999993ms"
       },
       {
         "id": "perf.cls",
@@ -231,7 +231,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "48.5MB"
+        "ev": "96.7MB"
       },
       {
         "id": "perf.viewport",
@@ -286,7 +286,7 @@
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "1 broken image(s)"
+        "ev": "2 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -307,7 +307,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "36 console error(s): Refused to apply style from 'https://clr.kerala.gov.in/media/com_sppagebuilder/assets/iconfont/icovgkbln/style.css?143fb2b8f5d98f82feb246ecc61db33d' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+        "ev": "54 console error(s): Refused to apply style from 'https://clr.kerala.gov.in/media/com_sppagebuilder/assets/iconfont/icovgkbln/style.css?143fb2b8f5d98f82feb246ecc61db33d' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       },
       {
         "id": "gigw.contact",
@@ -419,7 +419,7 @@
     "screenshot": {
       "desktop": "clrkerala.webp",
       "mobile": "clrkerala-m.webp",
-      "phash": "ffff00008880c0e0"
+      "phash": "ffff404062630303"
     },
     "outlinks": [
       {
@@ -455,7 +455,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en-gb\"> vs. 138% Malayalam content"
+      "ev": "<html lang=\"en-gb\"> vs. 141% Malayalam content"
     },
     {
       "id": "content.broken_links",
@@ -488,12 +488,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6860.1585ms"
+      "ev": "23697.806999999993ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "48.5MB"
+      "ev": "96.7MB"
     },
     {
       "id": "sec.csp",
@@ -502,7 +502,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "66 moderate/minor violation(s)"
+      "ev": "65 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -512,12 +512,12 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "1 broken image(s)"
+      "ev": "2 broken image(s)"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "36 console error(s): Refused to apply style from 'https://clr.kerala.gov.in/media/com_sppagebuilder/assets/iconfont/icovgkbln/style.css?143fb2b8f5d98f82feb246ecc61db33d' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+      "ev": "54 console error(s): Refused to apply style from 'https://clr.kerala.gov.in/media/com_sppagebuilder/assets/iconfont/icovgkbln/style.css?143fb2b8f5d98f82feb246ecc61db33d' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
     },
     {
       "id": "gigw.feedback",
@@ -569,6 +569,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-26",
+      "up": true,
+      "score": 63
+    },
+    {
       "d": "2026-09-25",
       "up": true,
       "score": 63
@@ -594,5 +599,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-24T00:22:52.592Z",
-    "run": "1790209310099",
+    "at": "2026-09-26T00:36:18.066Z",
+    "run": "1790382930555",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 59,
-      "accessibility": 89,
+      "accessibility": 85,
       "best_practices": 74,
       "seo": 92
     },
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 26,
       "pdfs": 0,
-      "broken": 6
+      "broken": 4
     },
     "tech": {
       "cms": "Drupal 11",
@@ -213,7 +213,7 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "89/100"
+        "ev": "85/100"
       },
       {
         "id": "perf.lighthouse",
@@ -223,7 +223,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7894.299ms"
+        "ev": "7786.199999999999ms"
       },
       {
         "id": "perf.cls",
@@ -278,8 +278,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "6/26 crawled link(s) broken (https://plan.lsgkerala.gov.in/formulation/Public.aspx, https://lsgkerala.gov.in/, http://mathilakamblockpanchayat.lsgkerala.gov.in/about, ...)"
+        "r": "warn",
+        "ev": "4/26 crawled link(s) broken (http://mathilakamblockpanchayat.lsgkerala.gov.in/about, http://mathilakamblockpanchayat.lsgkerala.gov.in/contact-us, http://mathilakamblockpanchayat.lsgkerala.gov.in/terms, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -541,7 +541,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "6/26 crawled link(s) broken (https://plan.lsgkerala.gov.in/formulation/Public.aspx, https://lsgkerala.gov.in/, http://mathilakamblockpanchayat.lsgkerala.gov.in/about, ...)"
+      "ev": "4/26 crawled link(s) broken (http://mathilakamblockpanchayat.lsgkerala.gov.in/about, http://mathilakamblockpanchayat.lsgkerala.gov.in/contact-us, http://mathilakamblockpanchayat.lsgkerala.gov.in/terms, ...)"
     },
     {
       "id": "gigw.rti",
@@ -581,7 +581,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7894.299ms"
+      "ev": "7786.199999999999ms"
     },
     {
       "id": "perf.weight",
@@ -659,6 +659,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-26",
+      "up": false,
+      "score": null
+    },
+    {
       "d": "2026-09-25",
       "up": false,
       "score": null
@@ -684,5 +689,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

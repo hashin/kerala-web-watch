@@ -35,13 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-25T00:19:16.230Z",
-    "run": "1790295513401",
+    "at": "2026-09-26T00:20:24.792Z",
+    "run": "1790381954675",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 43,
+      "performance": 44,
       "accessibility": 88,
-      "best_practices": 92,
+      "best_practices": 96,
       "seo": 100
     },
     "axe": {
@@ -216,12 +216,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "43/100"
+        "ev": "44/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "15161.119999999999ms"
+        "ev": "12452.399999999998ms"
       },
       {
         "id": "perf.cls",
@@ -286,8 +286,7 @@
       },
       {
         "id": "content.broken_images",
-        "r": "fail",
-        "ev": "1 broken image(s)"
+        "r": "pass"
       },
       {
         "id": "content.malayalam",
@@ -308,7 +307,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "3 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+        "ev": "3 console error(s): Cannot read properties of undefined (reading 'length')"
       },
       {
         "id": "gigw.contact",
@@ -454,10 +453,10 @@
     ]
   },
   "score": {
-    "overall": 45,
+    "overall": 46,
     "security": 14,
     "accessibility": 62,
-    "content": 32,
+    "content": 36,
     "gigw": 42,
     "performance": 76,
     "identity": 76
@@ -532,7 +531,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "15161.119999999999ms"
+      "ev": "12452.399999999998ms"
     },
     {
       "id": "perf.weight",
@@ -567,14 +566,9 @@
       "ev": "heading levels skipped"
     },
     {
-      "id": "content.broken_images",
-      "sev": "L",
-      "ev": "1 broken image(s)"
-    },
-    {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "3 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      "ev": "3 console error(s): Cannot read properties of undefined (reading 'length')"
     },
     {
       "id": "gigw.feedback",
@@ -619,6 +613,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-26",
+      "up": true,
+      "score": 46
+    },
+    {
       "d": "2026-09-25",
       "up": true,
       "score": 45
@@ -644,5 +643,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

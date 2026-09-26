@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-24T23:59:54.570Z",
-    "run": "1790294318021",
+    "at": "2026-09-26T00:03:07.916Z",
+    "run": "1790380926564",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 50,
+      "performance": 54,
       "accessibility": 84,
       "best_practices": 73,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -214,12 +214,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "50/100"
+        "ev": "54/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "21364.197914628057ms"
+        "ev": "6870.6922ms"
       },
       {
         "id": "perf.cls",
@@ -274,8 +274,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://ernakulam.nic.in/en/tehsil/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -534,10 +533,10 @@
     ]
   },
   "score": {
-    "overall": 61,
+    "overall": 63,
     "security": 48,
     "accessibility": 64,
-    "content": 46,
+    "content": 56,
     "gigw": 60,
     "performance": 76,
     "identity": 96
@@ -565,11 +564,6 @@
       "ev": "ml-IN"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://ernakulam.nic.in/en/tehsil/)"
-    },
-    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -593,7 +587,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "21364.197914628057ms"
+      "ev": "6870.6922ms"
     },
     {
       "id": "perf.weight",
@@ -668,6 +662,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-26",
+      "up": true,
+      "score": 63
+    },
+    {
       "d": "2026-09-25",
       "up": true,
       "score": 61
@@ -693,5 +692,5 @@
       "score": 63
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

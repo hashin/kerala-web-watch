@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-25T00:13:21.698Z",
-    "run": "1790295161698",
+    "at": "2026-09-26T00:19:12.870Z",
+    "run": "1790381913588",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 60,
+      "performance": 59,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 85
@@ -180,7 +180,8 @@
       },
       {
         "id": "a11y.lang",
-        "r": "pass"
+        "r": "fail",
+        "ev": "<html lang=\"en\"> vs. 47% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -217,12 +218,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "60/100"
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10594.535999999996ms"
+        "ev": "27959.525999999998ms"
       },
       {
         "id": "perf.cls",
@@ -533,9 +534,9 @@
     ]
   },
   "score": {
-    "overall": 67,
+    "overall": 62,
     "security": 76,
-    "accessibility": 70,
+    "accessibility": 50,
     "content": 46,
     "gigw": 36,
     "performance": 81,
@@ -547,6 +548,11 @@
       "id": "sec.mixed_content",
       "sev": "H",
       "ev": "href=\"http://kalamasserymunicipality.lsgkerala.gov.in/en\""
+    },
+    {
+      "id": "a11y.lang",
+      "sev": "H",
+      "ev": "<html lang=\"en\"> vs. 47% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -592,7 +598,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10594.535999999996ms"
+      "ev": "27959.525999999998ms"
     },
     {
       "id": "perf.weight",
@@ -658,6 +664,11 @@
   ],
   "history": [
     {
+      "d": "2026-09-26",
+      "up": true,
+      "score": 62
+    },
+    {
       "d": "2026-09-25",
       "up": true,
       "score": 67
@@ -683,5 +694,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

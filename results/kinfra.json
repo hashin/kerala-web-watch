@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-25T00:11:38.968Z",
-    "run": "1790295036484",
+    "at": "2026-09-26T00:12:48.527Z",
+    "run": "1790381513186",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 36,
+      "performance": 23,
       "accessibility": 42,
       "best_practices": 50,
       "seo": 85
@@ -219,16 +219,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "36/100"
+        "ev": "23/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "61291.353499999976ms"
+        "ev": "61148.66199999997ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.31"
       },
       {
         "id": "perf.weight",
@@ -382,7 +383,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "24 days left"
+        "ev": "23 days left"
       },
       {
         "id": "id.www_consistency",
@@ -482,7 +483,7 @@
     "accessibility": 32,
     "content": 56,
     "gigw": 18,
-    "performance": 66,
+    "performance": 62,
     "identity": 55
   },
   "status": "poor",
@@ -520,7 +521,7 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "24 days left"
+      "ev": "23 days left"
     },
     {
       "id": "sec.hsts",
@@ -573,7 +574,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "61291.353499999976ms"
+      "ev": "61148.66199999997ms"
     },
     {
       "id": "perf.weight",
@@ -654,6 +655,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.31"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -664,6 +670,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-09-26",
+      "up": true,
+      "score": 37
+    },
     {
       "d": "2026-09-25",
       "up": true,
@@ -690,5 +701,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-25T00:05:01.266Z",
-    "run": "1790294655282",
+    "at": "2026-09-26T00:08:51.977Z",
+    "run": "1790381278232",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 53,
+      "performance": 49,
       "accessibility": 80,
       "best_practices": 96,
       "seo": 58
@@ -117,15 +117,15 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.tls_version",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.hsts",
@@ -218,7 +218,7 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "53/100"
+        "ev": "49/100"
       },
       {
         "id": "perf.lcp",
@@ -382,7 +382,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -464,7 +464,7 @@
     "content": 42,
     "gigw": 16,
     "performance": 96,
-    "identity": 96
+    "identity": 92
   },
   "status": "needs-work",
   "issues": [
@@ -580,6 +580,10 @@
       "sev": "L"
     },
     {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
       "id": "id.soft_404",
       "sev": "L",
       "ev": "a nonexistent path returned 200"
@@ -594,6 +598,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-09-26",
+      "up": true,
+      "score": 62
+    },
     {
       "d": "2026-09-25",
       "up": true,
@@ -620,5 +629,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
