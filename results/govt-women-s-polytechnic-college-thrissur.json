@@ -2,16 +2,24 @@
   "id": "govt-women-s-polytechnic-college-thrissur",
   "url": "http://www.gwpctsr.ac.in",
   "light": {
-    "at": "2026-09-25T16:20:30.176Z",
-    "status_class": "timeout",
+    "at": "2026-09-26T02:53:30.358Z",
+    "status_class": "connect_fail",
     "dns": true,
     "status": null,
     "final_url": null,
-    "redirects": [],
+    "redirects": [
+      "http://www.gwpctsr.ac.in -> https://www.gwpctsr.ac.in/"
+    ],
     "ttfb_ms": null,
     "title": null,
     "byte_size": null,
-    "tls": null,
+    "tls": {
+      "valid": false,
+      "protocol": "TLSv1.3",
+      "expires": "Jul 16 00:11:44 2026 GMT",
+      "days_left": -72,
+      "issuer": "Let's Encrypt"
+    },
     "headers": {
       "hsts": false,
       "csp": false,
@@ -26,18 +34,23 @@
     "domain": "gwpctsr.ac.in",
     "final_domain": null,
     "vantage": "gh-us",
-    "suspect": true
+    "suspect": false
   },
   "deep": null,
   "score": null,
-  "status": "unaudited",
+  "status": "broken",
   "issues": [],
   "history": [
+    {
+      "d": "2026-09-26",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-09-25",
       "up": true,
       "score": null
     }
   ],
-  "deep_bump": false
+  "deep_bump": true
 }
