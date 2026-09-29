@@ -6,26 +6,16 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 ## Now
 
 - **Phase:** 5 — Self-maintenance and reach, **all WPs in `docs/IMPLEMENTATION.md` now done.**
-- **Current WP:** none queued. WP5.4 done; Open question 14 (Actions PR permission) resolved by the human
-  and confirmed live (`discover.yml` opened a real PR, #6); its original 79 candidates curated by hand
-  (previous session); PR #6 itself merged 2026-09-29 at the human's request — by then `discover.yml`'s
-  weekly cron had already refreshed it to a **fresh 59-candidate list**, now on `main` at
-  `registry/candidates/discovered.yaml`, **not yet curated**.
-- **Next action:** Curate `registry/candidates/discovered.yaml`'s current (post-merge) contents — same
-  process as the previous curation pass (individually verify each candidate live, real Kerala state bodies
-  → `sites/*.yaml`, already-registered-under-a-different-URL → an alias, central/junk/parked →
-  `ignore.yaml`, ambiguous → leave unclassified with a STATE.md note). Not a WP, not architect-worthy —
-  routine registry maintenance per WP1.7's established pattern. See `docs/HANDOFF.md` if still present.
-  Otherwise remaining work is the open-questions list: Phase 4's optional WP4.7 (Open question 6, India
-  vantage runner — skip unless answered), Open question 16 (government-vs-aided college split, and
-  re-harvesting Collegiate Education from a more current source), Open question 17 (`discover.ts`'s own
-  dedupe misses a www/bare-domain variant of an already-registered host — a real gap, not fixed, just
-  worked around by hand each curation pass so far), Open question 18 (a possible compromised/injected link
-  on `lsg-bp-parappa`'s own site — worth the human's eyes), and `cee-kerala.org` left unclassified pending a
-  clearer signal (Open question 19).
+- **Current WP:** none queued. All WPs done. The fresh 59-candidate `discovered.yaml` (from merged PR #6)
+  was curated 2026-09-30: 9 new state bodies registered, 29 new `ignore.yaml` patterns.
+- **Next action:** Nothing queued. Remaining work is the open-questions list: WP4.7 (Open question 6, India
+  vantage runner — skip unless answered), Open question 16 (government-vs-aided colleges), Open question 17
+  (`discover.ts` www/bare-domain dedupe gap, still unfixed in code), Open question 18 (possible compromised
+  link on `lsg-bp-parappa`'s site — needs the human's eyes), Open question 19 (`cee-kerala.org` still
+  unclassified — same organisation as registered `ceekerala`, but not confirmed official).
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
-- **Registry size:** 1,558 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated + 1 dogfood entry + 49 WP5.4
-  colleges + 8 discovery-curated 2026-09-25) · **Deep-audited:** 299/1,558 (as of the `data` checkout pulled
+- **Registry size:** 1,567 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated + 1 dogfood entry + 49 WP5.4
+  colleges + 8 discovery-curated 2026-09-25 + 9 discovery-curated 2026-09-30) · **Deep-audited:** 299/1,558 (as of the `data` checkout pulled
   2026-09-24 for WP4.6's report generation, before WP5.4/discovery landed; `kerala-web-watch` itself not yet
   deep-audited by real CI — see WP4.5's Handoff entry) · **Light-checked:** 1,501/1,558 (the 49 colleges +
   8 discovery entries not yet through a light-check cycle) · **Site live:** yes — https://govwebsite.hashin.me,
@@ -198,6 +188,11 @@ nothing citizen-critical depends on it and it's easy to pick up later.
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
 
+- **2026-09-30 · Curated the fresh discovered.yaml.** 59 candidates checked live: 8 PSUs (coir corp,
+  KELPALM, FIT, Kerala Ceramics, KPPL, KSIE, KAL, TELK) → `psus.yaml`; SITTTR Kerala → `agencies.yaml`;
+  29 central/spam/vendor/sub-unit hosts → `ignore.yaml`. `keralaautomobilesltd.com` returns HTTP 522
+  (resolve warning only) — registered anyway, a real outage the audit will report. `cee-kerala.org` left
+  unclassified (Q19). `validate` passes. No queued work; `docs/HANDOFF.md` deleted as stale.
 - **2026-09-29 · PR #6 merged at the human's request; brought a *fresh* discovered.yaml, not the**
   **old curated one.** Between the previous session's hand-curation of PR #6's original 79
   candidates and this merge, `discover.yml`'s weekly cron ran again and overwrote the PR branch with
