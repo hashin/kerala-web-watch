@@ -1,0 +1,27 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+import ActionTable from '../../../../components/ActionTable.astro';
+import GradeBadge from '../../../../components/GradeBadge.astro';
+import Pagination from '../../../../components/Pagination.astro';
+import { t } from '../../../../i18n';
+import { getSites } from '../../../../lib/data';
+import { getActionReport, actionRows, rowsInBuckets, type ActionRow } from '../../../../lib/actions';
+
+export async function getStaticPaths({ paginate }: { paginate: import('astro').PaginateFunction }) {
+  // ADR-025: 100 rows per page. Every grade gets a page 1, even when empty.
+  const rows = actionRows(getActionReport(), getSites(), 'en');
+  return ([1, 2, 3, 4, 5] as const).flatMap((grade) => paginate(rowsInBuckets(rows, [grade]), { params: { grade: String(grade) }, pageSize: 100 }));
+}
+
+const { grade } = Astro.params as { grade: string };
+const g = Number(grade) as 1 | 2 | 3 | 4 | 5;
+const { page } = Astro.props as { page: import('astro').Page<ActionRow> };
+---
+
+<Layout title={t('en', `actions.grade.${g}.label`)} description={t('en', `actions.grade.${g}.meaning`)}>
+  <p><a href="/actions/">&larr; {t('en', 'actions.title')}</a></p>
+  <h1><GradeBadge bucket={g} /></h1>
+  <p>{t('en', `actions.grade.${g}.meaning`)} {page.total} sites.</p>
+  <ActionTable rows={page.data} />
+  <Pagination page={page} />
+</Layout>

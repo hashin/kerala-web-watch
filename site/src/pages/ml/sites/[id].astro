@@ -1,5 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import { getActionReport, actionView } from '../../../lib/actions';
+import ActionList from '../../../components/ActionList.astro';
 import CollegeManagement from '../../../components/CollegeManagement.astro';
 import HealthBadge from '../../../components/HealthBadge.astro';
 import ScoreRing from '../../../components/ScoreRing.astro';
@@ -51,6 +53,10 @@ const platformSharedIssueIds = site.platform
   : new Set<string>();
 const hasInheritedIssues = site.result?.issues.some((i) => platformSharedIssueIds.has(i.id)) ?? false;
 
+const actionEntry = getActionReport().sites.find((a) => a.id === site.id);
+const siteActionViews = (actionEntry?.actions ?? []).map((a) => actionView(a, locale));
+const compromise = siteActionViews.find((a) => a.grade === 1 && CHECKS[a.check as keyof typeof CHECKS].compromise);
+
 const passedChecks = deep?.checks.filter((c) => c.r === 'pass') ?? [];
 
 const SEVERITY_KEY = {
@@ -71,6 +77,12 @@ const SEVERITY_KEY = {
   altLangLabel="English"
 >
   <p><a href="/ml/">{t(locale, 'site.allSites')}</a></p>
+  {compromise && (
+    <aside class="compromise-banner" role="alert">
+      <strong>{t(locale, 'actions.compromiseBanner.heading')}</strong>
+      <p>{compromise.citizen}</p>
+    </aside>
+  )}
 
   <nav aria-label="Breadcrumb" class="breadcrumb">
     {ministry && <span>{ministry.name} &rsaquo; </span>}
@@ -128,6 +140,8 @@ const SEVERITY_KEY = {
       <CategoryBars score={site.result?.score ?? null} locale={locale} />
     </section>
   )}
+
+  <ActionList actions={siteActionViews} locale={locale} />
 
   {deep && (
     <section aria-labelledby="issues-heading">
@@ -192,6 +206,13 @@ const SEVERITY_KEY = {
     align-items: center;
     gap: 1.5rem;
     flex-wrap: wrap;
+  }
+  .compromise-banner {
+    border: 2px solid #7a0019;
+    background: var(--color-bg);
+    padding: 0.75rem 1rem;
+    margin: 1rem 0;
+    max-width: 62ch;
   }
   .status-reason {
     max-width: 60ch;

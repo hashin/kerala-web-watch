@@ -42,6 +42,7 @@ const lastUpdated = new Date().toISOString().slice(0, 10);
     <header class="site-header">
       <nav aria-label="Primary">
         <a href={homeHref}>Kerala Web Watch</a>
+        · <a href={locale === 'ml' ? '/ml/actions/' : '/actions/'}>{t(locale, 'nav.actions')}</a>
         · <a href="/methodology/">Methodology</a>
         · <a href="/reports/">Reports</a>
         · <a href={aboutHref}>{t(locale, 'nav.about')}</a>

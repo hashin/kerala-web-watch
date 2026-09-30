@@ -6,7 +6,7 @@ import type { Result, SiteView, Status } from './data';
  * uses, since build-deploy.yml sets `SITE_URL` the same way for both. */
 export const SITE_URL = process.env.SITE_URL ?? 'https://govwebsite.hashin.me';
 
-const CSV_COLUMNS = ['id', 'name', 'url', 'district', 'department', 'kind', 'platform', 'management', 'status', 'score'] as const;
+const CSV_COLUMNS = ['id', 'name', 'url', 'district', 'department', 'kind', 'platform', 'management', 'status', 'score', 'action_grade'] as const;
 
 function csvField(value: string | number | null): string {
   if (value === null) return '';
@@ -16,9 +16,9 @@ function csvField(value: string | number | null): string {
 
 /** `api/sites.csv` (WP4.3): registry identity + current status + score, one row per site, for
  * spreadsheet tools nobody wants to write a JSON parser for. */
-export function sitesToCsv(sites: SiteView[]): string {
+export function sitesToCsv(sites: SiteView[], actionGrades: ReadonlyMap<string, string> = new Map()): string {
   const rows = sites.map((s) =>
-    [s.id, s.name, s.url, s.district ?? '', s.department, s.kind, s.platform ?? '', s.management ?? '', s.status, s.result?.score?.overall ?? '']
+    [s.id, s.name, s.url, s.district ?? '', s.department, s.kind, s.platform ?? '', s.management ?? '', s.status, s.result?.score?.overall ?? '', actionGrades.get(s.id) ?? '']
       .map(csvField)
       .join(','),
   );

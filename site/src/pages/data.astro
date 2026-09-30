@@ -24,7 +24,8 @@ const exampleSiteId = getSites()[0]?.id ?? 'example';
   <h2>Downloads</h2>
   <ul>
     <li><a href="/api/summary.json"><code>/api/summary.json</code></a> &mdash; the same headline rollup the homepage renders (totals, coverage, top issues, this week's transitions).</li>
-    <li><a href="/api/sites.csv"><code>/api/sites.csv</code></a> &mdash; one row per site: id, name, URL, district, department, kind, platform, management (government / aided, colleges only), status, score. Opens in any spreadsheet.</li>
+    <li><a href="/api/actions.csv"><code>/api/actions.csv</code></a> and <a href="/api/actions.json"><code>/api/actions.json</code></a> &mdash; the graded action report: one row per action, with the site's grade, the check, its severity and the evidence.</li>
+    <li><a href="/api/sites.csv"><code>/api/sites.csv</code></a> &mdash; one row per site: id, name, URL, district, department, kind, platform, management (government / aided, colleges only), status, score, action_grade. Opens in any spreadsheet.</li>
     <li><a href="/api/all.json"><code>/api/all.json</code></a> &mdash; every site's full record (status, score, issues, 90-day history), evidence strings stripped to keep the file small. Gzip it before fetching at this size.</li>
     <li><a href={`/api/sites/${exampleSiteId}.json`}><code>/api/sites/&lt;id&gt;.json</code></a> &mdash; one site's complete record, evidence included &mdash; linked from every site page's own "Download JSON" action.</li>
   </ul>

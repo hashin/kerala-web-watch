@@ -208,6 +208,7 @@ Severity: **C** critical · **H** high · **M** medium · **L** low · **I** inf
 | sec.server_banner | `Server`/`X-Powered-By` disclose exact versions | L |
 | sec.vuln_js | Loaded JS libraries with known CVEs (retire.js on the script URLs the page itself loads) | H |
 | sec.safe_browsing | Google Safe Browsing lists the URL (optional API key) | C ★ |
+| sec.injected_links | Homepage links to parking-style `ww<n>.` hosts, fake-government lookalikes, or gambling/adult/pharma terms (ADR-028; never fetched, query strings redacted) | C (compromise, not ★) |
 
 **Accessibility** (`a11y.*`) — *can everyone use it?* (WCAG 2.1 AA, which GIGW 3.0 mandates)
 
@@ -335,6 +336,15 @@ specific `citizen` string (§5.6) from the check that actually set it — `avail
 wording for this at the UI layer; the check registry is still the only source (ADR-013).
 
 Rollups for a department/district/ministry: % broken, median score, and the top 3 most common failed checks across its sites ("14 of 22 sites under Health have no HTTPS").
+
+### 5.4.1 Action grades (ADR-028)
+
+Every site gets the grade of its most urgent action, derived mechanically from `checks/registry.ts`
+(`audit/src/actions.ts`, `GRADE_RULES`): **1** a failed hijacked-setting or `compromise` check · **2** a failed
+down/broken-setting check, including a light-check-only `down`/`broken` · **3** any other C/H · **4** M · **5** L.
+A `warn` is its severity's grade + 1 (max 5), never 1 or 2. Sites with no actions are `clear`, `unverifiable` or
+`unaudited`. Grade 1 always carries evidence. Written to `data/actions.json` by `merge` and `light`; the site build
+recomputes it. Labels on the site are numbered 1–5 and colour-coded (never colour alone).
 
 ### 5.5 Result record (one JSON per site, `data/results/<id>.json`)
 
@@ -612,6 +622,7 @@ Some NIC‑hosted sites block or throttle non‑Indian IPs. GitHub‑hosted runn
 | `/platforms/lsgkerala/` | Platform‑level findings reported once |
 | `/leaderboard/` | Best and worst departments and districts; most improved this month |
 | `/methodology/` | Every check, weight, threshold; limitations; ethics; how to contest |
+| `/actions/`, `/actions/grade/<g>/`, `/departments/<d>/actions/`, `/ml/actions/` | Graded action report (ADR-028); exports `/api/actions.{json,csv}` |
 | `/reports/<yyyy-mm>/` | Monthly state‑of‑the‑web report |
 | `/data/` | Downloads + static API docs |
 | `/about/` | Who, why, contact, contribute, licence, accessibility statement, last updated |

@@ -55,8 +55,8 @@ describe('sitesToCsv', () => {
     const s = site({ id: 'a', name: 'Alpha', district: 'kollam', department: 'gad', kind: 'directorate', platform: null, status: 'healthy', result: result({ id: 'a', status: 'healthy', score: scoreOf(85), url: 'https://test.kerala.gov.in' }) });
     const csv = sitesToCsv([s]);
     const [header, row] = csv.trim().split('\n');
-    expect(header).toBe('id,name,url,district,department,kind,platform,management,status,score');
-    expect(row).toBe('a,Alpha,https://test.kerala.gov.in,kollam,gad,directorate,,,healthy,85');
+    expect(header).toBe('id,name,url,district,department,kind,platform,management,status,score,action_grade');
+    expect(row).toBe('a,Alpha,https://test.kerala.gov.in,kollam,gad,directorate,,,healthy,85,');
   });
 
   it('writes a college\'s management in its own column, blank for a non-college', () => {
@@ -78,7 +78,7 @@ describe('sitesToCsv', () => {
     const s = site({ id: 'a', status: 'unaudited', result: result({ id: 'a', status: 'unaudited', score: null }) });
     const csv = sitesToCsv([s]);
     const row = csv.trim().split('\n')[1];
-    expect(row.endsWith(',unaudited,')).toBe(true);
+    expect(row.endsWith(',unaudited,,')).toBe(true);
   });
 });
 

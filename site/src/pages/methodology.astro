@@ -3,6 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import HealthBadge from '../components/HealthBadge.astro';
 import { STATUS_DESCRIPTIONS } from '../lib/data';
 import { checksByCategory } from '../lib/methodology';
+import { GRADE_RULES, gradeFor } from '../../../audit/dist/actions.js';
+import GradeBadge from '../components/GradeBadge.astro';
+import { t } from '../i18n';
+import { CHECKS } from '../lib/data';
 import { WEIGHTS, FAIL_DEDUCTION, HEALTHY_THRESHOLD, NEEDS_WORK_THRESHOLD } from '../../../audit/dist/score.js';
 
 const groups = checksByCategory();
@@ -19,6 +23,15 @@ const WEIGHT_LABEL: Record<keyof typeof WEIGHTS, string> = {
   performance: 'Performance & mobile',
   identity: 'Identity & hygiene',
 };
+const RULE_TEXT: Record<string, string> = {
+  'hijacked-or-compromise': 'A check that says the site may be hijacked, or shows signs it has been tampered with, fails.',
+  'down-or-broken': 'A check that makes the site down or broken fails, including a failure seen only by the 6-hourly light check.',
+  'severity-C-H': 'Any other Critical or High finding fails.',
+  'severity-M': 'A Medium finding fails.',
+  'severity-L': 'A Low finding fails.',
+};
+const gradeChecks = (grade: number) =>
+  (Object.keys(CHECKS) as (keyof typeof CHECKS)[]).filter((id) => gradeFor(id, 'fail') === grade).map((id) => CHECKS[id].title.en);
 ---
 
 <Layout
@@ -144,6 +157,28 @@ const WEIGHT_LABEL: Record<keyof typeof WEIGHTS, string> = {
     "not yet confirmed" &mdash; we never guess. Government-aided colleges count toward the headline number of Kerala
     government websites, because they are publicly funded and publicly regulated.
   </p>
+
+  <h2 id="action-grades">Action grades</h2>
+  <p>
+    The <a href="/actions/">action report</a> gives every website a grade for its most urgent problem, from 1 (act now)
+    to 5 (minor). Grades come mechanically from each check's own settings, never assigned by hand. A check that only
+    <em>warns</em> counts one grade lower than its severity, and can never be grade 1 or 2. Signs of tampering are the
+    top grade but do not change a site's status: a link-text heuristic is not strong enough to tell citizens not to
+    visit a working site. If a finding is wrong, suggest a correction and we fix the check
+    (<a href="https://github.com/hashin/kerala-web-watch/blob/main/docs/DECISIONS.md">ADR-028</a>).
+  </p>
+  <table>
+    <thead><tr><th scope="col">Grade</th><th scope="col">When</th><th scope="col">Checks</th></tr></thead>
+    <tbody>
+      {GRADE_RULES.map((r) => (
+        <tr>
+          <td><GradeBadge bucket={r.grade} /></td>
+          <td>{RULE_TEXT[r.rule]} {t('en', `actions.grade.${r.grade}.meaning`)}</td>
+          <td>{gradeChecks(r.grade).join('; ')}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
 
   <h2>Vantage point and geo-blocking</h2>
   <p>
