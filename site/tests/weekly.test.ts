@@ -18,6 +18,12 @@ describe('delta', () => {
   it('treats a rise in a good count as good news', () => {
     expect(delta(1200, 100, false)).toEqual({ text: '▲ 1,100', tone: 'good' });
   });
+  it('still compares against a previous week of zero', () => {
+    expect(delta(3, 0, true)).toEqual({ text: '▲ 3', tone: 'bad' });
+  });
+  it('groups thousands the Indian way', () => {
+    expect(delta(150000, 0, false)?.text).toBe('▲ 1,50,000');
+  });
   it('appends the unit', () => {
     expect(delta(3, 1, false, ' pts').text).toBe('▲ 2 pts');
   });
@@ -44,6 +50,20 @@ describe('weekStrip', () => {
   });
   it('colours a week Crimson when the site was down, even with a good earlier score', () => {
     expect(weekStrip([{ d: '2026-09-25', up: false, score: 90 }], 1, NOW)).toEqual([CRIMSON]);
+  });
+  it('colours a down week Crimson even with no score, the usual case for a failed site', () => {
+    expect(weekStrip([{ d: '2026-09-25', up: false, score: null }], 1, NOW)).toEqual([CRIMSON]);
+  });
+  it('puts a Sunday entry in that same week', () => {
+    expect(weekStrip([{ d: '2026-09-27', up: true, score: 90 }], 1, NOW)).toEqual([TEAL]);
+  });
+  it('steps back exactly seven days per week', () => {
+    const monday = new Date('2026-09-21T12:00:00Z');
+    const h = [{ d: '2026-09-21', up: true, score: 60 }, { d: '2026-09-14', up: true, score: 90 }];
+    expect(weekStrip(h, 2, monday)).toEqual([TEAL, AMBER]);
+  });
+  it('scores 79 as needs work, one point under healthy', () => {
+    expect(weekStrip([{ d: '2026-09-25', up: true, score: 79 }], 1, NOW)).toEqual([AMBER]);
   });
   it('keeps an up-but-never-scored week grey', () => {
     expect(weekStrip([{ d: '2026-09-25', up: true, score: null }], 1, NOW)).toEqual([GREY]);

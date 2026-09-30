@@ -18,7 +18,7 @@ export interface WeekSnapshot {
   departments: Record<string, GroupStat>;
   /** Every site that was down/hijacked/broken when the snapshot was taken -- what next week diffs against. */
   broken_ids: string[];
-  /** Broken now but not in the previous snapshot's `broken_ids`, excluding sites registered after it. */
+  /** Broken now but not in the previous snapshot's `broken_ids`, excluding sites registered on or after the day it was taken. */
   broke: string[];
   /** In the previous snapshot's `broken_ids`, still registered, and no longer broken. */
   fixed: string[];
@@ -55,7 +55,9 @@ export function buildWeekSnapshot(registry: Registry, summary: Summary, previous
   const brokenIds = summary.sites.filter((s) => isBrokenClass(s.status)).map((s) => s.id).sort();
   const wasBroken = new Set(previous?.broken_ids ?? []);
   const nowBroken = new Set(brokenIds);
-  const registeredBeforePrevious = (id: string) => (registry.byId.get(id)?.added ?? '') <= (previous?.to ?? '');
+  // Strictly before the day the previous snapshot was taken: a site added that same day may post-date it,
+  // and "was working last week" is a claim we can only make for sites that were certainly registered.
+  const registeredBeforePrevious = (id: string) => (registry.byId.get(id)?.added ?? '') < (previous?.to ?? '');
 
   return {
     ...istWeek(now),

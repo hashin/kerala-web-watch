@@ -1,10 +1,12 @@
-import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { computeSummary } from '../src/summary.js';
 import type { Result } from '../src/store.js';
 import type { Registry, Site } from '../src/types.js';
+import { runWeekly } from '../src/cli.js';
+import { writeResult } from '../src/store.js';
 import { buildWeekSnapshot, isoWeek, istWeek, readPreviousWeek, writeWeekSnapshot, type WeekSnapshot } from '../src/weekly.js';
 
 function site(id: string, overrides: Partial<Site> = {}): Site {
@@ -45,6 +47,10 @@ describe('istWeek', () => {
   it('still counts Sunday 22:30 IST as week 39', () => {
     expect(istWeek(new Date('2026-09-27T17:00:00Z')).week).toBe('2026-W39');
   });
+  it('switches week at exactly 18:30 UTC Sunday, which is midnight Monday IST', () => {
+    expect(istWeek(new Date('2026-09-27T18:29:59Z')).week).toBe('2026-W39');
+    expect(istWeek(new Date('2026-09-27T18:30:00Z')).week).toBe('2026-W40');
+  });
   it('counts 00:30 Monday IST (19:00 Sunday UTC) as already week 40', () => {
     expect(istWeek(new Date('2026-09-27T19:00:00Z')).week).toBe('2026-W40');
   });
@@ -70,6 +76,37 @@ describe('buildWeekSnapshot', () => {
     const snap = snapshotOf(reg, [result('a', 'healthy'), result('b', 'down'), result('c', 'down')], last);
     expect(snap.broke).toEqual(['b', 'c']);
     expect(snap.fixed).toEqual(['a']);
+  });
+
+  it('does not report a site broken in both weeks as newly broke or fixed', () => {
+    const last = snapshotOf(reg, [result('a', 'down')], null, new Date('2026-09-20T17:00:00Z'));
+    const snap = snapshotOf(reg, [result('a', 'down')], last);
+    expect([snap.broke, snap.fixed]).toEqual([[], []]);
+  });
+
+  it('does not claim a site registered on the previous snapshot day was working last week', () => {
+    const onTheDay = registryOf([...reg.sites, site('same-day', { added: '2026-09-20' })]);
+    const last = { ...snapshotOf(onTheDay, [], null, new Date('2026-09-20T17:00:00Z')), to: '2026-09-20' };
+    expect(snapshotOf(onTheDay, [result('same-day', 'down')], last).broke).toEqual([]);
+  });
+
+  it('lists broken_ids, broke and fixed in sorted order whatever order sites arrive in', () => {
+    const backwards = registryOf([site('c'), site('b'), site('a')]);
+    const last = snapshotOf(backwards, [result('c', 'down'), result('b', 'down')], null, new Date('2026-09-20T17:00:00Z'));
+    const snap = snapshotOf(backwards, [result('a', 'down')], last);
+    expect(snap.broken_ids).toEqual(['a']);
+    expect(snap.broke).toEqual(['a']);
+    expect(snap.fixed).toEqual(['b', 'c']);
+    expect(snapshotOf(backwards, [result('c', 'down'), result('a', 'down'), result('b', 'down')], null).broken_ids).toEqual(['a', 'b', 'c']);
+  });
+
+  it('carries deep_audited and the district, ministry and department rollups into the snapshot', () => {
+    const withMinistry: Registry = { ...reg, byMinistry: new Map([['revenue', [reg.sites[0], reg.sites[1]]]]) };
+    const deep = { ...result('a', 'healthy'), deep: { at: '2026-09-25T00:00:00Z' } } as Result;
+    const snap = snapshotOf(withMinistry, [deep, result('b', 'down')], null);
+    expect(snap.deep_audited).toBe(1);
+    expect(snap.ministries).toEqual({ revenue: { sites: 2, broken: 1, median: null } });
+    expect(snap.departments.gad).toEqual({ sites: 4, broken: 1, median: null });
   });
 
   it('does not report a site as broke when it was only registered after the previous snapshot', () => {
@@ -99,6 +136,14 @@ describe('snapshot files', () => {
     expect(JSON.parse(readFileSync(path, 'utf8')).week).toBe('2026-W39');
   });
 
+  it('ignores files in weekly/ that are not <year>-W<nn>.json, and does not depend on directory order', () => {
+    const dir = tmp();
+    for (const w of ['2026-W37', '2026-W36', '2026-W38']) writeWeekSnapshot(dir, stub(w));
+    writeFileSync(join(dir, 'weekly', 'notes.txt'), 'not json');
+    writeFileSync(join(dir, 'weekly', '2026-W38-old.json'), 'not json');
+    expect(readPreviousWeek(dir, '2026-W39')?.week).toBe('2026-W38');
+  });
+
   it('returns null when no weekly directory exists yet', () => {
     expect(readPreviousWeek(tmp(), '2026-W39')).toBeNull();
   });
@@ -108,5 +153,46 @@ describe('snapshot files', () => {
     for (const w of ['2026-W37', '2026-W38', '2026-W39', '2026-W40']) writeWeekSnapshot(dir, stub(w));
     expect(readPreviousWeek(dir, '2026-W39')?.week).toBe('2026-W38');
     expect(readPreviousWeek(dir, '2026-W37')).toBeNull();
+  });
+});
+
+describe('cli weekly', () => {
+  const dirs: string[] = [];
+  afterEach(() => { vi.restoreAllMocks(); dirs.splice(0).forEach((d) => rmSync(d, { recursive: true, force: true })); });
+  const REGISTRY = join(__dirname, 'fixtures', 'registry', 'valid');
+  const run = (dir: string, now: string) => runWeekly(['--registry', REGISTRY, '--data', dir, '--now', now]);
+  const readSnap = (dir: string, week: string) => JSON.parse(readFileSync(join(dir, 'weekly', `${week}.json`), 'utf8')) as WeekSnapshot;
+
+  function dataDirWith(statuses: Record<string, Result['status']>): string {
+    const dir = mkdtempSync(join(tmpdir(), 'weekly-cli-'));
+    dirs.push(dir);
+    mkdirSync(join(dir, 'results'));
+    for (const [id, status] of Object.entries(statuses)) writeResult(dir, result(id, status));
+    return dir;
+  }
+
+  it('writes weekly/<week>.json for the IST week of --now and exits 0', async () => {
+    vi.spyOn(console, 'error').mockImplementation(() => {});
+    const dir = dataDirWith({ finance: 'down' });
+    expect(await run(dir, '2026-09-27T17:00:00Z')).toBe(0);
+    const snap = readSnap(dir, '2026-W39');
+    expect(snap.broken_ids).toEqual(['finance']);
+    expect(snap.counts.down).toBe(1);
+  });
+
+  it('diffs a new week against last week, but a same-week re-run against the week before, not itself', async () => {
+    vi.spyOn(console, 'error').mockImplementation(() => {});
+    const dir = dataDirWith({ finance: 'healthy', 'kerala-gov': 'healthy' });
+    await run(dir, '2026-09-27T17:00:00Z'); // W39: nothing broken (fixture sites were added 2026-09-20, before this snapshot)
+    writeResult(dir, result('finance', 'down'));
+    await run(dir, '2026-10-04T17:00:00Z'); // W40: finance broke
+    await run(dir, '2026-10-04T17:30:00Z'); // W40 re-run: still diffed against W39, not against itself
+    expect(readSnap(dir, '2026-W40').broke).toEqual(['finance']);
+  });
+
+  it('fails with exit 1 and a usage message when --data is missing', async () => {
+    const err = vi.spyOn(console, 'error').mockImplementation(() => {});
+    expect(await runWeekly(['--registry', REGISTRY])).toBe(1);
+    expect(err.mock.calls[0][0]).toContain('Usage: cli.js weekly');
   });
 });

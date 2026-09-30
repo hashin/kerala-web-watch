@@ -427,7 +427,7 @@ const WEEKLY_USAGE = 'Usage: cli.js weekly --registry <dir> --data <dir> [--now 
  * the newest earlier snapshot for the `broke`/`fixed` lists. Re-running within a week overwrites
  * that week's file. Reads only local files; never touches the live internet.
  */
-async function runWeekly(argv: string[]): Promise<number> {
+export async function runWeekly(argv: string[]): Promise<number> {
   if (argv.includes('--help')) {
     console.log(WEEKLY_USAGE);
     return 0;
