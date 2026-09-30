@@ -23,9 +23,16 @@ export function filterCandidateHosts(outlinks: OutlinksData): string[] {
     .sort();
 }
 
+/** `www.x` and `x` are the same organisation's site; comparing them as different hosts made
+ * discovery keep re-proposing already-registered orgs (STATE.md open question 17). */
+export function foldWww(host: string): string {
+  const lower = host.toLowerCase();
+  return lower.startsWith('www.') ? lower.slice(4) : lower;
+}
+
 function hostnameOf(url: string): string | null {
   try {
-    return new URL(url).hostname.toLowerCase();
+    return foldWww(new URL(url).hostname);
   } catch {
     return null;
   }
@@ -48,9 +55,10 @@ export function registeredHosts(registry: Registry): Set<string> {
  * `district-portals.ts`'s own exact-hostname convention, extended to subdomains since several
  * existing entries, e.g. `aai.aero`, are clearly meant to catch the whole organisation). */
 export function isIgnoredHost(host: string, ignore: IgnoreEntry[]): boolean {
+  const bare = foldWww(host);
   return ignore.some((entry) => {
-    const pattern = entry.pattern.toLowerCase();
-    return host === pattern || host.endsWith(`.${pattern}`);
+    const pattern = foldWww(entry.pattern);
+    return bare === pattern || bare.endsWith(`.${pattern}`);
   });
 }
 
@@ -60,7 +68,7 @@ export function isIgnoredHost(host: string, ignore: IgnoreEntry[]): boolean {
  * `registeredHosts`'s complement next run, so it's never proposed again. */
 export function newCandidateHosts(outlinks: OutlinksData, registry: Registry, ignore: IgnoreEntry[]): string[] {
   const known = registeredHosts(registry);
-  return filterCandidateHosts(outlinks).filter((host) => !known.has(host) && !isIgnoredHost(host, ignore));
+  return filterCandidateHosts(outlinks).filter((host) => !known.has(foldWww(host)) && !isIgnoredHost(host, ignore));
 }
 
 export interface DiscoveredCandidate {

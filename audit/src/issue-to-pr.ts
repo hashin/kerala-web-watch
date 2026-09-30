@@ -1,3 +1,4 @@
+import { foldWww } from './discover.js';
 import { dump as dumpYaml, load as loadYaml } from 'js-yaml';
 import type { LightResult } from './light.js';
 import { normalizeUrl } from './url.js';
@@ -68,11 +69,11 @@ export function normalizeFormUrl(rawUrl: string): string | null {
 /** Same "already known" question `discover.ts`'s `registeredHosts` answers, but this also needs
  * *which* site matched, to link the submitter to the page that already covers their URL. */
 export function alreadyRegisteredSite(normalizedUrl: string, registry: Registry): Site | null {
-  const host = new URL(normalizedUrl).hostname.toLowerCase();
+  const host = foldWww(new URL(normalizedUrl).hostname);
   for (const site of registry.sites) {
     for (const url of [site.url, ...site.aliases]) {
       try {
-        if (new URL(url).hostname.toLowerCase() === host) return site;
+        if (foldWww(new URL(url).hostname) === host) return site;
       } catch {
         continue;
       }

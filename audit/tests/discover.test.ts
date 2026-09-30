@@ -97,6 +97,23 @@ describe('registeredHosts', () => {
   });
 });
 
+describe('www folding (open question 17)', () => {
+  it('registeredHosts stores a www url under its bare host', () => {
+    const registry = registryOf([site({ id: 'x', url: 'https://www.cusat.ac.in' })]);
+    expect(registeredHosts(registry)).toEqual(new Set(['cusat.ac.in']));
+  });
+
+  it('newCandidateHosts drops a bare host whose www variant is registered, and vice versa', () => {
+    const registry = registryOf([site({ id: 'a', url: 'https://www.a.gov.in' }), site({ id: 'b', url: 'https://b.gov.in' })]);
+    const outlinks: OutlinksData = { 'a.gov.in': outlink(), 'www.b.gov.in': outlink(), 'c.gov.in': outlink() };
+    expect(newCandidateHosts(outlinks, registry, [])).toEqual(['c.gov.in']);
+  });
+
+  it('isIgnoredHost matches across the www variant', () => {
+    expect(isIgnoredHost('instagram.com', [{ pattern: 'www.instagram.com', reason: 'x' }])).toBe(true);
+  });
+});
+
 describe('isIgnoredHost', () => {
   const ignore: IgnoreEntry[] = [{ pattern: 'aai.aero', reason: 'central' }];
 

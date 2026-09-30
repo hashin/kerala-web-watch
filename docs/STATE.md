@@ -163,7 +163,7 @@ nothing citizen-critical depends on it and it's easy to pick up later.
     genuine 404s and were excluded, leaving 0 `arts_science_college` entries in `sites/colleges.yaml`. That
     source would need a different, more current page before it's worth harvesting again; not attempted this
     session since it's a fresh discovery task, not a WP5.4 fix.
-17. **`discover.ts`'s own dedupe misses a www/bare-domain variant of an already-registered host.** Curating
+17. **RESOLVED 2026-09-30 (`foldWww` in `discover.ts` + `issue-to-pr.ts`, tests in `discover.test.ts`).** ~~`discover.ts`'s own dedupe misses a www/bare-domain variant of an already-registered host.** Curating
     PR #6 (2026-09-25) found 6 "new" candidates (`cusat.ac.in`, `uoc.ac.in`, `ikm.gov.in`,
     `keralaenergy.gov.in`, `keralasidco.com`, `keralasoils.gov.in`) that were actually already-registered
     orgs under a `www.` variant of the identical domain — `registeredHosts()`'s normalization doesn't fold
@@ -178,7 +178,7 @@ nothing citizen-critical depends on it and it's easy to pick up later.
     reading; recorded in `registry/ignore.yaml` with the full detail, but genuinely worth the human (or a
     future session) taking a direct look at `lsg-bp-parappa`'s actual page to see whether that link is
     legitimate content or a sign the site itself has been tampered with.
-19. **`cee-kerala.org` — left unclassified, needs a clearer signal.** The discovery crawl saw real
+19. **RESOLVED 2026-09-30 — human confirmed official; added as alias of `ceekerala`.** ~~`cee-kerala.org` — left unclassified~~ The discovery crawl saw real
     "Commissionerate of Entrance Examinations, Kerala" content there; a direct check the same day returned
     404. May be a legacy/alternate domain for the already-registered `ceekerala` (`cee.kerala.gov.in`), or may
     be genuinely gone. Not added as a new site, not added as an alias, not moved to `ignore.yaml` — sitting
@@ -188,6 +188,10 @@ nothing citizen-critical depends on it and it's easy to pick up later.
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
 
+- **2026-09-30 (later) · Human answers to the open questions.** Q17 fixed + tested; Q19 → alias. Queued for
+  new WPs (need ADR/plan first): Q16 → separate but linked *government* and *aided* college sections;
+  Q18 → a site-wide, graded **action report** (high-priority items like possible compromise, for every
+  site). Q6 (India runner) awaiting the human's pick; weekly discovery stays manual.
 - **2026-09-30 · Curated the fresh discovered.yaml.** 59 candidates checked live: 8 PSUs (coir corp,
   KELPALM, FIT, Kerala Ceramics, KPPL, KSIE, KAL, TELK) → `psus.yaml`; SITTTR Kerala → `agencies.yaml`;
   29 central/spam/vendor/sub-unit hosts → `ignore.yaml`. `keralaautomobilesltd.com` returns HTTP 522
