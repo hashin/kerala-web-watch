@@ -150,7 +150,7 @@ nothing citizen-critical depends on it and it's easy to pick up later.
     `scripts/harvest/colleges.ts` now writes `registry/sites/colleges.yaml` directly (49 entries), after its
     own live resolve-check (DNS failure or a confirmed HTTP error excludes; a network-level hiccup once DNS
     resolves does not — mirrors `audit/src/resolve.ts`'s own error-vs-warn split). See ADR-027's Resolved note.
-16. **Government-vs-government-aided colleges still aren't distinguished in DTE's own tables — unresolved,**
+16. **RESOLVED 2026-09-30 (ADR-029, `management` field, `/colleges/` sections).** ~~Government-vs-government-aided colleges still aren't distinguished in DTE's own tables — unresolved,~~
     **not blocking.** The WP5.4 harvest's DTE counts (12 engineering, 37 polytechnic after resolve-filtering)
     match the *government-plus-aided* totals a web search reported (9 govt + 3 aided engineering; 43 govt + 6
     aided polytechnic), not government-only, and neither `institutiondetail/1/` nor `/2/`'s own HTML marks
@@ -188,6 +188,13 @@ nothing citizen-critical depends on it and it's easy to pick up later.
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
 
+- **2026-09-30 (colleges) · ADR-029 built: government / aided colleges, separate but linked.** Schema +
+  3 validate rules, migration scripts (`scripts/migrate/`), harvest carries `management`+`added` forward,
+  `/colleges/` hub + `/colleges/{government,aided}/`, per-site line (en + ml), CSV/JSON `management`. 40
+  government, 5 aided, 4 unconfirmed (see ADR-029 outcome). Malayalam strings need a native reader.
+  Still open: Collegiate Education arts & science URLs (needs its own harvest plan). NOTE: an untracked
+  `handoff/` dir (a dashboard redesign brief + port of `site/src`) appeared 2026-09-30 11:12; not mine,
+  not committed — it will conflict with these `site/src` edits, so integrate it deliberately.
 - **2026-09-30 (WP4.7, option B) · India vantage code shipped, dormant.** `light --unverifiable --vantage in-1`,
   `mergeIndiaLightResult` (two-strike, stored under `light.vantages['in-1']`, survives a re-blocked US check),
   `light-india` job in `uptime.yml` gated on repo var `HAS_INDIA_RUNNER=true`. Light-only India success gives

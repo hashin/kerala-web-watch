@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { parseCollegiateTable, parseDteTable } from './colleges.js';
+import { carryForwardExisting, parseCollegiateTable, parseDteTable, type ExistingCollege } from './colleges.js';
 
 // Fixture shape copied from a real fetch of dtekerala.gov.in's engineering and polytechnic
 // institutiondetail pages (2026-09-25): both a "http//host" typo (missing colon) and a
@@ -130,4 +130,25 @@ test('parseCollegiateTable reads district from the source\'s own District column
   const rows = parseCollegiateTable(COLLEGIATE_FIXTURE);
   const nedumangad = rows.find((r) => r.name === 'Government College Nedumangad');
   assert.equal(nedumangad?.district, 'thiruvananthapuram');
+});
+
+const fresh = {
+  id: 'x', name: 'X', url: 'http://x.ac.in', aliases: [], tier: 'college', kind: 'polytechnic', department: 'hedu', org_parent: null,
+  scope: 'local', district: null, place: null, platform: null, management: null, management_source: null, priority: 1, tags: [],
+  source: 's', added: '2026-09-30', lifecycle: 'active', notes: '',
+} as const;
+
+test('carryForwardExisting keeps a known college\'s management, its source and its original added date', () => {
+  const existing = new Map<string, ExistingCollege>([['x', { management: 'aided', management_source: 'https://e.org/a.pdf', added: '2026-09-25' }]]);
+  const out = carryForwardExisting({ ...fresh }, existing);
+  assert.equal(out.management, 'aided');
+  assert.equal(out.management_source, 'https://e.org/a.pdf');
+  assert.equal(out.added, '2026-09-25');
+});
+
+test('carryForwardExisting leaves a college it has never seen unclassified with today\'s added date', () => {
+  const out = carryForwardExisting({ ...fresh }, new Map());
+  assert.equal(out.management, null);
+  assert.equal(out.management_source, null);
+  assert.equal(out.added, '2026-09-30');
 });

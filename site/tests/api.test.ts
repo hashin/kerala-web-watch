@@ -55,8 +55,16 @@ describe('sitesToCsv', () => {
     const s = site({ id: 'a', name: 'Alpha', district: 'kollam', department: 'gad', kind: 'directorate', platform: null, status: 'healthy', result: result({ id: 'a', status: 'healthy', score: scoreOf(85), url: 'https://test.kerala.gov.in' }) });
     const csv = sitesToCsv([s]);
     const [header, row] = csv.trim().split('\n');
-    expect(header).toBe('id,name,url,district,department,kind,platform,status,score');
-    expect(row).toBe('a,Alpha,https://test.kerala.gov.in,kollam,gad,directorate,,healthy,85');
+    expect(header).toBe('id,name,url,district,department,kind,platform,management,status,score');
+    expect(row).toBe('a,Alpha,https://test.kerala.gov.in,kollam,gad,directorate,,,healthy,85');
+  });
+
+  it('writes a college\'s management in its own column, blank for a non-college', () => {
+    const aided = site({ id: 'c', tier: 'college', management: 'aided' });
+    const other = site({ id: 'd' });
+    const [, aidedRow, otherRow] = sitesToCsv([aided, other]).trim().split('\n');
+    expect(aidedRow.split(',')[7]).toBe('aided');
+    expect(otherRow.split(',')[7]).toBe('');
   });
 
   it('quotes a field containing a comma and escapes embedded quotes', () => {

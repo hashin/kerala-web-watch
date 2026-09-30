@@ -1,0 +1,28 @@
+---
+import type { SiteView } from '../lib/data';
+import type { Locale } from '../i18n';
+import { collegeManagementText } from '../lib/colleges';
+
+interface Props {
+  site: Pick<SiteView, 'tier' | 'management'>;
+  locale: Locale;
+}
+
+const { site, locale } = Astro.props;
+const text = collegeManagementText(site, locale);
+---
+
+{
+  text && (
+    <p class="college-management">
+      <strong>{text.label}</strong> &mdash; {text.meaning} <a href={text.href}>{text.seeAll}</a>
+    </p>
+  )
+}
+
+<style>
+  .college-management {
+    max-width: 60ch;
+    color: var(--color-text-muted, inherit);
+  }
+</style>

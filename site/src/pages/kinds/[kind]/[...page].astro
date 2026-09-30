@@ -29,6 +29,12 @@ const { page } = Astro.props as { page: import('astro').Page<ReturnType<typeof g
   <p><a href="/">&larr; Home</a></p>
   <h1>{label(kind)}</h1>
   <p>{page.total} tracked site{page.total === 1 ? '' : 's'}.</p>
+  {getSites().some((s) => s.kind === kind && s.tier === 'college') && (
+    <p>
+      This list mixes government and government-aided colleges &mdash; see <a href="/colleges/government/">government colleges</a> &middot;
+      <a href="/colleges/aided/">government-aided colleges</a>.
+    </p>
+  )}
   <GroupRollup sites={page.total > 0 ? getSites().filter((s) => s.kind === kind) : []} />
   <SiteTable sites={page.data} />
   <Pagination page={page} />

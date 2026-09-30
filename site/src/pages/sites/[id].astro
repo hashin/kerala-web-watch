@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import CollegeManagement from '../../components/CollegeManagement.astro';
 import HealthBadge from '../../components/HealthBadge.astro';
 import ScoreRing from '../../components/ScoreRing.astro';
 import CategoryBars from '../../components/CategoryBars.astro';
@@ -100,6 +101,7 @@ const otherInDistrict = site.district
         &nbsp;<HealthBadge status={site.status} />
       </p>
       {reason && <p class="status-reason">{reason.citizen}</p>}
+      <CollegeManagement site={site} locale={'en'} />
       <p class="audit-times">
         {deep && <>Audited {timeAgo(deep.at)}</>}
         {deep && light && ' · '}

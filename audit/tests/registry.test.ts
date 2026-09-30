@@ -103,6 +103,29 @@ describe('validateRegistry: rule violations', () => {
     ]);
   });
 
+  it('rejects management set on a site whose tier is not college', () => {
+    expect(validateRegistry(fixture('management-tier-invalid'))).toEqual([
+      expect.objectContaining({ rule: 'management-tier', id: 'kerala-gov', severity: 'error' }),
+    ]);
+  });
+
+  it('rejects a management value with no management_source', () => {
+    expect(validateRegistry(fixture('management-source-missing'))).toEqual([
+      expect.objectContaining({ rule: 'management-source', id: 'kerala-gov', severity: 'error' }),
+    ]);
+  });
+
+  it('only warns (never errors) when a college has no management yet', () => {
+    expect(validateRegistry(fixture('management-missing'))).toEqual([
+      expect.objectContaining({ rule: 'management-missing', id: 'kerala-gov', severity: 'warn' }),
+    ]);
+  });
+
+  it('rejects a management value outside government/aided as a schema failure', () => {
+    const failures = validateRegistry(fixture('management-bad-value'));
+    expect(failures.some((f) => f.rule === 'schema' && f.id === 'kerala-gov')).toBe(true);
+  });
+
   it('rejects an org_parent that is not a known site id', () => {
     const failures = validateRegistry(fixture('bad-org-parent-ref'));
     expect(failures).toEqual([

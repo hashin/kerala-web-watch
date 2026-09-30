@@ -52,7 +52,7 @@ Cost: ₹0. Public repos get free Actions minutes and free Pages hosting.
 | T1 Missions, societies, agencies | IT Mission, Kudumbashree, Haritha Keralam, LIFE, Ardram, KSUM, K‑DISC, KFON, C‑DIT, Akshaya, KIIFB, KSDMA, KSCSTE, KSITM, KELSA, State Planning Board, Kerala Knowledge Economy Mission, Arogya Keralam (NHM), Samagra Shiksha, KITE, SCERT, Pareeksha Bhavan, Literacy Mission… | ~60 |
 | T2 Statutory bodies | KPSC, State Election Commission, State Information Commission, Lokayukta, Human Rights Commission, Women's Commission, SC/ST Commission, Youth Commission, Minorities Commission, Child Rights Commission, Pollution Control Board, Biodiversity Board, Housing Board, Wakf Board, Coastal Zone Management Authority, Devaswom Boards (Travancore, Cochin, Malabar, Guruvayur), Bar Council… | ~50 |
 | T2 Universities | Kerala, Calicut, MG, Kannur, CUSAT, APJ AKTU, KUHS, KAU, KVASU, KUFOS, SSUS, Malayalam University, Digital University, NUALS, Sreenarayanaguru Open University | 15 |
-| T2 Government colleges (optional, phase 5) | Arts & science, engineering, polytechnics, medical, nursing, law, teacher training | ~200 |
+| T2 Government and government-aided colleges (phase 5; `management` field, ADR-029) | Arts & science, engineering, polytechnics, medical, nursing, law, teacher training | ~200 |
 | T3 State PSUs | KSEB, KWA, KSRTC, KSFE, KSIDC, KINFRA, KELTRON, KMML, Malabar Cements, Travancore Titanium, KTDC, Supplyco, Kerala Feeds, KSFDC, Kerala Books & Publications, KSCDC, KSBC (Beverages), Kerala Minerals, KSHB, KSWDC, KSBCDC, Kerala Bank (co‑op)… (~130 listed by Bureau of Public Enterprises) | ~130 |
 | T4 District administration | 14 collectorate sites, plus district‑level office sites where separate (police districts, DMOs, RTOs) | ~40 |
 | T5 LSGIs | 6 corporations, 87 municipalities, 14 district panchayats, 152 block panchayats, 941 grama panchayats | 1,200 |
@@ -83,6 +83,7 @@ The registry is the human‑curated heart of the project. It lives in the repo, 
   scope: state                       # state | district | local
   district: thiruvananthapuram       # id from registry/districts.yaml (HQ district; null for state portals is allowed but discouraged)
   place: thiruvananthapuram          # id from registry/places.yaml (city/town), used by the map
+  management: null                   # colleges only: government | aided, with management_source (ADR-029)
   lsg_type: null                     # corporation | municipality | district_panchayat | block_panchayat | grama_panchayat
   platform: null                     # lsgkerala | s3waas | nic-cms | null — templated hosting platforms
   priority: 3                        # 3 = state core, 2 = district/ULB/statutory, 1 = GP/college; drives first-sweep order
@@ -607,6 +608,7 @@ Some NIC‑hosted sites block or throttle non‑Indian IPs. GitHub‑hosted runn
 | `/sites/<id>/` | **The site page** — see 7.3 |
 | `/status/<down|hijacked|broken|poor|unverifiable>/` | Lists with department & district columns |
 | `/kinds/<kind>/` | All universities, all commissions, … |
+| `/colleges/`, `/colleges/government/`, `/colleges/aided/` | Colleges split by who runs them, linked (ADR-029) |
 | `/platforms/lsgkerala/` | Platform‑level findings reported once |
 | `/leaderboard/` | Best and worst departments and districts; most improved this month |
 | `/methodology/` | Every check, weight, threshold; limitations; ethics; how to contest |

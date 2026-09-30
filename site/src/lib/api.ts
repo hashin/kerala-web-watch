@@ -6,7 +6,7 @@ import type { Result, SiteView, Status } from './data';
  * uses, since build-deploy.yml sets `SITE_URL` the same way for both. */
 export const SITE_URL = process.env.SITE_URL ?? 'https://govwebsite.hashin.me';
 
-const CSV_COLUMNS = ['id', 'name', 'url', 'district', 'department', 'kind', 'platform', 'status', 'score'] as const;
+const CSV_COLUMNS = ['id', 'name', 'url', 'district', 'department', 'kind', 'platform', 'management', 'status', 'score'] as const;
 
 function csvField(value: string | number | null): string {
   if (value === null) return '';
@@ -18,7 +18,7 @@ function csvField(value: string | number | null): string {
  * spreadsheet tools nobody wants to write a JSON parser for. */
 export function sitesToCsv(sites: SiteView[]): string {
   const rows = sites.map((s) =>
-    [s.id, s.name, s.url, s.district ?? '', s.department, s.kind, s.platform ?? '', s.status, s.result?.score?.overall ?? '']
+    [s.id, s.name, s.url, s.district ?? '', s.department, s.kind, s.platform ?? '', s.management ?? '', s.status, s.result?.score?.overall ?? '']
       .map(csvField)
       .join(','),
   );
@@ -34,6 +34,7 @@ export interface SiteApiRecord {
   department: string;
   kind: string;
   platform: string | null;
+  management: string | null;
   status: Status;
   score: Result['score'];
   issues: Result['issues'];
@@ -56,6 +57,7 @@ export function siteApiRecord(site: SiteView): SiteApiRecord {
     department: site.department,
     kind: site.kind,
     platform: site.platform,
+    management: site.management ?? null,
     status: site.status,
     score: result?.score ?? null,
     issues: result?.issues ?? [],
