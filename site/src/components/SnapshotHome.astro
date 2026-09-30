@@ -1,0 +1,158 @@
+---
+// The "this week's snapshot" home body, shared by `/` and `/ml/`: live numbers, compared with the last
+// completed week's snapshot when one exists. All copy goes through i18n keys; the caller supplies the Layout.
+import HealthBadge from './HealthBadge.astro';
+import KpiTile from './KpiTile.astro';
+import StackBar from './StackBar.astro';
+import RankTable from './RankTable.astro';
+import PagefindSearch from './PagefindSearch.astro';
+import { getSites, getSummary, getSite, getDistricts, explainStatus } from '../lib/data';
+import { getActionReport } from '../lib/actions';
+import { countByStatus, medianScore, percentBroken } from '../lib/rollups';
+import { comparisonSnapshot, countSeries, currentWeek, getSnapshots, brokenCount, brokenTrend, delta, BROKEN } from '../lib/weekly';
+import { tips } from '../lib/tips';
+import { t, tf, type Locale } from '../i18n';
+import type { RankRowData } from '../lib/types';
+
+interface Props { locale?: Locale }
+const { locale = 'en' } = Astro.props;
+const { TIP } = tips(locale);
+const siteHref = (id: string) => (locale === 'ml' ? `/ml/sites/${id}/` : `/sites/${id}/`);
+const searchId = locale === 'ml' ? 'ml-home-search' : 'home-search';
+const num = (n: number) => n.toLocaleString('en-IN');
+
+const sites = getSites();
+const summary = getSummary();
+const counts = countByStatus(sites);
+const broken = brokenCount(counts);
+const unaudited = counts.unaudited + counts.unverifiable;
+const wk = currentWeek();
+const prev = comparisonSnapshot(wk.week);
+const trend = brokenTrend(sites, 8);
+const trendMax = Math.max(1, ...trend.map((w) => w.broken));
+const dBroken = delta(broken, prev ? brokenCount(prev.counts) : null, true);
+const snaps = getSnapshots();
+const series = (pick: (c: typeof counts) => number, live: number) => countSeries(snaps, wk.week, pick, live);
+const actionTotals = getActionReport().totals;
+// Action-report grades: 1 = visitors may be at risk, 2 = citizens cannot use the site; both are "Act now".
+const urgent = actionTotals[1] + actionTotals[2];
+
+const kpis = [
+  { label: t(locale, 'band.healthy'), value: counts.healthy, color: 'var(--teal)', tip: TIP.kpiHealthy, delta: delta(counts.healthy, prev?.counts.healthy, false), spark: series((c) => c.healthy, counts.healthy), href: '/status/healthy/' },
+  { label: t(locale, 'band.needs-work'), value: counts['needs-work'], color: 'var(--amber)', tip: TIP.kpiNeedsWork, delta: delta(counts['needs-work'], prev?.counts['needs-work'], true), spark: series((c) => c['needs-work'], counts['needs-work']), href: '/status/needs-work/' },
+  { label: t(locale, 'band.poor'), value: counts.poor, color: 'var(--coral)', tip: TIP.kpiPoor, delta: delta(counts.poor, prev?.counts.poor, true), spark: series((c) => c.poor, counts.poor), href: '/status/poor/' },
+  { label: t(locale, 'band.broken'), value: broken, color: 'var(--crimson)', tip: TIP.kpiBroken, delta: dBroken, spark: series(brokenCount, broken), href: '/status/broken/' },
+  {
+    label: t(locale, 'status.unaudited'), value: unaudited, color: 'var(--grey)', tip: TIP.kpiUnaudited,
+    delta: delta(unaudited, prev ? prev.counts.unaudited + prev.counts.unverifiable : null, false),
+    spark: series((c) => c.unaudited + c.unverifiable, unaudited), href: '/status/unaudited/',
+    note: counts.unverifiable > 0 ? tf(locale, 'home.unverifiableNote', { n: counts.unverifiable }) : undefined,
+  },
+];
+
+const brokenIn = (list: typeof sites) => list.filter((s) => BROKEN.includes(s.status)).length;
+const districts: RankRowData[] = getDistricts()
+  .map((d) => {
+    const inDistrict = sites.filter((s) => s.district === d.id);
+    return { name: d.name, href: `/districts/${d.id}/`, sites: inDistrict.length, brokenPct: percentBroken(inDistrict), median: medianScore(inDistrict), delta: delta(brokenIn(inDistrict), prev?.districts[d.id]?.broken, true) };
+  })
+  .sort((a, b) => b.brokenPct - a.brokenPct)
+  .slice(0, 7);
+
+const named = (rows: { id: string; since: string }[]) => rows.map((r) => ({ ...r, site: getSite(r.id) })).filter((r) => r.site);
+const recentBroken = named(summary.recent_broken);
+const recentFixed = named(summary.recent_fixed);
+const cov = summary.coverage;
+const coveragePct = Math.round((cov.deep_audited / cov.total) * 100);
+
+// The headline's number is bold, so split the translated sentence around its {broken} slot.
+const [ledeBefore, ledeAfter] = tf(locale, 'home.lede', { total: num(sites.length) }).split('{broken}');
+const deltaSentence = dBroken && dBroken.tone !== 'flat'
+  ? `${tf(locale, dBroken.text.startsWith('▲') ? 'home.deltaMore' : 'home.deltaFewer', { n: dBroken.text.replace(/^[▲▼] /, '') })} · `
+  : '';
+const trendAria = tf(locale, 'home.trendAria', { list: trend.map((w) => `${w.now ? t(locale, 'ui.now') : w.week} ${w.broken}`).join(', ') });
+---
+
+<div class="d-stack">
+  <div class="d-row">
+    <div class="d-week" data-tip={TIP.week} tabindex="0">{tf(locale, 'ui.week', { n: wk.week.slice(-2), from: wk.from, to: wk.to })}</div>
+    <span style="flex:1"></span>
+    <PagefindSearch id={searchId} />
+  </div>
+
+  <div>
+    <h1 class="d-lede" data-tip={TIP.brokenHeadline} tabindex="0">{ledeBefore}<strong>{num(broken)}</strong>{ledeAfter}</h1>
+    <p class="d-muted" style="margin:.4rem 0 0">
+      {deltaSentence}{tf(locale, 'home.summaryLine', { broke: recentBroken.length, fixed: recentFixed.length, audited: num(cov.deep_audited) })}{' '}
+      {t(locale, 'home.unauditedBefore')} <HealthBadge status="unaudited" locale={locale} />. <a href="/methodology/">{t(locale, 'home.howWeCheck')}</a>.
+    </p>
+  </div>
+
+  <div class="d-grid d-grid--5">
+    {kpis.map((k) => <KpiTile {...k} locale={locale} />)}
+    <KpiTile label={t(locale, 'home.urgentLabel')} value={urgent} color="var(--crimson)" tip={TIP.urgent} href={locale === 'ml' ? '/ml/actions/' : '/actions/'} note={t(locale, 'home.urgentNote')} locale={locale} />
+  </div>
+
+  <div class="d-split">
+    <section class="d-card d-stack" style="gap:.9rem" aria-labelledby="hb">
+      <h2 id="hb" style="margin:0">{tf(locale, 'home.healthTitle', { total: num(sites.length) })}</h2>
+      <div data-tip={TIP.healthBar}><StackBar counts={counts} legend locale={locale} /></div>
+      {trend.length > 1 && <div class="d-trend" data-tip={TIP.trend} role="img" aria-label={trendAria}>
+        {trend.map((w) => (
+          <div><i style={`height:${(w.broken / trendMax) * 100}%`} aria-current={w.now ? 'true' : undefined} data-tip={tf(locale, 'home.trendBarTip', { when: w.now ? t(locale, 'ui.nowCap') : w.week, n: w.broken })}></i>{w.week}</div>
+        ))}
+      </div>}
+      {trend.length < 2 && <p class="d-small d-muted" style="margin:0">{t(locale, 'home.noHistory')}</p>}
+    </section>
+    <section class="d-card d-stack" style="align-items:center;justify-content:center" aria-labelledby="cv" data-tip={TIP.coverage} tabindex="0">
+      <h2 id="cv" style="margin:0;align-self:flex-start">{t(locale, 'home.coverageTitle')}</h2>
+      <div class="d-donut" style={`--pct:${coveragePct}%`} role="img" aria-label={tf(locale, 'home.deepAuditedAria', { pct: coveragePct })}><span>{coveragePct}%</span></div>
+      <p class="d-muted" style="text-align:center;margin:0">{tf(locale, 'home.coverageOf', { n: num(cov.deep_audited), total: num(cov.total) })}{cov.eta ? <><br />{tf(locale, 'home.fullCoverageBy', { eta: cov.eta })}</> : null}</p>
+    </section>
+  </div>
+
+  <div class="d-grid d-grid--2">
+    <section class="d-card" aria-labelledby="bk" data-tip={TIP.broke} tabindex="0">
+      <h2 id="bk" style="color:var(--crimson-ink)">{tf(locale, 'home.brokeTitle', { n: recentBroken.length })}</h2>
+      <ul class="d-list">
+        {recentBroken.slice(0, 5).map((r) => {
+          const why = explainStatus(r.site!, locale);
+          return (
+            <li>
+              <div class="d-row" style="flex-wrap:nowrap"><a href={siteHref(r.id)} style="flex:1">{r.site!.name}</a><HealthBadge status={r.site!.status} locale={locale} /></div>
+              <div class="d-small d-muted">{why ? why.citizen : ''} {tf(locale, 'home.since', { date: r.since })}</div>
+            </li>
+          );
+        })}
+      </ul>
+      {recentBroken.length === 0 && <p class="d-muted">{t(locale, 'home.noneBroke')}</p>}
+      <p style="margin:.7rem 0 0"><a href="/status/broken/">{t(locale, 'home.seeAllBroken')}</a></p>
+    </section>
+    <section class="d-card" aria-labelledby="fx" data-tip={TIP.fixed} tabindex="0">
+      <h2 id="fx" style="color:var(--teal-ink)">{tf(locale, 'home.fixedTitle', { n: recentFixed.length })}</h2>
+      <ul class="d-list">
+        {recentFixed.slice(0, 5).map((r) => <li class="d-row" style="flex-wrap:nowrap"><a href={siteHref(r.id)} style="flex:1">{r.site!.name}</a><span class="d-small d-muted">{tf(locale, 'home.backUpSince', { date: r.since })}</span></li>)}
+      </ul>
+      {recentFixed.length === 0 && <p class="d-muted">{t(locale, 'home.noneFixed')}</p>}
+    </section>
+  </div>
+
+  <section class="d-card" aria-labelledby="dr">
+    <div class="d-row" style="justify-content:space-between"><h2 id="dr" style="margin:0">{t(locale, 'home.districtsTitle')}</h2><a href="/districts/">{t(locale, 'home.allDistricts')}</a></div>
+    <RankTable rows={districts} nameLabel={t(locale, 'ui.district')} locale={locale} />
+  </section>
+
+  <section class="d-card" aria-labelledby="br">
+    <h2 id="br">{t(locale, 'home.browseTitle')}</h2>
+    <div class="d-chips">
+      <a class="d-chip" href="/ministries/">{t(locale, 'home.browseMinistry')}</a>
+      <a class="d-chip" href="/districts/">{t(locale, 'home.browseDistrict')}</a>
+      <a class="d-chip" href="/leaderboard/">{t(locale, 'home.browseLeaderboard')}</a>
+      <a class="d-chip" href="/colleges/">{t(locale, 'home.browseColleges')}</a>
+      <a class="d-chip" href="/kinds/grama_panchayat/">{t(locale, 'home.browsePanchayats')}</a>
+      <a class="d-chip" href="/kinds/university/">{t(locale, 'home.browseUniversities')}</a>
+      <a class="d-chip" href="/platforms/lsgkerala/">{t(locale, 'home.browsePlatform')}</a>
+      <a class="d-chip" href="/status/down/">{t(locale, 'home.browseDown')}</a>
+    </div>
+  </section>
+</div>

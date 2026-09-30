@@ -2,6 +2,7 @@
 import GradeBadge from './GradeBadge.astro';
 import { t, type Locale } from '../i18n';
 import type { ActionView } from '../lib/actions';
+import { tips } from '../lib/tips';
 
 interface Props {
   actions: ActionView[];
@@ -9,11 +10,12 @@ interface Props {
 }
 
 const { actions, locale = 'en' } = Astro.props;
+const { TIP } = tips(locale);
 ---
 
 {
   actions.length > 0 && (
-    <section aria-labelledby="fix-first-heading">
+    <section class="d-card" aria-labelledby="fix-first-heading" data-tip={TIP.actionsBlock} tabindex="0">
       <h2 id="fix-first-heading">{t(locale, 'actions.whatToFixFirst')}</h2>
       <ol class="action-list">
         {actions.map((a) => (

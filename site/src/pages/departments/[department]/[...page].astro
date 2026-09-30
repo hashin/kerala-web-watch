@@ -1,15 +1,15 @@
 ---
+import { listRange } from '../../../lib/format';
 import Layout from '../../../layouts/Layout.astro';
-import SiteTable from '../../../components/SiteTable.astro';
-import Pagination from '../../../components/Pagination.astro';
-import GroupRollup from '../../../components/GroupRollup.astro';
+import GroupListing from '../../../components/GroupListing.astro';
 import { getSites, getDepartments, getDepartment } from '../../../lib/data';
+import { comparisonSnapshot } from '../../../lib/weekly';
 
 export async function getStaticPaths({ paginate }: { paginate: import('astro').PaginateFunction }) {
   // ADR-025: paginate at 100 rows/page once a listing exceeds it (e.g. `lsgd`, whose ~1,210 LSGI
   // sites would otherwise be one enormous page). A small department's page never reaches page 2.
   // Every department gets at least a page-1 -- including one with zero sites (`minority` today) --
-  // rather than 404ing, so GroupRollup's empty state is reachable instead of a dead link.
+  // rather than 404ing, so the empty state is reachable instead of a dead link.
   // Defined inside this function, not at module scope: Astro's build otherwise tree-shakes an
   // outer const that only getStaticPaths references, leaving it undefined at build time.
   const PAGE_SIZE = 100;
@@ -23,13 +23,23 @@ export async function getStaticPaths({ paginate }: { paginate: import('astro').P
 const { department: departmentId } = Astro.params;
 const department = getDepartment(departmentId as string)!;
 const { page } = Astro.props as { page: import('astro').Page<ReturnType<typeof getSites>[number]> };
+const members = getSites().filter((s) => s.department === department.id);
+const snap = comparisonSnapshot()?.departments[department.id];
 ---
 
 <Layout title={department.name} description={`Government websites under the ${department.name} department.`}>
-  <p><a href="/">&larr; Home</a></p>
-  <h1>{department.name}{department.name_ml && <span lang="ml"> &middot; {department.name_ml}</span>}</h1>
-  <p>{page.total} tracked sites. <a href={`/departments/${department.id}/actions/`}>Action report for this department</a>.</p>
-  <GroupRollup sites={page.total > 0 ? getSites().filter((s) => s.department === department.id) : []} />
-  <SiteTable sites={page.data} />
-  <Pagination page={page} />
+  <GroupListing
+    title={department.name}
+    titleMl={department.name_ml}
+    backHref="/ministries/"
+    backLabel="All ministries"
+    sections={[{ id: 'all', title: listRange(page), sites: page.data }]}
+    groupSites={members}
+    prev={snap ? { broken: snap.broken, median: snap.median, sites: snap.sites } : null}
+    page={page}
+    showDepartment={false}
+    showDistrict
+  >
+    <p slot="intro" style="margin:0"><a href={`/departments/${department.id}/actions/`}>Action report for this department →</a></p>
+  </GroupListing>
 </Layout>

@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import ProsePage from '../layouts/ProsePage.astro';
 import { getSites, getSummary } from '../lib/data';
 
 const summary = getSummary();
@@ -8,20 +8,19 @@ const buildDate = new Date().toISOString().slice(0, 10);
 const exampleSiteId = getSites()[0]?.id ?? 'example';
 ---
 
-<Layout
+<ProsePage
   title="Data"
   description="Download Kerala Web Watch's audit data, read the static API and feeds, and see the licence it's released under."
->
-  <p><a href="/">&larr; Home</a></p>
-  <h1>Data</h1>
-  <p>
+  active="about"
+  toc={[['downloads', 'Downloads'], ['feeds', 'Feeds'], ['schema', 'Schema'], ['archives', 'Monthly archives'], ['licence', 'Licence']]}
+>  <p>
     Every number on this site comes from {summary.totals.sites.toLocaleString()} government
     websites we monitor, {summary.totals.deep_audited.toLocaleString()} of them deep-audited so
     far. All of it is open data &mdash; use it in a story, a dashboard, a dissertation, or your own
     department's dashboard.
   </p>
 
-  <h2>Downloads</h2>
+  <h2 id="downloads">Downloads</h2>
   <ul>
     <li><a href="/api/summary.json"><code>/api/summary.json</code></a> &mdash; the same headline rollup the homepage renders (totals, coverage, top issues, this week's transitions).</li>
     <li><a href="/api/actions.csv"><code>/api/actions.csv</code></a> and <a href="/api/actions.json"><code>/api/actions.json</code></a> &mdash; the graded action report: one row per action, with the site's grade, the check, its severity and the evidence.</li>
@@ -30,14 +29,14 @@ const exampleSiteId = getSites()[0]?.id ?? 'example';
     <li><a href={`/api/sites/${exampleSiteId}.json`}><code>/api/sites/&lt;id&gt;.json</code></a> &mdash; one site's complete record, evidence included &mdash; linked from every site page's own "Download JSON" action.</li>
   </ul>
 
-  <h2>Feeds</h2>
+  <h2 id="feeds">Feeds</h2>
   <p>Subscribe in any feed reader to watch sites change status without polling the site yourself.</p>
   <ul>
     <li><a href="/feeds/broken.xml"><code>/feeds/broken.xml</code></a> &mdash; the last 100 sites that went down, broken, hijacked or unverifiable.</li>
     <li><a href="/feeds/fixed.xml"><code>/feeds/fixed.xml</code></a> &mdash; the last 100 sites that came back up.</li>
   </ul>
 
-  <h2>Schema</h2>
+  <h2 id="schema">Schema</h2>
   <p>
     The list of sites we track (the "registry") is a set of YAML files validated against a JSON
     Schema:
@@ -50,7 +49,7 @@ const exampleSiteId = getSites()[0]?.id ?? 'example';
     &mdash; also readable, explained in plain language, on the <a href="/methodology/">methodology page</a>.
   </p>
 
-  <h2>Monthly archives</h2>
+  <h2 id="archives">Monthly archives</h2>
   <p>
     On the 1st of every month, the full dataset (every result, at that point in time) is zipped and
     published as a dated <a href="https://github.com/hashin/kerala-web-watch/releases">GitHub
@@ -61,7 +60,7 @@ const exampleSiteId = getSites()[0]?.id ?? 'example';
     month, the most common problems, and the best- and worst-scoring sites.
   </p>
 
-  <h2>Licence</h2>
+  <h2 id="licence">Licence</h2>
   <p>
     Code is <a href="https://github.com/hashin/kerala-web-watch/blob/main/LICENSE">MIT-licensed</a>;
     the registry and every audit result are
@@ -70,4 +69,4 @@ const exampleSiteId = getSites()[0]?.id ?? 'example';
   </p>
 
   <p>Last updated {buildDate}.</p>
-</Layout>
+</ProsePage>

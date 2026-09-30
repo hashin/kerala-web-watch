@@ -1,4 +1,5 @@
 ---
+// Site report card: the page a citizen or a departmental webmaster reads for one site.
 import Layout from '../../layouts/Layout.astro';
 import { getActionReport, actionView } from '../../lib/actions';
 import { t } from '../../i18n';
@@ -14,17 +15,13 @@ import Screenshot from '../../components/Screenshot.astro';
 import TechFacts from '../../components/TechFacts.astro';
 import SiteActions from '../../components/SiteActions.astro';
 import RelatedSites from '../../components/RelatedSites.astro';
-import {
-  getSites,
-  getDepartment,
-  getDistrict,
-  getMinistryForDepartment,
-  explainStatus,
-  CHECKS,
-} from '../../lib/data';
+import { getSites, getDepartment, getDistrict, getMinistryForDepartment, explainStatus, CHECKS } from '../../lib/data';
 import type { Issue } from '../../../../audit/dist/score.js';
 import { timeAgo } from '../../lib/format';
 import { platformWideIssues } from '../../lib/rollups';
+import { tips } from '../../lib/tips';
+
+const { TIP } = tips('en');
 
 export function getStaticPaths() {
   return getSites().map((site) => ({ params: { id: site.id }, props: { site } }));
@@ -67,6 +64,12 @@ const compromise = siteActionViews.find((a) => a.grade === 1 && CHECKS[a.check a
 
 const passedChecks = deep?.checks.filter((c) => c.r === 'pass') ?? [];
 
+// Score change against the nearest reading at least a week old (history is newest-first).
+const history = site.result?.history ?? [];
+const latestScore = history.find((h) => h.score != null);
+const weekAgoScore = history.find((h) => h.score != null && new Date(h.d).getTime() <= Date.now() - 7 * 864e5);
+const scoreChange = latestScore?.score != null && weekAgoScore?.score != null ? latestScore.score - weekAgoScore.score : null;
+
 const otherInDepartment = getSites()
   .filter((s) => s.department === site.department && s.id !== site.id)
   .sort((a, b) => a.name.localeCompare(b.name));
@@ -77,196 +80,130 @@ const otherInDistrict = site.district
   : [];
 ---
 
-<Layout title={site.name} description={`Status and audit findings for ${site.name}.`}>
-  <p><a href="/">&larr; All sites</a></p>
-  {compromise && (
-    <aside class="compromise-banner" role="alert">
-      <strong>{t('en', 'actions.compromiseBanner.heading')}</strong>
-      <p>{compromise.citizen}</p>
-    </aside>
-  )}
+<Layout title={site.name} description={`Status and audit findings for ${site.name}.`} active="snapshot">
+  <div class="d-stack">
+    <nav aria-label="Breadcrumb" class="d-small d-muted">
+      <a class="d-back" href="/">&larr; All sites</a>
+      {ministry && <span> · {ministry.name} &rsaquo; </span>}
+      {department && <a href={`/departments/${department.id}/`}>{department.name}</a>}
+      {district && <span> · <a href={`/districts/${district.id}/`}>{district.name}</a></span>}
+    </nav>
 
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    {ministry && <span>{ministry.name} &rsaquo; </span>}
-    {department && <a href={`/departments/${department.id}/`}>{department.name}</a>}
-    {district && (
-      <span>
-        {' · '}
-        <a href={`/districts/${district.id}/`}>{district.name}</a>
-      </span>
+    {compromise && (
+      <aside class="d-alert" role="alert">
+        <strong>{t('en', 'actions.compromiseBanner.heading')}</strong>
+        <p>{compromise.citizen}</p>
+      </aside>
     )}
-  </nav>
 
-  <h1>
-    {site.name}
-    {site.name_ml && <span lang="ml"> &middot; {site.name_ml}</span>}
-  </h1>
-
-  <div class="site-header">
-    <ScoreRing score={site.result?.score?.overall ?? null} />
-    <div>
-      <p>
-        {site.status === 'hijacked' ? (
-          <span class="hijacked-url">{site.url}</span>
-        ) : (
-          <a href={site.url}>{site.url}</a>
-        )}
-        &nbsp;<HealthBadge status={site.status} />
-      </p>
-      {reason && <p class="status-reason">{reason.citizen}</p>}
-      <CollegeManagement site={site} locale={'en'} />
-      <p class="audit-times">
-        {deep && <>Audited {timeAgo(deep.at)}</>}
-        {deep && light && ' · '}
-        {light && <>Checked {timeAgo(light.at)}</>}
-      </p>
-    </div>
-  </div>
-
-  {auditErrored && (
-    <p class="audit-error-note">
-      The most recent attempt to fully audit this site didn't finish ({timeAgo(deep!.at)}) — the scores
-      and issues below, if any, are from the last audit that did complete.
-    </p>
-  )}
-
-  {site.notes && <p class="site-note">{site.notes}</p>}
-
-  <section aria-labelledby="screenshot-heading">
-    <h2 id="screenshot-heading">Screenshot</h2>
-    <Screenshot id={site.id} siteName={site.name} screenshot={deep?.screenshot ?? null} reason={reason} />
-  </section>
-
-  {deep && (
-    <section aria-labelledby="scores-heading">
-      <h2 id="scores-heading">Scores</h2>
-      <CategoryBars score={site.result?.score ?? null} />
-    </section>
-  )}
-
-  <ActionList actions={siteActionViews} locale="en" />
-
-  {deep && (
-    <section aria-labelledby="issues-heading">
-      <h2 id="issues-heading">Issues</h2>
-      {hasInheritedIssues && (
-        <p class="inherited-note">
-          Some of these issues are shared by most sites on the {site.platform} platform &mdash;
-          see the <a href={`/platforms/${site.platform}/`}>platform page</a> for the platform-wide findings.
+    <div class="d-row" style="align-items:flex-start">
+      <div style="flex:1;min-width:16rem">
+        <h1 class="d-h1">{site.name}{site.name_ml && <span lang="ml" class="d-muted" style="font-size:1.25rem"> · {site.name_ml}</span>}</h1>
+        <p class="d-muted" style="margin:.3rem 0 0">
+          {site.status === 'hijacked' ? <span class="d-hijacked-url">{site.url}</span> : <a href={site.url}>{site.url}</a>}
+          {deep && <> · audited {timeAgo(deep.at)}</>}{light && <> · checked {timeAgo(light.at)}</>}
         </p>
+        {reason && <p style="max-width:60ch;margin:.5rem 0 0">{reason.citizen}</p>}
+        <CollegeManagement site={site} locale={'en'} />
+      </div>
+      <HealthBadge status={site.status} />
+    </div>
+
+    {auditErrored && (
+      <p class="d-callout d-callout--warn">
+        The most recent attempt to fully audit this site didn't finish ({timeAgo(deep!.at)}) — the scores and issues below, if any, are from the last audit that did complete.
+      </p>
+    )}
+    {site.notes && <p class="d-callout">{site.notes}</p>}
+
+    <div class="d-report">
+      <section class="d-card d-stack" style="align-items:center;gap:.5rem" data-tip={TIP.siteScore} tabindex="0">
+        <ScoreRing score={site.result?.score?.overall ?? null} />
+        <strong>Overall score</strong>
+        {scoreChange != null && (
+          <span class={`d-delta d-delta--${scoreChange < 0 ? 'bad' : scoreChange > 0 ? 'good' : 'flat'}`} data-tip={TIP.siteScoreChange} tabindex="0">
+            {scoreChange === 0 ? 'no change' : `${scoreChange > 0 ? '▲' : '▼'} ${Math.abs(scoreChange)} vs last week`}
+          </span>
+        )}
+      </section>
+      {deep && (
+        <section class="d-card" aria-labelledby="scores-heading" data-tip={TIP.sixChecks} tabindex="0">
+          <h2 id="scores-heading">Six checks</h2>
+          <CategoryBars score={site.result?.score ?? null} />
+        </section>
       )}
-      {issueGroups.length === 0 && !auditErrored && <p>No issues found in the most recent audit.</p>}
-      {issueGroups.length === 0 && auditErrored && <p>No issues on record from a completed audit yet.</p>}
-      {issueGroups.map((group) => (
-        <div>
-          <h3>{group.label}</h3>
-          {group.issues.map((issue) => <IssueCard issue={issue} />)}
-        </div>
-      ))}
-      {passedChecks.length > 0 && (
-        <details class="passed-checks">
-          <summary>{passedChecks.length} checks passed</summary>
-          <ul>
-            {passedChecks.map((c) => <li>{CHECKS[c.id].title.en}</li>)}
-          </ul>
-        </details>
-      )}
+      <section class:list={['d-card', deep && 'd-wide']} aria-labelledby="screenshot-heading" data-tip={TIP.screenshot} tabindex="0">
+        <h2 id="screenshot-heading">Screenshot</h2>
+        <Screenshot id={site.id} siteName={site.name} screenshot={deep?.screenshot ?? null} reason={reason} />
+      </section>
+    </div>
+
+    <ActionList actions={siteActionViews} locale="en" />
+
+    {deep && (
+      <section class="d-card" aria-labelledby="issues-heading" data-tip={TIP.openIssues} tabindex="0">
+        <h2 id="issues-heading">Open issues · {site.result?.issues.length ?? 0}</h2>
+        {hasInheritedIssues && (
+          <p class="d-small d-muted">
+            Some of these issues are shared by most sites on the {site.platform} platform &mdash;
+            see the <a href={`/platforms/${site.platform}/`}>platform page</a> for the platform-wide findings.
+          </p>
+        )}
+        {issueGroups.length === 0 && !auditErrored && <p>No issues found in the most recent audit.</p>}
+        {issueGroups.length === 0 && auditErrored && <p>No issues on record from a completed audit yet.</p>}
+        {issueGroups.map((group) => (
+          <div>
+            <h3 class="d-small d-muted" style="margin:1rem 0 .4rem">{group.label}</h3>
+            {group.issues.map((issue) => <IssueCard issue={issue} />)}
+          </div>
+        ))}
+        {passedChecks.length > 0 && (
+          <details>
+            <summary>{passedChecks.length} checks passed</summary>
+            <ul class="d-cols">
+              {passedChecks.map((c) => <li>{CHECKS[c.id].title.en}</li>)}
+            </ul>
+          </details>
+        )}
+      </section>
+    )}
+
+    <section class="d-card" aria-labelledby="availability-heading" data-tip={TIP.uptime} tabindex="0">
+      <h2 id="availability-heading">Uptime — last 90 days</h2>
+      <AvailabilityStrip history={history} />
+      {deep && <Sparkline history={history} />}
     </section>
-  )}
 
-  <section aria-labelledby="availability-heading">
-    <h2 id="availability-heading">Last 90 days</h2>
-    <AvailabilityStrip history={site.result?.history ?? []} />
-    {deep && <Sparkline history={site.result?.history ?? []} />}
-  </section>
+    <div class="d-grid d-grid--2">
+      <section class="d-card" aria-labelledby="tech-heading" data-tip={TIP.techFacts} tabindex="0">
+        <h2 id="tech-heading">Technical facts</h2>
+        <TechFacts light={light} tech={deep?.tech ?? null} platform={site.platform} />
+      </section>
+      <section class="d-card" aria-labelledby="actions-heading" data-tip={TIP.siteActions} tabindex="0">
+        <h2 id="actions-heading">Actions</h2>
+        <SiteActions id={site.id} name={site.name} />
+        {!light && <p class="d-small d-muted">Not light-checked yet — the next scheduled run is within 6 hours.</p>}
+        {light && !deep && site.status === 'unaudited' && (
+          <p class="d-small d-muted">Not deep-audited yet. Findings appear once the rolling deep audit reaches it — see the <a href="/methodology/">methodology</a>.</p>
+        )}
+      </section>
+    </div>
 
-  <section aria-labelledby="tech-heading">
-    <h2 id="tech-heading">Technical facts</h2>
-    <TechFacts light={light} tech={deep?.tech ?? null} platform={site.platform} />
-  </section>
-
-  {!light && <p>This site has not been light-checked yet — the next scheduled run is within 6 hours.</p>}
-  {light && !deep && site.status === 'unaudited' && (
-    <p>
-      This site has not been deep-audited yet. Findings will appear here once the rolling deep audit
-      reaches it (see the <a href="/methodology/">methodology</a> page).
-    </p>
-  )}
-
-  <section aria-labelledby="actions-heading">
-    <h2 id="actions-heading">Actions</h2>
-    <SiteActions id={site.id} name={site.name} />
-  </section>
-
-  <RelatedSites
-    headingId="related-department"
-    title={`Other sites under ${department?.name ?? site.department}`}
-    sites={otherInDepartment}
-    seeAllHref={`/departments/${site.department}/`}
-    seeAllLabel={`See all sites in ${department?.name ?? site.department}`}
-  />
-
-  {district && (
     <RelatedSites
-      headingId="related-district"
-      title={`Other sites in ${district.name}`}
-      sites={otherInDistrict}
-      seeAllHref={`/districts/${district.id}/`}
-      seeAllLabel={`See all sites in ${district.name}`}
+      headingId="related-department"
+      title={`Other sites under ${department?.name ?? site.department}`}
+      sites={otherInDepartment}
+      seeAllHref={`/departments/${site.department}/`}
+      seeAllLabel={`See all sites in ${department?.name ?? site.department}`}
     />
-  )}
+    {district && (
+      <RelatedSites
+        headingId="related-district"
+        title={`Other sites in ${district.name}`}
+        sites={otherInDistrict}
+        seeAllHref={`/districts/${district.id}/`}
+        seeAllLabel={`See all sites in ${district.name}`}
+      />
+    )}
+  </div>
 </Layout>
-
-<style>
-  .breadcrumb {
-    font-size: 0.9rem;
-    color: var(--color-muted);
-  }
-  .site-header {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-  }
-  .compromise-banner {
-    border: 2px solid #7a0019;
-    background: var(--color-bg);
-    padding: 0.75rem 1rem;
-    margin: 1rem 0;
-    max-width: 62ch;
-  }
-  .status-reason {
-    max-width: 60ch;
-    color: var(--color-text-muted, inherit);
-  }
-  .audit-times {
-    font-size: 0.85rem;
-    color: var(--color-muted);
-  }
-  .hijacked-url {
-    color: var(--color-bad);
-    font-weight: 600;
-  }
-  .inherited-note {
-    max-width: 60ch;
-    color: var(--color-muted);
-    font-size: 0.9rem;
-  }
-  .audit-error-note {
-    max-width: 60ch;
-    padding: 0.6rem 0.9rem;
-    border: 1px solid var(--color-warn);
-    border-radius: 0.25rem;
-    color: var(--color-warn);
-  }
-  .site-note {
-    max-width: 60ch;
-    padding: 0.6rem 0.9rem;
-    border: 1px solid var(--color-border);
-    border-radius: 0.25rem;
-    color: var(--color-muted);
-  }
-  .passed-checks ul {
-    columns: 2;
-  }
-</style>

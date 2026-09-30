@@ -6,7 +6,7 @@ import { computeActionReport, gradeFor } from '../src/actions.js';
 import { CHECKS } from '../src/checks/registry.js';
 import type { CheckId } from '../src/checks/types.js';
 import type { LightResult } from '../src/light.js';
-import type { Result } from '../src/store.js';
+import type { Result, StoredLight } from '../src/store.js';
 import type { Department, Registry, Site } from '../src/types.js';
 
 function site(id: string, overrides: Partial<Site> = {}): Site {
@@ -24,8 +24,8 @@ function registryOf(sites: Site[], departments: string[] = ['gad', 'empty']): Re
   };
 }
 
-const light = (overrides: Partial<LightResult> = {}): LightResult =>
-  ({ at: '2026-09-30T00:00:00.000Z', status_class: 'ok', geo_block_suspect: false, tls: null, ...overrides }) as LightResult;
+const light = (overrides: Partial<LightResult> = {}): StoredLight =>
+  ({ at: '2026-09-30T00:00:00.000Z', status_class: 'ok', geo_block_suspect: false, tls: null, vantage: 'gh-us', suspect: false, ...overrides }) as StoredLight;
 
 function result(id: string, overrides: Partial<Result> = {}): Result {
   return { id, url: `https://${id}.kerala.gov.in`, light: null, deep: null, score: null, status: 'unaudited', issues: [], history: [], deep_bump: false, ...overrides } as Result;

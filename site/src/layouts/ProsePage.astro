@@ -1,0 +1,47 @@
+---
+// Content pages (about, methodology, data, ml/about): the prose in a readable column with a sticky
+// "on this page" list. Every h2 in the slot needs an id matching an entry in `toc`.
+import Layout from './Layout.astro';
+import type { Locale } from '../i18n';
+import { tips } from '../lib/tips';
+interface Props {
+  title: string;
+  /** Visible h1; defaults to `title` (which is also the browser-tab title). */
+  heading?: string;
+  description?: string;
+  active?: string;
+  toc: [string, string][];
+  lede?: string;
+  lang?: string;
+  locale?: Locale;
+  altLangHref?: string;
+  altLangLabel?: string;
+}
+const { title, heading, description, active, toc, lede, lang, locale, altLangHref, altLangLabel } = Astro.props;
+const { TIP } = tips(locale);
+---
+
+<Layout title={title} description={description} active={active} lang={lang} locale={locale} altLangHref={altLangHref} altLangLabel={altLangLabel}>
+  <div class="d-prose-wrap">
+    <nav class="d-toc" aria-label="On this page" data-tip={TIP.toc}>
+      <b>On this page</b>
+      {toc.map(([id, label]) => <a href={`#${id}`}>{label}</a>)}
+    </nav>
+    <article class="d-prose">
+      <h1 class="d-h1">{heading ?? title}</h1>
+      {lede && <p class="d-muted" style="font-size:1.1rem">{lede}</p>}
+      <slot />
+    </article>
+  </div>
+</Layout>
+
+<script is:inline>
+  // Highlight the list entry for the section in view.
+  var links = [].slice.call(document.querySelectorAll('.d-toc a'));
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) links.forEach(function (a) { a.setAttribute('aria-current', String(a.getAttribute('href') === '#' + e.target.id)); }); });
+    }, { rootMargin: '0px 0px -70% 0px' });
+    links.forEach(function (a) { var t = document.getElementById(a.getAttribute('href').slice(1)); if (t) io.observe(t); });
+  }
+</script>

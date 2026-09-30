@@ -259,3 +259,28 @@ rollups (publicly funded and regulated; <1 % of the registry), disclosed on /met
 **Consequence:** DTE engineering classified via the KEAM prospectus (Annexure II(1)(a)); polytechnics and Collegiate
 Education arts & science need their own official source before they are marked. `colleges.ts` carries the field forward.
 **Outcome 2026-09-30:** 12 engineering colleges classified from the KEAM 2026 prospectus; 29 polytechnics from a "Govt"/"Government" official name in DTE's list (human sign-off), 4 from the college's own site; 4 left unconfirmed (Central Polytechnic, NSS Pandalam, Swami Nithyananda, Womens Ernakulam). `colleges.ts` also carries `added` forward now.
+
+## ADR-030 · Weekly snapshots on the `data` branch drive every week-over-week number · Accepted · 2026-09-30
+The dashboard is a weekly report, but `results/` only holds "now". `weekly.yml` (Sunday 22:30 IST, cron `0 17 * * 0`; not later, Actions cron can lag an hour) runs
+`cli weekly` and commits `data/weekly/<ISO-week>.json` (`WeekSnapshot`: counts, deep_audited, per-district/ministry/department `{sites,broken,median}`, `broken_ids`, `broke`, `fixed`).
+The week is the **IST** Monday–Sunday week (`istWeek`), so a late Sunday-night run never files under the next week. The site compares live numbers with the newest snapshot from an
+**earlier** week (`comparisonSnapshot`), never the current week's. `broke` excludes sites registered on/after the previous snapshot's last day (a new registration is not a breakage).
+**Consequence:** until `weekly.yml` has run once every delta and sparkline renders nothing, by design; the site builds either way. No change to `results/` schema (the site's 12-week strip marks a week crimson when `history[].up === false`).
+
+## ADR-031 · Dashboard palette, self-hosted IBM Plex Sans and a tuned dark theme · Accepted · 2026-09-30
+Nine colours, one job each (Sand page, Midnight ink, Teal healthy, Sky uptime, Indigo accessibility, Plum security, Amber needs work, Coral poor, Crimson down); status→band→colour lives only in `site/src/lib/bands.ts`.
+Text on white/sand uses the `-ink` variants; `tests/palette.test.ts` guards AA contrast in both themes. Font: IBM Plex Sans, self-hosted woff2 (no third-party requests, CLAUDE.md).
+**Dark mode stays** (DESIGN §7.4 "Dark mode" still stands; the design brief's "light only" was overridden by the owner): a tuned palette under `prefers-color-scheme`, not an inversion.
+Deviations from the brief: focus ring is `--focus #2680C0` in light (raw Sky is 2.65:1 on Sand, below 3:1) and Sky in dark; pill text is dark on teal/amber/coral/grey and white only on crimson in light.
+**Consequence:** a new colour pair needs a line in `palette.test.ts`. Status is never colour-only: the pill always shows the word (ADR-026).
+
+## ADR-032 · Tooltips are `data-tip` attributes fed from i18n keys · Accepted · 2026-09-30
+Every dashboard element carries `data-tip="…"`; the script in `Layout.astro` shows it on hover **and** keyboard focus, so non-interactive targets carry `tabindex="0"`. No third-party code.
+The copy lives in `site/src/i18n/{en,ml}.json` under `tip.*`, read through `lib/tips.ts` (`tips(locale)`), with `tf()` for `{placeholder}` strings; components take a `locale` prop (default `en`).
+New Malayalam values are the English text as a placeholder (the WP4.5 convention), listed in `docs/ML-REVIEW.md`; `tests/i18n.test.ts` fails if a placeholder key is not listed there.
+**Consequence:** a tip is never the only place information lives, and new UI ships with its tip in the same commit. `/ml/` has the home, about, actions and site pages only; districts, ministries, listings and reports have no Malayalam twin yet.
+
+## ADR-033 · The Identity check category shares Sky with Availability · Accepted · 2026-09-30
+The wireframe had six scored colours plus "Up"; this project scores six categories (security, accessibility, content, gigw, performance, identity) and availability is not scored.
+Nine palette colours cannot give seven categories distinct hues without breaking the one-job rule, so `CATEGORY_COLOR` (in `bands.ts`) gives Identity Sky, the same as the uptime strip.
+**Consequence:** every category is also labelled in text (bars, dots with tips), so shared colour never carries meaning alone. Revisit if a tenth colour is ever added.

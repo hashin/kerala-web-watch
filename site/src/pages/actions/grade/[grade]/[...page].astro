@@ -18,10 +18,12 @@ const g = Number(grade) as 1 | 2 | 3 | 4 | 5;
 const { page } = Astro.props as { page: import('astro').Page<ActionRow> };
 ---
 
-<Layout title={t('en', `actions.grade.${g}.label`)} description={t('en', `actions.grade.${g}.meaning`)}>
-  <p><a href="/actions/">&larr; {t('en', 'actions.title')}</a></p>
-  <h1><GradeBadge bucket={g} /></h1>
-  <p>{t('en', `actions.grade.${g}.meaning`)} {page.total} sites.</p>
-  <ActionTable rows={page.data} />
-  <Pagination page={page} />
+<Layout title={t('en', `actions.grade.${g}.label`)} description={t('en', `actions.grade.${g}.meaning`)} active="actions">
+  <div class="d-stack">
+    <a class="d-back" href="/actions/">&larr; {t('en', 'actions.title')}</a>
+    <h1 class="d-h1"><GradeBadge bucket={g} /></h1>
+    <p class="d-muted" style="max-width:48rem;margin:0">{t('en', `actions.grade.${g}.meaning`)} {page.total} sites.</p>
+    <ActionTable rows={page.data} />
+    <Pagination page={page} />
+  </div>
 </Layout>

@@ -1,8 +1,7 @@
 ---
+import { listRange } from '../../../lib/format';
 import Layout from '../../../layouts/Layout.astro';
-import SiteTable from '../../../components/SiteTable.astro';
-import Pagination from '../../../components/Pagination.astro';
-import GroupRollup from '../../../components/GroupRollup.astro';
+import GroupListing from '../../../components/GroupListing.astro';
 import { getSites, getKinds } from '../../../lib/data';
 
 // A kind like "police" or "office" reads oddly in a heading -- this is display text only, the
@@ -23,19 +22,25 @@ export async function getStaticPaths({ paginate }: { paginate: import('astro').P
 
 const { kind } = Astro.params as { kind: string };
 const { page } = Astro.props as { page: import('astro').Page<ReturnType<typeof getSites>[number]> };
+const members = getSites().filter((s) => s.kind === kind);
+const hasColleges = members.some((s) => s.tier === 'college');
 ---
 
 <Layout title={label(kind)} description={`Every ${label(kind).toLowerCase()} tracked by Kerala Web Watch.`}>
-  <p><a href="/">&larr; Home</a></p>
-  <h1>{label(kind)}</h1>
-  <p>{page.total} tracked site{page.total === 1 ? '' : 's'}.</p>
-  {getSites().some((s) => s.kind === kind && s.tier === 'college') && (
-    <p>
-      This list mixes government and government-aided colleges &mdash; see <a href="/colleges/government/">government colleges</a> &middot;
-      <a href="/colleges/aided/">government-aided colleges</a>.
-    </p>
-  )}
-  <GroupRollup sites={page.total > 0 ? getSites().filter((s) => s.kind === kind) : []} />
-  <SiteTable sites={page.data} />
-  <Pagination page={page} />
+  <GroupListing
+    title={label(kind)}
+    backHref="/"
+    backLabel="This week's snapshot"
+    sections={[{ id: 'all', title: listRange(page), sites: page.data }]}
+    groupSites={members}
+    page={page}
+    showDistrict
+  >
+    {hasColleges && (
+      <p slot="intro" class="d-callout" style="margin:0">
+        This list mixes government and government-aided colleges &mdash; see <a href="/colleges/government/">government colleges</a> &middot;
+        <a href="/colleges/aided/">government-aided colleges</a>.
+      </p>
+    )}
+  </GroupListing>
 </Layout>

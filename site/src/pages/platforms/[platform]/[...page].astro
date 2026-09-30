@@ -1,8 +1,7 @@
 ---
+import { listRange } from '../../../lib/format';
 import Layout from '../../../layouts/Layout.astro';
-import SiteTable from '../../../components/SiteTable.astro';
-import Pagination from '../../../components/Pagination.astro';
-import GroupRollup from '../../../components/GroupRollup.astro';
+import GroupListing from '../../../components/GroupListing.astro';
 import { CHECKS } from '../../../../../audit/dist/checks/registry.js';
 import { getSites, getPlatforms } from '../../../lib/data';
 import { platformWideIssues } from '../../../lib/rollups';
@@ -25,23 +24,23 @@ const sharedIssues = platformWideIssues(allMembers);
 ---
 
 <Layout title={platform} description={`Websites on the ${platform} platform.`}>
-  <p><a href="/">&larr; Home</a></p>
-  <h1>{platform}</h1>
-  <p>{page.total} member site{page.total === 1 ? '' : 's'}.</p>
-
-  {sharedIssues.length > 0 && (
-    <section aria-labelledby="platform-issues-heading">
-      <h2 id="platform-issues-heading">Platform-wide issues</h2>
-      <p>Found on at least 80% of this platform's deep-audited member sites -- fixing it once, at the platform level, fixes it everywhere.</p>
-      <ul>
-        {sharedIssues.map((f) => (
-          <li>{CHECKS[f.id].title.en} ({f.count} sites)</li>
-        ))}
-      </ul>
-    </section>
-  )}
-
-  <GroupRollup sites={allMembers} />
-  <SiteTable sites={page.data} showDistrict={false} />
-  <Pagination page={page} />
+  <GroupListing
+    title={platform}
+    backHref="/"
+    backLabel="This week's snapshot"
+    sections={[{ id: 'all', title: listRange(page, 'member sites'), sites: page.data }]}
+    groupSites={allMembers}
+    page={page}
+    showDistrict={false}
+  >
+    {sharedIssues.length > 0 && (
+      <section slot="intro" class="d-card" aria-labelledby="platform-issues-heading" data-tip="Problems that sit in the shared platform, not in each site. Fixing them once fixes them everywhere." tabindex="0">
+        <h2 id="platform-issues-heading">Platform-wide issues</h2>
+        <p class="d-muted" style="margin-top:0">Found on at least 80% of this platform's deep-audited member sites &mdash; fixing it once, at the platform level, fixes it everywhere.</p>
+        <ul class="d-list" style="list-style:disc;padding-left:1.2rem">
+          {sharedIssues.map((f) => <li>{CHECKS[f.id].title.en} <span class="d-muted">({f.count} sites)</span></li>)}
+        </ul>
+      </section>
+    )}
+  </GroupListing>
 </Layout>

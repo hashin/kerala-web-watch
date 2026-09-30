@@ -1,0 +1,40 @@
+---
+// Ranked rows: name, share-broken bar, median score, weekly change. Used by the home page (top districts),
+// /districts/, /leaderboard/. The number always sits beside its colour, so colour is never the only signal.
+import type { RankRowData } from '../lib/types';
+import { brokenShareColor, medianColor } from '../lib/bands';
+import { tips } from '../lib/tips';
+import { t, tf, type Locale } from '../i18n';
+interface Props { rows: RankRowData[]; nameLabel?: string; showRank?: boolean; locale?: Locale }
+const { rows, nameLabel = 'District', showRank = false, locale = 'en' } = Astro.props;
+const { TIP } = tips(locale);
+const cols = showRank ? '2rem minmax(7rem,1.2fr) 4rem 1.6fr 4rem 4rem' : 'minmax(7rem,11rem) 1fr 4.5rem 3.5rem';
+// On a phone the bar shrinks to a stub and the Sites column drops; the numbers stay.
+const colsSm = showRank ? '1.5rem minmax(0,1fr) 6.5rem 2.5rem 3.2rem' : 'minmax(0,1fr) 6.5rem 2.5rem 3.2rem';
+const gridVars = `--cols:${cols};--cols-sm:${colsSm}`;
+---
+
+<div role="table" aria-label={tf(locale, 'ui.rankingSuffix', { label: nameLabel })}>
+  <div class="d-rank d-rank--head" role="row" style={gridVars}>
+    {showRank && <span role="columnheader" data-tip={t(locale, 'ui.rankPosition')} tabindex="0">#</span>}
+    <span role="columnheader">{nameLabel}</span>
+    {showRank && <span role="columnheader" class="d-hide-sm" data-tip={t(locale, 'ui.sitesInGroup')} tabindex="0">{t(locale, 'ui.sites')}</span>}
+    <span role="columnheader" data-tip={TIP.broken_share} tabindex="0">{t(locale, 'ui.pctBroken')}</span>
+    <span role="columnheader" data-tip={TIP.median} tabindex="0">{t(locale, 'ui.median')}</span>
+    <span role="columnheader" data-tip={TIP.delta} tabindex="0">{t(locale, 'ui.deltaWeek')}</span>
+  </div>
+  {rows.map((r, i) => (
+    <div class="d-rank" role="row" style={gridVars} data-tip={TIP.rankRow}>
+      {showRank && <strong role="cell">{r.rank ?? i + 1}</strong>}
+      <a role="cell" href={r.href}>{r.name}</a>
+      {showRank && <span role="cell" class="d-hide-sm">{r.sites.toLocaleString('en-IN')}</span>}
+      <span role="cell" class="d-row" style="flex-wrap:nowrap">
+        {/* Bar is ×3 so a 10–30 % broken share fills a readable part of the track; the exact % is printed beside it. */}
+        <span class="d-track" style={`flex:1;--bar:${brokenShareColor(r.brokenPct)}`}><i style={`width:${Math.min(100, r.brokenPct * 3)}%`}></i></span>
+        <span>{r.brokenPct}%</span>
+      </span>
+      <span role="cell" class="d-score"><span class="d-dot" style={`--dot:${medianColor(r.median)}`} aria-hidden="true"></span>{r.median ?? '—'}</span>
+      <span role="cell" class={`d-delta d-delta--${r.delta?.tone ?? 'flat'}`}>{r.delta?.text ?? '—'}</span>
+    </div>
+  ))}
+</div>

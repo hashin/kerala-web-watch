@@ -1,5 +1,6 @@
 ---
-import SiteTable from './SiteTable.astro';
+// A short list of neighbouring sites (same department or district), each with its status pill.
+import HealthBadge from './HealthBadge.astro';
 import type { SiteView } from '../lib/data';
 
 interface Props {
@@ -15,9 +16,13 @@ const SHOWN = 8;
 ---
 
 {sites.length > 0 && (
-  <section aria-labelledby={headingId}>
+  <section class="d-card" aria-labelledby={headingId}>
     <h2 id={headingId}>{title}</h2>
-    <SiteTable sites={sites.slice(0, SHOWN)} showDistrict={false} showDepartment={false} />
-    {sites.length > SHOWN && <p><a href={seeAllHref}>{seeAllLabel}</a></p>}
+    <ul class="d-list">
+      {sites.slice(0, SHOWN).map((s) => (
+        <li class="d-row" style="flex-wrap:nowrap"><a href={`/sites/${s.id}/`} style="flex:1;min-width:0;overflow-wrap:anywhere">{s.name}</a><HealthBadge status={s.status} /></li>
+      ))}
+    </ul>
+    {sites.length > SHOWN && <p style="margin:.7rem 0 0"><a href={seeAllHref}>{seeAllLabel} →</a></p>}
   </section>
 )}

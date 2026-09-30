@@ -1,8 +1,7 @@
 ---
+import { listRange } from '../../../lib/format';
 import Layout from '../../../layouts/Layout.astro';
-import SiteTable from '../../../components/SiteTable.astro';
-import Pagination from '../../../components/Pagination.astro';
-import GroupRollup from '../../../components/GroupRollup.astro';
+import GroupListing from '../../../components/GroupListing.astro';
 import { getSites } from '../../../lib/data';
 import { collegesBySection, collegeText, type CollegeSection } from '../../../lib/colleges';
 
@@ -23,11 +22,16 @@ const other = collegeText(otherKey, 'en');
 ---
 
 <Layout title={here.label + 's'} description={here.meaning}>
-  <p><a href="/colleges/">&larr; All colleges</a></p>
-  <h1>{here.label}s</h1>
-  <p>{here.meaning}</p>
-  <p>{page.total} tracked colleges. See also: <a href={other.href}>{other.label}s</a> ({bySection[otherKey].length}).</p>
-  <GroupRollup sites={bySection[management]} />
-  <SiteTable sites={page.data} />
-  <Pagination page={page} />
+  <GroupListing
+    title={here.label + 's'}
+    backHref="/colleges/"
+    backLabel="All colleges"
+    intro={here.meaning}
+    sections={[{ id: 'all', title: listRange(page, 'colleges'), sites: page.data }]}
+    groupSites={bySection[management]}
+    page={page}
+    showDistrict
+  >
+    <p slot="intro" style="margin:0">See also: <a href={other.href}>{other.label}s</a> ({bySection[otherKey].length}).</p>
+  </GroupListing>
 </Layout>

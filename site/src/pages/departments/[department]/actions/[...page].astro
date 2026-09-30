@@ -19,32 +19,36 @@ const department = getDepartment(departmentId)!;
 const { page } = Astro.props as { page: import('astro').Page<ActionRow> };
 ---
 
-<Layout title={`${department.name} — ${t('en', 'actions.title')}`} description={`Action report for ${department.name}.`}>
-  <p><a href={`/departments/${department.id}/`}>&larr; {department.name}</a></p>
-  <h1>{t('en', 'actions.title')}: {department.name}</h1>
-  {page.total === 0 && <p>{t('en', 'actions.empty')}</p>}
-  {
-    page.data.map((row) => (
-      <details>
-        <summary>
-          <GradeBadge bucket={row.bucket} /> <a href={`/sites/${row.site.id}/`}>{row.site.name}</a>
-          {row.top && <> &mdash; {row.top.title}</>}
-        </summary>
-        {row.actions.map((a) => (
-          <div class="dept-action">
-            <p><GradeBadge bucket={a.grade} /> <strong>{a.title}</strong></p>
-            <p>{a.citizen}</p>
-            {a.ev && <p><code>{a.ev}</code></p>}
-            <p><em>{t('en', 'actions.fix')}:</em> {a.fix}</p>
-          </div>
-        ))}
-      </details>
-    ))
-  }
-  <Pagination page={page} />
+<Layout title={`${department.name} — ${t('en', 'actions.title')}`} description={`Action report for ${department.name}.`} active="actions">
+  <div class="d-stack">
+    <a class="d-back" href={`/departments/${department.id}/`}>&larr; {department.name}</a>
+    <h1 class="d-h1">{t('en', 'actions.title')}: {department.name}</h1>
+    {page.total === 0 && <p class="d-muted">{t('en', 'actions.empty')}</p>}
+    {
+      page.data.map((row) => (
+        <details class="d-card">
+          <summary>
+            <GradeBadge bucket={row.bucket} /> <a href={`/sites/${row.site.id}/`}>{row.site.name}</a>
+            {row.top && <> &mdash; {row.top.title}</>}
+          </summary>
+          {row.actions.map((a) => (
+            <div class="dept-action">
+              <p><GradeBadge bucket={a.grade} /> <strong>{a.title}</strong></p>
+              <p>{a.citizen}</p>
+              {a.ev && <p><code>{a.ev}</code></p>}
+              <p><em>{t('en', 'actions.fix')}:</em> {a.fix}</p>
+            </div>
+          ))}
+        </details>
+      ))
+    }
+    <Pagination page={page} />
+  </div>
 </Layout>
 
 <style>
-  details { margin: 0.6rem 0; }
+  summary { cursor: pointer; }
+  summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
   .dept-action { margin: 0.6rem 0 0.6rem 1rem; max-width: 62ch; }
+  .dept-action p { margin: 0.3rem 0; }
 </style>
