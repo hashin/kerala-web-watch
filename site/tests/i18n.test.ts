@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { DEFAULT_LOCALE, LOCALES, t, tf } from '../src/i18n';
 import { tips } from '../src/lib/tips';
 import en from '../src/i18n/en.json';
@@ -60,6 +60,35 @@ describe('tf', () => {
   it('fills named placeholders and leaves unknown ones untouched', () => {
     expect(tf('en', 'home.brokeTitle', { n: 7 })).toBe('Broke this week · 7');
     expect(tf('en', 'home.lede', { total: '1,500' })).toBe('{broken} of 1,500 Kerala government websites are broken right now.');
+  });
+});
+
+describe('tf locale', () => {
+  it('uses the requested locale dictionary', () => {
+    expect(tf('ml', 'band.broken', {})).toBe('തകരാറിലാണ്');
+    expect(tf('ml', 'home.brokeTitle', { n: 7 })).toBe(ml['home.brokeTitle'].replace('{n}', '7'));
+  });
+  it('keeps an unknown placeholder while filling the known one', () => {
+    expect(tf('en', 'home.lede', { total: 9 })).toBe('{broken} of 9 Kerala government websites are broken right now.');
+    expect(tf('en', 'home.lede', {})).toBe('{broken} of {total} Kerala government websites are broken right now.');
+  });
+});
+
+describe('tips locale and cache', () => {
+  afterEach(() => { vi.doUnmock('../src/i18n'); vi.resetModules(); });
+  it('reads each accessor group from its own tip.* prefix, per locale, without cache cross-talk', async () => {
+    vi.resetModules();
+    vi.doMock('../src/i18n', () => ({ t: (l: string, k: string) => `${l}|${k}` }));
+    const { tips: fresh } = await import('../src/lib/tips');
+    const ml1 = fresh('ml');
+    const en1 = fresh('en');
+    expect(ml1.TIP.median).toBe('ml|tip.median');
+    expect(en1.TIP.median).toBe('en|tip.median');
+    expect(ml1.STATUS_TIP.down).toBe('ml|tip.status.down');
+    expect(ml1.CATEGORY_TIP.security).toBe('ml|tip.category.security');
+    expect(ml1.CHECK_TIP.up).toBe('ml|tip.check.up');
+    expect(fresh('ml')).toBe(ml1);
+    expect(fresh()).toBe(en1);
   });
 });
 
