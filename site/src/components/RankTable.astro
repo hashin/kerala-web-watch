@@ -29,6 +29,7 @@ const gridVars = `--cols:${cols};--cols-sm:${colsSm}`;
       <a role="cell" href={r.href}>{r.name}</a>
       {showRank && <span role="cell" class="d-hide-sm">{r.sites.toLocaleString('en-IN')}</span>}
       <span role="cell" class="d-row" style="flex-wrap:nowrap">
+        {/* Bar is ×3 so a 10–30 % broken share fills a readable part of the track; the exact % is printed beside it. */}
         <span class="d-track" style={`flex:1;--bar:${brokenShareColor(r.brokenPct)}`}><i style={`width:${Math.min(100, r.brokenPct * 3)}%`}></i></span>
         <span>{r.brokenPct}%</span>
       </span>

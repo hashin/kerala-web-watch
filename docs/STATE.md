@@ -8,11 +8,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 - **Phase:** 5 — Self-maintenance and reach, **all WPs in `docs/IMPLEMENTATION.md` now done.**
 - **Current WP:** none queued. All WPs done. The fresh 59-candidate `discovered.yaml` (from merged PR #6)
   was curated 2026-09-30: 9 new state bodies registered, 29 new `ignore.yaml` patterns.
-- **Next action:** Nothing queued (both 2026-09-30 plans built; run `verifier` on them if not yet done). Remaining work is the open-questions list: WP4.7 (Open question 6, India
-  vantage runner — skip unless answered), Open question 16 (government-vs-aided colleges), Open question 17
-  (`discover.ts` www/bare-domain dedupe gap, still unfixed in code), Open question 18 (possible compromised
-  link on `lsg-bp-parappa`'s site — needs the human's eyes), Open question 19 (`cee-kerala.org` still
-  unclassified — same organisation as registered `ceekerala`, but not confirmed official).
+- **Next action:** The dashboard redesign (WP-D1 to D9) is finished on branch `dashboard-redesign` (worktree `kerala-web-watch-dashboard`), not pushed. Ask the owner, then push it and open the PR "Dashboard redesign: weekly snapshot UI"; after merge, run `weekly.yml` once (workflow_dispatch) so `data/weekly/` exists. Remaining older items: Open question 6 (India vantage runner) and the Malayalam review in `docs/ML-REVIEW.md`.
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
 - **Registry size:** 1,567 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated + 1 dogfood entry + 49 WP5.4
   colleges + 8 discovery-curated 2026-09-25 + 9 discovery-curated 2026-09-30) · **Deep-audited:** 299/1,558 (as of the `data` checkout pulled
@@ -63,10 +59,21 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 | 5.2 | issue-to-pr.yml | done | 493b2f61 (feat) + a7a7c265 (fix) | new `cli issue-to-pr` (audit/src/issue-to-pr.ts, 26 tests): parses the rendered add-website form body, light-checks the submitted URL, short-circuits with an explanatory issue comment (no PR) for a malformed form/unparseable URL/already-registered host, else appends to `registry/candidates/issues.yaml` (replacing any earlier entry for the same URL); new `.github/workflows/issue-to-pr.yml` writes the untrusted issue body to a file via `actions/github-script`'s context object rather than shell-interpolating it (a real injection-class risk for free citizen text); verifier mutation-tested and found 1 real gap (`toEqual({})` doesn't distinguish `{kind: undefined}` from `{}` in vitest — the "omits a hint key" test couldn't fail no matter what, fixed to `toStrictEqual`); discovered and fixed a real gap while live-verifying: the 5 labels every issue template/workflow references (`add-website`, `registry`, `correction`, `reaudit`, `discovery`) had never actually been created as repo labels, so `gh issue create --label add-website` failed outright and `peter-evans/create-pull-request`'s own `labels: discovery` step would have too — created all 5 live; live-verified with 3 real throwaway issues (#3/#4/#5, all closed after): #3 (kerala.gov.in) correctly recognised as already-registered (`kerala-gov`), no PR opened; #4 (example.com) correctly attempted a PR for a genuinely new candidate but hit the same repo-setting block WP5.1 found (Open question 14) — and that failure silently swallowed the issue comment too, a real bug, fixed with `if: always()`; #5 (example.org) confirmed the fix posts a comment even when the PR step fails |
 | 5.3 | Malayalam explanations + UI | done | 32081dfd (audit) + 0610b595 (site) | all 84 checks' `title`/`citizen`/`fix` translated (20-check sample approved in 64d1065b, remaining 64 done this session); new `site/src/pages/ml/sites/[id].astro` (~1,501 pages) fully localized; `en.json`/`ml.json` at 80 keys each; optional `locale` prop threaded through 8 components + `Layout`, `explainStatus()`, `timeAgo()`; verifier mutation-tested the new metadata test (blanked a C-severity check's `ml` title, test went red as designed) and confirmed ml coverage/quality, i18n key parity, and safe locale-prop threading, all PASS; browser-verified live (`astro dev`): `/ml/`, `/ml/about/`, `/ml/sites/industrykerala/` all render real Malayalam (not mojibake), language toggle round-trips correctly to the English page; footer and related-sites tables deliberately stay English-only (scope note below) |
 | 5.4 | Government colleges tier | done | (pending push) | ADR-027 accepted (human chose Option A, extending ADR-018's LSGI exception to colleges) — `scripts/harvest/colleges.ts` now writes directly to `registry/sites/colleges.yaml` (49 entries: 12 engineering, 37 polytechnic) plus keeps the full raw harvest (70 candidates, before resolve-filtering) in `registry/candidates/colleges.yaml` for transparency; live resolve-checks every candidate itself (DNS lookup first — a real failure there is excluded, mirroring `audit/src/resolve.ts`'s `dnsFailure`/error-severity treatment; an HTTP-level failure once DNS resolves is kept as unverified, mirroring `resolve-status`'s warn-severity charitable treatment) rather than trusting a static snapshot; also caught and excluded 2 rows where the source's own Website column actually held an email address (`http://user@host` shape) instead of a URL. 21 of 70 raw candidates excluded as confirmed dead (11 Collegiate Education subpages, all genuinely 404; several DTE polytechics with no real DNS record, cross-confirmed with `dig`; one real DNS-dead DTE domain the audit's own `validate --resolve` also flagged). `validate` exits clean on the full registry (1,550 sites now). Directorate of Medical Education still yields zero per-college website links (checked 3 pages by hand) — not in this pass. DTE's counts still mix government-aided institutions in with pure government ones (Open question 16, unresolved but non-blocking — every DTE-sourced entry carries a `notes:` caveat saying so) |
+| D1 | Dashboard tokens, self-hosted Plex Sans, tooltips | done | 190194b8 | ADR-031, ADR-032; `palette.test.ts` guards AA in both themes |
+| D2 | Weekly snapshots (`cli weekly`, `weekly.yml`) | done | bdf3fbdd, ee5b0e47 | ADR-030; verifier survivors closed |
+| D3 | Snapshot home, districts, ministries | done | 8046b5a9 | KpiTile, StackBar, RankTable |
+| D4 | Group listings on every list page | done | c7c0ad20, 03b3efd6 | `GroupListing`; page count unchanged (ADR-025) |
+| D5 | Site report card, EN + ML | done | c53f4143 | old SiteTable/GroupRollup/StatTile/CoverageBar deleted |
+| D6 | Leaderboard, reports, prose pages | done | 6148be2d, 9e9f4c1f | `ProsePage`, `ReportView`, `lib/reports.ts` |
+| D7 | Restyle remaining components | done | 8edaed85, 5d1cb6f7 | Lighthouse accessibility 100 on every family checked |
+| D8 | Malayalam: i18n keys, `/ml/` snapshot home | done | 7beef666, 0934c10e | ML copy for new keys is English placeholders, `docs/ML-REVIEW.md` |
+| D9 | Dashboard wrap-up: ADRs, WPs, verification | done | (this branch's last docs commit) | PR opens only after the owner agrees |
 
 ## Deviations from DESIGN.md
 
 _None yet. Each entry: what, why, ADR number._
+
+**Dashboard redesign (D1–D9), recorded in ADR-030 to ADR-033:** dark mode kept although the design brief said light only (§7.4 stands); light-theme focus ring `#2680C0` instead of Sky; pill text colours chosen for AA; the Identity category shares Sky with Availability; deltas compare with the newest earlier-week snapshot (IST weeks); the category dot's accessible name now reads `Category: Security` (localised label) — the only byte change on English pages in WP-D8.
 
 **Scope note (not a deviation, just recorded per WP5.3's Handoff):** the site-wide footer (policy links +
 boilerplate sentence in `Layout.astro`) and the related-sites tables (`SiteTable`'s column headers) stay
@@ -184,9 +191,18 @@ nothing citizen-critical depends on it and it's easy to pick up later.
     be genuinely gone. Not added as a new site, not added as an alias, not moved to `ignore.yaml` — sitting
     outside all three until a future check gives a clear answer either way.
 
+20. **Malayalam copy for the dashboard.** WP-D8 moved every tooltip and dashboard label to `i18n/ml.json` with English placeholder text for the new keys (listed in `docs/ML-REVIEW.md`). A Malayalam speaker should translate and review them; until then `/ml/` shows English for those strings. Also open: Malayalam twins of districts, ministries, listings and reports (out of scope in D8), and the footer.
+21. **First weekly snapshot.** After the redesign merges, run `weekly.yml` once via workflow_dispatch; until `data/weekly/` exists every delta and sparkline is blank by design (ADR-030).
+
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-09-30 · dashboard redesign (WP-D1–D9) complete on branch `dashboard-redesign`, not pushed.** Weekly-snapshot UI,
+  Plex Sans + tuned dark theme, tooltips from i18n keys, `/ml/` snapshot home; site 191 tests, audit tests green, build
+  3,377 pages, Lighthouse accessibility 100 on `/`, districts, site and `/ml/` pages. Not seen rendered: compromise banner,
+  a healthy site, month-over-month deltas. First thing next time: get the owner's yes, push, open the PR, then run
+  `weekly.yml` once. New Malayalam strings are English placeholders (`docs/ML-REVIEW.md`).
 
 - **2026-09-30 · verifier pass on colleges + action report.** ~100 mutations; all core rules caught. The 26
   survivors (mostly boundary cases: lottery/slot exclusions, .gov.in skip, sort tie-breaks, India guards, CSV

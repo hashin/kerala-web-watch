@@ -34,6 +34,7 @@ const dBroken = delta(broken, prev ? brokenCount(prev.counts) : null, true);
 const snaps = getSnapshots();
 const series = (pick: (c: typeof counts) => number, live: number) => countSeries(snaps, wk.week, pick, live);
 const actionTotals = getActionReport().totals;
+// Action-report grades: 1 = visitors may be at risk, 2 = citizens cannot use the site; both are "Act now".
 const urgent = actionTotals[1] + actionTotals[2];
 
 const kpis = [

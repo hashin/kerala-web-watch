@@ -682,6 +682,43 @@ framework; `tier: college`, `priority: 1`, `department` by directorate. Batch ca
 note in STATE.md.
 **Commit:** `feat(registry): government colleges (WP5.4)`
 
+### Dashboard redesign (WP-D1 to WP-D9) — weekly-snapshot UI, after Phase 5
+Not part of the original 34; built on the `dashboard-redesign` branch from the owner's design brief (ADR-030 to ADR-033). Each WP was verified by build + tests + Lighthouse, and by `verifier` where it added tests.
+
+### WP-D1 — Tokens, fonts, tooltips
+**Produces:** self-hosted IBM Plex Sans; `styles/dashboard.css` (light + tuned dark tokens); `lib/bands.ts`, `lib/tips.ts`, `lib/types.ts`; Layout, HealthBadge, tooltip script; `tests/palette.test.ts`.
+**Verify:** palette test passes (AA in both themes); no request leaves the origin. **Done when:** every existing page recolours from the tokens with no component rewritten.
+**Commit:** `feat(site): dashboard tokens, Plex Sans, tooltips (WP-D1)`
+
+### WP-D2 — Weekly snapshots
+**Produces:** `audit/src/weekly.ts` + `cli weekly` → `data/weekly/<ISO-week>.json`; `.github/workflows/weekly.yml`; `site/src/lib/weekly.ts` (`delta`, `weekStrip`, `trendPoints`, `countSeries`, `comparisonSnapshot`).
+**Verify:** audit + site tests; mutation-tested by `verifier`. **Done when:** with no snapshot every delta renders nothing and the site builds; with snapshots the deltas match the files.
+
+### WP-D3 — Snapshot home, districts, ministries
+**Produces:** home as "this week's snapshot"; `/districts/`, `/ministries/`; `KpiTile`, `StackBar`, `RankTable`. **Done when:** the numbers on the page equal `summary.json` and the newest snapshot.
+
+### WP-D4 — Group listings
+**Produces:** `GroupListing` behind districts, ministries, departments, kinds, platforms, statuses and both colleges pages; each page keeps its `getStaticPaths`/`paginate` (ADR-025).
+**Done when:** the page count is unchanged and every down/broken/unverifiable row carries its `citizen` reason (ADR-026).
+
+### WP-D5 — Site report card
+**Produces:** `/sites/<id>/` and `/ml/sites/<id>/` on the tokens; GradeBadge, ActionTable, RelatedSites. **Done when:** logic unchanged, old SiteTable/GroupRollup/StatTile/CoverageBar removed.
+
+### WP-D6 — Leaderboard, reports, content pages
+**Produces:** `ProsePage`, `ReportView` (`/reports/` = latest), leaderboard, `lib/reports.ts`. **Done when:** about, methodology and data render inside `ProsePage` with a table of contents.
+
+### WP-D7 — Restyle the rest
+**Produces:** ScoreRing, CategoryBars, IssueCard, uptime strip, SiteActions, Pagination, KeralaMap, Pagefind theming on the tokens. **Done when:** Lighthouse accessibility ≥ 95 on every page family.
+
+### WP-D8 — Malayalam
+**Produces:** tooltip, nav, band/status labels and the whole snapshot home in `i18n/{en,ml}.json` (`tips(locale)`, `tf()`); shared `SnapshotHome` for `/` and `/ml/`; `docs/ML-REVIEW.md`.
+**Verify:** key-parity, no-empty and ML-REVIEW tests; English pages diff clean against the pre-change build; `/ml/`, `/ml/about/`, `/ml/sites/aepds/` Lighthouse accessibility ≥ 95; tooltip on hover and focus.
+**Done when:** `/ml/` shows the same layout as `/`; new Malayalam copy is only English placeholders awaiting review.
+
+### WP-D9 — Wrap-up
+**Produces:** ADR-030 to ADR-033, these WP entries, STATE.md, `explainer` pass, final verification with and without `data/weekly/`.
+**Done when:** audit + site tests and builds green; PR "Dashboard redesign: weekly snapshot UI" opened after the owner agrees.
+
 ---
 
 # 5. Definition of done (project)
