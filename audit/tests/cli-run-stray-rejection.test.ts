@@ -20,6 +20,7 @@ import type { Result } from '../src/store.js';
  */
 
 vi.mock('../src/registry.js', () => ({
+  officialDomainsOf: (): Set<string> => new Set(),
   loadRegistry: (): Registry =>
     ({
       sites: [siteFixture('stray-rejector'), siteFixture('good-site')],

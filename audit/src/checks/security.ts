@@ -1,3 +1,4 @@
+import { injectedLinksCheck } from './injected-links.js';
 import type { Check, CheckResult } from './types.js';
 
 const SUBRESOURCE_HTTP = /\b(?:src|href)\s*=\s*["']http:\/\/[^"']+["']/gi;
@@ -147,7 +148,10 @@ export const SECURITY_CHECKS: Check[] = [
     id: 'sec.safe_browsing',
     run: (ctx): CheckResult => {
       if (ctx.safeBrowsingFlagged === undefined) return { id: 'sec.safe_browsing', r: 'na' };
-      return ctx.safeBrowsingFlagged ? { id: 'sec.safe_browsing', r: 'fail' } : { id: 'sec.safe_browsing', r: 'pass' };
+      return ctx.safeBrowsingFlagged
+        ? { id: 'sec.safe_browsing', r: 'fail', ev: 'Flagged by Google Safe Browsing' }
+        : { id: 'sec.safe_browsing', r: 'pass' };
     },
   },
+  { id: 'sec.injected_links', run: injectedLinksCheck },
 ];

@@ -1,3 +1,4 @@
+import { computeActionReport } from './actions.js';
 import { copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { appendBatch, nextBatchId, readBatches, writeBatches } from './batches.js';
@@ -70,6 +71,7 @@ export function mergeAll(inDir: string, dataDir: string, registry: Registry, opt
   const vantages = [...new Set(allResults.map((r) => r.light?.vantage).filter((v): v is string => v != null))];
   const summary = computeSummary(registry, allResults, { now: opts.now, vantages });
   writeJsonAtomic(join(dataDir, 'summary.json'), summary);
+  writeJsonAtomic(join(dataDir, 'actions.json'), computeActionReport(registry, allResults, { now: opts.now }));
 
   const batches = readBatches(dataDir);
   const batchId = nextBatchId(batches, opts.now);

@@ -238,6 +238,22 @@ export const CHECKS: Record<CheckId, CheckMeta> = {
     ref: '',
   },
 
+  'sec.injected_links': {
+    category: 'security',
+    severity: 'C',
+    compromise: true,
+    title: { en: 'Links to suspicious outside websites', ml: 'സംശയാസ്പദമായ പുറം വെബ്സൈറ്റുകളിലേക്കുള്ള ലിങ്കുകൾ' },
+    citizen: {
+      en: 'The home page contains links to outside websites that look like gambling, spam or fake-government pages. This often means someone has tampered with the site. Do not click them, and do not enter personal details on any page they lead to.',
+      ml: 'ഹോം പേജിൽ ചൂതാട്ടം, സ്പാം അല്ലെങ്കിൽ വ്യാജ സർക്കാർ പേജുകൾ പോലെ തോന്നുന്ന പുറം വെബ്സൈറ്റുകളിലേക്കുള്ള ലിങ്കുകൾ ഉണ്ട്. ആരെങ്കിലും സൈറ്റിൽ കൈകടത്തിയിരിക്കാം എന്നാണ് ഇത് പലപ്പോഴും അർത്ഥമാക്കുന്നത്. അവയിൽ ക്ലിക്ക് ചെയ്യരുത്, അവ തുറക്കുന്ന ഒരു പേജിലും വ്യക്തിഗത വിവരങ്ങൾ നൽകരുത്.',
+    },
+    fix: {
+      en: 'Check the listed links in your CMS and page templates; remove any your office did not add. If you did not add them, treat the site as compromised: change all admin passwords, update the CMS and plugins, and check recently modified files. CERT-In (incident@cert-in.org.in) can help.',
+      ml: 'പട്ടികപ്പെടുത്തിയ ലിങ്കുകൾ നിങ്ങളുടെ CMS-ലും പേജ് ടെംപ്ലേറ്റുകളിലും പരിശോധിക്കുക; നിങ്ങളുടെ ഓഫീസ് ചേർക്കാത്തവ നീക്കം ചെയ്യുക. നിങ്ങൾ ചേർത്തതല്ലെങ്കിൽ സൈറ്റ് ആക്രമിക്കപ്പെട്ടതായി കണക്കാക്കുക: എല്ലാ അഡ്മിൻ പാസ്‌വേഡുകളും മാറ്റുക, CMS-ഉം പ്ലഗിന്നുകളും അപ്ഡേറ്റ് ചെയ്യുക, അടുത്തിടെ മാറ്റം വരുത്തിയ ഫയലുകൾ പരിശോധിക്കുക. CERT-In (incident@cert-in.org.in) സഹായിക്കും.',
+    },
+    ref: 'OWASP A03:2021 Injection',
+  },
+
   // ---- a11y.* -- can everyone use it? (WCAG 2.1 AA, which GIGW 3.0 mandates)
   'a11y.axe_critical': {
     category: 'accessibility',

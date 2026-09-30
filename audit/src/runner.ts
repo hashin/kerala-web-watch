@@ -34,6 +34,8 @@ export interface RunOptions {
    * once it's listening. `--fixture-base http://localhost:<port>` reattaches that real port
    * (keeping the site's own subdomain label) instead of needing the registry to guess it. */
   fixtureBase?: string;
+  /** Registrable domains of every registry site (`sec.injected_links` never flags these). */
+  officialDomains?: ReadonlySet<string>;
 }
 
 /** `http://good.localhost/some/path` + `http://localhost:4173` -> `http://good.localhost:4173/some/path`. */
@@ -116,6 +118,7 @@ export async function runDeepAudit(site: Site, existing: Result | null, opts: Ru
       domainExpiry,
       safeBrowsingFlagged,
       vulnerableLibraries: [...vulnerableLibraries.values()].flat(),
+      officialDomains: opts.officialDomains,
     });
 
     const checks = runChecks(ctx);
@@ -182,6 +185,19 @@ export async function buildScreenshot(siteId: string, existing: Result | null, c
   };
 }
 
+/** Captured hrefs are raw attribute values; resolve them so the check sees real hosts. */
+function absoluteLinks(links: CaptureResult['links'], base: string): { href: string; text: string }[] {
+  const out: { href: string; text: string }[] = [];
+  for (const link of links) {
+    try {
+      out.push({ href: new URL(link.href, base).toString(), text: link.text });
+    } catch {
+      continue;
+    }
+  }
+  return out;
+}
+
 function buildContext(input: {
   site: Site;
   light: LightResult;
@@ -196,6 +212,7 @@ function buildContext(input: {
   domainExpiry: number | null;
   safeBrowsingFlagged: boolean | null;
   vulnerableLibraries: { library: string; version: string | null; cve: string[] }[];
+  officialDomains?: ReadonlySet<string>;
 }): CheckContext {
   return {
     site: input.site,
@@ -220,5 +237,7 @@ function buildContext(input: {
     crawl: input.crawlResult,
     vulnerableLibraries: input.vulnerableLibraries,
     safeBrowsingFlagged: input.safeBrowsingFlagged ?? undefined,
+    links: absoluteLinks(input.captured.links, input.captured.finalUrl),
+    officialDomains: input.officialDomains,
   };
 }

@@ -5,9 +5,10 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import pLimit from 'p-limit';
 import { toMarkdownTable, validateRegistry } from './validate.js';
-import { loadRegistry } from './registry.js';
+import { loadRegistry, officialDomainsOf } from './registry.js';
 import { lightCheck } from './light.js';
 import { INDIA_VANTAGE, mergeIndiaLightResult, mergeLightResult, readResult, writeJsonAtomic, writeResult, type Result } from './store.js';
+import { computeActionReport } from './actions.js';
 import { computeSummary } from './summary.js';
 import { changedSiteIds } from './changed.js';
 import { resolveSites, toResolvedTable } from './resolve.js';
@@ -169,6 +170,7 @@ async function runLight(argv: string[]): Promise<number> {
   const allResults = registry.sites.map((s) => readResult(dataDir, s.id)).filter((r): r is Result => r !== null);
   const summary = computeSummary(registry, allResults, { now: new Date(), vantages: [...new Set(['gh-us', vantage])] });
   writeJsonAtomic(join(dataDir, 'summary.json'), summary);
+  writeJsonAtomic(join(dataDir, 'actions.json'), computeActionReport(registry, allResults, { now: new Date() }));
 
   return 0;
 }
@@ -218,6 +220,7 @@ export async function runRun(argv: string[]): Promise<number> {
   }
 
   const registry = loadRegistry(registryDir);
+  const officialDomains = officialDomainsOf(registry);
   const sites = all
     ? registry.sites
     : ids!.map((id) => {
@@ -246,7 +249,7 @@ export async function runRun(argv: string[]): Promise<number> {
     for (const site of sites) {
       currentSiteId = site.id;
       const existing = readResult(outDir, site.id);
-      const { result, screenshots } = await runDeepAudit(site, existing, { vantage, noLighthouse, noCrawl, fixtureBase: fixtureBase ?? undefined });
+      const { result, screenshots } = await runDeepAudit(site, existing, { vantage, noLighthouse, noCrawl, fixtureBase: fixtureBase ?? undefined, officialDomains });
       writeResult(outDir, result);
       if (screenshots && result.deep?.screenshot) {
         const screenshotsDir = join(outDir, 'screenshots');
