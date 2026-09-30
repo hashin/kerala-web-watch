@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import '../styles/dashboard.css';
 import PagefindSearch from '../components/PagefindSearch.astro';
 import { t, type Locale } from '../i18n';
 
@@ -7,24 +8,27 @@ interface Props {
   title: string;
   description?: string;
   lang?: string;
-  /** Drives the header nav's labels and, for the Home/About links, their href -- Methodology and
-   * Reports have no `/ml/` counterpart yet, so those two stay in English on every page regardless
-   * of locale (same honest partial-translation pattern as the home page's own notice banner). */
   locale?: Locale;
-  /** This page's counterpart in the other language, if one exists yet -- most pages don't (some
-   * pages remain English-only even after WP5.3), so this is omitted more often than it's set. */
   altLangHref?: string;
   altLangLabel?: string;
+  /** Which primary-nav tab is active: snapshot | districts | ministries | leaderboard | reports | methodology | about */
+  active?: string;
 }
 
-const { title, description, lang = 'en', locale = 'en', altLangHref, altLangLabel } = Astro.props;
+const { title, description, lang = 'en', locale = 'en', altLangHref, altLangLabel, active } = Astro.props;
 const homeHref = locale === 'ml' ? '/ml/' : '/';
 const aboutHref = locale === 'ml' ? '/ml/about/' : '/about/';
-
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
-// Static build timestamp, not per-request -- accurate to "when this deployment was built", which
-// is what GIGW's "last updated" element is asking a citizen (DESIGN §5.3: `gigw.last_updated`).
 const lastUpdated = new Date().toISOString().slice(0, 10);
+const NAV = [
+  ['snapshot', 'Snapshot', homeHref],
+  ['districts', 'Districts', '/districts/'],
+  ['ministries', 'Ministries', '/ministries/'],
+  ['leaderboard', 'Leaderboard', '/leaderboard/'],
+  ['reports', 'Reports', '/reports/'],
+  ['methodology', 'Methodology', '/methodology/'],
+  ['about', t(locale, 'nav.about'), aboutHref],
+] as const;
 ---
 
 <!doctype html>
@@ -39,24 +43,19 @@ const lastUpdated = new Date().toISOString().slice(0, 10);
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
-    <header class="site-header">
-      <nav aria-label="Primary">
-        <a href={homeHref}>Kerala Web Watch</a>
-        · <a href="/methodology/">Methodology</a>
-        · <a href="/reports/">Reports</a>
-        · <a href={aboutHref}>{t(locale, 'nav.about')}</a>
-        {altLangHref && (
-          <>
-            {' · '}
-            <a href={altLangHref} hreflang={altLangLabel === 'English' ? 'en' : 'ml'}>{altLangLabel}</a>
-          </>
-        )}
-      </nav>
-      <PagefindSearch id="header-search" lazy />
+    <header class="d-head">
+      <div class="d-head__in">
+        <a class="d-brand" href={homeHref}><i aria-hidden="true"></i>Kerala Web Watch</a>
+        <nav class="d-nav" aria-label="Primary">
+          {NAV.map(([key, label, href]) => (
+            <a href={href} aria-current={active === key ? 'page' : undefined}>{label}</a>
+          ))}
+        </nav>
+        <PagefindSearch id="header-search" lazy />
+        {altLangHref && <a href={altLangHref} hreflang={altLangLabel === 'English' ? 'en' : 'ml'}>{altLangLabel}</a>}
+      </div>
     </header>
-    <main id="main">
-      <slot />
-    </main>
+    <main id="main"><slot /></main>
     <footer class="site-footer">
       <p>
         Kerala Web Watch is an independent, open-data civic audit. No cookies, no analytics, no
@@ -78,5 +77,28 @@ const lastUpdated = new Date().toISOString().slice(0, 10);
         <a href="/about/#rti">Right to Information (RTI)</a>
       </nav>
     </footer>
+
+    <div class="d-tip" id="d-tip" role="tooltip" hidden></div>
+    <script is:inline>
+      // Tooltips: any element (or ancestor, up to 6 levels) with data-tip shows it on hover AND keyboard focus.
+      // No third-party code, no cookies. Touch: first tap shows the tip, tap elsewhere hides it.
+      (function () {
+        var tip = document.getElementById('d-tip');
+        function find(el) { for (var i = 0; el && i < 6; i++, el = el.parentElement) { if (el.dataset && el.dataset.tip) return el; } return null; }
+        function show(el, x, y) {
+          tip.textContent = el.dataset.tip; tip.hidden = false;
+          var w = tip.offsetWidth, h = tip.offsetHeight;
+          if (x + w > innerWidth - 8) x = Math.max(8, x - w - 28);
+          if (y + h > innerHeight - 8) y = y - h - 28;
+          tip.style.left = x + 'px'; tip.style.top = y + 'px';
+        }
+        document.addEventListener('mouseover', function (e) { var el = find(e.target); if (el) show(el, e.clientX + 14, e.clientY + 18); else tip.hidden = true; });
+        document.addEventListener('mousemove', function (e) { if (!tip.hidden) { var el = find(e.target); if (el) show(el, e.clientX + 14, e.clientY + 18); } });
+        document.addEventListener('mouseout', function (e) { if (!e.relatedTarget) tip.hidden = true; });
+        document.addEventListener('focusin', function (e) { var el = find(e.target); if (el) { var r = el.getBoundingClientRect(); show(el, r.left, r.bottom + 6); } });
+        document.addEventListener('focusout', function () { tip.hidden = true; });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') tip.hidden = true; });
+      })();
+    </script>
   </body>
 </html>
