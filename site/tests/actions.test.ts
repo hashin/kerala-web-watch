@@ -31,6 +31,35 @@ describe('actionsCsv', () => {
   });
 });
 
+describe('actionsCsv details', () => {
+  const multi: ActionReport = {
+    ...report,
+    sites: [{ id: 'a', bucket: 1, status: 'needs-work', deep_at: null, light_at: null, actions: [{ check: 'sec.vuln_js', grade: 3, sev: 'H', basis: 'deep', observed: 'o', ev: 'line1\nline2' }] }],
+  };
+
+  it('writes the site grade before the action grade, quotes a newline, and ends the file with a newline', () => {
+    const csv = actionsCsv(multi, sites);
+    expect(csv.endsWith('\n')).toBe(true);
+    expect(csv).toContain(',1,3,sec.vuln_js,');
+    expect(csv).toContain('"line1\nline2"');
+  });
+});
+
+describe('actionRows details', () => {
+  it('prefers the deep-audit time over the light-check time, and exposes the check\'s own fix text', () => {
+    const both: ActionReport = { ...report, sites: [{ ...report.sites[0], deep_at: 'D', light_at: 'L' }] };
+    const [row] = actionRows(both, sites, 'en');
+    expect(row.checked).toBe('D');
+    expect(row.top?.fix).toContain('CERT-In');
+  });
+
+  it('skips a report entry whose site is not in the site list', () => {
+    const extra: ActionReport = { ...report, sites: [...report.sites, { id: 'ghost', bucket: 1, status: 'down', deep_at: null, light_at: null, actions: [] }] };
+    expect(actionRows(extra, sites, 'en').map((r) => r.site.id)).toEqual(['a', 'b']);
+    expect(actionsCsv(extra, sites)).not.toContain('ghost');
+  });
+});
+
 describe('actionsApi', () => {
   it('adds each site\'s name and each action\'s English title and citizen text', () => {
     const api = actionsApi(report, sites);

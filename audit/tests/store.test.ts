@@ -410,4 +410,22 @@ describe('India vantage (WP4.7, DESIGN §6.7)', () => {
   it('without an India record a geo-blocked US check stays unverifiable', () => {
     expect(unverifiableResult().status).toBe('unverifiable');
   });
+
+  it('lets a normal US failure decide the status when the US check is not geo-blocked, even with an India record', () => {
+    const viaIndia = mergeIndiaLightResult(unverifiableResult(), light(), { today: '2026-09-22' });
+    const failing = light({ status_class: 'timeout', status: null });
+    const once = mergeLightResult(viaIndia, site, failing, { vantage: 'gh-us', today: '2026-09-23' });
+    const twice = mergeLightResult(once, site, failing, { vantage: 'gh-us', today: '2026-09-24' });
+    expect(twice.status).toBe('down');
+  });
+
+  it('does nothing to a result that has no light check', () => {
+    const noLight = { ...unverifiableResult(), light: null };
+    expect(mergeIndiaLightResult(noLight, light(), { today: '2026-09-22' })).toBe(noLight);
+  });
+
+  it('appends a history entry for the India check, marked up when India reached the site', () => {
+    const after = mergeIndiaLightResult(unverifiableResult(), light(), { today: '2026-09-22' });
+    expect(after.history[0]).toMatchObject({ d: '2026-09-22', up: true });
+  });
 });

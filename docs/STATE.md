@@ -188,6 +188,10 @@ nothing citizen-critical depends on it and it's easy to pick up later.
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
 
+- **2026-09-30 · verifier pass on colleges + action report.** ~100 mutations; all core rules caught. The 26
+  survivors (mostly boundary cases: lottery/slot exclusions, .gov.in skip, sort tie-breaks, India guards, CSV
+  edge cases) now have tests. Note: `site` tests import the *built* `audit/dist` — run `npm run build` in
+  `audit/` before trusting them.
 - **2026-09-30 (action report) · ADR-028 built.** `sec.injected_links` (never fetches, redacts queries), `actions.ts`
   grading (4/8/17/22/28/6 check split pinned by a test), `actions.json` from merge+light, site pages
   `/actions/`, `/actions/grade/<g>/`, `/departments/<d>/actions/`, `/ml/actions/`, per-site "What to fix first" +

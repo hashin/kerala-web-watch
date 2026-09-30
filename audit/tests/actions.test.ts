@@ -66,6 +66,45 @@ describe('gradeFor', () => {
   });
 });
 
+describe('gradeFor edge cases', () => {
+  it('grades a failed check whose status setting is unverifiable as nothing', () => {
+    expect(gradeFor('avail.geo_blocked', 'fail')).toBeNull();
+  });
+});
+
+describe('computeActionReport ordering and light evidence', () => {
+  it('orders a site\'s actions by grade, then severity C before H, then check id', () => {
+    const r = result('s', {
+      status: 'needs-work',
+      deep: deep([{ id: 'sec.https', r: 'fail' }, { id: 'sec.vuln_js', r: 'fail' }, { id: 'sec.hsts', r: 'fail' }, { id: 'content.malayalam', r: 'fail' }]),
+      issues: [
+        { id: 'sec.vuln_js', sev: 'H' }, { id: 'sec.https', sev: 'C' }, { id: 'sec.hsts', sev: 'M' }, { id: 'content.malayalam', sev: 'M' },
+      ],
+    });
+    const out = computeActionReport(registryOf([site('s')]), [r], { now: NOW }).sites[0].actions.map((a) => a.check);
+    expect(out).toEqual(['sec.https', 'sec.vuln_js', 'content.malayalam', 'sec.hsts']);
+  });
+
+  it('breaks a tie inside a bucket by site priority before name', () => {
+    const reg = registryOf([site('a', { name: 'A', priority: 3 }), site('b', { name: 'B', priority: 1 })]);
+    const out = computeActionReport(reg, [], { now: NOW }).sites.map((s) => s.id);
+    expect(out).toEqual(['b', 'a']);
+  });
+
+  it('treats an issue missing from deep.checks as a fail, not a warn', () => {
+    const r = result('s', { status: 'needs-work', deep: deep([]), issues: [{ id: 'sec.vuln_js', sev: 'H' }] });
+    expect(computeActionReport(registryOf([site('s')]), [r], { now: NOW }).sites[0].actions[0].grade).toBe(3);
+  });
+
+  it('gives a light-only broken site a grade-2 action with the certificate expiry in its evidence', () => {
+    const r = result('s', { status: 'broken', light: light({ tls: { valid: false, expires: '2026-01-01' } as LightResult['tls'] }) });
+    const [a] = computeActionReport(registryOf([site('s')]), [r], { now: NOW }).sites[0].actions;
+    expect(a.check).toBe('sec.cert_valid');
+    expect(a.grade).toBe(2);
+    expect(a.ev).toBe('Light check 2026-09-30T00:00:00.000Z: ok; certificate expiry 2026-01-01');
+  });
+});
+
 describe('computeActionReport', () => {
   const reg = registryOf([
     site('compromised', { name: 'B compromised' }),

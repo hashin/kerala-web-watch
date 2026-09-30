@@ -38,6 +38,7 @@ describe('collegeManagementText', () => {
     expect(text.label).toBe('Government-aided college');
     expect(text.meaning).toContain('pays its teachers');
     expect(text.href).toBe('/colleges/aided/');
+    expect(text.seeAll).toBe('See all government-aided colleges');
   });
 
   it('gives the Malayalam label and meaning on the ml locale', () => {
