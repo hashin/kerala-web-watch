@@ -42,4 +42,28 @@ describe('reportKpis', () => {
   it('a change of zero from a previous median of zero is still a comparison', () => {
     expect(byLabel(reportKpis({ ...NOW, median_score: 0 }, { median_score: 0 }), 'Median score').delta).toEqual({ text: 'no change', tone: 'flat' });
   });
+
+  it('lists the tiles in reading order', () => {
+    expect(reportKpis(NOW, null).map((k) => k.label)).toEqual(['Sites tracked', 'Deep-audited', 'Down or broken', 'Healthy', 'Median score']);
+  });
+
+  it('counts more deep-audited sites as good news and fewer as bad', () => {
+    expect(byLabel(reportKpis(NOW, { deep_audited: 4 }), 'Deep-audited').delta).toEqual({ text: '▲ 4', tone: 'good' });
+    expect(byLabel(reportKpis(NOW, { deep_audited: -4 }), 'Deep-audited').delta).toEqual({ text: '▼ 4', tone: 'bad' });
+  });
+
+  it('groups thousands the Indian way on every count tile, not just sites', () => {
+    const k = reportKpis({ sites: 1, deep_audited: 123456, down: 100000, hijacked: 0, broken: 20000, healthy: 1234567, median_score: 1 }, null);
+    expect([byLabel(k, 'Deep-audited').value, byLabel(k, 'Down or broken').value, byLabel(k, 'Healthy').value]).toEqual(['1,23,456', '1,20,000', '12,34,567']);
+  });
+
+  it('shows a median of zero as 0, not as missing', () => {
+    expect(byLabel(reportKpis({ ...NOW, median_score: 0 }, null), 'Median score').value).toBe('0');
+  });
+
+  it('treats an absent status in a partial change as no movement, and fabricates no other change lines', () => {
+    const k = reportKpis(NOW, { down: 10 });
+    expect(byLabel(k, 'Down or broken').delta).toEqual({ text: '▲ 10', tone: 'bad' });
+    for (const label of ['Sites tracked', 'Deep-audited', 'Healthy', 'Median score']) expect(byLabel(k, label).delta).toBeNull();
+  });
 });
