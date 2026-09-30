@@ -121,7 +121,8 @@ main { max-width: 72rem; }
 .d-grid--4 { grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); }
 .d-grid--2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); }
 .d-split { display: grid; gap: 0.9rem; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); }
-@media (max-width: 760px) { .d-split { grid-template-columns: 1fr; } }
+.d-split--even { display: grid; gap: 0.9rem; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); }
+@media (max-width: 760px) { .d-split, .d-split--even { grid-template-columns: 1fr; } }
 
 .d-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem 1.25rem; }
 .d-card h2, .d-card h3 { margin: 0 0 0.6rem; font-size: 1.1rem; font-weight: 600; }
@@ -135,6 +136,8 @@ main { max-width: 72rem; }
 
 /* ---------- KPI tile ---------- */
 .d-kpi { display: flex; flex-direction: column; gap: 0.15rem; }
+.d-kpi--link { text-decoration: none; color: inherit; }
+.d-kpi--link:hover { border-color: var(--focus); }
 .d-kpi__label { display: flex; align-items: center; gap: 0.45rem; }
 .d-dot { width: 0.7rem; height: 0.7rem; border-radius: 50%; flex: none; background: var(--dot, var(--grey)); }
 .d-kpi__val { font-size: 2.25rem; line-height: 1.1; }
@@ -159,8 +162,13 @@ main { max-width: 72rem; }
 .d-trend i[aria-current='true'] { background: var(--crimson); }
 
 /* ---------- Rank rows (district/ministry/department) ---------- */
-.d-rank { display: grid; grid-template-columns: minmax(7rem, 11rem) 1fr 4.5rem 3.5rem; gap: 0.7rem; align-items: center; padding: 0.3rem 0; }
+.d-rank { display: grid; grid-template-columns: var(--cols); overflow-wrap: anywhere; gap: 0.7rem; align-items: center; padding: 0.3rem 0; }
 .d-rank--head { color: var(--color-muted); font-size: 0.8rem; }
+.d-rank > * { min-width: 0; }
+@media (max-width: 560px) {
+  .d-rank { grid-template-columns: var(--cols-sm); gap: 0.4rem; }
+  .d-hide-sm { display: none; }
+}
 .d-rank a { color: var(--link); text-decoration: none; }
 .d-score { display: inline-flex; align-items: center; gap: 0.35rem; font-weight: 600; }
 
@@ -168,7 +176,7 @@ main { max-width: 72rem; }
 .d-tile { display: block; border: 1px solid var(--line); border-radius: var(--radius); padding: 0.7rem 0.9rem; background: var(--surface); text-decoration: none; color: var(--ink); }
 .d-tile:hover { border-color: var(--sky); }
 .d-tile__top { display: flex; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.4rem; }
-.d-tile .d-stackbar { height: 0.7rem; border: 0; }
+.d-tile .d-stackbar { height: 0.7rem; border: 0; width: 100%; }
 
 /* ---------- Chips, tabs, pills ---------- */
 .d-chips { display: flex; gap: 0.4rem; flex-wrap: wrap; }
@@ -210,3 +218,9 @@ details.d-collapse > summary::-webkit-details-marker { display: none; }
 [data-tip] { cursor: help; }
 .d-tip { position: fixed; z-index: 1000; max-width: 18rem; padding: 0.55rem 0.75rem; background: var(--tip-bg); color: var(--tip-fg); font-size: 0.8125rem; line-height: 1.4; border-radius: var(--radius); box-shadow: 0 6px 20px var(--shadow); pointer-events: none; }
 .d-tip[hidden] { display: none; }
+
+/* ---------- Small shared bits ---------- */
+.d-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.7rem; }
+.d-list a { color: var(--link); }
+.d-donut { width: 9.5rem; height: 9.5rem; border-radius: 50%; display: grid; place-items: center; font-size: 2rem; background: conic-gradient(var(--sky) var(--pct), var(--track) 0); }
+.d-donut > span { width: 7rem; height: 7rem; border-radius: 50%; background: var(--surface); display: grid; place-items: center; }

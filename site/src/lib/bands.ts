@@ -18,7 +18,7 @@ export const STATUS_COLOR: Record<Status, string> = {
   unaudited: 'var(--grey)', unverifiable: 'var(--grey)',
 };
 export const STATUS_WORD: Record<Status, string> = {
-  healthy: 'Healthy', 'needs-work': 'Needs work', poor: 'Poor', down: 'Down', hijacked: 'Possibly hijacked',
+  healthy: 'Healthy', 'needs-work': 'Needs work', poor: 'Poor', down: 'Down', hijacked: 'Possibly hijacked — do not visit',
   broken: 'Broken', unaudited: 'Not yet audited', unverifiable: 'Unverifiable',
 };
 

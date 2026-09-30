@@ -1,49 +1,34 @@
 ---
+// /ministries/ — one tile per cabinet portfolio, worst first.
 import Layout from '../../layouts/Layout.astro';
+import StackBar from '../../components/StackBar.astro';
 import { getMinisters, getMinistrySites } from '../../lib/data';
-import { percentBroken } from '../../lib/rollups';
+import { countByStatus, percentBroken } from '../../lib/rollups';
+import { comparisonSnapshot, delta, BROKEN } from '../../lib/weekly';
+import { TIP } from '../../lib/tips';
 
+const prev = comparisonSnapshot();
 const cards = getMinisters()
-  .map((minister) => {
-    const sites = getMinistrySites(minister);
-    return { minister, count: sites.length, health: 100 - percentBroken(sites) };
+  .map((m) => {
+    const sites = getMinistrySites(m);
+    const nowBroken = sites.filter((s) => BROKEN.includes(s.status)).length;
+    return { m, count: sites.length, counts: countByStatus(sites), pct: percentBroken(sites), delta: delta(nowBroken, prev?.ministries[m.id]?.broken, true) };
   })
-  .sort((a, b) => a.minister.name.localeCompare(b.minister.name));
+  .filter((c) => c.count > 0)
+  .sort((a, b) => b.pct - a.pct);
 ---
 
-<Layout title="Ministries" description="Government of Kerala portfolios, and the health of the websites under each.">
-  <p><a href="/">&larr; Home</a></p>
-  <h1>Ministries</h1>
-  <p>Kerala's cabinet portfolios, each covering one or more Secretariat departments.</p>
-
-  <ul class="ministry-cards">
-    {cards.map(({ minister, count, health }) => (
-      <li>
-        <a href={`/ministries/${minister.id}/`}>
-          <strong>{minister.name}</strong>
-          {minister.holder && <span class="ministry-cards__holder"> &middot; {minister.holder}</span>}
+<Layout title="Ministries" description="Government of Kerala portfolios, and the health of the websites under each." active="ministries">
+  <div class="d-stack">
+    <div class="d-row" style="align-items:baseline"><h1 class="d-h1">Ministries</h1><span class="d-muted" data-tip={TIP.ministryGrid} tabindex="0">Cabinet portfolios, worst first</span></div>
+    <div class="d-grid" style="grid-template-columns:repeat(auto-fill,minmax(min(100%,16rem),1fr))">
+      {cards.map(({ m, count, counts, pct, delta: d }) => (
+        <a class="d-tile" href={`/ministries/${m.id}/`} data-tip={TIP.ministryTile}>
+          <div class="d-tile__top"><strong>{m.name}</strong><span class={`d-delta d-delta--${d?.tone ?? 'flat'}`}>{d?.text ?? ''}</span></div>
+          <StackBar counts={counts} mini />
+          <div class="d-small d-muted" style="margin-top:.4rem">{count} sites · {pct}% broken{m.holder ? ` · ${m.holder}` : ''}</div>
         </a>
-        <p>{count} tracked site{count === 1 ? '' : 's'} &middot; {health}% not broken</p>
-      </li>
-    ))}
-  </ul>
+      ))}
+    </div>
+  </div>
 </Layout>
-
-<style>
-  .ministry-cards {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 0.75rem;
-  }
-  .ministry-cards li {
-    border: 1px solid var(--color-border);
-    border-radius: 0.5rem;
-    padding: 0.75rem 1rem;
-  }
-  .ministry-cards__holder {
-    color: var(--color-muted);
-    font-weight: 400;
-  }
-</style>

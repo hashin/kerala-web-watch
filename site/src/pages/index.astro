@@ -1,125 +1,143 @@
 ---
+// Home = "This week's snapshot": live numbers, compared with the last completed week's snapshot when one exists.
 import Layout from '../layouts/Layout.astro';
 import HealthBadge from '../components/HealthBadge.astro';
-import StatTile from '../components/StatTile.astro';
-import CoverageBar from '../components/CoverageBar.astro';
-import KeralaMap from '../components/KeralaMap.astro';
+import KpiTile from '../components/KpiTile.astro';
+import StackBar from '../components/StackBar.astro';
+import RankTable from '../components/RankTable.astro';
 import PagefindSearch from '../components/PagefindSearch.astro';
-import { getDistricts, getSite, getSummary } from '../lib/data';
-
-const summary = getSummary();
-const { totals } = summary;
-const brokenHeadline = totals.down + totals.hijacked + totals.broken;
-const districts = getDistricts();
-
-const recentBroken = summary.recent_broken
-  .map((t) => ({ ...t, site: getSite(t.id) }))
-  .filter((t) => t.site);
-const recentFixed = summary.recent_fixed
-  .map((t) => ({ ...t, site: getSite(t.id) }))
-  .filter((t) => t.site);
+import { getSites, getSummary, getSite, getDistricts, explainStatus } from '../lib/data';
 import { getActionReport } from '../lib/actions';
-const actionReport = getActionReport();
+import { countByStatus, medianScore, percentBroken } from '../lib/rollups';
+import { comparisonSnapshot, countSeries, currentWeek, getSnapshots, brokenCount, brokenTrend, delta, BROKEN } from '../lib/weekly';
+import { TIP } from '../lib/tips';
+import type { RankRowData } from '../lib/types';
+
+const sites = getSites();
+const summary = getSummary();
+const counts = countByStatus(sites);
+const broken = brokenCount(counts);
+const unaudited = counts.unaudited + counts.unverifiable;
+const wk = currentWeek();
+const prev = comparisonSnapshot(wk.week);
+const trend = brokenTrend(sites, 8);
+const trendMax = Math.max(1, ...trend.map((t) => t.broken));
+const dBroken = delta(broken, prev ? brokenCount(prev.counts) : null, true);
+const snaps = getSnapshots();
+const series = (pick: (c: typeof counts) => number, live: number) => countSeries(snaps, wk.week, pick, live);
+const urgent = getActionReport().totals[1] + getActionReport().totals[2];
+
+const kpis = [
+  { label: 'Healthy', value: counts.healthy, color: 'var(--teal)', tip: TIP.kpiHealthy, delta: delta(counts.healthy, prev?.counts.healthy, false), spark: series((c) => c.healthy, counts.healthy), href: '/status/healthy/' },
+  { label: 'Needs work', value: counts['needs-work'], color: 'var(--amber)', tip: TIP.kpiNeedsWork, delta: delta(counts['needs-work'], prev?.counts['needs-work'], true), spark: series((c) => c['needs-work'], counts['needs-work']), href: '/status/needs-work/' },
+  { label: 'Poor', value: counts.poor, color: 'var(--coral)', tip: TIP.kpiPoor, delta: delta(counts.poor, prev?.counts.poor, true), spark: series((c) => c.poor, counts.poor), href: '/status/poor/' },
+  { label: 'Down / broken', value: broken, color: 'var(--crimson)', tip: TIP.kpiBroken, delta: dBroken, spark: series(brokenCount, broken), href: '/status/broken/' },
+  {
+    label: 'Not yet audited', value: unaudited, color: 'var(--grey)', tip: TIP.kpiUnaudited,
+    delta: delta(unaudited, prev ? prev.counts.unaudited + prev.counts.unverifiable : null, false),
+    spark: series((c) => c.unaudited + c.unverifiable, unaudited), href: '/status/unaudited/',
+    note: counts.unverifiable > 0 ? `includes ${counts.unverifiable} we cannot reach from our location` : undefined,
+  },
+];
+
+const brokenIn = (list: typeof sites) => list.filter((s) => BROKEN.includes(s.status)).length;
+const districts: RankRowData[] = getDistricts()
+  .map((d) => {
+    const inDistrict = sites.filter((s) => s.district === d.id);
+    return { name: d.name, href: `/districts/${d.id}/`, sites: inDistrict.length, brokenPct: percentBroken(inDistrict), median: medianScore(inDistrict), delta: delta(brokenIn(inDistrict), prev?.districts[d.id]?.broken, true) };
+  })
+  .sort((a, b) => b.brokenPct - a.brokenPct)
+  .slice(0, 7);
+
+const named = (rows: { id: string; since: string }[]) => rows.map((t) => ({ ...t, site: getSite(t.id) })).filter((t) => t.site);
+const recentBroken = named(summary.recent_broken);
+const recentFixed = named(summary.recent_fixed);
+const cov = summary.coverage;
+const coveragePct = Math.round((cov.deep_audited / cov.total) * 100);
 ---
 
-<Layout
-  title="Home"
-  description="Tracking which Government of Kerala websites are up, down or broken, and why."
-  altLangHref="/ml/"
-  altLangLabel="മലയാളം"
->
-  <h1>Kerala Web Watch</h1>
-  <p class="headline">
-    <strong>{brokenHeadline}</strong> of <strong>{totals.sites}</strong> Kerala government websites are broken right now.
-  </p>
-  <p>
-    Every site gets a light check (is it up? valid HTTPS? redirecting somewhere odd?) every 6 hours,
-    and a deep audit (accessibility, security headers, content quality, GIGW compliance) on a rolling
-    basis. A site not yet reached by the deep audit shows as <HealthBadge status="unaudited" />.
-  </p>
-
-  <section aria-labelledby="search-heading">
-    <h2 id="search-heading">Search</h2>
-    <PagefindSearch id="home-search" />
-  </section>
-
-  <section aria-labelledby="map-heading">
-    <h2 id="map-heading">By district</h2>
-    <KeralaMap />
-    <p><a href="/districts/">All districts &rarr;</a></p>
-  </section>
-
-  <section aria-labelledby="stats-heading">
-    <h2 id="stats-heading">Right now</h2>
-    <div class="stat-grid">
-      <StatTile label="Down" value={totals.down} tone="bad" href="/status/down/" />
-      <StatTile label="Hijacked" value={totals.hijacked} tone="bad" href="/status/hijacked/" />
-      <StatTile label="Broken" value={totals.broken} tone="bad" href="/status/broken/" />
-      <StatTile label="Unverifiable (geo-blocked)" value={totals.unverifiable} tone="warn" href="/status/unverifiable/" />
-      <StatTile label="Sites needing urgent action" value={actionReport.totals[1] + actionReport.totals[2]} tone="bad" href="/actions/" />
-      <StatTile label="Not yet audited" value={totals.unaudited} tone="neutral" href="/status/unaudited/" />
+<Layout title="This week's snapshot" description="Tracking which Government of Kerala websites are up, down or broken, and why." active="snapshot" altLangHref="/ml/" altLangLabel="മലയാളം">
+  <div class="d-stack">
+    <div class="d-row">
+      <div class="d-week" data-tip={TIP.week} tabindex="0">Week {wk.week.slice(-2)} · {wk.from} – {wk.to}</div>
+      <span style="flex:1"></span>
+      <PagefindSearch id="home-search" />
     </div>
-  </section>
 
-  <section aria-labelledby="coverage-heading">
-    <h2 id="coverage-heading">Audit coverage</h2>
-    <CoverageBar
-      done={summary.coverage.deep_audited}
-      total={summary.coverage.total}
-      label={`${summary.coverage.deep_audited} of ${summary.coverage.total} sites deep-audited${summary.coverage.eta ? ` — full coverage by ${summary.coverage.eta}` : ''}`}
-    />
-  </section>
+    <div>
+      <h1 class="d-lede" data-tip={TIP.brokenHeadline} tabindex="0"><strong>{broken.toLocaleString('en-IN')}</strong> of {sites.length.toLocaleString('en-IN')} Kerala government websites are broken right now.</h1>
+      <p class="d-muted" style="margin:.4rem 0 0">
+        {dBroken && dBroken.tone !== 'flat' ? `${dBroken.text.replace(/^[▲▼] /, '')} ${dBroken.text.startsWith('▲') ? 'more' : 'fewer'} than last week · ` : ''}{recentBroken.length} broke this week · {recentFixed.length} fixed · {cov.deep_audited.toLocaleString('en-IN')} deep-audited so far.
+        Sites not yet reached by the deep audit show as <HealthBadge status="unaudited" />. <a href="/methodology/">How we check</a>.
+      </p>
+    </div>
 
-  {(recentBroken.length > 0 || recentFixed.length > 0) && (
-    <section aria-labelledby="recent-heading">
-      <h2 id="recent-heading">This week</h2>
-      {recentBroken.length > 0 && (
-        <>
-          <h3>Broke this week</h3>
-          <ul>
-            {recentBroken.map((t) => (
-              <li><a href={`/sites/${t.id}/`}>{t.site!.name}</a> — since {t.since}</li>
-            ))}
-          </ul>
-        </>
-      )}
-      {recentFixed.length > 0 && (
-        <>
-          <h3>Fixed this week</h3>
-          <ul>
-            {recentFixed.map((t) => (
-              <li><a href={`/sites/${t.id}/`}>{t.site!.name}</a> — since {t.since}</li>
-            ))}
-          </ul>
-        </>
-      )}
+    <div class="d-grid d-grid--5">
+      {kpis.map((k) => <KpiTile {...k} />)}
+      <KpiTile label="Urgent action" value={urgent} color="var(--crimson)" tip="Sites with a finding graded urgent or high. Each one has a step-by-step fix on the Actions page." href="/actions/" note="sites to fix first" />
+    </div>
+
+    <div class="d-split">
+      <section class="d-card d-stack" style="gap:.9rem" aria-labelledby="hb">
+        <h2 id="hb" style="margin:0">Health of all {sites.length.toLocaleString('en-IN')} sites</h2>
+        <div data-tip={TIP.healthBar}><StackBar counts={counts} legend /></div>
+        {trend.length > 1 && <div class="d-trend" data-tip={TIP.trend} role="img" aria-label={`Broken sites per week: ${trend.map((t) => `${t.now ? 'now' : t.week} ${t.broken}`).join(', ')}`}>
+          {trend.map((t) => (
+            <div><i style={`height:${(t.broken / trendMax) * 100}%`} aria-current={t.now ? 'true' : undefined} data-tip={`${t.now ? 'Now' : t.week}: ${t.broken} sites broken`}></i>{t.week}</div>
+          ))}
+        </div>}
+        {trend.length < 2 && <p class="d-small d-muted" style="margin:0">Week-by-week history starts after the first weekly snapshot (Sunday night).</p>}
+      </section>
+      <section class="d-card d-stack" style="align-items:center;justify-content:center" aria-labelledby="cv" data-tip={TIP.coverage} tabindex="0">
+        <h2 id="cv" style="margin:0;align-self:flex-start">Audit coverage</h2>
+        <div class="d-donut" style={`--pct:${coveragePct}%`} role="img" aria-label={`${coveragePct}% deep-audited`}><span>{coveragePct}%</span></div>
+        <p class="d-muted" style="text-align:center;margin:0">{cov.deep_audited.toLocaleString('en-IN')} of {cov.total.toLocaleString('en-IN')} deep-audited{cov.eta ? <><br />full coverage by {cov.eta}</> : null}</p>
+      </section>
+    </div>
+
+    <div class="d-grid d-grid--2">
+      <section class="d-card" aria-labelledby="bk" data-tip={TIP.broke} tabindex="0">
+        <h2 id="bk" style="color:var(--crimson-ink)">Broke this week · {recentBroken.length}</h2>
+        <ul class="d-list">
+          {recentBroken.slice(0, 5).map((t) => {
+            const why = explainStatus(t.site!);
+            return (
+              <li>
+                <div class="d-row" style="flex-wrap:nowrap"><a href={`/sites/${t.id}/`} style="flex:1">{t.site!.name}</a><HealthBadge status={t.site!.status} /></div>
+                <div class="d-small d-muted">{why ? why.citizen : ''} Since {t.since}.</div>
+              </li>
+            );
+          })}
+        </ul>
+        {recentBroken.length === 0 && <p class="d-muted">No site has newly broken this week.</p>}
+        <p style="margin:.7rem 0 0"><a href="/status/broken/">See all broken sites →</a></p>
+      </section>
+      <section class="d-card" aria-labelledby="fx" data-tip={TIP.fixed} tabindex="0">
+        <h2 id="fx" style="color:var(--teal-ink)">Fixed this week · {recentFixed.length}</h2>
+        <ul class="d-list">
+          {recentFixed.slice(0, 5).map((t) => <li class="d-row" style="flex-wrap:nowrap"><a href={`/sites/${t.id}/`} style="flex:1">{t.site!.name}</a><span class="d-small d-muted">back up since {t.since}</span></li>)}
+        </ul>
+        {recentFixed.length === 0 && <p class="d-muted">No site has come back up this week.</p>}
+      </section>
+    </div>
+
+    <section class="d-card" aria-labelledby="dr">
+      <div class="d-row" style="justify-content:space-between"><h2 id="dr" style="margin:0">Districts with the most broken sites</h2><a href="/districts/">All districts →</a></div>
+      <RankTable rows={districts} />
     </section>
-  )}
 
-  <section aria-labelledby="browse-heading">
-    <h2 id="browse-heading">Browse</h2>
-    <ul>
-      <li><a href="/districts/">By district</a> ({districts.length} districts)</li>
-      <li><a href="/ministries/">By ministry</a></li>
-      <li><a href="/leaderboard/">Leaderboard</a></li>
-      <li><a href="/status/down/">Down sites</a></li>
-      <li><a href="/status/broken/">Broken sites</a></li>
-      <li><a href="/status/unaudited/">Not yet audited</a></li>
-      <li><a href="/colleges/">Colleges &mdash; government and government-aided</a></li>
-      <li><a href="/kinds/grama_panchayat/">All grama panchayats</a></li>
-      <li><a href="/kinds/university/">All universities</a></li>
-      <li><a href="/platforms/lsgkerala/">The lsgkerala platform</a></li>
-    </ul>
-  </section>
+    <section class="d-card" aria-labelledby="br">
+      <h2 id="br">Browse</h2>
+      <div class="d-chips">
+        <a class="d-chip" href="/ministries/">By ministry</a>
+        <a class="d-chip" href="/districts/">By district</a>
+        <a class="d-chip" href="/leaderboard/">Leaderboard</a>
+        <a class="d-chip" href="/colleges/">Colleges</a>
+        <a class="d-chip" href="/kinds/grama_panchayat/">All grama panchayats</a>
+        <a class="d-chip" href="/kinds/university/">All universities</a>
+        <a class="d-chip" href="/platforms/lsgkerala/">The lsgkerala platform</a>
+        <a class="d-chip" href="/status/down/">Down sites</a>
+      </div>
+    </section>
+  </div>
 </Layout>
-
-<style>
-  .headline {
-    font-size: 1.25rem;
-  }
-  .stat-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
-    gap: 0.75rem;
-  }
-</style>
