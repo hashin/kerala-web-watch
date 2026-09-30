@@ -1,8 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import SiteTable from '../../components/SiteTable.astro';
-import GroupRollup from '../../components/GroupRollup.astro';
+import StackBar from '../../components/StackBar.astro';
+import HealthBadge from '../../components/HealthBadge.astro';
 import { getSites } from '../../lib/data';
+import { countByStatus, percentBroken } from '../../lib/rollups';
 import { collegesBySection, collegeText } from '../../lib/colleges';
 
 const sections = collegesBySection(getSites());
@@ -10,37 +11,40 @@ const government = collegeText('government', 'en');
 const aided = collegeText('aided', 'en');
 const unconfirmed = collegeText('unconfirmed', 'en');
 const total = sections.government.length + sections.aided.length + sections.unconfirmed.length;
+const groups = [
+  { text: government, sites: sections.government },
+  { text: aided, sites: sections.aided },
+];
 ---
 
 <Layout title="Colleges" description="Government and government-aided colleges tracked by Kerala Web Watch.">
-  <p><a href="/">&larr; Home</a></p>
-  <h1>Colleges</h1>
-  <p>
-    {total} tracked colleges, in two groups so it is clear who is responsible for each website. Only an official
-    document can put a college in a group &mdash; <a href="/methodology/#colleges">how we decide</a>.
-  </p>
+  <div class="d-stack">
+    <a class="d-back" href="/">&larr; This week's snapshot</a>
+    <h1 class="d-h1">Colleges</h1>
+    <p class="d-muted" style="max-width:48rem;margin:0">
+      {total} tracked colleges, in two groups so it is clear who is responsible for each website. Only an official
+      document can put a college in a group &mdash; <a href="/methodology/#colleges">how we decide</a>.
+    </p>
 
-  <section>
-    <h2>{government.label}</h2>
-    <p>{government.meaning}</p>
-    <p>{sections.government.length} tracked colleges. <a href={government.href}>{government.seeAll}</a></p>
-    <GroupRollup sites={sections.government} />
-  </section>
+    <div class="d-grid d-grid--2">
+      {groups.map(({ text, sites }) => (
+        <section class="d-card d-stack" style="gap:.6rem" aria-labelledby={`c-${text.href}`}>
+          <h2 id={`c-${text.href}`} style="margin:0">{text.label}</h2>
+          <p class="d-muted" style="margin:0">{text.meaning}</p>
+          <StackBar counts={countByStatus(sites)} legend />
+          <p style="margin:0">{sites.length} tracked colleges · {percentBroken(sites)}% broken. <a href={text.href}>{text.seeAll}</a></p>
+        </section>
+      ))}
+    </div>
 
-  <section>
-    <h2>{aided.label}</h2>
-    <p>{aided.meaning}</p>
-    <p>{sections.aided.length} tracked colleges. <a href={aided.href}>{aided.seeAll}</a></p>
-    <GroupRollup sites={sections.aided} />
-  </section>
-
-  {
-    sections.unconfirmed.length > 0 && (
-      <section>
-        <h2>{unconfirmed.label}</h2>
-        <p>{unconfirmed.meaning}</p>
-        <SiteTable sites={sections.unconfirmed} />
+    {sections.unconfirmed.length > 0 && (
+      <section class="d-card" aria-labelledby="c-unconfirmed">
+        <h2 id="c-unconfirmed">{unconfirmed.label}</h2>
+        <p class="d-muted">{unconfirmed.meaning}</p>
+        <ul class="d-list">
+          {sections.unconfirmed.map((s) => <li class="d-row" style="flex-wrap:nowrap"><a href={`/sites/${s.id}/`} style="flex:1">{s.name}</a><HealthBadge status={s.status} /></li>)}
+        </ul>
       </section>
-    )
-  }
+    )}
+  </div>
 </Layout>

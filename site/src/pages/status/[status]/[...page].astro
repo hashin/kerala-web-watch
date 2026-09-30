@@ -1,9 +1,9 @@
 ---
+import { listRange } from '../../../lib/format';
 import Layout from '../../../layouts/Layout.astro';
-import SiteTable from '../../../components/SiteTable.astro';
-import Pagination from '../../../components/Pagination.astro';
-import HealthBadge from '../../../components/HealthBadge.astro';
+import GroupListing from '../../../components/GroupListing.astro';
 import { getSites, STATUSES, STATUS_DESCRIPTIONS } from '../../../lib/data';
+import { STATUS_WORD } from '../../../lib/bands';
 import type { Status } from '../../../lib/data';
 
 export async function getStaticPaths({ paginate }: { paginate: import('astro').PaginateFunction }) {
@@ -23,11 +23,16 @@ const { status } = Astro.params as { status: Status };
 const { page } = Astro.props as { page: import('astro').Page<ReturnType<typeof getSites>[number]> };
 ---
 
-<Layout title={`Status: ${status}`} description={`Government websites currently marked "${status}".`}>
-  <p><a href="/">&larr; Home</a></p>
-  <h1><HealthBadge status={status} /></h1>
-  <p class="status-description">{STATUS_DESCRIPTIONS[status]}</p>
-  <p>{page.total} sites.</p>
-  <SiteTable sites={page.data} />
-  <Pagination page={page} />
+<Layout title={`Status: ${STATUS_WORD[status]}`} description={`Government websites currently marked "${status}".`} active="snapshot">
+  <GroupListing
+    title="Status"
+    badge={status}
+    backHref="/"
+    backLabel="This week's snapshot"
+    intro={STATUS_DESCRIPTIONS[status]}
+    sections={[{ id: 'all', title: listRange(page), sites: page.data }]}
+    page={page}
+    showDistrict
+    summary={false}
+  />
 </Layout>

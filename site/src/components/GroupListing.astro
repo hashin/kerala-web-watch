@@ -1,0 +1,192 @@
+---
+// The ONE template behind every "list of sites" page: districts, ministries, departments, kinds,
+// platforms, statuses, colleges. Filtering is progressive enhancement: with JS off, everything is listed.
+//
+// `groupSites` is the WHOLE group (for the KPI strip and the most-common-problems card); `sections` is
+// only what this page lists, which on a paginated page is one slice of it.
+import type { SiteView } from '../lib/data';
+import { explainStatus } from '../lib/data';
+import { CHECKS } from '../../../audit/dist/checks/registry.js';
+import { countByStatus, failedCheckCounts, medianScore, percentBroken } from '../lib/rollups';
+import { delta, weekStrip } from '../lib/weekly';
+import type { Delta } from '../lib/types';
+import { bandCounts, medianColor } from '../lib/bands';
+import { TIP } from '../lib/tips';
+import HealthBadge from './HealthBadge.astro';
+import KpiTile from './KpiTile.astro';
+import StackBar from './StackBar.astro';
+import Pagination from './Pagination.astro';
+import type { Status } from '../lib/data';
+
+export interface Section { id: string; title: string; sites: SiteView[]; collapsed?: boolean }
+interface Props {
+  title: string;
+  titleMl?: string | null;
+  /** Renders the status pill beside the title (status pages), so the heading is never a bare word (ADR-026). */
+  badge?: Status;
+  backHref: string;
+  backLabel: string;
+  intro?: string;
+  sections: Section[];
+  groupSites?: SiteView[];
+  /** The comparison week's numbers for this group, when snapshots have them. */
+  prev?: { broken: number; median: number | null; sites: number } | null;
+  page?: import('astro').Page<unknown>;
+  showDepartment?: boolean;
+  showDistrict?: boolean;
+  /** Off for pages whose whole list shares one status (the KPI strip would be redundant). */
+  summary?: boolean;
+}
+const { title, titleMl, badge, backHref, backLabel, intro, sections, prev = null, page, showDepartment = true, showDistrict = false, summary = true } = Astro.props;
+
+const listed = sections.flatMap((s) => s.sites);
+const group = Astro.props.groupSites ?? listed;
+const bands = bandCounts(countByStatus(group));
+const broken = bands.find((b) => b.key === 'broken')!.n;
+const median = medianScore(group);
+const audited = group.filter((s) => s.result?.deep).length;
+const topIssues = failedCheckCounts(group).slice(0, 3);
+const host = (u: string) => { try { return new URL(u).host; } catch { return u; } };
+const dBroken: Delta | null = delta(broken, prev?.broken, true);
+const dMedian: Delta | null = median != null ? delta(median, prev?.median, false) : null;
+const listedBands = bandCounts(countByStatus(listed));
+const chips = [{ key: 'all', label: 'All', n: listed.length, color: 'var(--ink)' }, ...listedBands.filter((b) => b.n > 0).map((b) => ({ key: b.key, label: b.label, n: b.n, color: b.color }))];
+const bandOf = (status: string) => listedBands.find((b) => b.statuses.includes(status as never))!.key;
+const paged = page != null && page.lastPage > 1;
+---
+
+<div class="d-stack" data-listing>
+  <a class="d-back" href={backHref}>&larr; {backLabel}</a>
+  <div class="d-row" style="align-items:baseline">
+    <h1 class="d-h1">{title}</h1>
+    {badge && <HealthBadge status={badge} />}
+    {titleMl && <span lang="ml" class="d-muted" style="font-size:1.25rem">{titleMl}</span>}
+  </div>
+  {intro && <p class="d-muted" style="max-width:48rem;margin:0">{intro}</p>}
+  <slot name="intro" />
+
+  {summary && (
+    <div class="d-grid d-grid--4">
+      <KpiTile label="Tracked sites" value={group.length} color="var(--sky)" tip="Number of registered sites in this group." />
+      <KpiTile label="Broken or down" value={broken} color="var(--crimson)" tip="Sites in this group that are down, hijacked or broken right now." delta={dBroken} note={group.length ? `${percentBroken(group)}% of the group` : undefined} />
+      <KpiTile label="Median score" value={median ?? '—'} color={medianColor(median)} tip={TIP.median} delta={dMedian} />
+      <KpiTile label="Deep-audited" value={audited} color="var(--indigo)" tip="Sites in this group that have had the full audit." note={`${Math.round((audited / (group.length || 1)) * 100)}% covered`} />
+    </div>
+  )}
+  {summary && group.length > 0 && (
+    <section class="d-card d-stack" style="gap:.7rem" aria-labelledby="mix" data-tip={TIP.healthBar} tabindex="0">
+      <h2 id="mix" style="margin:0">Health mix</h2>
+      <StackBar counts={countByStatus(group)} legend />
+      {topIssues.length > 0 && (
+        <div>
+          <h3 style="margin:.4rem 0 .3rem;font-size:1rem" data-tip="The checks failing on the most sites in this group. Fixing these helps most." tabindex="0">Most common problems</h3>
+          <ol class="d-list" style="padding-left:1.2rem;list-style:decimal">
+            {topIssues.map((f) => <li>{CHECKS[f.id].title.en} <span class="d-muted">({f.count.toLocaleString('en-IN')} site{f.count === 1 ? '' : 's'})</span></li>)}
+          </ol>
+        </div>
+      )}
+    </section>
+  )}
+  {group.length === 0 && <p>No sites tracked here yet.</p>}
+
+  <slot />
+
+  {listed.length > 0 && (
+    <div class="d-row" style="justify-content:space-between">
+      <div class="d-chips" role="group" aria-label="Filter by status">
+        {chips.map((c) => (
+          <button type="button" class="d-chip" data-filter={c.key} aria-pressed={c.key === 'all' ? 'true' : 'false'} data-tip={c.key === 'all' ? 'Show every site in this list.' : 'Show only sites in this health band. The number is how many match.'}>
+            <span class="d-dot" style={`--dot:${c.color}`} aria-hidden="true"></span>{c.label} {c.n}
+          </button>
+        ))}
+      </div>
+      <label class="d-row"><span class="d-small d-muted">Find</span><input class="d-input" type="search" placeholder="filter by name…" data-find data-tip={TIP.filterName} /></label>
+    </div>
+  )}
+  {paged && listed.length > 0 && <p class="d-small d-muted" style="margin:0">Filters apply to this page of the list only.</p>}
+
+  {sections.map((sec) => {
+    const table = (
+      <div class="d-scroll" role="region" aria-label={`${sec.title}: table of sites`} tabindex="0">
+        <table class="d-table">
+          <thead>
+            <tr>
+              <th scope="col" data-tip="Health band of the site right now, with the reason when it is down or broken." tabindex="0">Status</th>
+              <th scope="col" data-tip="Site name. Opens its report card." tabindex="0">Name</th>
+              <th scope="col" data-tip="The site's address." tabindex="0">Website</th>
+              {showDepartment && <th scope="col" data-tip="Secretariat department the site answers to." tabindex="0">Department</th>}
+              {showDistrict && <th scope="col" data-tip="District the site is based in." tabindex="0">District</th>}
+              <th scope="col" data-tip={TIP.score} tabindex="0">Score</th>
+              <th scope="col" data-tip={TIP.strip} tabindex="0">Last 12 weeks</th>
+            </tr>
+          </thead>
+          <tbody>
+            {sec.sites.map((s) => {
+              const why = explainStatus(s);
+              return (
+                <tr data-band={bandOf(s.status)} data-name={s.name.toLowerCase()}>
+                  <td><HealthBadge status={s.status} /></td>
+                  <td>
+                    <a href={`/sites/${s.id}/`}>{s.name}</a>
+                    {why && <div class="d-small d-muted">{why.citizen}</div>}
+                  </td>
+                  <td class="d-muted">{host(s.url)}</td>
+                  {showDepartment && <td class="d-muted">{s.department}</td>}
+                  {showDistrict && <td class="d-muted">{s.district ?? '—'}</td>}
+                  <td><strong>{s.result?.score?.overall ?? '—'}</strong></td>
+                  <td><span class="d-strip" role="img" aria-label="Health per week over the last 12 weeks">{weekStrip(s.result?.history ?? []).map((col) => <i style={`--c:${col}`}></i>)}</span></td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    );
+    const mix = countByStatus(sec.sites);
+    return (
+      <section class="d-card d-card--flush" aria-labelledby={`h-${sec.id}`}>
+        {sec.collapsed ? (
+          <details class="d-collapse">
+            <summary class="d-group">
+              <h2 id={`h-${sec.id}`}>{sec.title}</h2><span class="d-muted">{sec.sites.length} site{sec.sites.length === 1 ? '' : 's'} · {percentBroken(sec.sites)}% broken</span>
+              <span class="grow"></span><StackBar counts={mix} mini /><span aria-hidden="true">▾</span>
+            </summary>
+            {table}
+          </details>
+        ) : (
+          <>
+            <div class="d-group">
+              <h2 id={`h-${sec.id}`}>{sec.title}</h2><span class="d-muted">{sec.sites.length} site{sec.sites.length === 1 ? '' : 's'}</span>
+              <span class="grow"></span><StackBar counts={mix} mini />
+            </div>
+            {table}
+          </>
+        )}
+      </section>
+    );
+  })}
+  {page && <Pagination page={page} />}
+</div>
+
+<script is:inline>
+  (function () {
+    var root = document.querySelector('[data-listing]');
+    var find = root && root.querySelector('[data-find]');
+    if (!find) return;
+    var band = 'all', q = '';
+    function apply() {
+      root.querySelectorAll('tbody tr').forEach(function (tr) {
+        tr.hidden = !((band === 'all' || tr.dataset.band === band) && (!q || tr.dataset.name.indexOf(q) > -1));
+      });
+    }
+    root.querySelectorAll('[data-filter]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        band = b.dataset.filter;
+        root.querySelectorAll('[data-filter]').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+        root.querySelectorAll('details.d-collapse').forEach(function (d) { if (band !== 'all') d.open = true; });
+        apply();
+      });
+    });
+    find.addEventListener('input', function () { q = find.value.trim().toLowerCase(); apply(); });
+  })();
+</script>

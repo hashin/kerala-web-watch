@@ -28,3 +28,13 @@ export function timeAgo(iso: string, now: Date = new Date(), locale: Locale = 'e
   if (abs < YEAR) return rtf.format(Math.round(diffMs / MONTH), 'month');
   return rtf.format(Math.round(diffMs / YEAR), 'year');
 }
+
+/** Heading for the one section of a paginated list: "Sites 101–132 of 132", or "All sites" when it fits on one page.
+ * `start`/`end` are Astro's zero-based inclusive indexes into the whole list. */
+export function listRange(page: { start: number; end: number; total: number; lastPage: number }, noun = 'sites'): string {
+  const n = (x: number) => x.toLocaleString('en-IN');
+  if (page.total === 0) return `No ${noun}`;
+  if (page.lastPage <= 1) return `All ${n(page.total)} ${noun}`;
+  const cap = noun.charAt(0).toUpperCase() + noun.slice(1);
+  return `${cap} ${n(page.start + 1)}–${n(page.end + 1)} of ${n(page.total)}`;
+}
