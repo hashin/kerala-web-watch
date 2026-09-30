@@ -3,23 +3,25 @@
 // /districts/, /leaderboard/. The number always sits beside its colour, so colour is never the only signal.
 import type { RankRowData } from '../lib/types';
 import { brokenShareColor, medianColor } from '../lib/bands';
-import { TIP } from '../lib/tips';
-interface Props { rows: RankRowData[]; nameLabel?: string; showRank?: boolean }
-const { rows, nameLabel = 'District', showRank = false } = Astro.props;
+import { tips } from '../lib/tips';
+import { t, tf, type Locale } from '../i18n';
+interface Props { rows: RankRowData[]; nameLabel?: string; showRank?: boolean; locale?: Locale }
+const { rows, nameLabel = 'District', showRank = false, locale = 'en' } = Astro.props;
+const { TIP } = tips(locale);
 const cols = showRank ? '2rem minmax(7rem,1.2fr) 4rem 1.6fr 4rem 4rem' : 'minmax(7rem,11rem) 1fr 4.5rem 3.5rem';
 // On a phone the bar shrinks to a stub and the Sites column drops; the numbers stay.
 const colsSm = showRank ? '1.5rem minmax(0,1fr) 6.5rem 2.5rem 3.2rem' : 'minmax(0,1fr) 6.5rem 2.5rem 3.2rem';
 const gridVars = `--cols:${cols};--cols-sm:${colsSm}`;
 ---
 
-<div role="table" aria-label={`${nameLabel} ranking`}>
+<div role="table" aria-label={tf(locale, 'ui.rankingSuffix', { label: nameLabel })}>
   <div class="d-rank d-rank--head" role="row" style={gridVars}>
-    {showRank && <span role="columnheader" data-tip="Rank position. 1 is best." tabindex="0">#</span>}
+    {showRank && <span role="columnheader" data-tip={t(locale, 'ui.rankPosition')} tabindex="0">#</span>}
     <span role="columnheader">{nameLabel}</span>
-    {showRank && <span role="columnheader" class="d-hide-sm" data-tip="Number of sites in the group." tabindex="0">Sites</span>}
-    <span role="columnheader" data-tip={TIP.broken_share} tabindex="0">% broken</span>
-    <span role="columnheader" data-tip={TIP.median} tabindex="0">Median</span>
-    <span role="columnheader" data-tip={TIP.delta} tabindex="0">Δ wk</span>
+    {showRank && <span role="columnheader" class="d-hide-sm" data-tip={t(locale, 'ui.sitesInGroup')} tabindex="0">{t(locale, 'ui.sites')}</span>}
+    <span role="columnheader" data-tip={TIP.broken_share} tabindex="0">{t(locale, 'ui.pctBroken')}</span>
+    <span role="columnheader" data-tip={TIP.median} tabindex="0">{t(locale, 'ui.median')}</span>
+    <span role="columnheader" data-tip={TIP.delta} tabindex="0">{t(locale, 'ui.deltaWeek')}</span>
   </div>
   {rows.map((r, i) => (
     <div class="d-rank" role="row" style={gridVars} data-tip={TIP.rankRow}>

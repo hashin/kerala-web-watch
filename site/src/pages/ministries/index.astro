@@ -5,7 +5,9 @@ import StackBar from '../../components/StackBar.astro';
 import { getMinisters, getMinistrySites } from '../../lib/data';
 import { countByStatus, percentBroken } from '../../lib/rollups';
 import { comparisonSnapshot, delta, BROKEN } from '../../lib/weekly';
-import { TIP } from '../../lib/tips';
+import { tips } from '../../lib/tips';
+
+const { TIP } = tips('en');
 
 const prev = comparisonSnapshot();
 const cards = getMinisters()

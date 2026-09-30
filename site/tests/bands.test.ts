@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { CATEGORY_COLOR, BANDS, STATUS_COLOR, STATUS_PILL_FG, STATUS_WORD, bandCounts, brokenShareColor, medianColor } from '../src/lib/bands';
 import type { Status } from '../src/lib/data';
-import { CATEGORY_TIP } from '../src/lib/tips';
+import { tips } from '../src/lib/tips';
 
 const ALL: Status[] = ['healthy', 'needs-work', 'poor', 'down', 'hijacked', 'broken', 'unaudited', 'unverifiable'];
 const zero = () => Object.fromEntries(ALL.map((s) => [s, 0])) as Record<Status, number>;
@@ -62,6 +62,6 @@ describe('CATEGORY_COLOR', () => {
     });
   });
   it('has a hover explanation for every category it colours', () => {
-    expect(Object.keys(CATEGORY_TIP).sort()).toEqual(Object.keys(CATEGORY_COLOR).sort());
+    expect(Object.keys(tips().CATEGORY_TIP).sort()).toEqual(Object.keys(CATEGORY_COLOR).sort());
   });
 });

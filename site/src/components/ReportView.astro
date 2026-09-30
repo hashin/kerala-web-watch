@@ -4,10 +4,12 @@ import { getCollection, render, type CollectionEntry } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import KpiTile from './KpiTile.astro';
 import { reportKpis } from '../lib/reports';
-import { TIP } from '../lib/tips';
+import { tips } from '../lib/tips';
+import type { Locale } from '../i18n';
 
-interface Props { entry: CollectionEntry<'reports'> }
-const { entry } = Astro.props;
+interface Props { entry: CollectionEntry<'reports'>; locale?: Locale }
+const { entry, locale = 'en' } = Astro.props;
+const { TIP } = tips(locale);
 const { Content } = await render(entry);
 const archive = (await getCollection('reports')).sort((a, b) => b.data.month.localeCompare(a.data.month));
 const kpis = reportKpis(entry.data.snapshot, entry.data.deltas);

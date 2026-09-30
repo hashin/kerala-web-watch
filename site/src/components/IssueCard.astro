@@ -3,7 +3,7 @@ import { CHECKS } from '../../../audit/dist/checks/registry.js';
 import type { Issue } from '../../../audit/dist/score.js';
 import { t, type Locale } from '../i18n';
 import { CATEGORY_COLOR } from '../lib/bands';
-import { CATEGORY_TIP } from '../lib/tips';
+import { tips } from '../lib/tips';
 
 interface Props {
   issue: Issue;
@@ -11,6 +11,7 @@ interface Props {
 }
 
 const { issue, locale = 'en' } = Astro.props;
+const { CATEGORY_TIP } = tips(locale);
 const meta = CHECKS[issue.id];
 
 const SEVERITY_KEY = {
@@ -24,7 +25,7 @@ const SEVERITY_KEY = {
 
 <article id={`issue-${issue.id}`} class="issue-card">
   <h4 class="issue-card__title">
-    <span class="d-dot" style={`--dot:${CATEGORY_COLOR[meta.category]}`} data-tip={CATEGORY_TIP[meta.category]} tabindex="0" role="img" aria-label={`Category: ${meta.category}`}></span>
+    <span class="d-dot" style={`--dot:${CATEGORY_COLOR[meta.category]}`} data-tip={CATEGORY_TIP[meta.category]} tabindex="0" role="img" aria-label={`${t(locale, 'ui.category')}: ${t(locale, `category.${meta.category}` as Parameters<typeof t>[1])}`}></span>
     <span class="issue-card__sev">{t(locale, SEVERITY_KEY[issue.sev])}</span> {meta.title[locale]}
   </h4>
   <p class="issue-card__citizen">{meta.citizen[locale]}</p>

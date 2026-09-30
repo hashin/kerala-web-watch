@@ -21,13 +21,13 @@ const aboutHref = locale === 'ml' ? '/ml/about/' : '/about/';
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 const lastUpdated = new Date().toISOString().slice(0, 10);
 const NAV = [
-  ['snapshot', 'Snapshot', homeHref],
-  ['districts', 'Districts', '/districts/'],
-  ['ministries', 'Ministries', '/ministries/'],
+  ['snapshot', t(locale, 'nav.snapshot'), homeHref],
+  ['districts', t(locale, 'nav.districts'), '/districts/'],
+  ['ministries', t(locale, 'nav.ministries'), '/ministries/'],
   ['actions', t(locale, 'nav.actions'), locale === 'ml' ? '/ml/actions/' : '/actions/'],
-  ['leaderboard', 'Leaderboard', '/leaderboard/'],
-  ['reports', 'Reports', '/reports/'],
-  ['methodology', 'Methodology', '/methodology/'],
+  ['leaderboard', t(locale, 'nav.leaderboard'), '/leaderboard/'],
+  ['reports', t(locale, 'nav.reports'), '/reports/'],
+  ['methodology', t(locale, 'nav.methodology'), '/methodology/'],
   ['about', t(locale, 'nav.about'), aboutHref],
 ] as const;
 ---
@@ -43,11 +43,11 @@ const NAV = [
     <link rel="icon" href="data:," />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to main content</a>
+    <a class="skip-link" href="#main">{t(locale, 'ui.skipToMain')}</a>
     <header class="d-head">
       <div class="d-head__in">
         <a class="d-brand" href={homeHref}><i aria-hidden="true"></i>Kerala Web Watch</a>
-        <nav class="d-nav" aria-label="Primary">
+        <nav class="d-nav" aria-label={t(locale, 'nav.primaryLabel')}>
           {NAV.map(([key, label, href]) => (
             <a href={href} aria-current={active === key ? 'page' : undefined}>{label}</a>
           ))}

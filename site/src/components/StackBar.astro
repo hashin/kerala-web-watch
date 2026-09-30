@@ -1,15 +1,16 @@
 ---
 // Stacked health-band bar. `mini` = compact version for group headers and ministry tiles.
 import type { Status } from '../lib/data';
-import { bandCounts } from '../lib/bands';
-interface Props { counts: Record<Status, number>; mini?: boolean; legend?: boolean }
-const { counts, mini = false, legend = false } = Astro.props;
-const bands = bandCounts(counts);
+import { bandCounts, bandShareTip } from '../lib/bands';
+import type { Locale } from '../i18n';
+interface Props { counts: Record<Status, number>; mini?: boolean; legend?: boolean; locale?: Locale }
+const { counts, mini = false, legend = false, locale = 'en' } = Astro.props;
+const bands = bandCounts(counts, locale);
 const total = bands.reduce((s, b) => s + b.n, 0) || 1;
 ---
 
 <div class:list={['d-stackbar', mini && 'd-stackbar--mini']} role="img" aria-label={bands.map((b) => `${b.label} ${b.n}`).join(', ')}>
-  {bands.filter((b) => b.n > 0).map((b) => <i style={`width:${(b.n / total) * 100}%;background:${b.color}`} data-tip={`${b.tip} — ${b.n.toLocaleString('en-IN')} sites (${Math.round((b.n / total) * 100)}%).`}></i>)}
+  {bands.filter((b) => b.n > 0).map((b) => <i style={`width:${(b.n / total) * 100}%;background:${b.color}`} data-tip={bandShareTip(b.tip, b.n, total, locale)}></i>)}
 </div>
 {legend && (
   <div class="d-legend">

@@ -2,7 +2,7 @@
 import GradeBadge from './GradeBadge.astro';
 import { t, type Locale } from '../i18n';
 import type { ActionView } from '../lib/actions';
-import { TIP } from '../lib/tips';
+import { tips } from '../lib/tips';
 
 interface Props {
   actions: ActionView[];
@@ -10,6 +10,7 @@ interface Props {
 }
 
 const { actions, locale = 'en' } = Astro.props;
+const { TIP } = tips(locale);
 ---
 
 {

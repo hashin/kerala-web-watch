@@ -6,7 +6,9 @@ import RankTable from '../../components/RankTable.astro';
 import { getDistricts, getSites } from '../../lib/data';
 import { medianScore, percentBroken } from '../../lib/rollups';
 import { comparisonSnapshot, delta, BROKEN } from '../../lib/weekly';
-import { TIP } from '../../lib/tips';
+import { tips } from '../../lib/tips';
+
+const { TIP } = tips('en');
 
 const prev = comparisonSnapshot();
 const sites = getSites();

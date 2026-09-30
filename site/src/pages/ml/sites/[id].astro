@@ -23,9 +23,10 @@ import {
 import { t } from '../../../i18n';
 import { timeAgo } from '../../../lib/format';
 import { platformWideIssues } from '../../../lib/rollups';
-import { TIP } from '../../../lib/tips';
+import { tips } from '../../../lib/tips';
 
 const locale = 'ml';
+const { TIP } = tips(locale);
 
 export function getStaticPaths() {
   return getSites().map((site) => ({ params: { id: site.id }, props: { site } }));

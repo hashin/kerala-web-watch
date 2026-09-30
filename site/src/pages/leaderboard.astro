@@ -4,8 +4,10 @@ import RankTable from '../components/RankTable.astro';
 import { getSites, getDepartments, getDistricts } from '../lib/data';
 import { medianScore, percentBroken, scoreDelta } from '../lib/rollups';
 import { comparisonSnapshot, delta, BROKEN } from '../lib/weekly';
-import { TIP } from '../lib/tips';
+import { tips } from '../lib/tips';
 import type { RankRowData } from '../lib/types';
+
+const { TIP } = tips('en');
 
 const sites = getSites();
 const prev = comparisonSnapshot();

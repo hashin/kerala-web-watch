@@ -19,3 +19,8 @@ const DICTIONARIES: Record<Locale, Record<TranslationKey, string>> = { en, ml };
 export function t(locale: Locale, key: TranslationKey): string {
   return DICTIONARIES[locale][key] ?? DICTIONARIES[DEFAULT_LOCALE][key];
 }
+
+/** `t` plus `{name}` placeholder substitution, for strings that carry numbers or names. */
+export function tf(locale: Locale, key: TranslationKey, vars: Record<string, string | number>): string {
+  return t(locale, key).replace(/\{(\w+)\}/g, (whole, name: string) => (name in vars ? String(vars[name]) : whole));
+}

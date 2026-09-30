@@ -11,7 +11,8 @@ import { countByStatus, failedCheckCounts, medianScore, percentBroken } from '..
 import { delta, weekStrip } from '../lib/weekly';
 import type { Delta } from '../lib/types';
 import { bandCounts, medianColor } from '../lib/bands';
-import { TIP } from '../lib/tips';
+import { tips } from '../lib/tips';
+import type { Locale } from '../i18n';
 import HealthBadge from './HealthBadge.astro';
 import KpiTile from './KpiTile.astro';
 import StackBar from './StackBar.astro';
@@ -36,8 +37,10 @@ interface Props {
   showDistrict?: boolean;
   /** Off for pages whose whole list shares one status (the KPI strip would be redundant). */
   summary?: boolean;
+  locale?: Locale;
 }
-const { title, titleMl, badge, backHref, backLabel, intro, sections, prev = null, page, showDepartment = true, showDistrict = false, summary = true } = Astro.props;
+const { title, titleMl, badge, backHref, backLabel, intro, sections, prev = null, page, showDepartment = true, showDistrict = false, summary = true, locale = 'en' } = Astro.props;
+const { TIP } = tips(locale);
 
 const listed = sections.flatMap((s) => s.sites);
 const group = Astro.props.groupSites ?? listed;
@@ -67,10 +70,10 @@ const paged = page != null && page.lastPage > 1;
 
   {summary && (
     <div class="d-grid d-grid--4">
-      <KpiTile label="Tracked sites" value={group.length} color="var(--sky)" tip="Number of registered sites in this group." />
-      <KpiTile label="Broken or down" value={broken} color="var(--crimson)" tip="Sites in this group that are down, hijacked or broken right now." delta={dBroken} note={group.length ? `${percentBroken(group)}% of the group` : undefined} />
+      <KpiTile label="Tracked sites" value={group.length} color="var(--sky)" tip={TIP.groupTracked} />
+      <KpiTile label="Broken or down" value={broken} color="var(--crimson)" tip={TIP.groupBroken} delta={dBroken} note={group.length ? `${percentBroken(group)}% of the group` : undefined} />
       <KpiTile label="Median score" value={median ?? '—'} color={medianColor(median)} tip={TIP.median} delta={dMedian} />
-      <KpiTile label="Deep-audited" value={audited} color="var(--indigo)" tip="Sites in this group that have had the full audit." note={`${Math.round((audited / (group.length || 1)) * 100)}% covered`} />
+      <KpiTile label="Deep-audited" value={audited} color="var(--indigo)" tip={TIP.groupDeepAudited} note={`${Math.round((audited / (group.length || 1)) * 100)}% covered`} />
     </div>
   )}
   {summary && group.length > 0 && (

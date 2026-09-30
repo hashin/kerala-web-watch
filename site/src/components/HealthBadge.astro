@@ -1,19 +1,14 @@
 ---
 import type { Status } from '../lib/data';
-import { STATUS_COLOR, STATUS_PILL_FG, STATUS_WORD } from '../lib/bands';
-import { STATUS_TIP } from '../lib/tips';
+import { STATUS_COLOR, STATUS_PILL_FG, statusWord } from '../lib/bands';
+import { tips } from '../lib/tips';
 import type { Locale } from '../i18n';
 
 interface Props { status: Status; locale?: Locale }
 const { status, locale = 'en' } = Astro.props;
 
-// Malayalam words kept from the original component.
-const ML: Record<Status, string> = {
-  down: 'പ്രവർത്തനരഹിതം', hijacked: 'ഹൈജാക്ക് ചെയ്തിരിക്കാം — സന്ദർശിക്കരുത്', broken: 'തകരാറിലാണ്',
-  unverifiable: 'സ്ഥിരീകരിക്കാൻ കഴിയില്ല', unaudited: 'ഇതുവരെ ഓഡിറ്റ് ചെയ്തിട്ടില്ല', healthy: 'ആരോഗ്യകരം',
-  'needs-work': 'പണി ആവശ്യമാണ്', poor: 'മോശം',
-};
-const word = locale === 'ml' ? ML[status] : STATUS_WORD[status];
+const word = statusWord(status, locale);
+const { STATUS_TIP } = tips(locale);
 // Status is never colour-alone (DESIGN §7.4): the pill always carries the word.
 ---
 
