@@ -1,36 +1,37 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import ProsePage from '../../layouts/ProsePage.astro';
 import { t } from '../../i18n';
 
 const locale = 'ml';
 const buildDate = new Date().toISOString().slice(0, 10);
 ---
 
-<Layout
+<ProsePage
   title={t(locale, 'about.title')}
+  heading={t(locale, 'about.heading')}
   description={t(locale, 'about.intro')}
+  active="about"
   lang="ml"
   locale={locale}
   altLangHref="/about/"
   altLangLabel="English"
+  toc={[['contact', t(locale, 'about.contactHeading')], ['contribute', t(locale, 'about.contributeHeading')], ['privacy', t(locale, 'about.privacyHeading')], ['licence', t(locale, 'about.licenceHeading')]]}
 >
-  <h1>{t(locale, 'about.heading')}</h1>
-
   <p>{t(locale, 'about.intro')}</p>
 
-  <h2>{t(locale, 'about.contactHeading')}</h2>
+  <h2 id="contact">{t(locale, 'about.contactHeading')}</h2>
   <p>{t(locale, 'about.contactBody')}</p>
 
-  <h2>{t(locale, 'about.contributeHeading')}</h2>
+  <h2 id="contribute">{t(locale, 'about.contributeHeading')}</h2>
   <p>{t(locale, 'about.contributeBody')}</p>
 
-  <h2>{t(locale, 'about.privacyHeading')}</h2>
+  <h2 id="privacy">{t(locale, 'about.privacyHeading')}</h2>
   <p>{t(locale, 'about.privacyBody')}</p>
 
-  <h2>{t(locale, 'about.licenceHeading')}</h2>
+  <h2 id="licence">{t(locale, 'about.licenceHeading')}</h2>
   <p>{t(locale, 'about.licenceBody')}</p>
 
   <p>
     <a href="/sitemap-index.xml">Sitemap</a> &middot; Last updated {buildDate}
   </p>
-</Layout>
+</ProsePage>

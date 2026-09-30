@@ -118,6 +118,7 @@ main { max-width: 72rem; }
 .d-row { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
 .d-grid { display: grid; gap: 0.9rem; }
 .d-grid--5 { grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); }
+.d-grid--kpi { grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr)); }
 .d-grid--4 { grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); }
 .d-grid--2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); }
 .d-split { display: grid; gap: 0.9rem; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); }
@@ -205,7 +206,7 @@ details.d-collapse > summary::-webkit-details-marker { display: none; }
 
 /* ---------- Prose page ---------- */
 .d-prose-wrap { display: grid; grid-template-columns: 13rem minmax(0, 1fr); gap: 2.2rem; }
-@media (max-width: 760px) { .d-prose-wrap { grid-template-columns: 1fr; } }
+@media (max-width: 760px) { .d-prose-wrap { grid-template-columns: minmax(0, 1fr); gap: 1rem; } .d-toc { position: static; flex-direction: row; flex-wrap: wrap; gap: 0.3rem 0.9rem; } .d-toc b { flex-basis: 100%; } .d-toc a { border-left: 0; padding-left: 0; text-decoration: underline; } }
 .d-toc { position: sticky; top: 1rem; align-self: start; display: flex; flex-direction: column; gap: 0.3rem; font-size: 0.9rem; }
 .d-toc b { font-size: 0.75rem; letter-spacing: 0.06em; color: var(--color-muted); font-weight: 500; }
 .d-toc a { padding: 0.15rem 0 0.15rem 0.75rem; border-left: 3px solid var(--line); color: var(--color-muted); text-decoration: none; }
@@ -242,3 +243,6 @@ details.d-collapse > summary::-webkit-details-marker { display: none; }
 /* Long unbroken strings (URLs, hashes, evidence) must wrap instead of widening the page on a phone. */
 main code, main dd, main dt, main li, main p { overflow-wrap: anywhere; }
 main pre { overflow-x: auto; max-width: 100%; }
+
+/* Wide tables inside prose scroll on their own instead of widening the page. */
+.d-prose table { display: block; overflow-x: auto; max-width: 100%; }

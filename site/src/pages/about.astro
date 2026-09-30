@@ -1,17 +1,18 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import ProsePage from '../layouts/ProsePage.astro';
 
 const buildDate = new Date().toISOString().slice(0, 10);
 ---
 
-<Layout
+<ProsePage
   title="About"
+  heading="About Kerala Web Watch"
   description="Who runs Kerala Web Watch, why it exists, and how to contact or contribute."
+  active="about"
   altLangHref="/ml/about/"
   altLangLabel="മലയാളം"
+  toc={[['contact', 'Contact'], ['contribute', 'Contribute'], ['accessibility', 'Accessibility'], ['screen-reader', 'Screen reader access'], ['privacy', 'Privacy'], ['terms', 'Terms and conditions'], ['copyright-policy', 'Copyright policy'], ['hyperlinking-policy', 'Hyperlinking policy'], ['disclaimer', 'Disclaimer'], ['rti', 'Right to Information'], ['licence', 'Licence']]}
 >
-  <h1>About Kerala Web Watch</h1>
-
   <p>
     Kerala Web Watch is an independent, open-source civic project. It is <strong>not</strong> an
     official Government of Kerala service and is not affiliated with any department it audits.
@@ -28,7 +29,7 @@ const buildDate = new Date().toISOString().slice(0, 10);
     until then, please use a GitHub issue.
   </p>
 
-  <h2>Contribute</h2>
+  <h2 id="contribute">Contribute</h2>
   <p>
     Found a site we're missing, or a wrong entry? Open an issue or a pull request against the
     <a href="https://github.com/hashin/kerala-web-watch/tree/main/registry">registry</a>.
@@ -105,4 +106,4 @@ const buildDate = new Date().toISOString().slice(0, 10);
   <p>
     <a href="/sitemap-index.xml">Sitemap</a> &middot; Last updated {buildDate}
   </p>
-</Layout>
+</ProsePage>

@@ -1,6 +1,7 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import ProsePage from '../layouts/ProsePage.astro';
 import HealthBadge from '../components/HealthBadge.astro';
+import { BANDS, STATUS_WORD } from '../lib/bands';
 import { STATUS_DESCRIPTIONS } from '../lib/data';
 import { checksByCategory } from '../lib/methodology';
 import { GRADE_RULES, gradeFor } from '../../../audit/dist/actions.js';
@@ -34,19 +35,19 @@ const gradeChecks = (grade: number) =>
   (Object.keys(CHECKS) as (keyof typeof CHECKS)[]).filter((id) => gradeFor(id, 'fail') === grade).map((id) => CHECKS[id].title.en);
 ---
 
-<Layout
+<ProsePage
   title="Methodology"
   description="How Kerala Web Watch audits government websites: every check, how scoring works, and its limits."
+  active="methodology"
+  toc={[['principles', 'Principles'], ['two-tiers', 'Two tiers of checks'], ['scoring', 'Scoring'], ['statuses', 'Status definitions'], ['colleges', 'Colleges'], ['action-grades', 'Action grades'], ['vantage', 'Vantage point'], ['contest', 'How to contest a finding'], ['limitations', 'Limitations'], ['checks', 'Every check']]}
 >
-  <h1>Methodology</h1>
-
   <p>
     This page is generated from the same source code that runs the audits (<a
       href="https://github.com/hashin/kerala-web-watch/blob/main/audit/src/checks/registry.ts">audit/src/checks/registry.ts</a
     >) &mdash; the check list below is never hand-copied and cannot drift out of date with what the site actually runs.
   </p>
 
-  <h2>Principles</h2>
+  <h2 id="principles">Principles</h2>
   <ul>
     <li>
       <strong>Passive only.</strong> We fetch pages like a browser would &mdash; the homepage and
@@ -71,7 +72,7 @@ const gradeChecks = (grade: number) =>
     </li>
   </ul>
 
-  <h2>Two tiers of checks</h2>
+  <h2 id="two-tiers">Two tiers of checks</h2>
   <p>
     A <strong>light check</strong> runs every 6 hours, for every registered site: reachability,
     HTTP status, redirects, TLS certificate validity, response time and security headers. A
@@ -81,7 +82,7 @@ const gradeChecks = (grade: number) =>
     front of the next deep-audit batch, so the system reacts to change instead of waiting its turn.
   </p>
 
-  <h2>Scoring</h2>
+  <h2 id="scoring">Scoring</h2>
   <p>
     Availability is a gate, not a component: if a check marked <strong>&#9733; status-setting</strong>
     below fails, the site's status is set directly (see the table under "Every check" for which
@@ -118,7 +119,7 @@ const gradeChecks = (grade: number) =>
     and a note on this page.
   </p>
 
-  <h2>Status definitions</h2>
+  <h2 id="statuses">Status definitions</h2>
   <table>
     <thead>
       <tr><th scope="col">Status</th><th scope="col">Meaning</th></tr>
@@ -134,6 +135,17 @@ const gradeChecks = (grade: number) =>
       <tr><td><HealthBadge status="unaudited" /></td><td>{STATUS_DESCRIPTIONS.unaudited}</td></tr>
     </tbody>
   </table>
+  <p>
+    In charts, statuses are grouped into five colour bands so a picture of 1,500 sites stays readable:
+    {BANDS.map((b, i) => (
+      <>
+        {i > 0 && ', '}
+        <span class="d-dot" style={`--dot:${b.color};display:inline-block`} aria-hidden="true"></span> <strong>{b.label}</strong>
+        {b.statuses.length > 1 && <> ({b.statuses.map((st) => STATUS_WORD[st]).join(', ')})</>}
+      </>
+    ))}.
+    Every badge and list still uses the individual status, so "Unverifiable" is never hidden.
+  </p>
   <p>
     A status word is never shown alone on this site (<a href="https://github.com/hashin/kerala-web-watch/blob/main/docs/DECISIONS.md">ADR-026</a>):
     every Down or Broken site page states the specific reason &mdash; a DNS failure, a refused
@@ -180,7 +192,7 @@ const gradeChecks = (grade: number) =>
     </tbody>
   </table>
 
-  <h2>Vantage point and geo-blocking</h2>
+  <h2 id="vantage">Vantage point and geo-blocking</h2>
   <p>
     Our checks run from GitHub Actions runners in the US/EU. Some Kerala government sites are
     hosted behind infrastructure that blocks or throttles non-Indian traffic; calling those sites
@@ -191,7 +203,7 @@ const gradeChecks = (grade: number) =>
     these to a real answer; until then the site honestly reports what it could not check.
   </p>
 
-  <h2>How to contest a finding</h2>
+  <h2 id="contest">How to contest a finding</h2>
   <p>
     Every status-setting finding stores the evidence that produced it (the exact response code,
     matched text, or final URL) on the site's own page, so anyone can verify it independently. If a
@@ -201,7 +213,7 @@ const gradeChecks = (grade: number) =>
     for the site's next scheduled turn.
   </p>
 
-  <h2>Limitations</h2>
+  <h2 id="limitations">Limitations</h2>
   <ul>
     <li>
       <strong>Passive checks cannot see behaviour behind a login or a form submission.</strong> A
@@ -230,7 +242,7 @@ const gradeChecks = (grade: number) =>
     </li>
   </ul>
 
-  <h2>Every check ({totalChecks})</h2>
+  <h2 id="checks">Every check ({totalChecks})</h2>
   <p>
     &#9733; means the check sets the site's status directly on failure, instead of only affecting
     its category's score (see Scoring, above).
@@ -271,4 +283,4 @@ const gradeChecks = (grade: number) =>
     <a href="https://github.com/hashin/kerala-web-watch/blob/main/docs/DESIGN.md">docs/DESIGN.md</a>
     for the full design.
   </p>
-</Layout>
+</ProsePage>

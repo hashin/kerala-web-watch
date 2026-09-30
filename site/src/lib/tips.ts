@@ -49,6 +49,8 @@ export const TIP = {
   techFacts: 'Technical details of the site: server, certificate, platform. Useful for whoever maintains it.',
   siteActions: 'Report a mistake in our data, ask for a fresh audit, or download this page as data.',
   actionsBlock: 'What to fix first, in priority order.',
+  reportArchive: 'Every monthly report so far. Open one to read it.',
+  reportBody: 'The full report: the numbers in words, the most common problems, and the best and worst sites this month.',
   toc: 'Contents of this page. Click to jump to a section.',
   filterName: "Type part of a site's name to narrow the list.",
 } as const;

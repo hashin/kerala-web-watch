@@ -1,8 +1,8 @@
 ---
 // One KPI tile: label with colour dot, big value, weekly delta, optional sparkline (earlier weeks, then now).
 import type { Delta } from '../lib/types';
-interface Props { label: string; value: string | number; color: string; tip: string; delta?: Delta | null; spark?: number[]; href?: string; note?: string }
-const { label, value, color, tip, delta = null, spark = [], href, note } = Astro.props;
+interface Props { label: string; value: string | number; color: string; tip: string; delta?: Delta | null; spark?: number[]; href?: string; note?: string; against?: string }
+const { label, value, color, tip, delta = null, spark = [], href, note, against = 'vs last week' } = Astro.props;
 const max = Math.max(1, ...spark);
 const Tag = href ? 'a' : 'div';
 ---
@@ -10,7 +10,7 @@ const Tag = href ? 'a' : 'div';
 <Tag class:list={['d-card', 'd-kpi', href && 'd-kpi--link']} style={`--dot:${color}`} href={href} data-tip={tip} tabindex={href ? undefined : 0}>
   <div class="d-kpi__label"><span class="d-dot" aria-hidden="true"></span>{label}</div>
   <div class="d-kpi__val">{typeof value === 'number' ? value.toLocaleString('en-IN') : value}</div>
-  {delta && <div class={`d-delta d-delta--${delta.tone}`}>{delta.text} <span class="d-muted">vs last week</span></div>}
+  {delta && <div class={`d-delta d-delta--${delta.tone}`}>{delta.text} <span class="d-muted">{against}</span></div>}
   {note && <div class="d-small d-muted">{note}</div>}
   {spark.length > 1 && (
     <div class="d-spark" aria-hidden="true">
