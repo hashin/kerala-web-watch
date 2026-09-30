@@ -188,6 +188,12 @@ nothing citizen-critical depends on it and it's easy to pick up later.
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
 
+- **2026-09-30 (WP4.7, option B) · India vantage code shipped, dormant.** `light --unverifiable --vantage in-1`,
+  `mergeIndiaLightResult` (two-strike, stored under `light.vantages['in-1']`, survives a re-blocked US check),
+  `light-india` job in `uptime.yml` gated on repo var `HAS_INDIA_RUNNER=true`. Light-only India success gives
+  `unaudited` (the codebase's light-only "reachable" status), not `healthy`. Open question 6 stays: human
+  must register the runner + set the variable to switch it on. Architect plans for Q16 (gov/aided colleges)
+  and Q18 (graded action report) are in `.claude/plans/`, pending review.
 - **2026-09-30 (later) · Human answers to the open questions.** Q17 fixed + tested; Q19 → alias. Queued for
   new WPs (need ADR/plan first): Q16 → separate but linked *government* and *aided* college sections;
   Q18 → a site-wide, graded **action report** (high-priority items like possible compromise, for every

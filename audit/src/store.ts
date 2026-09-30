@@ -8,10 +8,22 @@ import { pickScreenshot } from './screenshot.js';
 import type { Issue, ScoreBreakdown, ScoreOutcome } from './score.js';
 import { deriveStatus, isBrokenClass, type ResultStatus } from './status.js';
 
+/** One non-default vantage's verdict (DESIGN §6.7): the India runner's light check plus the status
+ * it alone derived, kept so a later US check that is geo-blocked again doesn't erase it. */
+export interface VantageRecord {
+  day: string;
+  light: LightResult;
+  status: ResultStatus;
+}
+
 export interface StoredLight extends LightResult {
   vantage: string;
   suspect: boolean;
+  vantages?: Record<string, VantageRecord>;
 }
+
+/** The only vantage whose verdict may override a geo-blocked `gh-us` one (DESIGN §6.7). */
+export const INDIA_VANTAGE = 'in-1';
 
 export interface DeepTech {
   cms: string | null;
@@ -120,20 +132,50 @@ export function mergeLightResult(
   const previousLight = existing?.light ?? null;
   const hasDeepAudit = existing?.deep != null;
 
-  const { status, lightSuspect } = deriveStatus({ previousStatus, previousLight, newLight: light, hasDeepAudit });
+  const derived = deriveStatus({ previousStatus, previousLight, newLight: light, hasDeepAudit });
+  const vantages = previousLight?.vantages;
+  const indiaRecord = vantages?.[INDIA_VANTAGE];
+  // A geo-blocked US check says nothing about the site, so the India verdict (if any) stands.
+  const status = light.geo_block_suspect && indiaRecord ? indiaRecord.status : derived.status;
+  const lightSuspect = derived.lightSuspect;
   const historyEntry: HistoryEntry = { d: opts.today, up: !isBrokenClass(status), score: existing?.score?.overall ?? null };
   const deepBump = (existing?.deep_bump ?? false) || detectMaterialChange(previousLight, light);
 
   return {
     id: site.id,
     url: site.url,
-    light: { ...light, vantage: opts.vantage, suspect: lightSuspect },
+    light: { ...light, vantage: opts.vantage, suspect: lightSuspect, ...(vantages ? { vantages } : {}) },
     deep: existing?.deep ?? null,
     score: existing?.score ?? null,
     status,
     issues: existing?.issues ?? [],
     history: appendHistory(existing?.history ?? [], historyEntry),
     deep_bump: deepBump,
+  };
+}
+
+/**
+ * DESIGN §6.7 / WP4.7: folds a light check made from the India vantage into a site the US vantage
+ * could not verify. Only a site that is `unverifiable`, or that India already judged, is touched -- India never
+ * overrides a verdict the US vantage reached on its own. The status comes from the same
+ * `deriveStatus` two-strike rules, using India's own previous check as history, and is stored in
+ * `light.vantages['in-1']` so `mergeLightResult` can keep honouring it.
+ */
+export function mergeIndiaLightResult(existing: Result, indiaLight: LightResult, opts: { today: string }): Result {
+  if (existing.light === null) return existing;
+  const previous = existing.light.vantages?.[INDIA_VANTAGE]?.light ?? null;
+  // Still ours to judge while the site is unverifiable, or once India has already started judging it.
+  if (existing.status !== 'unverifiable' && previous === null) return existing;
+
+  const { status } = deriveStatus({ previousStatus: 'unaudited', previousLight: previous, newLight: indiaLight, hasDeepAudit: false });
+  const record: VantageRecord = { day: opts.today, light: indiaLight, status };
+  const historyEntry: HistoryEntry = { d: opts.today, up: !isBrokenClass(status), score: existing.score?.overall ?? null };
+
+  return {
+    ...existing,
+    status,
+    light: { ...existing.light, vantages: { ...existing.light.vantages, [INDIA_VANTAGE]: record } },
+    history: appendHistory(existing.history, historyEntry),
   };
 }
 

@@ -50,3 +50,39 @@ jobs:
             git push && break
             git pull --rebase && sleep $((i * 5))
           done
+
+  # DESIGN §6.7 / WP4.7: needs a self-hosted runner labelled `india` (a throwaway box holding no
+  # secrets) and the repo variable HAS_INDIA_RUNNER=true; otherwise this job never starts and
+  # geo-blocked sites simply stay `unverifiable`.
+  light-india:
+    needs: light
+    if: ${{ vars.HAS_INDIA_RUNNER == 'true' }}
+    runs-on: [self-hosted, india]
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with: { ref: data, path: data }
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: audit/package-lock.json
+      - working-directory: audit
+        run: npm ci
+      - working-directory: audit
+        run: npm run build
+      - run: >
+          node audit/dist/cli.js light --unverifiable --data data --registry registry
+          --vantage in-1
+      - name: Commit results
+        working-directory: data
+        run: |
+          git config user.name  "kerala-web-watch[bot]"
+          git config user.email "kerala-web-watch[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "uptime (india): $(date -u +%FT%H:%MZ)" || exit 0
+          for i in 1 2 3 4 5; do
+            git push && break
+            git pull --rebase && sleep $((i * 5))
+          done

@@ -2,7 +2,7 @@ import { mkdtempSync, readdirSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
-import { mergeDeepAuditIntoData, mergeErrorResult, mergeLightResult, mergeRunResult, readResult, writeJsonAtomic, writeResult, type DeepResult, type Result } from '../src/store.js';
+import { mergeIndiaLightResult, mergeDeepAuditIntoData, mergeErrorResult, mergeLightResult, mergeRunResult, readResult, writeJsonAtomic, writeResult, type DeepResult, type Result } from '../src/store.js';
 import type { LightResult } from '../src/light.js';
 import type { ScoreOutcome } from '../src/score.js';
 
@@ -368,5 +368,46 @@ describe('store', () => {
       expect(second.result).toEqual(first.result);
       expect(second.copyScreenshot).toBe(false);
     });
+  });
+});
+
+describe('India vantage (WP4.7, DESIGN §6.7)', () => {
+  const site = { id: 'x', url: 'https://x.kerala.gov.in' };
+  const blocked = light({ status_class: 'http_403', status: 403, geo_block_suspect: true });
+
+  function unverifiableResult(): Result {
+    return mergeLightResult(null, site, blocked, { vantage: 'gh-us', today: '2026-09-21' });
+  }
+
+  it('turns an unverifiable site reachable from India into a non-broken status and records the in-1 verdict', () => {
+    const before = unverifiableResult();
+    expect(before.status).toBe('unverifiable');
+    const after = mergeIndiaLightResult(before, light(), { today: '2026-09-22' });
+    expect(after.status).toBe('unaudited');
+    expect(after.light?.vantages?.['in-1']?.status).toBe('unaudited');
+  });
+
+  it('needs two India failures before calling an unverifiable site down', () => {
+    const failing = light({ status_class: 'timeout', status: null });
+    const once = mergeIndiaLightResult(unverifiableResult(), failing, { today: '2026-09-22' });
+    expect(once.status).toBe('unaudited');
+    const twice = mergeIndiaLightResult(once, failing, { today: '2026-09-23' });
+    expect(twice.status).toBe('down');
+  });
+
+  it('leaves a site the US vantage already verified untouched', () => {
+    const healthy = mergeLightResult(null, site, light(), { vantage: 'gh-us', today: '2026-09-21' });
+    expect(mergeIndiaLightResult(healthy, light({ status_class: 'timeout', status: null }), { today: '2026-09-22' })).toBe(healthy);
+  });
+
+  it('keeps the India verdict when the next US check is geo-blocked again', () => {
+    const viaIndia = mergeIndiaLightResult(unverifiableResult(), light(), { today: '2026-09-22' });
+    const nextUs = mergeLightResult(viaIndia, site, blocked, { vantage: 'gh-us', today: '2026-09-23' });
+    expect(nextUs.status).toBe('unaudited');
+    expect(nextUs.light?.vantages?.['in-1']).toBeDefined();
+  });
+
+  it('without an India record a geo-blocked US check stays unverifiable', () => {
+    expect(unverifiableResult().status).toBe('unverifiable');
   });
 });
