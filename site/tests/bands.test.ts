@@ -26,8 +26,18 @@ describe('status tables', () => {
   it('keeps the do-not-visit warning in the hijacked word (ADR-026: the badge is the whole warning)', () => {
     expect(STATUS_WORD.hijacked).toBe('Possibly hijacked — do not visit');
   });
-  it('uses the crimson-aware text colour only on down, hijacked and broken pills', () => {
-    expect(Object.keys(STATUS_PILL_FG).sort()).toEqual(['broken', 'down', 'hijacked']);
+  it('uses the crimson-aware text colour, and only on down, hijacked and broken pills', () => {
+    expect(STATUS_PILL_FG).toEqual({ down: 'var(--on-crimson)', hijacked: 'var(--on-crimson)', broken: 'var(--on-crimson)' });
+  });
+  it('gives each status its palette colour', () => {
+    expect(STATUS_COLOR).toEqual({
+      healthy: 'var(--teal)', 'needs-work': 'var(--amber)', poor: 'var(--coral)',
+      down: 'var(--crimson)', hijacked: 'var(--crimson)', broken: 'var(--crimson)',
+      unaudited: 'var(--grey)', unverifiable: 'var(--grey)',
+    });
+  });
+  it('agrees with the band table on colour for every single-status band', () => {
+    for (const band of BANDS.filter((b) => b.statuses.length === 1)) expect(STATUS_COLOR[band.statuses[0]]).toBe(band.color);
   });
 });
 

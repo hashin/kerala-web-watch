@@ -9,6 +9,12 @@ describe('listRange', () => {
   it('says All N when everything fits on one page', () => {
     expect(listRange({ start: 0, end: 41, total: 42, lastPage: 1 })).toBe('All 42 sites');
   });
+  it('groups thousands in the All-N form too', () => {
+    expect(listRange({ start: 0, end: 1499, total: 1500, lastPage: 1 })).toBe('All 1,500 sites');
+  });
+  it('uses the given noun for an empty group', () => {
+    expect(listRange({ start: 0, end: -1, total: 0, lastPage: 1 }, 'colleges')).toBe('No colleges');
+  });
   it('says there are none for an empty group, so the empty state is never "All 0 sites"', () => {
     expect(listRange({ start: 0, end: -1, total: 0, lastPage: 1 })).toBe('No sites');
   });

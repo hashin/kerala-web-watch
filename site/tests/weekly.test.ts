@@ -109,6 +109,12 @@ describe('snapshot comparison', () => {
   it('builds a KPI sparkline from earlier weeks plus the live value', () => {
     expect(countSeries(snaps, '2026-W39', (c) => c.healthy, 9)).toEqual([1, 2, 3, 9]);
   });
+  it('shows a sparkline from exactly two earlier weeks', () => {
+    expect(countSeries(snaps.slice(0, 2), '2026-W39', (c) => c.healthy, 9)).toEqual([1, 2, 9]);
+  });
+  it('keeps only the newest n-1 earlier weeks in a sparkline', () => {
+    expect(countSeries(snaps, '2026-W39', (c) => c.healthy, 9, 3)).toEqual([2, 3, 9]);
+  });
   it('gives no sparkline until two earlier weeks exist', () => {
     expect(countSeries(snaps.slice(0, 1), '2026-W39', (c) => c.healthy, 9)).toEqual([]);
     expect(countSeries([], '2026-W39', (c) => c.healthy, 9)).toEqual([]);
