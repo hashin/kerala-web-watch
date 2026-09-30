@@ -64,9 +64,9 @@ const sitePath = (id: string) => (locale === 'ml' ? `/ml/sites/${id}/` : `/sites
   th button:focus-visible { outline: 2px solid var(--color-focus); }
   th[aria-sort='ascending'] button::after { content: ' ▲'; }
   th[aria-sort='descending'] button::after { content: ' ▼'; }
-  tr[data-grade='1'] td:first-child { border-left: 4px solid #7a0019; }
-  tr[data-grade='2'] td:first-child { border-left: 4px solid #c4281c; }
-  tr[data-grade='3'] td:first-child { border-left: 4px solid #b45309; }
-  tr[data-grade='4'] td:first-child { border-left: 4px solid #f2c94c; }
-  tr[data-grade='5'] td:first-child { border-left: 4px solid #cfd8e3; }
+  tr[data-grade='1'] td:first-child { border-left: 4px solid var(--crimson); }
+  tr[data-grade='2'] td:first-child { border-left: 4px solid var(--coral); }
+  tr[data-grade='3'] td:first-child { border-left: 4px solid var(--amber); }
+  tr[data-grade='4'] td:first-child { border-left: 4px solid var(--sky); }
+  tr[data-grade='5'] td:first-child { border-left: 4px solid var(--grey); }
 </style>

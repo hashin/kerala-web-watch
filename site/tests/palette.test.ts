@@ -34,7 +34,7 @@ const TEXT_ON_GROUND: [string, string][] = [
   ['--crimson-ink', '--surface'], ['--crimson-ink', '--sand'],
 ];
 const TEXT_ON_FILL: [string, string][] = [
-  ['--on-fill', '--teal'], ['--on-fill', '--amber'], ['--on-fill', '--coral'], ['--on-fill', '--grey'],
+  ['--on-fill', '--teal'], ['--on-fill', '--sky'], ['--on-fill', '--amber'], ['--on-fill', '--coral'], ['--on-fill', '--grey'],
   ['--on-crimson', '--crimson'], ['--on-ink', '--ink'], ['--tip-fg', '--tip-bg'],
 ];
 

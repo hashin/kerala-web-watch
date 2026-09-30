@@ -227,3 +227,18 @@ details.d-collapse > summary::-webkit-details-marker { display: none; }
 .d-scroll { overflow-x: auto; }
 .d-scroll:focus-visible { outline-offset: -3px; }
 .d-strip[role='img'] { cursor: help; }
+
+/* ---------- Site report card ---------- */
+.d-report { display: grid; gap: 0.9rem; grid-template-columns: minmax(0, 14rem) minmax(0, 1fr); }
+.d-report > .d-wide { grid-column: 1 / -1; }
+@media (max-width: 760px) { .d-report { grid-template-columns: minmax(0, 1fr); } }
+.d-alert { border: 2px solid var(--crimson); background: var(--surface); border-radius: var(--radius); padding: 0.75rem 1rem; max-width: 62ch; }
+.d-alert p { margin: 0.3rem 0 0; }
+.d-callout--warn { border-color: var(--amber); color: var(--amber-ink); }
+.d-hijacked-url { color: var(--crimson-ink); font-weight: 600; }
+.d-cols { columns: 2; }
+@media (max-width: 560px) { .d-cols { columns: 1; } }
+
+/* Long unbroken strings (URLs, hashes, evidence) must wrap instead of widening the page on a phone. */
+main code, main dd, main dt, main li, main p { overflow-wrap: anywhere; }
+main pre { overflow-x: auto; max-width: 100%; }

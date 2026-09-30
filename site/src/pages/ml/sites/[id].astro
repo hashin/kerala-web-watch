@@ -23,6 +23,7 @@ import {
 import { t } from '../../../i18n';
 import { timeAgo } from '../../../lib/format';
 import { platformWideIssues } from '../../../lib/rollups';
+import { TIP } from '../../../lib/tips';
 
 const locale = 'ml';
 
@@ -59,6 +60,12 @@ const compromise = siteActionViews.find((a) => a.grade === 1 && CHECKS[a.check a
 
 const passedChecks = deep?.checks.filter((c) => c.r === 'pass') ?? [];
 
+// Score change against the nearest reading at least a week old (history is newest-first).
+const history = site.result?.history ?? [];
+const latestScore = history.find((h) => h.score != null);
+const weekAgoScore = history.find((h) => h.score != null && new Date(h.d).getTime() <= Date.now() - 7 * 864e5);
+const scoreChange = latestScore?.score != null && weekAgoScore?.score != null ? latestScore.score - weekAgoScore.score : null;
+
 const SEVERITY_KEY = {
   C: 'severity.C',
   H: 'severity.H',
@@ -75,177 +82,111 @@ const SEVERITY_KEY = {
   locale={locale}
   altLangHref={`/sites/${site.id}/`}
   altLangLabel="English"
+  active="snapshot"
 >
-  <p><a href="/ml/">{t(locale, 'site.allSites')}</a></p>
-  {compromise && (
-    <aside class="compromise-banner" role="alert">
-      <strong>{t(locale, 'actions.compromiseBanner.heading')}</strong>
-      <p>{compromise.citizen}</p>
-    </aside>
-  )}
+  <div class="d-stack">
+    <nav aria-label="Breadcrumb" class="d-small d-muted">
+      <a class="d-back" href="/ml/">{t(locale, 'site.allSites')}</a>
+      {ministry && <span> · {ministry.name} &rsaquo; </span>}
+      {department && <a href={`/departments/${department.id}/`}>{department.name}</a>}
+      {district && <span> · <a href={`/districts/${district.id}/`}>{district.name}</a></span>}
+    </nav>
 
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    {ministry && <span>{ministry.name} &rsaquo; </span>}
-    {department && <a href={`/departments/${department.id}/`}>{department.name}</a>}
-    {district && (
-      <span>
-        {' · '}
-        <a href={`/districts/${district.id}/`}>{district.name}</a>
-      </span>
+    {compromise && (
+      <aside class="d-alert" role="alert">
+        <strong>{t(locale, 'actions.compromiseBanner.heading')}</strong>
+        <p>{compromise.citizen}</p>
+      </aside>
     )}
-  </nav>
 
-  <h1>
-    {site.name}
-    {site.name_ml && <span> &middot; {site.name_ml}</span>}
-  </h1>
+    <div class="d-row" style="align-items:flex-start">
+      <div style="flex:1;min-width:16rem">
+        <h1 class="d-h1">{site.name}{site.name_ml && <span lang="ml" class="d-muted" style="font-size:1.25rem"> · {site.name_ml}</span>}</h1>
+        <p class="d-muted" style="margin:.3rem 0 0">
+          {site.status === 'hijacked' ? <span class="d-hijacked-url">{site.url}</span> : <a href={site.url}>{site.url}</a>}
+          {deep && <> · {t(locale, 'site.auditedPrefix')} {timeAgo(deep.at, new Date(), locale)}</>}{light && <> · {t(locale, 'site.checkedPrefix')} {timeAgo(light.at, new Date(), locale)}</>}
+        </p>
+        {reason && <p style="max-width:60ch;margin:.5rem 0 0">{reason.citizen}</p>}
+        <CollegeManagement site={site} locale={locale} />
+      </div>
+      <HealthBadge status={site.status} locale={locale} />
+    </div>
 
-  <div class="site-header">
-    <ScoreRing score={site.result?.score?.overall ?? null} locale={locale} />
-    <div>
-      <p>
-        {site.status === 'hijacked' ? (
-          <span class="hijacked-url">{site.url}</span>
-        ) : (
-          <a href={site.url}>{site.url}</a>
+    {auditErrored && (
+      <p class="d-callout d-callout--warn">{t(locale, 'site.auditErrorNote').replace('{time}', timeAgo(deep!.at, new Date(), locale))}</p>
+    )}
+    {site.notes && <p class="d-callout">{site.notes}</p>}
+
+    <div class="d-report">
+      <section class="d-card d-stack" style="align-items:center;gap:.5rem" data-tip={TIP.siteScore} tabindex="0">
+        <ScoreRing score={site.result?.score?.overall ?? null} locale={locale} />
+        {scoreChange != null && (
+          <span class={`d-delta d-delta--${scoreChange < 0 ? 'bad' : scoreChange > 0 ? 'good' : 'flat'}`} data-tip={TIP.siteScoreChange} tabindex="0">
+            {scoreChange === 0 ? '—' : `${scoreChange > 0 ? '▲' : '▼'} ${Math.abs(scoreChange)}`}
+          </span>
         )}
-        &nbsp;<HealthBadge status={site.status} locale={locale} />
-      </p>
-      {reason && <p class="status-reason">{reason.citizen}</p>}
-      <CollegeManagement site={site} locale={locale} />
-      <p class="audit-times">
-        {deep && <>{t(locale, 'site.auditedPrefix')} {timeAgo(deep.at, new Date(), locale)}</>}
-        {deep && light && ' · '}
-        {light && <>{t(locale, 'site.checkedPrefix')} {timeAgo(light.at, new Date(), locale)}</>}
-      </p>
+      </section>
+      {deep && (
+        <section class="d-card" aria-labelledby="scores-heading" data-tip={TIP.sixChecks} tabindex="0">
+          <h2 id="scores-heading">{t(locale, 'site.scoresHeading')}</h2>
+          <CategoryBars score={site.result?.score ?? null} locale={locale} />
+        </section>
+      )}
+      <section class:list={['d-card', deep && 'd-wide']} aria-labelledby="screenshot-heading" data-tip={TIP.screenshot} tabindex="0">
+        <h2 id="screenshot-heading">{t(locale, 'site.screenshotHeading')}</h2>
+        <Screenshot id={site.id} siteName={site.name} screenshot={deep?.screenshot ?? null} reason={reason} locale={locale} />
+      </section>
+    </div>
+
+    <ActionList actions={siteActionViews} locale={locale} />
+
+    {deep && (
+      <section class="d-card" aria-labelledby="issues-heading" data-tip={TIP.openIssues} tabindex="0">
+        <h2 id="issues-heading">{t(locale, 'site.issuesHeading')}</h2>
+        {hasInheritedIssues && (
+          <p class="d-small d-muted">
+            {t(locale, 'site.inheritedIssuesNote').replace('{platform}', site.platform ?? '')}
+            {' '}<a href={`/platforms/${site.platform}/`}>{t(locale, 'site.seePlatformPage')}</a>
+          </p>
+        )}
+        {issueGroups.length === 0 && !auditErrored && <p>{t(locale, 'site.noIssuesFound')}</p>}
+        {issueGroups.length === 0 && auditErrored && <p>{t(locale, 'site.noIssuesRecorded')}</p>}
+        {issueGroups.map((group) => (
+          <div>
+            <h3 class="d-small d-muted" style="margin:1rem 0 .4rem">{t(locale, SEVERITY_KEY[group.sev])}</h3>
+            {group.issues.map((issue) => <IssueCard issue={issue} locale={locale} />)}
+          </div>
+        ))}
+        {passedChecks.length > 0 && (
+          <details>
+            <summary>{passedChecks.length} {t(locale, 'site.checksPassed')}</summary>
+            <ul class="d-cols">
+              {passedChecks.map((c) => <li>{CHECKS[c.id].title[locale]}</li>)}
+            </ul>
+          </details>
+        )}
+      </section>
+    )}
+
+    <section class="d-card" aria-labelledby="availability-heading" data-tip={TIP.uptime} tabindex="0">
+      <h2 id="availability-heading">{t(locale, 'site.last90DaysHeading')}</h2>
+      <AvailabilityStrip history={history} locale={locale} />
+      {deep && <Sparkline history={history} />}
+    </section>
+
+    <div class="d-grid d-grid--2">
+      <section class="d-card" aria-labelledby="tech-heading" data-tip={TIP.techFacts} tabindex="0">
+        <h2 id="tech-heading">{t(locale, 'site.technicalFactsHeading')}</h2>
+        <TechFacts light={light} tech={deep?.tech ?? null} platform={site.platform} locale={locale} />
+      </section>
+      <section class="d-card" aria-labelledby="actions-heading" data-tip={TIP.siteActions} tabindex="0">
+        <h2 id="actions-heading">{t(locale, 'site.actionsHeading')}</h2>
+        <SiteActions id={site.id} name={site.name} locale={locale} />
+        {!light && <p class="d-small d-muted">{t(locale, 'site.notLightChecked')}</p>}
+        {light && !deep && site.status === 'unaudited' && (
+          <p class="d-small d-muted">{t(locale, 'site.notDeepAudited')} <a href="/methodology/">{t(locale, 'site.seeMethodologyPage')}</a></p>
+        )}
+      </section>
     </div>
   </div>
-
-  {auditErrored && (
-    <p class="audit-error-note">
-      {t(locale, 'site.auditErrorNote').replace('{time}', timeAgo(deep!.at, new Date(), locale))}
-    </p>
-  )}
-
-  {site.notes && <p class="site-note">{site.notes}</p>}
-
-  <section aria-labelledby="screenshot-heading">
-    <h2 id="screenshot-heading">{t(locale, 'site.screenshotHeading')}</h2>
-    <Screenshot id={site.id} siteName={site.name} screenshot={deep?.screenshot ?? null} reason={reason} locale={locale} />
-  </section>
-
-  {deep && (
-    <section aria-labelledby="scores-heading">
-      <h2 id="scores-heading">{t(locale, 'site.scoresHeading')}</h2>
-      <CategoryBars score={site.result?.score ?? null} locale={locale} />
-    </section>
-  )}
-
-  <ActionList actions={siteActionViews} locale={locale} />
-
-  {deep && (
-    <section aria-labelledby="issues-heading">
-      <h2 id="issues-heading">{t(locale, 'site.issuesHeading')}</h2>
-      {hasInheritedIssues && (
-        <p class="inherited-note">
-          {t(locale, 'site.inheritedIssuesNote').replace('{platform}', site.platform ?? '')}
-          {' '}<a href={`/platforms/${site.platform}/`}>{t(locale, 'site.seePlatformPage')}</a>
-        </p>
-      )}
-      {issueGroups.length === 0 && !auditErrored && <p>{t(locale, 'site.noIssuesFound')}</p>}
-      {issueGroups.length === 0 && auditErrored && <p>{t(locale, 'site.noIssuesRecorded')}</p>}
-      {issueGroups.map((group) => (
-        <div>
-          <h3>{t(locale, SEVERITY_KEY[group.sev])}</h3>
-          {group.issues.map((issue) => <IssueCard issue={issue} locale={locale} />)}
-        </div>
-      ))}
-      {passedChecks.length > 0 && (
-        <details class="passed-checks">
-          <summary>{passedChecks.length} {t(locale, 'site.checksPassed')}</summary>
-          <ul>
-            {passedChecks.map((c) => <li>{CHECKS[c.id].title[locale]}</li>)}
-          </ul>
-        </details>
-      )}
-    </section>
-  )}
-
-  <section aria-labelledby="availability-heading">
-    <h2 id="availability-heading">{t(locale, 'site.last90DaysHeading')}</h2>
-    <AvailabilityStrip history={site.result?.history ?? []} locale={locale} />
-    {deep && <Sparkline history={site.result?.history ?? []} />}
-  </section>
-
-  <section aria-labelledby="tech-heading">
-    <h2 id="tech-heading">{t(locale, 'site.technicalFactsHeading')}</h2>
-    <TechFacts light={light} tech={deep?.tech ?? null} platform={site.platform} locale={locale} />
-  </section>
-
-  {!light && <p>{t(locale, 'site.notLightChecked')}</p>}
-  {light && !deep && site.status === 'unaudited' && (
-    <p>
-      {t(locale, 'site.notDeepAudited')}
-      {' '}<a href="/methodology/">{t(locale, 'site.seeMethodologyPage')}</a>
-    </p>
-  )}
-
-  <section aria-labelledby="actions-heading">
-    <h2 id="actions-heading">{t(locale, 'site.actionsHeading')}</h2>
-    <SiteActions id={site.id} name={site.name} locale={locale} />
-  </section>
 </Layout>
-
-<style>
-  .breadcrumb {
-    font-size: 0.9rem;
-    color: var(--color-muted);
-  }
-  .site-header {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-  }
-  .compromise-banner {
-    border: 2px solid #7a0019;
-    background: var(--color-bg);
-    padding: 0.75rem 1rem;
-    margin: 1rem 0;
-    max-width: 62ch;
-  }
-  .status-reason {
-    max-width: 60ch;
-    color: var(--color-text-muted, inherit);
-  }
-  .audit-times {
-    font-size: 0.85rem;
-    color: var(--color-muted);
-  }
-  .hijacked-url {
-    color: var(--color-bad);
-    font-weight: 600;
-  }
-  .inherited-note {
-    max-width: 60ch;
-    color: var(--color-muted);
-    font-size: 0.9rem;
-  }
-  .audit-error-note {
-    max-width: 60ch;
-    padding: 0.6rem 0.9rem;
-    border: 1px solid var(--color-warn);
-    border-radius: 0.25rem;
-    color: var(--color-warn);
-  }
-  .site-note {
-    max-width: 60ch;
-    padding: 0.6rem 0.9rem;
-    border: 1px solid var(--color-border);
-    border-radius: 0.25rem;
-    color: var(--color-muted);
-  }
-  .passed-checks ul {
-    columns: 2;
-  }
-</style>
