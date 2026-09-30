@@ -1,3 +1,4 @@
+import { getDomain } from 'tldts';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { load as parseYaml } from 'js-yaml';
@@ -69,4 +70,20 @@ function pushInto<K>(map: Map<K, Site[]>, key: K, site: Site): void {
   } else {
     map.set(key, [site]);
   }
+}
+
+/** Registrable domains of every site `url` and alias: the set `sec.injected_links` never flags. */
+export function officialDomainsOf(registry: Registry): Set<string> {
+  const domains = new Set<string>();
+  for (const site of registry.sites) {
+    for (const url of [site.url, ...site.aliases]) {
+      try {
+        const domain = getDomain(new URL(url).hostname);
+        if (domain) domains.add(domain);
+      } catch {
+        continue;
+      }
+    }
+  }
+  return domains;
 }

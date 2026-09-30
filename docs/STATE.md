@@ -8,7 +8,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 - **Phase:** 5 — Self-maintenance and reach, **all WPs in `docs/IMPLEMENTATION.md` now done.**
 - **Current WP:** none queued. All WPs done. The fresh 59-candidate `discovered.yaml` (from merged PR #6)
   was curated 2026-09-30: 9 new state bodies registered, 29 new `ignore.yaml` patterns.
-- **Next action:** Nothing queued. Remaining work is the open-questions list: WP4.7 (Open question 6, India
+- **Next action:** Nothing queued (both 2026-09-30 plans built; run `verifier` on them if not yet done). Remaining work is the open-questions list: WP4.7 (Open question 6, India
   vantage runner — skip unless answered), Open question 16 (government-vs-aided colleges), Open question 17
   (`discover.ts` www/bare-domain dedupe gap, still unfixed in code), Open question 18 (possible compromised
   link on `lsg-bp-parappa`'s site — needs the human's eyes), Open question 19 (`cee-kerala.org` still
@@ -150,7 +150,7 @@ nothing citizen-critical depends on it and it's easy to pick up later.
     `scripts/harvest/colleges.ts` now writes `registry/sites/colleges.yaml` directly (49 entries), after its
     own live resolve-check (DNS failure or a confirmed HTTP error excludes; a network-level hiccup once DNS
     resolves does not — mirrors `audit/src/resolve.ts`'s own error-vs-warn split). See ADR-027's Resolved note.
-16. **Government-vs-government-aided colleges still aren't distinguished in DTE's own tables — unresolved,**
+16. **RESOLVED 2026-09-30 (ADR-029, `management` field, `/colleges/` sections).** ~~Government-vs-government-aided colleges still aren't distinguished in DTE's own tables — unresolved,~~
     **not blocking.** The WP5.4 harvest's DTE counts (12 engineering, 37 polytechnic after resolve-filtering)
     match the *government-plus-aided* totals a web search reported (9 govt + 3 aided engineering; 43 govt + 6
     aided polytechnic), not government-only, and neither `institutiondetail/1/` nor `/2/`'s own HTML marks
@@ -171,7 +171,7 @@ nothing citizen-critical depends on it and it's easy to pick up later.
     `aliases` entry on the existing record instead of a new one), not fixed in `discover.ts` itself — a real,
     reproducible bug worth a small follow-up fix so future discovery runs don't keep re-proposing the same
     already-registered orgs.
-18. **Possible compromised/injected link on `lsg-bp-parappa`'s own site — flagged, not investigated further.**
+18. **RESOLVED 2026-09-30 (ADR-028: `sec.injected_links` + graded action report).** ~~Possible compromised/injected link on `lsg-bp-parappa`'s own site — flagged, not investigated further.**
     PR #6's discovery crawl found `http://ww547.keralagov.in?tkn=<token>` linked from that block panchayat's
     page — a numbered subdomain of `keralagov.in` (not the real `kerala.gov.in`), returning HTTP 401 from an
     Express server with a session cookie and a tracking-token query param. Not a government site by any
@@ -188,6 +188,24 @@ nothing citizen-critical depends on it and it's easy to pick up later.
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
 
+- **2026-09-30 · verifier pass on colleges + action report.** ~100 mutations; all core rules caught. The 26
+  survivors (mostly boundary cases: lottery/slot exclusions, .gov.in skip, sort tie-breaks, India guards, CSV
+  edge cases) now have tests. Note: `site` tests import the *built* `audit/dist` — run `npm run build` in
+  `audit/` before trusting them.
+- **2026-09-30 (action report) · ADR-028 built.** `sec.injected_links` (never fetches, redacts queries), `actions.ts`
+  grading (4/8/17/22/28/6 check split pinned by a test), `actions.json` from merge+light, site pages
+  `/actions/`, `/actions/grade/<g>/`, `/departments/<d>/actions/`, `/ml/actions/`, per-site "What to fix first" +
+  compromise banner, colour-coded 1–5 `GradeBadge`, CSV/JSON exports, methodology section, home tile. First real
+  numbers from the current data: 1 grade-1, 239 grade-2, 163 grade-3 (most sites not yet deep-audited). The
+  Parappa link is only detected on the next deep audit of `lsg-bp-parappa` (live check: AC28, ≤3 sites).
+  Malayalam strings (check + grade labels) need a native reader. The `/ml/actions/` page has no pagination.
+- **2026-09-30 (colleges) · ADR-029 built: government / aided colleges, separate but linked.** Schema +
+  3 validate rules, migration scripts (`scripts/migrate/`), harvest carries `management`+`added` forward,
+  `/colleges/` hub + `/colleges/{government,aided}/`, per-site line (en + ml), CSV/JSON `management`. 40
+  government, 5 aided, 4 unconfirmed (see ADR-029 outcome). Malayalam strings need a native reader.
+  Still open: Collegiate Education arts & science URLs (needs its own harvest plan). NOTE: an untracked
+  `handoff/` dir (a dashboard redesign brief + port of `site/src`) appeared 2026-09-30 11:12; not mine,
+  not committed — it will conflict with these `site/src` edits, so integrate it deliberately.
 - **2026-09-30 (WP4.7, option B) · India vantage code shipped, dormant.** `light --unverifiable --vantage in-1`,
   `mergeIndiaLightResult` (two-strike, stored under `light.vantages['in-1']`, survives a re-blocked US check),
   `light-india` job in `uptime.yml` gated on repo var `HAS_INDIA_RUNNER=true`. Light-only India success gives

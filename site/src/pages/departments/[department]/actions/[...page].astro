@@ -1,0 +1,50 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+import GradeBadge from '../../../../components/GradeBadge.astro';
+import Pagination from '../../../../components/Pagination.astro';
+import { t } from '../../../../i18n';
+import { getSites, getDepartments, getDepartment } from '../../../../lib/data';
+import { getActionReport, actionRows, type ActionRow } from '../../../../lib/actions';
+
+export async function getStaticPaths({ paginate }: { paginate: import('astro').PaginateFunction }) {
+  // Every department gets a page, including one with no sites, so the link from its page never 404s.
+  const rows = actionRows(getActionReport(), getSites(), 'en');
+  return getDepartments().flatMap((department) =>
+    paginate(rows.filter((r) => r.site.department === department.id), { params: { department: department.id }, pageSize: 100 }),
+  );
+}
+
+const { department: departmentId } = Astro.params as { department: string };
+const department = getDepartment(departmentId)!;
+const { page } = Astro.props as { page: import('astro').Page<ActionRow> };
+---
+
+<Layout title={`${department.name} — ${t('en', 'actions.title')}`} description={`Action report for ${department.name}.`}>
+  <p><a href={`/departments/${department.id}/`}>&larr; {department.name}</a></p>
+  <h1>{t('en', 'actions.title')}: {department.name}</h1>
+  {page.total === 0 && <p>{t('en', 'actions.empty')}</p>}
+  {
+    page.data.map((row) => (
+      <details>
+        <summary>
+          <GradeBadge bucket={row.bucket} /> <a href={`/sites/${row.site.id}/`}>{row.site.name}</a>
+          {row.top && <> &mdash; {row.top.title}</>}
+        </summary>
+        {row.actions.map((a) => (
+          <div class="dept-action">
+            <p><GradeBadge bucket={a.grade} /> <strong>{a.title}</strong></p>
+            <p>{a.citizen}</p>
+            {a.ev && <p><code>{a.ev}</code></p>}
+            <p><em>{t('en', 'actions.fix')}:</em> {a.fix}</p>
+          </div>
+        ))}
+      </details>
+    ))
+  }
+  <Pagination page={page} />
+</Layout>
+
+<style>
+  details { margin: 0.6rem 0; }
+  .dept-action { margin: 0.6rem 0 0.6rem 1rem; max-width: 62ch; }
+</style>

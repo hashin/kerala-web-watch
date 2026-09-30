@@ -1,0 +1,36 @@
+---
+import GradeBadge from './GradeBadge.astro';
+import { t, type Locale } from '../i18n';
+import type { ActionView } from '../lib/actions';
+
+interface Props {
+  actions: ActionView[];
+  locale?: Locale;
+}
+
+const { actions, locale = 'en' } = Astro.props;
+---
+
+{
+  actions.length > 0 && (
+    <section aria-labelledby="fix-first-heading">
+      <h2 id="fix-first-heading">{t(locale, 'actions.whatToFixFirst')}</h2>
+      <ol class="action-list">
+        {actions.map((a) => (
+          <li>
+            <GradeBadge bucket={a.grade} locale={locale} /> <strong>{a.anchor ? <a href={`#${a.anchor}`}>{a.title}</a> : a.title}</strong>
+            {a.basis === 'light' && <span class="action-list__basis"> ({t(locale, 'actions.lightBasis')})</span>}
+            <p>{a.citizen}</p>
+          </li>
+        ))}
+      </ol>
+    </section>
+  )
+}
+
+<style>
+  .action-list { padding-left: 1.2rem; }
+  .action-list li { margin-bottom: 0.9rem; }
+  .action-list p { margin: 0.25rem 0 0; max-width: 62ch; }
+  .action-list__basis { color: var(--color-muted); font-size: 0.85rem; }
+</style>

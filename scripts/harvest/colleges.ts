@@ -1,8 +1,8 @@
 import { execFileSync } from 'node:child_process';
-import { writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { lookup as dnsLookup } from 'node:dns/promises';
-import { dump as dumpYaml } from 'js-yaml';
+import { dump as dumpYaml, load as loadYaml } from 'js-yaml';
 import { parseHTML } from 'linkedom';
 import { emit, writeCandidates, type Candidate } from './lib.js';
 
@@ -342,6 +342,9 @@ interface SiteEntry {
   district: string | null;
   place: null;
   platform: null;
+  /** ADR-029: set by hand from an official document, never by this harvest -- see carryForwardExisting. */
+  management: 'government' | 'aided' | null;
+  management_source: string | null;
   priority: 1;
   tags: string[];
   source: string;
@@ -349,9 +352,6 @@ interface SiteEntry {
   lifecycle: 'active';
   notes: string;
 }
-
-const DTE_AIDED_NOTE =
-  "DTE's own directory does not distinguish government from government-aided institutions (Open question 16) -- may not be purely government.";
 
 function toSiteEntry(item: Harvested, usedIds: Set<string>): SiteEntry {
   const base = slugify(item.row.name) || 'college';
@@ -372,13 +372,40 @@ function toSiteEntry(item: Harvested, usedIds: Set<string>): SiteEntry {
     district: item.row.district,
     place: null,
     platform: null,
+    management: null,
+    management_source: null,
     priority: 1,
     tags: [],
     source: item.source.url,
     added: new Date().toISOString().slice(0, 10),
     lifecycle: 'active',
-    notes: item.source.id.startsWith('dte-') ? DTE_AIDED_NOTE : '',
+    notes: '',
   };
+}
+
+export type ExistingCollege = Pick<SiteEntry, 'management' | 'management_source' | 'added'>;
+
+/**
+ * Re-harvesting rebuilds every entry from scratch, but two facts on an existing record are not
+ * harvestable: `management`/`management_source` (a human read an official document -- ADR-029) and
+ * `added` (the day the college first entered the registry). Copy them forward by id; an id never
+ * seen before starts unclassified.
+ */
+export function carryForwardExisting(entry: SiteEntry, existingById: Map<string, ExistingCollege>): SiteEntry {
+  const existing = existingById.get(entry.id);
+  if (!existing) return entry;
+  return {
+    ...entry,
+    management: existing.management ?? null,
+    management_source: existing.management_source ?? null,
+    added: existing.added ?? entry.added,
+  };
+}
+
+function readExistingColleges(sitesPath: string): Map<string, ExistingCollege> {
+  if (!existsSync(sitesPath)) return new Map();
+  const rows = (loadYaml(readFileSync(sitesPath, 'utf8')) ?? []) as Array<SiteEntry>;
+  return new Map(rows.map((row) => [row.id, row]));
 }
 
 async function run(): Promise<void> {
@@ -400,12 +427,13 @@ async function run(): Promise<void> {
   const notConfirmedDead = await filterConfirmedDead(harvested);
   console.error(`  ${notConfirmedDead.length} of ${harvested.length} kept (excludes only confirmed HTTP-error dead links)`);
 
+  const sitesPath = join(REGISTRY_DIR, 'sites', 'colleges.yaml');
+  const existingById = readExistingColleges(sitesPath);
   const usedIds = new Set<string>();
   const entries = notConfirmedDead
-    .map((item) => toSiteEntry(item, usedIds))
+    .map((item) => carryForwardExisting(toSiteEntry(item, usedIds), existingById))
     .sort((a, b) => a.id.localeCompare(b.id));
 
-  const sitesPath = join(REGISTRY_DIR, 'sites', 'colleges.yaml');
   writeFileSync(sitesPath, dumpYaml(entries, { sortKeys: false, lineWidth: -1 }));
   console.error(`wrote ${entries.length} entries to ${sitesPath}`);
 

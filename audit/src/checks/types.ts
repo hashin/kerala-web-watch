@@ -48,6 +48,7 @@ export type CheckId =
   | 'sec.server_banner'
   | 'sec.vuln_js'
   | 'sec.safe_browsing'
+  | 'sec.injected_links'
   | 'a11y.axe_critical'
   | 'a11y.axe_serious'
   | 'a11y.axe_moderate_minor'
@@ -116,6 +117,9 @@ export type CheckId =
 export interface CheckMeta {
   category: Category;
   severity: Severity;
+  /** A sign the site's own content may have been tampered with. Such a check is action grade 1
+   * (ADR-028) but, being heuristic, does not set status. */
+  compromise?: true;
   /** Present only on a ★ check (DESIGN §5.3). */
   statusSetting?: StatusSetting;
   /** Some checks don't make sense for every kind of site (e.g. `id.domain_expiry` for a site on a
@@ -223,6 +227,11 @@ export interface CheckContext {
    * never checked (no `SAFE_BROWSING_KEY` configured, or a transient lookup failure), which must
    * stay distinct from `false` ("checked, and clean"). */
   safeBrowsingFlagged?: boolean;
+  /** The homepage's own links, with `href` resolved to absolute (`sec.injected_links`). `undefined`
+   * means link capture never ran. */
+  links?: { href: string; text: string }[];
+  /** Registrable domains of every registry site's `url` and `aliases`, built once per run. */
+  officialDomains?: ReadonlySet<string>;
 }
 
 export type Check = {

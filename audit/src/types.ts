@@ -18,6 +18,8 @@ export type LsgType =
   | 'block_panchayat'
   | 'grama_panchayat';
 
+/** ADR-029: only meaningful on `tier: college`. */
+export type Management = 'government' | 'aided';
 export type Platform = 'lsgkerala' | 's3waas' | 'nic-cms';
 
 export interface Site {
@@ -35,6 +37,9 @@ export interface Site {
   place: string | null;
   lsg_type: LsgType | null;
   platform: Platform | null;
+  /** ADR-029: government vs government-aided, with the official document that says so. */
+  management?: Management | null;
+  management_source?: string | null;
   priority: 1 | 2 | 3;
   tags: string[];
   source: string;

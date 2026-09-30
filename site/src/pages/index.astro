@@ -18,6 +18,8 @@ const recentBroken = summary.recent_broken
 const recentFixed = summary.recent_fixed
   .map((t) => ({ ...t, site: getSite(t.id) }))
   .filter((t) => t.site);
+import { getActionReport } from '../lib/actions';
+const actionReport = getActionReport();
 ---
 
 <Layout
@@ -54,6 +56,7 @@ const recentFixed = summary.recent_fixed
       <StatTile label="Hijacked" value={totals.hijacked} tone="bad" href="/status/hijacked/" />
       <StatTile label="Broken" value={totals.broken} tone="bad" href="/status/broken/" />
       <StatTile label="Unverifiable (geo-blocked)" value={totals.unverifiable} tone="warn" href="/status/unverifiable/" />
+      <StatTile label="Sites needing urgent action" value={actionReport.totals[1] + actionReport.totals[2]} tone="bad" href="/actions/" />
       <StatTile label="Not yet audited" value={totals.unaudited} tone="neutral" href="/status/unaudited/" />
     </div>
   </section>
@@ -102,6 +105,7 @@ const recentFixed = summary.recent_fixed
       <li><a href="/status/down/">Down sites</a></li>
       <li><a href="/status/broken/">Broken sites</a></li>
       <li><a href="/status/unaudited/">Not yet audited</a></li>
+      <li><a href="/colleges/">Colleges &mdash; government and government-aided</a></li>
       <li><a href="/kinds/grama_panchayat/">All grama panchayats</a></li>
       <li><a href="/kinds/university/">All universities</a></li>
       <li><a href="/platforms/lsgkerala/">The lsgkerala platform</a></li>

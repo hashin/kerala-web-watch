@@ -37,6 +37,9 @@ export const TIP = {
   rankRow: 'Bar: share of sites broken. Score: median health (0–100). Δ: change since last week. Click for the page.',
   leaderboard: 'Groups ranked by the share of their sites that are broken; ties are broken by median score.',
   improved: 'Groups whose median score rose the most over the last 30 days.',
+  districtMap: 'Districts of Kerala. Click one to open its page.',
+  districtRanking: 'All 14 districts, most broken sites first.',
+  ministryGrid: 'Cabinet portfolios ordered by the share of their sites that are broken.',
   toc: 'Contents of this page. Click to jump to a section.',
   filterName: "Type part of a site's name to narrow the list.",
 } as const;

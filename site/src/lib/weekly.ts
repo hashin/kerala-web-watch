@@ -3,7 +3,7 @@
 // Every reader degrades to "no history yet" (null / empty) so the site still builds on a fresh clone.
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { isoWeek } from '../../../audit/dist/weekly.js';
+import { isoWeek, istWeek } from '../../../audit/dist/weekly.js';
 import { statusFromScore } from '../../../audit/dist/score.js';
 import type { WeekSnapshot } from '../../../audit/dist/weekly.js';
 import type { SiteView, Status } from './data';
@@ -12,7 +12,7 @@ import { STATUS_COLOR } from './bands';
 import type { Delta } from './types';
 
 export type { WeekSnapshot, Delta };
-export { isoWeek };
+export { isoWeek, istWeek };
 
 const DIR = resolve(process.cwd(), '..', 'data', 'weekly');
 
@@ -28,16 +28,35 @@ export function getSnapshots(): WeekSnapshot[] {
   return cache;
 }
 export const latestSnapshot = (): WeekSnapshot | null => getSnapshots().at(-1) ?? null;
-export const previousSnapshot = (): WeekSnapshot | null => getSnapshots().at(-2) ?? null;
 export const snapshotByWeek = (w: string) => getSnapshots().find((s) => s.week === w) ?? null;
+
+/** The week the site is being built in (IST, like the snapshots). */
+export const currentWeek = () => istWeek(new Date());
+
+/** Snapshots of weeks strictly before `week`, oldest first. The live numbers on a page belong to the
+ * current week, so "last week" is never a snapshot of this same week (which exists from Sunday night). */
+export const snapshotsBefore = (snaps: WeekSnapshot[], week: string): WeekSnapshot[] => snaps.filter((s) => s.week < week);
+
+/** What every weekly delta compares against: the newest snapshot from an earlier week, or null. */
+export const comparisonSnapshot = (week = currentWeek().week): WeekSnapshot | null => snapshotsBefore(getSnapshots(), week).at(-1) ?? null;
 
 export const BROKEN: Status[] = ['down', 'hijacked', 'broken'];
 export const brokenCount = (c: Record<Status, number>) => BROKEN.reduce((n, s) => n + c[s], 0);
 
-/** Last `n` weeks of "broken sites", oldest first, ending with the live count for this week. */
-export function brokenTrend(sites: SiteView[], n = 8): { week: string; broken: number; now: boolean }[] {
-  const past = getSnapshots().slice(-(n - 1)).map((s) => ({ week: s.week.slice(-3), broken: brokenCount(s.counts), now: false }));
-  return [...past, { week: 'Now', broken: brokenCount(countByStatus(sites)), now: true }];
+export interface TrendPoint { week: string; broken: number; now: boolean }
+
+/** Last `n` weeks of "broken sites", oldest first, ending with the live count for the current week. */
+export function trendPoints(snaps: WeekSnapshot[], week: string, liveBroken: number, n = 8): TrendPoint[] {
+  const past = snapshotsBefore(snaps, week).slice(-(n - 1)).map((s) => ({ week: s.week.slice(-3), broken: brokenCount(s.counts), now: false }));
+  return [...past, { week: 'Now', broken: liveBroken, now: true }];
+}
+export const brokenTrend = (sites: SiteView[], n = 8): TrendPoint[] => trendPoints(getSnapshots(), currentWeek().week, brokenCount(countByStatus(sites)), n);
+
+/** Values for a KPI tile's sparkline: earlier weeks then the live value. Empty until two earlier weeks
+ * exist, because a two-bar "trend" is a comparison, not a trend (the delta already says that). */
+export function countSeries(snaps: WeekSnapshot[], week: string, pick: (counts: Record<Status, number>) => number, live: number, n = 8): number[] {
+  const past = snapshotsBefore(snaps, week).slice(-(n - 1));
+  return past.length < 2 ? [] : [...past.map((s) => pick(s.counts)), live];
 }
 
 /** ▲/▼ text plus whether it is good or bad news. `upIsBad`: true for broken/poor counts, false for healthy/coverage.

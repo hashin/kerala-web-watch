@@ -28,7 +28,7 @@ const { page } = Astro.props as { page: import('astro').Page<ReturnType<typeof g
 <Layout title={department.name} description={`Government websites under the ${department.name} department.`}>
   <p><a href="/">&larr; Home</a></p>
   <h1>{department.name}{department.name_ml && <span lang="ml"> &middot; {department.name_ml}</span>}</h1>
-  <p>{page.total} tracked sites.</p>
+  <p>{page.total} tracked sites. <a href={`/departments/${department.id}/actions/`}>Action report for this department</a>.</p>
   <GroupRollup sites={page.total > 0 ? getSites().filter((s) => s.department === department.id) : []} />
   <SiteTable sites={page.data} />
   <Pagination page={page} />

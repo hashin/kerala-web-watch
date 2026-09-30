@@ -21,7 +21,7 @@ const SEVERITY_KEY = {
 } as const satisfies Record<Issue['sev'], Parameters<typeof t>[1]>;
 ---
 
-<article class={`issue-card issue-card--${SEVERITY_TONE[issue.sev]}`}>
+<article id={`issue-${issue.id}`} class={`issue-card issue-card--${SEVERITY_TONE[issue.sev]}`}>
   <h4 class="issue-card__title">
     <span class="issue-card__sev">{t(locale, SEVERITY_KEY[issue.sev])}</span> {meta.title[locale]}
   </h4>

@@ -1,0 +1,72 @@
+---
+import GradeBadge from './GradeBadge.astro';
+import { t, type Locale } from '../i18n';
+import type { ActionRow } from '../lib/actions';
+import { getDepartment, getDistrict } from '../lib/data';
+
+interface Props {
+  rows: ActionRow[];
+  locale?: Locale;
+}
+
+const { rows, locale = 'en' } = Astro.props;
+const sitePath = (id: string) => (locale === 'ml' ? `/ml/sites/${id}/` : `/sites/${id}/`);
+---
+
+{rows.length === 0 && <p>{t(locale, 'actions.empty')}</p>}
+{
+  rows.length > 0 && (
+    <table data-sortable>
+      <thead>
+        <tr>
+          <th scope="col">{t(locale, 'actions.col.site')}</th>
+          <th scope="col">{t(locale, 'actions.col.department')}</th>
+          <th scope="col">{t(locale, 'actions.col.district')}</th>
+          <th scope="col">{t(locale, 'actions.col.grade')}</th>
+          <th scope="col">{t(locale, 'actions.col.problem')}</th>
+          <th scope="col">{t(locale, 'actions.col.count')}</th>
+          <th scope="col">{t(locale, 'actions.col.checked')}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((row) => (
+          <tr data-grade={typeof row.bucket === 'number' ? row.bucket : undefined} data-bucket={row.bucket}>
+            <td><a href={sitePath(row.site.id)}>{row.site.name}</a></td>
+            <td>{getDepartment(row.site.department)?.name ?? row.site.department}</td>
+            <td>{row.site.district ? (getDistrict(row.site.district)?.name ?? row.site.district) : ''}</td>
+            <td data-sort={typeof row.bucket === 'number' ? row.bucket : 9}><GradeBadge bucket={row.bucket} locale={locale} /></td>
+            <td>
+              {row.top ? (
+                <>
+                  <strong>{row.top.title}</strong>
+                  <br />
+                  {row.top.citizen}
+                </>
+              ) : null}
+            </td>
+            <td data-sort={row.actions.length}>{row.actions.length}</td>
+            <td data-sort={row.checked ?? ''}>{row.checked ? row.checked.slice(0, 10) : ''}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  )
+}
+
+<script>
+  import '../scripts/sortable-table';
+</script>
+
+<style>
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: left; vertical-align: top; padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--color-border); }
+  th button { all: unset; cursor: pointer; font-weight: 700; text-decoration: underline dotted; }
+  th button:focus-visible { outline: 2px solid var(--color-focus); }
+  th[aria-sort='ascending'] button::after { content: ' ▲'; }
+  th[aria-sort='descending'] button::after { content: ' ▼'; }
+  tr[data-grade='1'] td:first-child { border-left: 4px solid #7a0019; }
+  tr[data-grade='2'] td:first-child { border-left: 4px solid #c4281c; }
+  tr[data-grade='3'] td:first-child { border-left: 4px solid #b45309; }
+  tr[data-grade='4'] td:first-child { border-left: 4px solid #f2c94c; }
+  tr[data-grade='5'] td:first-child { border-left: 4px solid #cfd8e3; }
+</style>

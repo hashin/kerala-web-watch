@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { delta, isoWeek, weekStrip } from '../src/lib/weekly';
+import { countSeries, delta, isoWeek, snapshotsBefore, trendPoints, weekStrip, type WeekSnapshot } from '../src/lib/weekly';
 
 describe('delta', () => {
   it('renders nothing when there is no previous week', () => {
@@ -81,5 +81,36 @@ describe('weekStrip', () => {
 describe('isoWeek re-export', () => {
   it('is the audit implementation (week 39 of 2026 ends on Sunday the 27th)', () => {
     expect(isoWeek(new Date('2026-09-27T12:00:00Z'))).toEqual({ week: '2026-W39', from: '2026-09-21', to: '2026-09-27' });
+  });
+});
+
+describe('snapshot comparison', () => {
+  const snap = (week: string, broken: number, healthy = 0) =>
+    ({ week, counts: { down: broken, hijacked: 0, broken: 0, poor: 0, unverifiable: 0, unaudited: 0, 'needs-work': 0, healthy } }) as unknown as WeekSnapshot;
+  const snaps = [snap('2026-W36', 10, 1), snap('2026-W37', 20, 2), snap('2026-W38', 30, 3), snap('2026-W39', 40, 4)];
+
+  it('never treats a snapshot of the current week as last week', () => {
+    expect(snapshotsBefore(snaps, '2026-W39').map((s) => s.week)).toEqual(['2026-W36', '2026-W37', '2026-W38']);
+  });
+
+  it('ends the broken-sites trend with the live count and drops the current week snapshot', () => {
+    expect(trendPoints(snaps, '2026-W39', 55, 8)).toEqual([
+      { week: 'W36', broken: 10, now: false }, { week: 'W37', broken: 20, now: false },
+      { week: 'W38', broken: 30, now: false }, { week: 'Now', broken: 55, now: true },
+    ]);
+  });
+  it('keeps only the newest n-1 earlier weeks', () => {
+    expect(trendPoints(snaps, '2026-W39', 55, 3).map((p) => p.week)).toEqual(['W37', 'W38', 'Now']);
+  });
+  it('is just the live point when there is no history', () => {
+    expect(trendPoints([], '2026-W39', 7)).toEqual([{ week: 'Now', broken: 7, now: true }]);
+  });
+
+  it('builds a KPI sparkline from earlier weeks plus the live value', () => {
+    expect(countSeries(snaps, '2026-W39', (c) => c.healthy, 9)).toEqual([1, 2, 3, 9]);
+  });
+  it('gives no sparkline until two earlier weeks exist', () => {
+    expect(countSeries(snaps.slice(0, 1), '2026-W39', (c) => c.healthy, 9)).toEqual([]);
+    expect(countSeries([], '2026-W39', (c) => c.healthy, 9)).toEqual([]);
   });
 });

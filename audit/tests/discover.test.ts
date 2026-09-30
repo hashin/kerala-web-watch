@@ -109,6 +109,15 @@ describe('www folding (open question 17)', () => {
     expect(newCandidateHosts(outlinks, registry, [])).toEqual(['c.gov.in']);
   });
 
+  it('folds case, so WWW.Example.in and example.in are the same host', () => {
+    const registry = registryOf([site({ id: 'x', url: 'https://example.in' })]);
+    expect(newCandidateHosts({ 'WWW.Example.in': outlink() }, registry, [])).toEqual([]);
+  });
+
+  it('isIgnoredHost matches a www candidate against a bare-host ignore pattern', () => {
+    expect(isIgnoredHost('www.instagram.com', [{ pattern: 'instagram.com', reason: 'x' }])).toBe(true);
+  });
+
   it('isIgnoredHost matches across the www variant', () => {
     expect(isIgnoredHost('instagram.com', [{ pattern: 'www.instagram.com', reason: 'x' }])).toBe(true);
   });

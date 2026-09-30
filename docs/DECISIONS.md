@@ -219,3 +219,43 @@ LSGI's harvest, which trusts its source outright) and writes only the reachable 
 needing a separate decision. The government-vs-aided split (Open question 16) is still unresolved and not
 blocking: every DTE-sourced entry carries a `notes:` caveat saying so, visible on the record itself rather than
 silently assumed away.
+
+## ADR-028 · A graded action report for every site; signs of tampering are the top grade but never set status · Accepted · 2026-09-30
+**Problem:** Open question 18. `lsg-bp-parappa`'s homepage links to `ww547.keralagov.in?tkn=…`: a parking-network-style
+subdomain on a domain that imitates `kerala.gov.in`. No check catches this, and nothing tells a webmaster, department or
+journalist what to fix first across ~1,560 sites. The human decided (2026-09-30): signs of compromise are "high priority
+for the entire website", and there must be an always-current, graded action report covering every site.
+**Decision:** (1) Five action grades, derived mechanically from `checks/registry.ts` and never assigned by hand per check:
+grade 1 = a failed `hijacked`-status check or a check marked `compromise: true`; 2 = a failed `down`/`broken`-status check
+(including a light-check-only `down`/`broken`); 3 = any other C or H; 4 = M; 5 = L. Severity-I checks and `avail.geo_blocked`
+are not actions. A `warn` counts as its severity's grade plus one (max 5) and can never be grade 1 or 2. A site's grade is
+its most urgent action. (2) A new check, `sec.injected_links` (security, C, `compromise: true`, no `statusSetting`), looks
+at the homepage's own outbound links. It flags three things: parking-style `ww<digits>.` subdomains, hosts that imitate
+Kerala government names, and gambling/adult/pharma words in the host or link text (English and Malayalam). Links to
+registry domains and to `*.gov.in`/`*.nic.in` never match. The check never fetches the links it flags. It always stores
+evidence and redacts query strings from it. (3) It does **not** set `hijacked`. A link-text heuristic is not strong enough
+to tell a citizen "do not visit" a working council website, or to move the ADR-005 headline. (4) One pure function
+(`audit/src/actions.ts`) computes the report. `merge` and `light` write it to `data/actions.json`, and the site build
+recomputes it from the same results.
+**Rejected:** making `sec.injected_links` status-setting (too strong for a heuristic; changes the headline); per-check
+hand-assigned grades (would drift from severity); detection from `data/outlinks.json` alone (it keeps only registrable
+domains, so `ww547.keralagov.in` is recorded as `keralagov.in` with no URL: not enough evidence to accuse a site).
+**Consequence:** an affected site loses 40 security points (normal C deduction). The methodology page documents the grades
+from the same code. A false positive gets fixed by a PR to the check's allowlist, and every grade-1 row links to "Suggest a
+correction". Plan: `.claude/plans/2026-09-30-graded-action-report.md`.
+
+## ADR-029 · Government-aided colleges are in scope, marked by a sourced `management` field and shown as a separate, linked section · Accepted · 2026-09-30
+**Problem:** DESIGN §2 scoped "government colleges", but DTE's own lists mix government and government-aided institutions
+(Open question 16), and aided colleges are run by private managements with state funding. The human decided (2026-09-30)
+to cover both, as separate but linked sections. Remaining choices: how to model it, what counts as evidence, how to count it.
+**Options:** (a) new tier `aided_college`; (b) a `management: government | aided` field on `tier: college`; (c) exclude aided.
+**Decision:** (b). `tier` stays about what the organisation is (it drives priority); `management` says who runs it.
+`management` is set only with a `management_source` URL to an official document that states it (validate errors
+otherwise); `null` means "not yet confirmed" and is shown to citizens as exactly that — never guessed from a name
+(validate warns). Only `tier: college` may carry it. The site shows `/colleges/government/` and `/colleges/aided/`, linked
+to each other, and every label is paired with a one-sentence meaning (ADR-026's rule applied to categories).
+**Counting (human accepted the recommendation 2026-09-30):** aided colleges count toward the headline "Kerala government websites" total and department
+rollups (publicly funded and regulated; <1 % of the registry), disclosed on /methodology/.
+**Consequence:** DTE engineering classified via the KEAM prospectus (Annexure II(1)(a)); polytechnics and Collegiate
+Education arts & science need their own official source before they are marked. `colleges.ts` carries the field forward.
+**Outcome 2026-09-30:** 12 engineering colleges classified from the KEAM 2026 prospectus; 29 polytechnics from a "Govt"/"Government" official name in DTE's list (human sign-off), 4 from the college's own site; 4 left unconfirmed (Central Polytechnic, NSS Pandalam, Swami Nithyananda, Womens Ernakulam). `colleges.ts` also carries `added` forward now.

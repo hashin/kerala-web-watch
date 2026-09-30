@@ -71,6 +71,11 @@ export function getSummary(): Summary {
   return cachedSummary;
 }
 
+/** For `lib/actions.ts`, which needs the same registry `getSites()` was built from. */
+export function getRegistryForActions(): Registry {
+  return getRegistry();
+}
+
 export function getDistricts(): District[] {
   return getRegistry().districts;
 }

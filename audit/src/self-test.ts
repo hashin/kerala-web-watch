@@ -29,6 +29,7 @@ interface SelfTestExpectation {
 
 const GOOD_MUST_NOT_FAIL: CheckId[] = [
   'avail.parked',
+  'sec.injected_links',
   'avail.default_page',
   'avail.blank',
   'avail.under_construction',
@@ -60,6 +61,7 @@ const GOOD_MUST_NOT_FAIL: CheckId[] = [
 
 const EXPECTATIONS: SelfTestExpectation[] = [
   { id: 'fixture-good', mustFail: [], mustNotFail: GOOD_MUST_NOT_FAIL },
+  { id: 'fixture-injected', mustFail: ['sec.injected_links'], mustNotFail: [] },
   { id: 'fixture-parked', mustFail: ['avail.parked'], mustNotFail: [] },
   { id: 'fixture-default-apache', mustFail: ['avail.default_page'], mustNotFail: [] },
   { id: 'fixture-blank', mustFail: ['avail.blank'], mustNotFail: [] },

@@ -30,3 +30,11 @@ export function bandCounts(counts: Record<Status, number>) {
 export const STATUS_PILL_FG: Partial<Record<Status, string>> = {
   down: 'var(--on-crimson)', hijacked: 'var(--on-crimson)', broken: 'var(--on-crimson)',
 };
+
+/** Colour for a group's median score (0-100). Same cut-offs as the district map. */
+export const medianColor = (median: number | null): string =>
+  median == null ? 'var(--grey)' : median >= 65 ? 'var(--teal)' : median >= 55 ? 'var(--amber)' : 'var(--coral)';
+
+/** Colour for a group's share of broken sites (%). Always shown beside the number, never alone. */
+export const brokenShareColor = (pct: number): string =>
+  pct < 10 ? 'var(--teal)' : pct < 20 ? 'var(--amber)' : pct < 25 ? 'var(--coral)' : 'var(--crimson)';

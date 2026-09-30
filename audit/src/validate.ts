@@ -148,6 +148,8 @@ function crossReferenceFailures(
   for (const { file, site } of rawSites) {
     const fail = (rule: string, message: string) => failures.push({ file, id: site.id, rule, message, severity: 'error' });
 
+    const warn = (rule: string, message: string) => failures.push({ file, id: site.id, rule, message, severity: 'warn' });
+
     const priorFile = seenIds.get(site.id);
     if (priorFile) fail('unique-id', `id "${site.id}" also used in ${priorFile}`);
     else seenIds.set(site.id, file);
@@ -199,6 +201,16 @@ function crossReferenceFailures(
     }
     if (site.tier !== 'lsg' && site.lsg_type) {
       fail('lsg-type', `lsg_type is set but tier is "${site.tier}", not "lsg"`);
+    }
+
+    if (site.tier !== 'college' && site.management) {
+      fail('management-tier', `management is set but tier is "${site.tier}", not "college"`);
+    }
+    if (site.management && !site.management_source) {
+      fail('management-source', `management "${site.management}" needs a management_source URL naming the official document`);
+    }
+    if (site.tier === 'college' && !site.management) {
+      warn('management-missing', 'college has no management (government/aided) yet; it is shown as "not yet confirmed"');
     }
 
     if (!refs.kinds.has(site.kind)) {

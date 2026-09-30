@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SiteTable from '../../components/SiteTable.astro';
+import GroupRollup from '../../components/GroupRollup.astro';
+import { getSites } from '../../lib/data';
+import { collegesBySection, collegeText } from '../../lib/colleges';
+
+const sections = collegesBySection(getSites());
+const government = collegeText('government', 'en');
+const aided = collegeText('aided', 'en');
+const unconfirmed = collegeText('unconfirmed', 'en');
+const total = sections.government.length + sections.aided.length + sections.unconfirmed.length;
+---
+
+<Layout title="Colleges" description="Government and government-aided colleges tracked by Kerala Web Watch.">
+  <p><a href="/">&larr; Home</a></p>
+  <h1>Colleges</h1>
+  <p>
+    {total} tracked colleges, in two groups so it is clear who is responsible for each website. Only an official
+    document can put a college in a group &mdash; <a href="/methodology/#colleges">how we decide</a>.
+  </p>
+
+  <section>
+    <h2>{government.label}</h2>
+    <p>{government.meaning}</p>
+    <p>{sections.government.length} tracked colleges. <a href={government.href}>{government.seeAll}</a></p>
+    <GroupRollup sites={sections.government} />
+  </section>
+
+  <section>
+    <h2>{aided.label}</h2>
+    <p>{aided.meaning}</p>
+    <p>{sections.aided.length} tracked colleges. <a href={aided.href}>{aided.seeAll}</a></p>
+    <GroupRollup sites={sections.aided} />
+  </section>
+
+  {
+    sections.unconfirmed.length > 0 && (
+      <section>
+        <h2>{unconfirmed.label}</h2>
+        <p>{unconfirmed.meaning}</p>
+        <SiteTable sites={sections.unconfirmed} />
+      </section>
+    )
+  }
+</Layout>

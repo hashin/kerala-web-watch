@@ -1,0 +1,55 @@
+---
+import { t, type Locale } from '../i18n';
+import type { Bucket } from '../lib/actions';
+
+interface Props {
+  bucket: Bucket;
+  locale?: Locale;
+}
+
+const { bucket, locale = 'en' } = Astro.props;
+
+// Never colour alone (DESIGN §7.4): the digit and the words always show. Colours run from deep red
+// (grade 1) through amber to a quiet grey-blue (grade 5); each pairing is >= 4.5:1 contrast.
+const label = typeof bucket === 'number' ? t(locale, `actions.grade.${bucket}.label`) : t(locale, `actions.bucket.${bucket}`);
+const tone = typeof bucket === 'number' ? `g${bucket}` : 'none';
+---
+
+<span class={`grade-badge grade-badge--${tone}`}>
+  {typeof bucket === 'number' && <span class="grade-badge__n" aria-hidden="true">{bucket}</span>}
+  <span>{label}</span>
+</span>
+
+<style>
+  .grade-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.1em 0.65em 0.1em 0.2em;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+    color: var(--color-text);
+  }
+  .grade-badge__n {
+    display: inline-grid;
+    place-items: center;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    font-weight: 700;
+  }
+  .grade-badge--g1 .grade-badge__n { background: #7a0019; color: #fff; }
+  .grade-badge--g2 .grade-badge__n { background: #c4281c; color: #fff; }
+  .grade-badge--g3 .grade-badge__n { background: #b45309; color: #fff; }
+  .grade-badge--g4 .grade-badge__n { background: #f2c94c; color: #1f1a00; }
+  .grade-badge--g5 .grade-badge__n { background: #cfd8e3; color: #14181f; }
+  .grade-badge--g1 { border-color: #7a0019; }
+  .grade-badge--g2 { border-color: #c4281c; }
+  .grade-badge--g3 { border-color: #b45309; }
+  .grade-badge--g4 { border-color: #f2c94c; }
+  .grade-badge--g5 { border-color: #cfd8e3; }
+  .grade-badge--none { padding-left: 0.65em; color: var(--color-muted); }
+</style>
