@@ -3,48 +3,50 @@ import Layout from '../../../layouts/Layout.astro';
 import ActionTable from '../../../components/ActionTable.astro';
 import GradeBadge from '../../../components/GradeBadge.astro';
 import { t } from '../../../i18n';
+import { tips } from '../../../lib/tips';
 import { getSites } from '../../../lib/data';
 import { getActionReport, actionRows, rowsInBuckets } from '../../../lib/actions';
 
 const locale = 'ml';
+const { TIP } = tips(locale);
 const report = getActionReport();
 const rows = actionRows(report, getSites(), locale);
-// Grades 1 and 2 only: about 34 sites today. If this ever passes ~300 rows, paginate it (ADR-025).
+// Grades 1 and 2 only. If this ever passes ~300 rows, paginate it (ADR-025).
 const urgent = rowsInBuckets(rows, [1, 2]);
 const n = report.totals[1] + report.totals[2];
 const total = report.sites.length;
 const headline = t(locale, 'actions.headline').replace('{n}', String(n)).replace('{total}', String(total));
 ---
 
-<Layout title={t(locale, 'actions.title')} description={headline} lang="ml" locale={locale} altLangHref="/actions/" altLangLabel="English">
-  <p><a href="/ml/">&larr; {t(locale, 'site.allSites')}</a></p>
-  <h1>{t(locale, 'actions.title')}</h1>
-  <p><strong>{headline}</strong></p>
-  <p>{t(locale, 'actions.intro')}</p>
+<Layout title={t(locale, 'actions.title')} description={headline} lang="ml" locale={locale} active="actions" altLangHref="/actions/" altLangLabel="English">
+  <div class="d-stack">
+    <a class="d-back" href="/ml/">&larr; {t(locale, 'site.allSites')}</a>
+    <h1 class="d-h1">{t(locale, 'actions.title')}</h1>
+    <p class="d-lede">{headline}</p>
+    <p class="d-muted" style="max-width:48rem;margin:0">{t(locale, 'actions.intro')}</p>
 
-  <ul class="grade-tiles">
-    {
-      ([1, 2, 3, 4, 5] as const).map((g) => (
-        <li>
-          <GradeBadge bucket={g} locale={locale} /> &mdash; {t(locale, `actions.grade.${g}.meaning`)}
-          {' '}<a href={`/actions/grade/${g}/`}>{report.totals[g]}</a>
-        </li>
-      ))
-    }
-    {(['unverifiable', 'unaudited', 'clear'] as const).map((b) => <li><GradeBadge bucket={b} locale={locale} /> <strong>{report.totals[b]}</strong></li>)}
-  </ul>
+    <div class="d-grid d-grid--5">
+      {
+        ([1, 2, 3, 4, 5] as const).map((g) => (
+          <a class="d-card d-kpi d-kpi--link" href={`/actions/grade/${g}/`} data-tip={TIP.actionGradeTile}>
+            <GradeBadge bucket={g} locale={locale} />
+            <span class="d-kpi__val">{report.totals[g]}</span>
+            <span class="d-muted d-small">{t(locale, `actions.grade.${g}.meaning`)}</span>
+          </a>
+        ))
+      }
+    </div>
+    <p class="d-muted d-small" style="margin:0">
+      {(['unverifiable', 'unaudited', 'clear'] as const).map((b, i) => <>{i > 0 && ' · '}<GradeBadge bucket={b} locale={locale} /> <strong>{report.totals[b]}</strong></>)}
+    </p>
 
-  <h2>{t(locale, 'actions.grade.1.label')} · {t(locale, 'actions.grade.2.label')}</h2>
-  <ActionTable rows={urgent} locale={locale} />
+    <h2 style="margin:0;font-weight:600;font-size:1.25rem">{t(locale, 'actions.grade.1.label')} · {t(locale, 'actions.grade.2.label')}</h2>
+    <ActionTable rows={urgent} locale={locale} />
 
-  <p>
-    <a href="/methodology/#action-grades">{t(locale, 'actions.howGradesWork')}</a> ·
-    {t(locale, 'actions.download')}: <a href="/api/actions.csv">CSV</a>, <a href="/api/actions.json">JSON</a> ·
-    <a href="https://github.com/hashin/kerala-web-watch/issues">{t(locale, 'actions.contest')}</a> ·
-    <a href="/actions/">English</a>
-  </p>
+    <p class="d-muted d-small" style="margin:0">
+      <a href="/methodology/#action-grades">{t(locale, 'actions.howGradesWork')}</a> ·
+      {t(locale, 'actions.download')}: <a href="/api/actions.csv">CSV</a>, <a href="/api/actions.json">JSON</a> ·
+      <a href="https://github.com/hashin/kerala-web-watch/issues">{t(locale, 'actions.contest')}</a>
+    </p>
+  </div>
 </Layout>
-
-<style>
-  .grade-tiles { list-style: none; padding: 0; display: grid; gap: 0.5rem; }
-</style>

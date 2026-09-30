@@ -12,7 +12,7 @@ const TIP_NAMES = [
   'healthBar', 'trend', 'coverage', 'broke', 'fixed', 'median', 'broken_share', 'score', 'strip', 'ministryTile',
   'rankRow', 'leaderboard', 'improved', 'districtMap', 'districtRanking', 'ministryGrid', 'siteScore', 'siteScoreChange',
   'sixChecks', 'screenshot', 'uptime', 'openIssues', 'techFacts', 'siteActions', 'actionsBlock', 'reportArchive',
-  'reportBody', 'toc', 'filterName', 'groupTracked', 'groupBroken', 'groupDeepAudited', 'urgent',
+  'reportBody', 'toc', 'filterName', 'groupTracked', 'groupBroken', 'groupDeepAudited', 'urgent', 'actionGradeTile', 'actionTable',
 ] as const;
 
 export type TipName = (typeof TIP_NAMES)[number];

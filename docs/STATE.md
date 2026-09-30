@@ -204,6 +204,11 @@ _(newest first; 3–6 lines each: what works, what doesn't, what to do first nex
   a healthy site, month-over-month deltas. First thing next time: get the owner's yes, push, open the PR, then run
   `weekly.yml` once. New Malayalam strings are English placeholders (`docs/ML-REVIEW.md`).
 
+- **2026-09-30 · Dashboard redesign integrated with the colleges + action-report work.** `dashboard-redesign` (WP-D1–D9,
+  built by another session) merged with `main`; the action pages (`/actions/`, `/actions/grade/<g>/`,
+  `/departments/<d>/actions/`, `/ml/actions/`), `ActionTable` and `GradeBadge` moved onto the dashboard tokens
+  (`d-*` classes, tips, compact "Grade N" chip in tables, sort buttons styled). Colleges pages, site card and
+  compromise alert were already ported. PR opened from the branch.
 - **2026-09-30 · verifier pass on colleges + action report.** ~100 mutations; all core rules caught. The 26
   survivors (mostly boundary cases: lottery/slot exclusions, .gov.in skip, sort tie-breaks, India guards, CSV
   edge cases) now have tests. Note: `site` tests import the *built* `audit/dist` — run `npm run build` in

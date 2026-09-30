@@ -3,6 +3,7 @@ import GradeBadge from './GradeBadge.astro';
 import { t, type Locale } from '../i18n';
 import type { ActionRow } from '../lib/actions';
 import { getDepartment, getDistrict } from '../lib/data';
+import { tips } from '../lib/tips';
 
 interface Props {
   rows: ActionRow[];
@@ -10,13 +11,15 @@ interface Props {
 }
 
 const { rows, locale = 'en' } = Astro.props;
+const { TIP } = tips(locale);
 const sitePath = (id: string) => (locale === 'ml' ? `/ml/sites/${id}/` : `/sites/${id}/`);
 ---
 
-{rows.length === 0 && <p>{t(locale, 'actions.empty')}</p>}
+{rows.length === 0 && <p class="d-muted">{t(locale, 'actions.empty')}</p>}
 {
   rows.length > 0 && (
-    <table data-sortable>
+    <div class="d-card d-card--flush" style="overflow-x:auto" data-tip={TIP.actionTable} tabindex="0">
+    <table class="d-table" data-sortable>
       <thead>
         <tr>
           <th scope="col">{t(locale, 'actions.col.site')}</th>
@@ -34,7 +37,7 @@ const sitePath = (id: string) => (locale === 'ml' ? `/ml/sites/${id}/` : `/sites
             <td><a href={sitePath(row.site.id)}>{row.site.name}</a></td>
             <td>{getDepartment(row.site.department)?.name ?? row.site.department}</td>
             <td>{row.site.district ? (getDistrict(row.site.district)?.name ?? row.site.district) : ''}</td>
-            <td data-sort={typeof row.bucket === 'number' ? row.bucket : 9}><GradeBadge bucket={row.bucket} locale={locale} /></td>
+            <td data-sort={typeof row.bucket === 'number' ? row.bucket : 9}><GradeBadge bucket={row.bucket} locale={locale} compact /></td>
             <td>
               {row.top ? (
                 <>
@@ -50,6 +53,7 @@ const sitePath = (id: string) => (locale === 'ml' ? `/ml/sites/${id}/` : `/sites
         ))}
       </tbody>
     </table>
+    </div>
   )
 }
 
@@ -58,15 +62,15 @@ const sitePath = (id: string) => (locale === 'ml' ? `/ml/sites/${id}/` : `/sites
 </script>
 
 <style>
-  table { width: 100%; border-collapse: collapse; }
-  th, td { text-align: left; vertical-align: top; padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--color-border); }
-  th button { all: unset; cursor: pointer; font-weight: 700; text-decoration: underline dotted; }
-  th button:focus-visible { outline: 2px solid var(--color-focus); }
-  th[aria-sort='ascending'] button::after { content: ' ▲'; }
-  th[aria-sort='descending'] button::after { content: ' ▼'; }
-  tr[data-grade='1'] td:first-child { border-left: 4px solid var(--crimson); }
-  tr[data-grade='2'] td:first-child { border-left: 4px solid var(--coral); }
-  tr[data-grade='3'] td:first-child { border-left: 4px solid var(--amber); }
-  tr[data-grade='4'] td:first-child { border-left: 4px solid var(--sky); }
-  tr[data-grade='5'] td:first-child { border-left: 4px solid var(--grey); }
+  :global(th button) { all: unset; cursor: pointer; text-decoration: underline dotted; font: inherit; color: inherit; }
+  :global(th button:focus-visible) { outline: 3px solid var(--focus); outline-offset: 2px; }
+  :global(th[aria-sort='ascending'] button::after) { content: ' ▲'; }
+  :global(th[aria-sort='descending'] button::after) { content: ' ▼'; }
+  td { vertical-align: top; }
+  td:nth-child(5) { min-width: 18rem; }
+  tr[data-grade='1'] td:first-child { box-shadow: inset 4px 0 0 #7a0019; }
+  tr[data-grade='2'] td:first-child { box-shadow: inset 4px 0 0 var(--crimson); }
+  tr[data-grade='3'] td:first-child { box-shadow: inset 4px 0 0 #b45309; }
+  tr[data-grade='4'] td:first-child { box-shadow: inset 4px 0 0 var(--amber); }
+  tr[data-grade='5'] td:first-child { box-shadow: inset 4px 0 0 var(--grey-soft); }
 </style>

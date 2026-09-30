@@ -5,16 +5,18 @@ import type { Bucket } from '../lib/actions';
 interface Props {
   bucket: Bucket;
   locale?: Locale;
+  /** Just "Grade N" (for table cells); the full plain-language label is on the grade's own page and tiles. */
+  compact?: boolean;
 }
 
-const { bucket, locale = 'en' } = Astro.props;
+const { bucket, locale = 'en', compact = false } = Astro.props;
 
 // Never colour alone (DESIGN §7.4): the digit and the words always show.
-const label = typeof bucket === 'number' ? t(locale, `actions.grade.${bucket}.label`) : t(locale, `actions.bucket.${bucket}`);
+const label = typeof bucket === 'number' && compact ? `${t(locale, 'actions.col.grade')} ${bucket}` : typeof bucket === 'number' ? t(locale, `actions.grade.${bucket}.label`) : t(locale, `actions.bucket.${bucket}`);
 const tone = typeof bucket === 'number' ? `g${bucket}` : 'none';
 ---
 
-<span class={`grade-badge grade-badge--${tone}`}>
+<span class={`grade-badge grade-badge--${tone}`} title={typeof bucket === 'number' ? t(locale, `actions.grade.${bucket}.label`) : undefined}>
   {typeof bucket === 'number' && <span class="grade-badge__n" aria-hidden="true">{bucket}</span>}
   <span>{label}</span>
 </span>
@@ -24,6 +26,7 @@ const tone = typeof bucket === 'number' ? `g${bucket}` : 'none';
     display: inline-flex;
     align-items: center;
     gap: 0.4em;
+    white-space: nowrap;
     padding: 0.1em 0.65em 0.1em 0.2em;
     border-radius: 999px;
     font-size: 0.85rem;
