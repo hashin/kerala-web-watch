@@ -38,3 +38,16 @@ export const medianColor = (median: number | null): string =>
 /** Colour for a group's share of broken sites (%). Always shown beside the number, never alone. */
 export const brokenShareColor = (pct: number): string =>
   pct < 10 ? 'var(--teal)' : pct < 20 ? 'var(--amber)' : pct < 25 ? 'var(--coral)' : 'var(--crimson)';
+
+/** One colour per check category, used by the six-checks bars and the dot on each issue. Availability
+ * is the Up colour (Sky); identity has no colour of its own in the design, so it shares it. */
+export const CATEGORY_COLOR = {
+  availability: 'var(--sky)',
+  security: 'var(--plum)',
+  accessibility: 'var(--indigo)',
+  content: 'var(--amber)',
+  gigw: 'var(--coral)',
+  performance: 'var(--teal)',
+  identity: 'var(--sky)',
+} as const;
+export type CategoryKey = keyof typeof CATEGORY_COLOR;

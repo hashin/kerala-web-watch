@@ -21,10 +21,10 @@ const linkCopiedLabel = t(locale, 'siteActions.linkCopied');
 ---
 
 <ul class="site-actions">
-  <li><a href={correctionUrl}>{t(locale, 'siteActions.correction')}</a></li>
-  <li><a href={reauditUrl}>{t(locale, 'siteActions.reaudit')}</a></li>
-  <li><a href={jsonUrl}>{t(locale, 'siteActions.downloadJson')}</a></li>
-  <li><button type="button" class="site-actions__share" data-share-title={name} data-link-copied-label={linkCopiedLabel}>{shareLabel}</button></li>
+  <li><a class="d-chip" href={correctionUrl}>{t(locale, 'siteActions.correction')}</a></li>
+  <li><a class="d-chip" href={reauditUrl}>{t(locale, 'siteActions.reaudit')}</a></li>
+  <li><a class="d-chip" href={jsonUrl}>{t(locale, 'siteActions.downloadJson')}</a></li>
+  <li><button type="button" class="d-chip site-actions__share" data-share-title={name} data-link-copied-label={linkCopiedLabel}>{shareLabel}</button></li>
 </ul>
 
 <script>
@@ -64,15 +64,6 @@ const linkCopiedLabel = t(locale, 'siteActions.linkCopied');
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem 1.25rem;
-  }
-  .site-actions__share {
-    font: inherit;
-    color: var(--color-link);
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    text-decoration: underline;
+    gap: 0.5rem;
   }
 </style>

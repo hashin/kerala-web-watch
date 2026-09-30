@@ -9,10 +9,10 @@ const { page } = Astro.props;
 ---
 
 {page.lastPage > 1 && (
-  <nav class="pagination" aria-label="Pagination">
-    {page.url.prev ? <a href={page.url.prev} rel="prev">&larr; Previous</a> : <span aria-hidden="true"></span>}
+  <nav class="pagination" aria-label="Pagination" data-tip="Move between pages of this list. Each page shows up to 100 sites.">
+    {page.url.prev ? <a class="d-chip" href={page.url.prev} rel="prev">&larr; Previous</a> : <span aria-hidden="true" style="min-width:1px"></span>}
     <span>Page {page.currentPage} of {page.lastPage} &middot; {page.total.toLocaleString('en-IN')} sites</span>
-    {page.url.next ? <a href={page.url.next} rel="next">Next &rarr;</a> : <span aria-hidden="true"></span>}
+    {page.url.next ? <a class="d-chip" href={page.url.next} rel="next">Next &rarr;</a> : <span aria-hidden="true" style="min-width:1px"></span>}
   </nav>
 )}
 
@@ -24,5 +24,6 @@ const { page } = Astro.props;
     gap: 1rem;
     margin: 1.5rem 0;
     font-size: 0.9rem;
+    flex-wrap: wrap;
   }
 </style>

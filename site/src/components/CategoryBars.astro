@@ -1,6 +1,8 @@
 ---
 import type { ScoreBreakdown } from '../../../audit/dist/score.js';
 import { t, type Locale } from '../i18n';
+import { CATEGORY_COLOR } from '../lib/bands';
+import { CATEGORY_TIP } from '../lib/tips';
 
 interface Props {
   score: ScoreBreakdown | null;
@@ -24,10 +26,10 @@ const CATEGORIES: { key: Exclude<keyof ScoreBreakdown, 'overall'>; labelKey: Par
     {CATEGORIES.map(({ key, labelKey }) => {
       const label = t(locale, labelKey);
       return (
-        <li>
+        <li data-tip={CATEGORY_TIP[key]} tabindex="0">
           <span class="category-bars__label">{label}</span>
-          <div class="coverage-bar" role="img" aria-label={`${label}: ${score[key]} ${t(locale, 'score.outOf100')}`}>
-            <span style={`width: ${score[key]}%`}></span>
+          <div class="d-track" style={`--bar:${CATEGORY_COLOR[key]}`} role="img" aria-label={`${label}: ${score[key]} ${t(locale, 'score.outOf100')}`}>
+            <i style={`width: ${score[key]}%`}></i>
           </div>
           <span class="category-bars__value">{score[key]}</span>
         </li>
@@ -52,7 +54,7 @@ const CATEGORIES: { key: Exclude<keyof ScoreBreakdown, 'overall'>; labelKey: Par
   }
   .category-bars li {
     display: grid;
-    grid-template-columns: 9rem 1fr 2.5rem;
+    grid-template-columns: minmax(6.5rem, 9rem) minmax(0, 1fr) 2.5rem;
     align-items: center;
     gap: 0.6rem;
   }

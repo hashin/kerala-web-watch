@@ -246,3 +246,18 @@ main pre { overflow-x: auto; max-width: 100%; }
 
 /* Wide tables inside prose scroll on their own instead of widening the page. */
 .d-prose table { display: block; overflow-x: auto; max-width: 100%; }
+
+/* Pagefind's widget reads these variables. Its stylesheet is injected at runtime and sets the same
+   variables on :root, so ours sit on the widget's own wrapper, which always wins for its contents. */
+.pagefind-search {
+  --pagefind-ui-scale: 0.9;
+  --pagefind-ui-primary: var(--link);
+  --pagefind-ui-text: var(--ink);
+  --pagefind-ui-background: var(--surface);
+  --pagefind-ui-border: var(--line);
+  --pagefind-ui-tag: var(--tint);
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 6px;
+  --pagefind-ui-font: var(--font-latin);
+}
+a.d-chip { text-decoration: none; }

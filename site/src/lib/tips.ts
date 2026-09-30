@@ -44,7 +44,7 @@ export const TIP = {
   siteScoreChange: 'Change in overall score compared with about a week ago.',
   sixChecks: 'The six things every site is graded on. Higher is better.',
   screenshot: 'What the site looked like when we last visited it.',
-  uptime: 'One block per day of the last 90. We check every 6 hours: teal is up, crimson is down.',
+  uptime: 'One block per day of the last 90. We check every 6 hours: blue is up, crimson is down.',
   openIssues: 'Problems found in the latest audit, each with what it means for citizens and how to fix it.',
   techFacts: 'Technical details of the site: server, certificate, platform. Useful for whoever maintains it.',
   siteActions: 'Report a mistake in our data, ask for a fresh audit, or download this page as data.',
@@ -54,6 +54,16 @@ export const TIP = {
   toc: 'Contents of this page. Click to jump to a section.',
   filterName: "Type part of a site's name to narrow the list.",
 } as const;
+
+export const CATEGORY_TIP: Record<string, string> = {
+  security: 'Security: valid HTTPS certificate, security headers, no known-vulnerable code. Higher is better.',
+  accessibility: 'Accessibility: can people with disabilities use the site (automated axe checks)?',
+  content: 'Content and maintenance: is the content recent and are links working?',
+  gigw: 'GIGW 3.0: compliance with the Government of India website guidelines.',
+  performance: 'Performance: page speed and weight on a phone (Lighthouse).',
+  identity: 'Identity and hygiene: is it clearly an official site, on a government domain?',
+  availability: 'Availability: does the site answer when a citizen visits?',
+};
 
 export const CHECK_TIP: Record<string, string> = {
   up: 'Up: did the site respond to every 6-hourly check?',

@@ -46,7 +46,7 @@ const domainText = domain ? `${domain} — ${isGovDomain(domain) ? t(locale, 'te
 <style>
   .tech-facts {
     display: grid;
-    grid-template-columns: max-content 1fr;
+    grid-template-columns: minmax(6rem, max-content) minmax(0, 1fr);
     gap: 0.25rem 1rem;
   }
   .tech-facts dt {

@@ -52,25 +52,27 @@ const toggleId = `${id}-screenshot-mobile`;
     opacity: 0;
     pointer-events: none;
   }
+  /* Same look as the .d-chip filter chips; a checkbox + label keeps it working without JavaScript. */
   .screenshot__toggle-label {
     display: inline-block;
     margin-bottom: 0.5rem;
-    padding: 0.3rem 0.75rem;
-    border: 1px solid var(--color-border);
+    padding: 0.2rem 0.8rem;
+    border: 1px solid var(--line);
+    background: var(--surface);
     border-radius: 999px;
     cursor: pointer;
-    font-size: 0.85rem;
+    font-size: 0.875rem;
   }
   .screenshot__toggle-input:focus-visible ~ .screenshot__toggle-label {
-    outline: 3px solid var(--color-focus);
+    outline: 3px solid var(--focus);
     outline-offset: 2px;
   }
   .screenshot__img {
     display: block;
     width: 100%;
     height: auto;
-    border: 1px solid var(--color-border);
-    border-radius: 0.25rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
   }
   .screenshot__img--mobile {
     display: none;
@@ -83,7 +85,9 @@ const toggleId = `${id}-screenshot-mobile`;
     display: block;
   }
   .screenshot__toggle-input:checked ~ .screenshot__toggle-label {
-    background: var(--color-border);
+    background: var(--ink);
+    color: var(--on-ink);
+    border-color: var(--ink);
   }
   .screenshot__missing {
     color: var(--color-muted);

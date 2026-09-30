@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import { BANDS, STATUS_COLOR, STATUS_PILL_FG, STATUS_WORD, bandCounts, brokenShareColor, medianColor } from '../src/lib/bands';
+import { CATEGORY_COLOR, BANDS, STATUS_COLOR, STATUS_PILL_FG, STATUS_WORD, bandCounts, brokenShareColor, medianColor } from '../src/lib/bands';
 import type { Status } from '../src/lib/data';
+import { CATEGORY_TIP } from '../src/lib/tips';
 
 const ALL: Status[] = ['healthy', 'needs-work', 'poor', 'down', 'hijacked', 'broken', 'unaudited', 'unverifiable'];
 const zero = () => Object.fromEntries(ALL.map((s) => [s, 0])) as Record<Status, number>;
@@ -50,5 +51,17 @@ describe('medianColor', () => {
 describe('brokenShareColor', () => {
   it.each([[0, 'teal'], [9, 'teal'], [10, 'amber'], [19, 'amber'], [20, 'coral'], [24, 'coral'], [25, 'crimson'], [100, 'crimson']])('%s%% is %s', (p, c) => {
     expect(brokenShareColor(p)).toBe(`var(--${c})`);
+  });
+});
+
+describe('CATEGORY_COLOR', () => {
+  it('gives each check category the colour the design assigns it', () => {
+    expect(CATEGORY_COLOR).toEqual({
+      availability: 'var(--sky)', security: 'var(--plum)', accessibility: 'var(--indigo)', content: 'var(--amber)',
+      gigw: 'var(--coral)', performance: 'var(--teal)', identity: 'var(--sky)',
+    });
+  });
+  it('has a hover explanation for every category it colours', () => {
+    expect(Object.keys(CATEGORY_TIP).sort()).toEqual(Object.keys(CATEGORY_COLOR).sort());
   });
 });
