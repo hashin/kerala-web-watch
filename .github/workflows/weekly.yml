@@ -1,0 +1,45 @@
+name: Weekly snapshot
+
+on:
+  schedule:
+    # Sunday 22:30 IST. Not later: Actions cron can lag by an hour, and after 00:00 IST on Monday
+    # the snapshot would be filed under the next ISO week (audit/src/weekly.ts, istWeek).
+    - cron: '0 17 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-branch
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with: { ref: data, path: data }
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: audit/package-lock.json
+      - working-directory: audit
+        run: npm ci
+      - working-directory: audit
+        run: npm run build
+      - run: node audit/dist/cli.js weekly --registry registry --data data
+      - name: Commit snapshot
+        working-directory: data
+        run: |
+          git config user.name  "kerala-web-watch[bot]"
+          git config user.email "kerala-web-watch[bot]@users.noreply.github.com"
+          git add weekly
+          git commit -m "weekly: $(date -u +%G-W%V)" || exit 0
+          for i in 1 2 3 4 5; do
+            git push && break
+            git pull --rebase && sleep $((i * 5))
+          done

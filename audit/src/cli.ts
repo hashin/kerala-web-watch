@@ -16,6 +16,7 @@ import { runSelfTest } from './self-test.js';
 import { deriveScheduleState, planBatch, toPlanTable } from './scheduler.js';
 import { nextBatchId, readBatches } from './batches.js';
 import { mergeAll } from './merge.js';
+import { buildWeekSnapshot, istWeek, readPreviousWeek, writeWeekSnapshot } from './weekly.js';
 import { buildReportData, readPreviousSnapshot, renderReportMarkdown } from './report.js';
 import { discoverCandidates, newCandidateHosts, renderCandidatesYaml, toDiscoveryTable } from './discover.js';
 import type { OutlinksData } from './outlinks.js';
@@ -419,6 +420,34 @@ async function runReport(argv: string[]): Promise<number> {
   return 0;
 }
 
+const WEEKLY_USAGE = 'Usage: cli.js weekly --registry <dir> --data <dir> [--now <ISO timestamp>]';
+
+/**
+ * Writes `data/weekly/<ISO week>.json`: this week's rollup of every stored result, diffed against
+ * the newest earlier snapshot for the `broke`/`fixed` lists. Re-running within a week overwrites
+ * that week's file. Reads only local files; never touches the live internet.
+ */
+async function runWeekly(argv: string[]): Promise<number> {
+  if (argv.includes('--help')) {
+    console.log(WEEKLY_USAGE);
+    return 0;
+  }
+  const registryDir = flagValue(argv, '--registry') ?? 'registry';
+  const dataDir = flagValue(argv, '--data');
+  if (!dataDir) {
+    console.error(`Missing --data <dir>\n${WEEKLY_USAGE}`);
+    return 1;
+  }
+  const now = new Date(flagValue(argv, '--now') ?? Date.now());
+  const registry = loadRegistry(registryDir);
+  const results = registry.sites.map((s) => readResult(dataDir, s.id)).filter((r): r is Result => r !== null);
+  const summary = computeSummary(registry, results, { now, vantages: ['gh-us'] });
+  const snapshot = buildWeekSnapshot(registry, summary, readPreviousWeek(dataDir, istWeek(now).week), now);
+  writeWeekSnapshot(dataDir, snapshot);
+  console.error(`weekly: ${snapshot.week} sites=${summary.totals.sites} broken=${snapshot.broken_ids.length} broke=${snapshot.broke.length} fixed=${snapshot.fixed.length}`);
+  return 0;
+}
+
 const DISCOVER_USAGE = 'Usage: cli.js discover --registry <dir> --data <dir> [--out <path>]';
 
 /**
@@ -577,6 +606,8 @@ async function main(): Promise<number> {
       return runMerge(rest);
     case 'report':
       return runReport(rest);
+    case 'weekly':
+      return runWeekly(rest);
     case 'discover':
       return runDiscover(rest);
     case 'issue-to-pr':
@@ -585,7 +616,7 @@ async function main(): Promise<number> {
       return runSelfTestCommand(rest);
     default:
       console.error(
-        `Unknown command: ${command ?? '(none)'}\nUsage: cli.js validate --registry <dir> [--json] | cli.js light --help | cli.js run --help | cli.js plan --help | cli.js merge --help | cli.js report --help | cli.js discover --help | cli.js issue-to-pr --help | cli.js self-test --help`,
+        `Unknown command: ${command ?? '(none)'}\nUsage: cli.js validate --registry <dir> [--json] | cli.js light --help | cli.js run --help | cli.js plan --help | cli.js merge --help | cli.js report --help | cli.js weekly --help | cli.js discover --help | cli.js issue-to-pr --help | cli.js self-test --help`,
       );
       return 1;
   }
