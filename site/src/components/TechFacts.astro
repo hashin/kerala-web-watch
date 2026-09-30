@@ -16,7 +16,7 @@ const domain = light?.final_domain ?? null;
 const certificateText = light?.tls
   ? `${light.tls.valid ? t(locale, 'tech.valid') : t(locale, 'tech.invalid')}${
       light.tls.days_left !== null
-        ? t(locale, 'tech.expiresIn').replace('{n}', String(light.tls.days_left)).replace('{date}', light.tls.expires)
+        ? t(locale, 'tech.expiresIn').replace('{n}', String(light.tls.days_left)).replace('{date}', light.tls.expires ?? '')
         : ''
     }`
   : '—';

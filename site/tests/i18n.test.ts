@@ -8,11 +8,11 @@ import ml from '../src/i18n/ml.json';
 
 describe('t', () => {
   it('returns the English value for a known key in the English locale', () => {
-    expect(t('en', 'nav.home')).toBe(en['nav.home']);
+    expect(t('en', 'nav.about')).toBe(en['nav.about']);
   });
 
   it('returns the Malayalam dictionary value for a known key in the Malayalam locale', () => {
-    expect(t('ml', 'nav.home')).toBe(ml['nav.home']);
+    expect(t('ml', 'nav.about')).toBe(ml['nav.about']);
   });
 });
 

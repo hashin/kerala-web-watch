@@ -25,7 +25,7 @@ describe('delta', () => {
     expect(delta(150000, 0, false)?.text).toBe('▲ 1,50,000');
   });
   it('appends the unit', () => {
-    expect(delta(3, 1, false, ' pts').text).toBe('▲ 2 pts');
+    expect(delta(3, 1, false, ' pts')?.text).toBe('▲ 2 pts');
   });
 });
 
