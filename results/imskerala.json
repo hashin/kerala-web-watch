@@ -2,8 +2,8 @@
   "id": "imskerala",
   "url": "https://ims.kerala.gov.in",
   "light": {
-    "at": "2026-09-30T17:30:49.039Z",
-    "status_class": "timeout",
+    "at": "2026-10-01T12:19:09.626Z",
+    "status_class": "connect_fail",
     "dns": true,
     "status": null,
     "final_url": null,
@@ -11,7 +11,13 @@
     "ttfb_ms": null,
     "title": null,
     "byte_size": null,
-    "tls": null,
+    "tls": {
+      "valid": false,
+      "protocol": "TLSv1.3",
+      "expires": "Dec 17 08:47:58 2028 GMT",
+      "days_left": 808,
+      "issuer": "mkcert development CA"
+    },
     "headers": {
       "hsts": false,
       "csp": false,
@@ -30,9 +36,14 @@
   },
   "deep": null,
   "score": null,
-  "status": "down",
+  "status": "broken",
   "issues": [],
   "history": [
+    {
+      "d": "2026-10-01",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-09-30",
       "up": false,
@@ -84,5 +95,5 @@
       "score": null
     }
   ],
-  "deep_bump": false
+  "deep_bump": true
 }
