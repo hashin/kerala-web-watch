@@ -2,16 +2,22 @@
   "id": "socialsecuritymission",
   "url": "https://socialsecuritymission.gov.in",
   "light": {
-    "at": "2026-10-01T12:11:14.043Z",
-    "status_class": "dns_fail",
-    "dns": false,
+    "at": "2026-10-01T22:13:03.653Z",
+    "status_class": "connect_fail",
+    "dns": true,
     "status": null,
     "final_url": null,
     "redirects": [],
     "ttfb_ms": null,
     "title": null,
     "byte_size": null,
-    "tls": null,
+    "tls": {
+      "valid": false,
+      "protocol": "TLSv1.3",
+      "expires": "Jan 14 12:01:01 2026 GMT",
+      "days_left": -260,
+      "issuer": "Let's Encrypt"
+    },
     "headers": {
       "hsts": false,
       "csp": false,
@@ -21,7 +27,7 @@
       "server": null
     },
     "content_hash": null,
-    "http_redirects_to_https": null,
+    "http_redirects_to_https": false,
     "geo_block_suspect": false,
     "domain": "socialsecuritymission.gov.in",
     "final_domain": null,
@@ -30,7 +36,7 @@
   },
   "deep": null,
   "score": null,
-  "status": "down",
+  "status": "broken",
   "issues": [],
   "history": [
     {
@@ -89,5 +95,5 @@
       "score": null
     }
   ],
-  "deep_bump": false
+  "deep_bump": true
 }

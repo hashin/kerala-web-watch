@@ -2,31 +2,37 @@
   "id": "keralaenergy",
   "url": "https://www.keralaenergy.gov.in",
   "light": {
-    "at": "2026-10-01T12:10:43.856Z",
-    "status_class": "connect_fail",
+    "at": "2026-10-01T22:12:13.941Z",
+    "status_class": "http_403",
     "dns": true,
-    "status": null,
-    "final_url": null,
+    "status": 403,
+    "final_url": "https://www.keralaenergy.gov.in",
     "redirects": [],
-    "ttfb_ms": null,
-    "title": null,
-    "byte_size": null,
-    "tls": null,
+    "ttfb_ms": 1064,
+    "title": "403 Forbidden",
+    "byte_size": 420,
+    "tls": {
+      "valid": true,
+      "protocol": "TLSv1.3",
+      "expires": "Nov 10 13:31:43 2026 GMT",
+      "days_left": 40,
+      "issuer": "Let's Encrypt"
+    },
     "headers": {
       "hsts": false,
       "csp": false,
       "xfo": false,
       "xcto": false,
       "referrer": false,
-      "server": null
+      "server": "Apache"
     },
-    "content_hash": null,
-    "http_redirects_to_https": false,
+    "content_hash": "c2791f5ce161e8d2fb27a03f484cffdc0e00475bbd6df9b755b0ae2a087a93b8",
+    "http_redirects_to_https": true,
     "geo_block_suspect": false,
     "domain": "keralaenergy.gov.in",
-    "final_domain": null,
+    "final_domain": "keralaenergy.gov.in",
     "vantage": "gh-us",
-    "suspect": true
+    "suspect": false
   },
   "deep": {
     "at": "2026-09-30T01:29:00.233Z",
@@ -416,7 +422,7 @@
     "performance": 90,
     "identity": 88
   },
-  "status": "needs-work",
+  "status": "down",
   "issues": [
     {
       "id": "content.last_updated",
@@ -556,7 +562,7 @@
   "history": [
     {
       "d": "2026-10-01",
-      "up": true,
+      "up": false,
       "score": 65
     },
     {
