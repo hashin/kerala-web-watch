@@ -31,15 +31,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-30T01:24:04.376Z",
-    "run": "1790731399970",
+    "at": "2026-10-02T01:54:57.822Z",
+    "run": "1790906055798",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 79,
-      "accessibility": 82,
-      "best_practices": 100,
-      "seo": 92
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 6,
       "serious": 11,
@@ -160,6 +155,10 @@
         "r": "na"
       },
       {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
         "id": "a11y.axe_critical",
         "r": "fail",
         "ev": "6 critical violation(s)"
@@ -207,22 +206,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "82/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "79/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "4510.425ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -234,11 +230,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -487,12 +483,12 @@
     ]
   },
   "score": {
-    "overall": 51,
+    "overall": 53,
     "security": 48,
     "accessibility": 50,
     "content": 56,
     "gigw": 0,
-    "performance": 76,
+    "performance": 100,
     "identity": 100
   },
   "status": "needs-work",
@@ -560,15 +556,6 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "4510.425ms"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
-    },
-    {
       "id": "sec.xcto",
       "sev": "L"
     },
@@ -629,15 +616,16 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "gigw.emblem",
       "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-02",
+      "up": true,
+      "score": 53
+    },
     {
       "d": "2026-10-01",
       "up": true,
@@ -674,5 +662,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

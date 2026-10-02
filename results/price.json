@@ -37,25 +37,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-01T01:22:50.082Z",
-    "run": "1790817722700",
+    "at": "2026-10-02T01:46:25.352Z",
+    "run": "1790905540393",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 68,
+      "performance": 77,
       "accessibility": 86,
       "best_practices": 88,
       "seo": 54
     },
     "axe": {
       "critical": 0,
-      "serious": 36,
+      "serious": 37,
       "moderate": 20,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 11
     },
     "tech": {
       "cms": null,
@@ -176,7 +176,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "36 serious violation(s)"
+        "ev": "37 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -194,7 +194,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "1 low-contrast element(s)"
+        "ev": "2 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "68/100"
+        "ev": "77/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "5108.248ms"
+        "ev": "4341.936ms"
       },
       {
         "id": "perf.cls",
@@ -282,8 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://price2.kerala.gov.in/price2_ver1/about.html)"
+        "r": "fail",
+        "ev": "11/30 crawled link(s) broken (https://price2.kerala.gov.in/price2_ver1/about.html, https://price.kerala.gov.in/price_agri_id/about, https://price.kerala.gov.in/price_electrical/about, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -498,10 +498,10 @@
     ]
   },
   "score": {
-    "overall": 59,
+    "overall": 58,
     "security": 60,
     "accessibility": 70,
-    "content": 32,
+    "content": 22,
     "gigw": 30,
     "performance": 86,
     "identity": 88
@@ -531,7 +531,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://price2.kerala.gov.in/price2_ver1/about.html)"
+      "ev": "11/30 crawled link(s) broken (https://price2.kerala.gov.in/price2_ver1/about.html, https://price.kerala.gov.in/price_agri_id/about, https://price.kerala.gov.in/price_electrical/about, ...)"
     },
     {
       "id": "gigw.rti",
@@ -540,12 +540,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "36 serious violation(s)"
+      "ev": "37 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "1 low-contrast element(s)"
+      "ev": "2 low-contrast element(s)"
     },
     {
       "id": "content.copyright_year",
@@ -567,7 +567,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "5108.248ms"
+      "ev": "4341.936ms"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -643,6 +643,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-02",
+      "up": true,
+      "score": 58
+    },
+    {
       "d": "2026-10-01",
       "up": true,
       "score": 59
@@ -698,5 +703,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

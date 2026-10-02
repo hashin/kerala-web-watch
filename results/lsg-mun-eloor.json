@@ -37,14 +37,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-01T01:07:54.298Z",
-    "run": "1790816747259",
+    "at": "2026-10-02T01:31:27.596Z",
+    "run": "1790904140675",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 59,
-      "accessibility": 82,
-      "best_practices": 100,
-      "seo": 92
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
     },
     "axe": {
       "critical": 0,
@@ -55,11 +55,11 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 14
     },
     "tech": {
       "cms": "Drupal 11",
-      "server": "nginx",
+      "server": null,
       "jquery": null
     },
     "checks": [
@@ -69,15 +69,16 @@
       },
       {
         "id": "avail.connect",
-        "r": "pass"
+        "r": "fail",
+        "ev": "timeout"
       },
       {
         "id": "avail.status",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.parked",
@@ -97,8 +98,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3448ms"
+        "r": "na"
       },
       {
         "id": "avail.geo_blocked",
@@ -110,7 +110,7 @@
       },
       {
         "id": "sec.https",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.http_redirect",
@@ -134,8 +134,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://eloormunicipality.lsgkerala.gov.in/en\""
+        "r": "na"
       },
       {
         "id": "sec.csp",
@@ -217,21 +216,20 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "82/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "59/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "20024.572499999995ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -244,7 +242,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -282,7 +280,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "14/30 crawled link(s) broken (http://eloormunicipality.lsgkerala.gov.in/ml, http://eloormunicipality.lsgkerala.gov.in/en/node/106, http://eloormunicipality.lsgkerala.gov.in/en/Awards%20%26%20Achievements, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -394,8 +393,7 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 404"
+        "r": "na"
       },
       {
         "id": "id.soft_404",
@@ -536,21 +534,13 @@
       }
     ]
   },
-  "score": {
-    "overall": 68,
-    "security": 76,
-    "accessibility": 70,
-    "content": 56,
-    "gigw": 40,
-    "performance": 76,
-    "identity": 96
-  },
-  "status": "needs-work",
+  "score": null,
+  "status": "down",
   "issues": [
     {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://eloormunicipality.lsgkerala.gov.in/en\""
+      "id": "avail.connect",
+      "sev": "C",
+      "ev": "timeout"
     },
     {
       "id": "content.last_updated",
@@ -563,9 +553,9 @@
       "ev": "ml-user"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3448ms"
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "14/30 crawled link(s) broken (http://eloormunicipality.lsgkerala.gov.in/ml, http://eloormunicipality.lsgkerala.gov.in/en/node/106, http://eloormunicipality.lsgkerala.gov.in/en/Awards%20%26%20Achievements, ...)"
     },
     {
       "id": "a11y.axe_serious",
@@ -594,14 +584,13 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "20024.572499999995ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "17.9MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -649,14 +638,14 @@
     {
       "id": "perf.images",
       "sev": "L"
-    },
-    {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 404"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-02",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-01",
       "up": true,
@@ -713,5 +702,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,18 +37,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-01T01:03:40.887Z",
-    "run": "1790816564845",
+    "at": "2026-10-02T01:41:37.665Z",
+    "run": "1790904897356",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 61,
-      "accessibility": 82,
-      "best_practices": 100,
-      "seo": 85
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
     },
     "axe": {
       "critical": 0,
-      "serious": 6,
+      "serious": 16,
       "moderate": 11,
       "minor": 0
     },
@@ -59,7 +59,7 @@
     },
     "tech": {
       "cms": "Drupal 11",
-      "server": "nginx",
+      "server": null,
       "jquery": null
     },
     "checks": [
@@ -69,15 +69,16 @@
       },
       {
         "id": "avail.connect",
-        "r": "pass"
+        "r": "fail",
+        "ev": "timeout"
       },
       {
         "id": "avail.status",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.parked",
@@ -97,7 +98,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.geo_blocked",
@@ -109,7 +110,7 @@
       },
       {
         "id": "sec.https",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.http_redirect",
@@ -133,8 +134,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://haripadmunicipality.lsgkerala.gov.in/en\""
+        "r": "na"
       },
       {
         "id": "sec.csp",
@@ -175,7 +175,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "6 serious violation(s)"
+        "ev": "16 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -193,7 +193,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "3 low-contrast element(s)"
+        "ev": "13 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -216,25 +216,25 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "82/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "61/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "7051.9625ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3.9MB"
       },
       {
         "id": "perf.viewport",
@@ -242,7 +242,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -281,7 +281,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "2/30 crawled link(s) broken (https://haripadmunicipality.lsgkerala.gov.in/ml/)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))/en/user/..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af/etc/passwd, https://haripadmunicipality.lsgkerala.gov.in/Localbody%20Map)"
+        "ev": "2/30 crawled link(s) broken (http://haripadmunicipality.lsgkerala.gov.in/ml, http://haripadmunicipality.lsgkerala.gov.in/en/updates/nagarasabha-utamasathatayailaulala-kaetaitananaka-laaisasa-phaisa-2026-2027-vainajaapanam)"
       },
       {
         "id": "content.broken_pdfs",
@@ -393,12 +393,11 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 404"
+        "r": "na"
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.canonical",
@@ -550,21 +549,13 @@
       }
     ]
   },
-  "score": {
-    "overall": 64,
-    "security": 76,
-    "accessibility": 70,
-    "content": 46,
-    "gigw": 16,
-    "performance": 86,
-    "identity": 96
-  },
-  "status": "needs-work",
+  "score": null,
+  "status": "down",
   "issues": [
     {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://haripadmunicipality.lsgkerala.gov.in/en\""
+      "id": "avail.connect",
+      "sev": "C",
+      "ev": "timeout"
     },
     {
       "id": "content.last_updated",
@@ -579,7 +570,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "2/30 crawled link(s) broken (https://haripadmunicipality.lsgkerala.gov.in/ml/)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))/en/user/..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af..%c0%af/etc/passwd, https://haripadmunicipality.lsgkerala.gov.in/Localbody%20Map)"
+      "ev": "2/30 crawled link(s) broken (http://haripadmunicipality.lsgkerala.gov.in/ml, http://haripadmunicipality.lsgkerala.gov.in/en/updates/nagarasabha-utamasathatayailaulala-kaetaitananaka-laaisasa-phaisa-2026-2027-vainajaapanam)"
     },
     {
       "id": "gigw.rti",
@@ -588,12 +579,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "6 serious violation(s)"
+      "ev": "16 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "3 low-contrast element(s)"
+      "ev": "13 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -612,9 +603,13 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
+      "id": "perf.weight",
       "sev": "M",
-      "ev": "7051.9625ms"
+      "ev": "3.9MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -666,14 +661,14 @@
     {
       "id": "perf.images",
       "sev": "L"
-    },
-    {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 404"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-02",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-01",
       "up": true,
@@ -730,5 +725,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

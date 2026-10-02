@@ -35,19 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-01T00:45:25.486Z",
-    "run": "1790815471688",
+    "at": "2026-10-02T01:04:28.934Z",
+    "run": "1790903013417",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 45,
+      "performance": 42,
       "accessibility": 87,
       "best_practices": 77,
       "seo": 83
     },
     "axe": {
-      "critical": 9,
+      "critical": 13,
       "serious": 0,
-      "moderate": 0,
+      "moderate": 1,
       "minor": 15
     },
     "crawl": {
@@ -169,7 +169,7 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "9 critical violation(s)"
+        "ev": "13 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
@@ -178,7 +178,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "15 moderate/minor violation(s)"
+        "ev": "16 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -194,7 +194,8 @@
       },
       {
         "id": "a11y.headings",
-        "r": "pass"
+        "r": "fail",
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -217,12 +218,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "45/100"
+        "ev": "42/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "41672.16749999994ms"
+        "ev": "42326.8865ms"
       },
       {
         "id": "perf.cls",
@@ -545,9 +546,9 @@
     ]
   },
   "score": {
-    "overall": 63,
+    "overall": 62,
     "security": 48,
-    "accessibility": 74,
+    "accessibility": 70,
     "content": 42,
     "gigw": 60,
     "performance": 71,
@@ -563,7 +564,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "9 critical violation(s)"
+      "ev": "13 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -599,7 +600,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "41672.16749999994ms"
+      "ev": "42326.8865ms"
     },
     {
       "id": "perf.weight",
@@ -625,7 +626,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "15 moderate/minor violation(s)"
+      "ev": "16 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
     },
     {
       "id": "a11y.keyboard",
@@ -677,6 +683,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-02",
+      "up": true,
+      "score": 62
+    },
     {
       "d": "2026-10-01",
       "up": true,
@@ -733,5 +744,5 @@
       "score": 63
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

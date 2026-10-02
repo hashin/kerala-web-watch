@@ -35,28 +35,28 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-30T01:00:39.923Z",
-    "run": "1790729967109",
+    "at": "2026-10-02T01:25:41.588Z",
+    "run": "1790904284629",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 65,
-      "accessibility": 82,
-      "best_practices": 92,
+      "performance": 61,
+      "accessibility": 85,
+      "best_practices": 78,
       "seo": 92
     },
     "axe": {
       "critical": 1,
-      "serious": 8,
-      "moderate": 13,
+      "serious": 12,
+      "moderate": 24,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 4
+      "broken": 1
     },
     "tech": {
-      "cms": "Drupal 8",
+      "cms": "Drupal 11",
       "server": "nginx",
       "jquery": null
     },
@@ -107,7 +107,8 @@
       },
       {
         "id": "sec.https",
-        "r": "pass"
+        "r": "fail",
+        "ev": "http://pathanamthittadp.lsgkerala.gov.in"
       },
       {
         "id": "sec.http_redirect",
@@ -119,8 +120,7 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "17 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -132,8 +132,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://pathanamthittadp.lsgkerala.gov.in/\""
+        "r": "na"
       },
       {
         "id": "sec.csp",
@@ -153,17 +152,20 @@
       },
       {
         "id": "sec.server_banner",
-        "r": "fail",
-        "ev": "PHP/7.0.33"
+        "r": "pass"
       },
       {
         "id": "sec.vuln_js",
         "r": "fail",
-        "ev": "jquery 3.4.1, bootstrap 3.2.0"
+        "ev": "swiper 11.2.10"
       },
       {
         "id": "sec.safe_browsing",
         "r": "na"
+      },
+      {
+        "id": "sec.injected_links",
+        "r": "pass"
       },
       {
         "id": "a11y.axe_critical",
@@ -173,12 +175,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "8 serious violation(s)"
+        "ev": "12 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "13 moderate/minor violation(s)"
+        "ev": "24 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -186,16 +188,18 @@
       },
       {
         "id": "a11y.alt",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "1 low-contrast element(s)"
+        "ev": "8 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
-        "r": "pass"
+        "r": "fail",
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -213,17 +217,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "82/100"
+        "ev": "85/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "65/100"
+        "ev": "61/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "17063.434999999998ms"
+        "ev": "6954.941500000001ms"
       },
       {
         "id": "perf.cls",
@@ -231,7 +235,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "fail",
+        "ev": "8.5MB"
       },
       {
         "id": "perf.viewport",
@@ -239,7 +244,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -265,7 +270,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-"
+        "ev": "ml-user"
       },
       {
         "id": "content.obsolete_tech",
@@ -278,7 +283,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "4/30 crawled link(s) broken (https://pathanamthittadp.lsgkerala.gov.in/ml/Plan_details, http://pathanamthittadp.lsgkerala.gov.in/ml/Plan_details, http://lsgkerala.gov.in/ml/resources/publications/panchayt-raj-magazine, ...)"
+        "ev": "1/30 crawled link(s) broken (http://pathanamthittadp.lsgkerala.gov.in/about)"
       },
       {
         "id": "content.broken_pdfs",
@@ -306,8 +311,7 @@
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "5 console error(s): e.indexOf is not a function"
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
@@ -323,7 +327,7 @@
       },
       {
         "id": "gigw.privacy",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.terms",
@@ -343,7 +347,7 @@
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.screen_reader",
@@ -351,15 +355,15 @@
       },
       {
         "id": "gigw.help",
-        "r": "fail"
-      },
-      {
-        "id": "gigw.rti",
         "r": "pass"
       },
       {
-        "id": "gigw.search",
+        "id": "gigw.rti",
         "r": "fail"
+      },
+      {
+        "id": "gigw.search",
+        "r": "pass"
       },
       {
         "id": "gigw.ownership",
@@ -387,8 +391,7 @@
       },
       {
         "id": "id.robots",
-        "r": "fail",
-        "ev": "robots.txt returned 404"
+        "r": "pass"
       },
       {
         "id": "id.sitemap_xml",
@@ -401,7 +404,7 @@
       },
       {
         "id": "id.canonical",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.charset_doctype",
@@ -409,8 +412,8 @@
       },
       {
         "id": "id.tech",
-        "r": "warn",
-        "ev": "Drupal 8 (unsupported major version)"
+        "r": "pass",
+        "ev": "Drupal 11"
       },
       {
         "id": "id.third_party",
@@ -420,60 +423,101 @@
     "screenshot": {
       "desktop": "lsg-dp-pathanamthitta.webp",
       "mobile": "lsg-dp-pathanamthitta-m.webp",
-      "phash": "ff00f0c08070fffc"
+      "phash": "fff8f8f0f0f0f0ff"
     },
     "outlinks": [
       {
-        "host": "kerala.gov.in",
-        "count": 3,
+        "host": "goo.gl",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "youtube.com",
+        "count": 2,
         "texts": [
-          "കേരള സര്‍ക്കാര്‍",
-          "ഇ ടെണ്ടറുകള്‍",
-          "അക്ഷയ"
+          "കെസ്മാർട്ട് സഹായി",
+          "സേവന സഹായി"
         ]
       },
       {
-        "host": "ikm.in",
+        "host": "legislative.gov.in",
         "count": 1,
         "texts": [
-          "നിയമങ്ങളും ചട്ടങ്ങളും"
+          "ഭരണ ഘടന"
         ]
+      },
+      {
+        "host": "kila.ac.in",
+        "count": 1,
+        "texts": [
+          "പഞ്ചായത്ത് രാജ് ആക്ട്"
+        ]
+      },
+      {
+        "host": "india.gov.in",
+        "count": 2,
+        "texts": [
+          "കേന്ദ്ര സർക്കാർ സേവനങ്ങൾ"
+        ]
+      },
+      {
+        "host": "kerala.gov.in",
+        "count": 7,
+        "texts": [
+          "സംസ്ഥാന സർക്കാർ സേവനങ്ങൾ",
+          "ഗവർണർ",
+          "മുഖ്യമന്ത്രി"
+        ]
+      },
+      {
+        "host": "niyamasabha.org",
+        "count": 1,
+        "texts": [
+          "നിയമസഭാംഗങ്ങൾ"
+        ]
+      },
+      {
+        "host": "google.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "apple.com",
+        "count": 1,
+        "texts": []
       },
       {
         "host": "ikm.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "whatsapp.com",
+        "count": 2,
+        "texts": []
+      },
+      {
+        "host": "kudumbashree.org",
         "count": 2,
         "texts": [
-          "ഇന്‍ഫര്‍മേഷന്‍ കേരള മിഷന്‍",
-          "Information Kerala Mission"
+          "കുടുംബശ്രീ",
+          "ഹരിതകര്‍മ്മസേന"
         ]
       }
     ]
   },
-  "score": {
-    "overall": 47,
-    "security": 28,
-    "accessibility": 54,
-    "content": 42,
-    "gigw": 18,
-    "performance": 86,
-    "identity": 87
-  },
-  "status": "poor",
+  "score": null,
+  "status": "broken",
   "issues": [
     {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "17 days left"
-    },
-    {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://pathanamthittadp.lsgkerala.gov.in/\""
+      "id": "sec.https",
+      "sev": "C",
+      "ev": "http://pathanamthittadp.lsgkerala.gov.in"
     },
     {
       "id": "sec.vuln_js",
       "sev": "H",
-      "ev": "jquery 3.4.1, bootstrap 3.2.0"
+      "ev": "swiper 11.2.10"
     },
     {
       "id": "a11y.axe_critical",
@@ -488,12 +532,16 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-"
+      "ev": "ml-user"
     },
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "4/30 crawled link(s) broken (https://pathanamthittadp.lsgkerala.gov.in/ml/Plan_details, http://pathanamthittadp.lsgkerala.gov.in/ml/Plan_details, http://lsgkerala.gov.in/ml/resources/publications/panchayt-raj-magazine, ...)"
+      "ev": "1/30 crawled link(s) broken (http://pathanamthittadp.lsgkerala.gov.in/about)"
+    },
+    {
+      "id": "gigw.rti",
+      "sev": "H"
     },
     {
       "id": "sec.hsts",
@@ -502,23 +550,20 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "8 serious violation(s)"
+      "ev": "12 serious violation(s)"
+    },
+    {
+      "id": "a11y.alt",
+      "sev": "M",
+      "ev": "1 image(s) missing alt text"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "1 low-contrast element(s)"
+      "ev": "8 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
-      "sev": "M"
-    },
-    {
-      "id": "gigw.privacy",
-      "sev": "M"
-    },
-    {
-      "id": "gigw.accessibility_statement",
       "sev": "M"
     },
     {
@@ -532,12 +577,16 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "17063.434999999998ms"
+      "ev": "6954.941500000001ms"
     },
     {
-      "id": "id.tech",
+      "id": "perf.weight",
       "sev": "M",
-      "ev": "Drupal 8 (unsupported major version)"
+      "ev": "8.5MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -548,14 +597,14 @@
       "sev": "L"
     },
     {
-      "id": "sec.server_banner",
-      "sev": "L",
-      "ev": "PHP/7.0.33"
-    },
-    {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "13 moderate/minor violation(s)"
+      "ev": "24 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
     },
     {
       "id": "a11y.keyboard",
@@ -565,11 +614,6 @@
     {
       "id": "content.meta_desc",
       "sev": "L"
-    },
-    {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "5 console error(s): e.indexOf is not a function"
     },
     {
       "id": "gigw.feedback",
@@ -596,29 +640,25 @@
       "sev": "L"
     },
     {
-      "id": "gigw.help",
-      "sev": "L"
-    },
-    {
-      "id": "gigw.search",
-      "sev": "L"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
-    },
-    {
-      "id": "id.robots",
-      "sev": "L",
-      "ev": "robots.txt returned 404"
     },
     {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
+    },
+    {
+      "id": "id.canonical",
+      "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-02",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-01",
       "up": true,
@@ -675,5 +715,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

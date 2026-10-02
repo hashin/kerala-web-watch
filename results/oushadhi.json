@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-01T01:19:04.900Z",
-    "run": "1790817503398",
+    "at": "2026-10-02T01:49:12.227Z",
+    "run": "1790905675493",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 39,
+      "performance": 43,
       "accessibility": 37,
       "best_practices": 77,
       "seo": 67
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -219,17 +219,16 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "39/100"
+        "ev": "43/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "30984.9535ms"
+        "ev": "24666.964000000004ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.43"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -281,7 +280,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://www.oushadhi.org/officers)"
       },
       {
         "id": "content.broken_pdfs",
@@ -454,12 +454,12 @@
     ]
   },
   "score": {
-    "overall": 46,
+    "overall": 45,
     "security": 48,
     "accessibility": 46,
-    "content": 38,
+    "content": 28,
     "gigw": 18,
-    "performance": 62,
+    "performance": 66,
     "identity": 76
   },
   "status": "poor",
@@ -483,6 +483,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://www.oushadhi.org/officers)"
     },
     {
       "id": "id.gov_domain",
@@ -540,7 +545,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "30984.9535ms"
+      "ev": "24666.964000000004ms"
     },
     {
       "id": "perf.weight",
@@ -615,11 +620,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.43"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -643,6 +643,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-02",
+      "up": true,
+      "score": 45
+    },
     {
       "d": "2026-10-01",
       "up": true,
@@ -699,5 +704,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

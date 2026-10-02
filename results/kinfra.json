@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-01T00:58:54.524Z",
-    "run": "1790816275920",
+    "at": "2026-10-02T01:22:33.678Z",
+    "run": "1790904083698",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 34,
-      "accessibility": 42,
+      "performance": 33,
+      "accessibility": 47,
       "best_practices": 50,
       "seo": 85
     },
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 1,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "WordPress 3.9.6",
@@ -218,17 +218,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "42/100"
+        "ev": "47/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "34/100"
+        "ev": "33/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "58877.780000000006ms"
+        "ev": "60785.512499999975ms"
       },
       {
         "id": "perf.cls",
@@ -245,7 +245,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -283,7 +283,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://kbic.kinfra.org/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -386,7 +387,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "18 days left"
+        "ev": "17 days left"
       },
       {
         "id": "id.www_consistency",
@@ -484,9 +485,9 @@
     "overall": 37,
     "security": 24,
     "accessibility": 32,
-    "content": 56,
+    "content": 46,
     "gigw": 18,
-    "performance": 66,
+    "performance": 76,
     "identity": 55
   },
   "status": "poor",
@@ -517,6 +518,11 @@
       "ev": "ml-code"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://kbic.kinfra.org/)"
+    },
+    {
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "kinfra.org"
@@ -524,7 +530,7 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "18 days left"
+      "ev": "17 days left"
     },
     {
       "id": "sec.hsts",
@@ -577,16 +583,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "58877.780000000006ms"
+      "ev": "60785.512499999975ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
       "ev": "18.7MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
     },
     {
       "id": "id.tech",
@@ -669,6 +671,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-02",
+      "up": true,
+      "score": 37
+    },
+    {
       "d": "2026-10-01",
       "up": true,
       "score": 37
@@ -724,5 +731,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

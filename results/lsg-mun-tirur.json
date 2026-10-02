@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-29T01:41:39.044Z",
-    "run": "1790645884678",
+    "at": "2026-10-02T01:45:31.300Z",
+    "run": "1790905490330",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 60,
@@ -49,7 +49,7 @@
     "axe": {
       "critical": 0,
       "serious": 6,
-      "moderate": 10,
+      "moderate": 11,
       "minor": 0
     },
     "crawl": {
@@ -97,8 +97,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "7035ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -166,6 +165,10 @@
         "r": "na"
       },
       {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
         "id": "a11y.axe_critical",
         "r": "pass"
       },
@@ -177,7 +180,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "10 moderate/minor violation(s)"
+        "ev": "11 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -223,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "61809.042499999974ms"
+        "ev": "28088.209000000017ms"
       },
       {
         "id": "perf.cls",
@@ -572,11 +575,6 @@
       "sev": "H"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "7035ms"
-    },
-    {
       "id": "a11y.axe_serious",
       "sev": "M",
       "ev": "6 serious violation(s)"
@@ -605,7 +603,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "61809.042499999974ms"
+      "ev": "28088.209000000017ms"
     },
     {
       "id": "perf.weight",
@@ -619,7 +617,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "10 moderate/minor violation(s)"
+      "ev": "11 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -666,6 +664,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-02",
+      "up": true,
+      "score": 65
+    },
     {
       "d": "2026-10-01",
       "up": true,
@@ -722,5 +725,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

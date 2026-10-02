@@ -37,18 +37,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-30T01:10:05.666Z",
-    "run": "1790730520914",
+    "at": "2026-10-02T01:43:46.905Z",
+    "run": "1790905348716",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 60,
+      "performance": 57,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 85
     },
     "axe": {
       "critical": 0,
-      "serious": 3,
+      "serious": 5,
       "moderate": 11,
       "minor": 0
     },
@@ -165,13 +165,17 @@
         "r": "na"
       },
       {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
         "id": "a11y.axe_critical",
         "r": "pass"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "3 serious violation(s)"
+        "ev": "5 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -217,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "60/100"
+        "ev": "57/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "22530.686499999996ms"
+        "ev": "12816.443000000003ms"
       },
       {
         "id": "perf.cls",
@@ -428,6 +432,16 @@
         ]
       },
       {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "instagram.com",
+        "count": 1,
+        "texts": []
+      },
+      {
         "host": "ksmart.live",
         "count": 1,
         "texts": [
@@ -570,7 +584,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "3 serious violation(s)"
+      "ev": "5 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -596,7 +610,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "22530.686499999996ms"
+      "ev": "12816.443000000003ms"
     },
     {
       "id": "perf.weight",
@@ -658,6 +672,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-02",
+      "up": true,
+      "score": 68
+    },
+    {
       "d": "2026-10-01",
       "up": true,
       "score": 68
@@ -713,5 +732,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

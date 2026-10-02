@@ -37,12 +37,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-30T01:17:34.624Z",
-    "run": "1790730943930",
+    "at": "2026-10-02T01:44:50.329Z",
+    "run": "1790905439426",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 62,
-      "accessibility": 82,
+      "performance": 61,
+      "accessibility": 86,
       "best_practices": 100,
       "seo": 92
     },
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -97,8 +97,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "5380ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -166,6 +165,10 @@
         "r": "na"
       },
       {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
         "id": "a11y.axe_critical",
         "r": "pass"
       },
@@ -181,8 +184,7 @@
       },
       {
         "id": "a11y.lang",
-        "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 53% Malayalam content"
+        "r": "pass"
       },
       {
         "id": "a11y.alt",
@@ -214,17 +216,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "82/100"
+        "ev": "86/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "62/100"
+        "ev": "61/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7250.768ms"
+        "ev": "11597.8295ms"
       },
       {
         "id": "perf.cls",
@@ -279,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://meeting.lsgkerala.gov.in/Pages/StateWiseDashBoard.aspx)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -527,10 +528,10 @@
     ]
   },
   "score": {
-    "overall": 59,
+    "overall": 65,
     "security": 76,
-    "accessibility": 50,
-    "content": 46,
+    "accessibility": 70,
+    "content": 56,
     "gigw": 16,
     "performance": 81,
     "identity": 96
@@ -543,11 +544,6 @@
       "ev": "href=\"http://ramanattukaramunicipality.lsgkerala.gov.in/en\""
     },
     {
-      "id": "a11y.lang",
-      "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 53% Malayalam content"
-    },
-    {
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
@@ -558,18 +554,8 @@
       "ev": "ml-user"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://meeting.lsgkerala.gov.in/Pages/StateWiseDashBoard.aspx)"
-    },
-    {
       "id": "gigw.rti",
       "sev": "H"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "5380ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -600,7 +586,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7250.768ms"
+      "ev": "11597.8295ms"
     },
     {
       "id": "perf.weight",
@@ -666,6 +652,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-02",
+      "up": true,
+      "score": 65
+    },
+    {
       "d": "2026-10-01",
       "up": true,
       "score": 59
@@ -721,5 +712,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

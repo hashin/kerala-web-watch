@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-01T01:14:47.391Z",
-    "run": "1790817128848",
+    "at": "2026-10-02T01:43:36.388Z",
+    "run": "1790905285073",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 57,
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -97,8 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3022ms"
+        "r": "fail",
+        "ev": "12382ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -227,7 +227,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "33504.524500000014ms"
+        "ev": "31352.007499999992ms"
       },
       {
         "id": "perf.cls",
@@ -236,7 +236,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "10.8MB"
+        "ev": "12.7MB"
       },
       {
         "id": "perf.viewport",
@@ -282,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://paravurmunicipality.lsgkerala.gov.in/ml/sites/paravurmunicipality.lsgkerala.gov.in/files/pictures/2026-10/Applet1844.class)"
       },
       {
         "id": "content.broken_pdfs",
@@ -422,7 +423,7 @@
     "screenshot": {
       "desktop": "lsg-mun-paravur.webp",
       "mobile": "lsg-mun-paravur-m.webp",
-      "phash": "ffff7fff00000018"
+      "phash": "ffffff6080000c38"
     },
     "outlinks": [
       {
@@ -552,10 +553,10 @@
     ]
   },
   "score": {
-    "overall": 65,
+    "overall": 64,
     "security": 76,
     "accessibility": 70,
-    "content": 56,
+    "content": 46,
     "gigw": 20,
     "performance": 76,
     "identity": 96
@@ -578,13 +579,18 @@
       "ev": "ml-user"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://paravurmunicipality.lsgkerala.gov.in/ml/sites/paravurmunicipality.lsgkerala.gov.in/files/pictures/2026-10/Applet1844.class)"
+    },
+    {
       "id": "gigw.rti",
       "sev": "H"
     },
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "3022ms"
+      "ev": "12382ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -615,12 +621,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "33504.524500000014ms"
+      "ev": "31352.007499999992ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "10.8MB"
+      "ev": "12.7MB"
     },
     {
       "id": "sec.csp",
@@ -677,6 +683,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-02",
+      "up": true,
+      "score": 64
+    },
+    {
       "d": "2026-10-01",
       "up": true,
       "score": 65
@@ -732,5 +743,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

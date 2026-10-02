@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-30T01:20:51.918Z",
-    "run": "1790731054626",
+    "at": "2026-10-02T01:45:22.545Z",
+    "run": "1790905476565",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 61,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 85
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -165,6 +165,10 @@
         "r": "na"
       },
       {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
         "id": "a11y.axe_critical",
         "r": "pass"
       },
@@ -217,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "61/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8174.264500000001ms"
+        "ev": "14143.2375ms"
       },
       {
         "id": "perf.cls",
@@ -231,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "7.3MB"
+        "ev": "7.5MB"
       },
       {
         "id": "perf.viewport",
@@ -277,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://taliparambamunicipality.lsgkerala.gov.in/Localbody%20Map)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -434,15 +437,6 @@
         "texts": []
       },
       {
-        "host": "kerala.gov.in",
-        "count": 5,
-        "texts": [
-          "E-Tenders",
-          "Voters List",
-          "State Government"
-        ]
-      },
-      {
         "host": "youtube.com",
         "count": 3,
         "texts": [
@@ -463,6 +457,15 @@
         "count": 1,
         "texts": [
           "Read More"
+        ]
+      },
+      {
+        "host": "kerala.gov.in",
+        "count": 4,
+        "texts": [
+          "Voters List",
+          "State Government",
+          "E-Tender"
         ]
       },
       {
@@ -548,10 +551,10 @@
     ]
   },
   "score": {
-    "overall": 67,
+    "overall": 69,
     "security": 76,
     "accessibility": 70,
-    "content": 46,
+    "content": 56,
     "gigw": 40,
     "performance": 81,
     "identity": 96
@@ -572,11 +575,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://taliparambamunicipality.lsgkerala.gov.in/Localbody%20Map)"
     },
     {
       "id": "a11y.axe_serious",
@@ -607,12 +605,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8174.264500000001ms"
+      "ev": "14143.2375ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.3MB"
+      "ev": "7.5MB"
     },
     {
       "id": "sec.csp",
@@ -669,6 +667,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-02",
+      "up": true,
+      "score": 69
+    },
+    {
       "d": "2026-10-01",
       "up": true,
       "score": 67
@@ -724,5 +727,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

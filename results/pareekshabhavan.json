@@ -29,8 +29,8 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-09-30T01:18:26.997Z",
-    "run": "1790731043535",
+    "at": "2026-10-02T01:47:55.094Z",
+    "run": "1790905610517",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 45,
@@ -40,7 +40,7 @@
     },
     "axe": {
       "critical": 10,
-      "serious": 35,
+      "serious": 36,
       "moderate": 11,
       "minor": 0
     },
@@ -114,7 +114,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "25 days left"
+        "ev": "23 days left"
       },
       {
         "id": "sec.tls_version",
@@ -160,6 +160,10 @@
         "r": "na"
       },
       {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
         "id": "a11y.axe_critical",
         "r": "fail",
         "ev": "10 critical violation(s)"
@@ -167,7 +171,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "35 serious violation(s)"
+        "ev": "36 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -177,7 +181,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 142% Malayalam content"
+        "ev": "<html lang=\"en\"> vs. 143% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -187,7 +191,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "31 low-contrast element(s)"
+        "ev": "32 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -219,7 +223,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "28965ms"
+        "ev": "41565ms"
       },
       {
         "id": "perf.cls",
@@ -458,7 +462,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "25 days left"
+      "ev": "23 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -478,7 +482,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 142% Malayalam content"
+      "ev": "<html lang=\"en\"> vs. 143% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -497,7 +501,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "35 serious violation(s)"
+      "ev": "36 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -507,7 +511,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "31 low-contrast element(s)"
+      "ev": "32 low-contrast element(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -529,7 +533,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "28965ms"
+      "ev": "41565ms"
     },
     {
       "id": "perf.weight",
@@ -612,6 +616,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-02",
+      "up": true,
+      "score": 42
+    },
+    {
       "d": "2026-10-01",
       "up": true,
       "score": 42
@@ -667,5 +676,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

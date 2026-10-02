@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-01T01:20:29.043Z",
-    "run": "1790817393251",
+    "at": "2026-10-02T01:42:28.714Z",
+    "run": "1790905092133",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
+      "performance": 57,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 92
@@ -97,8 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3278ms"
+        "r": "fail",
+        "ev": "9492ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -186,7 +186,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 38% Malayalam content"
+        "ev": "<html lang=\"en\"> vs. 41% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -223,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "57/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "19887.542000000012ms"
+        "ev": "20467.7195ms"
       },
       {
         "id": "perf.cls",
@@ -284,7 +284,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://ottapalammunicipality.lsgkerala.gov.in/Localbody%20Map)"
+        "ev": "1/30 crawled link(s) broken (https://ottapalammunicipality.lsgkerala.gov.in/ml/Localbody%20Map)"
       },
       {
         "id": "content.broken_pdfs",
@@ -356,7 +356,7 @@
       },
       {
         "id": "gigw.help",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.rti",
@@ -545,11 +545,11 @@
     ]
   },
   "score": {
-    "overall": 62,
+    "overall": 61,
     "security": 76,
     "accessibility": 50,
     "content": 46,
-    "gigw": 40,
+    "gigw": 36,
     "performance": 76,
     "identity": 96
   },
@@ -563,7 +563,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 38% Malayalam content"
+      "ev": "<html lang=\"en\"> vs. 41% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -578,12 +578,12 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://ottapalammunicipality.lsgkerala.gov.in/Localbody%20Map)"
+      "ev": "1/30 crawled link(s) broken (https://ottapalammunicipality.lsgkerala.gov.in/ml/Localbody%20Map)"
     },
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "3278ms"
+      "ev": "9492ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -614,7 +614,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "19887.542000000012ms"
+      "ev": "20467.7195ms"
     },
     {
       "id": "perf.weight",
@@ -665,6 +665,10 @@
       "sev": "L"
     },
     {
+      "id": "gigw.help",
+      "sev": "L"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -675,6 +679,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-02",
+      "up": true,
+      "score": 61
+    },
     {
       "d": "2026-10-01",
       "up": true,
@@ -731,5 +740,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

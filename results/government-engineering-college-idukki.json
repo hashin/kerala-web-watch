@@ -37,19 +37,24 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-01T01:30:11.670Z",
-    "run": "1790818169527",
+    "at": "2026-10-02T01:51:35.722Z",
+    "run": "1790905853699",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 49,
+      "accessibility": 79,
+      "best_practices": 88,
+      "seo": 75
+    },
     "axe": {
-      "critical": 19,
-      "serious": 30,
-      "moderate": 25,
+      "critical": 18,
+      "serious": 27,
+      "moderate": 24,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 3,
+      "pdfs": 4,
       "broken": 0
     },
     "tech": {
@@ -167,17 +172,17 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "19 critical violation(s)"
+        "ev": "18 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "30 serious violation(s)"
+        "ev": "27 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "25 moderate/minor violation(s)"
+        "ev": "24 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -186,7 +191,7 @@
       {
         "id": "a11y.alt",
         "r": "fail",
-        "ev": "19 image(s) missing alt text"
+        "ev": "18 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
@@ -213,24 +218,28 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "79/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "49/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "12869.937500000004ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.36"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "12.1MB"
+        "ev": "12.7MB"
       },
       {
         "id": "perf.viewport",
@@ -238,11 +247,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -417,7 +426,7 @@
     "screenshot": {
       "desktop": "government-engineering-college-idukki.webp",
       "mobile": "government-engineering-college-idukki-m.webp",
-      "phash": "ffff001d1f0001ff"
+      "phash": "fffd02c6c040ffff"
     },
     "outlinks": [
       {
@@ -457,12 +466,12 @@
     ]
   },
   "score": {
-    "overall": 49,
+    "overall": 46,
     "security": 44,
     "accessibility": 40,
     "content": 38,
     "gigw": 26,
-    "performance": 90,
+    "performance": 62,
     "identity": 92
   },
   "status": "poor",
@@ -475,7 +484,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "19 critical violation(s)"
+      "ev": "18 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -498,12 +507,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "30 serious violation(s)"
+      "ev": "27 serious violation(s)"
     },
     {
       "id": "a11y.alt",
       "sev": "M",
-      "ev": "19 image(s) missing alt text"
+      "ev": "18 image(s) missing alt text"
     },
     {
       "id": "a11y.contrast",
@@ -536,9 +545,18 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "12869.937500000004ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "12.1MB"
+      "ev": "12.7MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -560,7 +578,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "25 moderate/minor violation(s)"
+      "ev": "24 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -610,6 +628,15 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.36"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -628,6 +655,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-02",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-10-01",
       "up": true,
@@ -664,5 +696,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

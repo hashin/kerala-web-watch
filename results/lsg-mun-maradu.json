@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-01T01:12:46.146Z",
-    "run": "1790817062286",
+    "at": "2026-10-02T01:38:12.131Z",
+    "run": "1790904585114",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 59,
+      "performance": 55,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 85
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 20
     },
     "tech": {
       "cms": "Drupal 11",
@@ -99,7 +99,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "3461ms"
+        "ev": "5194ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -223,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "59/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "47842.39099999999ms"
+        "ev": "36262.9865ms"
       },
       {
         "id": "perf.cls",
@@ -283,7 +283,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "20/30 crawled link(s) broken (https://maradumunicipality.lsgkerala.gov.in/en, https://maradumunicipality.lsgkerala.gov.in/ml, https://maradumunicipality.lsgkerala.gov.in/ml/node/77, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -551,10 +552,10 @@
     ]
   },
   "score": {
-    "overall": 68,
+    "overall": 65,
     "security": 76,
     "accessibility": 70,
-    "content": 56,
+    "content": 36,
     "gigw": 36,
     "performance": 76,
     "identity": 96
@@ -582,9 +583,14 @@
       "ev": "ml-user"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "20/30 crawled link(s) broken (https://maradumunicipality.lsgkerala.gov.in/en, https://maradumunicipality.lsgkerala.gov.in/ml, https://maradumunicipality.lsgkerala.gov.in/ml/node/77, ...)"
+    },
+    {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "3461ms"
+      "ev": "5194ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -615,7 +621,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "47842.39099999999ms"
+      "ev": "36262.9865ms"
     },
     {
       "id": "perf.weight",
@@ -681,6 +687,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-02",
+      "up": true,
+      "score": 65
+    },
+    {
       "d": "2026-10-01",
       "up": true,
       "score": 68
@@ -736,5 +747,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

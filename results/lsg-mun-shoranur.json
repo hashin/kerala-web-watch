@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-01T01:15:55.868Z",
-    "run": "1790817169863",
+    "at": "2026-10-02T01:44:46.720Z",
+    "run": "1790905426907",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 69,
+      "performance": 68,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 85
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "69/100"
+        "ev": "68/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "5166.710000000001ms"
+        "ev": "4848.771000000001ms"
       },
       {
         "id": "perf.cls",
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://shornurmunicipality.lsgkerala.gov.in/Localbody%20Map)"
       },
       {
         "id": "content.broken_pdfs",
@@ -560,10 +561,10 @@
     ]
   },
   "score": {
-    "overall": 69,
+    "overall": 67,
     "security": 76,
     "accessibility": 70,
-    "content": 56,
+    "content": 46,
     "gigw": 40,
     "performance": 81,
     "identity": 96
@@ -584,6 +585,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://shornurmunicipality.lsgkerala.gov.in/Localbody%20Map)"
     },
     {
       "id": "a11y.axe_serious",
@@ -614,7 +620,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "5166.710000000001ms"
+      "ev": "4848.771000000001ms"
     },
     {
       "id": "perf.weight",
@@ -676,6 +682,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-02",
+      "up": true,
+      "score": 67
+    },
+    {
       "d": "2026-10-01",
       "up": true,
       "score": 69
@@ -731,5 +742,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,25 +37,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-30T00:53:50.085Z",
-    "run": "1790729608351",
+    "at": "2026-10-02T01:18:32.970Z",
+    "run": "1790903804230",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 100,
+      "performance": 27,
       "accessibility": 81,
-      "best_practices": 100,
-      "seo": 82
+      "best_practices": 54,
+      "seo": 77
     },
     "axe": {
-      "critical": 0,
-      "serious": 1,
-      "moderate": 2,
+      "critical": 2,
+      "serious": 11,
+      "moderate": 4,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
-      "pdfs": 0,
-      "broken": 0
+      "pages": 30,
+      "pdfs": 11,
+      "broken": 4
     },
     "tech": {
       "cms": null,
@@ -122,7 +122,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "25 days left"
+        "ev": "23 days left"
       },
       {
         "id": "sec.tls_version",
@@ -134,7 +134,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "pass"
+        "r": "fail",
+        "ev": "href=\"http://gmpg.org/xfn/11\""
       },
       {
         "id": "sec.csp",
@@ -142,7 +143,7 @@
       },
       {
         "id": "sec.xfo",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.xcto",
@@ -158,25 +159,31 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "pass"
+        "r": "fail",
+        "ev": "jquery 1.12.4, bootstrap 3.3.7, bootstrap 3.4.1"
       },
       {
         "id": "sec.safe_browsing",
         "r": "na"
       },
       {
-        "id": "a11y.axe_critical",
+        "id": "sec.injected_links",
         "r": "pass"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "fail",
+        "ev": "2 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "1 serious violation(s)"
+        "ev": "11 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "2 moderate/minor violation(s)"
+        "ev": "4 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -205,7 +212,8 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "pass"
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
       },
       {
         "id": "a11y.lighthouse",
@@ -215,11 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "100/100"
+        "ev": "27/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "fail",
+        "ev": "234022.50650000013ms"
       },
       {
         "id": "perf.cls",
@@ -227,7 +236,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "fail",
+        "ev": "97.9MB"
       },
       {
         "id": "perf.viewport",
@@ -239,7 +249,7 @@
       },
       {
         "id": "perf.images",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -260,11 +270,13 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "pass"
+        "r": "fail",
+        "ev": "ml-IN"
       },
       {
         "id": "content.obsolete_tech",
-        "r": "pass"
+        "r": "fail",
+        "ev": "<marquee"
       },
       {
         "id": "content.best_viewed",
@@ -272,20 +284,22 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3/30 crawled link(s) broken (https://eofficercs.kerala.gov.in/, https://camis.kerala.gov.in/, http://prism.kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 linked PDF(s) 404: https://cooperation.kerala.gov.in/wp-content/uploads/2019/10/cug.pdf"
       },
       {
         "id": "content.broken_images",
-        "r": "pass"
+        "r": "fail",
+        "ev": "5 broken image(s)"
       },
       {
         "id": "content.malayalam",
-        "r": "fail",
-        "ev": "Malayalam ratio 0.00, no language toggle found"
+        "r": "pass"
       },
       {
         "id": "content.title",
@@ -297,15 +311,16 @@
       },
       {
         "id": "content.favicon",
-        "r": "fail"
-      },
-      {
-        "id": "content.console_errors",
         "r": "pass"
       },
       {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "13 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      },
+      {
         "id": "gigw.contact",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.feedback",
@@ -337,7 +352,7 @@
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.screen_reader",
@@ -365,7 +380,7 @@
       },
       {
         "id": "gigw.emblem",
-        "r": "warn"
+        "r": "pass"
       },
       {
         "id": "id.gov_domain",
@@ -385,16 +400,16 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "pass"
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
       },
       {
         "id": "id.soft_404",
-        "r": "fail",
-        "ev": "a nonexistent path returned 200"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.charset_doctype",
@@ -406,26 +421,45 @@
       },
       {
         "id": "id.third_party",
-        "r": "pass"
+        "r": "warn",
+        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-L1XGWRVKHS&amp;cx=c&amp;gtm=4e69u2, https://www.googletagmanager.com/gtag/js?id=UA-103783083-39"
       }
     ],
     "screenshot": {
       "desktop": "cooperationkerala.webp",
       "mobile": "cooperationkerala-m.webp",
-      "phash": "003c66420c663c00"
+      "phash": "0c6fffbdf9ff2000"
     },
-    "outlinks": []
+    "outlinks": [
+      {
+        "host": "spark.gov.in",
+        "count": 1,
+        "texts": [
+          "സ്പാർക്"
+        ]
+      },
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "youtube.com",
+        "count": 1,
+        "texts": []
+      }
+    ]
   },
   "score": {
-    "overall": 56,
-    "security": 38,
-    "accessibility": 76,
-    "content": 62,
-    "gigw": 0,
-    "performance": 90,
+    "overall": 36,
+    "security": 8,
+    "accessibility": 54,
+    "content": 18,
+    "gigw": 8,
+    "performance": 66,
     "identity": 96
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.http_redirect",
@@ -434,7 +468,22 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "25 days left"
+      "ev": "23 days left"
+    },
+    {
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://gmpg.org/xfn/11\""
+    },
+    {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "jquery 1.12.4, bootstrap 3.3.7, bootstrap 3.4.1"
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "2 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -442,8 +491,14 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "gigw.contact",
-      "sev": "H"
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-IN"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "3/30 crawled link(s) broken (https://eofficercs.kerala.gov.in/, https://camis.kerala.gov.in/, http://prism.kerala.gov.in/)"
     },
     {
       "id": "gigw.rti",
@@ -454,13 +509,9 @@
       "sev": "M"
     },
     {
-      "id": "sec.xfo",
-      "sev": "M"
-    },
-    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "1 serious violation(s)"
+      "ev": "11 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -468,9 +519,14 @@
       "ev": "1 low-contrast element(s)"
     },
     {
-      "id": "content.malayalam",
+      "id": "content.obsolete_tech",
       "sev": "M",
-      "ev": "Malayalam ratio 0.00, no language toggle found"
+      "ev": "<marquee"
+    },
+    {
+      "id": "content.broken_pdfs",
+      "sev": "M",
+      "ev": "1 linked PDF(s) 404: https://cooperation.kerala.gov.in/wp-content/uploads/2019/10/cug.pdf"
     },
     {
       "id": "gigw.sitemap",
@@ -481,16 +537,22 @@
       "sev": "M"
     },
     {
-      "id": "gigw.accessibility_statement",
-      "sev": "M"
-    },
-    {
       "id": "gigw.ownership",
       "sev": "M"
     },
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "234022.50650000013ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "97.9MB"
     },
     {
       "id": "perf.tap_targets",
@@ -511,15 +573,26 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "2 moderate/minor violation(s)"
+      "ev": "4 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
+    },
+    {
+      "id": "content.broken_images",
+      "sev": "L",
+      "ev": "5 broken image(s)"
     },
     {
       "id": "content.meta_desc",
       "sev": "L"
     },
     {
-      "id": "content.favicon",
-      "sev": "L"
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "13 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.feedback",
@@ -554,20 +627,26 @@
       "sev": "L"
     },
     {
-      "id": "id.soft_404",
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
+      "id": "id.sitemap_xml",
       "sev": "L",
-      "ev": "a nonexistent path returned 200"
+      "ev": "sitemap.xml returned 404"
     },
     {
-      "id": "gigw.emblem",
-      "sev": "I"
-    },
-    {
-      "id": "id.canonical",
-      "sev": "I"
+      "id": "id.third_party",
+      "sev": "I",
+      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-L1XGWRVKHS&amp;cx=c&amp;gtm=4e69u2, https://www.googletagmanager.com/gtag/js?id=UA-103783083-39"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-02",
+      "up": true,
+      "score": 36
+    },
     {
       "d": "2026-10-01",
       "up": true,
@@ -624,5 +703,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

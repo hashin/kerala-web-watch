@@ -37,15 +37,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-30T01:29:19.414Z",
-    "run": "1790731687251",
+    "at": "2026-10-02T01:52:37.361Z",
+    "run": "1790905889658",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 61,
-      "accessibility": 83,
-      "best_practices": 96,
-      "seo": 85
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 2,
       "serious": 17,
@@ -165,6 +160,10 @@
         "r": "na"
       },
       {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
         "id": "a11y.axe_critical",
         "r": "fail",
         "ev": "2 critical violation(s)"
@@ -211,27 +210,24 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "83/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "61/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "7513.926500000001ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "34.6MB"
+        "ev": "34.5MB"
       },
       {
         "id": "perf.viewport",
@@ -239,11 +235,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -305,7 +301,8 @@
       },
       {
         "id": "content.console_errors",
-        "r": "pass"
+        "r": "fail",
+        "ev": "2 console error(s): Failed to load resource: the server responded with a status of 403 ()"
       },
       {
         "id": "gigw.contact",
@@ -490,12 +487,12 @@
     ]
   },
   "score": {
-    "overall": 54,
+    "overall": 55,
     "security": 48,
     "accessibility": 46,
-    "content": 56,
+    "content": 52,
     "gigw": 32,
-    "performance": 76,
+    "performance": 90,
     "identity": 100
   },
   "status": "needs-work",
@@ -560,14 +557,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "7513.926500000001ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "34.6MB"
+      "ev": "34.5MB"
     },
     {
       "id": "sec.csp",
@@ -589,6 +581,11 @@
     {
       "id": "content.meta_desc",
       "sev": "L"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "2 console error(s): Failed to load resource: the server responded with a status of 403 ()"
     },
     {
       "id": "gigw.terms",
@@ -619,15 +616,16 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "gigw.emblem",
       "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-02",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-01",
       "up": true,
@@ -664,5 +662,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-01T00:56:46.439Z",
-    "run": "1790815749739",
+    "at": "2026-10-02T01:08:21.962Z",
+    "run": "1790903230740",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 61,
+      "performance": 60,
       "accessibility": 76,
       "best_practices": 92,
       "seo": 77
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 21
+      "broken": 0
     },
     "tech": {
       "cms": "WordPress 6.9.9",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "61/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "48649.764ms"
+        "ev": "63093.75300000002ms"
       },
       {
         "id": "perf.cls",
@@ -281,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "21/30 crawled link(s) broken (https://www.coircraft.com/about-us/awards-recognitions/, https://www.coircraft.com/about-us/quality-policy/, https://www.coircraft.com/about-us/certifications/, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -426,7 +425,7 @@
     "screenshot": {
       "desktop": "kerala-state-coir-corporation.webp",
       "mobile": "kerala-state-coir-corporation-m.webp",
-      "phash": "ffff7f6e7a622400"
+      "phash": "ffff30381c5c1847"
     },
     "outlinks": [
       {
@@ -452,10 +451,10 @@
     ]
   },
   "score": {
-    "overall": 45,
+    "overall": 48,
     "security": 48,
     "accessibility": 40,
-    "content": 22,
+    "content": 42,
     "gigw": 36,
     "performance": 66,
     "identity": 80
@@ -481,11 +480,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "21/30 crawled link(s) broken (https://www.coircraft.com/about-us/awards-recognitions/, https://www.coircraft.com/about-us/quality-policy/, https://www.coircraft.com/about-us/certifications/, ...)"
     },
     {
       "id": "id.gov_domain",
@@ -539,7 +533,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "48649.764ms"
+      "ev": "63093.75300000002ms"
     },
     {
       "id": "perf.weight",
@@ -627,6 +621,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-02",
+      "up": true,
+      "score": 48
+    },
+    {
       "d": "2026-10-01",
       "up": true,
       "score": 45
@@ -642,5 +641,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-01T01:26:15.443Z",
-    "run": "1790817935691",
+    "at": "2026-10-02T01:49:40.617Z",
+    "run": "1790905740480",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 61,
+      "performance": 63,
       "accessibility": 77,
       "best_practices": 96,
       "seo": 75
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "61/100"
+        "ev": "63/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7362.539ms"
+        "ev": "5397.77ms"
       },
       {
         "id": "perf.cls",
@@ -436,7 +436,7 @@
     "performance": 86,
     "identity": 76
   },
-  "status": "down",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.vuln_js",
@@ -510,7 +510,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7362.539ms"
+      "ev": "5397.77ms"
     },
     {
       "id": "sec.csp",
@@ -593,6 +593,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-02",
+      "up": true,
+      "score": 49
+    },
+    {
       "d": "2026-10-01",
       "up": false,
       "score": 49
@@ -623,5 +628,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

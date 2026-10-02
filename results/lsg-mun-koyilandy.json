@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-01T01:08:28.908Z",
-    "run": "1790816805516",
+    "at": "2026-10-02T01:42:55.523Z",
+    "run": "1790905106734",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 57,
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -97,8 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3536ms"
+        "r": "fail",
+        "ev": "9117ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -227,7 +227,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "16171.0595ms"
+        "ev": "45200.381ms"
       },
       {
         "id": "perf.cls",
@@ -236,7 +236,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "23.9MB"
+        "ev": "25.8MB"
       },
       {
         "id": "perf.viewport",
@@ -282,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://quilandymunicipality.lsgkerala.gov.in/en/budget%20reports)"
       },
       {
         "id": "content.broken_pdfs",
@@ -552,10 +553,10 @@
     ]
   },
   "score": {
-    "overall": 65,
+    "overall": 63,
     "security": 76,
     "accessibility": 70,
-    "content": 56,
+    "content": 46,
     "gigw": 16,
     "performance": 76,
     "identity": 96
@@ -578,13 +579,18 @@
       "ev": "ml-user"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://quilandymunicipality.lsgkerala.gov.in/en/budget%20reports)"
+    },
+    {
       "id": "gigw.rti",
       "sev": "H"
     },
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "3536ms"
+      "ev": "9117ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -615,12 +621,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "16171.0595ms"
+      "ev": "45200.381ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "23.9MB"
+      "ev": "25.8MB"
     },
     {
       "id": "sec.csp",
@@ -681,6 +687,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-02",
+      "up": true,
+      "score": 63
+    },
+    {
       "d": "2026-10-01",
       "up": true,
       "score": 65
@@ -736,5 +747,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

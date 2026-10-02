@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-23T00:11:16.886Z",
-    "run": "1790122236615",
+    "at": "2026-10-02T01:43:42.131Z",
+    "run": "1790905297666",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 61,
+      "performance": 60,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 85
@@ -97,7 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "fail",
+        "ev": "8195ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -165,6 +166,10 @@
         "r": "na"
       },
       {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
         "id": "a11y.axe_critical",
         "r": "pass"
       },
@@ -217,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "61/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "25972.248000000007ms"
+        "ev": "25666.915ms"
       },
       {
         "id": "perf.cls",
@@ -231,7 +236,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "5.0MB"
+        "ev": "5.8MB"
       },
       {
         "id": "perf.viewport",
@@ -565,6 +570,11 @@
       "ev": "1/30 crawled link(s) broken (https://kottakkalmunicipality.lsgkerala.gov.in/Localbody%20Map)"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "8195ms"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
       "ev": "6 serious violation(s)"
@@ -593,12 +603,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "25972.248000000007ms"
+      "ev": "25666.915ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "5.0MB"
+      "ev": "5.8MB"
     },
     {
       "id": "sec.csp",
@@ -655,6 +665,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-02",
+      "up": true,
+      "score": 67
+    },
+    {
       "d": "2026-10-01",
       "up": true,
       "score": 67
@@ -710,5 +725,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
