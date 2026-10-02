@@ -2,8 +2,8 @@
   "id": "keralahousedelhi",
   "url": "https://keralahouse.kerala.gov.in",
   "light": {
-    "at": "2026-10-01T22:13:46.564Z",
-    "status_class": "timeout",
+    "at": "2026-10-02T03:24:51.058Z",
+    "status_class": "connect_fail",
     "dns": true,
     "status": null,
     "final_url": null,
@@ -11,7 +11,13 @@
     "ttfb_ms": null,
     "title": null,
     "byte_size": null,
-    "tls": null,
+    "tls": {
+      "valid": false,
+      "protocol": "TLSv1.3",
+      "expires": "Jul 14 11:44:18 2026 GMT",
+      "days_left": -80,
+      "issuer": "Let's Encrypt"
+    },
     "headers": {
       "hsts": false,
       "csp": false,
@@ -55,7 +61,7 @@
     "error": "page.goto: net::ERR_CERT_DATE_INVALID at https://keralahouse.kerala.gov.in/\nCall log:\n  - navigating to \"https://keralahouse.kerala.gov.in/\", waiting until \"load\"\n"
   },
   "score": null,
-  "status": "down",
+  "status": "broken",
   "issues": [],
   "history": [
     {
