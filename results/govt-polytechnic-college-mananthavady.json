@@ -37,10 +37,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:54:57.822Z",
-    "run": "1790906055798",
+    "at": "2026-10-03T00:58:06.921Z",
+    "run": "1790989043186",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 70,
+      "accessibility": 82,
+      "best_practices": 100,
+      "seo": 92
+    },
     "axe": {
       "critical": 6,
       "serious": 11,
@@ -212,19 +217,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "82/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "70/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "9559.207999999999ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -236,11 +244,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -489,12 +497,12 @@
     ]
   },
   "score": {
-    "overall": 53,
+    "overall": 51,
     "security": 48,
     "accessibility": 50,
     "content": 56,
     "gigw": 0,
-    "performance": 100,
+    "performance": 76,
     "identity": 100
   },
   "status": "needs-work",
@@ -562,6 +570,15 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "9559.207999999999ms"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
+    },
+    {
       "id": "sec.xcto",
       "sev": "L"
     },
@@ -622,11 +639,20 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "gigw.emblem",
       "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-03",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-10-02",
       "up": true,
@@ -668,5 +694,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

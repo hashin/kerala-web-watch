@@ -35,15 +35,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:17:58.070Z",
-    "run": "1790903831154",
+    "at": "2026-10-03T00:50:27.596Z",
+    "run": "1790988583897",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 55,
-      "accessibility": 75,
-      "best_practices": 96,
-      "seo": 75
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 1,
       "serious": 81,
@@ -214,22 +209,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "75/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "55/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "13273.722500000002ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -242,11 +234,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -311,7 +303,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "29 console error(s): Failed to load resource: net::ERR_INCOMPLETE_CHUNKED_ENCODING"
+        "ev": "31 console error(s): Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
       },
       {
         "id": "gigw.contact",
@@ -469,12 +461,12 @@
     ]
   },
   "score": {
-    "overall": 58,
+    "overall": 59,
     "security": 90,
     "accessibility": 40,
     "content": 32,
     "gigw": 32,
-    "performance": 81,
+    "performance": 95,
     "identity": 76
   },
   "status": "needs-work",
@@ -545,11 +537,6 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "13273.722500000002ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "7.5MB"
@@ -576,7 +563,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "29 console error(s): Failed to load resource: net::ERR_INCOMPLETE_CHUNKED_ENCODING"
+      "ev": "31 console error(s): Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
     },
     {
       "id": "gigw.terms",
@@ -607,10 +594,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.soft_404",
       "sev": "L",
       "ev": "a nonexistent path returned 200"
@@ -626,6 +609,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-03",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-10-02",
       "up": true,
@@ -687,5 +675,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

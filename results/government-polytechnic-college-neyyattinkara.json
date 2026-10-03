@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:52:36.819Z",
-    "run": "1790905905474",
+    "at": "2026-10-03T01:01:42.893Z",
+    "run": "1790989246636",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 42,
+      "performance": 55,
       "accessibility": 85,
       "best_practices": 73,
       "seo": 92
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 4,
-      "broken": 29
+      "broken": 31
     },
     "tech": {
       "cms": "WordPress 5.8.17",
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "42/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "5729.2935ms"
+        "ev": "4387.5735ms"
       },
       {
         "id": "perf.cls",
@@ -284,11 +284,12 @@
       {
         "id": "content.broken_links",
         "r": "fail",
-        "ev": "29/30 crawled link(s) broken (https://gptcnta.ac.in/news/ce-cell-admission-notice/, https://gptcnta.ac.in/college/, https://gptcnta.ac.in/principal/, ...)"
+        "ev": "27/30 crawled link(s) broken (https://gptcnta.ac.in/news/ce-cell-admission-notice/, https://gptcnta.ac.in/college/, https://gptcnta.ac.in/principal/, ...)"
       },
       {
         "id": "content.broken_pdfs",
-        "r": "pass"
+        "r": "fail",
+        "ev": "4 linked PDF(s) 404: https://gptcnta.ac.in/wp-content/uploads/2024/08/Notification-S6-internship-2024-approved.pdf, https://gptcnta.ac.in/wp-content/uploads/2024/08/Circular_internship_company-signed-1.pdf, https://gptcnta.ac.in/wp-content/uploads/2024/08/Internship-page1.pdf, https://gptcnta.ac.in/wp-content/uploads/2024/08/Internship-page2.pdf"
       },
       {
         "id": "content.broken_images",
@@ -482,10 +483,10 @@
     ]
   },
   "score": {
-    "overall": 45,
+    "overall": 43,
     "security": 24,
     "accessibility": 74,
-    "content": 26,
+    "content": 16,
     "gigw": 2,
     "performance": 71,
     "identity": 87
@@ -515,7 +516,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "29/30 crawled link(s) broken (https://gptcnta.ac.in/news/ce-cell-admission-notice/, https://gptcnta.ac.in/college/, https://gptcnta.ac.in/principal/, ...)"
+      "ev": "27/30 crawled link(s) broken (https://gptcnta.ac.in/news/ce-cell-admission-notice/, https://gptcnta.ac.in/college/, https://gptcnta.ac.in/principal/, ...)"
     },
     {
       "id": "gigw.rti",
@@ -545,6 +546,11 @@
       "ev": "copyright year 2018"
     },
     {
+      "id": "content.broken_pdfs",
+      "sev": "M",
+      "ev": "4 linked PDF(s) 404: https://gptcnta.ac.in/wp-content/uploads/2024/08/Notification-S6-internship-2024-approved.pdf, https://gptcnta.ac.in/wp-content/uploads/2024/08/Circular_internship_company-signed-1.pdf, https://gptcnta.ac.in/wp-content/uploads/2024/08/Internship-page1.pdf, https://gptcnta.ac.in/wp-content/uploads/2024/08/Internship-page2.pdf"
+    },
+    {
       "id": "gigw.sitemap",
       "sev": "M"
     },
@@ -567,7 +573,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "5729.2935ms"
+      "ev": "4387.5735ms"
     },
     {
       "id": "perf.weight",
@@ -664,6 +670,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-03",
+      "up": true,
+      "score": 43
+    },
+    {
       "d": "2026-10-02",
       "up": true,
       "score": 45
@@ -704,5 +715,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

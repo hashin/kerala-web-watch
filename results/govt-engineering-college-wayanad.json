@@ -35,34 +35,470 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:54:15.798Z",
-    "run": "1790906049423",
+    "at": "2026-10-03T01:00:31.691Z",
+    "run": "1790989191973",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 57,
+      "accessibility": 87,
+      "best_practices": 74,
+      "seo": 85
+    },
     "axe": {
       "critical": 0,
-      "serious": 0,
-      "moderate": 0,
+      "serious": 3,
+      "moderate": 4,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
+      "pages": 30,
       "pdfs": 0,
       "broken": 0
     },
     "tech": {
-      "cms": null,
-      "server": null,
+      "cms": "WordPress 7.1.2",
+      "server": "Apache",
       "jquery": null
     },
-    "checks": [],
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "pass"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "fail",
+        "ev": "http://www.gecwyd.ac.in"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "na"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "fail"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "na"
+      },
+      {
+        "id": "sec.csp",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "fail"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "fail"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "pass"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "pass"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "3 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "4 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "fail",
+        "ev": "2 low-contrast element(s)"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "no <h1>"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "87/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "57/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "38685.334ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "pass"
+      },
+      {
+        "id": "perf.weight",
+        "r": "fail",
+        "ev": "11.2MB"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "fail"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "fail",
+        "ev": "copyright year 2023"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-element"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "fail",
+        "ev": "<marquee"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "na"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "fail"
+      },
+      {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.contact",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.search",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "warn"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "pass"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "na"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "pass"
+      },
+      {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "pass"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "pass"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass",
+        "ev": "WordPress 7.1.2"
+      },
+      {
+        "id": "id.third_party",
+        "r": "pass"
+      }
+    ],
     "screenshot": {
       "desktop": "govt-engineering-college-wayanad.webp",
       "mobile": "govt-engineering-college-wayanad-m.webp",
       "phash": "06ff003fffc3c3c3"
     },
-    "outlinks": [],
-    "error": "page.screenshot: Protocol error (Page.captureScreenshot): Unable to capture screenshot\nCall log:\n  - taking page screenshot\n  - waiting for fonts to load...\n  - fonts loaded\n"
+    "outlinks": [
+      {
+        "host": "facebook.com",
+        "count": 2,
+        "texts": [
+          "Facebook",
+          "GECW Facebook page"
+        ]
+      },
+      {
+        "host": "google.com",
+        "count": 22,
+        "texts": [
+          "EOA 2026-27",
+          "EOA 2025-26",
+          "EOA 2024-25"
+        ]
+      },
+      {
+        "host": "ktu.edu.in",
+        "count": 1,
+        "texts": [
+          "Regulations & Syllabus"
+        ]
+      },
+      {
+        "host": "etuwa.in",
+        "count": 2,
+        "texts": [
+          "Electronics & Communication Engineering",
+          "Electrical and Electronics Engineering"
+        ]
+      },
+      {
+        "host": "instagram.com",
+        "count": 5,
+        "texts": [
+          "Dance Club",
+          "Decibel",
+          "Thinker Hub"
+        ]
+      },
+      {
+        "host": "ieee.org",
+        "count": 1,
+        "texts": [
+          "IEEE Students Chapter"
+        ]
+      },
+      {
+        "host": "teqipgoodgovernance.in",
+        "count": 1,
+        "texts": [
+          "Good Governance"
+        ]
+      },
+      {
+        "host": "aicte-india.org",
+        "count": 1,
+        "texts": [
+          "Feedback Facility"
+        ]
+      },
+      {
+        "host": "wordpress.org",
+        "count": 1,
+        "texts": [
+          "Proudly powered by WordPress"
+        ]
+      },
+      {
+        "host": "wenthemes.com",
+        "count": 1,
+        "texts": [
+          "WEN Themes"
+        ]
+      }
+    ]
   },
   "score": null,
   "status": "broken",
@@ -93,12 +529,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "4 serious violation(s)"
+      "ev": "3 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "3 low-contrast element(s)"
+      "ev": "2 low-contrast element(s)"
     },
     {
       "id": "content.copyright_year",
@@ -133,7 +569,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "36583.97500000001ms"
+      "ev": "38685.334ms"
     },
     {
       "id": "perf.weight",
@@ -205,6 +641,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-03",
+      "up": false,
+      "score": null
+    },
+    {
       "d": "2026-10-02",
       "up": false,
       "score": null
@@ -245,5 +686,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

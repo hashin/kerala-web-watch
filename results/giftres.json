@@ -35,18 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:54:09.422Z",
-    "run": "1790905980266",
+    "at": "2026-10-03T00:59:51.971Z",
+    "run": "1790989129035",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 34,
-      "accessibility": 83,
-      "best_practices": 73,
-      "seo": 85
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 3,
-      "serious": 43,
+      "serious": 39,
       "moderate": 27,
       "minor": 13
     },
@@ -174,7 +169,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "43 serious violation(s)"
+        "ev": "39 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -193,7 +188,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "5 low-contrast element(s)"
+        "ev": "1 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -215,27 +210,24 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "83/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "34/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "46209.8545ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "22.1MB"
+        "ev": "22.2MB"
       },
       {
         "id": "perf.viewport",
@@ -243,11 +235,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -260,7 +252,7 @@
       },
       {
         "id": "content.stale_news",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "content.placeholder",
@@ -480,12 +472,12 @@
     ]
   },
   "score": {
-    "overall": 50,
+    "overall": 52,
     "security": 48,
     "accessibility": 40,
     "content": 42,
     "gigw": 30,
-    "performance": 76,
+    "performance": 90,
     "identity": 100
   },
   "status": "needs-work",
@@ -521,7 +513,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "43 serious violation(s)"
+      "ev": "39 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -531,7 +523,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "5 low-contrast element(s)"
+      "ev": "1 low-contrast element(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -559,14 +551,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "46209.8545ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "22.1MB"
+      "ev": "22.2MB"
     },
     {
       "id": "sec.csp",
@@ -625,10 +612,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "gigw.emblem",
       "sev": "I"
     },
@@ -639,6 +622,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-03",
+      "up": true,
+      "score": 52
+    },
     {
       "d": "2026-10-02",
       "up": true,
@@ -700,5 +688,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

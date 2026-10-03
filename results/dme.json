@@ -35,13 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-01T00:46:57.980Z",
-    "run": "1790815516029",
+    "at": "2026-10-03T00:40:21.896Z",
+    "run": "1790987928315",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 31,
-      "accessibility": 85,
-      "best_practices": 69,
+      "performance": 40,
+      "accessibility": 77,
+      "best_practices": 73,
       "seo": 54
     },
     "axe": {
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3319ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -120,7 +121,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "15 days left"
+        "ev": "13 days left"
       },
       {
         "id": "sec.tls_version",
@@ -218,22 +219,22 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "85/100"
+        "ev": "77/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "31/100"
+        "ev": "40/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "16200.691500000008ms"
+        "ev": "57070.41200000001ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.84"
+        "ev": "0.28"
       },
       {
         "id": "perf.weight",
@@ -246,7 +247,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -457,12 +458,12 @@
     ]
   },
   "score": {
-    "overall": 54,
+    "overall": 53,
     "security": 66,
     "accessibility": 30,
     "content": 52,
     "gigw": 36,
-    "performance": 72,
+    "performance": 62,
     "identity": 100
   },
   "status": "needs-work",
@@ -470,7 +471,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "15 days left"
+      "ev": "13 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -491,6 +492,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3319ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -531,12 +537,16 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "16200.691500000008ms"
+      "ev": "57070.41200000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
       "ev": "18.3MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.referrer",
@@ -593,7 +603,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.84"
+      "ev": "0.28"
     },
     {
       "id": "perf.images",
@@ -605,6 +615,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-03",
+      "up": true,
+      "score": 53
+    },
     {
       "d": "2026-10-02",
       "up": true,
@@ -666,5 +681,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

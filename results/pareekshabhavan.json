@@ -35,18 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:47:55.094Z",
-    "run": "1790905610517",
+    "at": "2026-10-03T00:53:48.771Z",
+    "run": "1790988770443",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 45,
-      "accessibility": 62,
-      "best_practices": 92,
-      "seo": 82
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 10,
-      "serious": 36,
+      "serious": 37,
       "moderate": 11,
       "minor": 0
     },
@@ -120,7 +115,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "23 days left"
+        "ev": "22 days left"
       },
       {
         "id": "sec.tls_version",
@@ -177,7 +172,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "36 serious violation(s)"
+        "ev": "37 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -197,7 +192,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "32 low-contrast element(s)"
+        "ev": "33 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -218,22 +213,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "62/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "45/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "41565ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -246,11 +238,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -455,12 +447,12 @@
     ]
   },
   "score": {
-    "overall": 42,
+    "overall": 45,
     "security": 38,
     "accessibility": 22,
     "content": 50,
     "gigw": 22,
-    "performance": 71,
+    "performance": 95,
     "identity": 92
   },
   "status": "poor",
@@ -468,7 +460,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "23 days left"
+      "ev": "22 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -507,7 +499,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "36 serious violation(s)"
+      "ev": "37 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -517,7 +509,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "32 low-contrast element(s)"
+      "ev": "33 low-contrast element(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -537,18 +529,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "41565ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "3.8MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -602,10 +585,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.robots",
       "sev": "L",
       "ev": "robots.txt returned 404"
@@ -621,6 +600,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-03",
+      "up": true,
+      "score": 45
+    },
     {
       "d": "2026-10-02",
       "up": true,
@@ -682,5 +666,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

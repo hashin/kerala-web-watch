@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:06:30.745Z",
-    "run": "1790903105529",
+    "at": "2026-10-03T00:42:58.415Z",
+    "run": "1790988120897",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
-      "accessibility": 87,
-      "best_practices": 92,
-      "seo": 58
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
     },
     "axe": {
       "critical": 3,
@@ -120,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "22 days left"
+        "ev": "21 days left"
       },
       {
         "id": "sec.tls_version",
@@ -218,21 +218,20 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "87/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "10163.859499999999ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -245,7 +244,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -462,7 +461,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "22 days left"
+      "ev": "21 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -534,14 +533,13 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "10163.859499999999ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "5.8MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.xcto",
@@ -624,6 +622,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-03",
+      "up": true,
+      "score": 41
+    },
+    {
       "d": "2026-10-02",
       "up": true,
       "score": 41
@@ -644,5 +647,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

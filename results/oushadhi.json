@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:49:12.227Z",
-    "run": "1790905675493",
+    "at": "2026-10-03T00:56:51.156Z",
+    "run": "1790988951429",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 43,
+      "performance": 19,
       "accessibility": 37,
       "best_practices": 77,
       "seo": 67
@@ -219,21 +219,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "43/100"
+        "ev": "19/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "24666.964000000004ms"
+        "ev": "35976.39750000001ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.45"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "18.0MB"
+        "ev": "18.2MB"
       },
       {
         "id": "perf.viewport",
@@ -281,7 +282,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://www.oushadhi.org/officers)"
+        "ev": "1/30 crawled link(s) broken (https://www.oushadhi.org/careers)"
       },
       {
         "id": "content.broken_pdfs",
@@ -454,12 +455,12 @@
     ]
   },
   "score": {
-    "overall": 45,
+    "overall": 44,
     "security": 48,
     "accessibility": 46,
     "content": 28,
     "gigw": 18,
-    "performance": 66,
+    "performance": 62,
     "identity": 76
   },
   "status": "poor",
@@ -487,7 +488,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://www.oushadhi.org/officers)"
+      "ev": "1/30 crawled link(s) broken (https://www.oushadhi.org/careers)"
     },
     {
       "id": "id.gov_domain",
@@ -545,12 +546,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "24666.964000000004ms"
+      "ev": "35976.39750000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "18.0MB"
+      "ev": "18.2MB"
     },
     {
       "id": "perf.tap_targets",
@@ -620,6 +621,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.45"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -643,6 +649,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-03",
+      "up": true,
+      "score": 44
+    },
     {
       "d": "2026-10-02",
       "up": true,
@@ -704,5 +715,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

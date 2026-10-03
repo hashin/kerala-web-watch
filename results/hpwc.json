@@ -37,18 +37,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:56:44.659Z",
-    "run": "1790906052305",
+    "at": "2026-10-03T01:02:02.995Z",
+    "run": "1790989178319",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 50,
+      "accessibility": 86,
+      "best_practices": 73,
+      "seo": 85
     },
     "axe": {
       "critical": 2,
-      "serious": 3,
+      "serious": 4,
       "moderate": 12,
       "minor": 0
     },
@@ -98,7 +98,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "4729ms"
+        "ev": "3742ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -114,7 +114,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
@@ -123,7 +123,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "14 days left"
+        "ev": "13 days left"
       },
       {
         "id": "sec.tls_version",
@@ -161,7 +161,7 @@
       {
         "id": "sec.vuln_js",
         "r": "fail",
-        "ev": "bootstrap 3.4.2, swiper 8.4.5"
+        "ev": "bootstrap 3.4.2"
       },
       {
         "id": "sec.safe_browsing",
@@ -179,7 +179,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "3 serious violation(s)"
+        "ev": "4 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -189,7 +189,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en-GB\"> vs. 45% Malayalam content"
+        "ev": "<html lang=\"en-GB\"> vs. 50% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -198,7 +198,8 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -222,25 +223,26 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "86/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "50/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "29521.378000000008ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "46.7MB"
+        "ev": "36.7MB"
       },
       {
         "id": "perf.viewport",
@@ -474,24 +476,20 @@
     ]
   },
   "score": {
-    "overall": 45,
-    "security": 22,
-    "accessibility": 20,
+    "overall": 46,
+    "security": 42,
+    "accessibility": 10,
     "content": 48,
     "gigw": 62,
-    "performance": 76,
+    "performance": 66,
     "identity": 100
   },
   "status": "poor",
   "issues": [
     {
-      "id": "sec.http_redirect",
-      "sev": "H"
-    },
-    {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "14 days left"
+      "ev": "13 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -501,7 +499,7 @@
     {
       "id": "sec.vuln_js",
       "sev": "H",
-      "ev": "bootstrap 3.4.2, swiper 8.4.5"
+      "ev": "bootstrap 3.4.2"
     },
     {
       "id": "a11y.axe_critical",
@@ -511,7 +509,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en-GB\"> vs. 45% Malayalam content"
+      "ev": "<html lang=\"en-GB\"> vs. 50% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -526,17 +524,22 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "4729ms"
+      "ev": "3742ms"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "3 serious violation(s)"
+      "ev": "4 serious violation(s)"
     },
     {
       "id": "a11y.alt",
       "sev": "M",
       "ev": "1 image(s) missing alt text"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "1 low-contrast element(s)"
     },
     {
       "id": "a11y.labels",
@@ -556,9 +559,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "29521.378000000008ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "46.7MB"
+      "ev": "36.7MB"
     },
     {
       "id": "perf.tap_targets",
@@ -615,6 +623,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-03",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-10-02",
       "up": true,
@@ -676,5 +689,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

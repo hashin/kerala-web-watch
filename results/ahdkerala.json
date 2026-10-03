@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:12:24.897Z",
-    "run": "1790903479839",
+    "at": "2026-10-03T00:48:57.561Z",
+    "run": "1790988475426",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 63,
+      "performance": 65,
       "accessibility": 87,
       "best_practices": 69,
       "seo": 69
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 1,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -120,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "23 days left"
+        "ev": "22 days left"
       },
       {
         "id": "sec.tls_version",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "63/100"
+        "ev": "65/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "4289.8575ms"
+        "ev": "4063.7309999999998ms"
       },
       {
         "id": "perf.cls",
@@ -280,8 +280,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://ahd.kerala.gov.in/%e0%b4%aa%e0%b4%be%e0%b4%b2%e0%b4%95%e0%b5%8d%e0%b4%95%e0%b4%be%e0%b4%9f%e0%b5%8d/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -498,10 +497,10 @@
     ]
   },
   "score": {
-    "overall": 59,
+    "overall": 60,
     "security": 50,
     "accessibility": 70,
-    "content": 42,
+    "content": 52,
     "gigw": 32,
     "performance": 76,
     "identity": 100
@@ -511,7 +510,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "23 days left"
+      "ev": "22 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -532,11 +531,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://ahd.kerala.gov.in/%e0%b4%aa%e0%b4%be%e0%b4%b2%e0%b4%95%e0%b5%8d%e0%b4%95%e0%b4%be%e0%b4%9f%e0%b5%8d/)"
     },
     {
       "id": "a11y.axe_serious",
@@ -567,7 +561,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "4289.8575ms"
+      "ev": "4063.7309999999998ms"
     },
     {
       "id": "perf.tap_targets",
@@ -636,6 +630,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-03",
+      "up": true,
+      "score": 60
+    },
+    {
       "d": "2026-10-02",
       "up": true,
       "score": 59
@@ -696,5 +695,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

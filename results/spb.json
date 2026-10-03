@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:13:39.296Z",
-    "run": "1790903476364",
+    "at": "2026-10-03T00:46:07.838Z",
+    "run": "1790988222013",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 36,
-      "accessibility": 90,
-      "best_practices": 92,
-      "seo": 69
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
     },
     "axe": {
       "critical": 2,
-      "serious": 1,
+      "serious": 3,
       "moderate": 7,
       "minor": 1
     },
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "3681ms"
+        "ev": "3575ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -121,7 +121,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "23 days left"
+        "ev": "22 days left"
       },
       {
         "id": "sec.tls_version",
@@ -159,7 +159,7 @@
       {
         "id": "sec.vuln_js",
         "r": "fail",
-        "ev": "chart.js 2.5.0, swiper 8.4.5"
+        "ev": "chart.js 2.5.0"
       },
       {
         "id": "sec.safe_browsing",
@@ -177,7 +177,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "1 serious violation(s)"
+        "ev": "3 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -195,7 +195,8 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "2 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -219,26 +220,25 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "90/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "36/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "39833.231499999994ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "22.4MB"
+        "ev": "22.3MB"
       },
       {
         "id": "perf.viewport",
@@ -246,7 +246,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -480,9 +480,9 @@
     ]
   },
   "score": {
-    "overall": 43,
+    "overall": 41,
     "security": 22,
-    "accessibility": 40,
+    "accessibility": 30,
     "content": 34,
     "gigw": 32,
     "performance": 76,
@@ -497,7 +497,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "23 days left"
+      "ev": "22 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -507,7 +507,7 @@
     {
       "id": "sec.vuln_js",
       "sev": "H",
-      "ev": "chart.js 2.5.0, swiper 8.4.5"
+      "ev": "chart.js 2.5.0"
     },
     {
       "id": "a11y.axe_critical",
@@ -532,17 +532,22 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "3681ms"
+      "ev": "3575ms"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "1 serious violation(s)"
+      "ev": "3 serious violation(s)"
     },
     {
       "id": "a11y.alt",
       "sev": "M",
       "ev": "1 image(s) missing alt text"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "2 low-contrast element(s)"
     },
     {
       "id": "a11y.labels",
@@ -566,14 +571,13 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "39833.231499999994ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "22.4MB"
+      "ev": "22.3MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.xcto",
@@ -651,6 +655,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-03",
+      "up": true,
+      "score": 41
+    },
+    {
       "d": "2026-10-02",
       "up": true,
       "score": 43
@@ -711,5 +720,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

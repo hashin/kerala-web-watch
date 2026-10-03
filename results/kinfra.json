@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:22:33.678Z",
-    "run": "1790904083698",
+    "at": "2026-10-03T00:50:33.144Z",
+    "run": "1790988573799",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 33,
+      "performance": 37,
       "accessibility": 47,
       "best_practices": 50,
       "seo": 85
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 1,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "WordPress 3.9.6",
@@ -223,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "33/100"
+        "ev": "37/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "60785.512499999975ms"
+        "ev": "62016.00600000001ms"
       },
       {
         "id": "perf.cls",
@@ -283,8 +283,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://kbic.kinfra.org/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -387,7 +386,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "17 days left"
+        "ev": "16 days left"
       },
       {
         "id": "id.www_consistency",
@@ -482,10 +481,10 @@
     ]
   },
   "score": {
-    "overall": 37,
+    "overall": 38,
     "security": 24,
     "accessibility": 32,
-    "content": 46,
+    "content": 56,
     "gigw": 18,
     "performance": 76,
     "identity": 55
@@ -518,11 +517,6 @@
       "ev": "ml-code"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://kbic.kinfra.org/)"
-    },
-    {
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "kinfra.org"
@@ -530,7 +524,7 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "17 days left"
+      "ev": "16 days left"
     },
     {
       "id": "sec.hsts",
@@ -583,7 +577,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "60785.512499999975ms"
+      "ev": "62016.00600000001ms"
     },
     {
       "id": "perf.weight",
@@ -671,6 +665,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-03",
+      "up": true,
+      "score": 38
+    },
+    {
       "d": "2026-10-02",
       "up": true,
       "score": 37
@@ -731,5 +730,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

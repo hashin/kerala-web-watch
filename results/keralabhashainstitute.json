@@ -37,15 +37,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:58:28.814Z",
-    "run": "1790906263906",
+    "at": "2026-10-03T00:58:59.190Z",
+    "run": "1790989090395",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 55,
-      "accessibility": 64,
-      "best_practices": 77,
-      "seo": 75
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 9,
       "serious": 104,
@@ -218,27 +213,24 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "64/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "55/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "9215.2205ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "5.0MB"
+        "ev": "5.1MB"
       },
       {
         "id": "perf.viewport",
@@ -246,11 +238,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -387,7 +379,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "51 days left"
+        "ev": "50 days left"
       },
       {
         "id": "id.www_consistency",
@@ -463,12 +455,12 @@
     ]
   },
   "score": {
-    "overall": 54,
+    "overall": 56,
     "security": 80,
     "accessibility": 20,
     "content": 56,
     "gigw": 50,
-    "performance": 71,
+    "performance": 95,
     "identity": 60
   },
   "status": "needs-work",
@@ -506,7 +498,7 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "51 days left"
+      "ev": "50 days left"
     },
     {
       "id": "a11y.axe_serious",
@@ -536,18 +528,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "9215.2205ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "5.0MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "ev": "5.1MB"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -590,10 +573,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "gigw.emblem",
       "sev": "I"
     },
@@ -608,6 +587,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-03",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-10-02",
       "up": true,
@@ -669,5 +653,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

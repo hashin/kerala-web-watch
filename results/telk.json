@@ -35,35 +35,583 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-01T00:54:39.623Z",
-    "run": "1790815949374",
+    "at": "2026-10-03T00:45:05.765Z",
+    "run": "1790988272194",
     "vantage": "gh-us",
     "lighthouse": null,
     "axe": {
-      "critical": 0,
-      "serious": 0,
-      "moderate": 0,
+      "critical": 5,
+      "serious": 15,
+      "moderate": 9,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
-      "pdfs": 0,
-      "broken": 0
+      "pages": 22,
+      "pdfs": 3,
+      "broken": 1
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "Microsoft-IIS/10.0",
       "jquery": null
     },
-    "checks": [],
-    "screenshot": null,
-    "outlinks": [],
-    "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.telk.com/\", waiting until \"load\"\n"
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "pass"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "fail"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "fail",
+        "ev": "href=\"http://mail.telk.com/\""
+      },
+      {
+        "id": "sec.csp",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "fail"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "fail"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "fail",
+        "ev": "Microsoft-IIS/10.0"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "fail",
+        "ev": "jquery 1.3.2, jquery 1.5.1, jquery 1.8.3"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "fail",
+        "ev": "5 critical violation(s)"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "15 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "9 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "fail",
+        "ev": "1 image(s) missing alt text"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "fail",
+        "ev": "1 form control(s) without a label"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "na"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "na"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "na"
+      },
+      {
+        "id": "perf.cls",
+        "r": "na"
+      },
+      {
+        "id": "perf.weight",
+        "r": "pass"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "fail"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "na"
+      },
+      {
+        "id": "perf.images",
+        "r": "na"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "na"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "pass"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-caption"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "fail",
+        "ev": "<marquee"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "warn",
+        "ev": "1/22 crawled link(s) broken (https://www.telk.com/Userfiles/Supplier/VendorCapabilityReport.doc)"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "fail",
+        "ev": "2 broken image(s)"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "na"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "pass"
+      },
+      {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "3 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      },
+      {
+        "id": "gigw.contact",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.search",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "warn"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "fail",
+        "ev": "www.telk.com"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "pass"
+      },
+      {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "fail"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "fail",
+        "ev": "missing HTML5 doctype"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "pass"
+      }
+    ],
+    "screenshot": {
+      "desktop": "telk.webp",
+      "mobile": "telk-m.webp",
+      "phash": "7e0000001c7e7e7e"
+    },
+    "outlinks": [
+      {
+        "host": "kerala.gov.in",
+        "count": 2,
+        "texts": [
+          "https://kerala.gov.in",
+          "E - Tender Link"
+        ]
+      },
+      {
+        "host": "netbiospro.com",
+        "count": 1,
+        "texts": [
+          "netBIOS"
+        ]
+      }
+    ]
   },
-  "score": null,
-  "status": "down",
-  "issues": [],
+  "score": {
+    "overall": 41,
+    "security": 24,
+    "accessibility": 46,
+    "content": 32,
+    "gigw": 26,
+    "performance": 80,
+    "identity": 72
+  },
+  "status": "poor",
+  "issues": [
+    {
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://mail.telk.com/\""
+    },
+    {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "jquery 1.3.2, jquery 1.5.1, jquery 1.8.3"
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "5 critical violation(s)"
+    },
+    {
+      "id": "content.last_updated",
+      "sev": "H",
+      "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-caption"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/22 crawled link(s) broken (https://www.telk.com/Userfiles/Supplier/VendorCapabilityReport.doc)"
+    },
+    {
+      "id": "gigw.contact",
+      "sev": "H"
+    },
+    {
+      "id": "perf.viewport",
+      "sev": "H"
+    },
+    {
+      "id": "id.gov_domain",
+      "sev": "H",
+      "ev": "www.telk.com"
+    },
+    {
+      "id": "sec.hsts",
+      "sev": "M"
+    },
+    {
+      "id": "sec.xfo",
+      "sev": "M"
+    },
+    {
+      "id": "a11y.axe_serious",
+      "sev": "M",
+      "ev": "15 serious violation(s)"
+    },
+    {
+      "id": "a11y.alt",
+      "sev": "M",
+      "ev": "1 image(s) missing alt text"
+    },
+    {
+      "id": "a11y.labels",
+      "sev": "M",
+      "ev": "1 form control(s) without a label"
+    },
+    {
+      "id": "content.obsolete_tech",
+      "sev": "M",
+      "ev": "<marquee"
+    },
+    {
+      "id": "gigw.accessibility_statement",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.ownership",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.last_updated",
+      "sev": "M"
+    },
+    {
+      "id": "sec.csp",
+      "sev": "L"
+    },
+    {
+      "id": "sec.xcto",
+      "sev": "L"
+    },
+    {
+      "id": "sec.referrer",
+      "sev": "L"
+    },
+    {
+      "id": "sec.server_banner",
+      "sev": "L",
+      "ev": "Microsoft-IIS/10.0"
+    },
+    {
+      "id": "a11y.axe_moderate_minor",
+      "sev": "L",
+      "ev": "9 moderate/minor violation(s)"
+    },
+    {
+      "id": "content.broken_images",
+      "sev": "L",
+      "ev": "2 broken image(s)"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "3 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+    },
+    {
+      "id": "gigw.feedback",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.copyright_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.hyperlink_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.screen_reader",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.help",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.search",
+      "sev": "L"
+    },
+    {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 404"
+    },
+    {
+      "id": "id.charset_doctype",
+      "sev": "L",
+      "ev": "missing HTML5 doctype"
+    },
+    {
+      "id": "gigw.emblem",
+      "sev": "I"
+    },
+    {
+      "id": "id.canonical",
+      "sev": "I"
+    }
+  ],
   "history": [
+    {
+      "d": "2026-10-03",
+      "up": true,
+      "score": 41
+    },
     {
       "d": "2026-10-02",
       "up": false,
@@ -85,5 +633,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

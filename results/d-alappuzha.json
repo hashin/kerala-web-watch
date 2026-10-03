@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-01T00:44:19.546Z",
-    "run": "1790815406230",
+    "at": "2026-10-03T00:39:42.340Z",
+    "run": "1790987926633",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 50,
-      "accessibility": 81,
+      "performance": 51,
+      "accessibility": 78,
       "best_practices": 77,
       "seo": 92
     },
     "axe": {
-      "critical": 20,
-      "serious": 7,
+      "critical": 19,
+      "serious": 16,
       "moderate": 1,
       "minor": 12
     },
@@ -169,12 +169,12 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "20 critical violation(s)"
+        "ev": "19 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "7 serious violation(s)"
+        "ev": "16 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -191,7 +191,8 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "9 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -214,17 +215,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "81/100"
+        "ev": "78/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "50/100"
+        "ev": "51/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "21104.320499999994ms"
+        "ev": "15736.070999999994ms"
       },
       {
         "id": "perf.cls",
@@ -241,7 +242,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -427,7 +428,7 @@
         "host": "kerala.gov.in",
         "count": 6,
         "texts": [
-          "കേരളം സര്‍ക്കാര്‍",
+          "കേരള സര്‍ക്കാര്‍",
           "E Office",
           "Government of Kerala"
         ]
@@ -545,12 +546,12 @@
     ]
   },
   "score": {
-    "overall": 70,
+    "overall": 67,
     "security": 80,
-    "accessibility": 60,
+    "accessibility": 50,
     "content": 56,
     "gigw": 60,
-    "performance": 81,
+    "performance": 71,
     "identity": 96
   },
   "status": "needs-work",
@@ -563,7 +564,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "20 critical violation(s)"
+      "ev": "19 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -578,7 +579,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "7 serious violation(s)"
+      "ev": "16 serious violation(s)"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "9 low-contrast element(s)"
     },
     {
       "id": "gigw.privacy",
@@ -591,12 +597,16 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "21104.320499999994ms"
+      "ev": "15736.070999999994ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
       "ev": "5.9MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -654,6 +664,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-03",
+      "up": true,
+      "score": 67
+    },
     {
       "d": "2026-10-02",
       "up": true,
@@ -715,5 +730,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

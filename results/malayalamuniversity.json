@@ -37,15 +37,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:46:50.515Z",
-    "run": "1790905567652",
+    "at": "2026-10-03T00:55:16.728Z",
+    "run": "1790988871843",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 35,
-      "accessibility": 77,
-      "best_practices": 73,
-      "seo": 100
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 0,
       "serious": 20,
@@ -218,23 +213,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "77/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "35/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "13546.574999999997ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.33"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -247,11 +238,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -422,7 +413,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-8FQD430GF9&amp;cx=c&amp;gtm=4e69u2, https://www.googletagmanager.com/gtag/js?id=UA-108303959-1"
+        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-8FQD430GF9&amp;cx=c&amp;gtm=4e69u2h1, https://www.googletagmanager.com/gtag/js?id=UA-108303959-1"
       }
     ],
     "screenshot": {
@@ -551,12 +542,12 @@
     ]
   },
   "score": {
-    "overall": 54,
+    "overall": 56,
     "security": 38,
     "accessibility": 70,
     "content": 52,
     "gigw": 18,
-    "performance": 77,
+    "performance": 95,
     "identity": 92
   },
   "status": "needs-work",
@@ -619,11 +610,6 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "13546.574999999997ms"
     },
     {
       "id": "perf.weight",
@@ -701,15 +687,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.33"
-    },
-    {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.robots",
       "sev": "L",
       "ev": "robots.txt returned 404"
@@ -730,10 +707,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-8FQD430GF9&amp;cx=c&amp;gtm=4e69u2, https://www.googletagmanager.com/gtag/js?id=UA-108303959-1"
+      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-8FQD430GF9&amp;cx=c&amp;gtm=4e69u2h1, https://www.googletagmanager.com/gtag/js?id=UA-108303959-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-03",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-10-02",
       "up": true,
@@ -795,5 +777,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
