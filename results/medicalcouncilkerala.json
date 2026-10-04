@@ -35,55 +35,447 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-03T00:50:55.426Z",
-    "run": "1790988641799",
+    "at": "2026-10-04T00:08:08.092Z",
+    "run": "1791072444404",
     "vantage": "gh-us",
     "lighthouse": null,
     "axe": {
       "critical": 0,
-      "serious": 0,
-      "moderate": 0,
+      "serious": 2,
+      "moderate": 1,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
-      "pdfs": 0,
+      "pages": 26,
+      "pdfs": 1,
       "broken": 0
     },
     "tech": {
-      "cms": null,
-      "server": null,
+      "cms": "WordPress 7.1",
+      "server": "Apache",
       "jquery": null
     },
-    "checks": [],
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "pass"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "fail"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "fail"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "fail",
+        "ev": "href=\"http://gmpg.org/xfn/11\""
+      },
+      {
+        "id": "sec.csp",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "fail"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "fail"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "pass"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "pass"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "2 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "1 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "fail",
+        "ev": "1 low-contrast element(s)"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "heading levels skipped"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "na"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "na"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "na"
+      },
+      {
+        "id": "perf.cls",
+        "r": "na"
+      },
+      {
+        "id": "perf.weight",
+        "r": "pass"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "na"
+      },
+      {
+        "id": "perf.images",
+        "r": "na"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "pass"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-box"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "pass"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "na"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "fail"
+      },
+      {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "1 console error(s): Unexpected token '<'"
+      },
+      {
+        "id": "gigw.contact",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.search",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "warn"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "pass"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "na"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "fail"
+      },
+      {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "pass"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
+      },
+      {
+        "id": "id.canonical",
+        "r": "pass"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass",
+        "ev": "WordPress 7.1"
+      },
+      {
+        "id": "id.third_party",
+        "r": "pass"
+      }
+    ],
     "screenshot": {
       "desktop": "medicalcouncilkerala.webp",
       "mobile": "medicalcouncilkerala-m.webp",
-      "phash": "3c3c3c3c3c3c3c3c"
+      "phash": "0f073f017f3f3f01"
     },
-    "outlinks": [],
-    "error": "page.goto: net::ERR_CONNECTION_REFUSED at https://medicalcouncil.kerala.gov.in/\nCall log:\n  - navigating to \"https://medicalcouncil.kerala.gov.in/\", waiting until \"load\"\n"
+    "outlinks": [
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": [
+          "facebook"
+        ]
+      },
+      {
+        "host": "twitter.com",
+        "count": 1,
+        "texts": [
+          "twitter"
+        ]
+      },
+      {
+        "host": "instagram.com",
+        "count": 1,
+        "texts": [
+          "instagram"
+        ]
+      },
+      {
+        "host": "linkedin.com",
+        "count": 1,
+        "texts": [
+          "linkedin"
+        ]
+      },
+      {
+        "host": "google.com",
+        "count": 1,
+        "texts": [
+          "Permanent Reg Status"
+        ]
+      },
+      {
+        "host": "cdit.org",
+        "count": 1,
+        "texts": [
+          "CDIT"
+        ]
+      }
+    ]
   },
   "score": {
-    "overall": 54,
-    "security": 62,
-    "accessibility": 40,
-    "content": 48,
-    "gigw": 22,
-    "performance": 77,
-    "identity": 100
+    "overall": 55,
+    "security": 28,
+    "accessibility": 72,
+    "content": 52,
+    "gigw": 18,
+    "performance": 100,
+    "identity": 92
   },
   "status": "needs-work",
   "issues": [
     {
+      "id": "sec.http_redirect",
+      "sev": "H"
+    },
+    {
       "id": "sec.mixed_content",
       "sev": "H",
       "ev": "href=\"http://gmpg.org/xfn/11\""
-    },
-    {
-      "id": "a11y.axe_critical",
-      "sev": "H",
-      "ev": "1 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -93,26 +485,25 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-content"
+      "ev": "ml-box"
     },
     {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
-      "id": "a11y.axe_serious",
-      "sev": "M",
-      "ev": "15 serious violation(s)"
+      "id": "sec.xfo",
+      "sev": "M"
     },
     {
-      "id": "a11y.alt",
+      "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "1 image(s) missing alt text"
+      "ev": "2 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "4 low-contrast element(s)"
+      "ev": "1 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -135,14 +526,8 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "11280.654999999993ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "3.2MB"
+      "id": "sec.csp",
+      "sev": "L"
     },
     {
       "id": "sec.xcto",
@@ -155,22 +540,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "7 moderate/minor violation(s)"
+      "ev": "1 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
       "ev": "heading levels skipped"
-    },
-    {
-      "id": "a11y.keyboard",
-      "sev": "L",
-      "ev": "tabindex=\"-1\" alongside outline:none"
-    },
-    {
-      "id": "content.broken_images",
-      "sev": "L",
-      "ev": "3 broken image(s)"
     },
     {
       "id": "content.meta_desc",
@@ -179,7 +554,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "5 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      "ev": "1 console error(s): Unexpected token '<'"
     },
     {
       "id": "gigw.feedback",
@@ -210,13 +585,17 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.81"
+      "id": "gigw.search",
+      "sev": "L"
     },
     {
-      "id": "perf.images",
+      "id": "id.www_consistency",
       "sev": "L"
+    },
+    {
+      "id": "id.soft_404",
+      "sev": "L",
+      "ev": "a nonexistent path returned 200"
     },
     {
       "id": "gigw.emblem",
@@ -224,6 +603,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-04",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-03",
       "up": true,
@@ -290,5 +674,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,14 +37,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-03T01:06:28.695Z",
-    "run": "1790989567084",
+    "at": "2026-10-04T00:11:36.351Z",
+    "run": "1791072660429",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 31,
+      "accessibility": 84,
+      "best_practices": 92,
+      "seo": 69
+    },
     "axe": {
       "critical": 0,
-      "serious": 0,
-      "moderate": 0,
+      "serious": 2,
+      "moderate": 2,
       "minor": 0
     },
     "crawl": {
@@ -54,37 +59,383 @@
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "Apache",
       "jquery": null
     },
-    "checks": [],
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "fail",
+        "ev": "0 visible characters"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "warn",
+        "ev": "4665ms"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "fail"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "fail"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "pass"
+      },
+      {
+        "id": "sec.csp",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "fail"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "fail"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "pass"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "pass"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "2 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "2 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "no <h1>"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "84/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "31/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "21941.233500000002ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "fail",
+        "ev": "0.51"
+      },
+      {
+        "id": "perf.weight",
+        "r": "pass"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "fail"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "pass"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "na"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "pass"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "pass"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "na"
+      },
+      {
+        "id": "content.title",
+        "r": "fail",
+        "ev": "missing <title>"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "fail"
+      },
+      {
+        "id": "content.favicon",
+        "r": "fail"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.contact",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.search",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "warn"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "fail",
+        "ev": "kstmuseum.com"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "fail"
+      },
+      {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "pass"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
+      },
+      {
+        "id": "id.canonical",
+        "r": "fail"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "fail",
+        "ev": "missing HTML5 doctype"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "pass"
+      }
+    ],
     "screenshot": {
       "desktop": "kstmuseum.webp",
       "mobile": "kstmuseum-m.webp",
-      "phash": "ffffe3d331000001"
+      "phash": "ffffffffffffffff"
     },
-    "outlinks": [],
-    "error": "page.goto: net::ERR_CONNECTION_REFUSED at https://kstmuseum.com/\nCall log:\n  - navigating to \"https://kstmuseum.com/\", waiting until \"load\"\n"
+    "outlinks": []
   },
-  "score": {
-    "overall": 48,
-    "security": 28,
-    "accessibility": 70,
-    "content": 48,
-    "gigw": 8,
-    "performance": 77,
-    "identity": 76
-  },
-  "status": "poor",
+  "score": null,
+  "status": "broken",
   "issues": [
+    {
+      "id": "avail.blank",
+      "sev": "C",
+      "ev": "0 visible characters"
+    },
     {
       "id": "sec.http_redirect",
       "sev": "H"
-    },
-    {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://www.cdit.org\""
     },
     {
       "id": "content.last_updated",
@@ -92,18 +443,26 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "content.legacy_font",
-      "sev": "H",
-      "ev": "ml-IN"
+      "id": "gigw.contact",
+      "sev": "H"
     },
     {
       "id": "gigw.rti",
       "sev": "H"
     },
     {
+      "id": "perf.viewport",
+      "sev": "H"
+    },
+    {
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "kstmuseum.com"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "4665ms"
     },
     {
       "id": "sec.hsts",
@@ -116,12 +475,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "6 serious violation(s)"
+      "ev": "2 serious violation(s)"
     },
     {
-      "id": "a11y.contrast",
+      "id": "content.title",
       "sev": "M",
-      "ev": "4 low-contrast element(s)"
+      "ev": "missing <title>"
     },
     {
       "id": "gigw.sitemap",
@@ -129,6 +488,10 @@
     },
     {
       "id": "gigw.privacy",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.accessibility_statement",
       "sev": "M"
     },
     {
@@ -142,12 +505,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "39167.197499999995ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "7.6MB"
+      "ev": "21941.233500000002ms"
     },
     {
       "id": "sec.csp",
@@ -164,31 +522,20 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "5 moderate/minor violation(s)"
+      "ev": "2 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "heading levels skipped"
+      "ev": "no <h1>"
     },
     {
-      "id": "a11y.keyboard",
-      "sev": "L",
-      "ev": "tabindex=\"-1\" alongside outline:none"
-    },
-    {
-      "id": "content.broken_images",
-      "sev": "L",
-      "ev": "1 broken image(s)"
+      "id": "content.meta_desc",
+      "sev": "L"
     },
     {
       "id": "content.favicon",
       "sev": "L"
-    },
-    {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "4 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
@@ -225,24 +572,41 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.55"
+      "ev": "0.51"
     },
     {
       "id": "perf.images",
       "sev": "L"
     },
     {
-      "id": "id.robots",
-      "sev": "L",
-      "ev": "robots.txt returned 404"
+      "id": "id.www_consistency",
+      "sev": "L"
     },
     {
-      "id": "id.third_party",
-      "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-CTF8M9MTJW"
+      "id": "id.soft_404",
+      "sev": "L",
+      "ev": "a nonexistent path returned 200"
+    },
+    {
+      "id": "id.charset_doctype",
+      "sev": "L",
+      "ev": "missing HTML5 doctype"
+    },
+    {
+      "id": "gigw.emblem",
+      "sev": "I"
+    },
+    {
+      "id": "id.canonical",
+      "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-04",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-03",
       "up": true,
@@ -309,5 +673,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

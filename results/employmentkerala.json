@@ -35,14 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-03T00:46:11.899Z",
-    "run": "1790988361001",
+    "at": "2026-10-04T00:01:40.520Z",
+    "run": "1791072091443",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
+    },
     "axe": {
       "critical": 0,
-      "serious": 0,
-      "moderate": 0,
+      "serious": 1,
+      "moderate": 4,
       "minor": 0
     },
     "crawl": {
@@ -52,38 +57,380 @@
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "Apache",
       "jquery": null
     },
-    "checks": [],
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "fail",
+        "ev": "final response was 403"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "pass"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "fail"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "fail"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "pass"
+      },
+      {
+        "id": "sec.csp",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "fail"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "fail"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "pass"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "pass"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "1 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "4 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "0/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "0/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "na"
+      },
+      {
+        "id": "perf.cls",
+        "r": "na"
+      },
+      {
+        "id": "perf.weight",
+        "r": "pass"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "fail"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "fail"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "na"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "pass"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "pass"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "fail",
+        "ev": "Malayalam ratio 0.00, no language toggle found"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "fail"
+      },
+      {
+        "id": "content.favicon",
+        "r": "fail"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 403 ()"
+      },
+      {
+        "id": "gigw.contact",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.search",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "warn"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "pass"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "na"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "fail"
+      },
+      {
+        "id": "id.robots",
+        "r": "fail",
+        "ev": "robots.txt returned 403"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "fail",
+        "ev": "sitemap.xml returned 403"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "fail"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "fail",
+        "ev": "missing UTF-8 charset, HTML5 doctype"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "pass"
+      }
+    ],
     "screenshot": {
-      "desktop": "2026-09-22.webp",
-      "mobile": "2026-09-22-m.webp",
-      "phash": "21ff2178480000ff"
+      "desktop": "employmentkerala.webp",
+      "mobile": "employmentkerala-m.webp",
+      "phash": "0707ffffffffffff"
     },
-    "outlinks": [],
-    "error": "page.goto: net::ERR_CONNECTION_REFUSED at https://employment.kerala.gov.in/\nCall log:\n  - navigating to \"https://employment.kerala.gov.in/\", waiting until \"load\"\n"
+    "outlinks": []
   },
-  "score": {
-    "overall": 52,
-    "security": 48,
-    "accessibility": 44,
-    "content": 56,
-    "gigw": 16,
-    "performance": 77,
-    "identity": 100
-  },
+  "score": null,
   "status": "down",
   "issues": [
     {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://www.cdit.org\""
+      "id": "avail.status",
+      "sev": "C",
+      "ev": "final response was 403"
     },
     {
-      "id": "a11y.axe_critical",
-      "sev": "H",
-      "ev": "1 critical violation(s)"
+      "id": "sec.http_redirect",
+      "sev": "H"
     },
     {
       "id": "content.last_updated",
@@ -91,18 +438,16 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "content.legacy_font",
-      "sev": "H",
-      "ev": "ml-IN"
+      "id": "gigw.contact",
+      "sev": "H"
     },
     {
       "id": "gigw.rti",
       "sev": "H"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "4192ms"
+      "id": "perf.viewport",
+      "sev": "H"
     },
     {
       "id": "sec.hsts",
@@ -115,17 +460,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "22 serious violation(s)"
+      "ev": "1 serious violation(s)"
     },
     {
-      "id": "a11y.alt",
+      "id": "content.malayalam",
       "sev": "M",
-      "ev": "1 image(s) missing alt text"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "1 low-contrast element(s)"
+      "ev": "Malayalam ratio 0.00, no language toggle found"
     },
     {
       "id": "gigw.sitemap",
@@ -133,6 +473,10 @@
     },
     {
       "id": "gigw.privacy",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.accessibility_statement",
       "sev": "M"
     },
     {
@@ -144,14 +488,8 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "7580.9259999999995ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "5.6MB"
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -168,16 +506,20 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "3 moderate/minor violation(s)"
-    },
-    {
-      "id": "a11y.keyboard",
-      "sev": "L",
-      "ev": "tabindex=\"-1\" alongside outline:none"
+      "ev": "4 moderate/minor violation(s)"
     },
     {
       "id": "content.meta_desc",
       "sev": "L"
+    },
+    {
+      "id": "content.favicon",
+      "sev": "L"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 403 ()"
     },
     {
       "id": "gigw.feedback",
@@ -204,20 +546,51 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.73"
+      "id": "gigw.help",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.search",
+      "sev": "L"
     },
     {
       "id": "perf.images",
       "sev": "L"
     },
     {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
+      "id": "id.robots",
+      "sev": "L",
+      "ev": "robots.txt returned 403"
+    },
+    {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 403"
+    },
+    {
+      "id": "id.charset_doctype",
+      "sev": "L",
+      "ev": "missing UTF-8 charset, HTML5 doctype"
+    },
+    {
       "id": "gigw.emblem",
+      "sev": "I"
+    },
+    {
+      "id": "id.canonical",
       "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-04",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-03",
       "up": false,
@@ -284,5 +657,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
