@@ -3,7 +3,7 @@ import { appendFileSync, existsSync, readFileSync } from 'node:fs';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import pLimit from 'p-limit';
+import { orderByStaleness, runUntilDeadline } from './light-batch.js';
 import { toMarkdownTable, validateRegistry } from './validate.js';
 import { loadRegistry, officialDomainsOf } from './registry.js';
 import { lightCheck } from './light.js';
@@ -97,7 +97,8 @@ async function runValidate(argv: string[]): Promise<number> {
   return hardFailures.length === 0 ? 0 : 2;
 }
 
-const LIGHT_USAGE = 'Usage: cli.js light (--ids <id,id,...> | --all | --unverifiable) --data <dir> [--registry <dir>] [--limit n] [--concurrency n] [--vantage name]';
+const LIGHT_USAGE =
+  'Usage: cli.js light (--ids <id,id,...> | --all | --unverifiable) --data <dir> [--registry <dir>] [--limit n] [--concurrency n] [--vantage name] [--deadline-minutes n]';
 
 /** Sites the US vantage can't verify: unverifiable now, or already judged from India while the US
  * check is still geo-blocked (so India's two-strike history keeps accumulating). */
@@ -111,6 +112,8 @@ function needsIndiaCheck(result: Result | null): boolean {
  * Runs the light check for a set of sites, folds each into its `data/results/<id>.json` (status
  * two-strike rule, history append -- see store.ts), then recomputes `data/summary.json` from
  * every result on disk. One stderr line per site (`id status code ms`) per WP2.2 step 4.
+ * Sites run stalest-first; with `--deadline-minutes`, sites not started by then keep their previous
+ * result and go first next run (see light-batch.ts for why).
  */
 async function runLight(argv: string[]): Promise<number> {
   if (argv.length === 0 || argv.includes('--help')) {
@@ -126,6 +129,8 @@ async function runLight(argv: string[]): Promise<number> {
   const limitFlag = flagValue(argv, '--limit');
   const concurrency = Number(flagValue(argv, '--concurrency') ?? '6');
   const vantage = flagValue(argv, '--vantage') ?? process.env.VANTAGE ?? 'gh-us';
+  const deadlineFlag = flagValue(argv, '--deadline-minutes');
+  const deadlineMinutes = deadlineFlag ? Number(deadlineFlag) : undefined;
 
   if (!dataDir) {
     console.error(`Missing --data <dir>\n${LIGHT_USAGE}`);
@@ -152,21 +157,28 @@ async function runLight(argv: string[]): Promise<number> {
         if (!site) throw new Error(`Unknown site id: ${id}`);
         return site;
       });
+  if (deadlineMinutes !== undefined && !(deadlineMinutes > 0)) {
+    console.error(`--deadline-minutes must be a positive number\n${LIGHT_USAGE}`);
+    return 1;
+  }
+  sites = orderByStaleness(sites, (site) => readResult(dataDir, site.id)?.light?.at ?? null);
   if (limitFlag) sites = sites.slice(0, Number(limitFlag));
 
-  const limit = pLimit(concurrency);
   const today = new Date().toISOString().slice(0, 10);
-  await Promise.all(
-    sites.map((site) =>
-      limit(async () => {
-        const light = await lightCheck(site.url);
-        const existing = readResult(dataDir, site.id);
-        const result = isIndia && existing ? mergeIndiaLightResult(existing, light, { today }) : mergeLightResult(existing, site, light, { vantage, today });
-        writeResult(dataDir, result);
-        console.error(`${site.id} ${result.status} ${light.status ?? light.status_class} ${light.ttfb_ms ?? '-'}ms`);
-      }),
-    ),
+  const { skipped } = await runUntilDeadline(
+    sites,
+    async (site) => {
+      const light = await lightCheck(site.url);
+      const existing = readResult(dataDir, site.id);
+      const result = isIndia && existing ? mergeIndiaLightResult(existing, light, { today }) : mergeLightResult(existing, site, light, { vantage, today });
+      writeResult(dataDir, result);
+      console.error(`${site.id} ${result.status} ${light.status ?? light.status_class} ${light.ttfb_ms ?? '-'}ms`);
+    },
+    { concurrency, deadlineAt: deadlineMinutes === undefined ? undefined : Date.now() + deadlineMinutes * 60_000 },
   );
+  if (skipped.length > 0) {
+    console.error(`deadline reached: ${skipped.length} of ${sites.length} sites not checked this run; they keep their previous result and go first next run`);
+  }
 
   const allResults = registry.sites.map((s) => readResult(dataDir, s.id)).filter((r): r is Result => r !== null);
   const summary = computeSummary(registry, allResults, { now: new Date(), vantages: [...new Set(['gh-us', vantage])] });

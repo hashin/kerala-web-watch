@@ -8,7 +8,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 - **Phase:** 5 — Self-maintenance and reach, **all WPs in `docs/IMPLEMENTATION.md` now done.**
 - **Current WP:** none queued. All WPs done. The fresh 59-candidate `discovered.yaml` (from merged PR #6)
   was curated 2026-09-30: 9 new state bodies registered, 29 new `ignore.yaml` patterns.
-- **Next action:** The dashboard redesign (WP-D1 to D9) is finished on branch `dashboard-redesign` (worktree `kerala-web-watch-dashboard`), not pushed. Ask the owner, then push it and open the PR "Dashboard redesign: weekly snapshot UI"; after merge, run `weekly.yml` once (workflow_dispatch) so `data/weekly/` exists. Remaining older items: Open question 6 (India vantage runner) and the Malayalam review in `docs/ML-REVIEW.md`.
+- **Next action:** Merge branch `claude/adoring-mccarthy-yf97qn` (uptime deadline fix, ADR-034) into `main`, then watch the next 2 scheduled `uptime.yml` runs: both should end `success` in under 50 min, with a `deadline reached:` line only on a slow-DNS morning. Then approve the waiting `Validate Registry` run on discovery PR #8 (Open question 22) and curate it. Older items: Open question 6 (India vantage runner), Malayalam review in `docs/ML-REVIEW.md`.
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
 - **Registry size:** 1,567 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated + 1 dogfood entry + 49 WP5.4
   colleges + 8 discovery-curated 2026-09-25 + 9 discovery-curated 2026-09-30) · **Deep-audited:** 299/1,558 (as of the `data` checkout pulled
@@ -142,7 +142,7 @@ nothing citizen-critical depends on it and it's easy to pick up later.
     unattended the way an ordinary `uptime.yml`/`audit.yml` dispatch is. This session wrote and
     typechecked the workflow but deliberately did not dispatch it. Ask the human before running it the
     first time; after that first confirmed-safe run, later monthly runs are just the cron doing its job.
-14. **Repo setting needed: "Allow GitHub Actions to create and approve pull requests."** Confirmed missing
+14. **RESOLVED by 2026-10-05 — `discover.yml` opened PR #8 itself, so the setting is on.** **Repo setting needed: "Allow GitHub Actions to create and approve pull requests."** Confirmed missing
     by a real `workflow_dispatch` of `discover.yml` (run 36003876316, 2026-09-24): `cli discover` itself ran
     correctly end-to-end (392 outlink hosts → 138 candidates → 73 reachable, written to
     `registry/candidates/discovered.yaml`), but the `peter-evans/create-pull-request` step failed outright
@@ -192,11 +192,24 @@ nothing citizen-critical depends on it and it's easy to pick up later.
     outside all three until a future check gives a clear answer either way.
 
 20. **Malayalam copy for the dashboard.** WP-D8 moved every tooltip and dashboard label to `i18n/ml.json` with English placeholder text for the new keys (listed in `docs/ML-REVIEW.md`). A Malayalam speaker should translate and review them; until then `/ml/` shows English for those strings. Also open: Malayalam twins of districts, ministries, listings and reports (out of scope in D8), and the footer.
-21. **First weekly snapshot.** After the redesign merges, run `weekly.yml` once via workflow_dispatch; until `data/weekly/` exists every delta and sparkline is blank by design (ADR-030).
+21. **RESOLVED 2026-10-04 — scheduled `weekly.yml` run 37230455229 succeeded; `data/weekly/` exists.** **First weekly snapshot.** After the redesign merges, run `weekly.yml` once via workflow_dispatch; until `data/weekly/` exists every delta and sparkline is blank by design (ADR-030).
+
+22. **Discovery PR #8's `Validate Registry` check is waiting for approval.** Run 37294300125 shows `action_required`:
+    GitHub holds workflow runs on PRs opened by `github-actions[bot]` until a maintainer clicks **Approve and run
+    workflows** on the PR's Checks tab. Nothing in the repo can change that. The PR only edits
+    `registry/candidates/discovered.yaml`, so it is low-risk, but approve the run before merging so the offline
+    schema check still runs.
 
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-10-05 · deployment review; uptime timeout fixed (ADR-034), branch `claude/adoring-mccarthy-yf97qn`.** 10 of the 12 scheduled
+  `uptime.yml` runs from 2026-10-02 17:08Z to 2026-10-05 03:18Z hit the 30-min job timeout and committed nothing (only 46 and 58 succeeded).
+  Cause: lsgkerala.gov.in DNS failed intermittently, each failed lookup held one of libuv's 4 getaddrinfo threads for ~20 s, and
+  the sweep slowed to one site per 10 s. (Example: `lsg-bp-payyannur` was dns_fail at 03:47Z and returned 200 at 13:20Z.) Fix: `light --deadline-minutes`,
+  stalest-first order, `UV_THREADPOOL_SIZE=16`, job timeout 50. Audit tests: 1,176 pass; the 7 fixture-server failures happen only in this sandbox
+  (`*.localhost` doesn't resolve here). Also seen: deep-audit run 36948903444 lost shard 3 to a runner shutdown signal (GitHub infra, one-off).
 
 - **2026-09-30 · dashboard redesign (WP-D1–D9) complete on branch `dashboard-redesign`, not pushed.** Weekly-snapshot UI,
   Plex Sans + tuned dark theme, tooltips from i18n keys, `/ml/` snapshot home; site 191 tests, audit tests green, build
