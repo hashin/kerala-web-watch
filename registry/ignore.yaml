@@ -351,3 +351,27 @@
   reason: not-a-site — TEAMS login portal operated by SITTTR Kerala (registered as sitttr-kerala)
 - pattern: kusicc.ac.in
   reason: not-a-site — CLIF, a central instrumentation facility inside University of Kerala (registered as keralauniversity)
+# Discovery PR #8 (2026-10-05). Each entry covers the linked host and, where the link redirects
+# somewhere new, the host it lands on. Already ignored and so not repeated here: billcarman.com,
+# digilocker.gov.in, swachhbharatmission.ddws.gov.in and the Hindi MHA domain. They were proposed
+# again only because discover.ts checked the linked host and not the redirect target (fixed the same day).
+- pattern: goo.gl
+  reason: not-a-site — Google's retired URL shortener; 124 links from 5+ registered sites
+- pattern: google.com
+  reason: not-a-site — Google search and services
+- pattern: google.co.in
+  reason: not-a-site — Google search (India); redirects to google.com
+- pattern: keralabattlescovid.in
+  reason: not-a-site — lapsed 2020 COVID-19 campaign domain; on 2026-10-05 its homepage redirected to a third-party inb.link page (linked from d-palakkad, lckerala, malayalamuniversity, uoc)
+- pattern: inb.link
+  reason: not-a-site — third-party link page that keralabattlescovid.in now redirects to
+- pattern: keralasandal.com
+  reason: not-a-site — online shop for sandalwood soap, linked from ksie's site (KSIE is registered as ksie)
+- pattern: mha.gov.in
+  reason: central — Ministry of Home Affairs (ADR-009)
+- pattern: msde.gov.in
+  reason: central — Ministry of Skill Development and Entrepreneurship (ADR-009)
+- pattern: swachhbharatmission.gov.in
+  reason: central — Swachh Bharat Mission, Ministry of Jal Shakti (ADR-009)
+- pattern: sbm.gov.in
+  reason: central — Swachh Bharat Mission, Ministry of Jal Shakti (ADR-009)

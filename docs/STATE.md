@@ -8,7 +8,7 @@ Update it at the end of every session, even a partial one. Newest handoff at the
 - **Phase:** 5 — Self-maintenance and reach, **all WPs in `docs/IMPLEMENTATION.md` now done.**
 - **Current WP:** none queued. All WPs done. The fresh 59-candidate `discovered.yaml` (from merged PR #6)
   was curated 2026-09-30: 9 new state bodies registered, 29 new `ignore.yaml` patterns.
-- **Next action:** Merge branch `claude/adoring-mccarthy-yf97qn` (uptime deadline fix, ADR-034) into `main`, then watch the next 2 scheduled `uptime.yml` runs: both should end `success` in under 50 min, with a `deadline reached:` line only on a slow-DNS morning. Then approve the waiting `Validate Registry` run on discovery PR #8 (Open question 22) and curate it. Older items: Open question 6 (India vantage runner), Malayalam review in `docs/ML-REVIEW.md`.
+- **Next action:** Check the first `uptime.yml` runs on the ADR-034 code: each should end `success` in under 50 min, and print a `deadline reached:` line only on a slow-DNS day. Then look at whether `adak.kerala.gov.in` links to a lapsed domain (one of nfdb.gov.in, keralacoast.org, kavil.in) that now redirects to gambling spam. Older items: Open question 6 (India vantage runner), Malayalam review in `docs/ML-REVIEW.md`.
 - **Pushes allowed:** yes — to `main` and `data` of github.com/hashin/kerala-web-watch (confirmed 2026-09-19). **Push cadence (refined 2026-09-21): push `main` at work-package boundaries** — not just when asked, and not batched across several WPs either — so progress lands on production regularly enough for the human to review it at https://govwebsite.hashin.me and fold in feedback before more work builds on an unreviewed foundation. See CLAUDE.md's Session end protocol. `data` now pushes automatically every 6h via `uptime.yml` (WP2.3) — no manual action needed for it.
 - **Registry size:** 1,567 sites (10 seed + 1,200 LSGIs + 290 WP1.7 curated + 1 dogfood entry + 49 WP5.4
   colleges + 8 discovery-curated 2026-09-25 + 9 discovery-curated 2026-09-30) · **Deep-audited:** 299/1,558 (as of the `data` checkout pulled
@@ -194,7 +194,7 @@ nothing citizen-critical depends on it and it's easy to pick up later.
 20. **Malayalam copy for the dashboard.** WP-D8 moved every tooltip and dashboard label to `i18n/ml.json` with English placeholder text for the new keys (listed in `docs/ML-REVIEW.md`). A Malayalam speaker should translate and review them; until then `/ml/` shows English for those strings. Also open: Malayalam twins of districts, ministries, listings and reports (out of scope in D8), and the footer.
 21. **RESOLVED 2026-10-04 — scheduled `weekly.yml` run 37230455229 succeeded; `data/weekly/` exists.** **First weekly snapshot.** After the redesign merges, run `weekly.yml` once via workflow_dispatch; until `data/weekly/` exists every delta and sparkline is blank by design (ADR-030).
 
-22. **Discovery PR #8's `Validate Registry` check is waiting for approval.** Run 37294300125 shows `action_required`:
+22. **RESOLVED 2026-10-05 — the owner asked for the run to be approved; it passed and PR #8 was merged.** **Discovery PR #8's `Validate Registry` check is waiting for approval.** Run 37294300125 shows `action_required`:
     GitHub holds workflow runs on PRs opened by `github-actions[bot]` until a maintainer clicks **Approve and run
     workflows** on the PR's Checks tab. Nothing in the repo can change that. The PR only edits
     `registry/candidates/discovered.yaml`, so it is low-risk, but approve the run before merging so the offline
@@ -203,6 +203,12 @@ nothing citizen-critical depends on it and it's easy to pick up later.
 ## Handoff log
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
+
+- **2026-10-05 · PR #8 curated; discovery now checks redirect targets.** 10 new `ignore.yaml` patterns.
+  Four of PR #8's 10 candidates were already ignored (billcarman.com, digilocker, SBM-DDWS, Hindi MHA). They came back because
+  `discoverCandidates` reports the URL a link lands on but only checked the linked host. It now also drops candidates whose landing host is
+  registered or ignored (new test, mutation-checked both ways). Still open: `billcarman.com` is reached from adak through one of
+  nfdb.gov.in, keralacoast.org or kavil.in, probably a lapsed domain. The sandbox proxy blocks them, so I couldn't tell which.
 
 - **2026-10-05 · deployment review; uptime timeout fixed (ADR-034), branch `claude/adoring-mccarthy-yf97qn`.** 10 of the 12 scheduled
   `uptime.yml` runs from 2026-10-02 17:08Z to 2026-10-05 03:18Z hit the 30-min job timeout and committed nothing (only 46 and 58 succeeded).

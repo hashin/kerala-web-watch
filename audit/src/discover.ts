@@ -110,6 +110,7 @@ export async function discoverCandidates(hosts: string[], outlinks: OutlinksData
   const now = opts.now ?? (() => new Date());
   const scheme = opts.scheme ?? 'https';
   const limit = pLimit(opts.concurrency ?? 6);
+  const known = registeredHosts(registry);
   const out: DiscoveredCandidate[] = [];
 
   await Promise.all(
@@ -119,6 +120,12 @@ export async function discoverCandidates(hosts: string[], outlinks: OutlinksData
         const homepage = `${scheme}://${host}/`;
         const light = await lightCheck(homepage);
         if (light.status === null) return;
+        // newCandidateHosts only vetted the linked host. A lapsed or renamed domain can redirect
+        // to a site that is already registered or ignored (Oct 2026: links on adak redirected to
+        // billcarman.com, which was ignored as gambling spam). Without this check, discovery would
+        // propose that same ignored site again every week.
+        const finalHost = light.final_url ? hostnameOf(light.final_url) : null;
+        if (finalHost && (known.has(finalHost) || isIgnoredHost(finalHost, registry.ignore))) return;
 
         const primaryFromId = entry.from[0];
         const sourcePage = primaryFromId ? (registry.byId.get(primaryFromId)?.url ?? homepage) : homepage;
