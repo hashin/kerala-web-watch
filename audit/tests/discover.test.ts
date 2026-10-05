@@ -186,6 +186,39 @@ describe('discoverCandidates against a local HTTP server', () => {
     expect(candidates[0].source_page).toBe('https://x.kerala.gov.in');
   });
 
+  it('drops a host that redirects to an ignored host, and one that redirects to a registered host', async () => {
+    // Stands in for a lapsed domain whose homepage now redirects elsewhere: 127.0.0.1 is the linked
+    // host, localhost is where it lands.
+    const redirectServer = createServer((req, res) => {
+      if (req.url === '/') {
+        res.writeHead(302, { location: `http://localhost:${redirectPort}/landing` });
+        res.end();
+      } else {
+        res.writeHead(200, { 'content-type': 'text/html' });
+        res.end('<html><head><title>Elsewhere</title></head></html>');
+      }
+    });
+    await new Promise<void>((resolve) => redirectServer.listen(0, '127.0.0.1', resolve));
+    const redirectPort = (redirectServer.address() as AddressInfo).port;
+
+    try {
+      const host = `127.0.0.1:${redirectPort}`;
+      const outlinks: OutlinksData = { [host]: outlink() };
+
+      const ignoring = { ...registryOf([]), ignore: [{ pattern: 'localhost', reason: 'not-a-site' }] };
+      expect(await discoverCandidates([host], outlinks, ignoring, { scheme: 'http' })).toEqual([]);
+
+      const registering = registryOf([site({ id: 'landing', url: `http://localhost:${redirectPort}/` })]);
+      expect(await discoverCandidates([host], outlinks, registering, { scheme: 'http' })).toEqual([]);
+
+      // Control: with neither, the same redirect is still proposed, under the URL it lands on.
+      const candidates = await discoverCandidates([host], outlinks, registryOf([]), { scheme: 'http' });
+      expect(candidates.map((c) => c.url)).toEqual([`http://localhost:${redirectPort}/landing`]);
+    } finally {
+      await new Promise<void>((resolve) => redirectServer.close(() => resolve()));
+    }
+  });
+
   it('falls back to the host itself as the name when the fetched page has no title', async () => {
     const noTitleServer = createServer((req, res) => {
       res.writeHead(200, { 'content-type': 'text/html' });
