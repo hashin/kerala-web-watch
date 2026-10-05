@@ -20,7 +20,10 @@ concurrency:
 jobs:
   light:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # The CLI stops starting new sites at 40 min (--deadline-minutes) and the slowest in-flight site
+    # takes ~2 min (DNS + 3 GET attempts + redirect probe), so 50 leaves room to write and commit.
+    # At 30 with no deadline, a flaky-DNS morning timed the job out with nothing committed (Oct 2026).
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@v4
       - uses: actions/checkout@v4
@@ -36,9 +39,13 @@ jobs:
         run: npm run build
       - run: >
           node audit/dist/cli.js light --all --data data --registry registry
-          --limit "${{ inputs.limit }}"
+          --limit "${{ inputs.limit }}" --deadline-minutes 40
         env:
           VANTAGE: gh-us
+          # dns.lookup() runs getaddrinfo on libuv's threadpool (default 4 threads). Each site does
+          # an A and an AAAA lookup, so 6 concurrent sites queue behind 4 threads, and a lookup that
+          # fails slowly (~20 s) blocks a thread the whole time. 16 keeps all 12 lookups in flight.
+          UV_THREADPOOL_SIZE: 16
       - name: Commit results
         working-directory: data
         run: |
@@ -74,7 +81,9 @@ jobs:
         run: npm run build
       - run: >
           node audit/dist/cli.js light --unverifiable --data data --registry registry
-          --vantage in-1
+          --vantage in-1 --deadline-minutes 25
+        env:
+          UV_THREADPOOL_SIZE: 16
       - name: Commit results
         working-directory: data
         run: |

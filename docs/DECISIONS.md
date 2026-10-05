@@ -284,3 +284,10 @@ New Malayalam values are the English text as a placeholder (the WP4.5 convention
 The wireframe had six scored colours plus "Up"; this project scores six categories (security, accessibility, content, gigw, performance, identity) and availability is not scored.
 Nine palette colours cannot give seven categories distinct hues without breaking the one-job rule, so `CATEGORY_COLOR` (in `bands.ts`) gives Identity Sky, the same as the uptime strip.
 **Consequence:** every category is also labelled in text (bars, dots with tips), so shared colour never carries meaning alone. Revisit if a tenth colour is ever added.
+
+## ADR-034 · A light sweep stops starting sites at a deadline and runs stalest-first · Accepted · 2026-10-05
+Between 2026-10-02 and 2026-10-05, 10 of 12 scheduled `uptime.yml` runs hit the 30-minute job timeout and committed nothing. lsgkerala.gov.in DNS failed intermittently from the runner. `dns.lookup()` runs on libuv's 4-thread pool, and each failed lookup held a thread for ~20 s, so the sweep slowed to one site per 10 s. If all 1,200 LSG lookups fail like that, a sweep needs ~67 min even with more threads.
+Options: (a) raise the timeout only, which still loses everything on a bad enough day; (b) cap DNS lookups at a few seconds, which would mark slow-but-working DNS as `dns_fail` and so changes what counts as broken; (c) a deadline plus stalest-first ordering. We chose (c), plus `UV_THREADPOOL_SIZE=16` and a 50-minute job timeout.
+`cli light --deadline-minutes n` stops starting new sites after n minutes, waits for the sites already running, and still writes `summary.json`. Sites run never-checked first, then oldest `light.at` first. A skipped site keeps its last result and history, and goes first in the next run.
+**Consequence:** a site is still checked at most once per run, so we never hit a site more often. On a bad DNS day some sites wait one extra 6-hour cycle instead of every site losing a cycle. The two-strike `down` rule is unchanged, because a skipped run adds no strike.
+
