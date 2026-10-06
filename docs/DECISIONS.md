@@ -291,3 +291,20 @@ Options: (a) raise the timeout only, which still loses everything on a bad enoug
 `cli light --deadline-minutes n` stops starting new sites after n minutes, waits for the sites already running, and still writes `summary.json`. Sites run never-checked first, then oldest `light.at` first. A skipped site keeps its last result and history, and goes first in the next run.
 **Consequence:** a site is still checked at most once per run, so we never hit a site more often. On a bad DNS day some sites wait one extra 6-hour cycle instead of every site losing a cycle. The two-strike `down` rule is unchanged, because a skipped run adds no strike.
 
+## ADR-035 · Flag government pages whose outbound links now land on spam · Proposed · 2026-10-06
+**Problem.** A government page can keep linking to a partner's old domain after that domain lapses and is re-registered by spammers. A citizen who clicks the partner logo on `adak.kerala.gov.in` lands on an Indonesian gambling site (`billcarman.com`), reached through one of three image-only links: `keralacoast.org` (KSCADC's old domain; KSCADC is now `coastal.keltron.org`), `kavil.in`, or `nfdb.gov.in`. Discovery found this only by accident (Sep 28 and Oct 5). We report nothing about it on ADAK's page:
+- `sec.injected_links` checks the page's own markup and text and passes, because the markup is innocent; only the link's destination changed.
+- Since PR #10, `discoverCandidates` silently drops a link that lands on an ignored host, so this signal is now discarded outright.
+
+**Options.**
+- (a) **Per-site deep-audit check.** Fetch every offsite link host's homepage during each deep audit. Most precise, but it adds up to ~N third-party fetches per site, repeated across sites that link the same hosts.
+- (b) **Reuse discovery's weekly per-host fetch.** Discovery already light-checks each outlink host once a week, politely. When the landing page matches the existing spam/parked text patterns (`sec.injected_links` / `avail.parked` vocabularies), or lands on an `ignore.yaml` host marked gambling/spam, record `{linked_host, landing_url, title, seen_from}` in a new `data/outlink-hijacks.json` instead of dropping it. Then `merge` attaches a finding to each `seen_from` site.
+- (c) Do nothing and keep curating by hand.
+
+**Recommendation: (b).**
+- **Cost:** about one fetch per distinct host per week, across all sites.
+- **Rules:** within the politeness rules and passive-only. It follows a link the government page itself publishes, once, like a browser.
+- **Visibility:** the finding would be a new `sec.*` check, never status-setting (it can't make a site `broken`/`down`). It would carry evidence (linked URL → landing URL → title) and a `citizen` string in `registry.ts`, e.g. "A link on this site now leads to a gambling website. The organisation it once pointed to no longer owns that address."
+
+**Needs the human's decision** because it changes what we report on a site and adds a stored file (CLAUDE.md, Decision protocol). Open question 23 in `docs/STATE.md`.
+
