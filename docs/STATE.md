@@ -203,7 +203,7 @@ nothing citizen-critical depends on it and it's easy to pick up later.
 23. **ADR-035 (Proposed): report government pages whose outbound links now land on spam.** `adak.kerala.gov.in`
     has image-only links to `keralacoast.org`, `kavil.in` and `nfdb.gov.in`. One of them redirects to the gambling site
     `billcarman.com`; the cloud sandbox can't reach them to tell which. Most likely it is `keralacoast.org`: that is the old
-    domain of KSCADC, which is now `coastal.keltron.org` and was added to the registry as `kscadc` on 2026-10-06. ADR-035
+    domain of KSCADC. KSCADC is now listed at `coastal.keltron.org`, parked in `registry/drafts/psu.yaml` because that host does not resolve yet. ADR-035
     recommends recording these hijacks from discovery's weekly fetch and showing a non-status `sec.*` finding on the linking
     site. Accept, change, or reject before anyone implements it.
 
@@ -211,10 +211,10 @@ nothing citizen-critical depends on it and it's easy to pick up later.
 
 _(newest first; 3–6 lines each: what works, what doesn't, what to do first next time)_
 
-- **2026-10-06 · ADAK gambling link investigated; `kscadc` registered; ADR-035 proposed.** ADAK's own pages are clean
+- **2026-10-06 · ADAK gambling link investigated; KSCADC drafted (doesn't resolve); ADR-035 proposed.** ADAK's own pages are clean
   (`sec.injected_links` passes, 30 pages crawled). The gambling site is reached through a logo link to a lapsed partner domain.
-  KSCADC (state PSU) was missing from the registry and is added as `kscadc` → `coastal.keltron.org`. Its old `keralacoast.org`
-  is deliberately not an alias. Live verification of which domain redirects is still open (sandbox egress blocked). First
+  KSCADC (state PSU) is missing from the registry, but its listed site `coastal.keltron.org` failed DNS everywhere
+  (validate --resolve on PR #11), so it is parked in `registry/drafts/psu.yaml`. Re-check it and register it once it resolves. Live verification of which domain redirects is still open (sandbox egress blocked). First
   thing next time: get the owner's call on ADR-035; if accepted, it is a WP-sized change across discover.ts, merge.ts and registry.ts.
 
 - **2026-10-05 · PR #8 curated; discovery now checks redirect targets.** 10 new `ignore.yaml` patterns.

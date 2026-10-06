@@ -1,0 +1,9 @@
+- id: kscadc
+  name: Kerala State Coastal Area Development Corporation (KSCADC)
+  url: https://coastal.keltron.org
+  department: fish
+  district: thiruvananthapuram
+  place: thiruvananthapuram
+  kind: psu
+  source: "web search 2026-10-06 for KSCADC's official site (coastal.keltron.org/index.php/aboutus/profile), followed up from adak's stale keralacoast.org link"
+  notes: "2026-10-06: a real state PSU, but not registrable yet. coastal.keltron.org failed DNS from three networks (validate --resolve on PR #11, the cloud sandbox, a web fetch), while keltron.org resolves (KELTRON's own site has returned 503 since 2026-09-30). Search engines still list it as KSCADC's site, so its hosting is probably down rather than moved. Re-run `validate --resolve` later; move it to sites/psus.yaml once it resolves. Unverified alternative: kscadc.kerala.gov.in (in candidates/kerala-gov-in-subdomains.yaml). Its old domain keralacoast.org must not become an alias: one of adak's logo links now redirects to a gambling site."
