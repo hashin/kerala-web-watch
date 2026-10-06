@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-03T00:51:38.139Z",
-    "run": "1790988647603",
+    "at": "2026-10-06T02:10:16.618Z",
+    "run": "1791252570042",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 44,
+      "performance": 37,
       "accessibility": 82,
       "best_practices": 73,
       "seo": 75
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3389ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -121,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "17 days left"
+        "ev": "14 days left"
       },
       {
         "id": "sec.tls_version",
@@ -223,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "44/100"
+        "ev": "37/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11626.3515ms"
+        "ev": "11730.830999999998ms"
       },
       {
         "id": "perf.cls",
@@ -271,7 +270,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ML-NILA"
+        "ev": "ml-"
       },
       {
         "id": "content.obsolete_tech",
@@ -447,7 +446,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "17 days left"
+      "ev": "14 days left"
     },
     {
       "id": "sec.vuln_js",
@@ -467,7 +466,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ML-NILA"
+      "ev": "ml-"
     },
     {
       "id": "content.broken_links",
@@ -477,11 +476,6 @@
     {
       "id": "gigw.rti",
       "sev": "H"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3389ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -513,7 +507,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11626.3515ms"
+      "ev": "11730.830999999998ms"
     },
     {
       "id": "perf.weight",
@@ -591,6 +585,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 54
+    },
+    {
       "d": "2026-10-05",
       "up": true,
       "score": 54
@@ -661,5 +660,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

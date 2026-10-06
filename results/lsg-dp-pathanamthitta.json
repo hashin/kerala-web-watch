@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:25:41.588Z",
-    "run": "1790904284629",
+    "at": "2026-10-06T02:14:37.121Z",
+    "run": "1791252819459",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 61,
-      "accessibility": 85,
+      "accessibility": 89,
       "best_practices": 78,
       "seo": 92
     },
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 2
     },
     "tech": {
       "cms": "Drupal 11",
@@ -217,7 +217,7 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "85/100"
+        "ev": "89/100"
       },
       {
         "id": "perf.lighthouse",
@@ -227,7 +227,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6954.941500000001ms"
+        "ev": "7656.239999999999ms"
       },
       {
         "id": "perf.cls",
@@ -283,7 +283,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/30 crawled link(s) broken (http://pathanamthittadp.lsgkerala.gov.in/about)"
+        "ev": "2/30 crawled link(s) broken (http://pathanamthittadp.lsgkerala.gov.in/about, http://pathanamthittadp.lsgkerala.gov.in/contact-us)"
       },
       {
         "id": "content.broken_pdfs",
@@ -537,7 +537,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (http://pathanamthittadp.lsgkerala.gov.in/about)"
+      "ev": "2/30 crawled link(s) broken (http://pathanamthittadp.lsgkerala.gov.in/about, http://pathanamthittadp.lsgkerala.gov.in/contact-us)"
     },
     {
       "id": "gigw.rti",
@@ -577,7 +577,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6954.941500000001ms"
+      "ev": "7656.239999999999ms"
     },
     {
       "id": "perf.weight",
@@ -655,6 +655,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-06",
+      "up": false,
+      "score": null
+    },
+    {
       "d": "2026-10-05",
       "up": false,
       "score": null
@@ -720,5 +725,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

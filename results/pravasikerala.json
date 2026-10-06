@@ -35,15 +35,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-03T00:57:19.467Z",
-    "run": "1790988916729",
+    "at": "2026-10-06T02:18:04.377Z",
+    "run": "1791252949699",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 31,
-      "accessibility": 84,
-      "best_practices": 92,
-      "seo": 92
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 0,
       "serious": 24,
@@ -95,7 +90,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3288ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -213,28 +209,24 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "84/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "31/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "42859.350000000035ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.89"
+        "r": "na"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "51.3MB"
+        "ev": "54.5MB"
       },
       {
         "id": "perf.viewport",
@@ -242,11 +234,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -463,12 +455,12 @@
     ]
   },
   "score": {
-    "overall": 68,
+    "overall": 70,
     "security": 76,
     "accessibility": 52,
     "content": 86,
     "gigw": 60,
-    "performance": 72,
+    "performance": 90,
     "identity": 72
   },
   "status": "needs-work",
@@ -487,6 +479,11 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "pravasikerala.org"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3288ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -512,14 +509,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "42859.350000000035ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "51.3MB"
+      "ev": "54.5MB"
     },
     {
       "id": "sec.csp",
@@ -560,15 +552,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.89"
-    },
-    {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -588,6 +571,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 70
+    },
     {
       "d": "2026-10-05",
       "up": true,
@@ -659,5 +647,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

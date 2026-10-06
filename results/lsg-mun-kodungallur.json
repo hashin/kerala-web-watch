@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-30T01:05:05.280Z",
-    "run": "1790730069484",
+    "at": "2026-10-06T02:09:48.298Z",
+    "run": "1791252527104",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 60,
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 20,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -165,6 +165,10 @@
         "r": "na"
       },
       {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
         "id": "a11y.axe_critical",
         "r": "pass"
       },
@@ -222,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "69600.4415ms"
+        "ev": "47629.344ms"
       },
       {
         "id": "perf.cls",
@@ -277,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://welfarepension.lsgkerala.gov.in/Schemes.aspx)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -561,10 +564,10 @@
     ]
   },
   "score": {
-    "overall": 66,
+    "overall": 68,
     "security": 76,
     "accessibility": 70,
-    "content": 46,
+    "content": 56,
     "gigw": 36,
     "performance": 76,
     "identity": 96
@@ -585,11 +588,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://welfarepension.lsgkerala.gov.in/Schemes.aspx)"
     },
     {
       "id": "a11y.axe_serious",
@@ -620,7 +618,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "69600.4415ms"
+      "ev": "47629.344ms"
     },
     {
       "id": "perf.weight",
@@ -685,6 +683,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 68
+    },
     {
       "d": "2026-10-05",
       "up": true,
@@ -751,5 +754,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

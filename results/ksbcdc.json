@@ -35,13 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-03T01:05:58.983Z",
-    "run": "1790989496283",
+    "at": "2026-10-06T02:25:40.409Z",
+    "run": "1791253469807",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 26,
-      "accessibility": 78,
-      "best_practices": 65,
+      "performance": 34,
+      "accessibility": 67,
+      "best_practices": 69,
       "seo": 77
     },
     "axe": {
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "4403ms"
+        "ev": "5165ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -120,8 +120,7 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "13 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -219,27 +218,27 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "78/100"
+        "ev": "67/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "26/100"
+        "ev": "34/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "19364.999000000003ms"
+        "ev": "23497.637500000008ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "1.24"
+        "ev": "0.47"
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "7.7MB"
+        "r": "fail",
+        "ev": "8.3MB"
       },
       {
         "id": "perf.viewport",
@@ -247,7 +246,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -506,12 +505,12 @@
     ]
   },
   "score": {
-    "overall": 42,
-    "security": 22,
+    "overall": 43,
+    "security": 32,
     "accessibility": 30,
     "content": 52,
     "gigw": 36,
-    "performance": 77,
+    "performance": 62,
     "identity": 80
   },
   "status": "poor",
@@ -519,11 +518,6 @@
     {
       "id": "sec.http_redirect",
       "sev": "H"
-    },
-    {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "13 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -553,7 +547,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "4403ms"
+      "ev": "5165ms"
     },
     {
       "id": "sec.hsts",
@@ -602,12 +596,16 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "19364.999000000003ms"
+      "ev": "23497.637500000008ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.7MB"
+      "ev": "8.3MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.xcto",
@@ -668,7 +666,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "1.24"
+      "ev": "0.47"
     },
     {
       "id": "perf.images",
@@ -680,6 +678,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 43
+    },
     {
       "d": "2026-10-05",
       "up": true,
@@ -751,5 +754,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

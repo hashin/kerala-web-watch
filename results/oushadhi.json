@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-03T00:56:51.156Z",
-    "run": "1790988951429",
+    "at": "2026-10-06T02:13:09.853Z",
+    "run": "1791252750325",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 19,
+      "performance": 24,
       "accessibility": 37,
       "best_practices": 77,
       "seo": 67
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -219,22 +219,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "19/100"
+        "ev": "24/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "35976.39750000001ms"
+        "ev": "28329.91ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.45"
+        "ev": "0.43"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "18.2MB"
+        "ev": "18.0MB"
       },
       {
         "id": "perf.viewport",
@@ -281,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://www.oushadhi.org/careers)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -455,10 +454,10 @@
     ]
   },
   "score": {
-    "overall": 44,
+    "overall": 46,
     "security": 48,
     "accessibility": 46,
-    "content": 28,
+    "content": 38,
     "gigw": 18,
     "performance": 62,
     "identity": 76
@@ -484,11 +483,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://www.oushadhi.org/careers)"
     },
     {
       "id": "id.gov_domain",
@@ -546,12 +540,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "35976.39750000001ms"
+      "ev": "28329.91ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "18.2MB"
+      "ev": "18.0MB"
     },
     {
       "id": "perf.tap_targets",
@@ -623,7 +617,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.45"
+      "ev": "0.43"
     },
     {
       "id": "perf.images",
@@ -649,6 +643,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-10-05",
       "up": true,
@@ -720,5 +719,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

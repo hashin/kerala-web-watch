@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-04T00:07:31.424Z",
-    "run": "1791072401064",
+    "at": "2026-10-06T02:26:48.477Z",
+    "run": "1791253559401",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 65,
+      "performance": 62,
       "accessibility": 78,
       "best_practices": 96,
       "seo": 69
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3376ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -221,7 +222,7 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "65/100"
+        "ev": "62/100"
       },
       {
         "id": "perf.lcp",
@@ -230,7 +231,7 @@
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.39"
+        "ev": "0.41"
       },
       {
         "id": "perf.weight",
@@ -476,7 +477,7 @@
     "performance": 92,
     "identity": 80
   },
-  "status": "down",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -506,6 +507,11 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "keralalandbank.in"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3376ms"
     },
     {
       "id": "sec.hsts",
@@ -613,7 +619,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.39"
+      "ev": "0.41"
     },
     {
       "id": "perf.images",
@@ -625,6 +631,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 48
+    },
     {
       "d": "2026-10-05",
       "up": false,
@@ -701,5 +712,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,14 +37,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:42:19.255Z",
-    "run": "1790904912545",
+    "at": "2026-10-06T02:10:28.442Z",
+    "run": "1791252588363",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 58,
+      "accessibility": 82,
+      "best_practices": 100,
+      "seo": 85
     },
     "axe": {
       "critical": 0,
@@ -55,11 +55,11 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 3
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
-      "server": null,
+      "server": "nginx",
       "jquery": null
     },
     "checks": [
@@ -69,16 +69,15 @@
       },
       {
         "id": "avail.connect",
-        "r": "fail",
-        "ev": "timeout"
+        "r": "pass"
       },
       {
         "id": "avail.status",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -98,7 +97,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -110,7 +109,7 @@
       },
       {
         "id": "sec.https",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
@@ -134,7 +133,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "fail",
+        "ev": "href=\"http://nilamburmunicipality.lsgkerala.gov.in/en\""
       },
       {
         "id": "sec.csp",
@@ -216,20 +216,21 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "82/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "58/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "25639.579500000003ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -242,7 +243,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -280,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "3/30 crawled link(s) broken (http://nilamburmunicipality.lsgkerala.gov.in/en/officials, http://nilamburmunicipality.lsgkerala.gov.in/en/committes, http://nilamburmunicipality.lsgkerala.gov.in/en/node/109)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -393,11 +393,12 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "na"
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
       },
       {
         "id": "id.soft_404",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
@@ -559,13 +560,21 @@
       }
     ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 68,
+    "security": 76,
+    "accessibility": 70,
+    "content": 56,
+    "gigw": 40,
+    "performance": 76,
+    "identity": 96
+  },
+  "status": "needs-work",
   "issues": [
     {
-      "id": "avail.connect",
-      "sev": "C",
-      "ev": "timeout"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://nilamburmunicipality.lsgkerala.gov.in/en\""
     },
     {
       "id": "content.last_updated",
@@ -576,11 +585,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "3/30 crawled link(s) broken (http://nilamburmunicipality.lsgkerala.gov.in/en/officials, http://nilamburmunicipality.lsgkerala.gov.in/en/committes, http://nilamburmunicipality.lsgkerala.gov.in/en/node/109)"
     },
     {
       "id": "a11y.axe_serious",
@@ -609,13 +613,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "25639.579500000003ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "12.1MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -663,9 +668,19 @@
     {
       "id": "perf.images",
       "sev": "L"
+    },
+    {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 404"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 68
+    },
     {
       "d": "2026-10-05",
       "up": false,
@@ -732,5 +747,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

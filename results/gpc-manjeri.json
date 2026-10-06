@@ -37,13 +37,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-03T01:02:16.416Z",
-    "run": "1790989303247",
+    "at": "2026-10-06T02:21:31.495Z",
+    "run": "1791253255734",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 58,
+      "accessibility": 73,
+      "best_practices": 92,
+      "seo": 67
+    },
     "axe": {
       "critical": 7,
-      "serious": 8,
+      "serious": 10,
       "moderate": 27,
       "minor": 0
     },
@@ -172,7 +177,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "8 serious violation(s)"
+        "ev": "10 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -192,7 +197,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "1 low-contrast element(s)"
+        "ev": "2 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -213,19 +218,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "73/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "58/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "8397.203ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -238,11 +246,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -305,7 +313,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "40 console error(s): Access to font at 'https://gptcmanjeri.in/asset//fonts/Manjari-Regular.woff2' from origin 'https://www.gptcmanjeri.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "40 console error(s): Access to font at 'https://gptcmanjeri.in/asset/fonts/Poppins-Regular.woff2' from origin 'https://www.gptcmanjeri.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -500,7 +508,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "8 serious violation(s)"
+      "ev": "10 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -510,7 +518,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "1 low-contrast element(s)"
+      "ev": "2 low-contrast element(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -536,6 +544,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "8397.203ms"
     },
     {
       "id": "perf.weight",
@@ -575,7 +588,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "40 console error(s): Access to font at 'https://gptcmanjeri.in/asset//fonts/Manjari-Regular.woff2' from origin 'https://www.gptcmanjeri.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "40 console error(s): Access to font at 'https://gptcmanjeri.in/asset/fonts/Poppins-Regular.woff2' from origin 'https://www.gptcmanjeri.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -610,6 +623,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -633,6 +650,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-05",
       "up": false,
@@ -684,5 +706,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

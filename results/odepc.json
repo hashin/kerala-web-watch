@@ -35,14 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-03T00:53:52.999Z",
-    "run": "1790988787065",
+    "at": "2026-10-06T02:12:31.980Z",
+    "run": "1791252709147",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 50,
+      "accessibility": 78,
+      "best_practices": 96,
+      "seo": 100
+    },
     "axe": {
       "critical": 2,
       "serious": 14,
-      "moderate": 25,
+      "moderate": 24,
       "minor": 5
     },
     "crawl": {
@@ -174,7 +179,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "30 moderate/minor violation(s)"
+        "ev": "29 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -208,19 +213,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "78/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "50/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "15603.663999999995ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -232,11 +240,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -301,7 +309,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "11 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+        "ev": "13 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
@@ -462,12 +470,12 @@
     ]
   },
   "score": {
-    "overall": 52,
+    "overall": 51,
     "security": 38,
     "accessibility": 52,
     "content": 36,
     "gigw": 32,
-    "performance": 100,
+    "performance": 86,
     "identity": 96
   },
   "status": "needs-work",
@@ -537,6 +545,11 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "15603.663999999995ms"
+    },
+    {
       "id": "sec.csp",
       "sev": "L"
     },
@@ -551,7 +564,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "30 moderate/minor violation(s)"
+      "ev": "29 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -561,7 +574,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "11 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      "ev": "13 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
@@ -592,6 +605,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
@@ -602,6 +619,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-10-05",
       "up": true,
@@ -673,5 +695,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

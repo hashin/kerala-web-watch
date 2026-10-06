@@ -37,10 +37,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-03T00:55:16.728Z",
-    "run": "1790988871843",
+    "at": "2026-10-06T02:19:57.167Z",
+    "run": "1791253154265",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 33,
+      "accessibility": 77,
+      "best_practices": 73,
+      "seo": 100
+    },
     "axe": {
       "critical": 0,
       "serious": 20,
@@ -89,7 +94,7 @@
       {
         "id": "avail.under_construction",
         "r": "warn",
-        "ev": "\"അറ്റകുറ്റപ്പണി\" alongside 6374 other characters"
+        "ev": "\"അറ്റകുറ്റപ്പണി\" alongside 6338 other characters"
       },
       {
         "id": "avail.ttfb",
@@ -213,19 +218,23 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "77/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "33/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "15595.770999999995ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.43"
       },
       {
         "id": "perf.weight",
@@ -238,11 +247,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -413,7 +422,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-8FQD430GF9&amp;cx=c&amp;gtm=4e69u2h1, https://www.googletagmanager.com/gtag/js?id=UA-108303959-1"
+        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-8FQD430GF9&amp;cx=c&amp;gtm=4e6a21, https://www.googletagmanager.com/gtag/js?id=UA-108303959-1"
       }
     ],
     "screenshot": {
@@ -542,12 +551,12 @@
     ]
   },
   "score": {
-    "overall": 56,
+    "overall": 54,
     "security": 38,
     "accessibility": 70,
     "content": 52,
     "gigw": 18,
-    "performance": 95,
+    "performance": 77,
     "identity": 92
   },
   "status": "needs-work",
@@ -555,7 +564,7 @@
     {
       "id": "avail.under_construction",
       "sev": "H",
-      "ev": "\"അറ്റകുറ്റപ്പണി\" alongside 6374 other characters"
+      "ev": "\"അറ്റകുറ്റപ്പണി\" alongside 6338 other characters"
     },
     {
       "id": "sec.mixed_content",
@@ -610,6 +619,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "15595.770999999995ms"
     },
     {
       "id": "perf.weight",
@@ -687,6 +701,15 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.43"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.robots",
       "sev": "L",
       "ev": "robots.txt returned 404"
@@ -707,10 +730,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-8FQD430GF9&amp;cx=c&amp;gtm=4e69u2h1, https://www.googletagmanager.com/gtag/js?id=UA-108303959-1"
+      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-8FQD430GF9&amp;cx=c&amp;gtm=4e6a21, https://www.googletagmanager.com/gtag/js?id=UA-108303959-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 54
+    },
     {
       "d": "2026-10-05",
       "up": true,
@@ -782,5 +810,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

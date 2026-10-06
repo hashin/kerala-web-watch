@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-03T00:42:58.415Z",
-    "run": "1790988120897",
+    "at": "2026-10-06T01:58:43.922Z",
+    "run": "1791251837356",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 44,
+      "accessibility": 78,
+      "best_practices": 92,
+      "seo": 58
     },
     "axe": {
       "critical": 3,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "5337ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -119,8 +120,7 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "21 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -218,25 +218,26 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "78/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "44/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "21055.022000000004ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "5.8MB"
+        "ev": "5.9MB"
       },
       {
         "id": "perf.viewport",
@@ -444,12 +445,12 @@
     ]
   },
   "score": {
-    "overall": 41,
-    "security": 22,
+    "overall": 42,
+    "security": 32,
     "accessibility": 30,
     "content": 52,
     "gigw": 32,
-    "performance": 81,
+    "performance": 71,
     "identity": 72
   },
   "status": "poor",
@@ -457,11 +458,6 @@
     {
       "id": "sec.http_redirect",
       "sev": "H"
-    },
-    {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "21 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -487,6 +483,11 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "keralaceramics.com"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "5337ms"
     },
     {
       "id": "sec.hsts",
@@ -533,9 +534,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "21055.022000000004ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "5.8MB"
+      "ev": "5.9MB"
     },
     {
       "id": "perf.tap_targets",
@@ -622,6 +628,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 42
+    },
+    {
       "d": "2026-10-05",
       "up": true,
       "score": 41
@@ -652,5 +663,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

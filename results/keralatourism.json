@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-03T00:46:03.794Z",
-    "run": "1790988312658",
+    "at": "2026-10-06T01:57:50.330Z",
+    "run": "1791251803272",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 46,
+      "accessibility": 93,
+      "best_practices": 92,
+      "seo": 92
+    },
     "axe": {
       "critical": 0,
       "serious": 4,
@@ -205,24 +210,27 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "93/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "46/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "11017.526ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "6.1MB"
+        "ev": "6.2MB"
       },
       {
         "id": "perf.viewport",
@@ -230,11 +238,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -415,12 +423,12 @@
     "outlinks": []
   },
   "score": {
-    "overall": 73,
+    "overall": 71,
     "security": 100,
     "accessibility": 82,
     "content": 66,
     "gigw": 0,
-    "performance": 95,
+    "performance": 81,
     "identity": 76
   },
   "status": "needs-work",
@@ -474,9 +482,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "11017.526ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "6.1MB"
+      "ev": "6.2MB"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -522,6 +535,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.soft_404",
       "sev": "L",
       "ev": "a nonexistent path returned 200"
@@ -537,6 +554,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 71
+    },
     {
       "d": "2026-10-05",
       "up": true,
@@ -608,5 +630,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

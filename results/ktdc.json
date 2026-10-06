@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-03T00:50:27.596Z",
-    "run": "1790988583897",
+    "at": "2026-10-06T02:06:19.474Z",
+    "run": "1791252308395",
     "vantage": "gh-us",
     "lighthouse": null,
     "axe": {
@@ -225,8 +225,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "7.5MB"
+        "r": "fail",
+        "ev": "14.7MB"
       },
       {
         "id": "perf.viewport",
@@ -303,7 +303,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "31 console error(s): Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+        "ev": "28 console error(s): Connecting to 'https://fonts.googleapis.com/css?family=Prata&display=swap' violates the following Content Security Policy directive: \"connect-src 'self' https://bookingjini.info https://kernel.bookingjini.com https://stats.g.doubleclick.net https://www.google-analytics.com https://maps.googleapis.com https://maps.gstatic.com\". The action has been blocked."
       },
       {
         "id": "gigw.contact",
@@ -466,7 +466,7 @@
     "accessibility": 40,
     "content": 32,
     "gigw": 32,
-    "performance": 95,
+    "performance": 90,
     "identity": 76
   },
   "status": "needs-work",
@@ -539,7 +539,7 @@
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.5MB"
+      "ev": "14.7MB"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -563,7 +563,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "31 console error(s): Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+      "ev": "28 console error(s): Connecting to 'https://fonts.googleapis.com/css?family=Prata&display=swap' violates the following Content Security Policy directive: \"connect-src 'self' https://bookingjini.info https://kernel.bookingjini.com https://stats.g.doubleclick.net https://www.google-analytics.com https://maps.googleapis.com https://maps.gstatic.com\". The action has been blocked."
     },
     {
       "id": "gigw.terms",
@@ -609,6 +609,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-10-05",
       "up": true,
@@ -680,5 +685,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,19 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-23T23:54:42.342Z",
-    "run": "1790207619199",
+    "at": "2026-10-06T01:53:44.829Z",
+    "run": "1791251565421",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 40,
+      "performance": 49,
       "accessibility": 90,
       "best_practices": 73,
       "seo": 92
     },
     "axe": {
-      "critical": 9,
+      "critical": 13,
       "serious": 1,
-      "moderate": 0,
+      "moderate": 1,
       "minor": 17
     },
     "crawl": {
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3921ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -163,9 +164,13 @@
         "r": "na"
       },
       {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "9 critical violation(s)"
+        "ev": "13 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
@@ -175,7 +180,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "17 moderate/minor violation(s)"
+        "ev": "18 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -192,7 +197,8 @@
       },
       {
         "id": "a11y.headings",
-        "r": "pass"
+        "r": "fail",
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -215,17 +221,16 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "40/100"
+        "ev": "49/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "18787.901000000005ms"
+        "ev": "18074.512499999997ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.26"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -411,7 +416,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-041NGNDMW5&amp;cx=c&amp;gtm=4e69n0h2, https://www.googletagmanager.com/gtag/js?id=UA-131905579-1"
+        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-041NGNDMW5&amp;cx=c&amp;gtm=4e6a21, https://www.googletagmanager.com/gtag/js?id=UA-131905579-1"
       }
     ],
     "screenshot": {
@@ -431,7 +436,7 @@
         "texts": [
           "കേരള സര്‍ക്കാര്‍",
           "SIR 2026 ASD List",
-          "Bekal Fort and Beach\n                        A Panaromic View of Bekal Beach from the Fort"
+          "Bekal Fort and Beach\n                                                                                                                                                    A Panaromic View of Bekal Beach from the Fort"
         ]
       },
       {
@@ -521,10 +526,10 @@
   "score": {
     "overall": 68,
     "security": 80,
-    "accessibility": 54,
+    "accessibility": 50,
     "content": 56,
     "gigw": 60,
-    "performance": 77,
+    "performance": 81,
     "identity": 96
   },
   "status": "needs-work",
@@ -537,7 +542,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "9 critical violation(s)"
+      "ev": "13 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -548,6 +553,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3921ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -570,7 +580,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "18787.901000000005ms"
+      "ev": "18074.512499999997ms"
     },
     {
       "id": "perf.weight",
@@ -580,7 +590,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "17 moderate/minor violation(s)"
+      "ev": "18 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
     },
     {
       "id": "a11y.keyboard",
@@ -613,11 +628,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.26"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -629,10 +639,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-041NGNDMW5&amp;cx=c&amp;gtm=4e69n0h2, https://www.googletagmanager.com/gtag/js?id=UA-131905579-1"
+      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-041NGNDMW5&amp;cx=c&amp;gtm=4e6a21, https://www.googletagmanager.com/gtag/js?id=UA-131905579-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 68
+    },
     {
       "d": "2026-10-05",
       "up": true,
@@ -699,5 +714,5 @@
       "score": 69
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

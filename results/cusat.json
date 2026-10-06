@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-30T00:43:42.449Z",
-    "run": "1790728900079",
+    "at": "2026-10-06T01:52:41.747Z",
+    "run": "1791251467428",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 15,
+      "performance": 14,
       "accessibility": 72,
       "best_practices": 85,
       "seo": 67
@@ -53,11 +53,11 @@
     "crawl": {
       "pages": 30,
       "pdfs": 8,
-      "broken": 7
+      "broken": 37
     },
     "tech": {
       "cms": null,
-      "server": "nginx/1.18.0 (Ubuntu)",
+      "server": null,
       "jquery": null
     },
     "checks": [
@@ -67,15 +67,16 @@
       },
       {
         "id": "avail.connect",
-        "r": "pass"
+        "r": "fail",
+        "ev": "connect_fail"
       },
       {
         "id": "avail.status",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.parked",
@@ -95,7 +96,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.geo_blocked",
@@ -107,7 +108,7 @@
       },
       {
         "id": "sec.https",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.http_redirect",
@@ -115,12 +116,12 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "pass"
+        "r": "fail",
+        "ev": "certificate chain invalid, expired, or hostname mismatch"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "10 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -132,8 +133,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://oir.cusat.ac.in\""
+        "r": "na"
       },
       {
         "id": "sec.csp",
@@ -164,6 +164,10 @@
       {
         "id": "sec.safe_browsing",
         "r": "na"
+      },
+      {
+        "id": "sec.injected_links",
+        "r": "pass"
       },
       {
         "id": "a11y.axe_critical",
@@ -219,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "15/100"
+        "ev": "14/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "31222.263ms"
+        "ev": "30469.930000000008ms"
       },
       {
         "id": "perf.cls",
@@ -282,11 +286,12 @@
       {
         "id": "content.broken_links",
         "r": "fail",
-        "ev": "7/30 crawled link(s) broken (https://www.cusat.ac.in/student, https://www.cusat.ac.in/faculty, https://iqac.cusat.ac.in/Portal, ...)"
+        "ev": "29/30 crawled link(s) broken (https://www.cusat.ac.in/#!, https://www.cusat.ac.in/index#!, http://oir.cusat.ac.in/, ...)"
       },
       {
         "id": "content.broken_pdfs",
-        "r": "pass"
+        "r": "fail",
+        "ev": "8 linked PDF(s) 404: https://www.cusat.ac.in/iqac/MASTER_PLAN_AGENDA_2030.pdf, https://www.cusat.ac.in/iqac/CUSAT-IIQA.pdf, https://www.cusat.ac.in/iqac/CUSAT%20Declaration.pdf, https://www.cusat.ac.in/iqac/CUSAT-Atal%20Ranking%202021-Updated%20Report.pdf, https://www.cusat.ac.in/uploads/Etender_procedures.pdf, https://www.cusat.ac.in/uploads/CUSAT-PL(B).SO-78993-2024-1.pdf, https://cusat.ac.in/iqac/MASTER_PLAN_AGENDA_2030.pdf, https://www.cusat.ac.in/uploads/CUSAT_%20IT_Policy.pdf"
       },
       {
         "id": "content.broken_images",
@@ -387,21 +392,19 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "id.robots",
-        "r": "fail",
-        "ev": "robots.txt returned 404"
+        "r": "na"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 404"
+        "r": "na"
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.canonical",
@@ -419,7 +422,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-EMZ51MZYMX&amp;cx=c&amp;gtm=4e69s1, https://www.googletagmanager.com/gtag/js?id=UA-107202370-1&amp;cx=c&amp;gtm=4e69s1, https://www.googletagmanager.com/gtag/js?id=G-M9S46V4SPV, https://www.googletagmanager.com/gtag/js?id=G-5H355DLSZT, https://www.googletagmanager.com/gtag/js?id=UA-107202370-1"
+        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-EMZ51MZYMX&amp;cx=c&amp;gtm=4e6a21, https://www.googletagmanager.com/gtag/js?id=UA-107202370-1&amp;cx=c&amp;gtm=4e6a21, https://www.googletagmanager.com/gtag/js?id=G-M9S46V4SPV, https://www.googletagmanager.com/gtag/js?id=G-5H355DLSZT, https://www.googletagmanager.com/gtag/js?id=UA-107202370-1"
       }
     ],
     "screenshot": {
@@ -561,30 +564,22 @@
       }
     ]
   },
-  "score": {
-    "overall": 34,
-    "security": 0,
-    "accessibility": 42,
-    "content": 26,
-    "gigw": 26,
-    "performance": 72,
-    "identity": 84
-  },
+  "score": null,
   "status": "broken",
   "issues": [
     {
+      "id": "avail.connect",
+      "sev": "C",
+      "ev": "connect_fail"
+    },
+    {
+      "id": "sec.cert_valid",
+      "sev": "C",
+      "ev": "certificate chain invalid, expired, or hostname mismatch"
+    },
+    {
       "id": "sec.http_redirect",
       "sev": "H"
-    },
-    {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "10 days left"
-    },
-    {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://oir.cusat.ac.in\""
     },
     {
       "id": "sec.vuln_js",
@@ -609,7 +604,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "7/30 crawled link(s) broken (https://www.cusat.ac.in/student, https://www.cusat.ac.in/faculty, https://iqac.cusat.ac.in/Portal, ...)"
+      "ev": "29/30 crawled link(s) broken (https://www.cusat.ac.in/#!, https://www.cusat.ac.in/index#!, http://oir.cusat.ac.in/, ...)"
     },
     {
       "id": "sec.hsts",
@@ -640,6 +635,11 @@
       "ev": "copyright year 2021"
     },
     {
+      "id": "content.broken_pdfs",
+      "sev": "M",
+      "ev": "8 linked PDF(s) 404: https://www.cusat.ac.in/iqac/MASTER_PLAN_AGENDA_2030.pdf, https://www.cusat.ac.in/iqac/CUSAT-IIQA.pdf, https://www.cusat.ac.in/iqac/CUSAT%20Declaration.pdf, https://www.cusat.ac.in/iqac/CUSAT-Atal%20Ranking%202021-Updated%20Report.pdf, https://www.cusat.ac.in/uploads/Etender_procedures.pdf, https://www.cusat.ac.in/uploads/CUSAT-PL(B).SO-78993-2024-1.pdf, https://cusat.ac.in/iqac/MASTER_PLAN_AGENDA_2030.pdf, https://www.cusat.ac.in/uploads/CUSAT_%20IT_Policy.pdf"
+    },
+    {
       "id": "gigw.sitemap",
       "sev": "M"
     },
@@ -662,7 +662,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "31222.263ms"
+      "ev": "30469.930000000008ms"
     },
     {
       "id": "perf.weight",
@@ -735,20 +735,6 @@
       "sev": "L"
     },
     {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
-      "id": "id.robots",
-      "sev": "L",
-      "ev": "robots.txt returned 404"
-    },
-    {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 404"
-    },
-    {
       "id": "id.charset_doctype",
       "sev": "L",
       "ev": "missing HTML5 doctype"
@@ -764,10 +750,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-EMZ51MZYMX&amp;cx=c&amp;gtm=4e69s1, https://www.googletagmanager.com/gtag/js?id=UA-107202370-1&amp;cx=c&amp;gtm=4e69s1, https://www.googletagmanager.com/gtag/js?id=G-M9S46V4SPV, https://www.googletagmanager.com/gtag/js?id=G-5H355DLSZT, https://www.googletagmanager.com/gtag/js?id=UA-107202370-1"
+      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-EMZ51MZYMX&amp;cx=c&amp;gtm=4e6a21, https://www.googletagmanager.com/gtag/js?id=UA-107202370-1&amp;cx=c&amp;gtm=4e6a21, https://www.googletagmanager.com/gtag/js?id=G-M9S46V4SPV, https://www.googletagmanager.com/gtag/js?id=G-5H355DLSZT, https://www.googletagmanager.com/gtag/js?id=UA-107202370-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-05",
       "up": false,
@@ -834,5 +825,5 @@
       "score": 34
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

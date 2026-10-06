@@ -37,14 +37,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:31:27.596Z",
-    "run": "1790904140675",
+    "at": "2026-10-06T02:14:42.779Z",
+    "run": "1791252837537",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 60,
+      "accessibility": 82,
+      "best_practices": 100,
+      "seo": 92
     },
     "axe": {
       "critical": 0,
@@ -55,11 +55,11 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 14
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
-      "server": null,
+      "server": "nginx",
       "jquery": null
     },
     "checks": [
@@ -69,16 +69,15 @@
       },
       {
         "id": "avail.connect",
-        "r": "fail",
-        "ev": "timeout"
+        "r": "pass"
       },
       {
         "id": "avail.status",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -98,7 +97,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -110,7 +109,7 @@
       },
       {
         "id": "sec.https",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
@@ -134,7 +133,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "fail",
+        "ev": "href=\"http://eloormunicipality.lsgkerala.gov.in/en\""
       },
       {
         "id": "sec.csp",
@@ -216,25 +216,26 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "82/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "32274.650999999998ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "17.9MB"
+        "ev": "19.9MB"
       },
       {
         "id": "perf.viewport",
@@ -242,7 +243,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -280,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "14/30 crawled link(s) broken (http://eloormunicipality.lsgkerala.gov.in/ml, http://eloormunicipality.lsgkerala.gov.in/en/node/106, http://eloormunicipality.lsgkerala.gov.in/en/Awards%20%26%20Achievements, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -393,7 +393,8 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "na"
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
       },
       {
         "id": "id.soft_404",
@@ -420,7 +421,7 @@
     "screenshot": {
       "desktop": "lsg-mun-eloor.webp",
       "mobile": "lsg-mun-eloor-m.webp",
-      "phash": "ffffffe600000000"
+      "phash": "ffffb70000030018"
     },
     "outlinks": [
       {
@@ -534,13 +535,21 @@
       }
     ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 68,
+    "security": 76,
+    "accessibility": 70,
+    "content": 56,
+    "gigw": 40,
+    "performance": 76,
+    "identity": 96
+  },
+  "status": "needs-work",
   "issues": [
     {
-      "id": "avail.connect",
-      "sev": "C",
-      "ev": "timeout"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://eloormunicipality.lsgkerala.gov.in/en\""
     },
     {
       "id": "content.last_updated",
@@ -551,11 +560,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "14/30 crawled link(s) broken (http://eloormunicipality.lsgkerala.gov.in/ml, http://eloormunicipality.lsgkerala.gov.in/en/node/106, http://eloormunicipality.lsgkerala.gov.in/en/Awards%20%26%20Achievements, ...)"
     },
     {
       "id": "a11y.axe_serious",
@@ -584,13 +588,14 @@
       "sev": "M"
     },
     {
-      "id": "perf.weight",
+      "id": "perf.lcp",
       "sev": "M",
-      "ev": "17.9MB"
+      "ev": "32274.650999999998ms"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "19.9MB"
     },
     {
       "id": "sec.csp",
@@ -638,9 +643,19 @@
     {
       "id": "perf.images",
       "sev": "L"
+    },
+    {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 404"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 68
+    },
     {
       "d": "2026-10-05",
       "up": false,
@@ -707,5 +722,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

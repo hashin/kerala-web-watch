@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-01T00:44:31.686Z",
-    "run": "1790815416788",
+    "at": "2026-10-06T01:52:20.329Z",
+    "run": "1791251466041",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 53,
-      "accessibility": 84,
+      "accessibility": 89,
       "best_practices": 73,
       "seo": 92
     },
     "axe": {
-      "critical": 9,
-      "serious": 2,
+      "critical": 8,
+      "serious": 1,
       "moderate": 0,
-      "minor": 23
+      "minor": 21
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -169,17 +169,17 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "9 critical violation(s)"
+        "ev": "8 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "2 serious violation(s)"
+        "ev": "1 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "23 moderate/minor violation(s)"
+        "ev": "21 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -199,7 +199,8 @@
       },
       {
         "id": "a11y.labels",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 form control(s) without a label"
       },
       {
         "id": "a11y.skip_link",
@@ -213,7 +214,7 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "84/100"
+        "ev": "89/100"
       },
       {
         "id": "perf.lighthouse",
@@ -223,7 +224,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "14189.304ms"
+        "ev": "22284.601500000004ms"
       },
       {
         "id": "perf.cls",
@@ -232,7 +233,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "9.7MB"
+        "ev": "10.3MB"
       },
       {
         "id": "perf.viewport",
@@ -278,7 +279,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://ernakulam.nic.in/en/parliament/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -307,7 +309,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -537,10 +539,10 @@
     ]
   },
   "score": {
-    "overall": 63,
+    "overall": 59,
     "security": 48,
-    "accessibility": 64,
-    "content": 56,
+    "accessibility": 54,
+    "content": 46,
     "gigw": 60,
     "performance": 76,
     "identity": 96
@@ -555,7 +557,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "9 critical violation(s)"
+      "ev": "8 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -568,6 +570,11 @@
       "ev": "ml-IN"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://ernakulam.nic.in/en/parliament/)"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -578,7 +585,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "2 serious violation(s)"
+      "ev": "1 serious violation(s)"
+    },
+    {
+      "id": "a11y.labels",
+      "sev": "M",
+      "ev": "1 form control(s) without a label"
     },
     {
       "id": "gigw.privacy",
@@ -591,12 +603,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "14189.304ms"
+      "ev": "22284.601500000004ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "9.7MB"
+      "ev": "10.3MB"
     },
     {
       "id": "sec.csp",
@@ -613,7 +625,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "23 moderate/minor violation(s)"
+      "ev": "21 moderate/minor violation(s)"
     },
     {
       "id": "a11y.keyboard",
@@ -623,7 +635,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.terms",
@@ -665,6 +677,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-10-05",
       "up": true,
@@ -731,5 +748,5 @@
       "score": 63
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

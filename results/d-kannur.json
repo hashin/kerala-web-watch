@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-01T00:45:16.026Z",
-    "run": "1790815453415",
+    "at": "2026-10-06T01:54:43.491Z",
+    "run": "1791251596033",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 51,
-      "accessibility": 87,
+      "performance": 58,
+      "accessibility": 89,
       "best_practices": 92,
       "seo": 92
     },
     "axe": {
-      "critical": 11,
+      "critical": 19,
       "serious": 1,
-      "moderate": 0,
-      "minor": 15
+      "moderate": 1,
+      "minor": 12
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -169,7 +169,7 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "11 critical violation(s)"
+        "ev": "19 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
@@ -179,7 +179,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "15 moderate/minor violation(s)"
+        "ev": "13 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -195,11 +195,13 @@
       },
       {
         "id": "a11y.headings",
-        "r": "pass"
+        "r": "fail",
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 form control(s) without a label"
       },
       {
         "id": "a11y.skip_link",
@@ -213,17 +215,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "87/100"
+        "ev": "89/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "51/100"
+        "ev": "58/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7983.7675ms"
+        "ev": "13121.318000000003ms"
       },
       {
         "id": "perf.cls",
@@ -231,7 +233,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3.2MB"
       },
       {
         "id": "perf.viewport",
@@ -278,7 +281,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://kannur.nic.in/en/helpline/)"
+        "ev": "2/30 crawled link(s) broken (https://kannur.nic.in/en/#SkipContent, https://kannur.nic.in/en/history/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -307,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -422,23 +425,6 @@
     },
     "outlinks": [
       {
-        "host": "facebook.com",
-        "count": 7,
-        "texts": [
-          "https://www.facebook.com/groups/keralaswmp/edit",
-          "https://www.facebook.com/keralaswmp",
-          "Share on Facebook"
-        ]
-      },
-      {
-        "host": "twitter.com",
-        "count": 7,
-        "texts": [
-          "https://twitter.com/keralaswmp",
-          "Share on X"
-        ]
-      },
-      {
         "host": "kerala.gov.in",
         "count": 2,
         "texts": [
@@ -467,10 +453,27 @@
         ]
       },
       {
+        "host": "facebook.com",
+        "count": 7,
+        "texts": [
+          "https://www.facebook.com/groups/keralaswmp/edit",
+          "https://www.facebook.com/keralaswmp",
+          "Facebook"
+        ]
+      },
+      {
         "host": "instagram.com",
         "count": 1,
         "texts": [
           "https://www.instagram.com/keralaswmp"
+        ]
+      },
+      {
+        "host": "twitter.com",
+        "count": 7,
+        "texts": [
+          "https://twitter.com/keralaswmp",
+          "Share on X"
         ]
       },
       {
@@ -527,12 +530,12 @@
     ]
   },
   "score": {
-    "overall": 62,
+    "overall": 58,
     "security": 48,
-    "accessibility": 64,
+    "accessibility": 50,
     "content": 46,
     "gigw": 60,
-    "performance": 86,
+    "performance": 81,
     "identity": 96
   },
   "status": "needs-work",
@@ -545,7 +548,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "11 critical violation(s)"
+      "ev": "19 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -560,7 +563,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://kannur.nic.in/en/helpline/)"
+      "ev": "2/30 crawled link(s) broken (https://kannur.nic.in/en/#SkipContent, https://kannur.nic.in/en/history/)"
     },
     {
       "id": "sec.hsts",
@@ -576,6 +579,11 @@
       "ev": "1 serious violation(s)"
     },
     {
+      "id": "a11y.labels",
+      "sev": "M",
+      "ev": "1 form control(s) without a label"
+    },
+    {
       "id": "gigw.privacy",
       "sev": "M"
     },
@@ -586,7 +594,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7983.7675ms"
+      "ev": "13121.318000000003ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "3.2MB"
     },
     {
       "id": "sec.csp",
@@ -603,7 +616,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "15 moderate/minor violation(s)"
+      "ev": "13 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
     },
     {
       "id": "a11y.keyboard",
@@ -613,7 +631,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.terms",
@@ -650,6 +668,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 58
+    },
     {
       "d": "2026-10-05",
       "up": true,
@@ -716,5 +739,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

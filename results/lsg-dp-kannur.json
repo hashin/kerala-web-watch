@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-01T01:02:14.472Z",
-    "run": "1790816479618",
+    "at": "2026-10-06T02:10:43.569Z",
+    "run": "1791252591924",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 66,
+      "performance": 64,
       "accessibility": 79,
       "best_practices": 92,
       "seo": 92
@@ -97,7 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3605ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -122,7 +123,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "16 days left"
+        "ev": "11 days left"
       },
       {
         "id": "sec.tls_version",
@@ -225,12 +226,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "66/100"
+        "ev": "64/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7842.403000000001ms"
+        "ev": "7567.3335000000025ms"
       },
       {
         "id": "perf.cls",
@@ -470,7 +471,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "16 days left"
+      "ev": "11 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -501,6 +502,11 @@
       "id": "content.broken_links",
       "sev": "H",
       "ev": "2/30 crawled link(s) broken (https://kannurdp.lsgkerala.gov.in/ml/Plan_details, http://kannurdp.lsgkerala.gov.in/ml/Plan_details)"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3605ms"
     },
     {
       "id": "sec.hsts",
@@ -535,7 +541,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7842.403000000001ms"
+      "ev": "7567.3335000000025ms"
     },
     {
       "id": "id.tech",
@@ -628,6 +634,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 47
+    },
+    {
       "d": "2026-10-05",
       "up": true,
       "score": 47
@@ -693,5 +704,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

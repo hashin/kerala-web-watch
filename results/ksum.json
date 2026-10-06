@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:09:00.577Z",
-    "run": "1790903290959",
+    "at": "2026-10-06T02:01:47.420Z",
+    "run": "1791252024110",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 33,
-      "accessibility": 66,
+      "performance": 50,
+      "accessibility": 69,
       "best_practices": 92,
       "seo": 77
     },
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -216,27 +216,26 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "66/100"
+        "ev": "69/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "33/100"
+        "ev": "50/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10474.129500000001ms"
+        "ev": "32058.397500000003ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.62"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "18.0MB"
+        "ev": "55.3MB"
       },
       {
         "id": "perf.viewport",
@@ -282,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://entekeralam.kerala.gov.in/discussion)"
       },
       {
         "id": "content.broken_pdfs",
@@ -311,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "13 console error(s): Access to fetch at 'https://www.youtube-nocookie.com/s/player/8ab5c328/www-player.css' from origin 'https://startupmission.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "8 console error(s): Failed to load resource: the server responded with a status of 403 ()"
       },
       {
         "id": "gigw.contact",
@@ -319,7 +319,7 @@
       },
       {
         "id": "gigw.feedback",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.sitemap",
@@ -421,7 +421,7 @@
     "screenshot": {
       "desktop": "ksum.webp",
       "mobile": "ksum-m.webp",
-      "phash": "ffff3f0f0f0f0fff"
+      "phash": "ffc163060f070361"
     },
     "outlinks": [
       {
@@ -548,12 +548,12 @@
     ]
   },
   "score": {
-    "overall": 57,
+    "overall": 56,
     "security": 64,
     "accessibility": 40,
-    "content": 52,
-    "gigw": 44,
-    "performance": 72,
+    "content": 42,
+    "gigw": 40,
+    "performance": 76,
     "identity": 96
   },
   "status": "needs-work",
@@ -572,6 +572,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://entekeralam.kerala.gov.in/discussion)"
     },
     {
       "id": "sec.hsts",
@@ -615,12 +620,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10474.129500000001ms"
+      "ev": "32058.397500000003ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "18.0MB"
+      "ev": "55.3MB"
     },
     {
       "id": "sec.csp",
@@ -661,7 +666,11 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "13 console error(s): Access to fetch at 'https://www.youtube-nocookie.com/s/player/8ab5c328/www-player.css' from origin 'https://startupmission.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "8 console error(s): Failed to load resource: the server responded with a status of 403 ()"
+    },
+    {
+      "id": "gigw.feedback",
+      "sev": "L"
     },
     {
       "id": "gigw.copyright_policy",
@@ -680,11 +689,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.62"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -698,6 +702,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-10-05",
       "up": true,
@@ -764,5 +773,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

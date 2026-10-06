@@ -35,13 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-03T00:59:51.971Z",
-    "run": "1790989129035",
+    "at": "2026-10-06T02:20:58.699Z",
+    "run": "1791253192596",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 39,
+      "accessibility": 83,
+      "best_practices": 73,
+      "seo": 85
+    },
     "axe": {
       "critical": 3,
-      "serious": 39,
+      "serious": 41,
       "moderate": 27,
       "minor": 13
     },
@@ -151,7 +156,7 @@
       {
         "id": "sec.vuln_js",
         "r": "fail",
-        "ev": "jquery 2.2.4, jquery-ui 1.11.4, jquery-ui-dialog 1.11.4, bootstrap 3.3.6, jquery-validation 1.14.0, moment.js 2.11.0"
+        "ev": "jquery 2.2.4, jquery-ui 1.11.4, jquery-ui-dialog 1.11.4, bootstrap 3.3.6, jquery-validation 1.14.0, moment.js 2.11.0, swiper 8.3.2"
       },
       {
         "id": "sec.safe_browsing",
@@ -169,7 +174,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "39 serious violation(s)"
+        "ev": "41 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -188,7 +193,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "1 low-contrast element(s)"
+        "ev": "3 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -210,24 +215,27 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "83/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "39/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "35754.16574999999ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "22.2MB"
+        "ev": "22.3MB"
       },
       {
         "id": "perf.viewport",
@@ -235,11 +243,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -472,12 +480,12 @@
     ]
   },
   "score": {
-    "overall": 52,
+    "overall": 50,
     "security": 48,
     "accessibility": 40,
     "content": 42,
     "gigw": 30,
-    "performance": 90,
+    "performance": 76,
     "identity": 100
   },
   "status": "needs-work",
@@ -485,7 +493,7 @@
     {
       "id": "sec.vuln_js",
       "sev": "H",
-      "ev": "jquery 2.2.4, jquery-ui 1.11.4, jquery-ui-dialog 1.11.4, bootstrap 3.3.6, jquery-validation 1.14.0, moment.js 2.11.0"
+      "ev": "jquery 2.2.4, jquery-ui 1.11.4, jquery-ui-dialog 1.11.4, bootstrap 3.3.6, jquery-validation 1.14.0, moment.js 2.11.0, swiper 8.3.2"
     },
     {
       "id": "a11y.axe_critical",
@@ -513,7 +521,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "39 serious violation(s)"
+      "ev": "41 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -523,7 +531,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "1 low-contrast element(s)"
+      "ev": "3 low-contrast element(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -551,9 +559,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "35754.16574999999ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "22.2MB"
+      "ev": "22.3MB"
     },
     {
       "id": "sec.csp",
@@ -612,6 +625,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "gigw.emblem",
       "sev": "I"
     },
@@ -622,6 +639,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 50
+    },
     {
       "d": "2026-10-05",
       "up": true,
@@ -693,5 +715,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

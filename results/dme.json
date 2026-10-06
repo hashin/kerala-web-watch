@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-03T00:40:21.896Z",
-    "run": "1790987928315",
+    "at": "2026-10-06T01:55:20.914Z",
+    "run": "1791251636271",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 40,
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "3319ms"
+        "ev": "3426ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -120,8 +120,7 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "13 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -229,12 +228,12 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "57070.41200000001ms"
+        "ev": "90841.08400000006ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.28"
+        "ev": "0.27"
       },
       {
         "id": "perf.weight",
@@ -458,8 +457,8 @@
     ]
   },
   "score": {
-    "overall": 53,
-    "security": 66,
+    "overall": 56,
+    "security": 76,
     "accessibility": 30,
     "content": 52,
     "gigw": 36,
@@ -468,11 +467,6 @@
   },
   "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "13 days left"
-    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -496,7 +490,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "3319ms"
+      "ev": "3426ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -537,7 +531,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "57070.41200000001ms"
+      "ev": "90841.08400000006ms"
     },
     {
       "id": "perf.weight",
@@ -603,7 +597,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.28"
+      "ev": "0.27"
     },
     {
       "id": "perf.images",
@@ -615,6 +609,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-10-05",
       "up": true,
@@ -686,5 +685,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

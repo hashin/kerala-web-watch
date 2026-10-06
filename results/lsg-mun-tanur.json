@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:46:07.651Z",
-    "run": "1790905528530",
+    "at": "2026-10-06T02:18:15.201Z",
+    "run": "1791253051899",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 52,
+      "performance": 33,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 85
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "52/100"
+        "ev": "33/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "12179.931ms"
+        "ev": "11483.224499999998ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "14.2MB"
+        "ev": "14.4MB"
       },
       {
         "id": "perf.viewport",
@@ -281,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://tanurmunicipality.lsgkerala.gov.in/ml/en/news/waste-managment)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -438,12 +437,19 @@
         "texts": []
       },
       {
-        "host": "kerala.gov.in",
-        "count": 5,
+        "host": "ksmart.live",
+        "count": 1,
         "texts": [
+          "Local Body Map"
+        ]
+      },
+      {
+        "host": "kerala.gov.in",
+        "count": 6,
+        "texts": [
+          "Elected Representatives",
           "E-Tenders",
-          "Voters List",
-          "State Government"
+          "Voters List"
         ]
       },
       {
@@ -465,13 +471,6 @@
         "count": 1,
         "texts": [
           "Read More"
-        ]
-      },
-      {
-        "host": "ksmart.live",
-        "count": 1,
-        "texts": [
-          "Ward Details"
         ]
       },
       {
@@ -557,10 +556,10 @@
     ]
   },
   "score": {
-    "overall": 66,
+    "overall": 68,
     "security": 76,
     "accessibility": 70,
-    "content": 46,
+    "content": 56,
     "gigw": 36,
     "performance": 76,
     "identity": 96
@@ -581,11 +580,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://tanurmunicipality.lsgkerala.gov.in/ml/en/news/waste-managment)"
     },
     {
       "id": "a11y.axe_serious",
@@ -616,12 +610,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "12179.931ms"
+      "ev": "11483.224499999998ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "14.2MB"
+      "ev": "14.4MB"
     },
     {
       "id": "sec.csp",
@@ -681,6 +675,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 68
+    },
     {
       "d": "2026-10-05",
       "up": true,
@@ -747,5 +746,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

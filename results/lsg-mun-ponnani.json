@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-30T01:17:15.076Z",
-    "run": "1790730822573",
+    "at": "2026-10-06T02:15:03.046Z",
+    "run": "1791252860400",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 57,
+      "performance": 61,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 85
@@ -49,7 +49,7 @@
     "axe": {
       "critical": 0,
       "serious": 5,
-      "moderate": 11,
+      "moderate": 10,
       "minor": 0
     },
     "crawl": {
@@ -97,8 +97,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "4113ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -166,6 +165,10 @@
         "r": "na"
       },
       {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
         "id": "a11y.axe_critical",
         "r": "pass"
       },
@@ -177,12 +180,11 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "11 moderate/minor violation(s)"
+        "ev": "10 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
-        "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 34% Malayalam content"
+        "r": "pass"
       },
       {
         "id": "a11y.alt",
@@ -219,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "57/100"
+        "ev": "61/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "21605.608000000004ms"
+        "ev": "25341.35250000001ms"
       },
       {
         "id": "perf.cls",
@@ -355,7 +357,7 @@
       },
       {
         "id": "gigw.rti",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.search",
@@ -440,6 +442,15 @@
         "texts": []
       },
       {
+        "host": "kerala.gov.in",
+        "count": 4,
+        "texts": [
+          "E-Tenders",
+          "State Government",
+          "E-Tender"
+        ]
+      },
+      {
         "host": "youtube.com",
         "count": 1,
         "texts": [
@@ -473,15 +484,6 @@
         "texts": [
           "Central Government",
           "Govt. of India"
-        ]
-      },
-      {
-        "host": "kerala.gov.in",
-        "count": 3,
-        "texts": [
-          "State Government",
-          "E-Tender",
-          "Govt. of Kerala"
         ]
       },
       {
@@ -559,11 +561,11 @@
     ]
   },
   "score": {
-    "overall": 60,
+    "overall": 68,
     "security": 76,
-    "accessibility": 50,
+    "accessibility": 70,
     "content": 56,
-    "gigw": 16,
+    "gigw": 36,
     "performance": 76,
     "identity": 96
   },
@@ -575,11 +577,6 @@
       "ev": "href=\"http://ponnanimunicipality.lsgkerala.gov.in/en\""
     },
     {
-      "id": "a11y.lang",
-      "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 34% Malayalam content"
-    },
-    {
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
@@ -588,15 +585,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "gigw.rti",
-      "sev": "H"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "4113ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -627,7 +615,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "21605.608000000004ms"
+      "ev": "25341.35250000001ms"
     },
     {
       "id": "perf.weight",
@@ -641,7 +629,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "11 moderate/minor violation(s)"
+      "ev": "10 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -692,6 +680,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 68
+    },
     {
       "d": "2026-10-05",
       "up": true,
@@ -758,5 +751,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

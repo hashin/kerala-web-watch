@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-03T00:49:10.249Z",
-    "run": "1790988462033",
+    "at": "2026-10-06T02:03:34.310Z",
+    "run": "1791252143666",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 28,
+      "performance": 54,
       "accessibility": 82,
       "best_practices": 88,
       "seo": 91
@@ -47,7 +47,7 @@
     "axe": {
       "critical": 3,
       "serious": 6,
-      "moderate": 66,
+      "moderate": 65,
       "minor": 0
     },
     "crawl": {
@@ -179,12 +179,12 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "66 moderate/minor violation(s)"
+        "ev": "65 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en-gb\"> vs. 141% Malayalam content"
+        "ev": "<html lang=\"en-gb\"> vs. 138% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -220,22 +220,21 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "28/100"
+        "ev": "54/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6498.187499999999ms"
+        "ev": "6426.351499999999ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.91"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "96.7MB"
+        "ev": "48.5MB"
       },
       {
         "id": "perf.viewport",
@@ -290,7 +289,7 @@
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "2 broken image(s)"
+        "ev": "1 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -311,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "54 console error(s): Refused to apply style from 'https://clr.kerala.gov.in/media/com_sppagebuilder/assets/iconfont/icofont/icofont.min.css?143fb2b8f5d98f82feb246ecc61db33d' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+        "ev": "36 console error(s): Refused to apply style from 'https://clr.kerala.gov.in/media/com_sppagebuilder/assets/iconfont/icofont/icofont.min.css?143fb2b8f5d98f82feb246ecc61db33d' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       },
       {
         "id": "gigw.contact",
@@ -423,7 +422,7 @@
     "screenshot": {
       "desktop": "clrkerala.webp",
       "mobile": "clrkerala-m.webp",
-      "phash": "fffff0f010111110"
+      "phash": "ffff00008880c0e0"
     },
     "outlinks": [
       {
@@ -441,7 +440,7 @@
     "accessibility": 32,
     "content": 72,
     "gigw": 56,
-    "performance": 72,
+    "performance": 76,
     "identity": 92
   },
   "status": "needs-work",
@@ -459,7 +458,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en-gb\"> vs. 141% Malayalam content"
+      "ev": "<html lang=\"en-gb\"> vs. 138% Malayalam content"
     },
     {
       "id": "content.broken_links",
@@ -492,12 +491,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6498.187499999999ms"
+      "ev": "6426.351499999999ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "96.7MB"
+      "ev": "48.5MB"
     },
     {
       "id": "sec.csp",
@@ -506,7 +505,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "66 moderate/minor violation(s)"
+      "ev": "65 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -516,12 +515,12 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "2 broken image(s)"
+      "ev": "1 broken image(s)"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "54 console error(s): Refused to apply style from 'https://clr.kerala.gov.in/media/com_sppagebuilder/assets/iconfont/icofont/icofont.min.css?143fb2b8f5d98f82feb246ecc61db33d' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+      "ev": "36 console error(s): Refused to apply style from 'https://clr.kerala.gov.in/media/com_sppagebuilder/assets/iconfont/icofont/icofont.min.css?143fb2b8f5d98f82feb246ecc61db33d' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
     },
     {
       "id": "gigw.feedback",
@@ -548,11 +547,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.91"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -572,6 +566,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 63
+    },
     {
       "d": "2026-10-05",
       "up": true,
@@ -643,5 +642,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

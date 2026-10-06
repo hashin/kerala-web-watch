@@ -35,23 +35,28 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-04T00:08:08.092Z",
-    "run": "1791072444404",
+    "at": "2026-10-06T02:14:56.285Z",
+    "run": "1791252841173",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 34,
+      "accessibility": 86,
+      "best_practices": 92,
+      "seo": 62
+    },
     "axe": {
-      "critical": 0,
-      "serious": 2,
-      "moderate": 1,
-      "minor": 0
+      "critical": 1,
+      "serious": 10,
+      "moderate": 5,
+      "minor": 1
     },
     "crawl": {
-      "pages": 26,
+      "pages": 30,
       "pdfs": 1,
       "broken": 0
     },
     "tech": {
-      "cms": "WordPress 7.1",
+      "cms": null,
       "server": "Apache",
       "jquery": null
     },
@@ -106,7 +111,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
@@ -131,11 +136,11 @@
       },
       {
         "id": "sec.csp",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.xfo",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.xcto",
@@ -163,17 +168,18 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "2 serious violation(s)"
+        "ev": "10 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "1 moderate/minor violation(s)"
+        "ev": "6 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -181,12 +187,12 @@
       },
       {
         "id": "a11y.alt",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "1 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
@@ -203,27 +209,33 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "pass"
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "86/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "34/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "13228.973000000002ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.94"
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3.0MB"
       },
       {
         "id": "perf.viewport",
@@ -231,11 +243,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -277,7 +289,8 @@
       },
       {
         "id": "content.broken_images",
-        "r": "pass"
+        "r": "fail",
+        "ev": "3 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -298,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "1 console error(s): Unexpected token '<'"
+        "ev": "5 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
@@ -350,7 +363,7 @@
       },
       {
         "id": "gigw.search",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.ownership",
@@ -374,7 +387,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.robots",
@@ -386,8 +399,7 @@
       },
       {
         "id": "id.soft_404",
-        "r": "fail",
-        "ev": "a nonexistent path returned 200"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
@@ -399,8 +411,7 @@
       },
       {
         "id": "id.tech",
-        "r": "pass",
-        "ev": "WordPress 7.1"
+        "r": "pass"
       },
       {
         "id": "id.third_party",
@@ -410,7 +421,7 @@
     "screenshot": {
       "desktop": "medicalcouncilkerala.webp",
       "mobile": "medicalcouncilkerala-m.webp",
-      "phash": "0f073f017f3f3f01"
+      "phash": "ffff3f0e0039ffff"
     },
     "outlinks": [
       {
@@ -443,10 +454,20 @@
       },
       {
         "host": "google.com",
-        "count": 1,
+        "count": 2,
         "texts": [
           "Permanent Reg Status"
         ]
+      },
+      {
+        "host": "nmc.org.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "arogyakeralam.gov.in",
+        "count": 1,
+        "texts": []
       },
       {
         "host": "cdit.org",
@@ -458,24 +479,25 @@
     ]
   },
   "score": {
-    "overall": 55,
-    "security": 28,
-    "accessibility": 72,
-    "content": 52,
-    "gigw": 18,
-    "performance": 100,
-    "identity": 92
+    "overall": 56,
+    "security": 62,
+    "accessibility": 50,
+    "content": 48,
+    "gigw": 22,
+    "performance": 77,
+    "identity": 100
   },
   "status": "needs-work",
   "issues": [
     {
-      "id": "sec.http_redirect",
-      "sev": "H"
-    },
-    {
       "id": "sec.mixed_content",
       "sev": "H",
       "ev": "href=\"http://gmpg.org/xfn/11\""
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "1 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -492,18 +514,14 @@
       "sev": "M"
     },
     {
-      "id": "sec.xfo",
-      "sev": "M"
-    },
-    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "2 serious violation(s)"
+      "ev": "10 serious violation(s)"
     },
     {
-      "id": "a11y.contrast",
+      "id": "a11y.alt",
       "sev": "M",
-      "ev": "1 low-contrast element(s)"
+      "ev": "1 image(s) missing alt text"
     },
     {
       "id": "gigw.sitemap",
@@ -526,8 +544,14 @@
       "sev": "M"
     },
     {
-      "id": "sec.csp",
-      "sev": "L"
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "13228.973000000002ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "3.0MB"
     },
     {
       "id": "sec.xcto",
@@ -540,12 +564,22 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "1 moderate/minor violation(s)"
+      "ev": "6 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
       "ev": "heading levels skipped"
+    },
+    {
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
+    },
+    {
+      "id": "content.broken_images",
+      "sev": "L",
+      "ev": "3 broken image(s)"
     },
     {
       "id": "content.meta_desc",
@@ -554,7 +588,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "1 console error(s): Unexpected token '<'"
+      "ev": "5 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
@@ -585,17 +619,13 @@
       "sev": "L"
     },
     {
-      "id": "gigw.search",
-      "sev": "L"
-    },
-    {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
-      "id": "id.soft_404",
+      "id": "perf.cls",
       "sev": "L",
-      "ev": "a nonexistent path returned 200"
+      "ev": "0.94"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
     },
     {
       "id": "gigw.emblem",
@@ -603,6 +633,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-10-05",
       "up": true,
@@ -679,5 +714,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

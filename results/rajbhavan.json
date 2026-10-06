@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-04T00:01:52.081Z",
-    "run": "1791072065556",
+    "at": "2026-10-06T02:01:40.856Z",
+    "run": "1791252055376",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 33,
       "accessibility": 65,
       "best_practices": 69,
       "seo": 83
@@ -222,16 +222,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "33/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10502.695000000002ms"
+        "ev": "10490.054000000002ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.79"
       },
       {
         "id": "perf.weight",
@@ -418,7 +419,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-FH946TSYK5&amp;cx=c&amp;gtm=4e69u2, https://www.googletagmanager.com/gtag/js?id=UA-103783083-7"
+        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-FH946TSYK5&amp;cx=c&amp;gtm=4e6a21, https://www.googletagmanager.com/gtag/js?id=UA-103783083-7"
       }
     ],
     "screenshot": {
@@ -498,15 +499,15 @@
     ]
   },
   "score": {
-    "overall": 50,
+    "overall": 49,
     "security": 28,
     "accessibility": 52,
     "content": 52,
     "gigw": 26,
-    "performance": 86,
+    "performance": 82,
     "identity": 92
   },
-  "status": "down",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -579,7 +580,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10502.695000000002ms"
+      "ev": "10490.054000000002ms"
     },
     {
       "id": "sec.csp",
@@ -638,6 +639,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.79"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -657,10 +663,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-FH946TSYK5&amp;cx=c&amp;gtm=4e69u2, https://www.googletagmanager.com/gtag/js?id=UA-103783083-7"
+      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-FH946TSYK5&amp;cx=c&amp;gtm=4e6a21, https://www.googletagmanager.com/gtag/js?id=UA-103783083-7"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-10-05",
       "up": false,
@@ -737,5 +748,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

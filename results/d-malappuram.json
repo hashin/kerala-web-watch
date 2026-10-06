@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:04:14.936Z",
-    "run": "1790902996903",
+    "at": "2026-10-06T01:53:33.798Z",
+    "run": "1791251540331",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 50,
-      "accessibility": 87,
-      "best_practices": 73,
+      "performance": 54,
+      "accessibility": 93,
+      "best_practices": 69,
       "seo": 83
     },
     "axe": {
-      "critical": 14,
+      "critical": 13,
       "serious": 1,
       "moderate": 2,
-      "minor": 16
+      "minor": 15
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -169,7 +169,7 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "14 critical violation(s)"
+        "ev": "13 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
@@ -179,7 +179,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "18 moderate/minor violation(s)"
+        "ev": "17 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -201,7 +201,8 @@
       },
       {
         "id": "a11y.labels",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 form control(s) without a label"
       },
       {
         "id": "a11y.skip_link",
@@ -215,17 +216,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "87/100"
+        "ev": "93/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "50/100"
+        "ev": "54/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "20176.8665ms"
+        "ev": "21675.393999999993ms"
       },
       {
         "id": "perf.cls",
@@ -234,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "3.9MB"
+        "ev": "4.4MB"
       },
       {
         "id": "perf.viewport",
@@ -280,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://malappuram.nic.in/en/#SkipContent)"
       },
       {
         "id": "content.broken_pdfs",
@@ -309,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -425,13 +427,6 @@
     },
     "outlinks": [
       {
-        "host": "facebook.com",
-        "count": 6,
-        "texts": [
-          "Share on Facebook"
-        ]
-      },
-      {
         "host": "kerala.gov.in",
         "count": 9,
         "texts": [
@@ -459,6 +454,13 @@
           "LA Munampathkadavu Appropriate Govt Order",
           "Land Acquisition- Malappuram Distrcit- Tirur taluk-Kottakkal Village- Kakkathode Bridge Reconstruction- SIA study Final report",
           "LA-Malappuram- Tirur Taluk- Kottakkal Village – Kakkathode Bridge Reconstruction- SIA Study Draft Report"
+        ]
+      },
+      {
+        "host": "facebook.com",
+        "count": 6,
+        "texts": [
+          "Share on Facebook"
         ]
       },
       {
@@ -536,10 +538,10 @@
     ]
   },
   "score": {
-    "overall": 59,
+    "overall": 55,
     "security": 48,
-    "accessibility": 50,
-    "content": 52,
+    "accessibility": 40,
+    "content": 42,
     "gigw": 60,
     "performance": 81,
     "identity": 96
@@ -554,7 +556,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "14 critical violation(s)"
+      "ev": "13 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -565,6 +567,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://malappuram.nic.in/en/#SkipContent)"
     },
     {
       "id": "sec.hsts",
@@ -585,6 +592,11 @@
       "ev": "1 low-contrast element(s)"
     },
     {
+      "id": "a11y.labels",
+      "sev": "M",
+      "ev": "1 form control(s) without a label"
+    },
+    {
       "id": "gigw.privacy",
       "sev": "M"
     },
@@ -595,12 +607,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "20176.8665ms"
+      "ev": "21675.393999999993ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "3.9MB"
+      "ev": "4.4MB"
     },
     {
       "id": "sec.csp",
@@ -617,7 +629,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "18 moderate/minor violation(s)"
+      "ev": "17 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -636,7 +648,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.terms",
@@ -674,6 +686,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-05",
       "up": true,
@@ -740,5 +757,5 @@
       "score": 60
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

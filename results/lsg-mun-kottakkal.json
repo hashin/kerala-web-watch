@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:43:42.131Z",
-    "run": "1790905297666",
+    "at": "2026-10-06T02:16:11.250Z",
+    "run": "1791252931763",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 60,
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -97,8 +97,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "fail",
-        "ev": "8195ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -227,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "25666.915ms"
+        "ev": "17408.438ms"
       },
       {
         "id": "perf.cls",
@@ -236,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "5.8MB"
+        "ev": "5.4MB"
       },
       {
         "id": "perf.viewport",
@@ -282,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://kottakkalmunicipality.lsgkerala.gov.in/Localbody%20Map)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -539,10 +537,10 @@
     ]
   },
   "score": {
-    "overall": 67,
+    "overall": 69,
     "security": 76,
     "accessibility": 70,
-    "content": 46,
+    "content": 56,
     "gigw": 40,
     "performance": 81,
     "identity": 96
@@ -563,16 +561,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://kottakkalmunicipality.lsgkerala.gov.in/Localbody%20Map)"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "8195ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -603,12 +591,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "25666.915ms"
+      "ev": "17408.438ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "5.8MB"
+      "ev": "5.4MB"
     },
     {
       "id": "sec.csp",
@@ -664,6 +652,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 69
+    },
     {
       "d": "2026-10-05",
       "up": true,
@@ -730,5 +723,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

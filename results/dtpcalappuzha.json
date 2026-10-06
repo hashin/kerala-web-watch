@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-03T00:56:28.269Z",
-    "run": "1790988928024",
+    "at": "2026-10-06T02:24:42.927Z",
+    "run": "1791253424324",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 59,
+      "accessibility": 84,
+      "best_practices": 88,
+      "seo": 85
+    },
     "axe": {
       "critical": 0,
       "serious": 14,
@@ -48,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 1,
-      "broken": 1
+      "broken": 28
     },
     "tech": {
       "cms": null,
@@ -209,19 +214,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "84/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "5112.1615ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -234,11 +242,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -272,7 +280,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "27/30 crawled link(s) broken (https://www.dtpcalappuzha.com/about, https://www.dtpcalappuzha.com/destination, https://www.dtpcalappuzha.com/experiences, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -302,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "12 console error(s): Cannot read properties of null (reading 'add')"
+        "ev": "14 console error(s): Cannot read properties of null (reading 'add')"
       },
       {
         "id": "gigw.contact",
@@ -387,12 +396,12 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "pass"
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
       },
       {
         "id": "id.soft_404",
-        "r": "fail",
-        "ev": "a nonexistent path returned 200"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
@@ -445,12 +454,12 @@
     ]
   },
   "score": {
-    "overall": 46,
+    "overall": 42,
     "security": 8,
     "accessibility": 70,
-    "content": 42,
+    "content": 22,
     "gigw": 26,
-    "performance": 90,
+    "performance": 76,
     "identity": 72
   },
   "status": "poor",
@@ -478,6 +487,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "27/30 crawled link(s) broken (https://www.dtpcalappuzha.com/about, https://www.dtpcalappuzha.com/destination, https://www.dtpcalappuzha.com/experiences, ...)"
     },
     {
       "id": "gigw.rti",
@@ -524,6 +538,11 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "5112.1615ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "112.8MB"
@@ -562,7 +581,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "12 console error(s): Cannot read properties of null (reading 'add')"
+      "ev": "14 console error(s): Cannot read properties of null (reading 'add')"
     },
     {
       "id": "gigw.terms",
@@ -589,13 +608,17 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
     {
-      "id": "id.soft_404",
+      "id": "id.sitemap_xml",
       "sev": "L",
-      "ev": "a nonexistent path returned 200"
+      "ev": "sitemap.xml returned 404"
     },
     {
       "id": "id.third_party",
@@ -604,6 +627,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 42
+    },
     {
       "d": "2026-10-05",
       "up": true,
@@ -675,5 +703,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

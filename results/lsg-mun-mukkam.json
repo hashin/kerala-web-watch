@@ -37,18 +37,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:44:00.503Z",
-    "run": "1790905375525",
+    "at": "2026-10-06T02:16:51.251Z",
+    "run": "1791252971252",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 59,
+      "performance": 60,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 85
     },
     "axe": {
       "critical": 0,
-      "serious": 4,
+      "serious": 5,
       "moderate": 11,
       "minor": 0
     },
@@ -97,8 +97,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "fail",
-        "ev": "9244ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -176,7 +175,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "4 serious violation(s)"
+        "ev": "5 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -222,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "59/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "19165.643999999993ms"
+        "ev": "31061.68100000001ms"
       },
       {
         "id": "perf.cls",
@@ -438,6 +437,11 @@
         "texts": []
       },
       {
+        "host": "instagram.com",
+        "count": 1,
+        "texts": []
+      },
+      {
         "host": "ksmart.live",
         "count": 1,
         "texts": [
@@ -576,14 +580,9 @@
       "ev": "ml-user"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "9244ms"
-    },
-    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "4 serious violation(s)"
+      "ev": "5 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -609,7 +608,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "19165.643999999993ms"
+      "ev": "31061.68100000001ms"
     },
     {
       "id": "perf.weight",
@@ -674,6 +673,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 68
+    },
     {
       "d": "2026-10-05",
       "up": true,
@@ -740,5 +744,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

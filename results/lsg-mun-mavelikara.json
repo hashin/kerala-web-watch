@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-01T01:14:25.461Z",
-    "run": "1790817130066",
+    "at": "2026-10-06T02:17:33.002Z",
+    "run": "1791253008537",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 67,
+      "performance": 61,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 85
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "67/100"
+        "ev": "61/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "4789.7665ms"
+        "ev": "13158.895ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "3.1MB"
+        "ev": "3.5MB"
       },
       {
         "id": "perf.viewport",
@@ -281,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://welfarepension.lsgkerala.gov.in/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -550,10 +549,10 @@
     ]
   },
   "score": {
-    "overall": 67,
+    "overall": 68,
     "security": 76,
     "accessibility": 70,
-    "content": 46,
+    "content": 56,
     "gigw": 36,
     "performance": 81,
     "identity": 96
@@ -574,11 +573,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://welfarepension.lsgkerala.gov.in/)"
     },
     {
       "id": "a11y.axe_serious",
@@ -609,12 +603,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "4789.7665ms"
+      "ev": "13158.895ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "3.1MB"
+      "ev": "3.5MB"
     },
     {
       "id": "sec.csp",
@@ -674,6 +668,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-06",
+      "up": true,
+      "score": 68
+    },
     {
       "d": "2026-10-05",
       "up": true,
@@ -740,5 +739,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
