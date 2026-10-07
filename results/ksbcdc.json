@@ -29,11 +29,11 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-10-06T02:25:40.409Z",
-    "run": "1791253469807",
+    "at": "2026-10-07T01:35:47.848Z",
+    "run": "1791336869589",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 34,
+      "performance": 46,
       "accessibility": 67,
       "best_practices": 69,
       "seo": 77
@@ -90,7 +90,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "5165ms"
+        "ev": "4682ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -217,22 +217,21 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "34/100"
+        "ev": "46/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "23497.637500000008ms"
+        "ev": "23732.43ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.47"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "8.3MB"
+        "ev": "8.1MB"
       },
       {
         "id": "perf.viewport",
@@ -307,7 +306,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "11 console error(s): Cannot read properties of null (reading 'addEventListener')"
+        "ev": "11 console error(s): Access to font at 'e:xampphtdocsKSBCDC/wp-content/fonts/montserrat/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXx-p7K4GLs.woff' from origin 'https://ksbcdc.com' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https."
       },
       {
         "id": "gigw.contact",
@@ -504,7 +503,7 @@
     "accessibility": 30,
     "content": 52,
     "gigw": 36,
-    "performance": 62,
+    "performance": 66,
     "identity": 80
   },
   "status": "poor",
@@ -541,7 +540,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "5165ms"
+      "ev": "4682ms"
     },
     {
       "id": "sec.hsts",
@@ -590,12 +589,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "23497.637500000008ms"
+      "ev": "23732.43ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "8.3MB"
+      "ev": "8.1MB"
     },
     {
       "id": "perf.tap_targets",
@@ -631,7 +630,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "11 console error(s): Cannot read properties of null (reading 'addEventListener')"
+      "ev": "11 console error(s): Access to font at 'e:xampphtdocsKSBCDC/wp-content/fonts/montserrat/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXx-p7K4GLs.woff' from origin 'https://ksbcdc.com' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https."
     },
     {
       "id": "gigw.feedback",
@@ -658,11 +657,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.47"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -672,6 +666,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-07",
+      "up": true,
+      "score": 43
+    },
     {
       "d": "2026-10-06",
       "up": true,
@@ -748,5 +747,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

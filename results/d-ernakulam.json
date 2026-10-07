@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-06T01:52:20.329Z",
-    "run": "1791251466041",
+    "at": "2026-10-07T00:57:37.325Z",
+    "run": "1791334574562",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 53,
+      "performance": 52,
       "accessibility": 89,
       "best_practices": 73,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "53/100"
+        "ev": "52/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "22284.601500000004ms"
+        "ev": "31646.381512137617ms"
       },
       {
         "id": "perf.cls",
@@ -280,7 +280,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://ernakulam.nic.in/en/parliament/)"
+        "ev": "2/30 crawled link(s) broken (https://ernakulam.nic.in/en/#SkipContent, https://ernakulam.nic.in/en/who-is-who/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -572,7 +572,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://ernakulam.nic.in/en/parliament/)"
+      "ev": "2/30 crawled link(s) broken (https://ernakulam.nic.in/en/#SkipContent, https://ernakulam.nic.in/en/who-is-who/)"
     },
     {
       "id": "sec.hsts",
@@ -603,7 +603,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "22284.601500000004ms"
+      "ev": "31646.381512137617ms"
     },
     {
       "id": "perf.weight",
@@ -678,6 +678,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-07",
+      "up": true,
+      "score": 59
+    },
+    {
       "d": "2026-10-06",
       "up": true,
       "score": 59
@@ -748,5 +753,5 @@
       "score": 63
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

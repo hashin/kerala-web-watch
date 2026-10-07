@@ -29,14 +29,14 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-10-06T02:34:05.942Z",
-    "run": "1791254005883",
+    "at": "2026-10-07T01:32:09.874Z",
+    "run": "1791336646460",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 28,
-      "accessibility": 84,
-      "best_practices": 92,
-      "seo": 69
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
     },
     "axe": {
       "critical": 0,
@@ -51,7 +51,7 @@
     },
     "tech": {
       "cms": null,
-      "server": "Apache",
+      "server": null,
       "jquery": null
     },
     "checks": [
@@ -61,15 +61,16 @@
       },
       {
         "id": "avail.connect",
-        "r": "pass"
+        "r": "fail",
+        "ev": "connect_fail"
       },
       {
         "id": "avail.status",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.parked",
@@ -90,8 +91,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "4085ms"
+        "r": "na"
       },
       {
         "id": "avail.geo_blocked",
@@ -103,7 +103,7 @@
       },
       {
         "id": "sec.https",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.http_redirect",
@@ -111,15 +111,15 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.tls_version",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.hsts",
@@ -127,7 +127,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.csp",
@@ -207,22 +207,20 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "84/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "28/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "22587.999499999994ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.79"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -234,7 +232,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -377,20 +375,19 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "id.robots",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.soft_404",
-        "r": "fail",
-        "ev": "a nonexistent path returned 200"
+        "r": "na"
       },
       {
         "id": "id.canonical",
@@ -421,6 +418,11 @@
   "status": "broken",
   "issues": [
     {
+      "id": "avail.connect",
+      "sev": "C",
+      "ev": "connect_fail"
+    },
+    {
       "id": "avail.blank",
       "sev": "C",
       "ev": "0 visible characters"
@@ -450,11 +452,6 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "kstmuseum.com"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "4085ms"
     },
     {
       "id": "sec.hsts",
@@ -495,9 +492,8 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "22587.999499999994ms"
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -562,22 +558,8 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.79"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
-    },
-    {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
-      "id": "id.soft_404",
-      "sev": "L",
-      "ev": "a nonexistent path returned 200"
     },
     {
       "id": "id.charset_doctype",
@@ -594,6 +576,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-07",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-06",
       "up": false,
@@ -675,5 +662,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

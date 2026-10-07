@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-27T00:12:15.669Z",
-    "run": "1790467876676",
+    "at": "2026-10-07T01:24:17.231Z",
+    "run": "1791336202321",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 0,
@@ -56,7 +56,7 @@
       "broken": 0
     },
     "tech": {
-      "cms": "WordPress 7.1.2",
+      "cms": "WordPress 7.1.3",
       "server": "Apache",
       "jquery": null
     },
@@ -154,7 +154,7 @@
       {
         "id": "sec.server_banner",
         "r": "fail",
-        "ev": "PHP/8.3.32"
+        "ev": "PHP/8.3.33"
       },
       {
         "id": "sec.vuln_js",
@@ -163,6 +163,10 @@
       {
         "id": "sec.safe_browsing",
         "r": "na"
+      },
+      {
+        "id": "sec.injected_links",
+        "r": "pass"
       },
       {
         "id": "a11y.axe_critical",
@@ -401,7 +405,7 @@
       {
         "id": "id.tech",
         "r": "pass",
-        "ev": "WordPress 7.1.2"
+        "ev": "WordPress 7.1.3"
       },
       {
         "id": "id.third_party",
@@ -509,7 +513,7 @@
     {
       "id": "sec.server_banner",
       "sev": "L",
-      "ev": "PHP/8.3.32"
+      "ev": "PHP/8.3.33"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -558,6 +562,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-07",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-06",
       "up": false,
@@ -609,5 +618,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-06T02:09:48.298Z",
-    "run": "1791252527104",
+    "at": "2026-10-07T01:24:31.383Z",
+    "run": "1791336197309",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 60,
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 20,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -226,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "47629.344ms"
+        "ev": "21989.37999999999ms"
       },
       {
         "id": "perf.cls",
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://welfarepension.lsgkerala.gov.in/Schemes.aspx)"
       },
       {
         "id": "content.broken_pdfs",
@@ -317,7 +318,7 @@
       },
       {
         "id": "gigw.feedback",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.sitemap",
@@ -564,11 +565,11 @@
     ]
   },
   "score": {
-    "overall": 68,
+    "overall": 67,
     "security": 76,
     "accessibility": 70,
-    "content": 56,
-    "gigw": 36,
+    "content": 46,
+    "gigw": 40,
     "performance": 76,
     "identity": 96
   },
@@ -588,6 +589,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://welfarepension.lsgkerala.gov.in/Schemes.aspx)"
     },
     {
       "id": "a11y.axe_serious",
@@ -618,7 +624,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "47629.344ms"
+      "ev": "21989.37999999999ms"
     },
     {
       "id": "perf.weight",
@@ -646,10 +652,6 @@
     },
     {
       "id": "content.meta_desc",
-      "sev": "L"
-    },
-    {
-      "id": "gigw.feedback",
       "sev": "L"
     },
     {
@@ -683,6 +685,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-07",
+      "up": true,
+      "score": 67
+    },
     {
       "d": "2026-10-06",
       "up": true,
@@ -754,5 +761,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

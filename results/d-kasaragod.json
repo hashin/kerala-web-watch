@@ -35,20 +35,20 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-06T01:53:44.829Z",
-    "run": "1791251565421",
+    "at": "2026-10-07T00:58:46.525Z",
+    "run": "1791334637512",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 49,
-      "accessibility": 90,
+      "performance": 50,
+      "accessibility": 92,
       "best_practices": 73,
       "seo": 92
     },
     "axe": {
-      "critical": 13,
-      "serious": 1,
+      "critical": 11,
+      "serious": 0,
       "moderate": 1,
-      "minor": 17
+      "minor": 14
     },
     "crawl": {
       "pages": 30,
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3921ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -170,17 +169,16 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "13 critical violation(s)"
+        "ev": "11 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
-        "r": "fail",
-        "ev": "1 serious violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "18 moderate/minor violation(s)"
+        "ev": "15 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -192,8 +190,7 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "1 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
@@ -202,7 +199,8 @@
       },
       {
         "id": "a11y.labels",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 form control(s) without a label"
       },
       {
         "id": "a11y.skip_link",
@@ -216,17 +214,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "90/100"
+        "ev": "92/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "49/100"
+        "ev": "50/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "18074.512499999997ms"
+        "ev": "18369.564000000002ms"
       },
       {
         "id": "perf.cls",
@@ -234,8 +232,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "7.8MB"
+        "r": "fail",
+        "ev": "15.4MB"
       },
       {
         "id": "perf.viewport",
@@ -310,7 +308,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "7 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+        "ev": "17 console error(s): Refused to apply style from 'https://kasargod.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       },
       {
         "id": "gigw.contact",
@@ -416,20 +414,15 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-041NGNDMW5&amp;cx=c&amp;gtm=4e6a21, https://www.googletagmanager.com/gtag/js?id=UA-131905579-1"
+        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-041NGNDMW5&amp;cx=c&amp;gtm=4e6a51, https://www.googletagmanager.com/gtag/js?id=UA-131905579-1"
       }
     ],
     "screenshot": {
-      "desktop": "2026-09-21.webp",
-      "mobile": "2026-09-21-m.webp",
-      "phash": "ff1f01000000bfff"
+      "desktop": "d-kasaragod.webp",
+      "mobile": "d-kasaragod-m.webp",
+      "phash": "ffff3f00081cffff"
     },
     "outlinks": [
-      {
-        "host": "facebook.com",
-        "count": 1,
-        "texts": []
-      },
       {
         "host": "kerala.gov.in",
         "count": 10,
@@ -443,6 +436,13 @@
         "host": "digitalindia.gov.in",
         "count": 2,
         "texts": []
+      },
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": [
+          "Facebook"
+        ]
       },
       {
         "host": "youtube.com",
@@ -524,12 +524,12 @@
     ]
   },
   "score": {
-    "overall": 68,
+    "overall": 70,
     "security": 80,
-    "accessibility": 50,
+    "accessibility": 60,
     "content": 56,
     "gigw": 60,
-    "performance": 81,
+    "performance": 76,
     "identity": 96
   },
   "status": "needs-work",
@@ -542,7 +542,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "13 critical violation(s)"
+      "ev": "11 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -555,19 +555,9 @@
       "ev": "ml-IN"
     },
     {
-      "id": "avail.ttfb",
+      "id": "a11y.labels",
       "sev": "M",
-      "ev": "3921ms"
-    },
-    {
-      "id": "a11y.axe_serious",
-      "sev": "M",
-      "ev": "1 serious violation(s)"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "1 low-contrast element(s)"
+      "ev": "1 form control(s) without a label"
     },
     {
       "id": "gigw.privacy",
@@ -580,17 +570,17 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "18074.512499999997ms"
+      "ev": "18369.564000000002ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.8MB"
+      "ev": "15.4MB"
     },
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "18 moderate/minor violation(s)"
+      "ev": "15 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -605,7 +595,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "7 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      "ev": "17 console error(s): Refused to apply style from 'https://kasargod.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
     },
     {
       "id": "gigw.terms",
@@ -639,10 +629,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-041NGNDMW5&amp;cx=c&amp;gtm=4e6a21, https://www.googletagmanager.com/gtag/js?id=UA-131905579-1"
+      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-041NGNDMW5&amp;cx=c&amp;gtm=4e6a51, https://www.googletagmanager.com/gtag/js?id=UA-131905579-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-07",
+      "up": true,
+      "score": 70
+    },
     {
       "d": "2026-10-06",
       "up": true,
@@ -714,5 +709,5 @@
       "score": 69
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

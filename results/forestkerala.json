@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-06T01:57:17.353Z",
-    "run": "1791251720916",
+    "at": "2026-10-07T01:07:00.218Z",
+    "run": "1791335000704",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
-      "accessibility": 73,
-      "best_practices": 88,
-      "seo": 85
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
     },
     "axe": {
       "critical": 9,
@@ -53,11 +53,11 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "WordPress 6.6.2",
-      "server": "",
+      "server": null,
       "jquery": null
     },
     "checks": [
@@ -67,15 +67,16 @@
       },
       {
         "id": "avail.connect",
-        "r": "pass"
+        "r": "fail",
+        "ev": "timeout"
       },
       {
         "id": "avail.status",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.parked",
@@ -95,8 +96,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "5724ms"
+        "r": "na"
       },
       {
         "id": "avail.geo_blocked",
@@ -108,7 +108,7 @@
       },
       {
         "id": "sec.https",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.http_redirect",
@@ -120,7 +120,8 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "warn",
+        "ev": "29 days left"
       },
       {
         "id": "sec.tls_version",
@@ -132,8 +133,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "src=\"http://localhost/kf/wp-content/uploads/2023/11/videobg.mp4\""
+        "r": "na"
       },
       {
         "id": "sec.csp",
@@ -218,26 +218,25 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "73/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "28994.719499999992ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "7.0MB"
+        "ev": "3.6MB"
       },
       {
         "id": "perf.viewport",
@@ -283,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -312,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "16 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+        "ev": "10 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
       },
       {
         "id": "gigw.contact",
@@ -505,21 +505,18 @@
       }
     ]
   },
-  "score": {
-    "overall": 53,
-    "security": 38,
-    "accessibility": 40,
-    "content": 48,
-    "gigw": 58,
-    "performance": 71,
-    "identity": 100
-  },
-  "status": "needs-work",
+  "score": null,
+  "status": "down",
   "issues": [
     {
-      "id": "sec.mixed_content",
+      "id": "avail.connect",
+      "sev": "C",
+      "ev": "timeout"
+    },
+    {
+      "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "src=\"http://localhost/kf/wp-content/uploads/2023/11/videobg.mp4\""
+      "ev": "29 days left"
     },
     {
       "id": "sec.vuln_js",
@@ -542,9 +539,9 @@
       "ev": "ml-IN"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "5724ms"
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://kerala.gov.in/)"
     },
     {
       "id": "sec.hsts",
@@ -578,14 +575,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "28994.719499999992ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.0MB"
+      "ev": "3.6MB"
     },
     {
       "id": "perf.tap_targets",
@@ -629,7 +621,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "16 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      "ev": "10 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
     },
     {
       "id": "gigw.feedback",
@@ -649,6 +641,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-07",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-06",
       "up": true,
@@ -720,5 +717,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

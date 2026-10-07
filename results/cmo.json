@@ -29,14 +29,14 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-10-06T01:52:45.419Z",
-    "run": "1791251464056",
+    "at": "2026-10-07T00:57:52.436Z",
+    "run": "1791334589084",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 49,
+      "accessibility": 79,
+      "best_practices": 88,
+      "seo": 85
     },
     "axe": {
       "critical": 2,
@@ -90,7 +90,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "3484ms"
+        "ev": "4378ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -211,20 +211,21 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "79/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "49/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "35696.445999999996ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -458,12 +459,12 @@
     ]
   },
   "score": {
-    "overall": 48,
+    "overall": 47,
     "security": 62,
     "accessibility": 40,
     "content": 32,
     "gigw": 0,
-    "performance": 81,
+    "performance": 71,
     "identity": 100
   },
   "status": "poor",
@@ -504,7 +505,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "3484ms"
+      "ev": "4378ms"
     },
     {
       "id": "sec.hsts",
@@ -540,6 +541,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "35696.445999999996ms"
     },
     {
       "id": "perf.weight",
@@ -617,6 +623,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-07",
+      "up": true,
+      "score": 47
+    },
+    {
       "d": "2026-10-06",
       "up": true,
       "score": 48
@@ -692,5 +703,5 @@
       "score": 48
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

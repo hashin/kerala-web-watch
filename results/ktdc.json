@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-06T02:06:19.474Z",
-    "run": "1791252308395",
+    "at": "2026-10-07T01:22:09.645Z",
+    "run": "1791336058615",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 56,
+      "accessibility": 75,
+      "best_practices": 96,
+      "seo": 75
+    },
     "axe": {
       "critical": 1,
       "serious": 81,
@@ -209,24 +214,27 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "75/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "56/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "13367.421999999999ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "14.7MB"
+        "ev": "15.0MB"
       },
       {
         "id": "perf.viewport",
@@ -234,11 +242,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -303,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "28 console error(s): Connecting to 'https://fonts.googleapis.com/css?family=Prata&display=swap' violates the following Content Security Policy directive: \"connect-src 'self' https://bookingjini.info https://kernel.bookingjini.com https://stats.g.doubleclick.net https://www.google-analytics.com https://maps.googleapis.com https://maps.gstatic.com\". The action has been blocked."
+        "ev": "28 console error(s): Connecting to 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' violates the following Content Security Policy directive: \"connect-src 'self' https://bookingjini.info https://kernel.bookingjini.com https://stats.g.doubleclick.net https://www.google-analytics.com https://maps.googleapis.com https://maps.gstatic.com\". The action has been blocked."
       },
       {
         "id": "gigw.contact",
@@ -461,12 +469,12 @@
     ]
   },
   "score": {
-    "overall": 59,
+    "overall": 57,
     "security": 90,
     "accessibility": 40,
     "content": 32,
     "gigw": 32,
-    "performance": 90,
+    "performance": 76,
     "identity": 76
   },
   "status": "needs-work",
@@ -537,9 +545,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "13367.421999999999ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "14.7MB"
+      "ev": "15.0MB"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -563,7 +576,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "28 console error(s): Connecting to 'https://fonts.googleapis.com/css?family=Prata&display=swap' violates the following Content Security Policy directive: \"connect-src 'self' https://bookingjini.info https://kernel.bookingjini.com https://stats.g.doubleclick.net https://www.google-analytics.com https://maps.googleapis.com https://maps.gstatic.com\". The action has been blocked."
+      "ev": "28 console error(s): Connecting to 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' violates the following Content Security Policy directive: \"connect-src 'self' https://bookingjini.info https://kernel.bookingjini.com https://stats.g.doubleclick.net https://www.google-analytics.com https://maps.googleapis.com https://maps.gstatic.com\". The action has been blocked."
     },
     {
       "id": "gigw.terms",
@@ -594,6 +607,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.soft_404",
       "sev": "L",
       "ev": "a nonexistent path returned 200"
@@ -609,6 +626,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-07",
+      "up": true,
+      "score": 57
+    },
     {
       "d": "2026-10-06",
       "up": true,
@@ -685,5 +707,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

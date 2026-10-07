@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-06T02:07:24.900Z",
-    "run": "1791252399679",
+    "at": "2026-10-07T01:23:17.308Z",
+    "run": "1791336129647",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 61,
@@ -46,14 +46,14 @@
     },
     "axe": {
       "critical": 0,
-      "serious": 4,
+      "serious": 5,
       "moderate": 10,
       "minor": 0
     },
     "crawl": {
-      "pages": 28,
+      "pages": 30,
       "pdfs": 0,
-      "broken": 3
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -173,7 +173,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "4 serious violation(s)"
+        "ev": "5 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -224,7 +224,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "24007.831499999997ms"
+        "ev": "17618.03ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +233,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "9.8MB"
+        "ev": "10.1MB"
       },
       {
         "id": "perf.viewport",
@@ -279,8 +279,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "3/28 crawled link(s) broken (http://thrissurcorporation.web.lsgkerala.gov.in/contact-us, http://thrissurcorporation.web.lsgkerala.gov.in/terms, http://thrissurcorporation.web.lsgkerala.gov.in/support)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -424,7 +423,19 @@
     },
     "outlinks": [
       {
+        "host": "goo.gl",
+        "count": 1,
+        "texts": [
+          "Thrissur"
+        ]
+      },
+      {
         "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "instagram.com",
         "count": 1,
         "texts": []
       },
@@ -443,20 +454,20 @@
         ]
       },
       {
+        "host": "kerala.gov.in",
+        "count": 4,
+        "texts": [
+          "Voters list",
+          "State Government",
+          "E-Tender"
+        ]
+      },
+      {
         "host": "india.gov.in",
         "count": 2,
         "texts": [
           "Central Government",
           "Govt. of India"
-        ]
-      },
-      {
-        "host": "kerala.gov.in",
-        "count": 3,
-        "texts": [
-          "State Government",
-          "E-Tender",
-          "Govt. of Kerala"
         ]
       },
       {
@@ -552,11 +563,6 @@
       "ev": "ml-user"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "3/28 crawled link(s) broken (http://thrissurcorporation.web.lsgkerala.gov.in/contact-us, http://thrissurcorporation.web.lsgkerala.gov.in/terms, http://thrissurcorporation.web.lsgkerala.gov.in/support)"
-    },
-    {
       "id": "gigw.rti",
       "sev": "H"
     },
@@ -567,7 +573,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "4 serious violation(s)"
+      "ev": "5 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -597,12 +603,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "24007.831499999997ms"
+      "ev": "17618.03ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "9.8MB"
+      "ev": "10.1MB"
     },
     {
       "id": "sec.csp",
@@ -666,6 +672,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-07",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-06",
       "up": false,
@@ -737,5 +748,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

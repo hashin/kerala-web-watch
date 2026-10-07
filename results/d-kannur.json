@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-06T01:54:43.491Z",
-    "run": "1791251596033",
+    "at": "2026-10-07T00:57:18.165Z",
+    "run": "1791334572725",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 58,
+      "performance": 56,
       "accessibility": 89,
       "best_practices": 92,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 2
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3736ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -220,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "58/100"
+        "ev": "56/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "13121.318000000003ms"
+        "ev": "8808.63ms"
       },
       {
         "id": "perf.cls",
@@ -280,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "2/30 crawled link(s) broken (https://kannur.nic.in/en/#SkipContent, https://kannur.nic.in/en/history/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -530,10 +530,10 @@
     ]
   },
   "score": {
-    "overall": 58,
+    "overall": 60,
     "security": 48,
     "accessibility": 50,
-    "content": 46,
+    "content": 56,
     "gigw": 60,
     "performance": 81,
     "identity": 96
@@ -561,9 +561,9 @@
       "ev": "ml-IN"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "2/30 crawled link(s) broken (https://kannur.nic.in/en/#SkipContent, https://kannur.nic.in/en/history/)"
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3736ms"
     },
     {
       "id": "sec.hsts",
@@ -594,7 +594,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "13121.318000000003ms"
+      "ev": "8808.63ms"
     },
     {
       "id": "perf.weight",
@@ -669,6 +669,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-07",
+      "up": true,
+      "score": 60
+    },
+    {
       "d": "2026-10-06",
       "up": true,
       "score": 58
@@ -739,5 +744,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

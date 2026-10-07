@@ -35,20 +35,20 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-06T01:53:56.269Z",
-    "run": "1791251577384",
+    "at": "2026-10-07T00:58:45.299Z",
+    "run": "1791334657327",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 47,
-      "accessibility": 87,
-      "best_practices": 77,
+      "performance": 56,
+      "accessibility": 92,
+      "best_practices": 73,
       "seo": 83
     },
     "axe": {
       "critical": 7,
-      "serious": 5,
+      "serious": 3,
       "moderate": 0,
-      "minor": 13
+      "minor": 12
     },
     "crawl": {
       "pages": 30,
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3552ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -175,12 +174,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "5 serious violation(s)"
+        "ev": "3 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "13 moderate/minor violation(s)"
+        "ev": "12 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -193,7 +192,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "5 low-contrast element(s)"
+        "ev": "3 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -201,7 +200,8 @@
       },
       {
         "id": "a11y.labels",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 form control(s) without a label"
       },
       {
         "id": "a11y.skip_link",
@@ -215,17 +215,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "87/100"
+        "ev": "92/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "47/100"
+        "ev": "56/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10361.069000000003ms"
+        "ev": "7018.565499999999ms"
       },
       {
         "id": "perf.cls",
@@ -234,7 +234,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "6.6MB"
+        "ev": "7.1MB"
       },
       {
         "id": "perf.viewport",
@@ -309,7 +309,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -428,7 +428,7 @@
         "host": "kerala.gov.in",
         "count": 7,
         "texts": [
-          "കേരള സർക്കാർ",
+          "കേരളം  സർക്കാർ",
           "SIR 2026 ASD List",
           "AADHAAR ENABLED PDS"
         ]
@@ -529,9 +529,9 @@
     ]
   },
   "score": {
-    "overall": 61,
+    "overall": 58,
     "security": 48,
-    "accessibility": 54,
+    "accessibility": 44,
     "content": 56,
     "gigw": 60,
     "performance": 81,
@@ -560,11 +560,6 @@
       "ev": "ml-IN"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3552ms"
-    },
-    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -575,12 +570,17 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "5 serious violation(s)"
+      "ev": "3 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "5 low-contrast element(s)"
+      "ev": "3 low-contrast element(s)"
+    },
+    {
+      "id": "a11y.labels",
+      "sev": "M",
+      "ev": "1 form control(s) without a label"
     },
     {
       "id": "gigw.privacy",
@@ -593,12 +593,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10361.069000000003ms"
+      "ev": "7018.565499999999ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "6.6MB"
+      "ev": "7.1MB"
     },
     {
       "id": "sec.csp",
@@ -615,7 +615,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "13 moderate/minor violation(s)"
+      "ev": "12 moderate/minor violation(s)"
     },
     {
       "id": "a11y.keyboard",
@@ -625,7 +625,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.terms",
@@ -667,6 +667,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-07",
+      "up": true,
+      "score": 58
+    },
     {
       "d": "2026-10-06",
       "up": true,
@@ -738,5 +743,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

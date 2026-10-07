@@ -37,12 +37,17 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-06T02:00:55.375Z",
-    "run": "1791251933180",
+    "at": "2026-10-07T01:07:06.502Z",
+    "run": "1791335100008",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 33,
+      "accessibility": 85,
+      "best_practices": 100,
+      "seo": 85
+    },
     "axe": {
-      "critical": 3,
+      "critical": 4,
       "serious": 25,
       "moderate": 3,
       "minor": 1
@@ -50,10 +55,10 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 3
+      "broken": 4
     },
     "tech": {
-      "cms": "WordPress 6.1.14",
+      "cms": "WordPress 6.1.15",
       "server": "nginx",
       "jquery": null
     },
@@ -166,7 +171,7 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "3 critical violation(s)"
+        "ev": "4 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
@@ -185,7 +190,7 @@
       {
         "id": "a11y.alt",
         "r": "fail",
-        "ev": "2 image(s) missing alt text"
+        "ev": "3 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
@@ -211,23 +216,27 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "85/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "33/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "22111.024000000012ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3.1MB"
       },
       {
         "id": "perf.viewport",
@@ -235,11 +244,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -273,7 +282,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "3/30 crawled link(s) broken (https://eoffice.kerala.gov.in/eFileCIKWA/, https://pravahak.kwa.kerala.gov.in/, https://itmission.kerala.gov.in/)"
+        "ev": "4/30 crawled link(s) broken (https://eoffice.kerala.gov.in/eFileCIKWA/, https://pravahak.kwa.kerala.gov.in/, https://kerala.gov.in/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -402,7 +411,7 @@
       {
         "id": "id.tech",
         "r": "pass",
-        "ev": "WordPress 6.1.14"
+        "ev": "WordPress 6.1.15"
       },
       {
         "id": "id.third_party",
@@ -469,12 +478,12 @@
     ]
   },
   "score": {
-    "overall": 63,
+    "overall": 61,
     "security": 62,
     "accessibility": 50,
     "content": 66,
     "gigw": 32,
-    "performance": 100,
+    "performance": 81,
     "identity": 100
   },
   "status": "needs-work",
@@ -487,7 +496,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "3 critical violation(s)"
+      "ev": "4 critical violation(s)"
     },
     {
       "id": "content.legacy_font",
@@ -497,7 +506,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "3/30 crawled link(s) broken (https://eoffice.kerala.gov.in/eFileCIKWA/, https://pravahak.kwa.kerala.gov.in/, https://itmission.kerala.gov.in/)"
+      "ev": "4/30 crawled link(s) broken (https://eoffice.kerala.gov.in/eFileCIKWA/, https://pravahak.kwa.kerala.gov.in/, https://kerala.gov.in/, ...)"
     },
     {
       "id": "gigw.rti",
@@ -515,7 +524,7 @@
     {
       "id": "a11y.alt",
       "sev": "M",
-      "ev": "2 image(s) missing alt text"
+      "ev": "3 image(s) missing alt text"
     },
     {
       "id": "gigw.privacy",
@@ -524,6 +533,16 @@
     {
       "id": "gigw.ownership",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "22111.024000000012ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "3.1MB"
     },
     {
       "id": "sec.csp",
@@ -579,9 +598,18 @@
     {
       "id": "gigw.help",
       "sev": "L"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-07",
+      "up": true,
+      "score": 61
+    },
     {
       "d": "2026-10-06",
       "up": true,
@@ -658,5 +686,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

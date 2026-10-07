@@ -37,13 +37,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-06T02:25:14.100Z",
-    "run": "1791253442575",
+    "at": "2026-10-07T01:21:05.685Z",
+    "run": "1791335993649",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 64,
       "accessibility": 83,
-      "best_practices": 96,
+      "best_practices": 92,
       "seo": 85
     },
     "axe": {
@@ -226,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7498.324ms"
+        "ev": "7473.272000000001ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "34.6MB"
+        "ev": "34.5MB"
       },
       {
         "id": "perf.viewport",
@@ -309,7 +309,8 @@
       },
       {
         "id": "content.console_errors",
-        "r": "pass"
+        "r": "fail",
+        "ev": "2 console error(s): Failed to load resource: the server responded with a status of 403 ()"
       },
       {
         "id": "gigw.contact",
@@ -497,7 +498,7 @@
     "overall": 54,
     "security": 48,
     "accessibility": 46,
-    "content": 56,
+    "content": 52,
     "gigw": 32,
     "performance": 76,
     "identity": 100
@@ -566,12 +567,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7498.324ms"
+      "ev": "7473.272000000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "34.6MB"
+      "ev": "34.5MB"
     },
     {
       "id": "sec.csp",
@@ -593,6 +594,11 @@
     {
       "id": "content.meta_desc",
       "sev": "L"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "2 console error(s): Failed to load resource: the server responded with a status of 403 ()"
     },
     {
       "id": "gigw.terms",
@@ -632,6 +638,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-07",
+      "up": true,
+      "score": 54
+    },
     {
       "d": "2026-10-06",
       "up": true,
@@ -683,5 +694,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

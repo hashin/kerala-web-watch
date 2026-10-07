@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-06T02:26:27.069Z",
-    "run": "1791253514527",
+    "at": "2026-10-07T01:34:18.945Z",
+    "run": "1791336813350",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 35,
+      "performance": 23,
       "accessibility": 95,
       "best_practices": 78,
       "seo": 77
@@ -51,8 +51,8 @@
       "minor": 0
     },
     "crawl": {
-      "pages": 23,
-      "pdfs": 20,
+      "pages": 22,
+      "pdfs": 1,
       "broken": 0
     },
     "tech": {
@@ -92,11 +92,12 @@
       {
         "id": "avail.under_construction",
         "r": "warn",
-        "ev": "\"coming soon\" alongside 4567 other characters"
+        "ev": "\"coming soon\" alongside 2457 other characters"
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4115ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -219,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "35/100"
+        "ev": "23/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6703.215ms"
+        "ev": "9850.669499999998ms"
       },
       {
         "id": "perf.cls",
@@ -309,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/1f293754/www-widgetapi.vflset/www-widgetapi.js' from origin 'http://keralasangeethanatakaakademi.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/1b3be681/www-widgetapi.vflset/www-widgetapi.js' from origin 'http://keralasangeethanatakaakademi.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -383,7 +384,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "46 days left"
+        "ev": "45 days left"
       },
       {
         "id": "id.www_consistency",
@@ -467,7 +468,7 @@
     {
       "id": "avail.under_construction",
       "sev": "H",
-      "ev": "\"coming soon\" alongside 4567 other characters"
+      "ev": "\"coming soon\" alongside 2457 other characters"
     },
     {
       "id": "content.last_updated",
@@ -487,7 +488,12 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "46 days left"
+      "ev": "45 days left"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "4115ms"
     },
     {
       "id": "sec.hsts",
@@ -530,7 +536,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6703.215ms"
+      "ev": "9850.669499999998ms"
     },
     {
       "id": "perf.weight",
@@ -566,7 +572,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/1f293754/www-widgetapi.vflset/www-widgetapi.js' from origin 'http://keralasangeethanatakaakademi.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/1b3be681/www-widgetapi.vflset/www-widgetapi.js' from origin 'http://keralasangeethanatakaakademi.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -607,6 +613,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-07",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-06",
       "up": false,
@@ -678,5 +689,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

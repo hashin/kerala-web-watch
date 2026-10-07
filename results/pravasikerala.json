@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-06T02:18:04.377Z",
-    "run": "1791252949699",
+    "at": "2026-10-07T01:27:20.728Z",
+    "run": "1791336315648",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 31,
+      "accessibility": 84,
+      "best_practices": 92,
+      "seo": 92
+    },
     "axe": {
       "critical": 0,
       "serious": 24,
@@ -90,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3288ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -209,24 +213,28 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "84/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "31/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "45312.39749999996ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.89"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "54.5MB"
+        "ev": "51.1MB"
       },
       {
         "id": "perf.viewport",
@@ -234,11 +242,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -412,7 +420,7 @@
     "screenshot": {
       "desktop": "pravasikerala.webp",
       "mobile": "pravasikerala-m.webp",
-      "phash": "ffffff0000ff0000"
+      "phash": "ffffe7c1c1c10000"
     },
     "outlinks": [
       {
@@ -455,12 +463,12 @@
     ]
   },
   "score": {
-    "overall": 70,
+    "overall": 68,
     "security": 76,
     "accessibility": 52,
     "content": 86,
     "gigw": 60,
-    "performance": 90,
+    "performance": 72,
     "identity": 72
   },
   "status": "needs-work",
@@ -479,11 +487,6 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "pravasikerala.org"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3288ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -509,9 +512,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "45312.39749999996ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "54.5MB"
+      "ev": "51.1MB"
     },
     {
       "id": "sec.csp",
@@ -552,6 +560,15 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.89"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -571,6 +588,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-07",
+      "up": true,
+      "score": 68
+    },
     {
       "d": "2026-10-06",
       "up": true,
@@ -647,5 +669,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

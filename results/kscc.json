@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-06T02:28:06.511Z",
-    "run": "1791253640100",
+    "at": "2026-10-07T01:30:46.458Z",
+    "run": "1791336601058",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 20,
+      "performance": 27,
       "accessibility": 90,
       "best_practices": 77,
       "seo": 92
@@ -56,7 +56,7 @@
       "broken": 0
     },
     "tech": {
-      "cms": "WordPress 7.1.2",
+      "cms": "WordPress 7.1.3",
       "server": "LiteSpeed",
       "jquery": null
     },
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3766ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -220,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "20/100"
+        "ev": "27/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6692.5685ms"
+        "ev": "6359.187ms"
       },
       {
         "id": "perf.cls",
@@ -381,7 +382,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "54 days left"
+        "ev": "53 days left"
       },
       {
         "id": "id.www_consistency",
@@ -410,7 +411,7 @@
       {
         "id": "id.tech",
         "r": "pass",
-        "ev": "WordPress 7.1.2"
+        "ev": "WordPress 7.1.3"
       },
       {
         "id": "id.third_party",
@@ -463,7 +464,12 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "54 days left"
+      "ev": "53 days left"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3766ms"
     },
     {
       "id": "sec.hsts",
@@ -501,7 +507,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6692.5685ms"
+      "ev": "6359.187ms"
     },
     {
       "id": "sec.csp",
@@ -578,6 +584,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-07",
+      "up": true,
+      "score": 52
+    },
+    {
       "d": "2026-10-06",
       "up": true,
       "score": 52
@@ -653,5 +664,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

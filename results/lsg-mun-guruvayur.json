@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-06T02:12:05.676Z",
-    "run": "1791252686586",
+    "at": "2026-10-07T01:15:10.690Z",
+    "run": "1791335670533",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 63,
+      "performance": 60,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 85
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "63/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10638.09ms"
+        "ev": "12126.155499999997ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "4.4MB"
+        "ev": "4.5MB"
       },
       {
         "id": "perf.viewport",
@@ -281,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://guruvayoormunicipality.lsgkerala.gov.in/ml/%2569%256E%2564%2565%2578%252E%2570%2568%2570%253C%2553%2563%2552%2569%2550%2574%2520%253E%254A%2533%2536%2546%25289303%2529%253C%252F%2573%2543%2572%2569%2570%2554%253E/ml/user/register)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -426,6 +425,13 @@
     },
     "outlinks": [
       {
+        "host": "goo.gl",
+        "count": 1,
+        "texts": [
+          "Guruvayur"
+        ]
+      },
+      {
         "host": "legislative.gov.in",
         "count": 1,
         "texts": [
@@ -546,10 +552,10 @@
     ]
   },
   "score": {
-    "overall": 67,
+    "overall": 68,
     "security": 76,
     "accessibility": 70,
-    "content": 46,
+    "content": 56,
     "gigw": 36,
     "performance": 81,
     "identity": 96
@@ -570,11 +576,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://guruvayoormunicipality.lsgkerala.gov.in/ml/%2569%256E%2564%2565%2578%252E%2570%2568%2570%253C%2553%2563%2552%2569%2550%2574%2520%253E%254A%2533%2536%2546%25289303%2529%253C%252F%2573%2543%2572%2569%2570%2554%253E/ml/user/register)"
     },
     {
       "id": "a11y.axe_serious",
@@ -605,12 +606,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10638.09ms"
+      "ev": "12126.155499999997ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "4.4MB"
+      "ev": "4.5MB"
     },
     {
       "id": "sec.csp",
@@ -670,6 +671,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-07",
+      "up": true,
+      "score": 68
+    },
     {
       "d": "2026-10-06",
       "up": true,
@@ -741,5 +747,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

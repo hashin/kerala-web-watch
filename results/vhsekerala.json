@@ -35,15 +35,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-06T02:21:11.021Z",
-    "run": "1791253232374",
+    "at": "2026-10-07T01:28:12.845Z",
+    "run": "1791336455796",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 49,
-      "accessibility": 95,
-      "best_practices": 92,
-      "seo": 92
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 2,
       "serious": 10,
@@ -53,7 +48,7 @@
     "crawl": {
       "pages": 22,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -215,22 +210,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "95/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "49/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "4936.983ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -242,11 +234,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -280,7 +272,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/22 crawled link(s) broken (http://kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -452,9 +445,9 @@
     "overall": 59,
     "security": 80,
     "accessibility": 40,
-    "content": 50,
+    "content": 40,
     "gigw": 28,
-    "performance": 86,
+    "performance": 100,
     "identity": 88
   },
   "status": "needs-work",
@@ -478,6 +471,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/22 crawled link(s) broken (http://kerala.gov.in/)"
     },
     {
       "id": "a11y.axe_serious",
@@ -514,11 +512,6 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "4936.983ms"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -568,10 +561,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -595,6 +584,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-07",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-10-06",
       "up": true,
@@ -671,5 +665,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

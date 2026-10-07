@@ -35,20 +35,20 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-06T01:55:36.926Z",
-    "run": "1791251683493",
+    "at": "2026-10-07T00:58:50.177Z",
+    "run": "1791334638167",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 33,
-      "accessibility": 81,
-      "best_practices": 77,
+      "performance": 57,
+      "accessibility": 89,
+      "best_practices": 73,
       "seo": 83
     },
     "axe": {
-      "critical": 14,
-      "serious": 3,
+      "critical": 13,
+      "serious": 2,
       "moderate": 1,
-      "minor": 12
+      "minor": 10
     },
     "crawl": {
       "pages": 30,
@@ -169,17 +169,17 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "14 critical violation(s)"
+        "ev": "13 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "3 serious violation(s)"
+        "ev": "2 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "13 moderate/minor violation(s)"
+        "ev": "11 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -192,7 +192,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "2 low-contrast element(s)"
+        "ev": "1 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -201,7 +201,8 @@
       },
       {
         "id": "a11y.labels",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 form control(s) without a label"
       },
       {
         "id": "a11y.skip_link",
@@ -215,27 +216,26 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "81/100"
+        "ev": "89/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "33/100"
+        "ev": "57/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "16187.479149812702ms"
+        "ev": "7127.788ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.68"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "3.4MB"
+        "r": "fail",
+        "ev": "9.9MB"
       },
       {
         "id": "perf.viewport",
@@ -243,7 +243,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -311,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "11 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -574,12 +574,12 @@
     ]
   },
   "score": {
-    "overall": 57,
+    "overall": 56,
     "security": 48,
-    "accessibility": 50,
+    "accessibility": 40,
     "content": 46,
     "gigw": 64,
-    "performance": 67,
+    "performance": 76,
     "identity": 96
   },
   "status": "needs-work",
@@ -592,7 +592,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "14 critical violation(s)"
+      "ev": "13 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -615,12 +615,17 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "3 serious violation(s)"
+      "ev": "2 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "2 low-contrast element(s)"
+      "ev": "1 low-contrast element(s)"
+    },
+    {
+      "id": "a11y.labels",
+      "sev": "M",
+      "ev": "1 form control(s) without a label"
     },
     {
       "id": "content.stale_news",
@@ -638,16 +643,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "16187.479149812702ms"
+      "ev": "7127.788ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "3.4MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "ev": "9.9MB"
     },
     {
       "id": "sec.csp",
@@ -664,7 +665,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "13 moderate/minor violation(s)"
+      "ev": "11 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -679,7 +680,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "11 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.terms",
@@ -698,11 +699,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.68"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -718,6 +714,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-07",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-10-06",
       "up": true,
@@ -789,5 +790,5 @@
       "score": 58
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

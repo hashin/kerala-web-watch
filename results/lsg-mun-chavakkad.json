@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-27T00:03:17.636Z",
-    "run": "1790467354475",
+    "at": "2026-10-07T01:14:45.066Z",
+    "run": "1791335642033",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 61,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 85
@@ -165,6 +165,10 @@
         "r": "na"
       },
       {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
         "id": "a11y.axe_critical",
         "r": "pass"
       },
@@ -217,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "61/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "45771.54049999999ms"
+        "ev": "30023.235ms"
       },
       {
         "id": "perf.cls",
@@ -447,14 +451,6 @@
         ]
       },
       {
-        "host": "youtube.com",
-        "count": 3,
-        "texts": [
-          "K Smart Support",
-          "Massage"
-        ]
-      },
-      {
         "host": "indiacode.nic.in",
         "count": 1,
         "texts": [
@@ -474,6 +470,14 @@
         "texts": [
           "Central Government",
           "Govt. of India"
+        ]
+      },
+      {
+        "host": "youtube.com",
+        "count": 2,
+        "texts": [
+          "Massage",
+          "K Smart Support"
         ]
       },
       {
@@ -605,7 +609,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "45771.54049999999ms"
+      "ev": "30023.235ms"
     },
     {
       "id": "perf.weight",
@@ -670,6 +674,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-07",
+      "up": true,
+      "score": 68
+    },
     {
       "d": "2026-10-06",
       "up": true,
@@ -741,5 +750,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

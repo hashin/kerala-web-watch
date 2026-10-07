@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-06T02:24:42.927Z",
-    "run": "1791253424324",
+    "at": "2026-10-07T01:27:32.172Z",
+    "run": "1791336392317",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 59,
+      "performance": 51,
       "accessibility": 84,
       "best_practices": 88,
       "seo": 85
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 1,
-      "broken": 28
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -220,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "59/100"
+        "ev": "51/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "5112.1615ms"
+        "ev": "8063.057000000001ms"
       },
       {
         "id": "perf.cls",
@@ -280,13 +280,11 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "27/30 crawled link(s) broken (https://www.dtpcalappuzha.com/about, https://www.dtpcalappuzha.com/destination, https://www.dtpcalappuzha.com/experiences, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
-        "r": "fail",
-        "ev": "1 linked PDF(s) 404: https://www.dtpcalappuzha.com/uploads/website-accessibility-declaration.pdf"
+        "r": "pass"
       },
       {
         "id": "content.broken_images",
@@ -311,7 +309,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "14 console error(s): Cannot read properties of null (reading 'add')"
+        "ev": "11 console error(s): Cannot read properties of null (reading 'add')"
       },
       {
         "id": "gigw.contact",
@@ -396,12 +394,12 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 404"
+        "r": "pass"
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
       },
       {
         "id": "id.canonical",
@@ -454,10 +452,10 @@
     ]
   },
   "score": {
-    "overall": 42,
+    "overall": 46,
     "security": 8,
     "accessibility": 70,
-    "content": 22,
+    "content": 52,
     "gigw": 26,
     "performance": 76,
     "identity": 72
@@ -489,11 +487,6 @@
       "ev": "ml-user"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "27/30 crawled link(s) broken (https://www.dtpcalappuzha.com/about, https://www.dtpcalappuzha.com/destination, https://www.dtpcalappuzha.com/experiences, ...)"
-    },
-    {
       "id": "gigw.rti",
       "sev": "H"
     },
@@ -521,11 +514,6 @@
       "ev": "11 low-contrast element(s)"
     },
     {
-      "id": "content.broken_pdfs",
-      "sev": "M",
-      "ev": "1 linked PDF(s) 404: https://www.dtpcalappuzha.com/uploads/website-accessibility-declaration.pdf"
-    },
-    {
       "id": "gigw.privacy",
       "sev": "M"
     },
@@ -540,7 +528,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "5112.1615ms"
+      "ev": "8063.057000000001ms"
     },
     {
       "id": "perf.weight",
@@ -581,7 +569,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "14 console error(s): Cannot read properties of null (reading 'add')"
+      "ev": "11 console error(s): Cannot read properties of null (reading 'add')"
     },
     {
       "id": "gigw.terms",
@@ -616,9 +604,9 @@
       "sev": "L"
     },
     {
-      "id": "id.sitemap_xml",
+      "id": "id.soft_404",
       "sev": "L",
-      "ev": "sitemap.xml returned 404"
+      "ev": "a nonexistent path returned 200"
     },
     {
       "id": "id.third_party",
@@ -627,6 +615,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-07",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-10-06",
       "up": true,
@@ -703,5 +696,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -38,11 +38,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-06T02:02:19.647Z",
-    "run": "1791251871251",
+    "at": "2026-10-07T01:06:36.573Z",
+    "run": "1791334947854",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 36,
+      "performance": 42,
       "accessibility": 56,
       "best_practices": 69,
       "seo": 82
@@ -56,7 +56,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 2,
-      "broken": 15
+      "broken": 11
     },
     "tech": {
       "cms": null,
@@ -226,22 +226,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "36/100"
+        "ev": "42/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "15641.5215ms"
+        "ev": "21752.530999999988ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.41"
+        "ev": "0.26"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "7.7MB"
+        "ev": "7.6MB"
       },
       {
         "id": "perf.viewport",
@@ -289,11 +289,12 @@
       {
         "id": "content.broken_links",
         "r": "fail",
-        "ev": "15/30 crawled link(s) broken (https://kuhs.ac.in/kuhs_new/, https://kuhs.ac.in/kuhs_new/images/uploads/audio/KUHS_Anthem.mp3, https://kuhs.ac.in/kuhs_new/images/uploads/videos/KUHS-ANTHEM.mp4, ...)"
+        "ev": "10/30 crawled link(s) broken (https://kuhs.ac.in/kuhs_new/images/uploads/videos/KUHS-ANTHEM.mp4, https://kuhs.ac.in/kuhs_new/images/uploads/audio/KUHS-Anthem-Karaoke.wav, https://kuhs.ac.in/#carousel-example-generic, ...)"
       },
       {
         "id": "content.broken_pdfs",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 linked PDF(s) 404: https://kuhs.ac.in/kuhs_new/images/uploads/pdf/general/anthem/kuhs_anthem_guidelines.pdf"
       },
       {
         "id": "content.broken_images",
@@ -490,7 +491,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "15/30 crawled link(s) broken (https://kuhs.ac.in/kuhs_new/, https://kuhs.ac.in/kuhs_new/images/uploads/audio/KUHS_Anthem.mp3, https://kuhs.ac.in/kuhs_new/images/uploads/videos/KUHS-ANTHEM.mp4, ...)"
+      "ev": "10/30 crawled link(s) broken (https://kuhs.ac.in/kuhs_new/images/uploads/videos/KUHS-ANTHEM.mp4, https://kuhs.ac.in/kuhs_new/images/uploads/audio/KUHS-Anthem-Karaoke.wav, https://kuhs.ac.in/#carousel-example-generic, ...)"
     },
     {
       "id": "sec.hsts",
@@ -521,6 +522,11 @@
       "ev": "<marquee"
     },
     {
+      "id": "content.broken_pdfs",
+      "sev": "M",
+      "ev": "1 linked PDF(s) 404: https://kuhs.ac.in/kuhs_new/images/uploads/pdf/general/anthem/kuhs_anthem_guidelines.pdf"
+    },
+    {
       "id": "gigw.sitemap",
       "sev": "M"
     },
@@ -543,12 +549,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "15641.5215ms"
+      "ev": "21752.530999999988ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.7MB"
+      "ev": "7.6MB"
     },
     {
       "id": "sec.csp",
@@ -615,7 +621,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.41"
+      "ev": "0.26"
     },
     {
       "id": "perf.images",
@@ -636,6 +642,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-07",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-06",
       "up": false,
@@ -717,5 +728,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
