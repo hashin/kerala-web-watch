@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T01:42:08.322Z",
-    "run": "1791337236185",
+    "at": "2026-10-08T01:50:31.031Z",
+    "run": "1791424135535",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 55,
+      "accessibility": 72,
+      "best_practices": 92,
+      "seo": 69
+    },
     "axe": {
       "critical": 0,
       "serious": 20,
@@ -115,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "18 days left"
+        "ev": "17 days left"
       },
       {
         "id": "sec.tls_version",
@@ -208,19 +213,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "72/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "20876.605ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -233,11 +241,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -433,12 +441,12 @@
     ]
   },
   "score": {
-    "overall": 52,
+    "overall": 51,
     "security": 18,
     "accessibility": 74,
     "content": 38,
     "gigw": 28,
-    "performance": 95,
+    "performance": 81,
     "identity": 100
   },
   "status": "needs-work",
@@ -450,7 +458,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "18 days left"
+      "ev": "17 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -505,6 +513,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "20876.605ms"
     },
     {
       "id": "perf.weight",
@@ -578,9 +591,18 @@
     {
       "id": "gigw.search",
       "sev": "L"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-08",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-10-07",
       "up": true,
@@ -657,5 +679,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

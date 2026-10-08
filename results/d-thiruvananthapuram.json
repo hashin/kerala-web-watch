@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T01:00:04.295Z",
-    "run": "1791334726526",
+    "at": "2026-10-08T01:15:47.984Z",
+    "run": "1791422075923",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 62,
-      "accessibility": 93,
-      "best_practices": 73,
+      "performance": 27,
+      "accessibility": 96,
+      "best_practices": 50,
       "seo": 83
     },
     "axe": {
-      "critical": 12,
-      "serious": 12,
-      "moderate": 0,
-      "minor": 19
+      "critical": 15,
+      "serious": 0,
+      "moderate": 2,
+      "minor": 18
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -169,17 +169,16 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "12 critical violation(s)"
+        "ev": "15 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
-        "r": "fail",
-        "ev": "12 serious violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "19 moderate/minor violation(s)"
+        "ev": "20 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -191,12 +190,12 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "12 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
-        "r": "pass"
+        "r": "fail",
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -215,17 +214,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "93/100"
+        "ev": "96/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "62/100"
+        "ev": "27/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "5665.0019999999995ms"
+        "ev": "8258.072999999999ms"
       },
       {
         "id": "perf.cls",
@@ -234,7 +233,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "34.0MB"
+        "ev": "33.5MB"
       },
       {
         "id": "perf.viewport",
@@ -259,7 +258,7 @@
       },
       {
         "id": "content.stale_news",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "content.placeholder",
@@ -280,8 +279,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://trivandrum.nic.in/en/#SkipContent)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -310,7 +308,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "7 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -426,11 +424,11 @@
     "outlinks": [
       {
         "host": "kerala.gov.in",
-        "count": 11,
+        "count": 9,
         "texts": [
           "കേരളാ സർക്കാർ",
-          "SIR 2026 ASD List.",
-          "e-Office"
+          "e-Office",
+          "RR Online"
         ]
       },
       {
@@ -440,11 +438,11 @@
       },
       {
         "host": "s3waas.gov.in",
-        "count": 16,
+        "count": 31,
         "texts": [
-          "05/10/2026-01",
-          "04/10/2026-01",
-          "03/10/2026-01"
+          "07/10/2026-01",
+          "06/10/2026-02",
+          "06/10/2026-01"
         ]
       },
       {
@@ -455,6 +453,13 @@
         ]
       },
       {
+        "host": "ecourts.gov.in",
+        "count": 1,
+        "texts": [
+          "eCourt"
+        ]
+      },
+      {
         "host": "eci.gov.in",
         "count": 1,
         "texts": [
@@ -462,55 +467,11 @@
         ]
       },
       {
-        "host": "india.gov.in",
+        "host": "youtube.com",
         "count": 1,
         "texts": [
-          "Government of India"
+          "Waste management related video"
         ]
-      },
-      {
-        "host": "keralatourism.org",
-        "count": 1,
-        "texts": [
-          "Kerala Tourism"
-        ]
-      },
-      {
-        "host": "ecourts.gov.in",
-        "count": 1,
-        "texts": [
-          "eCourts"
-        ]
-      },
-      {
-        "host": "pmindia.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "pmnrf.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "data.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "mygov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "makeinindia.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "incredibleindia.org",
-        "count": 1,
-        "texts": []
       },
       {
         "host": "www.nic.in",
@@ -529,10 +490,10 @@
     ]
   },
   "score": {
-    "overall": 56,
+    "overall": 62,
     "security": 48,
-    "accessibility": 44,
-    "content": 46,
+    "accessibility": 60,
+    "content": 56,
     "gigw": 60,
     "performance": 76,
     "identity": 96
@@ -547,7 +508,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "12 critical violation(s)"
+      "ev": "15 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -560,27 +521,12 @@
       "ev": "ml-IN"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://trivandrum.nic.in/en/#SkipContent)"
-    },
-    {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
       "id": "sec.xfo",
       "sev": "M"
-    },
-    {
-      "id": "a11y.axe_serious",
-      "sev": "M",
-      "ev": "12 serious violation(s)"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "12 low-contrast element(s)"
     },
     {
       "id": "a11y.labels",
@@ -598,12 +544,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "5665.0019999999995ms"
+      "ev": "8258.072999999999ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "34.0MB"
+      "ev": "33.5MB"
     },
     {
       "id": "sec.csp",
@@ -620,7 +566,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "19 moderate/minor violation(s)"
+      "ev": "20 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
     },
     {
       "id": "a11y.keyboard",
@@ -630,7 +581,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "7 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.terms",
@@ -667,6 +618,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-08",
+      "up": true,
+      "score": 62
+    },
     {
       "d": "2026-10-07",
       "up": true,
@@ -743,5 +699,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

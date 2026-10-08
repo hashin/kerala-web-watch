@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T01:09:27.640Z",
-    "run": "1791335227897",
+    "at": "2026-10-08T01:22:12.768Z",
+    "run": "1791422380401",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 41,
+      "accessibility": 81,
+      "best_practices": 92,
+      "seo": 69
     },
     "axe": {
       "critical": 2,
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "3169ms"
+        "ev": "3951ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -218,20 +218,21 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "81/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "41/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "44680.614000000045ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -478,12 +479,12 @@
     ]
   },
   "score": {
-    "overall": 46,
+    "overall": 45,
     "security": 32,
     "accessibility": 40,
     "content": 34,
     "gigw": 32,
-    "performance": 76,
+    "performance": 66,
     "identity": 100
   },
   "status": "poor",
@@ -525,7 +526,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "3169ms"
+      "ev": "3951ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -557,6 +558,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "44680.614000000045ms"
     },
     {
       "id": "perf.weight",
@@ -643,6 +649,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-08",
+      "up": true,
+      "score": 45
+    },
+    {
       "d": "2026-10-07",
       "up": true,
       "score": 46
@@ -723,5 +734,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

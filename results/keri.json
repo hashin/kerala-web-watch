@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T01:33:50.412Z",
-    "run": "1791336730485",
+    "at": "2026-10-08T01:43:43.199Z",
+    "run": "1791423814471",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 0,
@@ -96,8 +96,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "fail",
-        "ev": "8542ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -117,15 +116,15 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.hsts",
@@ -379,19 +378,21 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "id.robots",
-        "r": "na"
+        "r": "fail",
+        "ev": "robots.txt returned 403"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "na"
+        "r": "fail",
+        "ev": "sitemap.xml returned 403"
       },
       {
         "id": "id.soft_404",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
@@ -446,11 +447,6 @@
     {
       "id": "perf.viewport",
       "sev": "H"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "8542ms"
     },
     {
       "id": "sec.hsts",
@@ -556,6 +552,20 @@
       "sev": "L"
     },
     {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
+      "id": "id.robots",
+      "sev": "L",
+      "ev": "robots.txt returned 403"
+    },
+    {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 403"
+    },
+    {
       "id": "id.charset_doctype",
       "sev": "L",
       "ev": "missing UTF-8 charset, HTML5 doctype"
@@ -570,6 +580,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-08",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-07",
       "up": false,
@@ -646,5 +661,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

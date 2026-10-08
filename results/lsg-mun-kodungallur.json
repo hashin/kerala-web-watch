@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T01:24:31.383Z",
-    "run": "1791336197309",
+    "at": "2026-10-08T01:31:45.648Z",
+    "run": "1791423037393",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 60,
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 20,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -226,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "21989.37999999999ms"
+        "ev": "49867.53150000004ms"
       },
       {
         "id": "perf.cls",
@@ -281,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://welfarepension.lsgkerala.gov.in/Schemes.aspx)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -565,10 +564,10 @@
     ]
   },
   "score": {
-    "overall": 67,
+    "overall": 68,
     "security": 76,
     "accessibility": 70,
-    "content": 46,
+    "content": 56,
     "gigw": 40,
     "performance": 76,
     "identity": 96
@@ -589,11 +588,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://welfarepension.lsgkerala.gov.in/Schemes.aspx)"
     },
     {
       "id": "a11y.axe_serious",
@@ -624,7 +618,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "21989.37999999999ms"
+      "ev": "49867.53150000004ms"
     },
     {
       "id": "perf.weight",
@@ -685,6 +679,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-08",
+      "up": true,
+      "score": 68
+    },
     {
       "d": "2026-10-07",
       "up": true,
@@ -761,5 +760,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

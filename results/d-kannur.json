@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T00:57:18.165Z",
-    "run": "1791334572725",
+    "at": "2026-10-08T01:13:45.944Z",
+    "run": "1791421940580",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 56,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3736ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -226,7 +225,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8808.63ms"
+        "ev": "10294.632999999998ms"
       },
       {
         "id": "perf.cls",
@@ -281,7 +280,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://kannur.nic.in/en/public-utility-category/universities/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -530,10 +530,10 @@
     ]
   },
   "score": {
-    "overall": 60,
+    "overall": 58,
     "security": 48,
     "accessibility": 50,
-    "content": 56,
+    "content": 46,
     "gigw": 60,
     "performance": 81,
     "identity": 96
@@ -561,9 +561,9 @@
       "ev": "ml-IN"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3736ms"
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://kannur.nic.in/en/public-utility-category/universities/)"
     },
     {
       "id": "sec.hsts",
@@ -594,7 +594,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8808.63ms"
+      "ev": "10294.632999999998ms"
     },
     {
       "id": "perf.weight",
@@ -668,6 +668,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-08",
+      "up": true,
+      "score": 58
+    },
     {
       "d": "2026-10-07",
       "up": true,
@@ -744,5 +749,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

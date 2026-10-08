@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T01:36:07.709Z",
-    "run": "1791336902158",
+    "at": "2026-10-08T01:45:57.142Z",
+    "run": "1791423887149",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 38,
@@ -119,8 +119,7 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "29 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -228,17 +227,17 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "21596.18400000001ms"
+        "ev": "29646.846999999998ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.35"
+        "ev": "0.34"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "4.8MB"
+        "ev": "4.6MB"
       },
       {
         "id": "perf.viewport",
@@ -272,7 +271,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-user"
+        "ev": "ml-transform"
       },
       {
         "id": "content.obsolete_tech",
@@ -445,8 +444,8 @@
     ]
   },
   "score": {
-    "overall": 52,
-    "security": 66,
+    "overall": 54,
+    "security": 76,
     "accessibility": 30,
     "content": 42,
     "gigw": 32,
@@ -455,11 +454,6 @@
   },
   "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "29 days left"
-    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -478,7 +472,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-user"
+      "ev": "ml-transform"
     },
     {
       "id": "a11y.axe_serious",
@@ -524,12 +518,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "21596.18400000001ms"
+      "ev": "29646.846999999998ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "4.8MB"
+      "ev": "4.6MB"
     },
     {
       "id": "perf.tap_targets",
@@ -594,7 +588,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.35"
+      "ev": "0.34"
     },
     {
       "id": "perf.images",
@@ -602,6 +596,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-08",
+      "up": true,
+      "score": 54
+    },
     {
       "d": "2026-10-07",
       "up": true,
@@ -683,5 +682,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

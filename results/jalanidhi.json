@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T01:35:42.517Z",
-    "run": "1791336890583",
+    "at": "2026-10-08T01:45:01.800Z",
+    "run": "1791423413093",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 45,
+      "performance": 47,
       "accessibility": 74,
       "best_practices": 50,
-      "seo": 91
+      "seo": 83
     },
     "axe": {
       "critical": 2,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 28
     },
     "tech": {
       "cms": null,
@@ -120,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "18 days left"
+        "ev": "17 days left"
       },
       {
         "id": "sec.tls_version",
@@ -223,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "45/100"
+        "ev": "47/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11646.844000000003ms"
+        "ev": "12419.9445ms"
       },
       {
         "id": "perf.cls",
@@ -283,7 +283,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "28/30 crawled link(s) broken (https://jalanidhi.kerala.gov.in/#, https://jalanidhi.kerala.gov.in/#1, https://jalanidhi.kerala.gov.in/#3, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -420,7 +421,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e6a51, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
+        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e6a61h1, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
       }
     ],
     "screenshot": {
@@ -478,10 +479,10 @@
     ]
   },
   "score": {
-    "overall": 46,
+    "overall": 43,
     "security": 18,
     "accessibility": 30,
-    "content": 62,
+    "content": 42,
     "gigw": 52,
     "performance": 76,
     "identity": 88
@@ -491,7 +492,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "18 days left"
+      "ev": "17 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -517,6 +518,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "28/30 crawled link(s) broken (https://jalanidhi.kerala.gov.in/#, https://jalanidhi.kerala.gov.in/#1, https://jalanidhi.kerala.gov.in/#3, ...)"
     },
     {
       "id": "sec.hsts",
@@ -552,7 +558,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11646.844000000003ms"
+      "ev": "12419.9445ms"
     },
     {
       "id": "perf.weight",
@@ -653,10 +659,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e6a51, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
+      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e6a61h1, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-08",
+      "up": true,
+      "score": 43
+    },
     {
       "d": "2026-10-07",
       "up": true,
@@ -738,5 +749,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

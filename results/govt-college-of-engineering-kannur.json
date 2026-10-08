@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T01:29:36.356Z",
-    "run": "1791336520533",
+    "at": "2026-10-08T01:40:32.505Z",
+    "run": "1791423576474",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 28,
+      "performance": 33,
       "accessibility": 56,
       "best_practices": 70,
       "seo": 83
@@ -120,8 +120,7 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "29 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -222,17 +221,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "28/100"
+        "ev": "33/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "19647.2065ms"
+        "ev": "19796.781750000002ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "1.29"
+        "ev": "1.28"
       },
       {
         "id": "perf.weight",
@@ -580,11 +579,6 @@
       "ev": "http://www.gcek.ac.in"
     },
     {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "29 days left"
-    },
-    {
       "id": "sec.vuln_js",
       "sev": "H",
       "ev": "jquery 1.12.4, bootstrap 4.0.0, jquery 1.12.4, bootstrap 3.3.7"
@@ -664,7 +658,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "19647.2065ms"
+      "ev": "19796.781750000002ms"
     },
     {
       "id": "perf.weight",
@@ -733,7 +727,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "1.29"
+      "ev": "1.28"
     },
     {
       "id": "perf.images",
@@ -753,6 +747,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-08",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-07",
       "up": false,
@@ -809,5 +808,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,13 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T01:11:29.350Z",
-    "run": "1791335433967",
+    "at": "2026-10-08T01:23:16.913Z",
+    "run": "1791422548890",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 35,
+      "accessibility": 70,
+      "best_practices": 96,
+      "seo": 92
+    },
     "axe": {
       "critical": 28,
-      "serious": 63,
+      "serious": 61,
       "moderate": 39,
       "minor": 0
     },
@@ -169,7 +174,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "63 serious violation(s)"
+        "ev": "61 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -179,7 +184,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 136% Malayalam content"
+        "ev": "<html lang=\"en\"> vs. 137% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -189,7 +194,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "20 low-contrast element(s)"
+        "ev": "18 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -211,19 +216,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "70/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "35/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "11672.804999999998ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -236,11 +244,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -481,12 +489,12 @@
     ]
   },
   "score": {
-    "overall": 52,
+    "overall": 50,
     "security": 66,
     "accessibility": 20,
     "content": 56,
     "gigw": 22,
-    "performance": 95,
+    "performance": 71,
     "identity": 96
   },
   "status": "needs-work",
@@ -504,7 +512,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 136% Malayalam content"
+      "ev": "<html lang=\"en\"> vs. 137% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -527,7 +535,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "63 serious violation(s)"
+      "ev": "61 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -537,7 +545,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "20 low-contrast element(s)"
+      "ev": "18 low-contrast element(s)"
     },
     {
       "id": "gigw.accessibility_statement",
@@ -552,9 +560,18 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "11672.804999999998ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "5.4MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -609,6 +626,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -623,6 +644,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-08",
+      "up": true,
+      "score": 50
+    },
     {
       "d": "2026-10-07",
       "up": true,
@@ -704,5 +730,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

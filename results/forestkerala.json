@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T01:07:00.218Z",
-    "run": "1791335000704",
+    "at": "2026-10-08T01:17:05.416Z",
+    "run": "1791422141437",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 55,
+      "accessibility": 73,
+      "best_practices": 88,
+      "seo": 85
     },
     "axe": {
-      "critical": 9,
-      "serious": 12,
+      "critical": 10,
+      "serious": 15,
       "moderate": 4,
       "minor": 0
     },
@@ -57,7 +57,7 @@
     },
     "tech": {
       "cms": "WordPress 6.6.2",
-      "server": null,
+      "server": "",
       "jquery": null
     },
     "checks": [
@@ -67,16 +67,15 @@
       },
       {
         "id": "avail.connect",
-        "r": "fail",
-        "ev": "timeout"
+        "r": "pass"
       },
       {
         "id": "avail.status",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -96,7 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -108,7 +107,7 @@
       },
       {
         "id": "sec.https",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
@@ -121,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "29 days left"
+        "ev": "28 days left"
       },
       {
         "id": "sec.tls_version",
@@ -133,7 +132,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "fail",
+        "ev": "src=\"http://localhost/kf/wp-content/uploads/2023/11/videobg.mp4\""
       },
       {
         "id": "sec.csp",
@@ -171,12 +171,12 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "9 critical violation(s)"
+        "ev": "10 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "12 serious violation(s)"
+        "ev": "15 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -218,25 +218,26 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "73/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "29706.28649999999ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "3.6MB"
+        "ev": "7.0MB"
       },
       {
         "id": "perf.viewport",
@@ -312,7 +313,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "10 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+        "ev": "16 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
       },
       {
         "id": "gigw.contact",
@@ -505,18 +506,26 @@
       }
     ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 49,
+    "security": 28,
+    "accessibility": 40,
+    "content": 38,
+    "gigw": 58,
+    "performance": 71,
+    "identity": 100
+  },
+  "status": "poor",
   "issues": [
-    {
-      "id": "avail.connect",
-      "sev": "C",
-      "ev": "timeout"
-    },
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "29 days left"
+      "ev": "28 days left"
+    },
+    {
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "src=\"http://localhost/kf/wp-content/uploads/2023/11/videobg.mp4\""
     },
     {
       "id": "sec.vuln_js",
@@ -526,7 +535,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "9 critical violation(s)"
+      "ev": "10 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -550,7 +559,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "12 serious violation(s)"
+      "ev": "15 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -575,9 +584,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "29706.28649999999ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "3.6MB"
+      "ev": "7.0MB"
     },
     {
       "id": "perf.tap_targets",
@@ -621,7 +635,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "10 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      "ev": "16 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
     },
     {
       "id": "gigw.feedback",
@@ -641,6 +655,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-08",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-10-07",
       "up": false,
@@ -717,5 +736,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T01:19:37.806Z",
-    "run": "1791335912757",
+    "at": "2026-10-08T01:34:54.848Z",
+    "run": "1791423224063",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 51,
+      "accessibility": 79,
+      "best_practices": 100,
+      "seo": 100
+    },
     "axe": {
       "critical": 0,
       "serious": 7,
@@ -90,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4130ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -207,19 +213,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "79/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "51/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "31963.103000000003ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -232,11 +241,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -499,12 +508,12 @@
     ]
   },
   "score": {
-    "overall": 64,
+    "overall": 63,
     "security": 52,
     "accessibility": 82,
     "content": 50,
     "gigw": 26,
-    "performance": 90,
+    "performance": 76,
     "identity": 100
   },
   "status": "needs-work",
@@ -528,6 +537,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "4130ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -558,6 +572,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "31963.103000000003ms"
     },
     {
       "id": "perf.weight",
@@ -607,6 +626,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "gigw.emblem",
       "sev": "I"
     },
@@ -616,6 +639,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-08",
+      "up": true,
+      "score": 63
+    },
     {
       "d": "2026-10-07",
       "up": true,
@@ -697,5 +725,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

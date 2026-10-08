@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-27T00:16:57.596Z",
-    "run": "1790468176883",
+    "at": "2026-10-08T01:39:53.444Z",
+    "run": "1791423552534",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 0,
@@ -45,7 +45,7 @@
       "seo": 0
     },
     "axe": {
-      "critical": 6,
+      "critical": 1,
       "serious": 4,
       "moderate": 10,
       "minor": 0
@@ -122,7 +122,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "fail",
-        "ev": "-2823 days left"
+        "ev": "-2834 days left"
       },
       {
         "id": "sec.tls_version",
@@ -167,9 +167,13 @@
         "r": "na"
       },
       {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "6 critical violation(s)"
+        "ev": "1 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
@@ -188,7 +192,7 @@
       {
         "id": "a11y.alt",
         "r": "fail",
-        "ev": "6 image(s) missing alt text"
+        "ev": "1 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
@@ -233,7 +237,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "23.3MB"
+        "ev": "23.2MB"
       },
       {
         "id": "perf.viewport",
@@ -508,7 +512,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "-2823 days left"
+      "ev": "-2834 days left"
     },
     {
       "id": "sec.vuln_js",
@@ -518,7 +522,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "6 critical violation(s)"
+      "ev": "1 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -551,7 +555,7 @@
     {
       "id": "a11y.alt",
       "sev": "M",
-      "ev": "6 image(s) missing alt text"
+      "ev": "1 image(s) missing alt text"
     },
     {
       "id": "a11y.contrast",
@@ -586,7 +590,7 @@
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "23.3MB"
+      "ev": "23.2MB"
     },
     {
       "id": "perf.tap_targets",
@@ -676,6 +680,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-08",
+      "up": false,
+      "score": null
+    },
+    {
       "d": "2026-10-07",
       "up": false,
       "score": null
@@ -731,5 +740,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T01:03:22.212Z",
-    "run": "1791334934272",
+    "at": "2026-10-08T01:18:12.822Z",
+    "run": "1791422220435",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 41,
+      "performance": 40,
       "accessibility": 76,
       "best_practices": 92,
       "seo": 77
@@ -221,17 +221,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "41/100"
+        "ev": "40/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "47084.15199999997ms"
+        "ev": "48555.18000000002ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.44"
+        "ev": "0.43"
       },
       {
         "id": "perf.weight",
@@ -313,7 +313,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "8 console error(s): Unexpected token ':'"
+        "ev": "8 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
@@ -420,7 +420,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+        "ev": "https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920"
       }
     ],
     "screenshot": {
@@ -534,7 +534,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "47084.15199999997ms"
+      "ev": "48555.18000000002ms"
     },
     {
       "id": "perf.weight",
@@ -580,7 +580,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "8 console error(s): Unexpected token ':'"
+      "ev": "8 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
@@ -609,7 +609,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.44"
+      "ev": "0.43"
     },
     {
       "id": "perf.images",
@@ -622,10 +622,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+      "ev": "https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-08",
+      "up": true,
+      "score": 48
+    },
     {
       "d": "2026-10-07",
       "up": true,
@@ -672,5 +677,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

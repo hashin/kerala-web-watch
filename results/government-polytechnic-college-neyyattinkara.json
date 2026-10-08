@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T01:32:16.425Z",
-    "run": "1791336685599",
+    "at": "2026-10-08T01:39:27.932Z",
+    "run": "1791423517617",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 60,
+      "performance": 43,
       "accessibility": 85,
       "best_practices": 73,
       "seo": 92
@@ -58,7 +58,7 @@
       "broken": 29
     },
     "tech": {
-      "cms": "WordPress 5.8.17",
+      "cms": "WordPress 5.8.18",
       "server": null,
       "jquery": null
     },
@@ -222,11 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "60/100"
+        "ev": "43/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "fail",
+        "ev": "4906.842500000001ms"
       },
       {
         "id": "perf.cls",
@@ -415,7 +416,7 @@
       {
         "id": "id.tech",
         "r": "warn",
-        "ev": "WordPress 5.8.17 (unsupported major version)"
+        "ev": "WordPress 5.8.18 (unsupported major version)"
       },
       {
         "id": "id.third_party",
@@ -481,12 +482,12 @@
     ]
   },
   "score": {
-    "overall": 46,
+    "overall": 45,
     "security": 24,
     "accessibility": 74,
     "content": 26,
     "gigw": 2,
-    "performance": 81,
+    "performance": 71,
     "identity": 87
   },
   "status": "poor",
@@ -564,6 +565,11 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "4906.842500000001ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "7.4MB"
@@ -575,7 +581,7 @@
     {
       "id": "id.tech",
       "sev": "M",
-      "ev": "WordPress 5.8.17 (unsupported major version)"
+      "ev": "WordPress 5.8.18 (unsupported major version)"
     },
     {
       "id": "sec.csp",
@@ -658,6 +664,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-08",
+      "up": true,
+      "score": 45
+    },
+    {
       "d": "2026-10-07",
       "up": true,
       "score": 46
@@ -718,5 +729,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

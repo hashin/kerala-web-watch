@@ -35,20 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T01:20:37.536Z",
-    "run": "1791335998949",
+    "at": "2026-10-08T01:30:40.012Z",
+    "run": "1791422999719",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 69,
+      "accessibility": 89,
+      "best_practices": 81,
+      "seo": 83
+    },
     "axe": {
       "critical": 0,
-      "serious": 9,
-      "moderate": 12,
+      "serious": 6,
+      "moderate": 16,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -151,7 +156,8 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "pass"
+        "r": "fail",
+        "ev": "swiper 11.2.10"
       },
       {
         "id": "sec.safe_browsing",
@@ -168,12 +174,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "9 serious violation(s)"
+        "ev": "6 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "12 moderate/minor violation(s)"
+        "ev": "16 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -191,7 +197,7 @@
       {
         "id": "a11y.headings",
         "r": "fail",
-        "ev": "no <h1>, heading levels skipped"
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -208,19 +214,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "89/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "69/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "6078.249999999999ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -232,11 +241,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -270,7 +279,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://trivandrumcorporation.web.lsgkerala.gov.in/en/members)"
       },
       {
         "id": "content.broken_pdfs",
@@ -314,7 +324,7 @@
       },
       {
         "id": "gigw.privacy",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.terms",
@@ -322,7 +332,7 @@
       },
       {
         "id": "gigw.copyright_policy",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.hyperlink_policy",
@@ -330,7 +340,7 @@
       },
       {
         "id": "gigw.disclaimer",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.accessibility_statement",
@@ -354,7 +364,7 @@
       },
       {
         "id": "gigw.ownership",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.last_updated",
@@ -410,7 +420,7 @@
     "screenshot": {
       "desktop": "lsg-corp-thiruvananthapuram.webp",
       "mobile": "lsg-corp-thiruvananthapuram-m.webp",
-      "phash": "7fffffffffffff00"
+      "phash": "ffff7f3f02000100"
     },
     "outlinks": [
       {
@@ -421,16 +431,6 @@
         ]
       },
       {
-        "host": "facebook.com",
-        "count": 2,
-        "texts": []
-      },
-      {
-        "host": "instagram.com",
-        "count": 2,
-        "texts": []
-      },
-      {
         "host": "ksmart.live",
         "count": 1,
         "texts": [
@@ -439,18 +439,9 @@
       },
       {
         "host": "kerala.gov.in",
-        "count": 5,
+        "count": 2,
         "texts": [
-          "E-Tenders",
-          "Voters List",
-          "State Government"
-        ]
-      },
-      {
-        "host": "legislative.gov.in",
-        "count": 1,
-        "texts": [
-          "Read More"
+          "E-Tenders"
         ]
       },
       {
@@ -461,73 +452,10 @@
         ]
       },
       {
-        "host": "wa.me",
-        "count": 2,
-        "texts": []
-      },
-      {
-        "host": "india.gov.in",
-        "count": 2,
-        "texts": [
-          "Central Government",
-          "Govt. of India"
-        ]
-      },
-      {
-        "host": "kudumbashree.org",
-        "count": 2,
-        "texts": [
-          "Kudumbasree",
-          "Harithakarma Sena"
-        ]
-      },
-      {
-        "host": "csml.co.in",
+        "host": "legislative.gov.in",
         "count": 1,
         "texts": [
-          "CSML"
-        ]
-      },
-      {
-        "host": "auegskerala.gov.in",
-        "count": 1,
-        "texts": [
-          "AUEGS"
-        ]
-      },
-      {
-        "host": "gem.gov.in",
-        "count": 1,
-        "texts": [
-          "GEM"
-        ]
-      },
-      {
-        "host": "mohua.gov.in",
-        "count": 1,
-        "texts": [
-          "Amrut"
-        ]
-      },
-      {
-        "host": "ikm.gov.in",
-        "count": 1,
-        "texts": [
-          "IKM"
-        ]
-      },
-      {
-        "host": "digitalindia.gov.in",
-        "count": 1,
-        "texts": [
-          "Digital India"
-        ]
-      },
-      {
-        "host": "uidai.gov.in",
-        "count": 1,
-        "texts": [
-          "Aadhaar"
+          "Read More"
         ]
       },
       {
@@ -541,9 +469,37 @@
         "texts": []
       },
       {
+        "host": "india.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "ikm.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "instagram.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
         "host": "whatsapp.com",
         "count": 2,
         "texts": []
+      },
+      {
+        "host": "kudumbashree.org",
+        "count": 2,
+        "texts": [
+          "Kudumbasree",
+          "Harithakarma Sena"
+        ]
       }
     ]
   },
@@ -556,6 +512,11 @@
       "ev": "http://trivandrumcorporation.web.lsgkerala.gov.in"
     },
     {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "swiper 11.2.10"
+    },
+    {
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
@@ -566,13 +527,18 @@
       "ev": "ml-user"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://trivandrumcorporation.web.lsgkerala.gov.in/en/members)"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "9 serious violation(s)"
+      "ev": "6 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -584,20 +550,17 @@
       "sev": "M"
     },
     {
-      "id": "gigw.privacy",
-      "sev": "M"
-    },
-    {
       "id": "gigw.accessibility_statement",
-      "sev": "M"
-    },
-    {
-      "id": "gigw.ownership",
       "sev": "M"
     },
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "6078.249999999999ms"
     },
     {
       "id": "sec.csp",
@@ -610,12 +573,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "12 moderate/minor violation(s)"
+      "ev": "16 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "no <h1>, heading levels skipped"
+      "ev": "heading levels skipped"
     },
     {
       "id": "a11y.keyboard",
@@ -631,19 +594,15 @@
       "sev": "L"
     },
     {
-      "id": "gigw.copyright_policy",
-      "sev": "L"
-    },
-    {
       "id": "gigw.hyperlink_policy",
       "sev": "L"
     },
     {
-      "id": "gigw.disclaimer",
+      "id": "gigw.screen_reader",
       "sev": "L"
     },
     {
-      "id": "gigw.screen_reader",
+      "id": "perf.images",
       "sev": "L"
     },
     {
@@ -657,6 +616,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-08",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-07",
       "up": false,
@@ -743,5 +707,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

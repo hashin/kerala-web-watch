@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T01:01:57.146Z",
-    "run": "1791334631132",
+    "at": "2026-10-08T01:14:39.162Z",
+    "run": "1791422006419",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 54,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 22
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -226,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "21519.044749999994ms"
+        "ev": "24212.919ms"
       },
       {
         "id": "perf.cls",
@@ -234,8 +234,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "fail",
-        "ev": "8.4MB"
+        "r": "warn",
+        "ev": "4.4MB"
       },
       {
         "id": "perf.viewport",
@@ -281,8 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "22/30 crawled link(s) broken (https://malappuram.nic.in/en, https://malappuram.nic.in/en/history/, https://malappuram.nic.in/en/about-district/whos-who/, ...)"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://malappuram.nic.in/en/demography/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -311,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "11 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -538,12 +538,12 @@
     ]
   },
   "score": {
-    "overall": 53,
+    "overall": 55,
     "security": 48,
     "accessibility": 40,
-    "content": 32,
+    "content": 42,
     "gigw": 60,
-    "performance": 76,
+    "performance": 81,
     "identity": 96
   },
   "status": "needs-work",
@@ -571,7 +571,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "22/30 crawled link(s) broken (https://malappuram.nic.in/en, https://malappuram.nic.in/en/history/, https://malappuram.nic.in/en/about-district/whos-who/, ...)"
+      "ev": "1/30 crawled link(s) broken (https://malappuram.nic.in/en/demography/)"
     },
     {
       "id": "sec.hsts",
@@ -607,12 +607,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "21519.044749999994ms"
+      "ev": "24212.919ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "8.4MB"
+      "ev": "4.4MB"
     },
     {
       "id": "sec.csp",
@@ -648,7 +648,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "11 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.terms",
@@ -686,6 +686,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-08",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-07",
       "up": true,
@@ -762,5 +767,5 @@
       "score": 60
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

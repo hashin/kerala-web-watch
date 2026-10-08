@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-06T02:26:42.481Z",
-    "run": "1791253558242",
+    "at": "2026-10-08T01:42:32.270Z",
+    "run": "1791423711018",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 89,
@@ -55,10 +55,10 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
-      "cms": "WordPress 7.1.2",
+      "cms": "WordPress 7.1.3",
       "server": "LiteSpeed",
       "jquery": null
     },
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://www.gptcmdy.ac.in/departments/civil-engineering/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -410,7 +411,7 @@
       {
         "id": "id.tech",
         "r": "pass",
-        "ev": "WordPress 7.1.2"
+        "ev": "WordPress 7.1.3"
       },
       {
         "id": "id.third_party",
@@ -496,10 +497,10 @@
     ]
   },
   "score": {
-    "overall": 52,
+    "overall": 50,
     "security": 48,
     "accessibility": 50,
-    "content": 56,
+    "content": 46,
     "gigw": 0,
     "performance": 86,
     "identity": 100
@@ -525,6 +526,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-slider"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://www.gptcmdy.ac.in/departments/civil-engineering/)"
     },
     {
       "id": "gigw.contact",
@@ -643,6 +649,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-08",
+      "up": true,
+      "score": 50
+    },
+    {
       "d": "2026-10-07",
       "up": true,
       "score": 52
@@ -703,5 +714,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

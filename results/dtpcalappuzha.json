@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T01:27:32.172Z",
-    "run": "1791336392317",
+    "at": "2026-10-08T01:38:37.616Z",
+    "run": "1791423457496",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 51,
@@ -225,7 +225,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8063.057000000001ms"
+        "ev": "7548.025499999999ms"
       },
       {
         "id": "perf.cls",
@@ -382,7 +382,8 @@
       },
       {
         "id": "id.domain_expiry",
-        "r": "pass"
+        "r": "fail",
+        "ev": "59 days left"
       },
       {
         "id": "id.www_consistency",
@@ -452,13 +453,13 @@
     ]
   },
   "score": {
-    "overall": 46,
+    "overall": 44,
     "security": 8,
     "accessibility": 70,
     "content": 52,
     "gigw": 26,
     "performance": 76,
-    "identity": 72
+    "identity": 52
   },
   "status": "poor",
   "issues": [
@@ -496,6 +497,11 @@
       "ev": "www.dtpcalappuzha.com"
     },
     {
+      "id": "id.domain_expiry",
+      "sev": "H",
+      "ev": "59 days left"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -528,7 +534,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8063.057000000001ms"
+      "ev": "7548.025499999999ms"
     },
     {
       "id": "perf.weight",
@@ -616,6 +622,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-08",
+      "up": true,
+      "score": 44
+    },
+    {
       "d": "2026-10-07",
       "up": true,
       "score": 46
@@ -696,5 +707,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

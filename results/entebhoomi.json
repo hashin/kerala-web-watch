@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T01:01:25.553Z",
-    "run": "1791334804296",
+    "at": "2026-10-08T01:17:20.804Z",
+    "run": "1791422147986",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 58,
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 28,
       "pdfs": 5,
-      "broken": 3
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -97,7 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3290ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -228,7 +229,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6602.725ms"
+        "ev": "6629.765ms"
       },
       {
         "id": "perf.cls",
@@ -283,7 +284,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "3/28 crawled link(s) broken (https://kerala.gov.in/, https://services.kerala.gov.in/, https://dslr.kerala.gov.in/en/home/)"
+        "ev": "2/28 crawled link(s) broken (https://kerala.gov.in/, https://services.kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -519,7 +520,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "3/28 crawled link(s) broken (https://kerala.gov.in/, https://services.kerala.gov.in/, https://dslr.kerala.gov.in/en/home/)"
+      "ev": "2/28 crawled link(s) broken (https://kerala.gov.in/, https://services.kerala.gov.in/)"
     },
     {
       "id": "gigw.contact",
@@ -528,6 +529,11 @@
     {
       "id": "gigw.rti",
       "sev": "H"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3290ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -563,7 +569,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6602.725ms"
+      "ev": "6629.765ms"
     },
     {
       "id": "perf.tap_targets",
@@ -632,6 +638,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-08",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-10-07",
       "up": true,
@@ -713,5 +724,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

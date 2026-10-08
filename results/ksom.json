@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T01:35:02.156Z",
-    "run": "1791336854536",
+    "at": "2026-10-08T01:48:59.110Z",
+    "run": "1791424090495",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 59,
+      "performance": 80,
       "accessibility": 100,
       "best_practices": 96,
       "seo": 100
@@ -52,7 +52,7 @@
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 14,
+      "pdfs": 16,
       "broken": 0
     },
     "tech": {
@@ -215,12 +215,11 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "59/100"
+        "ev": "80/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "6483.216ms"
+        "r": "pass"
       },
       {
         "id": "perf.cls",
@@ -229,7 +228,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "9.5MB"
+        "ev": "10.0MB"
       },
       {
         "id": "perf.viewport",
@@ -408,7 +407,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://static.cloudflareinsights.com/beacon.min.js, https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+        "ev": "https://static.cloudflareinsights.com/beacon.min.js, https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920"
       }
     ],
     "screenshot": {
@@ -433,12 +432,12 @@
     ]
   },
   "score": {
-    "overall": 71,
+    "overall": 72,
     "security": 56,
     "accessibility": 96,
     "content": 60,
     "gigw": 42,
-    "performance": 76,
+    "performance": 86,
     "identity": 96
   },
   "status": "needs-work",
@@ -479,14 +478,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "6483.216ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "9.5MB"
+      "ev": "10.0MB"
     },
     {
       "id": "sec.csp",
@@ -540,10 +534,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://static.cloudflareinsights.com/beacon.min.js, https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+      "ev": "https://static.cloudflareinsights.com/beacon.min.js, https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-08",
+      "up": true,
+      "score": 72
+    },
     {
       "d": "2026-10-07",
       "up": true,
@@ -625,5 +624,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
