@@ -37,10 +37,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-08T01:37:28.341Z",
-    "run": "1791423351847",
+    "at": "2026-10-09T01:43:26.604Z",
+    "run": "1791510108334",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 53,
+      "accessibility": 77,
+      "best_practices": 96,
+      "seo": 83
+    },
     "axe": {
       "critical": 0,
       "serious": 85,
@@ -92,7 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3465ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -117,7 +123,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "15 days left"
+        "ev": "14 days left"
       },
       {
         "id": "sec.tls_version",
@@ -209,24 +215,27 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "77/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "53/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "53155.17325000001ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "2488.4MB"
+        "ev": "2689.0MB"
       },
       {
         "id": "perf.viewport",
@@ -234,11 +243,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -447,12 +456,12 @@
     ]
   },
   "score": {
-    "overall": 76,
+    "overall": 75,
     "security": 86,
     "accessibility": 72,
     "content": 46,
     "gigw": 76,
-    "performance": 90,
+    "performance": 76,
     "identity": 92
   },
   "status": "needs-work",
@@ -460,7 +469,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "15 days left"
+      "ev": "14 days left"
     },
     {
       "id": "content.last_updated",
@@ -471,6 +480,11 @@
       "id": "content.broken_links",
       "sev": "H",
       "ev": "1/30 crawled link(s) broken (https://www.kerala.gov.in/)"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3465ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -501,9 +515,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "53155.17325000001ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "2488.4MB"
+      "ev": "2689.0MB"
     },
     {
       "id": "sec.csp",
@@ -525,6 +544,10 @@
     },
     {
       "id": "gigw.feedback",
+      "sev": "L"
+    },
+    {
+      "id": "perf.images",
       "sev": "L"
     },
     {
@@ -550,7 +573,7 @@
     {
       "d": "2026-10-09",
       "up": true,
-      "score": 76
+      "score": 75
     },
     {
       "d": "2026-10-08",
@@ -638,5 +661,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

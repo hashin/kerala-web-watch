@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-08T01:30:36.915Z",
-    "run": "1791422971585",
+    "at": "2026-10-09T01:42:27.523Z",
+    "run": "1791510083625",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 12,
-      "accessibility": 80,
+      "performance": 28,
+      "accessibility": 77,
       "best_practices": 96,
       "seo": 85
     },
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 10,
-      "broken": 3
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 8",
@@ -193,7 +193,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "5 low-contrast element(s)"
+        "ev": "4 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -216,27 +216,27 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "80/100"
+        "ev": "77/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "12/100"
+        "ev": "28/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "18698.292999999998ms"
+        "ev": "15095.447999999997ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.73"
+        "ev": "0.63"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "19.6MB"
+        "ev": "19.7MB"
       },
       {
         "id": "perf.viewport",
@@ -283,7 +283,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "3/30 crawled link(s) broken (https://kerala.gov.in/whatsnewdetailwise/MTY4MzY2NzM5NC4y, https://kerala.gov.in/articledetail/MTA0OTA3NDUwNC4yOA==/1, https://kerala.gov.in/articledetail/OTM3NzA1NTUzLjQ=/1)"
+        "ev": "1/30 crawled link(s) broken (https://kerala.gov.in/whatsnewdetailwise/MTY4MzY2NzM5NC4y)"
       },
       {
         "id": "content.broken_pdfs",
@@ -312,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/player/f2999a12/www-player.css' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/player/5203c085/www-player.css' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -577,7 +577,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "3/30 crawled link(s) broken (https://kerala.gov.in/whatsnewdetailwise/MTY4MzY2NzM5NC4y, https://kerala.gov.in/articledetail/MTA0OTA3NDUwNC4yOA==/1, https://kerala.gov.in/articledetail/OTM3NzA1NTUzLjQ=/1)"
+      "ev": "1/30 crawled link(s) broken (https://kerala.gov.in/whatsnewdetailwise/MTY4MzY2NzM5NC4y)"
     },
     {
       "id": "sec.hsts",
@@ -591,7 +591,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "5 low-contrast element(s)"
+      "ev": "4 low-contrast element(s)"
     },
     {
       "id": "gigw.privacy",
@@ -612,12 +612,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "18698.292999999998ms"
+      "ev": "15095.447999999997ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "19.6MB"
+      "ev": "19.7MB"
     },
     {
       "id": "id.tech",
@@ -654,7 +654,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/player/f2999a12/www-player.css' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/player/5203c085/www-player.css' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -687,7 +687,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.73"
+      "ev": "0.63"
     },
     {
       "id": "perf.images",
@@ -799,5 +799,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

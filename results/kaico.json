@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-08T01:46:23.391Z",
-    "run": "1791423890392",
+    "at": "2026-10-09T01:42:31.218Z",
+    "run": "1791510048905",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 57,
+      "performance": 56,
       "accessibility": 98,
       "best_practices": 100,
       "seo": 92
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4948ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -219,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "57/100"
+        "ev": "56/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "12406.207000000002ms"
+        "ev": "11835.779499999997ms"
       },
       {
         "id": "perf.cls",
@@ -266,8 +267,7 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "fail",
-        "ev": "ml-user"
+        "r": "pass"
       },
       {
         "id": "content.obsolete_tech",
@@ -438,10 +438,10 @@
     ]
   },
   "score": {
-    "overall": 60,
+    "overall": 63,
     "security": 64,
     "accessibility": 70,
-    "content": 50,
+    "content": 70,
     "gigw": 18,
     "performance": 81,
     "identity": 80
@@ -454,11 +454,6 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "content.legacy_font",
-      "sev": "H",
-      "ev": "ml-user"
-    },
-    {
       "id": "content.broken_links",
       "sev": "H",
       "ev": "2/20 crawled link(s) broken (https://kaicltd.com/services-copy-2/, https://kaicltd.com/trading/)"
@@ -467,6 +462,11 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "kaicltd.com"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "4948ms"
     },
     {
       "id": "sec.hsts",
@@ -509,7 +509,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "12406.207000000002ms"
+      "ev": "11835.779499999997ms"
     },
     {
       "id": "perf.weight",
@@ -589,7 +589,7 @@
     {
       "d": "2026-10-09",
       "up": true,
-      "score": 60
+      "score": 63
     },
     {
       "d": "2026-10-08",
@@ -677,5 +677,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

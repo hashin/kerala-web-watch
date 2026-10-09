@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-08T01:44:50.391Z",
-    "run": "1791423752271",
+    "at": "2026-10-09T01:40:48.904Z",
+    "run": "1791509983507",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 30,
-      "accessibility": 83,
+      "performance": 31,
+      "accessibility": 80,
       "best_practices": 96,
       "seo": 85
     },
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3042ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -217,27 +218,27 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "83/100"
+        "ev": "80/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "30/100"
+        "ev": "31/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "23238.359000000004ms"
+        "ev": "25401.846000000005ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "1.71"
+        "ev": "0.85"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "5.3MB"
+        "ev": "5.2MB"
       },
       {
         "id": "perf.viewport",
@@ -487,6 +488,11 @@
       "ev": "homcokerala.com"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3042ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -524,12 +530,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "23238.359000000004ms"
+      "ev": "25401.846000000005ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "5.3MB"
+      "ev": "5.2MB"
     },
     {
       "id": "sec.xcto",
@@ -589,7 +595,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "1.71"
+      "ev": "0.85"
     },
     {
       "id": "perf.images",
@@ -702,5 +708,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

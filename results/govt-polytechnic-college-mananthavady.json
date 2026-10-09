@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-08T01:42:32.270Z",
-    "run": "1791423711018",
+    "at": "2026-10-09T01:41:31.661Z",
+    "run": "1791510045624",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 89,
+      "performance": 69,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 92
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "WordPress 7.1.3",
@@ -223,11 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "89/100"
+        "ev": "69/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "fail",
+        "ev": "11064.527999999998ms"
       },
       {
         "id": "perf.cls",
@@ -281,8 +282,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://www.gptcmdy.ac.in/departments/civil-engineering/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -497,12 +497,12 @@
     ]
   },
   "score": {
-    "overall": 50,
+    "overall": 51,
     "security": 48,
     "accessibility": 50,
-    "content": 46,
+    "content": 56,
     "gigw": 0,
-    "performance": 86,
+    "performance": 76,
     "identity": 100
   },
   "status": "needs-work",
@@ -526,11 +526,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-slider"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://www.gptcmdy.ac.in/departments/civil-engineering/)"
     },
     {
       "id": "gigw.contact",
@@ -573,6 +568,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "11064.527999999998ms"
     },
     {
       "id": "perf.tap_targets",
@@ -651,7 +651,7 @@
     {
       "d": "2026-10-09",
       "up": true,
-      "score": 50
+      "score": 51
     },
     {
       "d": "2026-10-08",
@@ -719,5 +719,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

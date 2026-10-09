@@ -35,30 +35,30 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-10-08T01:19:13.327Z",
-    "run": "1791422303961",
+    "at": "2026-10-09T01:35:49.103Z",
+    "run": "1791509466135",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 41,
+      "accessibility": 56,
+      "best_practices": 69,
+      "seo": 82
     },
     "axe": {
-      "critical": 0,
-      "serious": 2,
-      "moderate": 2,
-      "minor": 0
+      "critical": 44,
+      "serious": 34,
+      "moderate": 49,
+      "minor": 62
     },
     "crawl": {
-      "pages": 0,
-      "pdfs": 0,
-      "broken": 0
+      "pages": 30,
+      "pdfs": 2,
+      "broken": 16
     },
     "tech": {
       "cms": null,
       "server": null,
-      "jquery": null
+      "jquery": "2.1.4"
     },
     "checks": [
       {
@@ -88,8 +88,7 @@
       },
       {
         "id": "avail.blank",
-        "r": "fail",
-        "ev": "63 visible characters"
+        "r": "pass"
       },
       {
         "id": "avail.under_construction",
@@ -113,19 +112,19 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.cert_valid",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.tls_version",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.hsts",
@@ -158,7 +157,8 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "pass"
+        "r": "fail",
+        "ev": "jquery 1.12.4, bootstrap 3.3.7, jquery 2.1.4, bootstrap 3.3.4, bootstrap 3.1.0"
       },
       {
         "id": "sec.safe_browsing",
@@ -170,17 +170,18 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "pass"
+        "r": "fail",
+        "ev": "44 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "2 serious violation(s)"
+        "ev": "34 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "2 moderate/minor violation(s)"
+        "ev": "111 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -188,16 +189,18 @@
       },
       {
         "id": "a11y.alt",
-        "r": "pass"
+        "r": "fail",
+        "ev": "44 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "10 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
         "r": "fail",
-        "ev": "no <h1>"
+        "ev": "no <h1>, heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -209,37 +212,41 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "pass"
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "56/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "41/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "18270.252000000015ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.28"
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "warn",
+        "ev": "7.6MB"
       },
       {
         "id": "perf.viewport",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -247,7 +254,7 @@
       },
       {
         "id": "content.copyright_year",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "content.last_updated",
@@ -264,11 +271,13 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "pass"
+        "r": "fail",
+        "ev": "ml-IN"
       },
       {
         "id": "content.obsolete_tech",
-        "r": "pass"
+        "r": "fail",
+        "ev": "<marquee"
       },
       {
         "id": "content.best_viewed",
@@ -276,15 +285,18 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "14/30 crawled link(s) broken (https://kuhs.ac.in/kuhs_new/, https://kuhs.ac.in/kuhs_new/index.php/search, https://kuhs.ac.in/#carousel-example-generic, ...)"
       },
       {
         "id": "content.broken_pdfs",
-        "r": "pass"
+        "r": "fail",
+        "ev": "2 linked PDF(s) 404: https://kuhs.ac.in/kuhs_new/images/uploads/pdf/general/anthem/kuhs_anthem_guidelines.pdf, https://kuhs.ac.in/kuhs_new/images/uploads/pdf/general/anthem/kuhs_anthem_lyrics.pdf"
       },
       {
         "id": "content.broken_images",
-        "r": "pass"
+        "r": "fail",
+        "ev": "2 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -292,29 +304,28 @@
       },
       {
         "id": "content.title",
-        "r": "fail",
-        "ev": "missing <title>"
+        "r": "pass"
       },
       {
         "id": "content.meta_desc",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.favicon",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+        "ev": "19 console error(s): Google Maps JavaScript API error: BillingNotEnabledMapError\nhttps://developers.google.com/maps/documentation/javascript/error-messages#billing-not-enabled-map-error"
       },
       {
         "id": "gigw.contact",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.feedback",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.sitemap",
@@ -326,7 +337,7 @@
       },
       {
         "id": "gigw.terms",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.copyright_policy",
@@ -354,11 +365,11 @@
       },
       {
         "id": "gigw.rti",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.search",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.ownership",
@@ -382,11 +393,12 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "id.robots",
-        "r": "na"
+        "r": "fail",
+        "ev": "robots.txt returned 404"
       },
       {
         "id": "id.sitemap_xml",
@@ -403,8 +415,7 @@
       },
       {
         "id": "id.charset_doctype",
-        "r": "fail",
-        "ev": "missing HTML5 doctype"
+        "r": "pass"
       },
       {
         "id": "id.tech",
@@ -418,12 +429,33 @@
     "screenshot": {
       "desktop": "kuhs.webp",
       "mobile": "kuhs-m.webp",
-      "phash": "1fffffffffffffff"
+      "phash": "ff2000ffffff0000"
     },
-    "outlinks": []
+    "outlinks": [
+      {
+        "host": "youtube.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "google.com",
+        "count": 3,
+        "texts": [
+          "നിബന്ധനകൾ",
+          "ഒരു മാപ്പ് പിശക് റിപ്പോർട്ട് ചെയ്യുക"
+        ]
+      },
+      {
+        "host": "g.co",
+        "count": 1,
+        "texts": [
+          "ഈ വെബ്സൈറ്റ് നിങ്ങൾക്ക് സ്വന്തമാണോ?"
+        ]
+      }
+    ]
   },
   "score": null,
-  "status": "broken",
+  "status": "down",
   "issues": [
     {
       "id": "avail.connect",
@@ -431,9 +463,18 @@
       "ev": "timeout"
     },
     {
-      "id": "avail.blank",
-      "sev": "C",
-      "ev": "63 visible characters"
+      "id": "sec.http_redirect",
+      "sev": "H"
+    },
+    {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "jquery 1.12.4, bootstrap 3.3.7, jquery 2.1.4, bootstrap 3.3.4, bootstrap 3.1.0"
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "44 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -441,16 +482,14 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "gigw.contact",
-      "sev": "H"
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-IN"
     },
     {
-      "id": "gigw.rti",
-      "sev": "H"
-    },
-    {
-      "id": "perf.viewport",
-      "sev": "H"
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "14/30 crawled link(s) broken (https://kuhs.ac.in/kuhs_new/, https://kuhs.ac.in/kuhs_new/index.php/search, https://kuhs.ac.in/#carousel-example-generic, ...)"
     },
     {
       "id": "sec.hsts",
@@ -463,12 +502,27 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "2 serious violation(s)"
+      "ev": "34 serious violation(s)"
     },
     {
-      "id": "content.title",
+      "id": "a11y.alt",
       "sev": "M",
-      "ev": "missing <title>"
+      "ev": "44 image(s) missing alt text"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "10 low-contrast element(s)"
+    },
+    {
+      "id": "content.obsolete_tech",
+      "sev": "M",
+      "ev": "<marquee"
+    },
+    {
+      "id": "content.broken_pdfs",
+      "sev": "M",
+      "ev": "2 linked PDF(s) 404: https://kuhs.ac.in/kuhs_new/images/uploads/pdf/general/anthem/kuhs_anthem_guidelines.pdf, https://kuhs.ac.in/kuhs_new/images/uploads/pdf/general/anthem/kuhs_anthem_lyrics.pdf"
     },
     {
       "id": "gigw.sitemap",
@@ -491,8 +545,14 @@
       "sev": "M"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "18270.252000000015ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "7.6MB"
     },
     {
       "id": "sec.csp",
@@ -514,33 +574,27 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "2 moderate/minor violation(s)"
+      "ev": "111 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "no <h1>"
+      "ev": "no <h1>, heading levels skipped"
     },
     {
-      "id": "content.meta_desc",
-      "sev": "L"
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
-      "id": "content.favicon",
-      "sev": "L"
+      "id": "content.broken_images",
+      "sev": "L",
+      "ev": "2 broken image(s)"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
-    },
-    {
-      "id": "gigw.feedback",
-      "sev": "L"
-    },
-    {
-      "id": "gigw.terms",
-      "sev": "L"
+      "ev": "19 console error(s): Google Maps JavaScript API error: BillingNotEnabledMapError\nhttps://developers.google.com/maps/documentation/javascript/error-messages#billing-not-enabled-map-error"
     },
     {
       "id": "gigw.copyright_policy",
@@ -563,26 +617,23 @@
       "sev": "L"
     },
     {
-      "id": "gigw.search",
-      "sev": "L"
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.28"
     },
     {
       "id": "perf.images",
       "sev": "L"
     },
     {
-      "id": "id.www_consistency",
-      "sev": "L"
+      "id": "id.robots",
+      "sev": "L",
+      "ev": "robots.txt returned 404"
     },
     {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
-    },
-    {
-      "id": "id.charset_doctype",
-      "sev": "L",
-      "ev": "missing HTML5 doctype"
     },
     {
       "id": "gigw.emblem",
@@ -690,5 +741,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

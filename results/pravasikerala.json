@@ -35,13 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-08T01:35:11.879Z",
-    "run": "1791423188538",
+    "at": "2026-10-09T01:36:12.623Z",
+    "run": "1791509647283",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 35,
       "accessibility": 84,
-      "best_practices": 88,
+      "best_practices": 92,
       "seo": 92
     },
     "axe": {
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3491ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -224,7 +225,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "44385.75200000003ms"
+        "ev": "39467.39050000004ms"
       },
       {
         "id": "perf.cls",
@@ -234,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "51.2MB"
+        "ev": "48.2MB"
       },
       {
         "id": "perf.viewport",
@@ -489,6 +490,11 @@
       "ev": "pravasikerala.org"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3491ms"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
       "ev": "24 serious violation(s)"
@@ -514,12 +520,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "44385.75200000003ms"
+      "ev": "39467.39050000004ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "51.2MB"
+      "ev": "48.2MB"
     },
     {
       "id": "sec.csp",
@@ -679,5 +685,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

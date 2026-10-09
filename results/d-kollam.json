@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-08T01:14:41.939Z",
-    "run": "1791422000214",
+    "at": "2026-10-09T01:22:09.042Z",
+    "run": "1791508868736",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 55,
-      "accessibility": 92,
-      "best_practices": 73,
+      "accessibility": 96,
+      "best_practices": 50,
       "seo": 92
     },
     "axe": {
-      "critical": 8,
+      "critical": 16,
       "serious": 0,
-      "moderate": 0,
+      "moderate": 2,
       "minor": 13
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -169,7 +169,7 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "8 critical violation(s)"
+        "ev": "16 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
@@ -178,7 +178,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "13 moderate/minor violation(s)"
+        "ev": "15 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -194,7 +194,8 @@
       },
       {
         "id": "a11y.headings",
-        "r": "pass"
+        "r": "fail",
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -213,7 +214,7 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "92/100"
+        "ev": "96/100"
       },
       {
         "id": "perf.lighthouse",
@@ -223,7 +224,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "16364.633500000004ms"
+        "ev": "24636.21075000001ms"
       },
       {
         "id": "perf.cls",
@@ -232,7 +233,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "3.8MB"
+        "ev": "5.1MB"
       },
       {
         "id": "perf.viewport",
@@ -257,8 +258,7 @@
       },
       {
         "id": "content.stale_news",
-        "r": "fail",
-        "ev": "newest dated item: 2023-12-31"
+        "r": "na"
       },
       {
         "id": "content.placeholder",
@@ -279,8 +279,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://kollam.nic.in/en/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -288,7 +287,8 @@
       },
       {
         "id": "content.broken_images",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -309,7 +309,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "9 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -429,8 +429,8 @@
         "count": 5,
         "texts": [
           "കേരള സര്‍ക്കാര്‍",
-          "Chief Electoral Officer (CEO), Kerala",
-          "E District"
+          "E-office",
+          "CMO Keralam"
         ]
       },
       {
@@ -440,75 +440,22 @@
       },
       {
         "host": "mygov.in",
-        "count": 2,
+        "count": 1,
         "texts": []
       },
       {
-        "host": "facebook.com",
-        "count": 16,
+        "host": "youtube.com",
+        "count": 1,
         "texts": [
-          "Facebook",
-          "Share on Facebook"
+          "Rajiv Anchal Message – General Election-2019, 18 KOLLAM HPC"
         ]
       },
       {
         "host": "rtionline.gov.in",
         "count": 1,
         "texts": [
-          "Right to Information Act"
+          "RTI Online"
         ]
-      },
-      {
-        "host": "s3waas.gov.in",
-        "count": 18,
-        "texts": []
-      },
-      {
-        "host": "twitter.com",
-        "count": 15,
-        "texts": [
-          "Share on X"
-        ]
-      },
-      {
-        "host": "india.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "pmindia.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "pmnrf.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "data.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "incredibleindia.org",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "childlineindia.org.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "darpg.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "digitalindiaawards.gov.in",
-        "count": 1,
-        "texts": []
       },
       {
         "host": "www.nic.in",
@@ -523,14 +470,24 @@
         "texts": [
           "Ministry of Electronics & Information Technology"
         ]
+      },
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "s3waas.gov.in",
+        "count": 1,
+        "texts": []
       }
     ]
   },
   "score": {
-    "overall": 60,
+    "overall": 62,
     "security": 48,
-    "accessibility": 64,
-    "content": 36,
+    "accessibility": 60,
+    "content": 52,
     "gigw": 60,
     "performance": 81,
     "identity": 96
@@ -545,7 +502,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "8 critical violation(s)"
+      "ev": "16 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -556,11 +513,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://kollam.nic.in/en/)"
     },
     {
       "id": "sec.hsts",
@@ -576,11 +528,6 @@
       "ev": "1 form control(s) without a label"
     },
     {
-      "id": "content.stale_news",
-      "sev": "M",
-      "ev": "newest dated item: 2023-12-31"
-    },
-    {
       "id": "gigw.privacy",
       "sev": "M"
     },
@@ -591,12 +538,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "16364.633500000004ms"
+      "ev": "24636.21075000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "3.8MB"
+      "ev": "5.1MB"
     },
     {
       "id": "sec.csp",
@@ -613,7 +560,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "13 moderate/minor violation(s)"
+      "ev": "15 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
     },
     {
       "id": "a11y.keyboard",
@@ -621,9 +573,14 @@
       "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
+      "id": "content.broken_images",
+      "sev": "L",
+      "ev": "1 broken image(s)"
+    },
+    {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "9 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.terms",
@@ -664,7 +621,7 @@
     {
       "d": "2026-10-09",
       "up": true,
-      "score": 60
+      "score": 62
     },
     {
       "d": "2026-10-08",
@@ -747,5 +704,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

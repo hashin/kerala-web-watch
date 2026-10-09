@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-08T01:34:56.253Z",
-    "run": "1791423213211",
+    "at": "2026-10-09T01:44:20.738Z",
+    "run": "1791510168684",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 26,
+      "accessibility": 84,
+      "best_practices": 88,
+      "seo": 85
+    },
     "axe": {
       "critical": 0,
       "serious": 13,
@@ -209,24 +214,28 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "84/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "26/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "15561.761000000002ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.49"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "297.6MB"
+        "ev": "350.7MB"
       },
       {
         "id": "perf.viewport",
@@ -234,11 +243,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -414,7 +423,7 @@
     "screenshot": {
       "desktop": "dtpckollam.webp",
       "mobile": "dtpckollam-m.webp",
-      "phash": "e0e06060e8e0e0ff"
+      "phash": "ffffff080c0000ff"
     },
     "outlinks": [
       {
@@ -444,12 +453,12 @@
     ]
   },
   "score": {
-    "overall": 56,
+    "overall": 54,
     "security": 38,
     "accessibility": 70,
     "content": 56,
     "gigw": 26,
-    "performance": 90,
+    "performance": 72,
     "identity": 76
   },
   "status": "needs-work",
@@ -510,9 +519,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "15561.761000000002ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "297.6MB"
+      "ev": "350.7MB"
     },
     {
       "id": "sec.csp",
@@ -571,6 +585,15 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.49"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.soft_404",
       "sev": "L",
       "ev": "a nonexistent path returned 200"
@@ -585,7 +608,7 @@
     {
       "d": "2026-10-09",
       "up": true,
-      "score": 56
+      "score": 54
     },
     {
       "d": "2026-10-08",
@@ -673,5 +696,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

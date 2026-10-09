@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-08T01:37:31.673Z",
-    "run": "1791423411787",
+    "at": "2026-10-09T01:35:41.068Z",
+    "run": "1791509657581",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 27,
+      "performance": 36,
       "accessibility": 37,
       "best_practices": 77,
       "seo": 67
     },
     "axe": {
-      "critical": 11,
-      "serious": 15,
-      "moderate": 12,
+      "critical": 10,
+      "serious": 16,
+      "moderate": 11,
       "minor": 4
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -169,17 +169,17 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "11 critical violation(s)"
+        "ev": "10 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "15 serious violation(s)"
+        "ev": "16 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "16 moderate/minor violation(s)"
+        "ev": "15 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -188,12 +188,12 @@
       {
         "id": "a11y.alt",
         "r": "fail",
-        "ev": "11 image(s) missing alt text"
+        "ev": "10 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "9 low-contrast element(s)"
+        "ev": "10 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -219,17 +219,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "27/100"
+        "ev": "36/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "28035.02200000001ms"
+        "ev": "19296.440000000002ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.43"
+        "ev": "0.61"
       },
       {
         "id": "perf.weight",
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://www.oushadhi.org/product/ayush-kwath)"
       },
       {
         "id": "content.broken_pdfs",
@@ -454,10 +455,10 @@
     ]
   },
   "score": {
-    "overall": 46,
+    "overall": 44,
     "security": 48,
     "accessibility": 46,
-    "content": 38,
+    "content": 28,
     "gigw": 18,
     "performance": 62,
     "identity": 76
@@ -472,7 +473,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "11 critical violation(s)"
+      "ev": "10 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -483,6 +484,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://www.oushadhi.org/product/ayush-kwath)"
     },
     {
       "id": "id.gov_domain",
@@ -500,17 +506,17 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "15 serious violation(s)"
+      "ev": "16 serious violation(s)"
     },
     {
       "id": "a11y.alt",
       "sev": "M",
-      "ev": "11 image(s) missing alt text"
+      "ev": "10 image(s) missing alt text"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "9 low-contrast element(s)"
+      "ev": "10 low-contrast element(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -540,7 +546,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "28035.02200000001ms"
+      "ev": "19296.440000000002ms"
     },
     {
       "id": "perf.weight",
@@ -566,7 +572,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "16 moderate/minor violation(s)"
+      "ev": "15 moderate/minor violation(s)"
     },
     {
       "id": "content.broken_images",
@@ -617,7 +623,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.43"
+      "ev": "0.61"
     },
     {
       "id": "perf.images",
@@ -646,7 +652,7 @@
     {
       "d": "2026-10-09",
       "up": true,
-      "score": 46
+      "score": 44
     },
     {
       "d": "2026-10-08",
@@ -734,5 +740,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

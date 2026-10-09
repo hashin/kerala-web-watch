@@ -37,24 +37,24 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-08T01:43:34.469Z",
-    "run": "1791423725567",
+    "at": "2026-10-09T01:44:01.782Z",
+    "run": "1791510151220",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 31,
+      "accessibility": 86,
+      "best_practices": 69,
+      "seo": 58
     },
     "axe": {
-      "critical": 0,
-      "serious": 1,
-      "moderate": 4,
+      "critical": 1,
+      "serious": 35,
+      "moderate": 3,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
-      "pdfs": 0,
+      "pages": 30,
+      "pdfs": 19,
       "broken": 0
     },
     "tech": {
@@ -73,8 +73,7 @@
       },
       {
         "id": "avail.status",
-        "r": "fail",
-        "ev": "final response was 403"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
@@ -98,7 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3018ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -130,15 +130,16 @@
       },
       {
         "id": "sec.hsts",
-        "r": "fail"
-      },
-      {
-        "id": "sec.mixed_content",
         "r": "pass"
       },
       {
+        "id": "sec.mixed_content",
+        "r": "fail",
+        "ev": "src=\"http://localhost/keralaenergy/wp-content/uploads/2023/06/logo.png\""
+      },
+      {
         "id": "sec.csp",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.xfo",
@@ -170,17 +171,18 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "1 serious violation(s)"
+        "ev": "35 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "4 moderate/minor violation(s)"
+        "ev": "3 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -188,15 +190,18 @@
       },
       {
         "id": "a11y.alt",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "2 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
-        "r": "pass"
+        "r": "fail",
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -208,37 +213,41 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "pass"
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "86/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "31/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "20033.7505ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "1.07"
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "warn",
+        "ev": "5.2MB"
       },
       {
         "id": "perf.viewport",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -246,7 +255,7 @@
       },
       {
         "id": "content.copyright_year",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "content.last_updated",
@@ -263,11 +272,13 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "pass"
+        "r": "fail",
+        "ev": "ml-widget"
       },
       {
         "id": "content.obsolete_tech",
-        "r": "pass"
+        "r": "fail",
+        "ev": "<marquee"
       },
       {
         "id": "content.best_viewed",
@@ -299,16 +310,16 @@
       },
       {
         "id": "content.favicon",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 403 ()"
+        "ev": "3 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
       },
       {
         "id": "gigw.contact",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.feedback",
@@ -320,27 +331,27 @@
       },
       {
         "id": "gigw.privacy",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.terms",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.copyright_policy",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.hyperlink_policy",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.disclaimer",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.screen_reader",
@@ -352,11 +363,11 @@
       },
       {
         "id": "gigw.rti",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.search",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.ownership",
@@ -368,7 +379,7 @@
       },
       {
         "id": "gigw.emblem",
-        "r": "warn"
+        "r": "pass"
       },
       {
         "id": "id.gov_domain",
@@ -380,17 +391,17 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.robots",
         "r": "fail",
-        "ev": "robots.txt returned 403"
+        "ev": "robots.txt returned 404"
       },
       {
         "id": "id.sitemap_xml",
         "r": "fail",
-        "ev": "sitemap.xml returned 403"
+        "ev": "sitemap.xml returned 404"
       },
       {
         "id": "id.soft_404",
@@ -398,12 +409,11 @@
       },
       {
         "id": "id.canonical",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.charset_doctype",
-        "r": "fail",
-        "ev": "missing UTF-8 charset, HTML5 doctype"
+        "r": "pass"
       },
       {
         "id": "id.tech",
@@ -417,17 +427,93 @@
     "screenshot": {
       "desktop": "keralaenergy.webp",
       "mobile": "keralaenergy-m.webp",
-      "phash": "0707ffffffffffff"
+      "phash": "3fffff00000000ff"
     },
-    "outlinks": []
+    "outlinks": [
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": [
+          "facebook"
+        ]
+      },
+      {
+        "host": "twitter.com",
+        "count": 1,
+        "texts": [
+          "Twitter"
+        ]
+      },
+      {
+        "host": "youtube.com",
+        "count": 2,
+        "texts": [
+          "Youtube",
+          "Videos"
+        ]
+      },
+      {
+        "host": "socialalpha.org",
+        "count": 1,
+        "texts": [
+          "CEIBIC"
+        ]
+      },
+      {
+        "host": "powerbi.com",
+        "count": 1,
+        "texts": [
+          "Anganjyothi"
+        ]
+      },
+      {
+        "host": "kfon.co.in",
+        "count": 1,
+        "texts": [
+          "Click here for register/update end office details"
+        ]
+      },
+      {
+        "host": "google.com",
+        "count": 2,
+        "texts": []
+      },
+      {
+        "host": "websiteout.net",
+        "count": 1,
+        "texts": [
+          "Free and reliable hit counter for websites"
+        ]
+      },
+      {
+        "host": "cdit.org",
+        "count": 1,
+        "texts": [
+          "CDIT"
+        ]
+      }
+    ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 57,
+    "security": 62,
+    "accessibility": 40,
+    "content": 42,
+    "gigw": 58,
+    "performance": 77,
+    "identity": 92
+  },
+  "status": "needs-work",
   "issues": [
     {
-      "id": "avail.status",
-      "sev": "C",
-      "ev": "final response was 403"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "src=\"http://localhost/keralaenergy/wp-content/uploads/2023/06/logo.png\""
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "1 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -435,20 +521,14 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "gigw.contact",
-      "sev": "H"
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-widget"
     },
     {
-      "id": "gigw.rti",
-      "sev": "H"
-    },
-    {
-      "id": "perf.viewport",
-      "sev": "H"
-    },
-    {
-      "id": "sec.hsts",
-      "sev": "M"
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3018ms"
     },
     {
       "id": "sec.xfo",
@@ -457,18 +537,25 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "1 serious violation(s)"
+      "ev": "35 serious violation(s)"
+    },
+    {
+      "id": "a11y.alt",
+      "sev": "M",
+      "ev": "1 image(s) missing alt text"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "2 low-contrast element(s)"
+    },
+    {
+      "id": "content.obsolete_tech",
+      "sev": "M",
+      "ev": "<marquee"
     },
     {
       "id": "gigw.sitemap",
-      "sev": "M"
-    },
-    {
-      "id": "gigw.privacy",
-      "sev": "M"
-    },
-    {
-      "id": "gigw.accessibility_statement",
       "sev": "M"
     },
     {
@@ -480,12 +567,14 @@
       "sev": "M"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "20033.7505ms"
     },
     {
-      "id": "sec.csp",
-      "sev": "L"
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "5.2MB"
     },
     {
       "id": "sec.xcto",
@@ -498,39 +587,29 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "4 moderate/minor violation(s)"
+      "ev": "3 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
+    },
+    {
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
       "id": "content.meta_desc",
       "sev": "L"
     },
     {
-      "id": "content.favicon",
-      "sev": "L"
-    },
-    {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 403 ()"
+      "ev": "3 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
     },
     {
       "id": "gigw.feedback",
-      "sev": "L"
-    },
-    {
-      "id": "gigw.terms",
-      "sev": "L"
-    },
-    {
-      "id": "gigw.copyright_policy",
-      "sev": "L"
-    },
-    {
-      "id": "gigw.hyperlink_policy",
-      "sev": "L"
-    },
-    {
-      "id": "gigw.disclaimer",
       "sev": "L"
     },
     {
@@ -542,8 +621,9 @@
       "sev": "L"
     },
     {
-      "id": "gigw.search",
-      "sev": "L"
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "1.07"
     },
     {
       "id": "perf.images",
@@ -552,32 +632,19 @@
     {
       "id": "id.robots",
       "sev": "L",
-      "ev": "robots.txt returned 403"
+      "ev": "robots.txt returned 404"
     },
     {
       "id": "id.sitemap_xml",
       "sev": "L",
-      "ev": "sitemap.xml returned 403"
-    },
-    {
-      "id": "id.charset_doctype",
-      "sev": "L",
-      "ev": "missing UTF-8 charset, HTML5 doctype"
-    },
-    {
-      "id": "gigw.emblem",
-      "sev": "I"
-    },
-    {
-      "id": "id.canonical",
-      "sev": "I"
+      "ev": "sitemap.xml returned 404"
     }
   ],
   "history": [
     {
       "d": "2026-10-09",
-      "up": false,
-      "score": null
+      "up": true,
+      "score": 57
     },
     {
       "d": "2026-10-08",
@@ -670,5 +737,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

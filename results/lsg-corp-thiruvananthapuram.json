@@ -35,19 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-08T01:30:40.012Z",
-    "run": "1791422999719",
+    "at": "2026-10-09T01:33:36.709Z",
+    "run": "1791509576589",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 69,
+      "performance": 67,
       "accessibility": 89,
       "best_practices": 81,
       "seo": 83
     },
     "axe": {
       "critical": 0,
-      "serious": 6,
-      "moderate": 16,
+      "serious": 10,
+      "moderate": 30,
       "minor": 0
     },
     "crawl": {
@@ -174,12 +174,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "6 serious violation(s)"
+        "ev": "10 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "16 moderate/minor violation(s)"
+        "ev": "30 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -192,7 +192,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "4 low-contrast element(s)"
+        "ev": "8 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -220,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "69/100"
+        "ev": "67/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6078.249999999999ms"
+        "ev": "6345.576499999999ms"
       },
       {
         "id": "perf.cls",
@@ -439,9 +439,11 @@
       },
       {
         "host": "kerala.gov.in",
-        "count": 2,
+        "count": 7,
         "texts": [
-          "E-Tenders"
+          "E-Tenders",
+          "Governor",
+          "Chief Minister"
         ]
       },
       {
@@ -456,6 +458,13 @@
         "count": 1,
         "texts": [
           "Read More"
+        ]
+      },
+      {
+        "host": "niyamasabha.org",
+        "count": 1,
+        "texts": [
+          "Members of the Legislative Assembly"
         ]
       },
       {
@@ -538,12 +547,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "6 serious violation(s)"
+      "ev": "10 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "4 low-contrast element(s)"
+      "ev": "8 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -560,7 +569,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6078.249999999999ms"
+      "ev": "6345.576499999999ms"
     },
     {
       "id": "sec.csp",
@@ -573,7 +582,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "16 moderate/minor violation(s)"
+      "ev": "30 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -712,5 +721,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

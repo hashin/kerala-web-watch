@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-08T01:25:27.650Z",
-    "run": "1791422685133",
+    "at": "2026-10-09T01:37:11.155Z",
+    "run": "1791509779403",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 31,
@@ -97,7 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3515ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -228,7 +229,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "19579.99099999999ms"
+        "ev": "19079.809999999998ms"
       },
       {
         "id": "perf.cls",
@@ -509,6 +510,11 @@
       "sev": "H"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3515ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -550,7 +556,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "19579.99099999999ms"
+      "ev": "19079.809999999998ms"
     },
     {
       "id": "perf.weight",
@@ -732,5 +738,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

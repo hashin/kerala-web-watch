@@ -35,19 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-08T01:50:31.031Z",
-    "run": "1791424135535",
+    "at": "2026-10-09T01:56:33.745Z",
+    "run": "1791510900891",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
-      "accessibility": 72,
-      "best_practices": 92,
-      "seo": 69
+      "performance": 48,
+      "accessibility": 77,
+      "best_practices": 88,
+      "seo": 62
     },
     "axe": {
       "critical": 0,
-      "serious": 20,
-      "moderate": 14,
+      "serious": 23,
+      "moderate": 17,
       "minor": 0
     },
     "crawl": {
@@ -120,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "17 days left"
+        "ev": "16 days left"
       },
       {
         "id": "sec.tls_version",
@@ -174,16 +174,17 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "20 serious violation(s)"
+        "ev": "23 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "14 moderate/minor violation(s)"
+        "ev": "17 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
-        "r": "pass"
+        "r": "fail",
+        "ev": "<html lang=\"en-US\"> vs. 43% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -192,7 +193,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "12 low-contrast element(s)"
+        "ev": "15 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -214,17 +215,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "72/100"
+        "ev": "77/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "48/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "20876.605ms"
+        "ev": "22117.910000000007ms"
       },
       {
         "id": "perf.cls",
@@ -232,8 +233,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "5.1MB"
+        "r": "fail",
+        "ev": "13.6MB"
       },
       {
         "id": "perf.viewport",
@@ -310,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "53 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "2 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -420,7 +421,7 @@
     "screenshot": {
       "desktop": "livestockkerala.webp",
       "mobile": "livestockkerala-m.webp",
-      "phash": "0000b3a1b3ffffff"
+      "phash": "0000ffb3ffff0000"
     },
     "outlinks": [
       {
@@ -441,15 +442,15 @@
     ]
   },
   "score": {
-    "overall": 51,
+    "overall": 46,
     "security": 18,
-    "accessibility": 74,
+    "accessibility": 54,
     "content": 38,
     "gigw": 28,
-    "performance": 81,
+    "performance": 76,
     "identity": 100
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.http_redirect",
@@ -458,12 +459,17 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "17 days left"
+      "ev": "16 days left"
     },
     {
       "id": "sec.mixed_content",
       "sev": "H",
       "ev": "href=\"http://gmpg.org/xfn/11\""
+    },
+    {
+      "id": "a11y.lang",
+      "sev": "H",
+      "ev": "<html lang=\"en-US\"> vs. 43% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -486,12 +492,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "20 serious violation(s)"
+      "ev": "23 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "12 low-contrast element(s)"
+      "ev": "15 low-contrast element(s)"
     },
     {
       "id": "content.copyright_year",
@@ -517,12 +523,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "20876.605ms"
+      "ev": "22117.910000000007ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "5.1MB"
+      "ev": "13.6MB"
     },
     {
       "id": "sec.csp",
@@ -539,7 +545,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "14 moderate/minor violation(s)"
+      "ev": "17 moderate/minor violation(s)"
     },
     {
       "id": "a11y.keyboard",
@@ -558,7 +564,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "53 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "2 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.feedback",
@@ -601,7 +607,7 @@
     {
       "d": "2026-10-09",
       "up": true,
-      "score": 51
+      "score": 46
     },
     {
       "d": "2026-10-08",
@@ -684,5 +690,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

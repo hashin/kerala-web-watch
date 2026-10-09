@@ -35,24 +35,24 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-08T01:20:12.289Z",
-    "run": "1791422353329",
+    "at": "2026-10-09T01:30:27.015Z",
+    "run": "1791509357098",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 84,
+      "performance": 94,
       "accessibility": 45,
       "best_practices": 85,
       "seo": 92
     },
     "axe": {
-      "critical": 100,
+      "critical": 101,
       "serious": 19,
       "moderate": 4,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 18,
+      "pdfs": 19,
       "broken": 0
     },
     "tech": {
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3115ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -170,7 +171,7 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "100 critical violation(s)"
+        "ev": "101 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
@@ -185,12 +186,12 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"\"> vs. 41% Malayalam content"
+        "ev": "<html lang=\"\"> vs. 39% Malayalam content"
       },
       {
         "id": "a11y.alt",
         "r": "fail",
-        "ev": "100 image(s) missing alt text"
+        "ev": "101 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
@@ -222,12 +223,11 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "84/100"
+        "ev": "94/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "4517.188ms"
+        "r": "pass"
       },
       {
         "id": "perf.cls",
@@ -483,12 +483,12 @@
     ]
   },
   "score": {
-    "overall": 42,
+    "overall": 43,
     "security": 44,
     "accessibility": 22,
     "content": 66,
     "gigw": 18,
-    "performance": 56,
+    "performance": 66,
     "identity": 68
   },
   "status": "poor",
@@ -501,12 +501,12 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "100 critical violation(s)"
+      "ev": "101 critical violation(s)"
     },
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"\"> vs. 41% Malayalam content"
+      "ev": "<html lang=\"\"> vs. 39% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -521,6 +521,11 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "niyamasabha.org"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3115ms"
     },
     {
       "id": "sec.hsts",
@@ -538,7 +543,7 @@
     {
       "id": "a11y.alt",
       "sev": "M",
-      "ev": "100 image(s) missing alt text"
+      "ev": "101 image(s) missing alt text"
     },
     {
       "id": "a11y.contrast",
@@ -569,11 +574,6 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "4517.188ms"
     },
     {
       "id": "perf.tap_targets",
@@ -673,7 +673,7 @@
     {
       "d": "2026-10-09",
       "up": true,
-      "score": 42
+      "score": 43
     },
     {
       "d": "2026-10-08",
@@ -761,5 +761,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

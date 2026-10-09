@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T00:57:37.325Z",
-    "run": "1791334574562",
+    "at": "2026-10-09T01:21:52.774Z",
+    "run": "1791508843508",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 52,
-      "accessibility": 89,
+      "performance": 53,
+      "accessibility": 94,
       "best_practices": 73,
-      "seo": 92
+      "seo": 83
     },
     "axe": {
-      "critical": 8,
-      "serious": 1,
-      "moderate": 0,
-      "minor": 21
+      "critical": 11,
+      "serious": 0,
+      "moderate": 1,
+      "minor": 11
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 2
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -169,17 +169,16 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "8 critical violation(s)"
+        "ev": "11 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
-        "r": "fail",
-        "ev": "1 serious violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "21 moderate/minor violation(s)"
+        "ev": "12 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -195,7 +194,8 @@
       },
       {
         "id": "a11y.headings",
-        "r": "pass"
+        "r": "fail",
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -214,17 +214,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "89/100"
+        "ev": "94/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "52/100"
+        "ev": "53/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "31646.381512137617ms"
+        "ev": "8402.702000000001ms"
       },
       {
         "id": "perf.cls",
@@ -232,8 +232,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "fail",
-        "ev": "10.3MB"
+        "r": "warn",
+        "ev": "5.4MB"
       },
       {
         "id": "perf.viewport",
@@ -279,8 +279,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "2/30 crawled link(s) broken (https://ernakulam.nic.in/en/#SkipContent, https://ernakulam.nic.in/en/who-is-who/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -426,11 +425,9 @@
     "outlinks": [
       {
         "host": "kerala.gov.in",
-        "count": 5,
+        "count": 1,
         "texts": [
-          "കേരളം സർക്കാർ",
-          "District News",
-          "E-District"
+          "കേരള സർക്കാർ"
         ]
       },
       {
@@ -455,72 +452,12 @@
         ]
       },
       {
-        "host": "censusindia.gov.in",
-        "count": 1,
-        "texts": [
-          "Census"
-        ]
-      },
-      {
-        "host": "s3waas.gov.in",
-        "count": 7,
-        "texts": []
-      },
-      {
-        "host": "facebook.com",
-        "count": 6,
-        "texts": [
-          "Share on Facebook"
-        ]
-      },
-      {
-        "host": "twitter.com",
-        "count": 6,
-        "texts": [
-          "Share on X"
-        ]
-      },
-      {
         "host": "youtube.com",
         "count": 2,
         "texts": [
-          "Play Video"
+          "Kochi :The Queen Of Arabian Sea",
+          "Kadamakudy"
         ]
-      },
-      {
-        "host": "india.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "pmindia.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "pmnrf.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "data.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "mygov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "incredibleindia.org",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "digitalindiaawards.gov.in",
-        "count": 1,
-        "texts": []
       },
       {
         "host": "www.nic.in",
@@ -535,16 +472,21 @@
         "texts": [
           "Ministry of Electronics & Information Technology"
         ]
+      },
+      {
+        "host": "s3waas.gov.in",
+        "count": 1,
+        "texts": []
       }
     ]
   },
   "score": {
-    "overall": 59,
+    "overall": 62,
     "security": 48,
-    "accessibility": 54,
-    "content": 46,
+    "accessibility": 60,
+    "content": 56,
     "gigw": 60,
-    "performance": 76,
+    "performance": 81,
     "identity": 96
   },
   "status": "needs-work",
@@ -557,7 +499,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "8 critical violation(s)"
+      "ev": "11 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -570,22 +512,12 @@
       "ev": "ml-IN"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "2/30 crawled link(s) broken (https://ernakulam.nic.in/en/#SkipContent, https://ernakulam.nic.in/en/who-is-who/)"
-    },
-    {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
       "id": "sec.xfo",
       "sev": "M"
-    },
-    {
-      "id": "a11y.axe_serious",
-      "sev": "M",
-      "ev": "1 serious violation(s)"
     },
     {
       "id": "a11y.labels",
@@ -603,12 +535,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "31646.381512137617ms"
+      "ev": "8402.702000000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "10.3MB"
+      "ev": "5.4MB"
     },
     {
       "id": "sec.csp",
@@ -625,7 +557,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "21 moderate/minor violation(s)"
+      "ev": "12 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
     },
     {
       "id": "a11y.keyboard",
@@ -680,7 +617,7 @@
     {
       "d": "2026-10-09",
       "up": true,
-      "score": 59
+      "score": 62
     },
     {
       "d": "2026-10-08",
@@ -763,5 +700,5 @@
       "score": 63
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

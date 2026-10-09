@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-08T01:45:01.800Z",
-    "run": "1791423413093",
+    "at": "2026-10-09T01:49:15.548Z",
+    "run": "1791510497590",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 47,
+      "performance": 51,
       "accessibility": 74,
       "best_practices": 50,
-      "seo": 83
+      "seo": 91
     },
     "axe": {
       "critical": 2,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 28
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -120,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "17 days left"
+        "ev": "16 days left"
       },
       {
         "id": "sec.tls_version",
@@ -223,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "47/100"
+        "ev": "51/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "12419.9445ms"
+        "ev": "12043.975999999999ms"
       },
       {
         "id": "perf.cls",
@@ -283,8 +283,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "28/30 crawled link(s) broken (https://jalanidhi.kerala.gov.in/#, https://jalanidhi.kerala.gov.in/#1, https://jalanidhi.kerala.gov.in/#3, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -313,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "3 console error(s): ZDBExpViewHandler is not defined"
+        "ev": "1 console error(s): ZDBExpViewHandler is not defined"
       },
       {
         "id": "gigw.contact",
@@ -421,7 +420,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e6a61h1, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e6a72h1, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
       }
     ],
     "screenshot": {
@@ -479,10 +478,10 @@
     ]
   },
   "score": {
-    "overall": 43,
+    "overall": 46,
     "security": 18,
     "accessibility": 30,
-    "content": 42,
+    "content": 62,
     "gigw": 52,
     "performance": 76,
     "identity": 88
@@ -492,7 +491,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "17 days left"
+      "ev": "16 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -518,11 +517,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "28/30 crawled link(s) broken (https://jalanidhi.kerala.gov.in/#, https://jalanidhi.kerala.gov.in/#1, https://jalanidhi.kerala.gov.in/#3, ...)"
     },
     {
       "id": "sec.hsts",
@@ -558,7 +552,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "12419.9445ms"
+      "ev": "12043.975999999999ms"
     },
     {
       "id": "perf.weight",
@@ -599,7 +593,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "3 console error(s): ZDBExpViewHandler is not defined"
+      "ev": "1 console error(s): ZDBExpViewHandler is not defined"
     },
     {
       "id": "gigw.feedback",
@@ -659,14 +653,14 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e6a61h1, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e6a72h1, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
     }
   ],
   "history": [
     {
       "d": "2026-10-09",
       "up": true,
-      "score": 43
+      "score": 46
     },
     {
       "d": "2026-10-08",
@@ -754,5 +748,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

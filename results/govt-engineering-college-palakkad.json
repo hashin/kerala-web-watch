@@ -35,14 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-08T01:41:51.017Z",
-    "run": "1791423525025",
+    "at": "2026-10-09T04:04:04.743Z",
+    "run": "1791518448653",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
+    },
     "axe": {
       "critical": 5,
       "serious": 12,
-      "moderate": 26,
+      "moderate": 27,
       "minor": 1
     },
     "crawl": {
@@ -111,15 +116,15 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.tls_version",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.hsts",
@@ -175,7 +180,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "27 moderate/minor violation(s)"
+        "ev": "28 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -209,11 +214,13 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
@@ -234,11 +241,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -261,7 +268,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-user"
+        "ev": "ml-"
       },
       {
         "id": "content.obsolete_tech",
@@ -379,7 +386,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "id.robots",
@@ -594,7 +601,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-user"
+      "ev": "ml-"
     },
     {
       "id": "gigw.contact",
@@ -650,6 +657,10 @@
       "ev": "4.9MB"
     },
     {
+      "id": "perf.tap_targets",
+      "sev": "M"
+    },
+    {
       "id": "sec.csp",
       "sev": "L"
     },
@@ -664,7 +675,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "27 moderate/minor violation(s)"
+      "ev": "28 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -709,7 +720,7 @@
       "sev": "L"
     },
     {
-      "id": "id.www_consistency",
+      "id": "perf.images",
       "sev": "L"
     },
     {
@@ -798,5 +809,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
