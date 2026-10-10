@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-08T01:37:37.494Z",
-    "run": "1791423391431",
+    "at": "2026-10-10T01:36:21.993Z",
+    "run": "1791596126742",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 45,
@@ -57,7 +57,7 @@
     },
     "tech": {
       "cms": "WordPress 7.1.3",
-      "server": "nginx",
+      "server": "Apache",
       "jquery": "1.12.3"
     },
     "checks": [
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3250ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -152,8 +153,7 @@
       },
       {
         "id": "sec.server_banner",
-        "r": "fail",
-        "ev": "PHP/8.2.34, PleskLin"
+        "r": "pass"
       },
       {
         "id": "sec.vuln_js",
@@ -226,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "5144.201999999999ms"
+        "ev": "10198.954ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "32.9MB"
+        "ev": "36.3MB"
       },
       {
         "id": "perf.viewport",
@@ -453,8 +453,8 @@
     ]
   },
   "score": {
-    "overall": 37,
-    "security": 24,
+    "overall": 38,
+    "security": 28,
     "accessibility": 54,
     "content": 8,
     "gigw": 12,
@@ -503,6 +503,11 @@
       "ev": "www.bharatbhavankerala.org"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3250ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -549,12 +554,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "5144.201999999999ms"
+      "ev": "10198.954ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "32.9MB"
+      "ev": "36.3MB"
     },
     {
       "id": "perf.tap_targets",
@@ -571,11 +576,6 @@
     {
       "id": "sec.referrer",
       "sev": "L"
-    },
-    {
-      "id": "sec.server_banner",
-      "sev": "L",
-      "ev": "PHP/8.2.34, PleskLin"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -640,6 +640,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-10",
+      "up": true,
+      "score": 38
+    },
     {
       "d": "2026-10-09",
       "up": true,
@@ -726,5 +731,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

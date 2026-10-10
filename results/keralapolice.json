@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T01:27:16.441Z",
-    "run": "1791509131750",
+    "at": "2026-10-10T01:18:41.481Z",
+    "run": "1791594988519",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 39,
+      "performance": 50,
       "accessibility": 92,
       "best_practices": 96,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 2
+      "broken": 3
     },
     "tech": {
       "cms": null,
@@ -184,7 +184,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 82% Malayalam content"
+        "ev": "<html lang=\"en\"> vs. 81% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -220,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "39/100"
+        "ev": "50/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "42017.37275000001ms"
+        "ev": "42742.0625ms"
       },
       {
         "id": "perf.cls",
@@ -281,7 +281,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "2/30 crawled link(s) broken (https://keralapolice.gov.in/page/badge-of-honour-excellence-in-policing, https://keralapolice.gov.in/page/awards-to-kerala-police)"
+        "ev": "3/30 crawled link(s) broken (https://keralapolice.gov.in/login, https://keralapolice.gov.in/page/kerala-police-housing-co-operative-society, https://keralapolice.gov.in/page/kerala-police-housing-and-construction-corporation)"
       },
       {
         "id": "content.broken_pdfs",
@@ -422,7 +422,7 @@
     "screenshot": {
       "desktop": "keralapolice.webp",
       "mobile": "keralapolice-m.webp",
-      "phash": "bfff44001f3f181f"
+      "phash": "ffff8080e0e0f03f"
     },
     "outlinks": [
       {
@@ -604,7 +604,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 82% Malayalam content"
+      "ev": "<html lang=\"en\"> vs. 81% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -619,7 +619,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "2/30 crawled link(s) broken (https://keralapolice.gov.in/page/badge-of-honour-excellence-in-policing, https://keralapolice.gov.in/page/awards-to-kerala-police)"
+      "ev": "3/30 crawled link(s) broken (https://keralapolice.gov.in/login, https://keralapolice.gov.in/page/kerala-police-housing-co-operative-society, https://keralapolice.gov.in/page/kerala-police-housing-and-construction-corporation)"
     },
     {
       "id": "gigw.contact",
@@ -649,7 +649,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "42017.37275000001ms"
+      "ev": "42742.0625ms"
     },
     {
       "id": "perf.weight",
@@ -724,6 +724,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-10",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-09",
       "up": true,
@@ -820,5 +825,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T01:41:03.446Z",
-    "run": "1791510005824",
+    "at": "2026-10-10T01:33:00.856Z",
+    "run": "1791595857185",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 35,
+      "performance": 34,
       "accessibility": 86,
       "best_practices": 96,
       "seo": 62
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 1,
-      "broken": 0
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "5178ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -220,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "35/100"
+        "ev": "34/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "17065.362000000005ms"
+        "ev": "12520.2205ms"
       },
       {
         "id": "perf.cls",
@@ -281,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "2/30 crawled link(s) broken (https://medicalcouncil.kerala.gov.in/2022/03/04/homoeopathic-medicine/, https://medicalcouncil.kerala.gov.in/bank-account-details/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -480,10 +482,10 @@
     ]
   },
   "score": {
-    "overall": 56,
+    "overall": 55,
     "security": 62,
     "accessibility": 50,
-    "content": 48,
+    "content": 38,
     "gigw": 22,
     "performance": 77,
     "identity": 100
@@ -509,6 +511,16 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-box"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "2/30 crawled link(s) broken (https://medicalcouncil.kerala.gov.in/2022/03/04/homoeopathic-medicine/, https://medicalcouncil.kerala.gov.in/bank-account-details/)"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "5178ms"
     },
     {
       "id": "sec.hsts",
@@ -547,7 +559,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "17065.362000000005ms"
+      "ev": "12520.2205ms"
     },
     {
       "id": "perf.weight",
@@ -634,6 +646,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-10",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-09",
       "up": true,
@@ -730,5 +747,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

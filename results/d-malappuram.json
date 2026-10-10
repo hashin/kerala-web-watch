@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T01:23:04.618Z",
-    "run": "1791508921658",
+    "at": "2026-10-10T01:10:32.332Z",
+    "run": "1791594569828",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 52,
+      "performance": 56,
       "accessibility": 93,
       "best_practices": 69,
       "seo": 83
     },
     "axe": {
-      "critical": 13,
+      "critical": 8,
       "serious": 1,
-      "moderate": 2,
-      "minor": 15
+      "moderate": 1,
+      "minor": 14
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -169,7 +169,7 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "13 critical violation(s)"
+        "ev": "8 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
@@ -179,7 +179,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "17 moderate/minor violation(s)"
+        "ev": "15 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "52/100"
+        "ev": "56/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "24670.177999999985ms"
+        "ev": "23588.199049999996ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "4.4MB"
+        "ev": "4.7MB"
       },
       {
         "id": "perf.viewport",
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://malappuram.nic.in/en/std-pin-codes/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -447,13 +448,14 @@
         ]
       },
       {
+        "host": "mygov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
         "host": "s3waas.gov.in",
-        "count": 16,
-        "texts": [
-          "LA Munampathkadavu Appropriate Govt Order",
-          "Land Acquisition- Malappuram Distrcit- Tirur taluk-Kottakkal Village- Kakkathode Bridge Reconstruction- SIA study Final report",
-          "LA-Malappuram- Tirur Taluk- Kottakkal Village – Kakkathode Bridge Reconstruction- SIA Study Draft Report"
-        ]
+        "count": 6,
+        "texts": []
       },
       {
         "host": "facebook.com",
@@ -491,36 +493,6 @@
         ]
       },
       {
-        "host": "data.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "incredibleindia.org",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "mygov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "pmnrf.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "pmindia.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "india.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
         "host": "www.nic.in",
         "count": 1,
         "texts": [
@@ -537,10 +509,10 @@
     ]
   },
   "score": {
-    "overall": 57,
+    "overall": 55,
     "security": 48,
     "accessibility": 40,
-    "content": 52,
+    "content": 42,
     "gigw": 60,
     "performance": 81,
     "identity": 96
@@ -555,7 +527,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "13 critical violation(s)"
+      "ev": "8 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -566,6 +538,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://malappuram.nic.in/en/std-pin-codes/)"
     },
     {
       "id": "sec.hsts",
@@ -601,12 +578,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "24670.177999999985ms"
+      "ev": "23588.199049999996ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "4.4MB"
+      "ev": "4.7MB"
     },
     {
       "id": "sec.csp",
@@ -623,7 +600,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "17 moderate/minor violation(s)"
+      "ev": "15 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -680,6 +657,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-10",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-09",
       "up": true,
@@ -766,5 +748,5 @@
       "score": 60
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

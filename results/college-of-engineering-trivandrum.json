@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T01:44:20.329Z",
-    "run": "1791510206608",
+    "at": "2026-10-10T01:45:17.026Z",
+    "run": "1791596665712",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 47,
+      "performance": 48,
       "accessibility": 90,
       "best_practices": 96,
       "seo": 85
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 3,
-      "broken": 0
+      "broken": 2
     },
     "tech": {
       "cms": "WordPress 5.2.21",
@@ -222,17 +222,16 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "47/100"
+        "ev": "48/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9479.6015ms"
+        "ev": "8671.225999999999ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.25"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -284,7 +283,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "2/30 crawled link(s) broken (https://me.cet.ac.in/, https://mba.cet.ac.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -525,15 +525,15 @@
     ]
   },
   "score": {
-    "overall": 50,
+    "overall": 49,
     "security": 24,
     "accessibility": 72,
-    "content": 36,
+    "content": 26,
     "gigw": 22,
-    "performance": 82,
+    "performance": 86,
     "identity": 95
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -554,6 +554,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "2/30 crawled link(s) broken (https://me.cet.ac.in/, https://mba.cet.ac.in/)"
     },
     {
       "id": "sec.hsts",
@@ -606,7 +611,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9479.6015ms"
+      "ev": "8671.225999999999ms"
     },
     {
       "id": "id.tech",
@@ -673,11 +678,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.25"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -687,6 +687,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-10",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-10-09",
       "up": true,
@@ -753,5 +758,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

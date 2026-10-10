@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:43:36.388Z",
-    "run": "1790905285073",
+    "at": "2026-10-10T01:42:30.942Z",
+    "run": "1791596504029",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 57,
+      "performance": 60,
       "accessibility": 88,
       "best_practices": 100,
       "seo": 85
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -97,8 +97,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "fail",
-        "ev": "12382ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -222,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "57/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "31352.007499999992ms"
+        "ev": "58854.46400000002ms"
       },
       {
         "id": "perf.cls",
@@ -282,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://paravurmunicipality.lsgkerala.gov.in/ml/sites/paravurmunicipality.lsgkerala.gov.in/files/pictures/2026-10/Applet1844.class)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -553,10 +551,10 @@
     ]
   },
   "score": {
-    "overall": 64,
+    "overall": 65,
     "security": 76,
     "accessibility": 70,
-    "content": 46,
+    "content": 56,
     "gigw": 20,
     "performance": 76,
     "identity": 96
@@ -579,18 +577,8 @@
       "ev": "ml-user"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://paravurmunicipality.lsgkerala.gov.in/ml/sites/paravurmunicipality.lsgkerala.gov.in/files/pictures/2026-10/Applet1844.class)"
-    },
-    {
       "id": "gigw.rti",
       "sev": "H"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "12382ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -621,7 +609,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "31352.007499999992ms"
+      "ev": "58854.46400000002ms"
     },
     {
       "id": "perf.weight",
@@ -682,6 +670,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-10",
+      "up": true,
+      "score": 65
+    },
     {
       "d": "2026-10-09",
       "up": true,
@@ -768,5 +761,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

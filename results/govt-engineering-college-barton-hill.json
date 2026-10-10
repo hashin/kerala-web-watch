@@ -35,24 +35,24 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-06T02:20:14.786Z",
-    "run": "1791253172226",
+    "at": "2026-10-10T01:30:47.225Z",
+    "run": "1791595804474",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 39,
+      "performance": 29,
       "accessibility": 66,
       "best_practices": 59,
       "seo": 83
     },
     "axe": {
       "critical": 0,
-      "serious": 15,
+      "serious": 14,
       "moderate": 9,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 7,
+      "pdfs": 6,
       "broken": 0
     },
     "tech": {
@@ -174,7 +174,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "15 serious violation(s)"
+        "ev": "14 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -219,21 +219,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "39/100"
+        "ev": "29/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "60412.15599999998ms"
+        "ev": "33858.133ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.54"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "12.5MB"
+        "ev": "9.4MB"
       },
       {
         "id": "perf.viewport",
@@ -259,7 +260,7 @@
       },
       {
         "id": "content.stale_news",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "content.placeholder",
@@ -311,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "11 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "12 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -535,7 +536,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "15 serious violation(s)"
+      "ev": "14 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -575,12 +576,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "60412.15599999998ms"
+      "ev": "33858.133ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "12.5MB"
+      "ev": "9.4MB"
     },
     {
       "id": "sec.csp",
@@ -612,7 +613,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "11 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "12 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.feedback",
@@ -639,6 +640,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.54"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -661,6 +667,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-10",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-09",
       "up": false,
@@ -732,5 +743,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

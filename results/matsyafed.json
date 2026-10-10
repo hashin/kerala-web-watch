@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T01:41:23.623Z",
-    "run": "1791510040448",
+    "at": "2026-10-10T01:27:25.781Z",
+    "run": "1791595603640",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 48,
+      "performance": 40,
       "accessibility": 88,
       "best_practices": 92,
       "seo": 100
@@ -220,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "48/100"
+        "ev": "40/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "15179.581499999998ms"
+        "ev": "15259.319ms"
       },
       {
         "id": "perf.cls",
@@ -311,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "2 console error(s): Access to XMLHttpRequest at 'https://matsyafed.in/components/com_layer_slider/base/static/layerslider/skins/numbers/skin.css' from origin 'https://www.matsyafed.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "3 console error(s): Cannot read properties of undefined (reading 'length')"
       },
       {
         "id": "gigw.contact",
@@ -535,7 +535,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "15179.581499999998ms"
+      "ev": "15259.319ms"
     },
     {
       "id": "perf.weight",
@@ -572,7 +572,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "2 console error(s): Access to XMLHttpRequest at 'https://matsyafed.in/components/com_layer_slider/base/static/layerslider/skins/numbers/skin.css' from origin 'https://www.matsyafed.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "3 console error(s): Cannot read properties of undefined (reading 'length')"
     },
     {
       "id": "gigw.feedback",
@@ -616,6 +616,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-10",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-10-09",
       "up": true,
@@ -707,5 +712,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

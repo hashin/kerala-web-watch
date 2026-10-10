@@ -37,28 +37,28 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T01:39:32.713Z",
-    "run": "1791509918573",
+    "at": "2026-10-10T01:29:18.901Z",
+    "run": "1791595746437",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 36,
-      "accessibility": 100,
-      "best_practices": 96,
-      "seo": 100
+      "performance": 100,
+      "accessibility": 94,
+      "best_practices": 100,
+      "seo": 82
     },
     "axe": {
-      "critical": 1,
-      "serious": 12,
-      "moderate": 4,
+      "critical": 0,
+      "serious": 0,
+      "moderate": 2,
       "minor": 0
     },
     "crawl": {
-      "pages": 30,
-      "pdfs": 1,
-      "broken": 1
+      "pages": 0,
+      "pdfs": 0,
+      "broken": 0
     },
     "tech": {
-      "cms": "WordPress 5.7.15",
+      "cms": null,
       "server": "Apache",
       "jquery": null
     },
@@ -133,8 +133,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://gmpg.org/xfn/11\""
+        "r": "pass"
       },
       {
         "id": "sec.csp",
@@ -170,18 +169,16 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "fail",
-        "ev": "1 critical violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_serious",
-        "r": "fail",
-        "ev": "12 serious violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "4 moderate/minor violation(s)"
+        "ev": "2 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -193,13 +190,11 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "4 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
-        "r": "fail",
-        "ev": "heading levels skipped"
+        "r": "pass"
       },
       {
         "id": "a11y.labels",
@@ -211,33 +206,29 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "warn",
-        "ev": "tabindex=\"-1\" alongside outline:none"
+        "r": "pass"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "100/100"
+        "ev": "94/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "36/100"
+        "ev": "100/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "65267.716000000044ms"
+        "r": "pass"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.69"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "3.0MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
@@ -245,15 +236,15 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
-      },
-      {
-        "id": "perf.images",
         "r": "fail"
       },
       {
-        "id": "content.copyright_year",
+        "id": "perf.images",
         "r": "pass"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "na"
       },
       {
         "id": "content.last_updated",
@@ -270,8 +261,7 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "fail",
-        "ev": "ml-IN"
+        "r": "pass"
       },
       {
         "id": "content.obsolete_tech",
@@ -283,8 +273,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://www.portal.dmg.kerala.gov.in/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -296,7 +285,8 @@
       },
       {
         "id": "content.malayalam",
-        "r": "pass"
+        "r": "fail",
+        "ev": "Malayalam ratio 0.00, no language toggle found"
       },
       {
         "id": "content.title",
@@ -308,20 +298,19 @@
       },
       {
         "id": "content.favicon",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "1 console error(s): Cannot read properties of undefined (reading 'split')"
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.feedback",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.sitemap",
@@ -329,19 +318,19 @@
       },
       {
         "id": "gigw.privacy",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.terms",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.copyright_policy",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.hyperlink_policy",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.disclaimer",
@@ -349,7 +338,7 @@
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.screen_reader",
@@ -365,7 +354,7 @@
       },
       {
         "id": "gigw.search",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.ownership",
@@ -389,7 +378,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -401,11 +390,12 @@
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
       },
       {
         "id": "id.canonical",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.charset_doctype",
@@ -413,8 +403,7 @@
       },
       {
         "id": "id.tech",
-        "r": "warn",
-        "ev": "WordPress 5.7.15 (unsupported major version)"
+        "r": "pass"
       },
       {
         "id": "id.third_party",
@@ -424,57 +413,24 @@
     "screenshot": {
       "desktop": "dmgkerala.webp",
       "mobile": "dmgkerala-m.webp",
-      "phash": "ff0303030703c100"
+      "phash": "00003c3c3c3c0000"
     },
-    "outlinks": [
-      {
-        "host": "cdit.org",
-        "count": 2,
-        "texts": [
-          "Bid opening date: 14.02.2022",
-          "CDIT"
-        ]
-      },
-      {
-        "host": "nvda-project.org",
-        "count": 1,
-        "texts": [
-          "•   Non Visual Desktop Access (NVDA)"
-        ]
-      },
-      {
-        "host": "satogo.com",
-        "count": 1,
-        "texts": [
-          "•   System Access To Go"
-        ]
-      }
-    ]
+    "outlinks": []
   },
   "score": {
-    "overall": 49,
-    "security": 28,
-    "accessibility": 50,
-    "content": 42,
-    "gigw": 38,
-    "performance": 77,
-    "identity": 95
+    "overall": 64,
+    "security": 48,
+    "accessibility": 96,
+    "content": 62,
+    "gigw": 0,
+    "performance": 90,
+    "identity": 92
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
     {
       "id": "sec.http_redirect",
       "sev": "H"
-    },
-    {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://gmpg.org/xfn/11\""
-    },
-    {
-      "id": "a11y.axe_critical",
-      "sev": "H",
-      "ev": "1 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -482,14 +438,8 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "content.legacy_font",
-      "sev": "H",
-      "ev": "ml-IN"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://www.portal.dmg.kerala.gov.in/)"
+      "id": "gigw.contact",
+      "sev": "H"
     },
     {
       "id": "gigw.rti",
@@ -504,17 +454,20 @@
       "sev": "M"
     },
     {
-      "id": "a11y.axe_serious",
+      "id": "content.malayalam",
       "sev": "M",
-      "ev": "12 serious violation(s)"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "4 low-contrast element(s)"
+      "ev": "Malayalam ratio 0.00, no language toggle found"
     },
     {
       "id": "gigw.sitemap",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.privacy",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.accessibility_statement",
       "sev": "M"
     },
     {
@@ -526,19 +479,8 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "65267.716000000044ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "3.0MB"
-    },
-    {
-      "id": "id.tech",
-      "sev": "M",
-      "ev": "WordPress 5.7.15 (unsupported major version)"
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -555,26 +497,31 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "4 moderate/minor violation(s)"
-    },
-    {
-      "id": "a11y.headings",
-      "sev": "L",
-      "ev": "heading levels skipped"
-    },
-    {
-      "id": "a11y.keyboard",
-      "sev": "L",
-      "ev": "tabindex=\"-1\" alongside outline:none"
+      "ev": "2 moderate/minor violation(s)"
     },
     {
       "id": "content.meta_desc",
       "sev": "L"
     },
     {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "1 console error(s): Cannot read properties of undefined (reading 'split')"
+      "id": "content.favicon",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.feedback",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.terms",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.copyright_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.hyperlink_policy",
+      "sev": "L"
     },
     {
       "id": "gigw.disclaimer",
@@ -589,20 +536,33 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.69"
+      "id": "gigw.search",
+      "sev": "L"
     },
     {
-      "id": "perf.images",
+      "id": "id.www_consistency",
       "sev": "L"
+    },
+    {
+      "id": "id.soft_404",
+      "sev": "L",
+      "ev": "a nonexistent path returned 200"
     },
     {
       "id": "gigw.emblem",
       "sev": "I"
+    },
+    {
+      "id": "id.canonical",
+      "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-10",
+      "up": true,
+      "score": 64
+    },
     {
       "d": "2026-10-09",
       "up": true,
@@ -699,5 +659,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,18 +37,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T01:30:49.776Z",
-    "run": "1791509406646",
+    "at": "2026-10-10T01:25:34.134Z",
+    "run": "1791595489145",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 58,
-      "accessibility": 67,
-      "best_practices": 88,
+      "performance": 57,
+      "accessibility": 69,
+      "best_practices": 96,
       "seo": 91
     },
     "axe": {
       "critical": 1,
-      "serious": 7,
+      "serious": 8,
       "moderate": 11,
       "minor": 0
     },
@@ -157,8 +157,7 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "fail",
-        "ev": "jquery 2.1.3"
+        "r": "pass"
       },
       {
         "id": "sec.safe_browsing",
@@ -176,7 +175,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "7 serious violation(s)"
+        "ev": "8 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -194,7 +193,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "6 low-contrast element(s)"
+        "ev": "7 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -216,17 +215,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "67/100"
+        "ev": "69/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "58/100"
+        "ev": "57/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8892.738000000001ms"
+        "ev": "9284.312ms"
       },
       {
         "id": "perf.cls",
@@ -309,7 +308,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "10 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -434,8 +433,8 @@
     ]
   },
   "score": {
-    "overall": 56,
-    "security": 56,
+    "overall": 61,
+    "security": 76,
     "accessibility": 52,
     "content": 48,
     "gigw": 28,
@@ -447,11 +446,6 @@
     {
       "id": "sec.http_redirect",
       "sev": "H"
-    },
-    {
-      "id": "sec.vuln_js",
-      "sev": "H",
-      "ev": "jquery 2.1.3"
     },
     {
       "id": "a11y.axe_critical",
@@ -471,12 +465,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "7 serious violation(s)"
+      "ev": "8 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "6 low-contrast element(s)"
+      "ev": "7 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -497,7 +491,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8892.738000000001ms"
+      "ev": "9284.312ms"
     },
     {
       "id": "sec.referrer",
@@ -524,7 +518,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "10 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.feedback",
@@ -586,6 +580,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-10",
+      "up": true,
+      "score": 61
+    },
     {
       "d": "2026-10-09",
       "up": true,
@@ -677,5 +676,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

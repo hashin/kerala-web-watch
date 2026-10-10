@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T01:15:58.727Z",
-    "run": "1791335715361",
+    "at": "2026-10-10T01:24:45.970Z",
+    "run": "1791595426111",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 56,
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -226,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "59491.770500000006ms"
+        "ev": "69577.85449999999ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "13.2MB"
+        "ev": "14.7MB"
       },
       {
         "id": "perf.viewport",
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://meeting.lsgkerala.gov.in/Pages/LBWiseDashBoard.aspx)"
       },
       {
         "id": "content.broken_pdfs",
@@ -556,10 +557,10 @@
     ]
   },
   "score": {
-    "overall": 68,
+    "overall": 66,
     "security": 76,
     "accessibility": 70,
-    "content": 56,
+    "content": 46,
     "gigw": 36,
     "performance": 76,
     "identity": 96
@@ -580,6 +581,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://meeting.lsgkerala.gov.in/Pages/LBWiseDashBoard.aspx)"
     },
     {
       "id": "a11y.axe_serious",
@@ -610,12 +616,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "59491.770500000006ms"
+      "ev": "69577.85449999999ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "13.2MB"
+      "ev": "14.7MB"
     },
     {
       "id": "sec.csp",
@@ -675,6 +681,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-10",
+      "up": true,
+      "score": 66
+    },
     {
       "d": "2026-10-09",
       "up": true,
@@ -761,5 +772,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

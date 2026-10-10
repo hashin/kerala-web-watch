@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T01:46:08.240Z",
-    "run": "1791510317780",
+    "at": "2026-10-10T01:32:48.200Z",
+    "run": "1791595914029",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 54,
+      "performance": 49,
       "accessibility": 85,
       "best_practices": 73,
       "seo": 92
@@ -49,13 +49,13 @@
     "axe": {
       "critical": 0,
       "serious": 13,
-      "moderate": 12,
+      "moderate": 17,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 4,
-      "broken": 29
+      "broken": 28
     },
     "tech": {
       "cms": "WordPress 5.8.18",
@@ -182,7 +182,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "12 moderate/minor violation(s)"
+        "ev": "17 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -195,7 +195,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "4 low-contrast element(s)"
+        "ev": "3 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "54/100"
+        "ev": "49/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "4507.092999999999ms"
+        "ev": "4227.67ms"
       },
       {
         "id": "perf.cls",
@@ -236,7 +236,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "7.4MB"
+        "ev": "7.5MB"
       },
       {
         "id": "perf.viewport",
@@ -284,7 +284,7 @@
       {
         "id": "content.broken_links",
         "r": "fail",
-        "ev": "29/30 crawled link(s) broken (https://gptcnta.ac.in/news/ce-cell-admission-notice/, https://gptcnta.ac.in/college/, https://gptcnta.ac.in/principal/, ...)"
+        "ev": "28/30 crawled link(s) broken (https://gptcnta.ac.in/news/ce-cell-admission-notice/, https://gptcnta.ac.in/college/, https://gptcnta.ac.in/principal/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -313,15 +313,15 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "10 console error(s): jQuery is not defined"
+        "ev": "11 console error(s): jQuery is not defined"
       },
       {
         "id": "gigw.contact",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.feedback",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.sitemap",
@@ -433,60 +433,67 @@
         "host": "aicte-india.org",
         "count": 2,
         "texts": [
-          "| AICTE Feedback Facility",
-          "AICTE"
+          "| എ.ഐ.സി.ടി.ഇ ഫീഡ്‌ബാക്ക് സൗകര്യം",
+          "എ.ഐ.സി.ടി.ഇ."
+        ]
+      },
+      {
+        "host": "google.com",
+        "count": 1,
+        "texts": [
+          "Translate"
         ]
       },
       {
         "host": "dtekerala.gov.in",
         "count": 1,
         "texts": [
-          "DTE,Kerala"
+          "ഡിടിഇ, കേരളം"
         ]
       },
       {
         "host": "sitttrkerala.ac.in",
         "count": 1,
         "texts": [
-          "SITTTR,Kerala"
+          "സിറ്റ്ടിടിആർ, കേരളം"
         ]
       },
       {
         "host": "tekerala.org",
         "count": 1,
         "texts": [
-          "TE,Kerala"
+          "TE, കേരളം"
         ]
       },
       {
         "host": "polyadmission.org",
         "count": 1,
         "texts": [
-          "Poly Admission"
+          "പോളി പ്രവേശനം"
         ]
       },
       {
         "host": "gptcnta.org",
         "count": 1,
         "texts": [
-          "GPTC,Neyyattinkara"
+          "GPTC,നെയ്യാറ്റിൻകര"
         ]
       },
       {
         "host": "alp-ts.com",
         "count": 1,
         "texts": [
-          "Alp Turnkey Solutions Pvt Ltd."
+          "ആൽപ് ടേൺകീ സൊല്യൂഷൻസ് പ്രൈവറ്റ് ലിമിറ്റഡ്"
         ]
       }
     ]
   },
   "score": {
-    "overall": 45,
+    "overall": 44,
     "security": 24,
     "accessibility": 74,
     "content": 26,
-    "gigw": 2,
+    "gigw": 0,
     "performance": 71,
     "identity": 87
   },
@@ -515,7 +522,11 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "29/30 crawled link(s) broken (https://gptcnta.ac.in/news/ce-cell-admission-notice/, https://gptcnta.ac.in/college/, https://gptcnta.ac.in/principal/, ...)"
+      "ev": "28/30 crawled link(s) broken (https://gptcnta.ac.in/news/ce-cell-admission-notice/, https://gptcnta.ac.in/college/, https://gptcnta.ac.in/principal/, ...)"
+    },
+    {
+      "id": "gigw.contact",
+      "sev": "H"
     },
     {
       "id": "gigw.rti",
@@ -537,7 +548,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "4 low-contrast element(s)"
+      "ev": "3 low-contrast element(s)"
     },
     {
       "id": "content.copyright_year",
@@ -567,12 +578,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "4507.092999999999ms"
+      "ev": "4227.67ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.4MB"
+      "ev": "7.5MB"
     },
     {
       "id": "perf.tap_targets",
@@ -603,7 +614,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "12 moderate/minor violation(s)"
+      "ev": "17 moderate/minor violation(s)"
     },
     {
       "id": "a11y.keyboard",
@@ -613,7 +624,11 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "10 console error(s): jQuery is not defined"
+      "ev": "11 console error(s): jQuery is not defined"
+    },
+    {
+      "id": "gigw.feedback",
+      "sev": "L"
     },
     {
       "id": "gigw.terms",
@@ -663,6 +678,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-10",
+      "up": true,
+      "score": 44
+    },
     {
       "d": "2026-10-09",
       "up": true,
@@ -734,5 +754,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

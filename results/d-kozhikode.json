@@ -35,13 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T00:58:42.927Z",
-    "run": "1791334672439",
+    "at": "2026-10-10T01:10:22.268Z",
+    "run": "1791594554626",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 52,
+      "performance": 54,
       "accessibility": 93,
-      "best_practices": 69,
+      "best_practices": 73,
       "seo": 92
     },
     "axe": {
@@ -57,7 +57,7 @@
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "Apache",
       "jquery": null
     },
     "checks": [
@@ -127,7 +127,7 @@
       },
       {
         "id": "sec.hsts",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.mixed_content",
@@ -136,19 +136,19 @@
       },
       {
         "id": "sec.csp",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xfo",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xcto",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.referrer",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.server_banner",
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "52/100"
+        "ev": "54/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "16448.958ms"
+        "ev": "21011.894500000002ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +233,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "3.4MB"
+        "ev": "3.6MB"
       },
       {
         "id": "perf.viewport",
@@ -308,7 +308,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "12 console error(s): Refused to apply style from 'https://kozhikode.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+        "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -414,13 +414,13 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-9HR295F7RX&amp;cx=c&amp;gtm=4e6a51, https://www.googletagmanager.com/gtag/js?id=UA-131902160-1"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-9HR295F7RX&amp;cx=c&amp;gtm=4e6a72, https://www.googletagmanager.com/gtag/js?id=UA-131902160-1"
       }
     ],
     "screenshot": {
       "desktop": "d-kozhikode.webp",
       "mobile": "d-kozhikode-m.webp",
-      "phash": "ffff0000000cffff"
+      "phash": "ffff77070000fffe"
     },
     "outlinks": [
       {
@@ -533,8 +533,8 @@
     ]
   },
   "score": {
-    "overall": 72,
-    "security": 80,
+    "overall": 64,
+    "security": 48,
     "accessibility": 60,
     "content": 56,
     "gigw": 70,
@@ -564,6 +564,14 @@
       "ev": "ml-IN"
     },
     {
+      "id": "sec.hsts",
+      "sev": "M"
+    },
+    {
+      "id": "sec.xfo",
+      "sev": "M"
+    },
+    {
       "id": "a11y.labels",
       "sev": "M",
       "ev": "1 form control(s) without a label"
@@ -575,12 +583,24 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "16448.958ms"
+      "ev": "21011.894500000002ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "3.4MB"
+      "ev": "3.6MB"
+    },
+    {
+      "id": "sec.csp",
+      "sev": "L"
+    },
+    {
+      "id": "sec.xcto",
+      "sev": "L"
+    },
+    {
+      "id": "sec.referrer",
+      "sev": "L"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -600,7 +620,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "12 console error(s): Refused to apply style from 'https://kozhikode.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+      "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.terms",
@@ -638,10 +658,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-9HR295F7RX&amp;cx=c&amp;gtm=4e6a51, https://www.googletagmanager.com/gtag/js?id=UA-131902160-1"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-9HR295F7RX&amp;cx=c&amp;gtm=4e6a72, https://www.googletagmanager.com/gtag/js?id=UA-131902160-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-10",
+      "up": true,
+      "score": 64
+    },
     {
       "d": "2026-10-09",
       "up": true,
@@ -728,5 +753,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

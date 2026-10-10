@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T01:30:37.038Z",
-    "run": "1791509381291",
+    "at": "2026-10-10T01:18:34.190Z",
+    "run": "1791595059580",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 57,
+      "performance": 49,
       "accessibility": 76,
       "best_practices": 92,
       "seo": 92
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "57/100"
+        "ev": "49/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10189.099ms"
+        "ev": "10229.147000000003ms"
       },
       {
         "id": "perf.cls",
@@ -308,7 +308,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "12 console error(s): Loading the image 'https://www.googletagmanager.com/td?id=G-7WH4ZDGVFD&v=3&t=t&pid=16118504&gtm=45je6a72h1v9165721242za200zd9165721242xf1&seq=1&exp=115616985~115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153~121046263~121046271~121246026~121246034&dl=www.ceo.kerala.gov.in%2F&tdp=G-7WH4ZDGVFD;165721242;0;0;0&frm=0&rtg=165721242&slo=0&hlo=0&lst=3&bt=0&ct=3&z=0' violates the following Content Security Policy directive: \"img-src 'self' https://www.ceo.kerala.gov.in/ https://sec-kerala.s3.ap-south-1.amazonaws.com/ data: https://i.ytimg.com\". The action has been blocked."
+        "ev": "11 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -520,7 +520,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10189.099ms"
+      "ev": "10229.147000000003ms"
     },
     {
       "id": "perf.tap_targets",
@@ -544,7 +544,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "12 console error(s): Loading the image 'https://www.googletagmanager.com/td?id=G-7WH4ZDGVFD&v=3&t=t&pid=16118504&gtm=45je6a72h1v9165721242za200zd9165721242xf1&seq=1&exp=115616985~115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153~121046263~121046271~121246026~121246034&dl=www.ceo.kerala.gov.in%2F&tdp=G-7WH4ZDGVFD;165721242;0;0;0&frm=0&rtg=165721242&slo=0&hlo=0&lst=3&bt=0&ct=3&z=0' violates the following Content Security Policy directive: \"img-src 'self' https://www.ceo.kerala.gov.in/ https://sec-kerala.s3.ap-south-1.amazonaws.com/ data: https://i.ytimg.com\". The action has been blocked."
+      "ev": "11 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.feedback",
@@ -589,6 +589,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-10",
+      "up": true,
+      "score": 64
+    },
     {
       "d": "2026-10-09",
       "up": true,
@@ -680,5 +685,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

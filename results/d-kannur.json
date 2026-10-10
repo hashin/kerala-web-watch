@@ -35,20 +35,20 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T01:21:47.242Z",
-    "run": "1791508837519",
+    "at": "2026-10-10T01:09:43.528Z",
+    "run": "1791594497641",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
-      "accessibility": 89,
-      "best_practices": 92,
-      "seo": 92
+      "performance": 40,
+      "accessibility": 93,
+      "best_practices": 69,
+      "seo": 83
     },
     "axe": {
-      "critical": 19,
+      "critical": 15,
       "serious": 1,
       "moderate": 1,
-      "minor": 12
+      "minor": 18
     },
     "crawl": {
       "pages": 30,
@@ -169,7 +169,7 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "19 critical violation(s)"
+        "ev": "15 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
@@ -179,7 +179,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "13 moderate/minor violation(s)"
+        "ev": "19 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -191,7 +191,8 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -215,17 +216,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "89/100"
+        "ev": "93/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "40/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10655.908500000001ms"
+        "ev": "28271.147999999957ms"
       },
       {
         "id": "perf.cls",
@@ -233,8 +234,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "3.2MB"
+        "r": "fail",
+        "ev": "54.6MB"
       },
       {
         "id": "perf.viewport",
@@ -309,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "7 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -425,10 +426,11 @@
     "outlinks": [
       {
         "host": "kerala.gov.in",
-        "count": 2,
+        "count": 6,
         "texts": [
           "കേരളം",
-          "SIR 2026 ASD LIST"
+          "eDistrict",
+          "Revenue Department"
         ]
       },
       {
@@ -437,80 +439,27 @@
         "texts": []
       },
       {
-        "host": "s3waas.gov.in",
-        "count": 11,
-        "texts": [
-          "District Environment plan – click here",
-          "Guide to Public for linking Aadhaar to Thandapper(UTPN)"
-        ]
-      },
-      {
-        "host": "kswmp.org",
+        "host": "facebook.com",
         "count": 1,
         "texts": [
-          "https://kswmp.org/"
-        ]
-      },
-      {
-        "host": "facebook.com",
-        "count": 7,
-        "texts": [
-          "https://www.facebook.com/groups/keralaswmp/edit",
-          "https://www.facebook.com/keralaswmp",
           "Facebook"
         ]
       },
       {
-        "host": "instagram.com",
-        "count": 1,
-        "texts": [
-          "https://www.instagram.com/keralaswmp"
-        ]
-      },
-      {
-        "host": "twitter.com",
-        "count": 7,
-        "texts": [
-          "https://twitter.com/keralaswmp",
-          "Share on X"
-        ]
-      },
-      {
         "host": "youtube.com",
-        "count": 1,
+        "count": 5,
         "texts": [
-          "https://www.youtube.com/@keralaswmp"
+          "Video Title Appears Here eg. Mann Ki Baat-29 October 2017",
+          "PM Modi’s Mann Ki Baat, September 2017",
+          "PM Modi’s Mann Ki Baat, October 2017"
         ]
       },
       {
-        "host": "data.gov.in",
+        "host": "lsgkerala.gov.in",
         "count": 1,
-        "texts": []
-      },
-      {
-        "host": "incredibleindia.org",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "mygov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "pmnrf.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "pmindia.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "india.gov.in",
-        "count": 1,
-        "texts": []
+        "texts": [
+          "K-SMART"
+        ]
       },
       {
         "host": "www.nic.in",
@@ -525,16 +474,26 @@
         "texts": [
           "Ministry of Electronics & Information Technology"
         ]
+      },
+      {
+        "host": "twitter.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "s3waas.gov.in",
+        "count": 1,
+        "texts": []
       }
     ]
   },
   "score": {
-    "overall": 60,
+    "overall": 57,
     "security": 48,
-    "accessibility": 50,
+    "accessibility": 40,
     "content": 56,
     "gigw": 60,
-    "performance": 81,
+    "performance": 76,
     "identity": 96
   },
   "status": "needs-work",
@@ -547,7 +506,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "19 critical violation(s)"
+      "ev": "15 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -573,6 +532,11 @@
       "ev": "1 serious violation(s)"
     },
     {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "1 low-contrast element(s)"
+    },
+    {
       "id": "a11y.labels",
       "sev": "M",
       "ev": "1 form control(s) without a label"
@@ -588,12 +552,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10655.908500000001ms"
+      "ev": "28271.147999999957ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "3.2MB"
+      "ev": "54.6MB"
     },
     {
       "id": "sec.csp",
@@ -610,7 +574,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "13 moderate/minor violation(s)"
+      "ev": "19 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -625,7 +589,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "7 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.terms",
@@ -662,6 +626,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-10",
+      "up": true,
+      "score": 57
+    },
     {
       "d": "2026-10-09",
       "up": true,
@@ -748,5 +717,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

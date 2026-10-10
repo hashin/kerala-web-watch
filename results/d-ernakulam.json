@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T01:21:52.774Z",
-    "run": "1791508843508",
+    "at": "2026-10-10T01:09:32.156Z",
+    "run": "1791594499587",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 53,
+      "performance": 56,
       "accessibility": 94,
       "best_practices": 73,
       "seo": 83
@@ -47,13 +47,13 @@
     "axe": {
       "critical": 11,
       "serious": 0,
-      "moderate": 1,
+      "moderate": 2,
       "minor": 11
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -178,7 +178,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "12 moderate/minor violation(s)"
+        "ev": "13 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "53/100"
+        "ev": "56/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8402.702000000001ms"
+        "ev": "8460.5775ms"
       },
       {
         "id": "perf.cls",
@@ -279,7 +279,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://ernakulam.nic.in/en/#SkipContent)"
       },
       {
         "id": "content.broken_pdfs",
@@ -425,9 +426,11 @@
     "outlinks": [
       {
         "host": "kerala.gov.in",
-        "count": 1,
+        "count": 5,
         "texts": [
-          "കേരള സർക്കാർ"
+          "കേരള സർക്കാർ",
+          "District News",
+          "e-District"
         ]
       },
       {
@@ -449,6 +452,13 @@
         "count": 1,
         "texts": [
           "Containment Zones"
+        ]
+      },
+      {
+        "host": "censusindia.gov.in",
+        "count": 1,
+        "texts": [
+          "Census"
         ]
       },
       {
@@ -481,10 +491,10 @@
     ]
   },
   "score": {
-    "overall": 62,
+    "overall": 61,
     "security": 48,
     "accessibility": 60,
-    "content": 56,
+    "content": 46,
     "gigw": 60,
     "performance": 81,
     "identity": 96
@@ -512,6 +522,11 @@
       "ev": "ml-IN"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://ernakulam.nic.in/en/#SkipContent)"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -535,7 +550,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8402.702000000001ms"
+      "ev": "8460.5775ms"
     },
     {
       "id": "perf.weight",
@@ -557,7 +572,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "12 moderate/minor violation(s)"
+      "ev": "13 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -614,6 +629,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-10",
+      "up": true,
+      "score": 61
+    },
     {
       "d": "2026-10-09",
       "up": true,
@@ -700,5 +720,5 @@
       "score": 63
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

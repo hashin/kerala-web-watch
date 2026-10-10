@@ -37,19 +37,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-06T02:25:20.093Z",
-    "run": "1791253482929",
+    "at": "2026-10-10T01:34:42.726Z",
+    "run": "1791596046058",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 63,
+      "performance": 67,
       "accessibility": 83,
-      "best_practices": 78,
+      "best_practices": 96,
       "seo": 73
     },
     "axe": {
       "critical": 1,
       "serious": 27,
-      "moderate": 32,
+      "moderate": 31,
       "minor": 0
     },
     "crawl": {
@@ -109,8 +109,7 @@
       },
       {
         "id": "sec.https",
-        "r": "fail",
-        "ev": "http://www.gptcndd.ac.in"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
@@ -134,7 +133,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "fail",
+        "ev": "href=\"http:////onlinecourses.nptel.ac.in/\""
       },
       {
         "id": "sec.csp",
@@ -158,7 +158,8 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "pass"
+        "r": "fail",
+        "ev": "jquery-ui 1.11.2, jquery-ui-dialog 1.11.2, swiper 8.3.2"
       },
       {
         "id": "sec.safe_browsing",
@@ -181,7 +182,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "32 moderate/minor violation(s)"
+        "ev": "31 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -221,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "63/100"
+        "ev": "67/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9014.260499999999ms"
+        "ev": "8690.049ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +236,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "3.3MB"
+        "ev": "3.9MB"
       },
       {
         "id": "perf.viewport",
@@ -309,8 +310,7 @@
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "74 console error(s): Access to font at 'https://www.gptcndd.ac.in/assets/fonts/fa-light-300.woff2' from origin 'http://www.gptcndd.ac.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
@@ -423,7 +423,7 @@
     "screenshot": {
       "desktop": "government-polytechnic-college-nedumangad.webp",
       "mobile": "government-polytechnic-college-nedumangad-m.webp",
-      "phash": "ffff7e3c00610004"
+      "phash": "fffb103c66634f0e"
     },
     "outlinks": [
       {
@@ -495,13 +495,26 @@
       }
     ]
   },
-  "score": null,
-  "status": "broken",
+  "score": {
+    "overall": 45,
+    "security": 28,
+    "accessibility": 52,
+    "content": 56,
+    "gigw": 2,
+    "performance": 81,
+    "identity": 84
+  },
+  "status": "poor",
   "issues": [
     {
-      "id": "sec.https",
-      "sev": "C",
-      "ev": "http://www.gptcndd.ac.in"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http:////onlinecourses.nptel.ac.in/\""
+    },
+    {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "jquery-ui 1.11.2, jquery-ui-dialog 1.11.2, swiper 8.3.2"
     },
     {
       "id": "a11y.axe_critical",
@@ -563,12 +576,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9014.260499999999ms"
+      "ev": "8690.049ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "3.3MB"
+      "ev": "3.9MB"
     },
     {
       "id": "sec.csp",
@@ -585,7 +598,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "32 moderate/minor violation(s)"
+      "ev": "31 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -595,11 +608,6 @@
     {
       "id": "content.meta_desc",
       "sev": "L"
-    },
-    {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "74 console error(s): Access to font at 'https://www.gptcndd.ac.in/assets/fonts/fa-light-300.woff2' from origin 'http://www.gptcndd.ac.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.terms",
@@ -662,6 +670,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-10",
+      "up": true,
+      "score": 45
+    },
     {
       "d": "2026-10-09",
       "up": false,
@@ -728,5 +741,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

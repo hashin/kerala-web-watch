@@ -35,19 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T00:58:45.299Z",
-    "run": "1791334657327",
+    "at": "2026-10-10T01:11:04.856Z",
+    "run": "1791594572158",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
-      "accessibility": 92,
-      "best_practices": 73,
+      "performance": 43,
+      "accessibility": 96,
+      "best_practices": 69,
       "seo": 83
     },
     "axe": {
-      "critical": 7,
-      "serious": 3,
-      "moderate": 0,
+      "critical": 10,
+      "serious": 0,
+      "moderate": 1,
       "minor": 12
     },
     "crawl": {
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3222ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -169,17 +170,16 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "7 critical violation(s)"
+        "ev": "10 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
-        "r": "fail",
-        "ev": "3 serious violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "12 moderate/minor violation(s)"
+        "ev": "13 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -191,12 +191,12 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "3 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
-        "r": "pass"
+        "r": "fail",
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -215,17 +215,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "92/100"
+        "ev": "96/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "43/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7018.565499999999ms"
+        "ev": "43865.74199999999ms"
       },
       {
         "id": "perf.cls",
@@ -233,8 +233,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "7.1MB"
+        "r": "fail",
+        "ev": "73.8MB"
       },
       {
         "id": "perf.viewport",
@@ -426,11 +426,10 @@
     "outlinks": [
       {
         "host": "kerala.gov.in",
-        "count": 7,
+        "count": 2,
         "texts": [
           "കേരളം  സർക്കാർ",
-          "SIR 2026 ASD List",
-          "AADHAAR ENABLED PDS"
+          "SIR 2026 ASD List"
         ]
       },
       {
@@ -439,78 +438,13 @@
         "texts": []
       },
       {
-        "host": "s3waas.gov.in",
-        "count": 18,
+        "host": "youtube.com",
+        "count": 5,
         "texts": [
-          "The Kerala Finance Act, 2018 (PDF 534 KB)",
-          "Quotation called for GPS system for Tanker Lorries ( PDF 94 KB )",
-          "Prathyudhanam-Guidelines & Application ( PDF 758 kb )"
+          "‘Mann Ki Baat’: Highlights of what PM Narendra Modi said in the programme",
+          "Video Title Appears Here eg. Mann Ki Baat-29 October 2017",
+          "PM Modi’s Mann Ki Baat, September 2017"
         ]
-      },
-      {
-        "host": "keralabattlescovid.in",
-        "count": 1,
-        "texts": [
-          "keralabattlescovid.in"
-        ]
-      },
-      {
-        "host": "childlineindia.org.in",
-        "count": 1,
-        "texts": [
-          "CHILD LINE"
-        ]
-      },
-      {
-        "host": "kswmp.org",
-        "count": 1,
-        "texts": [
-          "KERALA SOLID WASTE MANAGEMENT PROJECT"
-        ]
-      },
-      {
-        "host": "facebook.com",
-        "count": 12,
-        "texts": [
-          "Share on Facebook"
-        ]
-      },
-      {
-        "host": "twitter.com",
-        "count": 12,
-        "texts": [
-          "Share on X"
-        ]
-      },
-      {
-        "host": "india.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "pmindia.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "pmnrf.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "data.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "mygov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "incredibleindia.org",
-        "count": 1,
-        "texts": []
       },
       {
         "host": "www.nic.in",
@@ -525,16 +459,21 @@
         "texts": [
           "Ministry of Electronics & Information Technology"
         ]
+      },
+      {
+        "host": "s3waas.gov.in",
+        "count": 1,
+        "texts": []
       }
     ]
   },
   "score": {
-    "overall": 58,
+    "overall": 62,
     "security": 48,
-    "accessibility": 44,
+    "accessibility": 60,
     "content": 56,
     "gigw": 60,
-    "performance": 81,
+    "performance": 76,
     "identity": 96
   },
   "status": "needs-work",
@@ -547,7 +486,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "7 critical violation(s)"
+      "ev": "10 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -560,22 +499,17 @@
       "ev": "ml-IN"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3222ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
       "id": "sec.xfo",
       "sev": "M"
-    },
-    {
-      "id": "a11y.axe_serious",
-      "sev": "M",
-      "ev": "3 serious violation(s)"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "3 low-contrast element(s)"
     },
     {
       "id": "a11y.labels",
@@ -593,12 +527,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7018.565499999999ms"
+      "ev": "43865.74199999999ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.1MB"
+      "ev": "73.8MB"
     },
     {
       "id": "sec.csp",
@@ -615,7 +549,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "12 moderate/minor violation(s)"
+      "ev": "13 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
     },
     {
       "id": "a11y.keyboard",
@@ -667,6 +606,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-10",
+      "up": true,
+      "score": 62
+    },
     {
       "d": "2026-10-09",
       "up": true,
@@ -753,5 +697,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

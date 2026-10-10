@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T01:30:27.015Z",
-    "run": "1791509357098",
+    "at": "2026-10-10T01:20:29.911Z",
+    "run": "1791595167021",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 94,
+      "performance": 79,
       "accessibility": 45,
       "best_practices": 85,
       "seo": 92
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3115ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -223,11 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "94/100"
+        "ev": "79/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "fail",
+        "ev": "5694.396ms"
       },
       {
         "id": "perf.cls",
@@ -483,12 +483,12 @@
     ]
   },
   "score": {
-    "overall": 43,
+    "overall": 42,
     "security": 44,
     "accessibility": 22,
     "content": 66,
     "gigw": 18,
-    "performance": 66,
+    "performance": 56,
     "identity": 68
   },
   "status": "poor",
@@ -521,11 +521,6 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "niyamasabha.org"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3115ms"
     },
     {
       "id": "sec.hsts",
@@ -574,6 +569,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "5694.396ms"
     },
     {
       "id": "perf.tap_targets",
@@ -671,6 +671,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-10",
+      "up": true,
+      "score": 42
+    },
+    {
       "d": "2026-10-09",
       "up": true,
       "score": 43
@@ -761,5 +766,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

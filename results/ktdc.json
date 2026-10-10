@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T01:32:40.579Z",
-    "run": "1791509490572",
+    "at": "2026-10-10T01:26:01.649Z",
+    "run": "1791595517074",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 59,
+      "performance": 55,
       "accessibility": 75,
       "best_practices": 96,
       "seo": 75
@@ -220,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "59/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "17115.148999999998ms"
+        "ev": "19674.474500000004ms"
       },
       {
         "id": "perf.cls",
@@ -233,8 +233,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "fail",
-        "ev": "14.7MB"
+        "r": "warn",
+        "ev": "7.4MB"
       },
       {
         "id": "perf.viewport",
@@ -311,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "28 console error(s): Connecting to 'https://fonts.googleapis.com/css2?family=Manrope:wght@200;400&display=swap' violates the following Content Security Policy directive: \"connect-src 'self' https://bookingjini.info https://kernel.bookingjini.com https://stats.g.doubleclick.net https://www.google-analytics.com https://maps.googleapis.com https://maps.gstatic.com\". The action has been blocked."
+        "ev": "29 console error(s): Failed to load resource: net::ERR_INCOMPLETE_CHUNKED_ENCODING"
       },
       {
         "id": "gigw.contact",
@@ -469,12 +469,12 @@
     ]
   },
   "score": {
-    "overall": 57,
+    "overall": 58,
     "security": 90,
     "accessibility": 40,
     "content": 32,
     "gigw": 32,
-    "performance": 76,
+    "performance": 81,
     "identity": 76
   },
   "status": "needs-work",
@@ -547,12 +547,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "17115.148999999998ms"
+      "ev": "19674.474500000004ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "14.7MB"
+      "ev": "7.4MB"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -576,7 +576,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "28 console error(s): Connecting to 'https://fonts.googleapis.com/css2?family=Manrope:wght@200;400&display=swap' violates the following Content Security Policy directive: \"connect-src 'self' https://bookingjini.info https://kernel.bookingjini.com https://stats.g.doubleclick.net https://www.google-analytics.com https://maps.googleapis.com https://maps.gstatic.com\". The action has been blocked."
+      "ev": "29 console error(s): Failed to load resource: net::ERR_INCOMPLETE_CHUNKED_ENCODING"
     },
     {
       "id": "gigw.terms",
@@ -626,6 +626,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-10",
+      "up": true,
+      "score": 58
+    },
     {
       "d": "2026-10-09",
       "up": true,
@@ -717,5 +722,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

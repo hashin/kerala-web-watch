@@ -29,8 +29,8 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-10-09T01:35:49.103Z",
-    "run": "1791509466135",
+    "at": "2026-10-10T01:22:46.917Z",
+    "run": "1791595059694",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 41,
@@ -47,7 +47,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 2,
-      "broken": 16
+      "broken": 18
     },
     "tech": {
       "cms": null,
@@ -222,17 +222,17 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "18270.252000000015ms"
+        "ev": "24451.035000000007ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.28"
+        "ev": "0.27"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "7.6MB"
+        "ev": "7.7MB"
       },
       {
         "id": "perf.viewport",
@@ -280,7 +280,7 @@
       {
         "id": "content.broken_links",
         "r": "fail",
-        "ev": "14/30 crawled link(s) broken (https://kuhs.ac.in/kuhs_new/, https://kuhs.ac.in/kuhs_new/index.php/search, https://kuhs.ac.in/#carousel-example-generic, ...)"
+        "ev": "16/30 crawled link(s) broken (https://kuhs.ac.in/kuhs_new/, https://kuhs.ac.in/#, https://kuhs.ac.in/kuhs_new/index.php, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -391,17 +391,15 @@
       },
       {
         "id": "id.robots",
-        "r": "fail",
-        "ev": "robots.txt returned 404"
+        "r": "na"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 404"
+        "r": "na"
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.canonical",
@@ -483,7 +481,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "14/30 crawled link(s) broken (https://kuhs.ac.in/kuhs_new/, https://kuhs.ac.in/kuhs_new/index.php/search, https://kuhs.ac.in/#carousel-example-generic, ...)"
+      "ev": "16/30 crawled link(s) broken (https://kuhs.ac.in/kuhs_new/, https://kuhs.ac.in/#, https://kuhs.ac.in/kuhs_new/index.php, ...)"
     },
     {
       "id": "sec.hsts",
@@ -541,12 +539,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "18270.252000000015ms"
+      "ev": "24451.035000000007ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.6MB"
+      "ev": "7.7MB"
     },
     {
       "id": "sec.csp",
@@ -613,21 +611,11 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.28"
+      "ev": "0.27"
     },
     {
       "id": "perf.images",
       "sev": "L"
-    },
-    {
-      "id": "id.robots",
-      "sev": "L",
-      "ev": "robots.txt returned 404"
-    },
-    {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 404"
     },
     {
       "id": "gigw.emblem",
@@ -639,6 +627,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-10",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-09",
       "up": false,
@@ -735,5 +728,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

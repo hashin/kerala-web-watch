@@ -35,18 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T01:33:36.709Z",
-    "run": "1791509576589",
+    "at": "2026-10-10T01:29:29.630Z",
+    "run": "1791595724603",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 67,
-      "accessibility": 89,
-      "best_practices": 81,
-      "seo": 83
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 0,
-      "serious": 10,
+      "serious": 14,
       "moderate": 30,
       "minor": 0
     },
@@ -174,7 +169,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "10 serious violation(s)"
+        "ev": "14 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -192,7 +187,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "8 low-contrast element(s)"
+        "ev": "12 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -214,26 +209,24 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "89/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "67/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "6345.576499999999ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4.1MB"
       },
       {
         "id": "perf.viewport",
@@ -241,11 +234,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -420,7 +413,7 @@
     "screenshot": {
       "desktop": "lsg-corp-thiruvananthapuram.webp",
       "mobile": "lsg-corp-thiruvananthapuram-m.webp",
-      "phash": "ffff7f3f02000100"
+      "phash": "ff00ffff0f0f0f0f"
     },
     "outlinks": [
       {
@@ -547,12 +540,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "10 serious violation(s)"
+      "ev": "14 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "8 low-contrast element(s)"
+      "ev": "12 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -567,9 +560,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
+      "id": "perf.weight",
       "sev": "M",
-      "ev": "6345.576499999999ms"
+      "ev": "4.1MB"
     },
     {
       "id": "sec.csp",
@@ -611,10 +604,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
@@ -625,6 +614,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-10",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-09",
       "up": false,
@@ -721,5 +715,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

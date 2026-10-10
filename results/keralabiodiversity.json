@@ -35,28 +35,28 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T01:36:19.402Z",
-    "run": "1791509767981",
+    "at": "2026-10-10T01:21:05.323Z",
+    "run": "1791595162961",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 4,
+      "accessibility": 83,
+      "best_practices": 81,
+      "seo": 75
     },
     "axe": {
-      "critical": 0,
-      "serious": 1,
-      "moderate": 4,
-      "minor": 0
+      "critical": 6,
+      "serious": 12,
+      "moderate": 3,
+      "minor": 1
     },
     "crawl": {
-      "pages": 0,
-      "pdfs": 0,
+      "pages": 30,
+      "pdfs": 3,
       "broken": 0
     },
     "tech": {
-      "cms": null,
+      "cms": "WordPress 7.1.3",
       "server": "Apache",
       "jquery": null
     },
@@ -71,8 +71,7 @@
       },
       {
         "id": "avail.status",
-        "r": "fail",
-        "ev": "final response was 403"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
@@ -132,7 +131,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "pass"
+        "r": "fail",
+        "ev": "href=\"http://gmpg.org/xfn/11\""
       },
       {
         "id": "sec.csp",
@@ -168,12 +168,13 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "pass"
+        "r": "fail",
+        "ev": "6 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "1 serious violation(s)"
+        "ev": "12 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -186,15 +187,18 @@
       },
       {
         "id": "a11y.alt",
-        "r": "pass"
+        "r": "fail",
+        "ev": "4 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "3 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
-        "r": "pass"
+        "r": "fail",
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -206,33 +210,37 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "pass"
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "83/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "4/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "7345.272ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.75"
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "fail",
+        "ev": "24.2MB"
       },
       {
         "id": "perf.viewport",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.tap_targets",
@@ -261,7 +269,8 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "pass"
+        "r": "fail",
+        "ev": "ml-IN"
       },
       {
         "id": "content.obsolete_tech",
@@ -297,16 +306,15 @@
       },
       {
         "id": "content.favicon",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 403 ()"
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.feedback",
@@ -338,7 +346,7 @@
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.screen_reader",
@@ -350,11 +358,11 @@
       },
       {
         "id": "gigw.rti",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.search",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.ownership",
@@ -366,7 +374,7 @@
       },
       {
         "id": "gigw.emblem",
-        "r": "warn"
+        "r": "pass"
       },
       {
         "id": "id.gov_domain",
@@ -379,17 +387,17 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.robots",
         "r": "fail",
-        "ev": "robots.txt returned 403"
+        "ev": "robots.txt returned 404"
       },
       {
         "id": "id.sitemap_xml",
         "r": "fail",
-        "ev": "sitemap.xml returned 403"
+        "ev": "sitemap.xml returned 404"
       },
       {
         "id": "id.soft_404",
@@ -397,16 +405,16 @@
       },
       {
         "id": "id.canonical",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.charset_doctype",
-        "r": "fail",
-        "ev": "missing UTF-8 charset, HTML5 doctype"
+        "r": "pass"
       },
       {
         "id": "id.tech",
-        "r": "pass"
+        "r": "pass",
+        "ev": "WordPress 7.1.3"
       },
       {
         "id": "id.third_party",
@@ -416,17 +424,115 @@
     "screenshot": {
       "desktop": "keralabiodiversity.webp",
       "mobile": "keralabiodiversity-m.webp",
-      "phash": "0f07ffffffffffff"
+      "phash": "5fff78f8000dff3f"
     },
-    "outlinks": []
+    "outlinks": [
+      {
+        "host": "heyzine.com",
+        "count": 1,
+        "texts": [
+          "Kerala State Biodiversity Strategy and Action Plan (K-SBSAP) 2025- 2035"
+        ]
+      },
+      {
+        "host": "forms.gle",
+        "count": 1,
+        "texts": [
+          "Form B- Click Here to Apply"
+        ]
+      },
+      {
+        "host": "techmix.xyz",
+        "count": 1,
+        "texts": [
+          "WPS Visitor Counter"
+        ]
+      },
+      {
+        "host": "nbaindia.org",
+        "count": 1,
+        "texts": [
+          "NBA"
+        ]
+      },
+      {
+        "host": "cbd.int",
+        "count": 1,
+        "texts": [
+          "CBC"
+        ]
+      },
+      {
+        "host": "unep.org",
+        "count": 1,
+        "texts": [
+          "UNEP"
+        ]
+      },
+      {
+        "host": "cms.int",
+        "count": 1,
+        "texts": [
+          "CMS"
+        ]
+      },
+      {
+        "host": "wetlands.org",
+        "count": 1,
+        "texts": [
+          "Wetlands"
+        ]
+      },
+      {
+        "host": "iucn.org",
+        "count": 1,
+        "texts": [
+          "IUCN"
+        ]
+      },
+      {
+        "host": "moef.gov.in",
+        "count": 1,
+        "texts": [
+          "MoEFCC"
+        ]
+      },
+      {
+        "host": "kerala.gov.in",
+        "count": 1,
+        "texts": [
+          "DoECC"
+        ]
+      },
+      {
+        "host": "cdit.org",
+        "count": 1,
+        "texts": [
+          "CDIT"
+        ]
+      }
+    ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 49,
+    "security": 48,
+    "accessibility": 40,
+    "content": 56,
+    "gigw": 32,
+    "performance": 62,
+    "identity": 72
+  },
+  "status": "poor",
   "issues": [
     {
-      "id": "avail.status",
-      "sev": "C",
-      "ev": "final response was 403"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://gmpg.org/xfn/11\""
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "6 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -434,16 +540,9 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "gigw.contact",
-      "sev": "H"
-    },
-    {
-      "id": "gigw.rti",
-      "sev": "H"
-    },
-    {
-      "id": "perf.viewport",
-      "sev": "H"
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-IN"
     },
     {
       "id": "id.gov_domain",
@@ -461,7 +560,17 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "1 serious violation(s)"
+      "ev": "12 serious violation(s)"
+    },
+    {
+      "id": "a11y.alt",
+      "sev": "M",
+      "ev": "4 image(s) missing alt text"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "3 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -472,16 +581,22 @@
       "sev": "M"
     },
     {
-      "id": "gigw.accessibility_statement",
-      "sev": "M"
-    },
-    {
       "id": "gigw.ownership",
       "sev": "M"
     },
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "7345.272ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "24.2MB"
     },
     {
       "id": "perf.tap_targets",
@@ -505,17 +620,18 @@
       "ev": "4 moderate/minor violation(s)"
     },
     {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
+    },
+    {
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
+    },
+    {
       "id": "content.meta_desc",
       "sev": "L"
-    },
-    {
-      "id": "content.favicon",
-      "sev": "L"
-    },
-    {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 403 ()"
     },
     {
       "id": "gigw.feedback",
@@ -546,42 +662,31 @@
       "sev": "L"
     },
     {
-      "id": "gigw.search",
-      "sev": "L"
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.75"
     },
     {
       "id": "perf.images",
       "sev": "L"
     },
     {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
       "id": "id.robots",
       "sev": "L",
-      "ev": "robots.txt returned 403"
+      "ev": "robots.txt returned 404"
     },
     {
       "id": "id.sitemap_xml",
       "sev": "L",
-      "ev": "sitemap.xml returned 403"
-    },
-    {
-      "id": "id.charset_doctype",
-      "sev": "L",
-      "ev": "missing UTF-8 charset, HTML5 doctype"
-    },
-    {
-      "id": "gigw.emblem",
-      "sev": "I"
-    },
-    {
-      "id": "id.canonical",
-      "sev": "I"
+      "ev": "sitemap.xml returned 404"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-10",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-10-09",
       "up": false,
@@ -678,5 +783,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

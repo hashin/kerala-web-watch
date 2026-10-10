@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-29T01:22:14.393Z",
-    "run": "1790644402341",
+    "at": "2026-10-10T01:13:30.669Z",
+    "run": "1791594670910",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 49,
@@ -46,14 +46,14 @@
     },
     "axe": {
       "critical": 2,
-      "serious": 20,
+      "serious": 18,
       "moderate": 3,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 9,
-      "broken": 25
+      "broken": 2
     },
     "tech": {
       "cms": "WordPress 5.0.3",
@@ -164,6 +164,10 @@
         "r": "na"
       },
       {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
         "id": "a11y.axe_critical",
         "r": "fail",
         "ev": "2 critical violation(s)"
@@ -171,7 +175,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "20 serious violation(s)"
+        "ev": "18 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -181,7 +185,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en-US\"> vs. 37% Malayalam content"
+        "ev": "<html lang=\"en-US\"> vs. 41% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -223,7 +227,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8459.952000000001ms"
+        "ev": "8419.3185ms"
       },
       {
         "id": "perf.cls",
@@ -277,8 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "25/30 crawled link(s) broken (https://education.kerala.gov.in/vhse-2/, https://education.kerala.gov.in/dhse-2, http://archive.education.kerala.gov.in/, ...)"
+        "r": "warn",
+        "ev": "2/30 crawled link(s) broken (http://archive.education.kerala.gov.in/, https://samanwaya.kite.kerala.gov.in/index.php/auth/login)"
       },
       {
         "id": "content.broken_pdfs",
@@ -382,7 +386,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -390,11 +394,12 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "na"
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
       },
       {
         "id": "id.soft_404",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
@@ -472,13 +477,13 @@
     ]
   },
   "score": {
-    "overall": 43,
+    "overall": 44,
     "security": 38,
     "accessibility": 22,
-    "content": 36,
+    "content": 46,
     "gigw": 30,
     "performance": 86,
-    "identity": 95
+    "identity": 87
   },
   "status": "poor",
   "issues": [
@@ -500,7 +505,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en-US\"> vs. 37% Malayalam content"
+      "ev": "<html lang=\"en-US\"> vs. 41% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -515,7 +520,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "25/30 crawled link(s) broken (https://education.kerala.gov.in/vhse-2/, https://education.kerala.gov.in/dhse-2, http://archive.education.kerala.gov.in/, ...)"
+      "ev": "2/30 crawled link(s) broken (http://archive.education.kerala.gov.in/, https://samanwaya.kite.kerala.gov.in/index.php/auth/login)"
     },
     {
       "id": "sec.hsts",
@@ -524,7 +529,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "20 serious violation(s)"
+      "ev": "18 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -559,7 +564,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8459.952000000001ms"
+      "ev": "8419.3185ms"
     },
     {
       "id": "id.tech",
@@ -615,9 +620,23 @@
     {
       "id": "perf.images",
       "sev": "L"
+    },
+    {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 404"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-10",
+      "up": true,
+      "score": 44
+    },
     {
       "d": "2026-10-09",
       "up": true,
@@ -704,5 +723,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

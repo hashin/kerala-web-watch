@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T01:26:14.004Z",
-    "run": "1791509130506",
+    "at": "2026-10-10T01:17:25.502Z",
+    "run": "1791594999438",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 61,
+      "performance": 63,
       "accessibility": 93,
       "best_practices": 92,
       "seo": 91
     },
     "axe": {
       "critical": 0,
-      "serious": 3,
+      "serious": 2,
       "moderate": 5,
       "minor": 0
     },
@@ -172,7 +172,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "3 serious violation(s)"
+        "ev": "2 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -189,8 +189,7 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "1 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
@@ -217,12 +216,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "61/100"
+        "ev": "63/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7094.4310000000005ms"
+        "ev": "6551.37ms"
       },
       {
         "id": "perf.cls",
@@ -453,9 +452,9 @@
     ]
   },
   "score": {
-    "overall": 66,
+    "overall": 68,
     "security": 96,
-    "accessibility": 72,
+    "accessibility": 82,
     "content": 38,
     "gigw": 32,
     "performance": 66,
@@ -481,12 +480,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "3 serious violation(s)"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "1 low-contrast element(s)"
+      "ev": "2 serious violation(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -512,7 +506,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7094.4310000000005ms"
+      "ev": "6551.37ms"
     },
     {
       "id": "perf.weight",
@@ -609,6 +603,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-10",
+      "up": true,
+      "score": 68
+    },
+    {
       "d": "2026-10-09",
       "up": true,
       "score": 66
@@ -699,5 +698,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
