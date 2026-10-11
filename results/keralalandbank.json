@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-10T01:41:56.977Z",
-    "run": "1791596459777",
+    "at": "2026-10-11T00:46:15.815Z",
+    "run": "1791679527815",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 64,
+      "performance": 58,
       "accessibility": 78,
       "best_practices": 96,
       "seo": 69
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3131ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -221,7 +222,7 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "64/100"
+        "ev": "58/100"
       },
       {
         "id": "perf.lcp",
@@ -230,7 +231,7 @@
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.34"
+        "ev": "1.07"
       },
       {
         "id": "perf.weight",
@@ -508,6 +509,11 @@
       "ev": "keralalandbank.in"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3131ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -613,7 +619,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.34"
+      "ev": "1.07"
     },
     {
       "id": "perf.images",
@@ -625,6 +631,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-11",
+      "up": true,
+      "score": 48
+    },
     {
       "d": "2026-10-10",
       "up": true,
@@ -726,5 +737,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

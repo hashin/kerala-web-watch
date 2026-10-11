@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-10T01:31:54.027Z",
-    "run": "1791595830013",
+    "at": "2026-10-11T00:40:18.709Z",
+    "run": "1791679120413",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 27,
+      "performance": 46,
       "accessibility": 84,
       "best_practices": 88,
-      "seo": 85
+      "seo": 92
     },
     "axe": {
       "critical": 0,
@@ -220,22 +220,21 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "27/100"
+        "ev": "46/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10435.094500000003ms"
+        "ev": "9421.555250000001ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.50"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "297.6MB"
+        "ev": "510.1MB"
       },
       {
         "id": "perf.viewport",
@@ -269,7 +268,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-container"
+        "ev": "ml-user"
       },
       {
         "id": "content.obsolete_tech",
@@ -423,7 +422,7 @@
     "screenshot": {
       "desktop": "dtpckollam.webp",
       "mobile": "dtpckollam-m.webp",
-      "phash": "1c1c1808080808ff"
+      "phash": "f0f06060e0e0e0ff"
     },
     "outlinks": [
       {
@@ -453,12 +452,12 @@
     ]
   },
   "score": {
-    "overall": 54,
+    "overall": 55,
     "security": 38,
     "accessibility": 70,
     "content": 56,
     "gigw": 26,
-    "performance": 72,
+    "performance": 76,
     "identity": 76
   },
   "status": "needs-work",
@@ -481,7 +480,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-container"
+      "ev": "ml-user"
     },
     {
       "id": "gigw.rti",
@@ -521,12 +520,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10435.094500000003ms"
+      "ev": "9421.555250000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "297.6MB"
+      "ev": "510.1MB"
     },
     {
       "id": "sec.csp",
@@ -585,11 +584,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.50"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -605,6 +599,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-11",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-10",
       "up": true,
@@ -701,5 +700,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

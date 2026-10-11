@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-10T01:21:05.323Z",
-    "run": "1791595162961",
+    "at": "2026-10-11T00:37:04.832Z",
+    "run": "1791678930229",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 4,
+      "performance": 6,
       "accessibility": 83,
       "best_practices": 81,
       "seo": 75
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3147ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -221,17 +222,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "4/100"
+        "ev": "6/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7345.272ms"
+        "ev": "7180.096000000001ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.75"
+        "ev": "0.74"
       },
       {
         "id": "perf.weight",
@@ -550,6 +551,11 @@
       "ev": "keralabiodiversity.org"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3147ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -591,7 +597,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7345.272ms"
+      "ev": "7180.096000000001ms"
     },
     {
       "id": "perf.weight",
@@ -664,7 +670,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.75"
+      "ev": "0.74"
     },
     {
       "id": "perf.images",
@@ -682,6 +688,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-11",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-10-10",
       "up": true,
@@ -783,5 +794,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

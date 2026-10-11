@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-10T01:38:42.100Z",
-    "run": "1791596276645",
+    "at": "2026-10-11T00:40:26.132Z",
+    "run": "1791679186520",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
+    },
     "axe": {
       "critical": 5,
       "serious": 8,
@@ -212,11 +217,13 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
@@ -237,11 +244,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -628,6 +635,10 @@
       "ev": "5.3MB"
     },
     {
+      "id": "perf.tap_targets",
+      "sev": "M"
+    },
+    {
       "id": "id.tech",
       "sev": "M",
       "ev": "WordPress 4.9.26 (unsupported major version)"
@@ -696,6 +707,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
@@ -706,6 +721,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-11",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-10",
       "up": false,
@@ -782,5 +802,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

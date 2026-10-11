@@ -35,48 +35,48 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:18:25.602Z",
-    "run": "1790903886564",
+    "at": "2026-10-11T00:33:00.517Z",
+    "run": "1791678701838",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 72,
+      "accessibility": 87,
+      "best_practices": 69,
+      "seo": 75
     },
     "axe": {
-      "critical": 0,
-      "serious": 1,
-      "moderate": 4,
+      "critical": 6,
+      "serious": 12,
+      "moderate": 19,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
-      "pdfs": 0,
-      "broken": 0
+      "pages": 30,
+      "pdfs": 20,
+      "broken": 1
     },
     "tech": {
-      "cms": null,
-      "server": "Apache",
+      "cms": "Drupal 8",
+      "server": null,
       "jquery": null
     },
     "checks": [
       {
         "id": "avail.dns",
-        "r": "pass"
+        "r": "fail",
+        "ev": "kerala.gov.in did not resolve"
       },
       {
         "id": "avail.connect",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.status",
-        "r": "fail",
-        "ev": "final response was 403"
+        "r": "na"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.parked",
@@ -96,7 +96,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.geo_blocked",
@@ -108,24 +108,23 @@
       },
       {
         "id": "sec.https",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.http_redirect",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "sec.cert_valid",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "23 days left"
+        "r": "na"
       },
       {
         "id": "sec.tls_version",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.hsts",
@@ -133,7 +132,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.csp",
@@ -141,7 +140,7 @@
       },
       {
         "id": "sec.xfo",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.xcto",
@@ -157,7 +156,8 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "pass"
+        "r": "fail",
+        "ev": "jquery 3.2.1, jquery-ui 1.12.1, chart.js 2.8.0"
       },
       {
         "id": "sec.safe_browsing",
@@ -169,17 +169,18 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "pass"
+        "r": "fail",
+        "ev": "6 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "1 serious violation(s)"
+        "ev": "12 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "4 moderate/minor violation(s)"
+        "ev": "19 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -187,15 +188,18 @@
       },
       {
         "id": "a11y.alt",
-        "r": "pass"
+        "r": "fail",
+        "ev": "6 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "5 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
-        "r": "pass"
+        "r": "fail",
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -212,20 +216,20 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "87/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "72/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -233,11 +237,11 @@
       },
       {
         "id": "perf.viewport",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -278,7 +282,8 @@
       },
       {
         "id": "content.broken_pdfs",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 linked PDF(s) 404: https://gad.kerala.gov.in/sites/default/files/inline-files/District-Police-Chiefs-in-Kerala.pdf"
       },
       {
         "id": "content.broken_images",
@@ -286,8 +291,7 @@
       },
       {
         "id": "content.malayalam",
-        "r": "fail",
-        "ev": "Malayalam ratio 0.00, no language toggle found"
+        "r": "pass"
       },
       {
         "id": "content.title",
@@ -299,16 +303,16 @@
       },
       {
         "id": "content.favicon",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+        "ev": "10 console error(s): Mixed Content: The page at 'https://gad.kerala.gov.in/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Armata'. This request has been blocked; the content must be served over HTTPS."
       },
       {
         "id": "gigw.contact",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.feedback",
@@ -320,7 +324,7 @@
       },
       {
         "id": "gigw.privacy",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.terms",
@@ -336,11 +340,11 @@
       },
       {
         "id": "gigw.disclaimer",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.screen_reader",
@@ -352,11 +356,11 @@
       },
       {
         "id": "gigw.rti",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.search",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.ownership",
@@ -384,17 +388,16 @@
       },
       {
         "id": "id.robots",
-        "r": "fail",
-        "ev": "robots.txt returned 403"
+        "r": "pass"
       },
       {
         "id": "id.sitemap_xml",
         "r": "fail",
-        "ev": "sitemap.xml returned 403"
+        "ev": "sitemap.xml returned 404"
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.canonical",
@@ -402,41 +405,65 @@
       },
       {
         "id": "id.charset_doctype",
-        "r": "fail",
-        "ev": "missing UTF-8 charset, HTML5 doctype"
+        "r": "pass"
       },
       {
         "id": "id.tech",
-        "r": "pass"
+        "r": "warn",
+        "ev": "Drupal 8 (unsupported major version)"
       },
       {
         "id": "id.third_party",
-        "r": "pass"
+        "r": "warn",
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-HV9ZZZJM47&amp;cx=c&amp;_slc=1, https://www.google-analytics.com/analytics.js"
       }
     ],
     "screenshot": {
       "desktop": "gadkerala.webp",
       "mobile": "gadkerala-m.webp",
-      "phash": "0f07ffffffffffff"
+      "phash": "fffffffa0000ffa5"
     },
-    "outlinks": []
+    "outlinks": [
+      {
+        "host": "keralacm.gov.in",
+        "count": 1,
+        "texts": [
+          "🔗"
+        ]
+      },
+      {
+        "host": "keralabattlescovid.in",
+        "count": 1,
+        "texts": [
+          "കോവിഡ് പ്രതിരോധം"
+        ]
+      },
+      {
+        "host": "india.gov.in",
+        "count": 1,
+        "texts": [
+          "ഇന്ത്യ ഗവണ്‍മെന്റ്"
+        ]
+      }
+    ]
   },
   "score": null,
   "status": "down",
   "issues": [
     {
-      "id": "avail.status",
+      "id": "avail.dns",
       "sev": "C",
-      "ev": "final response was 403"
+      "ev": "kerala.gov.in did not resolve"
     },
     {
-      "id": "sec.http_redirect",
-      "sev": "H"
-    },
-    {
-      "id": "sec.cert_expiry",
+      "id": "sec.vuln_js",
       "sev": "H",
-      "ev": "23 days left"
+      "ev": "jquery 3.2.1, jquery-ui 1.12.1, chart.js 2.8.0"
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "6 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -444,45 +471,31 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "gigw.contact",
-      "sev": "H"
-    },
-    {
-      "id": "gigw.rti",
-      "sev": "H"
-    },
-    {
-      "id": "perf.viewport",
-      "sev": "H"
-    },
-    {
       "id": "sec.hsts",
-      "sev": "M"
-    },
-    {
-      "id": "sec.xfo",
       "sev": "M"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "1 serious violation(s)"
+      "ev": "12 serious violation(s)"
     },
     {
-      "id": "content.malayalam",
+      "id": "a11y.alt",
       "sev": "M",
-      "ev": "Malayalam ratio 0.00, no language toggle found"
+      "ev": "6 image(s) missing alt text"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "5 low-contrast element(s)"
+    },
+    {
+      "id": "content.broken_pdfs",
+      "sev": "M",
+      "ev": "1 linked PDF(s) 404: https://gad.kerala.gov.in/sites/default/files/inline-files/District-Police-Chiefs-in-Kerala.pdf"
     },
     {
       "id": "gigw.sitemap",
-      "sev": "M"
-    },
-    {
-      "id": "gigw.privacy",
-      "sev": "M"
-    },
-    {
-      "id": "gigw.accessibility_statement",
       "sev": "M"
     },
     {
@@ -494,8 +507,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "id.tech",
+      "sev": "M",
+      "ev": "Drupal 8 (unsupported major version)"
     },
     {
       "id": "sec.csp",
@@ -508,20 +522,21 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "4 moderate/minor violation(s)"
+      "ev": "19 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
     },
     {
       "id": "content.meta_desc",
       "sev": "L"
     },
     {
-      "id": "content.favicon",
-      "sev": "L"
-    },
-    {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      "ev": "10 console error(s): Mixed Content: The page at 'https://gad.kerala.gov.in/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Armata'. This request has been blocked; the content must be served over HTTPS."
     },
     {
       "id": "gigw.feedback",
@@ -540,10 +555,6 @@
       "sev": "L"
     },
     {
-      "id": "gigw.disclaimer",
-      "sev": "L"
-    },
-    {
       "id": "gigw.screen_reader",
       "sev": "L"
     },
@@ -552,27 +563,13 @@
       "sev": "L"
     },
     {
-      "id": "gigw.search",
-      "sev": "L"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
     {
-      "id": "id.robots",
-      "sev": "L",
-      "ev": "robots.txt returned 403"
-    },
-    {
       "id": "id.sitemap_xml",
       "sev": "L",
-      "ev": "sitemap.xml returned 403"
-    },
-    {
-      "id": "id.charset_doctype",
-      "sev": "L",
-      "ev": "missing UTF-8 charset, HTML5 doctype"
+      "ev": "sitemap.xml returned 404"
     },
     {
       "id": "gigw.emblem",
@@ -581,9 +578,19 @@
     {
       "id": "id.canonical",
       "sev": "I"
+    },
+    {
+      "id": "id.third_party",
+      "sev": "I",
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-HV9ZZZJM47&amp;cx=c&amp;_slc=1, https://www.google-analytics.com/analytics.js"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-11",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-10",
       "up": false,
@@ -675,5 +682,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

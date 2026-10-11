@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-10T01:17:14.281Z",
-    "run": "1791594983724",
+    "at": "2026-10-11T00:29:20.116Z",
+    "run": "1791678505390",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 54,
@@ -48,7 +48,7 @@
     },
     "axe": {
       "critical": 1,
-      "serious": 34,
+      "serious": 23,
       "moderate": 2,
       "minor": 0
     },
@@ -97,7 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "5311ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -176,7 +177,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "34 serious violation(s)"
+        "ev": "23 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -186,7 +187,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en-GB\"> vs. 48% Malayalam content"
+        "ev": "<html lang=\"en-GB\"> vs. 41% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -195,7 +196,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "24 low-contrast element(s)"
+        "ev": "13 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -227,7 +228,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10459.029999999999ms"
+        "ev": "10234.280999999999ms"
       },
       {
         "id": "perf.cls",
@@ -417,7 +418,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://connect.facebook.net/en_US/all.js?hash=fbd01c2524d1b81c3fde6c45431a6ddd, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
+        "ev": "https://connect.facebook.net/en_US/all.js?hash=4d141ac3735cf2648afbb36cf15dcb1b, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
       }
     ],
     "screenshot": {
@@ -488,7 +489,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en-GB\"> vs. 48% Malayalam content"
+      "ev": "<html lang=\"en-GB\"> vs. 41% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -501,14 +502,19 @@
       "ev": "ml-IN"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "5311ms"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "34 serious violation(s)"
+      "ev": "23 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "24 low-contrast element(s)"
+      "ev": "13 low-contrast element(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -534,7 +540,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10459.029999999999ms"
+      "ev": "10234.280999999999ms"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -590,10 +596,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://connect.facebook.net/en_US/all.js?hash=fbd01c2524d1b81c3fde6c45431a6ddd, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
+      "ev": "https://connect.facebook.net/en_US/all.js?hash=4d141ac3735cf2648afbb36cf15dcb1b, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-11",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-10-10",
       "up": true,
@@ -690,5 +701,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

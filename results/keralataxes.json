@@ -37,19 +37,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T01:25:36.448Z",
-    "run": "1791509125873",
+    "at": "2026-10-11T00:29:51.277Z",
+    "run": "1791678569907",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 100,
+      "accessibility": 94,
+      "best_practices": 100,
+      "seo": 82
     },
     "axe": {
       "critical": 0,
-      "serious": 1,
-      "moderate": 4,
+      "serious": 0,
+      "moderate": 2,
       "minor": 0
     },
     "crawl": {
@@ -73,8 +73,7 @@
       },
       {
         "id": "avail.status",
-        "r": "fail",
-        "ev": "final response was 403"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
@@ -174,13 +173,12 @@
       },
       {
         "id": "a11y.axe_serious",
-        "r": "fail",
-        "ev": "1 serious violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "4 moderate/minor violation(s)"
+        "ev": "2 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -213,20 +211,20 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "94/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "100/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -234,7 +232,7 @@
       },
       {
         "id": "perf.viewport",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.tap_targets",
@@ -242,7 +240,7 @@
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.copyright_year",
@@ -304,8 +302,7 @@
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 403 ()"
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
@@ -385,17 +382,16 @@
       },
       {
         "id": "id.robots",
-        "r": "fail",
-        "ev": "robots.txt returned 403"
+        "r": "pass"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 403"
+        "r": "pass"
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
       },
       {
         "id": "id.canonical",
@@ -403,8 +399,7 @@
       },
       {
         "id": "id.charset_doctype",
-        "r": "fail",
-        "ev": "missing UTF-8 charset, HTML5 doctype"
+        "r": "pass"
       },
       {
         "id": "id.tech",
@@ -418,18 +413,21 @@
     "screenshot": {
       "desktop": "keralataxes.webp",
       "mobile": "keralataxes-m.webp",
-      "phash": "1fffffffffffffff"
+      "phash": "00003c3c3c3c0000"
     },
     "outlinks": []
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 64,
+    "security": 48,
+    "accessibility": 96,
+    "content": 62,
+    "gigw": 0,
+    "performance": 90,
+    "identity": 92
+  },
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "avail.status",
-      "sev": "C",
-      "ev": "final response was 403"
-    },
     {
       "id": "sec.http_redirect",
       "sev": "H"
@@ -448,21 +446,12 @@
       "sev": "H"
     },
     {
-      "id": "perf.viewport",
-      "sev": "H"
-    },
-    {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
       "id": "sec.xfo",
       "sev": "M"
-    },
-    {
-      "id": "a11y.axe_serious",
-      "sev": "M",
-      "ev": "1 serious violation(s)"
     },
     {
       "id": "content.malayalam",
@@ -508,7 +497,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "4 moderate/minor violation(s)"
+      "ev": "2 moderate/minor violation(s)"
     },
     {
       "id": "content.meta_desc",
@@ -517,11 +506,6 @@
     {
       "id": "content.favicon",
       "sev": "L"
-    },
-    {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 403 ()"
     },
     {
       "id": "gigw.feedback",
@@ -556,27 +540,13 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.www_consistency",
       "sev": "L"
     },
     {
-      "id": "id.robots",
+      "id": "id.soft_404",
       "sev": "L",
-      "ev": "robots.txt returned 403"
-    },
-    {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 403"
-    },
-    {
-      "id": "id.charset_doctype",
-      "sev": "L",
-      "ev": "missing UTF-8 charset, HTML5 doctype"
+      "ev": "a nonexistent path returned 200"
     },
     {
       "id": "gigw.emblem",
@@ -588,6 +558,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-11",
+      "up": true,
+      "score": 64
+    },
     {
       "d": "2026-10-10",
       "up": false,
@@ -689,5 +664,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

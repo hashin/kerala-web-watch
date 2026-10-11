@@ -29,11 +29,11 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-10-10T01:19:27.019Z",
-    "run": "1791595121483",
+    "at": "2026-10-11T00:29:13.918Z",
+    "run": "1791678406472",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 48,
+      "performance": 43,
       "accessibility": 69,
       "best_practices": 88,
       "seo": 83
@@ -89,7 +89,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "fail",
+        "ev": "19252ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -214,12 +215,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "48/100"
+        "ev": "43/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8404.776ms"
+        "ev": "11793.371499999997ms"
       },
       {
         "id": "perf.cls",
@@ -229,7 +230,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "5.1MB"
+        "ev": "5.2MB"
       },
       {
         "id": "perf.viewport",
@@ -538,6 +539,11 @@
       "ev": "www.kudumbashree.org"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "19252ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -574,12 +580,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8404.776ms"
+      "ev": "11793.371499999997ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "5.1MB"
+      "ev": "5.2MB"
     },
     {
       "id": "perf.tap_targets",
@@ -665,6 +671,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-11",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-10-10",
       "up": true,
@@ -761,5 +772,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

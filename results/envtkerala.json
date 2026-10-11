@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-10T01:38:21.202Z",
-    "run": "1791595534135",
+    "at": "2026-10-11T00:32:45.615Z",
+    "run": "1791678585935",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 60,
+      "performance": 61,
       "accessibility": 87,
       "best_practices": 96,
       "seo": 77
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 7,
-      "broken": 35
+      "broken": 0
     },
     "tech": {
       "cms": "WordPress 6.5.8",
@@ -97,8 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "fail",
-        "ev": "12642ms"
+        "r": "warn",
+        "ev": "7129ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "60/100"
+        "ev": "61/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10354.527000000002ms"
+        "ev": "7790.003500000004ms"
       },
       {
         "id": "perf.cls",
@@ -281,13 +281,11 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "29/30 crawled link(s) broken (https://envt.kerala.gov.in/#, https://envt.kerala.gov.in/, https://envt.kerala.gov.in/introduction/, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
-        "r": "fail",
-        "ev": "6 linked PDF(s) 404: https://envt.kerala.gov.in/wp-content/uploads/2026/05/List-of-Environmental-Awards.pdf, https://envt.kerala.gov.in/wp-content/uploads/2019/05/Kerala-State-Environment-Policy-2009-english.pdf, https://envt.kerala.gov.in/wp-content/uploads/2019/05/Kerala-State-Environment-Policy-2009-malayalam.pdf, https://envt.kerala.gov.in/wp-content/uploads/2019/05/National-Action-Plan-on-Climate-Change.pdf, https://envt.kerala.gov.in/wp-content/uploads/2019/05/National-Environment-Policy-2006.pdf, https://envt.kerala.gov.in/wp-content/uploads/2022/12/Kerala-State-Action-Plan-on-Climate-Change-2.0.pdf"
+        "r": "pass"
       },
       {
         "id": "content.broken_images",
@@ -467,10 +465,10 @@
     ]
   },
   "score": {
-    "overall": 51,
+    "overall": 56,
     "security": 38,
     "accessibility": 72,
-    "content": 22,
+    "content": 52,
     "gigw": 22,
     "performance": 71,
     "identity": 100
@@ -497,14 +495,9 @@
       "ev": "ML-NILA"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "29/30 crawled link(s) broken (https://envt.kerala.gov.in/#, https://envt.kerala.gov.in/, https://envt.kerala.gov.in/introduction/, ...)"
-    },
-    {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "12642ms"
+      "ev": "7129ms"
     },
     {
       "id": "sec.hsts",
@@ -519,11 +512,6 @@
       "id": "a11y.contrast",
       "sev": "M",
       "ev": "36 low-contrast element(s)"
-    },
-    {
-      "id": "content.broken_pdfs",
-      "sev": "M",
-      "ev": "6 linked PDF(s) 404: https://envt.kerala.gov.in/wp-content/uploads/2026/05/List-of-Environmental-Awards.pdf, https://envt.kerala.gov.in/wp-content/uploads/2019/05/Kerala-State-Environment-Policy-2009-english.pdf, https://envt.kerala.gov.in/wp-content/uploads/2019/05/Kerala-State-Environment-Policy-2009-malayalam.pdf, https://envt.kerala.gov.in/wp-content/uploads/2019/05/National-Action-Plan-on-Climate-Change.pdf, https://envt.kerala.gov.in/wp-content/uploads/2019/05/National-Environment-Policy-2006.pdf, https://envt.kerala.gov.in/wp-content/uploads/2022/12/Kerala-State-Action-Plan-on-Climate-Change-2.0.pdf"
     },
     {
       "id": "gigw.sitemap",
@@ -548,7 +536,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10354.527000000002ms"
+      "ev": "7790.003500000004ms"
     },
     {
       "id": "perf.weight",
@@ -623,6 +611,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-11",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-10-10",
       "up": true,
@@ -724,5 +717,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

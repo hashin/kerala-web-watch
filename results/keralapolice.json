@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-10T01:18:41.481Z",
-    "run": "1791594988519",
+    "at": "2026-10-11T00:26:46.470Z",
+    "run": "1791678331174",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 50,
+      "performance": 41,
       "accessibility": 92,
       "best_practices": 96,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 3
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -184,7 +184,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 81% Malayalam content"
+        "ev": "<html lang=\"en\"> vs. 82% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -220,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "50/100"
+        "ev": "41/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "42742.0625ms"
+        "ev": "39526.512ms"
       },
       {
         "id": "perf.cls",
@@ -234,7 +234,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "67.5MB"
+        "ev": "67.2MB"
       },
       {
         "id": "perf.viewport",
@@ -281,7 +281,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "3/30 crawled link(s) broken (https://keralapolice.gov.in/login, https://keralapolice.gov.in/page/kerala-police-housing-co-operative-society, https://keralapolice.gov.in/page/kerala-police-housing-and-construction-corporation)"
+        "ev": "1/30 crawled link(s) broken (https://keralapolice.gov.in/page/about-us)"
       },
       {
         "id": "content.broken_pdfs",
@@ -416,7 +416,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K&amp;cx=c&amp;gtm=4e6a72, https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6a72, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6a72, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
       }
     ],
     "screenshot": {
@@ -604,7 +604,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 81% Malayalam content"
+      "ev": "<html lang=\"en\"> vs. 82% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -619,7 +619,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "3/30 crawled link(s) broken (https://keralapolice.gov.in/login, https://keralapolice.gov.in/page/kerala-police-housing-co-operative-society, https://keralapolice.gov.in/page/kerala-police-housing-and-construction-corporation)"
+      "ev": "1/30 crawled link(s) broken (https://keralapolice.gov.in/page/about-us)"
     },
     {
       "id": "gigw.contact",
@@ -649,12 +649,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "42742.0625ms"
+      "ev": "39526.512ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "67.5MB"
+      "ev": "67.2MB"
     },
     {
       "id": "perf.tap_targets",
@@ -720,10 +720,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K&amp;cx=c&amp;gtm=4e6a72, https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6a72, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6a72, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-11",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-10",
       "up": true,
@@ -825,5 +830,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

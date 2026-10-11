@@ -35,434 +35,34 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-10T01:09:29.826Z",
-    "run": "1791594486758",
+    "at": "2026-10-11T00:23:56.078Z",
+    "run": "1791678095591",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 53,
-      "accessibility": 79,
-      "best_practices": 88,
-      "seo": 85
-    },
+    "lighthouse": null,
     "axe": {
-      "critical": 2,
-      "serious": 3,
-      "moderate": 3,
+      "critical": 0,
+      "serious": 0,
+      "moderate": 0,
       "minor": 0
     },
     "crawl": {
-      "pages": 21,
+      "pages": 0,
       "pdfs": 0,
-      "broken": 6
+      "broken": 0
     },
     "tech": {
-      "cms": "Drupal 11",
-      "server": "Apache",
+      "cms": null,
+      "server": null,
       "jquery": null
     },
-    "checks": [
-      {
-        "id": "avail.dns",
-        "r": "pass"
-      },
-      {
-        "id": "avail.connect",
-        "r": "pass"
-      },
-      {
-        "id": "avail.status",
-        "r": "pass"
-      },
-      {
-        "id": "avail.redirect_offsite",
-        "r": "pass"
-      },
-      {
-        "id": "avail.parked",
-        "r": "pass"
-      },
-      {
-        "id": "avail.default_page",
-        "r": "pass"
-      },
-      {
-        "id": "avail.blank",
-        "r": "pass"
-      },
-      {
-        "id": "avail.under_construction",
-        "r": "pass"
-      },
-      {
-        "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "4625ms"
-      },
-      {
-        "id": "avail.geo_blocked",
-        "r": "pass"
-      },
-      {
-        "id": "avail.flapping",
-        "r": "na"
-      },
-      {
-        "id": "sec.https",
-        "r": "pass"
-      },
-      {
-        "id": "sec.http_redirect",
-        "r": "pass"
-      },
-      {
-        "id": "sec.cert_valid",
-        "r": "pass"
-      },
-      {
-        "id": "sec.cert_expiry",
-        "r": "pass"
-      },
-      {
-        "id": "sec.tls_version",
-        "r": "pass"
-      },
-      {
-        "id": "sec.hsts",
-        "r": "fail"
-      },
-      {
-        "id": "sec.mixed_content",
-        "r": "pass"
-      },
-      {
-        "id": "sec.csp",
-        "r": "pass"
-      },
-      {
-        "id": "sec.xfo",
-        "r": "pass"
-      },
-      {
-        "id": "sec.xcto",
-        "r": "fail"
-      },
-      {
-        "id": "sec.referrer",
-        "r": "fail"
-      },
-      {
-        "id": "sec.server_banner",
-        "r": "pass"
-      },
-      {
-        "id": "sec.vuln_js",
-        "r": "fail",
-        "ev": "chart.js 2.5.0, swiper 8.4.5"
-      },
-      {
-        "id": "sec.safe_browsing",
-        "r": "na"
-      },
-      {
-        "id": "sec.injected_links",
-        "r": "pass"
-      },
-      {
-        "id": "a11y.axe_critical",
-        "r": "fail",
-        "ev": "2 critical violation(s)"
-      },
-      {
-        "id": "a11y.axe_serious",
-        "r": "fail",
-        "ev": "3 serious violation(s)"
-      },
-      {
-        "id": "a11y.axe_moderate_minor",
-        "r": "fail",
-        "ev": "3 moderate/minor violation(s)"
-      },
-      {
-        "id": "a11y.lang",
-        "r": "pass"
-      },
-      {
-        "id": "a11y.alt",
-        "r": "fail",
-        "ev": "1 image(s) missing alt text"
-      },
-      {
-        "id": "a11y.contrast",
-        "r": "pass"
-      },
-      {
-        "id": "a11y.headings",
-        "r": "fail",
-        "ev": "no <h1>"
-      },
-      {
-        "id": "a11y.labels",
-        "r": "fail",
-        "ev": "1 form control(s) without a label"
-      },
-      {
-        "id": "a11y.skip_link",
-        "r": "pass"
-      },
-      {
-        "id": "a11y.keyboard",
-        "r": "warn",
-        "ev": "tabindex=\"-1\" alongside outline:none"
-      },
-      {
-        "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "79/100"
-      },
-      {
-        "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "53/100"
-      },
-      {
-        "id": "perf.lcp",
-        "r": "fail",
-        "ev": "36265.92199999999ms"
-      },
-      {
-        "id": "perf.cls",
-        "r": "pass"
-      },
-      {
-        "id": "perf.weight",
-        "r": "warn",
-        "ev": "7.2MB"
-      },
-      {
-        "id": "perf.viewport",
-        "r": "pass"
-      },
-      {
-        "id": "perf.tap_targets",
-        "r": "fail"
-      },
-      {
-        "id": "perf.images",
-        "r": "fail"
-      },
-      {
-        "id": "content.copyright_year",
-        "r": "pass"
-      },
-      {
-        "id": "content.last_updated",
-        "r": "fail",
-        "ev": "no \"last updated\" date found"
-      },
-      {
-        "id": "content.stale_news",
-        "r": "na"
-      },
-      {
-        "id": "content.placeholder",
-        "r": "pass"
-      },
-      {
-        "id": "content.legacy_font",
-        "r": "fail",
-        "ev": "ml-children"
-      },
-      {
-        "id": "content.obsolete_tech",
-        "r": "pass"
-      },
-      {
-        "id": "content.best_viewed",
-        "r": "pass"
-      },
-      {
-        "id": "content.broken_links",
-        "r": "fail",
-        "ev": "6/21 crawled link(s) broken (https://keralacm.gov.in/6684, https://keralacm.gov.in/6700, https://keralacm.gov.in/6702, ...)"
-      },
-      {
-        "id": "content.broken_pdfs",
-        "r": "pass"
-      },
-      {
-        "id": "content.broken_images",
-        "r": "pass"
-      },
-      {
-        "id": "content.malayalam",
-        "r": "na"
-      },
-      {
-        "id": "content.title",
-        "r": "pass"
-      },
-      {
-        "id": "content.meta_desc",
-        "r": "fail"
-      },
-      {
-        "id": "content.favicon",
-        "r": "pass"
-      },
-      {
-        "id": "content.console_errors",
-        "r": "fail",
-        "ev": "8 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
-      },
-      {
-        "id": "gigw.contact",
-        "r": "fail"
-      },
-      {
-        "id": "gigw.feedback",
-        "r": "fail"
-      },
-      {
-        "id": "gigw.sitemap",
-        "r": "fail"
-      },
-      {
-        "id": "gigw.privacy",
-        "r": "fail"
-      },
-      {
-        "id": "gigw.terms",
-        "r": "fail"
-      },
-      {
-        "id": "gigw.copyright_policy",
-        "r": "fail"
-      },
-      {
-        "id": "gigw.hyperlink_policy",
-        "r": "fail"
-      },
-      {
-        "id": "gigw.disclaimer",
-        "r": "fail"
-      },
-      {
-        "id": "gigw.accessibility_statement",
-        "r": "pass"
-      },
-      {
-        "id": "gigw.screen_reader",
-        "r": "pass"
-      },
-      {
-        "id": "gigw.help",
-        "r": "fail"
-      },
-      {
-        "id": "gigw.rti",
-        "r": "fail"
-      },
-      {
-        "id": "gigw.search",
-        "r": "fail"
-      },
-      {
-        "id": "gigw.ownership",
-        "r": "fail"
-      },
-      {
-        "id": "gigw.last_updated",
-        "r": "fail"
-      },
-      {
-        "id": "gigw.emblem",
-        "r": "pass"
-      },
-      {
-        "id": "id.gov_domain",
-        "r": "pass"
-      },
-      {
-        "id": "id.domain_expiry",
-        "r": "na"
-      },
-      {
-        "id": "id.www_consistency",
-        "r": "pass"
-      },
-      {
-        "id": "id.robots",
-        "r": "pass"
-      },
-      {
-        "id": "id.sitemap_xml",
-        "r": "pass"
-      },
-      {
-        "id": "id.soft_404",
-        "r": "pass"
-      },
-      {
-        "id": "id.canonical",
-        "r": "pass"
-      },
-      {
-        "id": "id.charset_doctype",
-        "r": "pass"
-      },
-      {
-        "id": "id.tech",
-        "r": "pass",
-        "ev": "Drupal 11"
-      },
-      {
-        "id": "id.third_party",
-        "r": "pass"
-      }
-    ],
+    "checks": [],
     "screenshot": {
       "desktop": "2026-09-21.webp",
       "mobile": "2026-09-21-m.webp",
       "phash": "3fc080818383ffff"
     },
-    "outlinks": [
-      {
-        "host": "ux4g.gov.in",
-        "count": 1,
-        "texts": [
-          "Created by"
-        ]
-      },
-      {
-        "host": "youtube.com",
-        "count": 1,
-        "texts": [
-          "എല്ലാം കാണുക"
-        ]
-      },
-      {
-        "host": "india.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "kerala.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "facebook.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "cdit.org",
-        "count": 1,
-        "texts": [
-          "CDIT"
-        ]
-      }
-    ]
+    "outlinks": [],
+    "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://keralacm.gov.in/\", waiting until \"load\"\n"
   },
   "score": {
     "overall": 47,
@@ -628,6 +228,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-11",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-10-10",
       "up": true,

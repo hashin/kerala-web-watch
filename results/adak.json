@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-10T01:27:37.037Z",
-    "run": "1791595564264",
+    "at": "2026-10-11T00:38:40.411Z",
+    "run": "1791679027241",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 52,
+      "performance": 30,
       "accessibility": 77,
       "best_practices": 96,
       "seo": 83
@@ -122,7 +122,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "13 days left"
+        "ev": "12 days left"
       },
       {
         "id": "sec.tls_version",
@@ -220,21 +220,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "52/100"
+        "ev": "30/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "50890.39949999998ms"
+        "ev": "60706.979000000014ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.69"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "2646.9MB"
+        "ev": "2567.4MB"
       },
       {
         "id": "perf.viewport",
@@ -455,12 +456,12 @@
     ]
   },
   "score": {
-    "overall": 75,
+    "overall": 74,
     "security": 86,
     "accessibility": 72,
     "content": 46,
     "gigw": 76,
-    "performance": 76,
+    "performance": 72,
     "identity": 92
   },
   "status": "needs-work",
@@ -468,7 +469,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "13 days left"
+      "ev": "12 days left"
     },
     {
       "id": "content.last_updated",
@@ -511,12 +512,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "50890.39949999998ms"
+      "ev": "60706.979000000014ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "2646.9MB"
+      "ev": "2567.4MB"
     },
     {
       "id": "sec.csp",
@@ -539,6 +540,11 @@
     {
       "id": "gigw.feedback",
       "sev": "L"
+    },
+    {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.69"
     },
     {
       "id": "perf.images",
@@ -564,6 +570,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-11",
+      "up": true,
+      "score": 74
+    },
     {
       "d": "2026-10-10",
       "up": true,
@@ -660,5 +671,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

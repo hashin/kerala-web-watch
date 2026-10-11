@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-10T01:31:17.590Z",
-    "run": "1791595813686",
+    "at": "2026-10-11T00:39:30.902Z",
+    "run": "1791679108877",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 14,
-      "accessibility": 80,
+      "performance": 29,
+      "accessibility": 77,
       "best_practices": 92,
       "seo": 85
     },
@@ -216,17 +216,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "80/100"
+        "ev": "77/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "14/100"
+        "ev": "29/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "15512.712000000003ms"
+        "ev": "14795.275ms"
       },
       {
         "id": "perf.cls",
@@ -313,7 +313,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "25 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "26 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
       },
       {
         "id": "gigw.contact",
@@ -613,7 +613,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "15512.712000000003ms"
+      "ev": "14795.275ms"
     },
     {
       "id": "perf.weight",
@@ -660,7 +660,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "25 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "26 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
     },
     {
       "id": "gigw.feedback",
@@ -714,6 +714,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-11",
+      "up": true,
+      "score": 50
+    },
     {
       "d": "2026-10-10",
       "up": true,
@@ -810,5 +815,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

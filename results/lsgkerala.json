@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-10T01:18:17.425Z",
-    "run": "1791595045504",
+    "at": "2026-10-11T00:28:14.538Z",
+    "run": "1791678424140",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 61,
       "accessibility": 77,
       "best_practices": 92,
       "seo": 92
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "5814ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -119,8 +120,8 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "7 days left"
+        "r": "fail",
+        "ev": "6 days left"
       },
       {
         "id": "sec.tls_version",
@@ -222,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "61/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "13920.405499999999ms"
+        "ev": "12420.6985ms"
       },
       {
         "id": "perf.cls",
@@ -418,7 +419,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-Q595STPSXP&amp;cx=c&amp;gtm=4e6a72h1, https://www.googletagmanager.com/gtag/js?id=UA-12419584-1"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-Q595STPSXP&amp;cx=c&amp;gtm=4e6a72, https://www.googletagmanager.com/gtag/js?id=UA-12419584-1"
       }
     ],
     "screenshot": {
@@ -482,20 +483,20 @@
     ]
   },
   "score": {
-    "overall": 51,
-    "security": 46,
+    "overall": 49,
+    "security": 36,
     "accessibility": 50,
     "content": 42,
     "gigw": 22,
     "performance": 86,
     "identity": 91
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "7 days left"
+      "ev": "6 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -521,6 +522,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-lsgd"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "5814ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -560,7 +566,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "13920.405499999999ms"
+      "ev": "12420.6985ms"
     },
     {
       "id": "id.tech",
@@ -639,10 +645,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-Q595STPSXP&amp;cx=c&amp;gtm=4e6a72h1, https://www.googletagmanager.com/gtag/js?id=UA-12419584-1"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-Q595STPSXP&amp;cx=c&amp;gtm=4e6a72, https://www.googletagmanager.com/gtag/js?id=UA-12419584-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-11",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-10-10",
       "up": true,
@@ -744,5 +755,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-23T00:11:33.470Z",
-    "run": "1790122247769",
+    "at": "2026-10-11T00:54:42.586Z",
+    "run": "1791680031966",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
-      "accessibility": 85,
+      "performance": 53,
+      "accessibility": 89,
       "best_practices": 74,
       "seo": 92
     },
     "axe": {
       "critical": 1,
-      "serious": 12,
-      "moderate": 28,
+      "serious": 14,
+      "moderate": 29,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -164,6 +164,10 @@
         "r": "na"
       },
       {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
         "id": "a11y.axe_critical",
         "r": "fail",
         "ev": "1 critical violation(s)"
@@ -171,12 +175,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "12 serious violation(s)"
+        "ev": "14 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "28 moderate/minor violation(s)"
+        "ev": "29 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -213,17 +217,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "85/100"
+        "ev": "89/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "53/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7118.866ms"
+        "ev": "7669.682000000001ms"
       },
       {
         "id": "perf.cls",
@@ -232,7 +236,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "8.7MB"
+        "ev": "8.9MB"
       },
       {
         "id": "perf.viewport",
@@ -278,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://lsgkerala.gov.in/ml/act-rule)"
       },
       {
         "id": "content.broken_pdfs",
@@ -419,11 +424,21 @@
     "screenshot": {
       "desktop": "lsg-gp-badiadka.webp",
       "mobile": "lsg-gp-badiadka-m.webp",
-      "phash": "003f9f0f0fffff3f"
+      "phash": "bd00ff9f8fffffff"
     },
     "outlinks": [
       {
         "host": "goo.gl",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "wa.me",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "facebook.com",
         "count": 1,
         "texts": []
       },
@@ -536,6 +551,11 @@
       "ev": "ml-user"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://lsgkerala.gov.in/ml/act-rule)"
+    },
+    {
       "id": "gigw.rti",
       "sev": "H"
     },
@@ -546,7 +566,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "12 serious violation(s)"
+      "ev": "14 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -573,12 +593,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7118.866ms"
+      "ev": "7669.682000000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "8.7MB"
+      "ev": "8.9MB"
     },
     {
       "id": "perf.tap_targets",
@@ -595,7 +615,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "28 moderate/minor violation(s)"
+      "ev": "29 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -651,6 +671,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-11",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-10",
       "up": false,
@@ -742,5 +767,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-10T01:10:22.268Z",
-    "run": "1791594554626",
+    "at": "2026-10-11T00:22:47.965Z",
+    "run": "1791678094094",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 54,
+      "performance": 41,
       "accessibility": 93,
-      "best_practices": 73,
-      "seo": 92
+      "best_practices": 50,
+      "seo": 83
     },
     "axe": {
-      "critical": 13,
-      "serious": 0,
-      "moderate": 1,
-      "minor": 13
+      "critical": 17,
+      "serious": 1,
+      "moderate": 2,
+      "minor": 21
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -169,16 +169,17 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "13 critical violation(s)"
+        "ev": "17 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "14 moderate/minor violation(s)"
+        "ev": "23 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -190,7 +191,8 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -219,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "54/100"
+        "ev": "41/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "21011.894500000002ms"
+        "ev": "35654.095999999976ms"
       },
       {
         "id": "perf.cls",
@@ -232,8 +234,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "3.6MB"
+        "r": "fail",
+        "ev": "33.7MB"
       },
       {
         "id": "perf.viewport",
@@ -279,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://kozhikode.nic.in/en/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -308,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "7 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -414,7 +417,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-9HR295F7RX&amp;cx=c&amp;gtm=4e6a72, https://www.googletagmanager.com/gtag/js?id=UA-131902160-1"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-9HR295F7RX&amp;cx=c&amp;gtm=4e6a80h2, https://www.googletagmanager.com/gtag/js?id=UA-131902160-1"
       }
     ],
     "screenshot": {
@@ -425,11 +428,11 @@
     "outlinks": [
       {
         "host": "kerala.gov.in",
-        "count": 8,
+        "count": 9,
         "texts": [
           "കേരളം സർക്കാർ",
           "SIR 2026 ASD LIST",
-          "E Office File Status"
+          "eOffice Portal Kozhikode"
         ]
       },
       {
@@ -446,7 +449,7 @@
       },
       {
         "host": "s3waas.gov.in",
-        "count": 4,
+        "count": 9,
         "texts": [
           "District Environment Plan",
           "BROCHURE",
@@ -469,76 +472,40 @@
       },
       {
         "host": "twitter.com",
-        "count": 2,
+        "count": 1,
         "texts": [
           "Twitter"
         ]
       },
       {
-        "host": "keralasic.gov.in",
-        "count": 1,
+        "host": "youtube.com",
+        "count": 2,
         "texts": [
-          "Right to Information Act"
+          "Kozhikode Waste Management Project",
+          "Compassionate Kozhikode"
         ]
       },
       {
-        "host": "digitalindiaawards.gov.in",
+        "host": "censusindia.gov.in",
         "count": 1,
-        "texts": []
-      },
-      {
-        "host": "india.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "pmindia.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "pmnrf.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "data.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "mygov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "incredibleindia.org",
-        "count": 1,
-        "texts": []
+        "texts": [
+          "Census 2027"
+        ]
       },
       {
         "host": "www.nic.in",
         "count": 1,
-        "texts": [
-          "National Informatics Centre"
-        ]
-      },
-      {
-        "host": "meity.gov.in",
-        "count": 1,
-        "texts": [
-          "Ministry of Electronics & Information Technology"
-        ]
+        "texts": []
       }
     ]
   },
   "score": {
-    "overall": 64,
+    "overall": 57,
     "security": 48,
-    "accessibility": 60,
-    "content": 56,
+    "accessibility": 40,
+    "content": 46,
     "gigw": 70,
-    "performance": 81,
+    "performance": 76,
     "identity": 96
   },
   "status": "needs-work",
@@ -551,7 +518,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "13 critical violation(s)"
+      "ev": "17 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -564,12 +531,27 @@
       "ev": "ml-IN"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://kozhikode.nic.in/en/)"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
       "id": "sec.xfo",
       "sev": "M"
+    },
+    {
+      "id": "a11y.axe_serious",
+      "sev": "M",
+      "ev": "1 serious violation(s)"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "1 low-contrast element(s)"
     },
     {
       "id": "a11y.labels",
@@ -583,12 +565,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "21011.894500000002ms"
+      "ev": "35654.095999999976ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "3.6MB"
+      "ev": "33.7MB"
     },
     {
       "id": "sec.csp",
@@ -605,7 +587,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "14 moderate/minor violation(s)"
+      "ev": "23 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -620,7 +602,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "7 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.terms",
@@ -658,10 +640,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-9HR295F7RX&amp;cx=c&amp;gtm=4e6a72, https://www.googletagmanager.com/gtag/js?id=UA-131902160-1"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-9HR295F7RX&amp;cx=c&amp;gtm=4e6a80h2, https://www.googletagmanager.com/gtag/js?id=UA-131902160-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-11",
+      "up": true,
+      "score": 57
+    },
     {
       "d": "2026-10-10",
       "up": true,
@@ -753,5 +740,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

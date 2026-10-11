@@ -37,28 +37,28 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-10T01:40:39.786Z",
-    "run": "1791596344248",
+    "at": "2026-10-11T00:33:50.545Z",
+    "run": "1791678816346",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 22,
-      "accessibility": 82,
+      "performance": 100,
+      "accessibility": 94,
       "best_practices": 100,
-      "seo": 62
+      "seo": 82
     },
     "axe": {
       "critical": 0,
-      "serious": 9,
-      "moderate": 6,
-      "minor": 1
+      "serious": 0,
+      "moderate": 2,
+      "minor": 0
     },
     "crawl": {
-      "pages": 30,
-      "pdfs": 2,
+      "pages": 0,
+      "pdfs": 0,
       "broken": 0
     },
     "tech": {
-      "cms": "WordPress 7.1.3",
+      "cms": null,
       "server": "Apache",
       "jquery": null
     },
@@ -93,13 +93,11 @@
       },
       {
         "id": "avail.under_construction",
-        "r": "warn",
-        "ev": "\"അറ്റകുറ്റപ്പണി\" alongside 4367 other characters"
+        "r": "pass"
       },
       {
         "id": "avail.ttfb",
-        "r": "fail",
-        "ev": "12663ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -115,7 +113,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.cert_valid",
@@ -135,16 +133,15 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://www.kshbonline.com/\""
+        "r": "pass"
       },
       {
         "id": "sec.csp",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xfo",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xcto",
@@ -176,13 +173,12 @@
       },
       {
         "id": "a11y.axe_serious",
-        "r": "fail",
-        "ev": "9 serious violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "7 moderate/minor violation(s)"
+        "ev": "2 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -194,13 +190,11 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "7 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
-        "r": "fail",
-        "ev": "heading levels skipped"
+        "r": "pass"
       },
       {
         "id": "a11y.labels",
@@ -212,33 +206,29 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "warn",
-        "ev": "tabindex=\"-1\" alongside outline:none"
+        "r": "pass"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "82/100"
+        "ev": "94/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "22/100"
+        "ev": "100/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "35510.18299999999ms"
+        "r": "pass"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.81"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
-        "r": "fail",
-        "ev": "8.8MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
@@ -250,11 +240,11 @@
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.copyright_year",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "content.last_updated",
@@ -271,13 +261,11 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "fail",
-        "ev": "ml-IN"
+        "r": "pass"
       },
       {
         "id": "content.obsolete_tech",
-        "r": "fail",
-        "ev": "<marquee"
+        "r": "pass"
       },
       {
         "id": "content.best_viewed",
@@ -317,7 +305,7 @@
       },
       {
         "id": "gigw.contact",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.feedback",
@@ -345,11 +333,11 @@
       },
       {
         "id": "gigw.disclaimer",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.screen_reader",
@@ -357,7 +345,7 @@
       },
       {
         "id": "gigw.help",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.rti",
@@ -389,7 +377,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -401,11 +389,12 @@
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
       },
       {
         "id": "id.canonical",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.charset_doctype",
@@ -413,8 +402,7 @@
       },
       {
         "id": "id.tech",
-        "r": "pass",
-        "ev": "WordPress 7.1.3"
+        "r": "pass"
       },
       {
         "id": "id.third_party",
@@ -424,72 +412,24 @@
     "screenshot": {
       "desktop": "kshb.webp",
       "mobile": "kshb-m.webp",
-      "phash": "ffffff08000000ff"
+      "phash": "00003c3c3c3c0000"
     },
-    "outlinks": [
-      {
-        "host": "facebook.com",
-        "count": 2,
-        "texts": [
-          "facebook"
-        ]
-      },
-      {
-        "host": "youtube.com",
-        "count": 2,
-        "texts": [
-          "youtube"
-        ]
-      },
-      {
-        "host": "kshbonline.com",
-        "count": 2,
-        "texts": [
-          "ഇപ്പോൾ  അപേക്ഷിക്കാം",
-          "അപേക്ഷിക്കാം"
-        ]
-      },
-      {
-        "host": "cdit.org",
-        "count": 20,
-        "texts": [
-          "C-Dit"
-        ]
-      },
-      {
-        "host": "twitter.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "mohua.gov.in",
-        "count": 1,
-        "texts": [
-          "ഹൗസിങ് ആൻഡ് അർബൻ അഫയേർസ് മിനിസ്ട്രി"
-        ]
-      }
-    ]
+    "outlinks": []
   },
   "score": {
-    "overall": 58,
-    "security": 62,
-    "accessibility": 70,
-    "content": 42,
-    "gigw": 16,
-    "performance": 62,
-    "identity": 100
+    "overall": 65,
+    "security": 48,
+    "accessibility": 96,
+    "content": 72,
+    "gigw": 0,
+    "performance": 90,
+    "identity": 92
   },
   "status": "needs-work",
   "issues": [
     {
-      "id": "avail.under_construction",
-      "sev": "H",
-      "ev": "\"അറ്റകുറ്റപ്പണി\" alongside 4367 other characters"
-    },
-    {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://www.kshbonline.com/\""
+      "id": "sec.http_redirect",
+      "sev": "H"
     },
     {
       "id": "content.last_updated",
@@ -497,37 +437,20 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "content.legacy_font",
-      "sev": "H",
-      "ev": "ml-IN"
+      "id": "gigw.contact",
+      "sev": "H"
     },
     {
       "id": "gigw.rti",
       "sev": "H"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "12663ms"
-    },
-    {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
-      "id": "a11y.axe_serious",
-      "sev": "M",
-      "ev": "9 serious violation(s)"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "7 low-contrast element(s)"
-    },
-    {
-      "id": "content.obsolete_tech",
-      "sev": "M",
-      "ev": "<marquee"
+      "id": "sec.xfo",
+      "sev": "M"
     },
     {
       "id": "gigw.sitemap",
@@ -535,6 +458,10 @@
     },
     {
       "id": "gigw.privacy",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.accessibility_statement",
       "sev": "M"
     },
     {
@@ -546,18 +473,12 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "35510.18299999999ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "8.8MB"
-    },
-    {
       "id": "perf.tap_targets",
       "sev": "M"
+    },
+    {
+      "id": "sec.csp",
+      "sev": "L"
     },
     {
       "id": "sec.xcto",
@@ -570,17 +491,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "7 moderate/minor violation(s)"
-    },
-    {
-      "id": "a11y.headings",
-      "sev": "L",
-      "ev": "heading levels skipped"
-    },
-    {
-      "id": "a11y.keyboard",
-      "sev": "L",
-      "ev": "tabindex=\"-1\" alongside outline:none"
+      "ev": "2 moderate/minor violation(s)"
     },
     {
       "id": "content.meta_desc",
@@ -607,7 +518,15 @@
       "sev": "L"
     },
     {
+      "id": "gigw.disclaimer",
+      "sev": "L"
+    },
+    {
       "id": "gigw.screen_reader",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.help",
       "sev": "L"
     },
     {
@@ -615,20 +534,29 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.81"
+      "id": "id.www_consistency",
+      "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
+      "id": "id.soft_404",
+      "sev": "L",
+      "ev": "a nonexistent path returned 200"
     },
     {
       "id": "gigw.emblem",
       "sev": "I"
+    },
+    {
+      "id": "id.canonical",
+      "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-11",
+      "up": true,
+      "score": 65
+    },
     {
       "d": "2026-10-10",
       "up": true,
@@ -730,5 +658,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,18 +37,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T01:56:14.822Z",
-    "run": "1791510937810",
+    "at": "2026-10-11T00:48:16.416Z",
+    "run": "1791679680659",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 33,
-      "accessibility": 84,
-      "best_practices": 92,
-      "seo": 69
+      "performance": 100,
+      "accessibility": 94,
+      "best_practices": 100,
+      "seo": 82
     },
     "axe": {
       "critical": 0,
-      "serious": 2,
+      "serious": 0,
       "moderate": 2,
       "minor": 0
     },
@@ -89,8 +89,7 @@
       },
       {
         "id": "avail.blank",
-        "r": "fail",
-        "ev": "0 visible characters"
+        "r": "pass"
       },
       {
         "id": "avail.under_construction",
@@ -98,8 +97,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "4102ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -175,8 +173,7 @@
       },
       {
         "id": "a11y.axe_serious",
-        "r": "fail",
-        "ev": "2 serious violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -197,8 +194,7 @@
       },
       {
         "id": "a11y.headings",
-        "r": "fail",
-        "ev": "no <h1>"
+        "r": "pass"
       },
       {
         "id": "a11y.labels",
@@ -215,22 +211,20 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "84/100"
+        "ev": "94/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "33/100"
+        "ev": "100/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "22174.3015ms"
+        "r": "pass"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.51"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -238,15 +232,15 @@
       },
       {
         "id": "perf.viewport",
-        "r": "fail"
-      },
-      {
-        "id": "perf.tap_targets",
         "r": "pass"
       },
       {
-        "id": "perf.images",
+        "id": "perf.tap_targets",
         "r": "fail"
+      },
+      {
+        "id": "perf.images",
+        "r": "pass"
       },
       {
         "id": "content.copyright_year",
@@ -295,8 +289,7 @@
       },
       {
         "id": "content.title",
-        "r": "fail",
-        "ev": "missing <title>"
+        "r": "pass"
       },
       {
         "id": "content.meta_desc",
@@ -406,8 +399,7 @@
       },
       {
         "id": "id.charset_doctype",
-        "r": "fail",
-        "ev": "missing HTML5 doctype"
+        "r": "pass"
       },
       {
         "id": "id.tech",
@@ -421,18 +413,21 @@
     "screenshot": {
       "desktop": "kstmuseum.webp",
       "mobile": "kstmuseum-m.webp",
-      "phash": "ffffffffffffffff"
+      "phash": "00003c3c3c3c0000"
     },
     "outlinks": []
   },
-  "score": null,
-  "status": "broken",
+  "score": {
+    "overall": 63,
+    "security": 48,
+    "accessibility": 96,
+    "content": 72,
+    "gigw": 0,
+    "performance": 90,
+    "identity": 72
+  },
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "avail.blank",
-      "sev": "C",
-      "ev": "0 visible characters"
-    },
     {
       "id": "sec.http_redirect",
       "sev": "H"
@@ -451,18 +446,9 @@
       "sev": "H"
     },
     {
-      "id": "perf.viewport",
-      "sev": "H"
-    },
-    {
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "kstmuseum.com"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "4102ms"
     },
     {
       "id": "sec.hsts",
@@ -471,16 +457,6 @@
     {
       "id": "sec.xfo",
       "sev": "M"
-    },
-    {
-      "id": "a11y.axe_serious",
-      "sev": "M",
-      "ev": "2 serious violation(s)"
-    },
-    {
-      "id": "content.title",
-      "sev": "M",
-      "ev": "missing <title>"
     },
     {
       "id": "gigw.sitemap",
@@ -503,9 +479,8 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "22174.3015ms"
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -523,11 +498,6 @@
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
       "ev": "2 moderate/minor violation(s)"
-    },
-    {
-      "id": "a11y.headings",
-      "sev": "L",
-      "ev": "no <h1>"
     },
     {
       "id": "content.meta_desc",
@@ -570,15 +540,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.51"
-    },
-    {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -586,11 +547,6 @@
       "id": "id.soft_404",
       "sev": "L",
       "ev": "a nonexistent path returned 200"
-    },
-    {
-      "id": "id.charset_doctype",
-      "sev": "L",
-      "ev": "missing HTML5 doctype"
     },
     {
       "id": "gigw.emblem",
@@ -602,6 +558,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-11",
+      "up": true,
+      "score": 63
+    },
     {
       "d": "2026-10-10",
       "up": false,
@@ -703,5 +664,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

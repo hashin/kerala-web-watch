@@ -35,42 +35,479 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-10T01:35:13.563Z",
-    "run": "1791596049259",
+    "at": "2026-10-11T00:42:43.451Z",
+    "run": "1791679262976",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 29,
+      "accessibility": 86,
+      "best_practices": 88,
+      "seo": 69
+    },
     "axe": {
       "critical": 0,
-      "serious": 0,
-      "moderate": 0,
+      "serious": 11,
+      "moderate": 7,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
+      "pages": 30,
       "pdfs": 0,
       "broken": 0
     },
     "tech": {
-      "cms": null,
-      "server": null,
+      "cms": "WordPress 6.9.10",
+      "server": "nginx/1.25.5",
       "jquery": null
     },
-    "checks": [],
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "pass"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "fail"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "pass"
+      },
+      {
+        "id": "sec.csp",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "fail"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "fail"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "fail",
+        "ev": "nginx/1.25.5"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "pass"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "11 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "7 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "fail",
+        "ev": "3 low-contrast element(s)"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "heading levels skipped"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "86/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "29/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "23970.768999999997ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "pass"
+      },
+      {
+        "id": "perf.weight",
+        "r": "fail",
+        "ev": "12.7MB"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "fail"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "na"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-element"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "pass"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "fail",
+        "ev": "4 broken image(s)"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "na"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "fail"
+      },
+      {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "14 console error(s): $ is not defined"
+      },
+      {
+        "id": "gigw.contact",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.search",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "warn"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "pass"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "na"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "pass"
+      },
+      {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "pass"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "pass"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass",
+        "ev": "WordPress 6.9.10"
+      },
+      {
+        "id": "id.third_party",
+        "r": "warn",
+        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-6YPTV5TC0F&amp;cx=c&amp;gtm=4e6a72, https://www.googletagmanager.com/gtag/js?id=G-X0BSV06SMK&amp;cx=c&amp;gtm=4e6a72, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2&amp;cx=c&amp;gtm=4e6a72, https://www.googletagmanager.com/gtm.js?id=GTM-KWK3DSF, https://www.googletagmanager.com/gtag/js?id&amp;ver=6.9.10, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2"
+      }
+    ],
     "screenshot": {
       "desktop": "jntbgri.webp",
       "mobile": "jntbgri-m.webp",
       "phash": "ff0000000000ffff"
     },
-    "outlinks": [],
-    "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://jntbgri.res.in/\", waiting until \"load\"\n"
+    "outlinks": [
+      {
+        "host": "p4panorama.com",
+        "count": 1,
+        "texts": [
+          "360° കാഴ്ച"
+        ]
+      },
+      {
+        "host": "deliveringdemand.com",
+        "count": 1,
+        "texts": [
+          "Contact"
+        ]
+      },
+      {
+        "host": "facebook.com",
+        "count": 2,
+        "texts": [
+          "ഫേസ്ബുക്ക്"
+        ]
+      },
+      {
+        "host": "instagram.com",
+        "count": 2,
+        "texts": [
+          "ഇൻസ്റ്റാഗ്രാം"
+        ]
+      },
+      {
+        "host": "whatsapp.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "x.com",
+        "count": 1,
+        "texts": [
+          "ട്വിറ്റർ"
+        ]
+      },
+      {
+        "host": "linkedin.com",
+        "count": 1,
+        "texts": [
+          "ലിങ്ക്ഡ്ഇൻ"
+        ]
+      },
+      {
+        "host": "youtube.com",
+        "count": 1,
+        "texts": [
+          "യൂട്യൂബ്"
+        ]
+      },
+      {
+        "host": "jewels-airport-transfers.co.uk",
+        "count": 1,
+        "texts": [
+          "ജുവൽസ്"
+        ]
+      },
+      {
+        "host": "mywebsitetransfer.com",
+        "count": 1,
+        "texts": [
+          "കൂടുതൽ വായിക്കുക"
+        ]
+      },
+      {
+        "host": "google.com",
+        "count": 1,
+        "texts": [
+          "Translate"
+        ]
+      }
+    ]
   },
   "score": {
-    "overall": 58,
+    "overall": 59,
     "security": 64,
     "accessibility": 70,
     "content": 48,
-    "gigw": 0,
-    "performance": 71,
+    "gigw": 12,
+    "performance": 66,
     "identity": 100
   },
   "status": "needs-work",
@@ -100,19 +537,15 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "10 serious violation(s)"
+      "ev": "11 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "2 low-contrast element(s)"
+      "ev": "3 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
-      "sev": "M"
-    },
-    {
-      "id": "gigw.privacy",
       "sev": "M"
     },
     {
@@ -130,12 +563,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "27034.533499999998ms"
+      "ev": "23970.768999999997ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.9MB"
+      "ev": "12.7MB"
     },
     {
       "id": "perf.tap_targets",
@@ -176,7 +609,7 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "2 broken image(s)"
+      "ev": "4 broken image(s)"
     },
     {
       "id": "content.meta_desc",
@@ -185,7 +618,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "10 console error(s): $ is not defined"
+      "ev": "14 console error(s): $ is not defined"
     },
     {
       "id": "gigw.feedback",
@@ -216,10 +649,6 @@
       "sev": "L"
     },
     {
-      "id": "gigw.search",
-      "sev": "L"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -230,10 +659,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-X0BSV06SMK&amp;cx=c&amp;gtm=4e6a61, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2&amp;cx=c&amp;gtm=4e6a61, https://www.googletagmanager.com/gtag/js?id=G-6YPTV5TC0F&amp;cx=c&amp;_slc=1, https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtm.js?id=GTM-KWK3DSF, https://www.googletagmanager.com/gtag/js?id&amp;ver=6.9.10, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2"
+      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-6YPTV5TC0F&amp;cx=c&amp;gtm=4e6a72, https://www.googletagmanager.com/gtag/js?id=G-X0BSV06SMK&amp;cx=c&amp;gtm=4e6a72, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2&amp;cx=c&amp;gtm=4e6a72, https://www.googletagmanager.com/gtm.js?id=GTM-KWK3DSF, https://www.googletagmanager.com/gtag/js?id&amp;ver=6.9.10, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-11",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-10-10",
       "up": true,
@@ -330,5 +764,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

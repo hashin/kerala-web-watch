@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-10T01:27:37.207Z",
-    "run": "1791595594904",
+    "at": "2026-10-11T00:37:42.314Z",
+    "run": "1791678979680",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 38,
+      "accessibility": 47,
+      "best_practices": 50,
+      "seo": 85
+    },
     "axe": {
       "critical": 10,
       "serious": 9,
@@ -48,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 1,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "WordPress 3.9.6",
@@ -212,24 +217,27 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "47/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "38/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "67574.81449999995ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "18.7MB"
+        "ev": "19.9MB"
       },
       {
         "id": "perf.viewport",
@@ -237,11 +245,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -275,7 +283,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://kbic.kinfra.org/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -378,7 +387,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "9 days left"
+        "ev": "8 days left"
       },
       {
         "id": "id.www_consistency",
@@ -473,12 +482,12 @@
     ]
   },
   "score": {
-    "overall": 40,
+    "overall": 37,
     "security": 24,
     "accessibility": 32,
-    "content": 56,
+    "content": 46,
     "gigw": 18,
-    "performance": 90,
+    "performance": 76,
     "identity": 55
   },
   "status": "poor",
@@ -509,6 +518,11 @@
       "ev": "ml-code"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://kbic.kinfra.org/)"
+    },
+    {
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "kinfra.org"
@@ -516,7 +530,7 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "9 days left"
+      "ev": "8 days left"
     },
     {
       "id": "sec.hsts",
@@ -567,9 +581,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "67574.81449999995ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "18.7MB"
+      "ev": "19.9MB"
     },
     {
       "id": "id.tech",
@@ -641,12 +660,21 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.third_party",
       "sev": "I",
       "ev": "https://www.googletagmanager.com/gtag/js?id=G-BKPP4TZGVY"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-11",
+      "up": true,
+      "score": 37
+    },
     {
       "d": "2026-10-10",
       "up": true,
@@ -743,5 +771,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

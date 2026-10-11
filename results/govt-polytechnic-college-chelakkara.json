@@ -37,13 +37,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-10T01:31:06.664Z",
-    "run": "1791595795590",
+    "at": "2026-10-11T00:44:03.123Z",
+    "run": "1791679371229",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 60,
+      "performance": 64,
       "accessibility": 83,
-      "best_practices": 96,
+      "best_practices": 92,
       "seo": 85
     },
     "axe": {
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "60/100"
+        "ev": "64/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7139.0025ms"
+        "ev": "7265.6485ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "34.7MB"
+        "ev": "34.6MB"
       },
       {
         "id": "perf.viewport",
@@ -309,7 +309,8 @@
       },
       {
         "id": "content.console_errors",
-        "r": "pass"
+        "r": "fail",
+        "ev": "2 console error(s): Failed to load resource: the server responded with a status of 403 ()"
       },
       {
         "id": "gigw.contact",
@@ -497,7 +498,7 @@
     "overall": 54,
     "security": 48,
     "accessibility": 46,
-    "content": 56,
+    "content": 52,
     "gigw": 32,
     "performance": 76,
     "identity": 100
@@ -566,12 +567,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7139.0025ms"
+      "ev": "7265.6485ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "34.7MB"
+      "ev": "34.6MB"
     },
     {
       "id": "sec.csp",
@@ -593,6 +594,11 @@
     {
       "id": "content.meta_desc",
       "sev": "L"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "2 console error(s): Failed to load resource: the server responded with a status of 403 ()"
     },
     {
       "id": "gigw.terms",
@@ -632,6 +638,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-11",
+      "up": true,
+      "score": 54
+    },
     {
       "d": "2026-10-10",
       "up": true,
@@ -703,5 +714,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

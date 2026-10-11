@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-10T01:14:56.071Z",
-    "run": "1791594810671",
+    "at": "2026-10-11T00:25:49.130Z",
+    "run": "1791678267607",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 42,
+      "performance": 45,
       "accessibility": 84,
       "best_practices": 88,
       "seo": 73
@@ -219,22 +219,21 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "42/100"
+        "ev": "45/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "14893.124499999998ms"
+        "ev": "26733.337000000007ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.27"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "58.3MB"
+        "ev": "58.4MB"
       },
       {
         "id": "perf.viewport",
@@ -309,7 +308,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "8 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+        "ev": "7 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
@@ -519,7 +518,7 @@
     "accessibility": 56,
     "content": 78,
     "gigw": 68,
-    "performance": 72,
+    "performance": 76,
     "identity": 88
   },
   "status": "needs-work",
@@ -565,12 +564,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "14893.124499999998ms"
+      "ev": "26733.337000000007ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "58.3MB"
+      "ev": "58.4MB"
     },
     {
       "id": "sec.csp",
@@ -593,7 +592,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "8 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      "ev": "7 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
@@ -606,11 +605,6 @@
     {
       "id": "gigw.search",
       "sev": "L"
-    },
-    {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.27"
     },
     {
       "id": "perf.images",
@@ -640,6 +634,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-11",
+      "up": true,
+      "score": 66
+    },
     {
       "d": "2026-10-10",
       "up": true,
@@ -736,5 +735,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
