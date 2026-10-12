@@ -29,15 +29,10 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-10-11T00:38:26.641Z",
-    "run": "1791679051781",
+    "at": "2026-10-12T00:56:06.006Z",
+    "run": "1791766546824",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 61,
-      "accessibility": 92,
-      "best_practices": 92,
-      "seo": 92
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 2,
       "serious": 20,
@@ -89,8 +84,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "7692ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -208,22 +202,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "92/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "61/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "25623.7025ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -236,11 +227,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -437,15 +428,15 @@
     ]
   },
   "score": {
-    "overall": 47,
+    "overall": 48,
     "security": 48,
     "accessibility": 56,
     "content": 36,
     "gigw": 0,
-    "performance": 76,
+    "performance": 90,
     "identity": 80
   },
-  "status": "down",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -475,11 +466,6 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "www.basheersmarakatrust.com"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "7692ms"
     },
     {
       "id": "sec.hsts",
@@ -528,11 +514,6 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "25623.7025ms"
     },
     {
       "id": "perf.weight",
@@ -595,15 +576,16 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "gigw.emblem",
       "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-12",
+      "up": true,
+      "score": 48
+    },
     {
       "d": "2026-10-11",
       "up": false,
@@ -710,5 +692,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-11T00:29:13.918Z",
-    "run": "1791678406472",
+    "at": "2026-10-12T00:47:24.962Z",
+    "run": "1791765999621",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 43,
+      "performance": 47,
       "accessibility": 69,
       "best_practices": 88,
       "seo": 83
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "fail",
-        "ev": "19252ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -221,22 +220,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "43/100"
+        "ev": "47/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11793.371499999997ms"
+        "ev": "11373.352ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.33"
+        "ev": "0.32"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "5.2MB"
+        "ev": "5.1MB"
       },
       {
         "id": "perf.viewport",
@@ -507,7 +506,7 @@
     "performance": 67,
     "identity": 76
   },
-  "status": "down",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -543,11 +542,6 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "www.kudumbashree.org"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "19252ms"
     },
     {
       "id": "sec.hsts",
@@ -586,12 +580,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11793.371499999997ms"
+      "ev": "11373.352ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "5.2MB"
+      "ev": "5.1MB"
     },
     {
       "id": "perf.tap_targets",
@@ -651,7 +645,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.33"
+      "ev": "0.32"
     },
     {
       "id": "perf.images",
@@ -677,6 +671,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-12",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-10-11",
       "up": false,
@@ -778,5 +777,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,20 +35,20 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-11T00:39:43.804Z",
-    "run": "1791679125035",
+    "at": "2026-10-12T01:05:55.826Z",
+    "run": "1791767094047",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 48,
+      "performance": 47,
       "accessibility": 84,
       "best_practices": 92,
       "seo": 75
     },
     "axe": {
       "critical": 0,
-      "serious": 4,
+      "serious": 3,
       "moderate": 19,
-      "minor": 9
+      "minor": 10
     },
     "crawl": {
       "pages": 30,
@@ -120,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "21 days left"
+        "ev": "20 days left"
       },
       {
         "id": "sec.tls_version",
@@ -175,12 +175,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "4 serious violation(s)"
+        "ev": "3 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "28 moderate/minor violation(s)"
+        "ev": "29 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -198,7 +198,7 @@
       {
         "id": "a11y.headings",
         "r": "fail",
-        "ev": "no <h1>"
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "48/100"
+        "ev": "47/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "25086.34299999998ms"
+        "ev": "24020.631500000003ms"
       },
       {
         "id": "perf.cls",
@@ -516,7 +516,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "21 days left"
+      "ev": "20 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -541,7 +541,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "4 serious violation(s)"
+      "ev": "3 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -567,7 +567,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "25086.34299999998ms"
+      "ev": "24020.631500000003ms"
     },
     {
       "id": "perf.weight",
@@ -581,12 +581,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "28 moderate/minor violation(s)"
+      "ev": "29 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "no <h1>"
+      "ev": "heading levels skipped"
     },
     {
       "id": "a11y.keyboard",
@@ -636,6 +636,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-12",
+      "up": true,
+      "score": 61
+    },
     {
       "d": "2026-10-11",
       "up": true,
@@ -737,5 +742,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-11T00:37:03.845Z",
-    "run": "1791678969633",
+    "at": "2026-10-12T00:59:23.758Z",
+    "run": "1791766710099",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 42,
+      "performance": 48,
       "accessibility": 83,
       "best_practices": 78,
       "seo": 69
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3029ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -120,7 +121,8 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "warn",
+        "ev": "29 days left"
       },
       {
         "id": "sec.tls_version",
@@ -222,17 +224,16 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "42/100"
+        "ev": "48/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "4972.026ms"
+        "r": "pass"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.95"
+        "ev": "0.79"
       },
       {
         "id": "perf.weight",
@@ -450,6 +451,11 @@
       "ev": "http://ipaffairs.org"
     },
     {
+      "id": "sec.cert_expiry",
+      "sev": "H",
+      "ev": "29 days left"
+    },
+    {
       "id": "sec.vuln_js",
       "sev": "H",
       "ev": "jquery-ui 1.12.1"
@@ -478,6 +484,11 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "ipaffairs.org"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3029ms"
     },
     {
       "id": "sec.hsts",
@@ -517,11 +528,6 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "4972.026ms"
     },
     {
       "id": "perf.weight",
@@ -591,7 +597,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.95"
+      "ev": "0.79"
     },
     {
       "id": "perf.images",
@@ -603,6 +609,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-12",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-11",
       "up": false,
@@ -709,5 +720,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

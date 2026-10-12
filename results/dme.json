@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-11T00:23:13.258Z",
-    "run": "1791678096606",
+    "at": "2026-10-12T00:43:48.212Z",
+    "run": "1791765738009",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 31,
+      "accessibility": 85,
+      "best_practices": 69,
+      "seo": 54
+    },
     "axe": {
       "critical": 3,
       "serious": 27,
@@ -211,24 +216,28 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "85/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "31/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "16075.056499999986ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.84"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "18.3MB"
+        "ev": "18.4MB"
       },
       {
         "id": "perf.viewport",
@@ -236,11 +245,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -447,12 +456,12 @@
     ]
   },
   "score": {
-    "overall": 59,
+    "overall": 57,
     "security": 76,
     "accessibility": 30,
     "content": 52,
     "gigw": 36,
-    "performance": 90,
+    "performance": 72,
     "identity": 100
   },
   "status": "needs-work",
@@ -514,9 +523,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "16075.056499999986ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "18.3MB"
+      "ev": "18.4MB"
     },
     {
       "id": "sec.referrer",
@@ -571,11 +585,25 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.84"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "gigw.emblem",
       "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-12",
+      "up": true,
+      "score": 57
+    },
     {
       "d": "2026-10-11",
       "up": true,
@@ -677,5 +705,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

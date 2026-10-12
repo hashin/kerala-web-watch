@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-11T00:36:08.631Z",
-    "run": "1791678909935",
+    "at": "2026-10-12T00:56:55.529Z",
+    "run": "1791766538705",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 32,
+      "performance": 43,
       "accessibility": 37,
       "best_practices": 77,
       "seo": 67
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -219,17 +219,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "32/100"
+        "ev": "43/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "29450.301499999994ms"
+        "ev": "24688.403ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.52"
+        "ev": "0.45"
       },
       {
         "id": "perf.weight",
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://www.oushadhi.org/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -454,10 +455,10 @@
     ]
   },
   "score": {
-    "overall": 46,
+    "overall": 44,
     "security": 48,
     "accessibility": 46,
-    "content": 38,
+    "content": 28,
     "gigw": 18,
     "performance": 62,
     "identity": 76
@@ -483,6 +484,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://www.oushadhi.org/)"
     },
     {
       "id": "id.gov_domain",
@@ -540,7 +546,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "29450.301499999994ms"
+      "ev": "24688.403ms"
     },
     {
       "id": "perf.weight",
@@ -617,7 +623,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.52"
+      "ev": "0.45"
     },
     {
       "id": "perf.images",
@@ -643,6 +649,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-12",
+      "up": true,
+      "score": 44
+    },
     {
       "d": "2026-10-11",
       "up": true,
@@ -744,5 +755,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

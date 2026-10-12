@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-11T00:36:19.678Z",
-    "run": "1791678904028",
+    "at": "2026-10-12T00:51:23.358Z",
+    "run": "1791766207719",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 30,
-      "accessibility": 89,
+      "accessibility": 86,
       "best_practices": 73,
       "seo": 62
     },
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3421ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -120,8 +119,7 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "29 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -217,7 +215,7 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "89/100"
+        "ev": "86/100"
       },
       {
         "id": "perf.lighthouse",
@@ -227,7 +225,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "28272.718000000008ms"
+        "ev": "31408.566000000006ms"
       },
       {
         "id": "perf.cls",
@@ -464,8 +462,8 @@
     ]
   },
   "score": {
-    "overall": 46,
-    "security": 32,
+    "overall": 48,
+    "security": 42,
     "accessibility": 44,
     "content": 42,
     "gigw": 18,
@@ -477,11 +475,6 @@
     {
       "id": "sec.http_redirect",
       "sev": "H"
-    },
-    {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "29 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -507,11 +500,6 @@
       "id": "content.broken_links",
       "sev": "H",
       "ev": "2/30 crawled link(s) broken (https://handsum.kerala.gov.in/, https://dhtschemes.kerala.gov.in/)"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3421ms"
     },
     {
       "id": "sec.hsts",
@@ -555,7 +543,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "28272.718000000008ms"
+      "ev": "31408.566000000006ms"
     },
     {
       "id": "perf.weight",
@@ -636,6 +624,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-12",
+      "up": true,
+      "score": 48
+    },
     {
       "d": "2026-10-11",
       "up": true,
@@ -737,5 +730,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

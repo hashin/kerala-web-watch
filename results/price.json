@@ -37,18 +37,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-11T00:36:54.026Z",
-    "run": "1791678964345",
+    "at": "2026-10-12T00:58:18.147Z",
+    "run": "1791766647995",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 79,
+      "performance": 75,
       "accessibility": 86,
       "best_practices": 88,
       "seo": 54
     },
     "axe": {
       "critical": 0,
-      "serious": 37,
+      "serious": 38,
       "moderate": 20,
       "minor": 0
     },
@@ -176,7 +176,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "37 serious violation(s)"
+        "ev": "38 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -194,7 +194,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "2 low-contrast element(s)"
+        "ev": "3 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -222,11 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "79/100"
+        "ev": "75/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "fail",
+        "ev": "4522.387999999999ms"
       },
       {
         "id": "perf.cls",
@@ -497,12 +498,12 @@
     ]
   },
   "score": {
-    "overall": 59,
+    "overall": 58,
     "security": 60,
     "accessibility": 70,
     "content": 22,
     "gigw": 30,
-    "performance": 96,
+    "performance": 86,
     "identity": 88
   },
   "status": "needs-work",
@@ -539,12 +540,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "37 serious violation(s)"
+      "ev": "38 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "2 low-contrast element(s)"
+      "ev": "3 low-contrast element(s)"
     },
     {
       "id": "content.copyright_year",
@@ -562,6 +563,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "4522.387999999999ms"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -636,6 +642,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-12",
+      "up": true,
+      "score": 58
+    },
     {
       "d": "2026-10-11",
       "up": true,
@@ -737,5 +748,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

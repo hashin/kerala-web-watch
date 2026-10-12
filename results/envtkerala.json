@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-11T00:32:45.615Z",
-    "run": "1791678585935",
+    "at": "2026-10-12T00:52:51.864Z",
+    "run": "1791766209051",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 61,
@@ -98,7 +98,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "7129ms"
+        "ev": "7697ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -122,7 +122,8 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "warn",
+        "ev": "29 days left"
       },
       {
         "id": "sec.tls_version",
@@ -226,7 +227,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7790.003500000004ms"
+        "ev": "7583.068000000001ms"
       },
       {
         "id": "perf.cls",
@@ -465,8 +466,8 @@
     ]
   },
   "score": {
-    "overall": 56,
-    "security": 38,
+    "overall": 53,
+    "security": 28,
     "accessibility": 72,
     "content": 52,
     "gigw": 22,
@@ -478,6 +479,11 @@
     {
       "id": "sec.http_redirect",
       "sev": "H"
+    },
+    {
+      "id": "sec.cert_expiry",
+      "sev": "H",
+      "ev": "29 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -497,7 +503,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "7129ms"
+      "ev": "7697ms"
     },
     {
       "id": "sec.hsts",
@@ -536,7 +542,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7790.003500000004ms"
+      "ev": "7583.068000000001ms"
     },
     {
       "id": "perf.weight",
@@ -611,6 +617,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-12",
+      "up": true,
+      "score": 53
+    },
     {
       "d": "2026-10-11",
       "up": true,
@@ -717,5 +728,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
