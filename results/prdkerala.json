@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-12T00:55:35.043Z",
-    "run": "1791766470561",
+    "at": "2026-10-13T03:03:37.937Z",
+    "run": "1791860552602",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 14,
+      "performance": 15,
       "accessibility": 80,
       "best_practices": 92,
       "seo": 85
     },
     "axe": {
       "critical": 11,
-      "serious": 24,
+      "serious": 25,
       "moderate": 2,
       "minor": 1
     },
@@ -175,7 +175,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "24 serious violation(s)"
+        "ev": "25 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -221,22 +221,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "14/100"
+        "ev": "15/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "17445.6785ms"
+        "ev": "20411.961499999998ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.73"
+        "ev": "0.60"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "19.5MB"
+        "ev": "19.7MB"
       },
       {
         "id": "perf.viewport",
@@ -283,7 +283,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "2/30 crawled link(s) broken (https://kerala.gov.in/whatsnewdetailwise/MTY4MzY2NzM5NC4y, https://kerala.gov.in/articledetail/MTA0OTA3NDUwNC4yOA==/1)"
+        "ev": "2/30 crawled link(s) broken (https://kerala.gov.in/articledetail/MTExMTU4ODIwNy44NA==/1, https://kerala.gov.in/whatsnewdetailwise/MTY4MzY2NzM5NC4y)"
       },
       {
         "id": "content.broken_pdfs",
@@ -313,7 +313,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "26 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
+        "ev": "25 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -425,7 +425,7 @@
     "screenshot": {
       "desktop": "prdkerala.webp",
       "mobile": "prdkerala-m.webp",
-      "phash": "00ffc9c980e3efe0"
+      "phash": "00ff1f1f00e3efe1"
     },
     "outlinks": [
       {
@@ -578,7 +578,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "2/30 crawled link(s) broken (https://kerala.gov.in/whatsnewdetailwise/MTY4MzY2NzM5NC4y, https://kerala.gov.in/articledetail/MTA0OTA3NDUwNC4yOA==/1)"
+      "ev": "2/30 crawled link(s) broken (https://kerala.gov.in/articledetail/MTExMTU4ODIwNy44NA==/1, https://kerala.gov.in/whatsnewdetailwise/MTY4MzY2NzM5NC4y)"
     },
     {
       "id": "sec.hsts",
@@ -587,7 +587,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "24 serious violation(s)"
+      "ev": "25 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -613,12 +613,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "17445.6785ms"
+      "ev": "20411.961499999998ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "19.5MB"
+      "ev": "19.7MB"
     },
     {
       "id": "id.tech",
@@ -660,7 +660,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "26 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
+      "ev": "25 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.feedback",
@@ -693,7 +693,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.73"
+      "ev": "0.60"
     },
     {
       "id": "perf.images",
@@ -714,6 +714,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-13",
+      "up": true,
+      "score": 50
+    },
     {
       "d": "2026-10-12",
       "up": true,
@@ -820,5 +825,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

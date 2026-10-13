@@ -37,13 +37,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-12T00:50:09.049Z",
-    "run": "1791766165363",
+    "at": "2026-10-13T02:54:05.786Z",
+    "run": "1791860002886",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 58,
       "accessibility": 69,
-      "best_practices": 96,
+      "best_practices": 88,
       "seo": 91
     },
     "axe": {
@@ -53,7 +53,7 @@
       "minor": 0
     },
     "crawl": {
-      "pages": 25,
+      "pages": 26,
       "pdfs": 6,
       "broken": 0
     },
@@ -157,7 +157,8 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "pass"
+        "r": "fail",
+        "ev": "jquery 2.1.3"
       },
       {
         "id": "sec.safe_browsing",
@@ -225,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8654.092ms"
+        "ev": "8149.192000000001ms"
       },
       {
         "id": "perf.cls",
@@ -308,7 +309,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "10 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -433,8 +434,8 @@
     ]
   },
   "score": {
-    "overall": 61,
-    "security": 76,
+    "overall": 56,
+    "security": 56,
     "accessibility": 52,
     "content": 48,
     "gigw": 28,
@@ -446,6 +447,11 @@
     {
       "id": "sec.http_redirect",
       "sev": "H"
+    },
+    {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "jquery 2.1.3"
     },
     {
       "id": "a11y.axe_critical",
@@ -491,7 +497,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8654.092ms"
+      "ev": "8149.192000000001ms"
     },
     {
       "id": "sec.referrer",
@@ -518,7 +524,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "10 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.feedback",
@@ -580,6 +586,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-13",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-10-12",
       "up": true,
@@ -686,5 +697,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

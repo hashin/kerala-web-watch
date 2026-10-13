@@ -35,20 +35,20 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-08T01:13:05.982Z",
-    "run": "1791421937017",
+    "at": "2026-10-13T02:42:22.001Z",
+    "run": "1791859288752",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
-      "accessibility": 77,
-      "best_practices": 73,
-      "seo": 83
+      "performance": 39,
+      "accessibility": 96,
+      "best_practices": 69,
+      "seo": 92
     },
     "axe": {
-      "critical": 21,
-      "serious": 22,
-      "moderate": 1,
-      "minor": 11
+      "critical": 17,
+      "serious": 0,
+      "moderate": 2,
+      "minor": 10
     },
     "crawl": {
       "pages": 30,
@@ -169,12 +169,11 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "21 critical violation(s)"
+        "ev": "17 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
-        "r": "fail",
-        "ev": "22 serious violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -191,8 +190,7 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "16 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
@@ -216,17 +214,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "77/100"
+        "ev": "96/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "39/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "29362.4179ms"
+        "ev": "40900.39549999999ms"
       },
       {
         "id": "perf.cls",
@@ -234,8 +232,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "6.3MB"
+        "r": "fail",
+        "ev": "12.6MB"
       },
       {
         "id": "perf.viewport",
@@ -243,7 +241,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -310,7 +308,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "10 console error(s): Refused to apply style from 'https://alappuzha.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+        "ev": "11 console error(s): Refused to apply style from 'https://alappuzha.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       },
       {
         "id": "gigw.contact",
@@ -427,11 +425,11 @@
     "outlinks": [
       {
         "host": "kerala.gov.in",
-        "count": 6,
+        "count": 5,
         "texts": [
           "കേരള സര്‍ക്കാര്‍",
-          "E Office",
-          "Government of Kerala"
+          "E-Office",
+          "Government of Keralam"
         ]
       },
       {
@@ -441,7 +439,7 @@
       },
       {
         "host": "s3waas.gov.in",
-        "count": 10,
+        "count": 30,
         "texts": [
           "Woman Empowerment",
           "District Environment Plan",
@@ -456,24 +454,10 @@
         ]
       },
       {
-        "host": "eci.gov.in",
-        "count": 1,
+        "host": "facebook.com",
+        "count": 2,
         "texts": [
-          "Election Commission"
-        ]
-      },
-      {
-        "host": "keralacm.gov.in",
-        "count": 1,
-        "texts": [
-          "Public Grievance"
-        ]
-      },
-      {
-        "host": "keralasic.gov.in",
-        "count": 1,
-        "texts": [
-          "Right to Information Act"
+          "Facebook"
         ]
       },
       {
@@ -484,50 +468,8 @@
         ]
       },
       {
-        "host": "kswmp.org",
-        "count": 1,
-        "texts": [
-          "KSWMP - Kerala solid waste management project"
-        ]
-      },
-      {
-        "host": "india.gov.in",
-        "count": 2,
-        "texts": []
-      },
-      {
-        "host": "pmindia.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "pmnrf.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "data.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "mygov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "incredibleindia.org",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "childlineindia.org.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "keralaregistration.gov.in",
-        "count": 1,
+        "host": "youtube.com",
+        "count": 3,
         "texts": []
       },
       {
@@ -543,16 +485,21 @@
         "texts": [
           "Ministry of Electronics & Information Technology"
         ]
+      },
+      {
+        "host": "instagram.com",
+        "count": 1,
+        "texts": []
       }
     ]
   },
   "score": {
-    "overall": 64,
+    "overall": 70,
     "security": 80,
-    "accessibility": 40,
+    "accessibility": 60,
     "content": 56,
     "gigw": 60,
-    "performance": 71,
+    "performance": 76,
     "identity": 96
   },
   "status": "needs-work",
@@ -565,7 +512,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "21 critical violation(s)"
+      "ev": "17 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -576,16 +523,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
-    },
-    {
-      "id": "a11y.axe_serious",
-      "sev": "M",
-      "ev": "22 serious violation(s)"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "16 low-contrast element(s)"
     },
     {
       "id": "a11y.labels",
@@ -603,16 +540,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "29362.4179ms"
+      "ev": "40900.39549999999ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "6.3MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "ev": "12.6MB"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -632,7 +565,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "10 console error(s): Refused to apply style from 'https://alappuzha.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+      "ev": "11 console error(s): Refused to apply style from 'https://alappuzha.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
     },
     {
       "id": "gigw.terms",
@@ -670,6 +603,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-13",
+      "up": true,
+      "score": 70
+    },
     {
       "d": "2026-10-12",
       "up": true,
@@ -776,5 +714,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

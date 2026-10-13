@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-12T00:57:20.140Z",
-    "run": "1791766603264",
+    "at": "2026-10-13T03:00:48.655Z",
+    "run": "1791860411789",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
+      "performance": 60,
       "accessibility": 95,
       "best_practices": 92,
       "seo": 92
@@ -127,7 +127,7 @@
       },
       {
         "id": "sec.hsts",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.mixed_content",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6107.875ms"
+        "ev": "4329.143ms"
       },
       {
         "id": "perf.cls",
@@ -450,8 +450,8 @@
     ]
   },
   "score": {
-    "overall": 58,
-    "security": 80,
+    "overall": 55,
+    "security": 70,
     "accessibility": 40,
     "content": 40,
     "gigw": 28,
@@ -484,6 +484,10 @@
       "id": "content.broken_links",
       "sev": "H",
       "ev": "1/22 crawled link(s) broken (http://kerala.gov.in/)"
+    },
+    {
+      "id": "sec.hsts",
+      "sev": "M"
     },
     {
       "id": "a11y.axe_serious",
@@ -524,7 +528,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6107.875ms"
+      "ev": "4329.143ms"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -601,6 +605,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-13",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-12",
       "up": true,
@@ -707,5 +716,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

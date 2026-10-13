@@ -35,19 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-12T00:47:00.119Z",
-    "run": "1791765994156",
+    "at": "2026-10-13T02:52:49.256Z",
+    "run": "1791859923954",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 0,
       "accessibility": 71,
-      "best_practices": 77,
+      "best_practices": 73,
       "seo": 100
     },
     "axe": {
       "critical": 8,
       "serious": 14,
-      "moderate": 19,
+      "moderate": 11,
       "minor": 1
     },
     "crawl": {
@@ -96,7 +96,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3533ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -179,7 +180,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "20 moderate/minor violation(s)"
+        "ev": "12 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -232,7 +233,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "3.0MB"
+        "ev": "5.7MB"
       },
       {
         "id": "perf.viewport",
@@ -307,7 +308,8 @@
       },
       {
         "id": "content.console_errors",
-        "r": "pass"
+        "r": "fail",
+        "ev": "3 console error(s): Chart is not defined"
       },
       {
         "id": "gigw.contact",
@@ -451,6 +453,11 @@
       "sev": "H"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3533ms"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
       "ev": "14 serious violation(s)"
@@ -493,7 +500,7 @@
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "3.0MB"
+      "ev": "5.7MB"
     },
     {
       "id": "perf.tap_targets",
@@ -502,7 +509,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "20 moderate/minor violation(s)"
+      "ev": "12 moderate/minor violation(s)"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "3 console error(s): Chart is not defined"
     },
     {
       "id": "gigw.feedback",
@@ -574,6 +586,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-13",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-12",
       "up": false,
@@ -675,5 +692,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

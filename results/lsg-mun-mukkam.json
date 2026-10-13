@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-08T01:32:17.006Z",
-    "run": "1791423096883",
+    "at": "2026-10-13T02:58:33.644Z",
+    "run": "1791860272428",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 60,
@@ -184,7 +184,8 @@
       },
       {
         "id": "a11y.lang",
-        "r": "pass"
+        "r": "fail",
+        "ev": "<html lang=\"en\"> vs. 47% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -226,7 +227,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "63417.42600000001ms"
+        "ev": "20398.040999999987ms"
       },
       {
         "id": "perf.cls",
@@ -554,9 +555,9 @@
     ]
   },
   "score": {
-    "overall": 68,
+    "overall": 63,
     "security": 76,
-    "accessibility": 70,
+    "accessibility": 50,
     "content": 56,
     "gigw": 36,
     "performance": 76,
@@ -568,6 +569,11 @@
       "id": "sec.mixed_content",
       "sev": "H",
       "ev": "href=\"http://mukkammunicipality.lsgkerala.gov.in/en\""
+    },
+    {
+      "id": "a11y.lang",
+      "sev": "H",
+      "ev": "<html lang=\"en\"> vs. 47% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -608,7 +614,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "63417.42600000001ms"
+      "ev": "20398.040999999987ms"
     },
     {
       "id": "perf.weight",
@@ -673,6 +679,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-13",
+      "up": true,
+      "score": 63
+    },
     {
       "d": "2026-10-12",
       "up": true,
@@ -774,5 +785,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

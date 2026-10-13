@@ -37,15 +37,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T03:51:01.003Z",
-    "run": "1791517784731",
+    "at": "2026-10-13T02:54:25.207Z",
+    "run": "1791859967855",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 35,
-      "accessibility": 83,
-      "best_practices": 88,
-      "seo": 69
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 1,
       "serious": 15,
@@ -55,10 +50,10 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 3
     },
     "tech": {
-      "cms": "WordPress 6.8.8",
+      "cms": "WordPress 6.8.11",
       "server": "Apache",
       "jquery": null
     },
@@ -218,28 +213,24 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "83/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "35/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "13259.606000000003ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.87"
+        "r": "na"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "8.1MB"
+        "ev": "8.0MB"
       },
       {
         "id": "perf.viewport",
@@ -247,11 +238,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -286,7 +277,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://kerala.gov.in/)"
+        "ev": "3/30 crawled link(s) broken (https://kerala.gov.in/, https://kescpcr.kerala.gov.in/ml/commission-ml/, https://kescpcr.kerala.gov.in/acts-rules/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -418,7 +409,7 @@
       {
         "id": "id.tech",
         "r": "pass",
-        "ev": "WordPress 6.8.8"
+        "ev": "WordPress 6.8.11"
       },
       {
         "id": "id.third_party",
@@ -466,12 +457,12 @@
     ]
   },
   "score": {
-    "overall": 47,
+    "overall": 49,
     "security": 38,
     "accessibility": 40,
     "content": 38,
     "gigw": 36,
-    "performance": 72,
+    "performance": 90,
     "identity": 96
   },
   "status": "poor",
@@ -504,7 +495,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://kerala.gov.in/)"
+      "ev": "3/30 crawled link(s) broken (https://kerala.gov.in/, https://kescpcr.kerala.gov.in/ml/commission-ml/, https://kescpcr.kerala.gov.in/acts-rules/)"
     },
     {
       "id": "sec.hsts",
@@ -542,14 +533,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "13259.606000000003ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "8.1MB"
+      "ev": "8.0MB"
     },
     {
       "id": "sec.csp",
@@ -617,21 +603,17 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.87"
-    },
-    {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-13",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-10-12",
       "up": true,
@@ -743,5 +725,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

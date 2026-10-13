@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-12T01:02:47.680Z",
-    "run": "1791766919901",
+    "at": "2026-10-13T03:19:54.284Z",
+    "run": "1791861546382",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 58,
@@ -119,8 +119,7 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "29 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -227,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6310.041499999999ms"
+        "ev": "6337.4ms"
       },
       {
         "id": "perf.cls",
@@ -384,7 +383,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "45 days left"
+        "ev": "44 days left"
       },
       {
         "id": "id.www_consistency",
@@ -458,21 +457,16 @@
     ]
   },
   "score": {
-    "overall": 48,
-    "security": 52,
+    "overall": 51,
+    "security": 62,
     "accessibility": 40,
     "content": 52,
     "gigw": 28,
     "performance": 81,
     "identity": 52
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "29 days left"
-    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -501,7 +495,7 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "45 days left"
+      "ev": "44 days left"
     },
     {
       "id": "sec.hsts",
@@ -541,7 +535,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6310.041499999999ms"
+      "ev": "6337.4ms"
     },
     {
       "id": "perf.weight",
@@ -631,6 +625,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-13",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-10-12",
       "up": true,
@@ -742,5 +741,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

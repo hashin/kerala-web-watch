@@ -35,30 +35,30 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-08T01:13:26.417Z",
-    "run": "1791421949415",
+    "at": "2026-10-13T02:43:01.604Z",
+    "run": "1791859310560",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 85,
-      "accessibility": 91,
-      "best_practices": 73,
-      "seo": 83
+      "performance": 41,
+      "accessibility": 76,
+      "best_practices": 92,
+      "seo": 85
     },
     "axe": {
-      "critical": 0,
-      "serious": 5,
-      "moderate": 4,
+      "critical": 63,
+      "serious": 23,
+      "moderate": 38,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
-      "pdfs": 0,
+      "pages": 30,
+      "pdfs": 1,
       "broken": 0
     },
     "tech": {
       "cms": null,
-      "server": "Apache",
-      "jquery": null
+      "server": null,
+      "jquery": "3.1.1"
     },
     "checks": [
       {
@@ -75,8 +75,7 @@
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "fail",
-        "ev": "now resolves to perfdrive.com"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -128,7 +127,7 @@
       },
       {
         "id": "sec.hsts",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.mixed_content",
@@ -136,19 +135,19 @@
       },
       {
         "id": "sec.csp",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.xfo",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.xcto",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.referrer",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.server_banner",
@@ -156,7 +155,8 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "pass"
+        "r": "fail",
+        "ev": "jquery 3.1.1, bootstrap 4.0.0, jquery 1.8.3"
       },
       {
         "id": "sec.safe_browsing",
@@ -168,17 +168,18 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "pass"
+        "r": "fail",
+        "ev": "63 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "5 serious violation(s)"
+        "ev": "23 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "4 moderate/minor violation(s)"
+        "ev": "38 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -186,12 +187,13 @@
       },
       {
         "id": "a11y.alt",
-        "r": "pass"
+        "r": "fail",
+        "ev": "63 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "5 low-contrast element(s)"
+        "ev": "2 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -212,24 +214,27 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "91/100"
+        "ev": "76/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "85/100"
+        "ev": "41/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "fail",
+        "ev": "6612.2325ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.50"
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "fail",
+        "ev": "15.0MB"
       },
       {
         "id": "perf.viewport",
@@ -245,7 +250,7 @@
       },
       {
         "id": "content.copyright_year",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "content.last_updated",
@@ -263,11 +268,12 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-IN"
+        "ev": "ml-user"
       },
       {
         "id": "content.obsolete_tech",
-        "r": "pass"
+        "r": "fail",
+        "ev": "<marquee"
       },
       {
         "id": "content.best_viewed",
@@ -295,20 +301,19 @@
       },
       {
         "id": "content.meta_desc",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.favicon",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "6 console error(s): Access to fetch at 'https://captcha.perfdrive.com/captcha-public/css/shieldsquare_styles.min.css' from origin 'https://validate.perfdrive.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.feedback",
@@ -320,11 +325,11 @@
       },
       {
         "id": "gigw.privacy",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.terms",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.copyright_policy",
@@ -340,7 +345,7 @@
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.screen_reader",
@@ -352,7 +357,7 @@
       },
       {
         "id": "gigw.rti",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.search",
@@ -381,7 +386,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -398,11 +403,12 @@
       },
       {
         "id": "id.canonical",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.charset_doctype",
-        "r": "pass"
+        "r": "fail",
+        "ev": "missing HTML5 doctype"
       },
       {
         "id": "id.tech",
@@ -416,21 +422,112 @@
     "screenshot": {
       "desktop": "cial.webp",
       "mobile": "cial-m.webp",
-      "phash": "830721e7e7e7ffc1"
+      "phash": "f3fee6460c141834"
     },
-    "outlinks": []
+    "outlinks": [
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "twitter.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "instagram.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "youtube.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "linkedin.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "ciaslbusinesscentre.com",
+        "count": 1,
+        "texts": [
+          "CIASL Business Centre"
+        ]
+      },
+      {
+        "host": "0484aerolounge.com",
+        "count": 1,
+        "texts": [
+          "0484 Aero Lounge"
+        ]
+      },
+      {
+        "host": "tajhotels.com",
+        "count": 1,
+        "texts": [
+          "Taj Cochin International Airport"
+        ]
+      },
+      {
+        "host": "cialtradecentre.com",
+        "count": 1,
+        "texts": [
+          "Convention centre"
+        ]
+      },
+      {
+        "host": "cialgolfclub.in",
+        "count": 1,
+        "texts": [
+          "Golf & Events"
+        ]
+      },
+      {
+        "host": "cochindutyfree.com",
+        "count": 1,
+        "texts": [
+          "Duty free"
+        ]
+      },
+      {
+        "host": "google.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "apple.com",
+        "count": 1,
+        "texts": []
+      }
+    ]
   },
-  "score": null,
-  "status": "hijacked",
+  "score": {
+    "overall": 54,
+    "security": 60,
+    "accessibility": 46,
+    "content": 50,
+    "gigw": 42,
+    "performance": 72,
+    "identity": 68
+  },
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "avail.redirect_offsite",
-      "sev": "C",
-      "ev": "now resolves to perfdrive.com"
-    },
     {
       "id": "sec.http_redirect",
       "sev": "H"
+    },
+    {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "jquery 3.1.1, bootstrap 4.0.0, jquery 1.8.3"
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "63 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -440,15 +537,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-IN"
-    },
-    {
-      "id": "gigw.contact",
-      "sev": "H"
-    },
-    {
-      "id": "gigw.rti",
-      "sev": "H"
+      "ev": "ml-user"
     },
     {
       "id": "id.gov_domain",
@@ -456,33 +545,27 @@
       "ev": "www.cial.aero"
     },
     {
-      "id": "sec.hsts",
-      "sev": "M"
-    },
-    {
-      "id": "sec.xfo",
-      "sev": "M"
-    },
-    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "5 serious violation(s)"
+      "ev": "23 serious violation(s)"
+    },
+    {
+      "id": "a11y.alt",
+      "sev": "M",
+      "ev": "63 image(s) missing alt text"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "5 low-contrast element(s)"
+      "ev": "2 low-contrast element(s)"
+    },
+    {
+      "id": "content.obsolete_tech",
+      "sev": "M",
+      "ev": "<marquee"
     },
     {
       "id": "gigw.sitemap",
-      "sev": "M"
-    },
-    {
-      "id": "gigw.privacy",
-      "sev": "M"
-    },
-    {
-      "id": "gigw.accessibility_statement",
       "sev": "M"
     },
     {
@@ -494,41 +577,22 @@
       "sev": "M"
     },
     {
-      "id": "sec.csp",
-      "sev": "L"
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "6612.2325ms"
     },
     {
-      "id": "sec.xcto",
-      "sev": "L"
-    },
-    {
-      "id": "sec.referrer",
-      "sev": "L"
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "15.0MB"
     },
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "4 moderate/minor violation(s)"
-    },
-    {
-      "id": "content.meta_desc",
-      "sev": "L"
-    },
-    {
-      "id": "content.favicon",
-      "sev": "L"
-    },
-    {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "6 console error(s): Access to fetch at 'https://captcha.perfdrive.com/captcha-public/css/shieldsquare_styles.min.css' from origin 'https://validate.perfdrive.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "38 moderate/minor violation(s)"
     },
     {
       "id": "gigw.feedback",
-      "sev": "L"
-    },
-    {
-      "id": "gigw.terms",
       "sev": "L"
     },
     {
@@ -556,7 +620,16 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.50"
+    },
+    {
       "id": "perf.images",
+      "sev": "L"
+    },
+    {
+      "id": "id.www_consistency",
       "sev": "L"
     },
     {
@@ -565,15 +638,21 @@
       "ev": "a nonexistent path returned 200"
     },
     {
-      "id": "gigw.emblem",
-      "sev": "I"
+      "id": "id.charset_doctype",
+      "sev": "L",
+      "ev": "missing HTML5 doctype"
     },
     {
-      "id": "id.canonical",
+      "id": "gigw.emblem",
       "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-13",
+      "up": true,
+      "score": 54
+    },
     {
       "d": "2026-10-12",
       "up": false,
@@ -675,5 +754,5 @@
       "score": 54
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

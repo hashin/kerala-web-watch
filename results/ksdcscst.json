@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-11T00:31:35.317Z",
-    "run": "1791678572468",
+    "at": "2026-10-13T02:58:02.424Z",
+    "run": "1791860239894",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 38,
+      "performance": 40,
       "accessibility": 84,
       "best_practices": 96,
       "seo": 91
@@ -57,7 +57,7 @@
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "",
       "jquery": "3.6.0"
     },
     "checks": [
@@ -67,16 +67,15 @@
       },
       {
         "id": "avail.connect",
-        "r": "fail",
-        "ev": "timeout"
+        "r": "pass"
       },
       {
         "id": "avail.status",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -96,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "na"
+        "r": "warn",
+        "ev": "4180ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -108,11 +108,11 @@
       },
       {
         "id": "sec.https",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
@@ -132,7 +132,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "fail",
+        "ev": "href=\"http://ksdcsmart.kerala.gov.in/\""
       },
       {
         "id": "sec.csp",
@@ -222,22 +223,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "38/100"
+        "ev": "40/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "39272.67899999999ms"
+        "ev": "37680.2245ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.36"
+        "ev": "0.34"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "7.7MB"
+        "ev": "7.9MB"
       },
       {
         "id": "perf.viewport",
@@ -427,17 +428,21 @@
     },
     "outlinks": []
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 47,
+    "security": 28,
+    "accessibility": 40,
+    "content": 72,
+    "gigw": 18,
+    "performance": 77,
+    "identity": 88
+  },
+  "status": "poor",
   "issues": [
     {
-      "id": "avail.connect",
-      "sev": "C",
-      "ev": "timeout"
-    },
-    {
-      "id": "sec.http_redirect",
-      "sev": "H"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://ksdcsmart.kerala.gov.in/\""
     },
     {
       "id": "sec.vuln_js",
@@ -453,6 +458,11 @@
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "4180ms"
     },
     {
       "id": "sec.hsts",
@@ -500,12 +510,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "39272.67899999999ms"
+      "ev": "37680.2245ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.7MB"
+      "ev": "7.9MB"
     },
     {
       "id": "sec.csp",
@@ -578,7 +588,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.36"
+      "ev": "0.34"
     },
     {
       "id": "perf.images",
@@ -608,6 +618,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-13",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-10-12",
       "up": false,
@@ -714,5 +729,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

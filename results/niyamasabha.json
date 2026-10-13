@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-12T00:48:29.686Z",
-    "run": "1791766049700",
+    "at": "2026-10-13T02:51:25.146Z",
+    "run": "1791859821692",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 89,
+      "performance": 84,
       "accessibility": 45,
       "best_practices": 85,
       "seo": 92
@@ -185,7 +185,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"\"> vs. 43% Malayalam content"
+        "ev": "<html lang=\"\"> vs. 42% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -222,11 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "89/100"
+        "ev": "84/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "fail",
+        "ev": "4605.872ms"
       },
       {
         "id": "perf.cls",
@@ -482,12 +483,12 @@
     ]
   },
   "score": {
-    "overall": 43,
+    "overall": 42,
     "security": 44,
     "accessibility": 22,
     "content": 66,
     "gigw": 18,
-    "performance": 66,
+    "performance": 56,
     "identity": 68
   },
   "status": "poor",
@@ -505,7 +506,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"\"> vs. 43% Malayalam content"
+      "ev": "<html lang=\"\"> vs. 42% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -568,6 +569,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "4605.872ms"
     },
     {
       "id": "perf.tap_targets",
@@ -664,6 +670,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-13",
+      "up": true,
+      "score": 42
+    },
     {
       "d": "2026-10-12",
       "up": true,
@@ -770,5 +781,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

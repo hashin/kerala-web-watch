@@ -35,29 +35,29 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-11T00:40:43.562Z",
-    "run": "1791679173076",
+    "at": "2026-10-13T03:10:16.528Z",
+    "run": "1791860920513",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 51,
-      "accessibility": 79,
+      "performance": 62,
+      "accessibility": 75,
       "best_practices": 100,
-      "seo": 100
+      "seo": 83
     },
     "axe": {
-      "critical": 0,
+      "critical": 6,
       "serious": 7,
-      "moderate": 19,
-      "minor": 0
+      "moderate": 15,
+      "minor": 3
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 6,
+      "pdfs": 7,
       "broken": 0
     },
     "tech": {
       "cms": null,
-      "server": "Apache",
+      "server": "nginx",
       "jquery": null
     },
     "checks": [
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "4159ms"
+        "ev": "3309ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -133,7 +133,7 @@
       {
         "id": "sec.mixed_content",
         "r": "fail",
-        "ev": "href=\"http://scart.ssus.ac.in/\""
+        "ev": "href=\"http://naac.gov.in/index.php/en/\""
       },
       {
         "id": "sec.csp",
@@ -157,8 +157,7 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "fail",
-        "ev": "mootools 1.4.5, jquery 1.12.4, bootstrap 3.2.0, bootstrap 3.3.7"
+        "r": "pass"
       },
       {
         "id": "sec.safe_browsing",
@@ -170,7 +169,8 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "pass"
+        "r": "fail",
+        "ev": "6 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
@@ -180,7 +180,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "19 moderate/minor violation(s)"
+        "ev": "18 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -188,11 +188,13 @@
       },
       {
         "id": "a11y.alt",
-        "r": "pass"
+        "r": "fail",
+        "ev": "3 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "2 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -214,17 +216,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "79/100"
+        "ev": "75/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "51/100"
+        "ev": "62/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "43551.52424999999ms"
+        "ev": "58798.00799999998ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "10.8MB"
+        "ev": "20.8MB"
       },
       {
         "id": "perf.viewport",
@@ -241,7 +243,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -267,12 +269,11 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-user"
+        "ev": "ml-"
       },
       {
         "id": "content.obsolete_tech",
-        "r": "fail",
-        "ev": "<marquee"
+        "r": "pass"
       },
       {
         "id": "content.best_viewed",
@@ -312,11 +313,11 @@
       },
       {
         "id": "gigw.contact",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.feedback",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.sitemap",
@@ -344,7 +345,7 @@
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.screen_reader",
@@ -396,7 +397,8 @@
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
       },
       {
         "id": "id.canonical",
@@ -418,29 +420,21 @@
     "screenshot": {
       "desktop": "ssus.webp",
       "mobile": "ssus-m.webp",
-      "phash": "00ff00fb3e34f0f0"
+      "phash": "ff007c68f8f8ffc0"
     },
     "outlinks": [
-      {
-        "host": "kerala.gov.in",
-        "count": 5,
-        "texts": [
-          "eGrants",
-          "Government of Kerala"
-        ]
-      },
-      {
-        "host": "ugc.ac.in",
-        "count": 1,
-        "texts": []
-      },
       {
         "host": "facebook.com",
         "count": 1,
         "texts": []
       },
       {
-        "host": "twitter.com",
+        "host": "instagram.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "linkedin.com",
         "count": 1,
         "texts": []
       },
@@ -448,6 +442,22 @@
         "host": "youtube.com",
         "count": 1,
         "texts": []
+      },
+      {
+        "host": "kerala.gov.in",
+        "count": 3,
+        "texts": [
+          "eGrantz",
+          "Government of Kerala",
+          "Unispark"
+        ]
+      },
+      {
+        "host": "ugc.gov.in",
+        "count": 1,
+        "texts": [
+          "UGC"
+        ]
       },
       {
         "host": "india.gov.in",
@@ -465,7 +475,7 @@
       },
       {
         "host": "naac.gov.in",
-        "count": 2,
+        "count": 1,
         "texts": [
           "NAAC"
         ]
@@ -476,57 +486,29 @@
         "texts": [
           "Income Tax - Form 16"
         ]
-      },
-      {
-        "host": "uoc.ac.in",
-        "count": 1,
-        "texts": [
-          "Kerala State Higher Education Council"
-        ]
-      },
-      {
-        "host": "mhrd.gov.in",
-        "count": 1,
-        "texts": [
-          "MHRD"
-        ]
-      },
-      {
-        "host": "nirfindia.org",
-        "count": 1,
-        "texts": [
-          "NIRF"
-        ]
-      },
-      {
-        "host": "tribal.gov.in",
-        "count": 1,
-        "texts": [
-          "National Overseas Scholarships Scheme for ST"
-        ]
       }
     ]
   },
   "score": {
-    "overall": 63,
-    "security": 52,
-    "accessibility": 82,
-    "content": 50,
-    "gigw": 26,
-    "performance": 76,
-    "identity": 100
+    "overall": 56,
+    "security": 72,
+    "accessibility": 42,
+    "content": 60,
+    "gigw": 12,
+    "performance": 66,
+    "identity": 96
   },
   "status": "needs-work",
   "issues": [
     {
       "id": "sec.mixed_content",
       "sev": "H",
-      "ev": "href=\"http://scart.ssus.ac.in/\""
+      "ev": "href=\"http://naac.gov.in/index.php/en/\""
     },
     {
-      "id": "sec.vuln_js",
+      "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "mootools 1.4.5, jquery 1.12.4, bootstrap 3.2.0, bootstrap 3.3.7"
+      "ev": "6 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -536,12 +518,16 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-user"
+      "ev": "ml-"
+    },
+    {
+      "id": "gigw.contact",
+      "sev": "H"
     },
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "4159ms"
+      "ev": "3309ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -549,9 +535,14 @@
       "ev": "7 serious violation(s)"
     },
     {
-      "id": "content.obsolete_tech",
+      "id": "a11y.alt",
       "sev": "M",
-      "ev": "<marquee"
+      "ev": "3 image(s) missing alt text"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "2 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -559,10 +550,6 @@
     },
     {
       "id": "gigw.privacy",
-      "sev": "M"
-    },
-    {
-      "id": "gigw.accessibility_statement",
       "sev": "M"
     },
     {
@@ -576,12 +563,16 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "43551.52424999999ms"
+      "ev": "58798.00799999998ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "10.8MB"
+      "ev": "20.8MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.xcto",
@@ -594,12 +585,16 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "19 moderate/minor violation(s)"
+      "ev": "18 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
       "ev": "heading levels skipped"
+    },
+    {
+      "id": "gigw.feedback",
+      "sev": "L"
     },
     {
       "id": "gigw.terms",
@@ -630,6 +625,11 @@
       "sev": "L"
     },
     {
+      "id": "id.soft_404",
+      "sev": "L",
+      "ev": "a nonexistent path returned 200"
+    },
+    {
       "id": "gigw.emblem",
       "sev": "I"
     },
@@ -639,6 +639,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-13",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-10-12",
       "up": true,
@@ -745,5 +750,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

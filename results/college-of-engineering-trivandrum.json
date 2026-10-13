@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-12T00:58:17.270Z",
-    "run": "1791766640142",
+    "at": "2026-10-13T03:07:24.171Z",
+    "run": "1791860721666",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 42,
+      "performance": 43,
       "accessibility": 90,
       "best_practices": 96,
       "seo": 85
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 3,
-      "broken": 2
+      "broken": 6
     },
     "tech": {
       "cms": "WordPress 5.2.21",
@@ -97,7 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "5002ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -222,17 +223,16 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "42/100"
+        "ev": "43/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9918.2985ms"
+        "ev": "10448.426500000001ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.37"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -284,8 +284,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "2/30 crawled link(s) broken (https://me.cet.ac.in/, https://mba.cet.ac.in/)"
+        "r": "fail",
+        "ev": "6/30 crawled link(s) broken (https://www.cet.ac.in/internal-quality-assurance-cell-iqac-cet/, https://ee.cet.ac.in/, https://me.cet.ac.in/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -424,7 +424,7 @@
     "screenshot": {
       "desktop": "college-of-engineering-trivandrum.webp",
       "mobile": "college-of-engineering-trivandrum-m.webp",
-      "phash": "ffff0000ef248880"
+      "phash": "ffffff007e180f01"
     },
     "outlinks": [
       {
@@ -526,12 +526,12 @@
     ]
   },
   "score": {
-    "overall": 49,
+    "overall": 48,
     "security": 24,
     "accessibility": 72,
-    "content": 26,
+    "content": 16,
     "gigw": 22,
-    "performance": 82,
+    "performance": 86,
     "identity": 95
   },
   "status": "poor",
@@ -559,7 +559,12 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "2/30 crawled link(s) broken (https://me.cet.ac.in/, https://mba.cet.ac.in/)"
+      "ev": "6/30 crawled link(s) broken (https://www.cet.ac.in/internal-quality-assurance-cell-iqac-cet/, https://ee.cet.ac.in/, https://me.cet.ac.in/, ...)"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "5002ms"
     },
     {
       "id": "sec.hsts",
@@ -612,7 +617,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9918.2985ms"
+      "ev": "10448.426500000001ms"
     },
     {
       "id": "id.tech",
@@ -679,11 +684,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.37"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -693,6 +693,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-13",
+      "up": true,
+      "score": 48
+    },
     {
       "d": "2026-10-12",
       "up": true,
@@ -774,5 +779,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-12T00:46:09.225Z",
-    "run": "1791765727884",
+    "at": "2026-10-13T02:46:21.071Z",
+    "run": "1791859342004",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 53,
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "6561ms"
+        "ev": "7028ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -227,7 +227,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "16093.996000000001ms"
+        "ev": "17533.672000000002ms"
       },
       {
         "id": "perf.cls",
@@ -311,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "2 console error(s): Access to fetch at 'https://www.youtube.com/s/player/5203c085/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "1 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
       },
       {
         "id": "gigw.contact",
@@ -495,7 +495,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "6561ms"
+      "ev": "7028ms"
     },
     {
       "id": "sec.hsts",
@@ -535,7 +535,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "16093.996000000001ms"
+      "ev": "17533.672000000002ms"
     },
     {
       "id": "perf.weight",
@@ -572,7 +572,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "2 console error(s): Access to fetch at 'https://www.youtube.com/s/player/5203c085/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "1 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
     },
     {
       "id": "gigw.feedback",
@@ -617,6 +617,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-13",
+      "up": true,
+      "score": 48
+    },
     {
       "d": "2026-10-12",
       "up": true,
@@ -723,5 +728,5 @@
       "score": 45
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

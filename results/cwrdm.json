@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-12T00:57:55.121Z",
-    "run": "1791766590462",
+    "at": "2026-10-13T03:12:24.080Z",
+    "run": "1791861056840",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 54,
       "accessibility": 83,
       "best_practices": 88,
       "seo": 92
@@ -119,8 +119,7 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "29 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -220,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "54/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "12626.272499999997ms"
+        "ev": "10422.9025ms"
       },
       {
         "id": "perf.cls",
@@ -508,8 +507,8 @@
     ]
   },
   "score": {
-    "overall": 63,
-    "security": 36,
+    "overall": 65,
+    "security": 46,
     "accessibility": 74,
     "content": 62,
     "gigw": 56,
@@ -518,11 +517,6 @@
   },
   "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "29 days left"
-    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -568,7 +562,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "12626.272499999997ms"
+      "ev": "10422.9025ms"
     },
     {
       "id": "perf.weight",
@@ -638,6 +632,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-13",
+      "up": true,
+      "score": 65
+    },
     {
       "d": "2026-10-12",
       "up": true,
@@ -749,5 +748,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

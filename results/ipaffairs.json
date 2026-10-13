@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-12T00:59:23.758Z",
-    "run": "1791766710099",
+    "at": "2026-10-13T03:04:52.906Z",
+    "run": "1791860622274",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 48,
+      "performance": 33,
       "accessibility": 83,
       "best_practices": 78,
       "seo": 69
@@ -56,7 +56,7 @@
       "broken": 1
     },
     "tech": {
-      "cms": "WordPress 5.6.17",
+      "cms": "WordPress 5.6.22",
       "server": "Apache",
       "jquery": null
     },
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3029ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -121,8 +120,7 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "29 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -224,16 +222,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "48/100"
+        "ev": "33/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "fail",
+        "ev": "6982.3865000000005ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.79"
+        "ev": "0.78"
       },
       {
         "id": "perf.weight",
@@ -415,7 +414,7 @@
       {
         "id": "id.tech",
         "r": "warn",
-        "ev": "WordPress 5.6.17 (unsupported major version)"
+        "ev": "WordPress 5.6.22 (unsupported major version)"
       },
       {
         "id": "id.third_party",
@@ -451,11 +450,6 @@
       "ev": "http://ipaffairs.org"
     },
     {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "29 days left"
-    },
-    {
       "id": "sec.vuln_js",
       "sev": "H",
       "ev": "jquery-ui 1.12.1"
@@ -484,11 +478,6 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "ipaffairs.org"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3029ms"
     },
     {
       "id": "sec.hsts",
@@ -530,6 +519,11 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "6982.3865000000005ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "11.6MB"
@@ -537,7 +531,7 @@
     {
       "id": "id.tech",
       "sev": "M",
-      "ev": "WordPress 5.6.17 (unsupported major version)"
+      "ev": "WordPress 5.6.22 (unsupported major version)"
     },
     {
       "id": "sec.csp",
@@ -597,7 +591,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.79"
+      "ev": "0.78"
     },
     {
       "id": "perf.images",
@@ -609,6 +603,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-13",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-12",
       "up": false,
@@ -720,5 +719,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
