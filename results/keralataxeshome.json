@@ -37,49 +37,565 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-13T02:47:32.563Z",
-    "run": "1791859582551",
+    "at": "2026-10-14T00:36:49.453Z",
+    "run": "1791938115541",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 29,
+      "accessibility": 60,
+      "best_practices": 88,
+      "seo": 85
+    },
     "axe": {
-      "critical": 0,
-      "serious": 0,
-      "moderate": 0,
+      "critical": 1,
+      "serious": 20,
+      "moderate": 18,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
-      "pdfs": 0,
-      "broken": 0
+      "pages": 30,
+      "pdfs": 20,
+      "broken": 2
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "Apache",
       "jquery": null
     },
-    "checks": [],
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "pass"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "pass"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "fail",
+        "ev": "href=\"http://gmpg.org/xfn/11\""
+      },
+      {
+        "id": "sec.csp",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "fail"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "fail"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "pass"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "fail",
+        "ev": "bootstrap 3.3.4, bootstrap 3.3.2, select2 4.0.0"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "fail",
+        "ev": "1 critical violation(s)"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "20 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "18 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "fail",
+        "ev": "<html lang=\"en-GB\"> vs. 38% Malayalam content"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "fail",
+        "ev": "1 image(s) missing alt text"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "fail",
+        "ev": "5 low-contrast element(s)"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "no <h1>"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "60/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "29/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "15274.798999999997ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "fail",
+        "ev": "0.78"
+      },
+      {
+        "id": "perf.weight",
+        "r": "warn",
+        "ev": "4.2MB"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "fail"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "na"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-act"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "fail",
+        "ev": "<marquee"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "warn",
+        "ev": "2/30 crawled link(s) broken (https://kitis.keralataxes.gov.in/, https://keralataxes.gov.in/?p=2165)"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "pass"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "fail"
+      },
+      {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "3 console error(s): Failed to load resource: the server responded with a status of 400 ()"
+      },
+      {
+        "id": "gigw.contact",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.search",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "warn"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "pass"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "na"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "pass"
+      },
+      {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "pass"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "warn",
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-32MQLJGSM2&amp;cx=c&amp;gtm=4e6ac1, https://www.googletagmanager.com/gtag/js?id=UA-103783083-2"
+      }
+    ],
     "screenshot": {
       "desktop": "keralataxeshome.webp",
       "mobile": "keralataxeshome-m.webp",
-      "phash": "00003c3c3c3c0000"
+      "phash": "ffff0000a7a7ffff"
     },
-    "outlinks": [],
-    "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://keralataxes.gov.in/\", waiting until \"load\"\n"
+    "outlinks": [
+      {
+        "host": "gst.gov.in",
+        "count": 13,
+        "texts": [
+          "GST",
+          "GST Returns Offline Tool",
+          "RFN Verification"
+        ]
+      },
+      {
+        "host": "kerala.gov.in",
+        "count": 19,
+        "texts": [
+          "KVAT / KGST / KML",
+          "Flood Cess",
+          "E-Consignment"
+        ]
+      },
+      {
+        "host": "ewaybill.nic.in",
+        "count": 1,
+        "texts": [
+          "GST e-Way Bill"
+        ]
+      },
+      {
+        "host": "tinxsys.com",
+        "count": 2,
+        "texts": [
+          "CST Search"
+        ]
+      },
+      {
+        "host": "cybercrime.gov.in",
+        "count": 1,
+        "texts": [
+          "Report Cyber Incidents"
+        ]
+      },
+      {
+        "host": "hamoskerala.gov.in",
+        "count": 1,
+        "texts": [
+          "HaMoS"
+        ]
+      },
+      {
+        "host": "spark.gov.in",
+        "count": 1,
+        "texts": [
+          "SPARK"
+        ]
+      },
+      {
+        "host": "ewaybillgst.gov.in",
+        "count": 1,
+        "texts": [
+          "e-Waybill Analytics"
+        ]
+      },
+      {
+        "host": "mail.gov.in",
+        "count": 1,
+        "texts": [
+          "Official e-mail"
+        ]
+      },
+      {
+        "host": "youtube.com",
+        "count": 3,
+        "texts": [
+          "Video Tutorials",
+          "Training Videos on GST",
+          "Awareness Videos"
+        ]
+      },
+      {
+        "host": "cbic-gst.gov.in",
+        "count": 1,
+        "texts": [
+          "Find Tax Rate"
+        ]
+      },
+      {
+        "host": "gstn.org.in",
+        "count": 2,
+        "texts": [
+          "link"
+        ]
+      },
+      {
+        "host": "gstsystem.in",
+        "count": 1,
+        "texts": [
+          "link"
+        ]
+      },
+      {
+        "host": "indiatimes.com",
+        "count": 10,
+        "texts": [
+          "Related Stories",
+          "6 stages of wealth: The framework behind the ET Wealth expo agenda",
+          "Who should be in the room: The five kinds of wealth builders ET Wealth Expo is built for"
+        ]
+      },
+      {
+        "host": "gstn.org",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "cbec.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "finmin.nic.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "webfreecounter.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "cdit.org",
+        "count": 1,
+        "texts": [
+          "C-DIT"
+        ]
+      }
+    ]
   },
   "score": {
-    "overall": 64,
-    "security": 48,
-    "accessibility": 96,
-    "content": 62,
-    "gigw": 0,
-    "performance": 90,
-    "identity": 92
+    "overall": 48,
+    "security": 52,
+    "accessibility": 22,
+    "content": 32,
+    "gigw": 54,
+    "performance": 67,
+    "identity": 96
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
     {
-      "id": "sec.http_redirect",
-      "sev": "H"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://gmpg.org/xfn/11\""
+    },
+    {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "bootstrap 3.3.4, bootstrap 3.3.2, select2 4.0.0"
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "1 critical violation(s)"
+    },
+    {
+      "id": "a11y.lang",
+      "sev": "H",
+      "ev": "<html lang=\"en-GB\"> vs. 38% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -87,33 +603,34 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "gigw.contact",
-      "sev": "H"
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-act"
     },
     {
-      "id": "gigw.rti",
-      "sev": "H"
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "2/30 crawled link(s) broken (https://kitis.keralataxes.gov.in/, https://keralataxes.gov.in/?p=2165)"
     },
     {
-      "id": "sec.hsts",
-      "sev": "M"
-    },
-    {
-      "id": "sec.xfo",
-      "sev": "M"
-    },
-    {
-      "id": "content.malayalam",
+      "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "Malayalam ratio 0.00, no language toggle found"
+      "ev": "20 serious violation(s)"
     },
     {
-      "id": "gigw.sitemap",
-      "sev": "M"
+      "id": "a11y.alt",
+      "sev": "M",
+      "ev": "1 image(s) missing alt text"
     },
     {
-      "id": "gigw.privacy",
-      "sev": "M"
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "5 low-contrast element(s)"
+    },
+    {
+      "id": "content.obsolete_tech",
+      "sev": "M",
+      "ev": "<marquee"
     },
     {
       "id": "gigw.accessibility_statement",
@@ -128,12 +645,18 @@
       "sev": "M"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "15274.798999999997ms"
     },
     {
-      "id": "sec.csp",
-      "sev": "L"
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "4.2MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.xcto",
@@ -146,23 +669,21 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "2 moderate/minor violation(s)"
+      "ev": "18 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "no <h1>"
     },
     {
       "id": "content.meta_desc",
       "sev": "L"
     },
     {
-      "id": "content.favicon",
-      "sev": "L"
-    },
-    {
-      "id": "gigw.feedback",
-      "sev": "L"
-    },
-    {
-      "id": "gigw.terms",
-      "sev": "L"
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "3 console error(s): Failed to load resource: the server responded with a status of 400 ()"
     },
     {
       "id": "gigw.copyright_policy",
@@ -170,10 +691,6 @@
     },
     {
       "id": "gigw.hyperlink_policy",
-      "sev": "L"
-    },
-    {
-      "id": "gigw.disclaimer",
       "sev": "L"
     },
     {
@@ -185,28 +702,35 @@
       "sev": "L"
     },
     {
-      "id": "gigw.search",
-      "sev": "L"
-    },
-    {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
-      "id": "id.soft_404",
+      "id": "perf.cls",
       "sev": "L",
-      "ev": "a nonexistent path returned 200"
+      "ev": "0.78"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 404"
     },
     {
       "id": "gigw.emblem",
       "sev": "I"
     },
     {
-      "id": "id.canonical",
-      "sev": "I"
+      "id": "id.third_party",
+      "sev": "I",
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-32MQLJGSM2&amp;cx=c&amp;gtm=4e6ac1, https://www.googletagmanager.com/gtag/js?id=UA-103783083-2"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-14",
+      "up": true,
+      "score": 48
+    },
     {
       "d": "2026-10-13",
       "up": true,
@@ -323,5 +847,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

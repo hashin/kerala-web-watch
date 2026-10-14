@@ -37,19 +37,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-06T02:11:08.811Z",
-    "run": "1791252628443",
+    "at": "2026-10-14T00:46:58.269Z",
+    "run": "1791938773421",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 61,
-      "accessibility": 88,
+      "accessibility": 82,
       "best_practices": 100,
       "seo": 85
     },
     "axe": {
       "critical": 0,
       "serious": 4,
-      "moderate": 10,
+      "moderate": 11,
       "minor": 0
     },
     "crawl": {
@@ -93,8 +93,7 @@
       },
       {
         "id": "avail.under_construction",
-        "r": "warn",
-        "ev": "\"under construction\" alongside 510 other characters"
+        "r": "pass"
       },
       {
         "id": "avail.ttfb",
@@ -181,7 +180,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "10 moderate/minor violation(s)"
+        "ev": "11 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -217,7 +216,7 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "88/100"
+        "ev": "82/100"
       },
       {
         "id": "perf.lighthouse",
@@ -227,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "18536.161500000002ms"
+        "ev": "17380.977499999994ms"
       },
       {
         "id": "perf.cls",
@@ -445,6 +444,15 @@
         ]
       },
       {
+        "host": "kerala.gov.in",
+        "count": 5,
+        "texts": [
+          "E-Tenders",
+          "Voters List",
+          "State Government"
+        ]
+      },
+      {
         "host": "youtube.com",
         "count": 2,
         "texts": [
@@ -463,15 +471,6 @@
         "count": 1,
         "texts": [
           "Read More"
-        ]
-      },
-      {
-        "host": "kerala.gov.in",
-        "count": 4,
-        "texts": [
-          "Voters List",
-          "State Government",
-          "E-Tender"
         ]
       },
       {
@@ -563,11 +562,6 @@
   "status": "needs-work",
   "issues": [
     {
-      "id": "avail.under_construction",
-      "sev": "H",
-      "ev": "\"under construction\" alongside 510 other characters"
-    },
-    {
       "id": "sec.mixed_content",
       "sev": "H",
       "ev": "href=\"http://perinthalmannamunicipality.lsgkerala.gov.in/en\""
@@ -611,7 +605,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "18536.161500000002ms"
+      "ev": "17380.977499999994ms"
     },
     {
       "id": "perf.weight",
@@ -625,7 +619,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "10 moderate/minor violation(s)"
+      "ev": "11 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -676,6 +670,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-14",
+      "up": true,
+      "score": 68
+    },
     {
       "d": "2026-10-13",
       "up": true,
@@ -782,5 +781,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

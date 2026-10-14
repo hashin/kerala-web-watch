@@ -35,19 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T04:04:04.743Z",
-    "run": "1791518448653",
+    "at": "2026-10-14T00:54:23.732Z",
+    "run": "1791939074408",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 37,
+      "accessibility": 54,
+      "best_practices": 74,
+      "seo": 67
     },
     "axe": {
       "critical": 5,
       "serious": 12,
-      "moderate": 27,
+      "moderate": 31,
       "minor": 1
     },
     "crawl": {
@@ -116,15 +116,15 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.hsts",
@@ -180,7 +180,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "28 moderate/minor violation(s)"
+        "ev": "32 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -215,20 +215,22 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "54/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "37/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "10136.687499999998ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.78"
       },
       {
         "id": "perf.weight",
@@ -241,7 +243,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -386,7 +388,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -448,11 +450,11 @@
       },
       {
         "host": "etlab.in",
-        "count": 4,
+        "count": 8,
         "texts": [
           "Campus Login",
-          "Quotation for Water Tank ( 3000 Ltr ) for Men's Hostel .",
-          "Quotation for the supply of Consumables for labs in Civil Engineering Department ( Extension Notices )  ."
+          "GEM Tender :Scanner",
+          "GEM Tender : All In One Pc (v2)  and Entry And Mid Level Laptop Notebook"
         ]
       },
       {
@@ -652,13 +654,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "10136.687499999998ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "4.9MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -675,7 +678,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "28 moderate/minor violation(s)"
+      "ev": "32 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -720,7 +723,16 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.78"
+    },
+    {
       "id": "perf.images",
+      "sev": "L"
+    },
+    {
+      "id": "id.www_consistency",
       "sev": "L"
     },
     {
@@ -743,6 +755,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-14",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-13",
       "up": false,
@@ -829,5 +846,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

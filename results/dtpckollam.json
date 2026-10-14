@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-13T03:03:23.176Z",
-    "run": "1791860510333",
+    "at": "2026-10-14T00:52:59.529Z",
+    "run": "1791939077404",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 49,
+      "performance": 32,
       "accessibility": 84,
       "best_practices": 88,
       "seo": 92
@@ -119,8 +119,7 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "29 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -221,21 +220,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "49/100"
+        "ev": "32/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7711.485ms"
+        "ev": "10770.9395ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.50"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "297.6MB"
+        "ev": "403.7MB"
       },
       {
         "id": "perf.viewport",
@@ -269,7 +269,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-container"
+        "ev": "ml-user"
       },
       {
         "id": "content.obsolete_tech",
@@ -423,7 +423,7 @@
     "screenshot": {
       "desktop": "dtpckollam.webp",
       "mobile": "dtpckollam-m.webp",
-      "phash": "f0f07060e0e0e0ff"
+      "phash": "7c1c1808090808ff"
     },
     "outlinks": [
       {
@@ -453,21 +453,16 @@
     ]
   },
   "score": {
-    "overall": 52,
-    "security": 28,
+    "overall": 54,
+    "security": 38,
     "accessibility": 70,
     "content": 56,
     "gigw": 26,
-    "performance": 76,
+    "performance": 72,
     "identity": 76
   },
   "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "29 days left"
-    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -486,7 +481,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-container"
+      "ev": "ml-user"
     },
     {
       "id": "gigw.rti",
@@ -526,12 +521,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7711.485ms"
+      "ev": "10770.9395ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "297.6MB"
+      "ev": "403.7MB"
     },
     {
       "id": "sec.csp",
@@ -590,6 +585,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.50"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -605,6 +605,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-14",
+      "up": true,
+      "score": 54
+    },
     {
       "d": "2026-10-13",
       "up": true,
@@ -716,5 +721,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

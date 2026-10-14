@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-13T02:52:03.953Z",
-    "run": "1791859858248",
+    "at": "2026-10-14T00:36:30.016Z",
+    "run": "1791938110405",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 51,
+      "performance": 61,
       "accessibility": 77,
       "best_practices": 92,
       "seo": 92
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4720ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -120,7 +121,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "fail",
-        "ev": "4 days left"
+        "ev": "3 days left"
       },
       {
         "id": "sec.tls_version",
@@ -222,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "51/100"
+        "ev": "61/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "12376.275999999994ms"
+        "ev": "12859.565999999997ms"
       },
       {
         "id": "perf.cls",
@@ -418,7 +419,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-Q595STPSXP&amp;cx=c&amp;gtm=4e6a91, https://www.googletagmanager.com/gtag/js?id=UA-12419584-1"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-Q595STPSXP&amp;cx=c&amp;gtm=4e6ac1, https://www.googletagmanager.com/gtag/js?id=UA-12419584-1"
       }
     ],
     "screenshot": {
@@ -495,7 +496,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "4 days left"
+      "ev": "3 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -521,6 +522,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-lsgd"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "4720ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -560,7 +566,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "12376.275999999994ms"
+      "ev": "12859.565999999997ms"
     },
     {
       "id": "id.tech",
@@ -639,10 +645,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-Q595STPSXP&amp;cx=c&amp;gtm=4e6a91, https://www.googletagmanager.com/gtag/js?id=UA-12419584-1"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-Q595STPSXP&amp;cx=c&amp;gtm=4e6ac1, https://www.googletagmanager.com/gtag/js?id=UA-12419584-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-14",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-10-13",
       "up": true,
@@ -759,5 +770,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

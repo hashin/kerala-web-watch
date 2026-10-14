@@ -37,19 +37,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-13T03:02:43.791Z",
-    "run": "1791860545170",
+    "at": "2026-10-14T00:54:53.771Z",
+    "run": "1791939271010",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 100,
-      "accessibility": 94,
+      "accessibility": 100,
       "best_practices": 100,
-      "seo": 82
+      "seo": 54
     },
     "axe": {
       "critical": 0,
       "serious": 0,
-      "moderate": 2,
+      "moderate": 0,
       "minor": 0
     },
     "crawl": {
@@ -113,7 +113,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
@@ -137,7 +137,7 @@
       },
       {
         "id": "sec.csp",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.xfo",
@@ -177,8 +177,7 @@
       },
       {
         "id": "a11y.axe_moderate_minor",
-        "r": "fail",
-        "ev": "2 moderate/minor violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.lang",
@@ -211,7 +210,7 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "94/100"
+        "ev": "100/100"
       },
       {
         "id": "perf.lighthouse",
@@ -293,7 +292,7 @@
       },
       {
         "id": "content.meta_desc",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.favicon",
@@ -377,7 +376,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -389,7 +388,8 @@
       },
       {
         "id": "id.soft_404",
-        "r": "na"
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
       },
       {
         "id": "id.canonical",
@@ -411,25 +411,21 @@
     "screenshot": {
       "desktop": "clinicalestablishmentskerala.webp",
       "mobile": "clinicalestablishmentskerala-m.webp",
-      "phash": "00003c3c3c3c0000"
+      "phash": "3c3c3c3c3c383000"
     },
     "outlinks": []
   },
   "score": {
-    "overall": 66,
-    "security": 48,
-    "accessibility": 96,
-    "content": 72,
+    "overall": 73,
+    "security": 72,
+    "accessibility": 100,
+    "content": 76,
     "gigw": 0,
     "performance": 90,
-    "identity": 100
+    "identity": 92
   },
   "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.http_redirect",
-      "sev": "H"
-    },
     {
       "id": "content.last_updated",
       "sev": "H",
@@ -476,24 +472,11 @@
       "sev": "M"
     },
     {
-      "id": "sec.csp",
-      "sev": "L"
-    },
-    {
       "id": "sec.xcto",
       "sev": "L"
     },
     {
       "id": "sec.referrer",
-      "sev": "L"
-    },
-    {
-      "id": "a11y.axe_moderate_minor",
-      "sev": "L",
-      "ev": "2 moderate/minor violation(s)"
-    },
-    {
-      "id": "content.meta_desc",
       "sev": "L"
     },
     {
@@ -533,6 +516,15 @@
       "sev": "L"
     },
     {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
+      "id": "id.soft_404",
+      "sev": "L",
+      "ev": "a nonexistent path returned 200"
+    },
+    {
       "id": "gigw.emblem",
       "sev": "I"
     },
@@ -542,6 +534,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-14",
+      "up": true,
+      "score": 73
+    },
     {
       "d": "2026-10-13",
       "up": true,
@@ -658,5 +655,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

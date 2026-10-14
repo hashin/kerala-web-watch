@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-11T00:46:30.989Z",
-    "run": "1791679429166",
+    "at": "2026-10-14T00:58:26.685Z",
+    "run": "1791939416122",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 56,
       "accessibility": 98,
       "best_practices": 100,
       "seo": 92
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "fail",
-        "ev": "16801ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -112,7 +111,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.cert_valid",
@@ -220,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "56/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "13145.026000000009ms"
+        "ev": "12055.766ms"
       },
       {
         "id": "perf.cls",
@@ -433,14 +432,14 @@
         "host": "cookieadmin.net",
         "count": 1,
         "texts": [
-          "Powered by .a{fill:#001d39}.b{fill:#985e23}"
+          "Powered by CookieAdmin.a{fill:#001d39}.b{fill:#985e23}"
         ]
       }
     ]
   },
   "score": {
-    "overall": 60,
-    "security": 64,
+    "overall": 55,
+    "security": 44,
     "accessibility": 70,
     "content": 50,
     "gigw": 18,
@@ -449,6 +448,10 @@
   },
   "status": "needs-work",
   "issues": [
+    {
+      "id": "sec.http_redirect",
+      "sev": "H"
+    },
     {
       "id": "content.last_updated",
       "sev": "H",
@@ -468,11 +471,6 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "kaicltd.com"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "16801ms"
     },
     {
       "id": "sec.hsts",
@@ -515,7 +513,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "13145.026000000009ms"
+      "ev": "12055.766ms"
     },
     {
       "id": "perf.weight",
@@ -592,6 +590,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-14",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-13",
       "up": true,
@@ -703,5 +706,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

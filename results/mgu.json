@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-13T02:47:51.425Z",
-    "run": "1791859613663",
+    "at": "2026-10-14T00:41:08.390Z",
+    "run": "1791938407861",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 69,
+      "performance": 72,
       "accessibility": 100,
       "best_practices": 92,
-      "seo": 83
+      "seo": 92
     },
     "axe": {
       "critical": 0,
@@ -52,8 +52,8 @@
     },
     "crawl": {
       "pages": 6,
-      "pdfs": 2,
-      "broken": 1
+      "pdfs": 3,
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -217,12 +217,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "69/100"
+        "ev": "72/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "5447.97ms"
+        "ev": "4638.625ms"
       },
       {
         "id": "perf.cls",
@@ -231,7 +231,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "155.9MB"
+        "ev": "127.3MB"
       },
       {
         "id": "perf.viewport",
@@ -278,8 +278,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/6 crawled link(s) broken (https://cdoe.mgu.ac.in/programmes/b-com-co-operation/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -419,15 +418,15 @@
     "screenshot": {
       "desktop": "mgu.webp",
       "mobile": "mgu-m.webp",
-      "phash": "3f7f79010081817f"
+      "phash": "feffff000000837f"
     },
     "outlinks": []
   },
   "score": {
-    "overall": 54,
+    "overall": 55,
     "security": 42,
     "accessibility": 86,
-    "content": 28,
+    "content": 38,
     "gigw": 0,
     "performance": 76,
     "identity": 100
@@ -452,11 +451,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/6 crawled link(s) broken (https://cdoe.mgu.ac.in/programmes/b-com-co-operation/)"
     },
     {
       "id": "gigw.contact",
@@ -503,12 +497,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "5447.97ms"
+      "ev": "4638.625ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "155.9MB"
+      "ev": "127.3MB"
     },
     {
       "id": "sec.csp",
@@ -584,6 +578,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-14",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-13",
       "up": true,
@@ -690,5 +689,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

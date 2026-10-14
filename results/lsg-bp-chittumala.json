@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T01:31:55.425Z",
-    "run": "1791336675422",
+    "at": "2026-10-14T01:03:12.421Z",
+    "run": "1791939739217",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 52,
-      "accessibility": 83,
+      "performance": 59,
+      "accessibility": 80,
       "best_practices": 78,
       "seo": 83
     },
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 2
     },
     "tech": {
       "cms": "Drupal 11",
@@ -217,17 +217,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "83/100"
+        "ev": "80/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "52/100"
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9192.033ms"
+        "ev": "8286.662ms"
       },
       {
         "id": "perf.cls",
@@ -283,7 +283,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/30 crawled link(s) broken (http://chittumalablockpanchayat.lsgkerala.gov.in/about)"
+        "ev": "2/30 crawled link(s) broken (https://lsgkerala.gov.in/, http://chittumalablockpanchayat.lsgkerala.gov.in/about)"
       },
       {
         "id": "content.broken_pdfs",
@@ -555,7 +555,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (http://chittumalablockpanchayat.lsgkerala.gov.in/about)"
+      "ev": "2/30 crawled link(s) broken (https://lsgkerala.gov.in/, http://chittumalablockpanchayat.lsgkerala.gov.in/about)"
     },
     {
       "id": "gigw.rti",
@@ -595,7 +595,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9192.033ms"
+      "ev": "8286.662ms"
     },
     {
       "id": "perf.weight",
@@ -672,6 +672,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-14",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-13",
       "up": false,
@@ -788,5 +793,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,19 +35,24 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-13T02:49:07.772Z",
-    "run": "1791859652563",
+    "at": "2026-10-14T00:37:35.394Z",
+    "run": "1791938204141",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 45,
+      "accessibility": 70,
+      "best_practices": 69,
+      "seo": 83
+    },
     "axe": {
       "critical": 66,
-      "serious": 56,
-      "moderate": 68,
+      "serious": 57,
+      "moderate": 61,
       "minor": 93
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 2,
+      "pdfs": 3,
       "broken": 0
     },
     "tech": {
@@ -171,12 +176,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "56 serious violation(s)"
+        "ev": "57 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "161 moderate/minor violation(s)"
+        "ev": "154 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -195,7 +200,7 @@
       {
         "id": "a11y.headings",
         "r": "fail",
-        "ev": "no <h1>, heading levels skipped"
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -212,24 +217,27 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "70/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "45/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "17783.548ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "8.1MB"
+        "ev": "9.0MB"
       },
       {
         "id": "perf.viewport",
@@ -237,11 +245,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -306,7 +314,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "21 console error(s): Google Maps JavaScript API error: BillingNotEnabledMapError\nhttps://developers.google.com/maps/documentation/javascript/error-messages#billing-not-enabled-map-error"
+        "ev": "21 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
@@ -417,12 +425,12 @@
     "screenshot": {
       "desktop": "kuhs.webp",
       "mobile": "kuhs-m.webp",
-      "phash": "ff2000ffffff0000"
+      "phash": "007e7e7c7e7e4202"
     },
     "outlinks": [
       {
         "host": "youtube.com",
-        "count": 1,
+        "count": 2,
         "texts": []
       },
       {
@@ -443,12 +451,12 @@
     ]
   },
   "score": {
-    "overall": 48,
+    "overall": 46,
     "security": 34,
     "accessibility": 40,
     "content": 42,
     "gigw": 30,
-    "performance": 90,
+    "performance": 76,
     "identity": 92
   },
   "status": "poor",
@@ -485,7 +493,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "56 serious violation(s)"
+      "ev": "57 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -523,9 +531,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "17783.548ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "8.1MB"
+      "ev": "9.0MB"
     },
     {
       "id": "sec.csp",
@@ -547,12 +560,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "161 moderate/minor violation(s)"
+      "ev": "154 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "no <h1>, heading levels skipped"
+      "ev": "heading levels skipped"
     },
     {
       "id": "a11y.keyboard",
@@ -567,7 +580,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "21 console error(s): Google Maps JavaScript API error: BillingNotEnabledMapError\nhttps://developers.google.com/maps/documentation/javascript/error-messages#billing-not-enabled-map-error"
+      "ev": "21 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.copyright_policy",
@@ -590,6 +603,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -608,6 +625,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-14",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-10-13",
       "up": true,
@@ -724,5 +746,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

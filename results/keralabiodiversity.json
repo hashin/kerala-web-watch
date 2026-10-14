@@ -35,15 +35,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-13T03:03:32.195Z",
-    "run": "1791860452446",
+    "at": "2026-10-14T00:46:02.323Z",
+    "run": "1791938678045",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 6,
-      "accessibility": 83,
-      "best_practices": 81,
-      "seo": 75
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 6,
       "serious": 12,
@@ -53,7 +48,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 3,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "WordPress 7.1.3",
@@ -95,7 +90,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3009ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -215,23 +211,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "83/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "6/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "7926.509ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.75"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -244,11 +236,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -282,8 +274,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://keralabiodiversity.org/?page_id=676)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -515,15 +506,15 @@
     ]
   },
   "score": {
-    "overall": 47,
+    "overall": 51,
     "security": 48,
     "accessibility": 40,
-    "content": 46,
+    "content": 56,
     "gigw": 32,
-    "performance": 62,
+    "performance": 90,
     "identity": 72
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -546,14 +537,14 @@
       "ev": "ml-IN"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://keralabiodiversity.org/?page_id=676)"
-    },
-    {
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "keralabiodiversity.org"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3009ms"
     },
     {
       "id": "sec.hsts",
@@ -595,18 +586,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "7926.509ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "24.2MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -668,15 +650,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.75"
-    },
-    {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.robots",
       "sev": "L",
       "ev": "robots.txt returned 404"
@@ -688,6 +661,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-14",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-10-13",
       "up": true,
@@ -804,5 +782,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

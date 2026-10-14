@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-10T01:24:45.970Z",
-    "run": "1791595426111",
+    "at": "2026-10-14T00:47:59.681Z",
+    "run": "1791938830699",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
+      "performance": 60,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 85
@@ -49,13 +49,13 @@
     "axe": {
       "critical": 0,
       "serious": 6,
-      "moderate": 10,
+      "moderate": 11,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -180,7 +180,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "10 moderate/minor violation(s)"
+        "ev": "11 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "69577.85449999999ms"
+        "ev": "46328.31499999999ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "14.7MB"
+        "ev": "18.7MB"
       },
       {
         "id": "perf.viewport",
@@ -281,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://meeting.lsgkerala.gov.in/Pages/LBWiseDashBoard.aspx)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -557,10 +556,10 @@
     ]
   },
   "score": {
-    "overall": 66,
+    "overall": 68,
     "security": 76,
     "accessibility": 70,
-    "content": 46,
+    "content": 56,
     "gigw": 36,
     "performance": 76,
     "identity": 96
@@ -581,11 +580,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://meeting.lsgkerala.gov.in/Pages/LBWiseDashBoard.aspx)"
     },
     {
       "id": "a11y.axe_serious",
@@ -616,12 +610,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "69577.85449999999ms"
+      "ev": "46328.31499999999ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "14.7MB"
+      "ev": "18.7MB"
     },
     {
       "id": "sec.csp",
@@ -630,7 +624,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "10 moderate/minor violation(s)"
+      "ev": "11 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -681,6 +675,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-14",
+      "up": true,
+      "score": 68
+    },
     {
       "d": "2026-10-13",
       "up": true,
@@ -787,5 +786,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

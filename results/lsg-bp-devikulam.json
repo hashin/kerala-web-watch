@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T01:39:22.105Z",
-    "run": "1791337107144",
+    "at": "2026-10-14T01:04:27.149Z",
+    "run": "1791939819843",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 59,
-      "accessibility": 89,
+      "performance": 60,
+      "accessibility": 85,
       "best_practices": 78,
       "seo": 92
     },
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -217,17 +217,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "89/100"
+        "ev": "85/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "59/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8965.5955ms"
+        "ev": "8940.351ms"
       },
       {
         "id": "perf.cls",
@@ -236,7 +236,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "8.7MB"
+        "ev": "8.8MB"
       },
       {
         "id": "perf.viewport",
@@ -282,8 +282,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://lsgkerala.gov.in/ml/act-rule)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -539,11 +538,6 @@
       "ev": "ml-user"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://lsgkerala.gov.in/ml/act-rule)"
-    },
-    {
       "id": "gigw.rti",
       "sev": "H"
     },
@@ -581,12 +575,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8965.5955ms"
+      "ev": "8940.351ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "8.7MB"
+      "ev": "8.8MB"
     },
     {
       "id": "perf.tap_targets",
@@ -658,6 +652,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-14",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-13",
       "up": false,
@@ -774,5 +773,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

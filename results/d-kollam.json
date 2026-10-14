@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T01:22:09.042Z",
-    "run": "1791508868736",
+    "at": "2026-10-14T00:31:08.524Z",
+    "run": "1791937800632",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 55,
       "accessibility": 96,
-      "best_practices": 50,
-      "seo": 92
+      "best_practices": 46,
+      "seo": 85
     },
     "axe": {
       "critical": 16,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3105ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -224,7 +225,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "24636.21075000001ms"
+        "ev": "21603.565ms"
       },
       {
         "id": "perf.cls",
@@ -309,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "9 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "9 console error(s): Refused to apply style from 'https://kollam.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       },
       {
         "id": "gigw.contact",
@@ -515,6 +516,11 @@
       "ev": "ml-IN"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3105ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -538,7 +544,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "24636.21075000001ms"
+      "ev": "21603.565ms"
     },
     {
       "id": "perf.weight",
@@ -580,7 +586,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "9 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "9 console error(s): Refused to apply style from 'https://kollam.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
     },
     {
       "id": "gigw.terms",
@@ -618,6 +624,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-14",
+      "up": true,
+      "score": 62
+    },
     {
       "d": "2026-10-13",
       "up": true,
@@ -724,5 +735,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

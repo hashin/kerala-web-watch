@@ -29,11 +29,11 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-10-02T01:05:10.825Z",
-    "run": "1790903061497",
+    "at": "2026-10-14T00:33:01.401Z",
+    "run": "1791937916206",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 71,
+      "performance": 77,
       "accessibility": 83,
       "best_practices": 73,
       "seo": 90
@@ -89,7 +89,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "5300ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -114,7 +115,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "23 days left"
+        "ev": "11 days left"
       },
       {
         "id": "sec.tls_version",
@@ -216,12 +217,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "71/100"
+        "ev": "77/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "4871.2029999999995ms"
+        "ev": "4051.5215000000007ms"
       },
       {
         "id": "perf.cls",
@@ -305,7 +306,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "11 console error(s): Mixed Content: The page at 'https://egrantz.kerala.gov.in/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext'. This request has been blocked; the content must be served over HTTPS."
+        "ev": "9 console error(s): Mixed Content: The page at 'https://egrantz.kerala.gov.in/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext'. This request has been blocked; the content must be served over HTTPS."
       },
       {
         "id": "gigw.contact",
@@ -412,7 +413,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-BNB7HHKSYL&amp;cx=c&amp;gtm=4e6a10h2, https://www.googletagmanager.com/gtag/js?id=UA-130113507-1"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-BNB7HHKSYL&amp;cx=c&amp;gtm=4e6ac1, https://www.googletagmanager.com/gtag/js?id=UA-130113507-1"
       }
     ],
     "screenshot": {
@@ -444,7 +445,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "23 days left"
+      "ev": "11 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -479,6 +480,11 @@
     {
       "id": "gigw.rti",
       "sev": "H"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "5300ms"
     },
     {
       "id": "sec.hsts",
@@ -517,7 +523,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "4871.2029999999995ms"
+      "ev": "4051.5215000000007ms"
     },
     {
       "id": "sec.csp",
@@ -557,7 +563,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "11 console error(s): Mixed Content: The page at 'https://egrantz.kerala.gov.in/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext'. This request has been blocked; the content must be served over HTTPS."
+      "ev": "9 console error(s): Mixed Content: The page at 'https://egrantz.kerala.gov.in/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext'. This request has been blocked; the content must be served over HTTPS."
     },
     {
       "id": "gigw.feedback",
@@ -608,10 +614,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-BNB7HHKSYL&amp;cx=c&amp;gtm=4e6a10h2, https://www.googletagmanager.com/gtag/js?id=UA-130113507-1"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-BNB7HHKSYL&amp;cx=c&amp;gtm=4e6ac1, https://www.googletagmanager.com/gtag/js?id=UA-130113507-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-14",
+      "up": true,
+      "score": 42
+    },
     {
       "d": "2026-10-13",
       "up": true,
@@ -718,5 +729,5 @@
       "score": 45
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

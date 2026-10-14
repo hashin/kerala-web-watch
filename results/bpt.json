@@ -35,29 +35,29 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-13T02:52:45.518Z",
-    "run": "1791859855651",
+    "at": "2026-10-14T00:41:36.989Z",
+    "run": "1791938426914",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 49,
+      "accessibility": 84,
+      "best_practices": 73,
+      "seo": 77
     },
     "axe": {
       "critical": 0,
-      "serious": 2,
-      "moderate": 2,
+      "serious": 3,
+      "moderate": 1,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
-      "pdfs": 0,
+      "pages": 25,
+      "pdfs": 1,
       "broken": 0
     },
     "tech": {
-      "cms": null,
-      "server": null,
+      "cms": "WordPress 7.1.3",
+      "server": "Apache",
       "jquery": null
     },
     "checks": [
@@ -67,16 +67,15 @@
       },
       {
         "id": "avail.connect",
-        "r": "fail",
-        "ev": "timeout"
+        "r": "pass"
       },
       {
         "id": "avail.status",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -88,8 +87,7 @@
       },
       {
         "id": "avail.blank",
-        "r": "fail",
-        "ev": "23 visible characters"
+        "r": "pass"
       },
       {
         "id": "avail.under_construction",
@@ -97,7 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -109,11 +107,11 @@
       },
       {
         "id": "sec.https",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
@@ -133,7 +131,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "fail",
+        "ev": "href=\"http://gmpg.org/xfn/11\""
       },
       {
         "id": "sec.csp",
@@ -153,11 +152,13 @@
       },
       {
         "id": "sec.server_banner",
-        "r": "pass"
+        "r": "fail",
+        "ev": "PHP/8.3.35"
       },
       {
         "id": "sec.vuln_js",
-        "r": "pass"
+        "r": "fail",
+        "ev": "moment.js 2.30.1, bootstrap 3.3.5, jquery-ui 1.10.3"
       },
       {
         "id": "sec.safe_browsing",
@@ -174,12 +175,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "2 serious violation(s)"
+        "ev": "3 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "2 moderate/minor violation(s)"
+        "ev": "1 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -196,7 +197,7 @@
       {
         "id": "a11y.headings",
         "r": "fail",
-        "ev": "no <h1>"
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -213,32 +214,34 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "84/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "49/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "42787.03649999998ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
-      },
-      {
-        "id": "perf.weight",
         "r": "pass"
       },
       {
+        "id": "perf.weight",
+        "r": "fail",
+        "ev": "16.9MB"
+      },
+      {
         "id": "perf.viewport",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -246,7 +249,7 @@
       },
       {
         "id": "content.copyright_year",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "content.last_updated",
@@ -263,11 +266,13 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "pass"
+        "r": "fail",
+        "ev": "ml-user"
       },
       {
         "id": "content.obsolete_tech",
-        "r": "pass"
+        "r": "fail",
+        "ev": "<marquee"
       },
       {
         "id": "content.best_viewed",
@@ -291,8 +296,7 @@
       },
       {
         "id": "content.title",
-        "r": "fail",
-        "ev": "missing <title>"
+        "r": "pass"
       },
       {
         "id": "content.meta_desc",
@@ -300,16 +304,15 @@
       },
       {
         "id": "content.favicon",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 503 ()"
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.feedback",
@@ -317,7 +320,7 @@
       },
       {
         "id": "gigw.sitemap",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.privacy",
@@ -353,7 +356,7 @@
       },
       {
         "id": "gigw.rti",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.search",
@@ -369,7 +372,7 @@
       },
       {
         "id": "gigw.emblem",
-        "r": "warn"
+        "r": "pass"
       },
       {
         "id": "id.gov_domain",
@@ -382,12 +385,11 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.robots",
-        "r": "fail",
-        "ev": "robots.txt returned 503"
+        "r": "pass"
       },
       {
         "id": "id.sitemap_xml",
@@ -399,16 +401,16 @@
       },
       {
         "id": "id.canonical",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.charset_doctype",
-        "r": "fail",
-        "ev": "missing UTF-8 charset, HTML5 doctype"
+        "r": "pass"
       },
       {
         "id": "id.tech",
-        "r": "pass"
+        "r": "pass",
+        "ev": "WordPress 7.1.3"
       },
       {
         "id": "id.third_party",
@@ -418,26 +420,374 @@
     "screenshot": {
       "desktop": "bpt.webp",
       "mobile": "bpt-m.webp",
-      "phash": "7fffffffffffffff"
+      "phash": "ff3e04e00300f1f1"
     },
-    "outlinks": []
+    "outlinks": [
+      {
+        "host": "kmml.com",
+        "count": 1,
+        "texts": [
+          "The Kerala Minerals and Metals Ltd"
+        ]
+      },
+      {
+        "host": "malabarcements.co.in",
+        "count": 1,
+        "texts": [
+          "Malabar Cements Ltd"
+        ]
+      },
+      {
+        "host": "travancoretitanium.com",
+        "count": 1,
+        "texts": [
+          "Travancore Titanium Products Ltd"
+        ]
+      },
+      {
+        "host": "tcckerala.com",
+        "count": 1,
+        "texts": [
+          "Travancore-Cochin Chemicals Ltd"
+        ]
+      },
+      {
+        "host": "ksdp.co.in",
+        "count": 1,
+        "texts": [
+          "Kerala State Drugs & Pharmaceuticals Ltd"
+        ]
+      },
+      {
+        "host": "travcement.com",
+        "count": 1,
+        "texts": [
+          "The Travancore Cements Ltd"
+        ]
+      },
+      {
+        "host": "kemdel.in",
+        "count": 1,
+        "texts": [
+          "Kerala State Mineral Development Corporation Ltd"
+        ]
+      },
+      {
+        "host": "keralapaper.in",
+        "count": 1,
+        "texts": [
+          "Kerala Paper Products Ltd"
+        ]
+      },
+      {
+        "host": "kel.co.in",
+        "count": 1,
+        "texts": [
+          "Kerala Electrical & Allied Engineering Company Ltd."
+        ]
+      },
+      {
+        "host": "tracocable.com",
+        "count": 1,
+        "texts": [
+          "Traco Cable Company Ltd"
+        ]
+      },
+      {
+        "host": "telk.com",
+        "count": 1,
+        "texts": [
+          "Transformers and Electricals Kerala Ltd"
+        ]
+      },
+      {
+        "host": "unilec.co.in",
+        "count": 1,
+        "texts": [
+          "United Electrical Industries Ltd"
+        ]
+      },
+      {
+        "host": "keleml.com",
+        "count": 1,
+        "texts": [
+          "KEL Electrical Machines Ltd"
+        ]
+      },
+      {
+        "host": "keltron.org",
+        "count": 1,
+        "texts": [
+          "Kerala State Electronic Development Corporation Ltd"
+        ]
+      },
+      {
+        "host": "keltroncomp.org",
+        "count": 1,
+        "texts": [
+          "Keltron Component Complex Ltd"
+        ]
+      },
+      {
+        "host": "keltronelcera.com",
+        "count": 1,
+        "texts": [
+          "Keltron Electro Ceramics Ltd"
+        ]
+      },
+      {
+        "host": "kerala.gov.in",
+        "count": 9,
+        "texts": [
+          "Steel Industrials Kerala Ltd",
+          "Alleppey Co-operative Spinning Mills Ltd",
+          "Kerala State Textile Corporation Ltd"
+        ]
+      },
+      {
+        "host": "siflindia.com",
+        "count": 1,
+        "texts": [
+          "Steel and Industrial Forgings Ltd"
+        ]
+      },
+      {
+        "host": "autokast.com",
+        "count": 1,
+        "texts": [
+          "Autokast Ltd"
+        ]
+      },
+      {
+        "host": "keralaautomobilesltd.com",
+        "count": 1,
+        "texts": [
+          "Kerala Automobiles Ltd"
+        ]
+      },
+      {
+        "host": "steelcomplexkerala.com",
+        "count": 1,
+        "texts": [
+          "SAIL-SCL Kerala Ltd"
+        ]
+      },
+      {
+        "host": "metalindustries.in",
+        "count": 1,
+        "texts": [
+          "The Metal Industries Ltd"
+        ]
+      },
+      {
+        "host": "kkmcsm.com",
+        "count": 1,
+        "texts": [
+          "K.Karunakaran Memorial Co-operative Spinning Mills Ltd"
+        ]
+      },
+      {
+        "host": "cancospin.org",
+        "count": 1,
+        "texts": [
+          "The Cannannore Co-operative Spinning Mills Ltd"
+        ]
+      },
+      {
+        "host": "malcospin.com",
+        "count": 1,
+        "texts": [
+          "The Malappuram Co-operative Spinning Mills Ltd"
+        ]
+      },
+      {
+        "host": "qcsmltd.com",
+        "count": 1,
+        "texts": [
+          "The Quilon Co-operative Spinning Mills Ltd"
+        ]
+      },
+      {
+        "host": "hanveevs.com",
+        "count": 1,
+        "texts": [
+          "Kerala State Handloom Development Corporation Ltd (Hanveev)"
+        ]
+      },
+      {
+        "host": "kccpl.in",
+        "count": 1,
+        "texts": [
+          "KCCP Limited"
+        ]
+      },
+      {
+        "host": "keralaceramics.com",
+        "count": 1,
+        "texts": [
+          "The Kerala Ceramics Ltd"
+        ]
+      },
+      {
+        "host": "keralaartisans.com",
+        "count": 1,
+        "texts": [
+          "Kerala Artisans Development Corporation Ltd"
+        ]
+      },
+      {
+        "host": "keralastatebamboocorp.com",
+        "count": 1,
+        "texts": [
+          "Kerala State Bamboo Corporation Ltd"
+        ]
+      },
+      {
+        "host": "kelpalm.com",
+        "count": 1,
+        "texts": [
+          "Kerala State Palmyrah Products Development and workers Welfare Corporation Ltd"
+        ]
+      },
+      {
+        "host": "fitkerala.co.in",
+        "count": 1,
+        "texts": [
+          "Forest Industries (Travancore) Ltd"
+        ]
+      },
+      {
+        "host": "keralasidco.com",
+        "count": 1,
+        "texts": [
+          "Kerala Small Industries Development Corporation Ltd"
+        ]
+      },
+      {
+        "host": "ksie.net",
+        "count": 1,
+        "texts": [
+          "Kerala State Industrial Enterprises Ltd"
+        ]
+      },
+      {
+        "host": "coircraft.com",
+        "count": 1,
+        "texts": [
+          "Kerala State Coir Corporation Ltd"
+        ]
+      },
+      {
+        "host": "kcmmc.com",
+        "count": 1,
+        "texts": [
+          "Kerala State Coir Machinery Manufacturing Company Limited"
+        ]
+      },
+      {
+        "host": "cashewcorporation.com",
+        "count": 1,
+        "texts": [
+          "Kerala State Cashew Development Corporation Ltd"
+        ]
+      },
+      {
+        "host": "cashewcapex.com",
+        "count": 1,
+        "texts": [
+          "The Kerala State Cashew Workers Apex Industrial Co-operative Society (Capex)"
+        ]
+      },
+      {
+        "host": "keralacashewboard.com",
+        "count": 1,
+        "texts": [
+          "Kerala Cashew Board"
+        ]
+      },
+      {
+        "host": "keralacm.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "keralakaumudi.com",
+        "count": 1,
+        "texts": [
+          "കെൽട്രോണിന് പ്രതിരോധ-ആണവ മേഖലയിൽ പുതിയ കരാറുകൾ"
+        ]
+      },
+      {
+        "host": "lokmattimes.com",
+        "count": 1,
+        "texts": [
+          "India set to launch Coal Exchanges under new regulatory framework"
+        ]
+      },
+      {
+        "host": "bioenergytimes.com",
+        "count": 1,
+        "texts": [
+          "India’s EV registrations climb in may as electric two-wheeler adoption nears major milestone"
+        ]
+      },
+      {
+        "host": "indiatimes.com",
+        "count": 1,
+        "texts": [
+          "EV registrations slump in Thiruvananthapuram as hybrids gain ground"
+        ]
+      },
+      {
+        "host": "ddnews.gov.in",
+        "count": 1,
+        "texts": [
+          "India on path to become global pharma and MedTech powerhouse, says Jitendra Singh"
+        ]
+      },
+      {
+        "host": "newindianexpress.com",
+        "count": 1,
+        "texts": [
+          "Kerala story: State PSUs post turnaround gains, record Rs 5,275 crore turnover in 2025-26"
+        ]
+      },
+      {
+        "host": "ipocentral.in",
+        "count": 1,
+        "texts": [
+          "Top Electric Two-Wheeler Companies in India by Market Share"
+        ]
+      },
+      {
+        "host": "domain-b.com",
+        "count": 1,
+        "texts": [
+          "Textiles ministry explores duty relief measures to support exports amid cost pressures"
+        ]
+      }
+    ]
   },
-  "score": null,
-  "status": "broken",
+  "score": {
+    "overall": 53,
+    "security": 24,
+    "accessibility": 82,
+    "content": 46,
+    "gigw": 28,
+    "performance": 76,
+    "identity": 80
+  },
+  "status": "needs-work",
   "issues": [
     {
-      "id": "avail.connect",
-      "sev": "C",
-      "ev": "timeout"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://gmpg.org/xfn/11\""
     },
     {
-      "id": "avail.blank",
-      "sev": "C",
-      "ev": "23 visible characters"
-    },
-    {
-      "id": "sec.http_redirect",
-      "sev": "H"
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "moment.js 2.30.1, bootstrap 3.3.5, jquery-ui 1.10.3"
     },
     {
       "id": "content.last_updated",
@@ -445,16 +795,9 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "gigw.contact",
-      "sev": "H"
-    },
-    {
-      "id": "gigw.rti",
-      "sev": "H"
-    },
-    {
-      "id": "perf.viewport",
-      "sev": "H"
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-user"
     },
     {
       "id": "id.gov_domain",
@@ -472,16 +815,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "2 serious violation(s)"
+      "ev": "3 serious violation(s)"
     },
     {
-      "id": "content.title",
+      "id": "content.obsolete_tech",
       "sev": "M",
-      "ev": "missing <title>"
-    },
-    {
-      "id": "gigw.sitemap",
-      "sev": "M"
+      "ev": "<marquee"
     },
     {
       "id": "gigw.privacy",
@@ -500,8 +839,14 @@
       "sev": "M"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "42787.03649999998ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "16.9MB"
     },
     {
       "id": "sec.csp",
@@ -516,27 +861,23 @@
       "sev": "L"
     },
     {
+      "id": "sec.server_banner",
+      "sev": "L",
+      "ev": "PHP/8.3.35"
+    },
+    {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "2 moderate/minor violation(s)"
+      "ev": "1 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "no <h1>"
+      "ev": "heading levels skipped"
     },
     {
       "id": "content.meta_desc",
       "sev": "L"
-    },
-    {
-      "id": "content.favicon",
-      "sev": "L"
-    },
-    {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 503 ()"
     },
     {
       "id": "gigw.feedback",
@@ -573,27 +914,14 @@
     {
       "id": "perf.images",
       "sev": "L"
-    },
-    {
-      "id": "id.robots",
-      "sev": "L",
-      "ev": "robots.txt returned 503"
-    },
-    {
-      "id": "id.charset_doctype",
-      "sev": "L",
-      "ev": "missing UTF-8 charset, HTML5 doctype"
-    },
-    {
-      "id": "gigw.emblem",
-      "sev": "I"
-    },
-    {
-      "id": "id.canonical",
-      "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-14",
+      "up": true,
+      "score": 53
+    },
     {
       "d": "2026-10-13",
       "up": false,
@@ -680,5 +1008,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

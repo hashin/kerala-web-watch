@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-13T03:05:12.560Z",
-    "run": "1791860649880",
+    "at": "2026-10-14T00:56:28.669Z",
+    "run": "1791939323172",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 31,
+      "performance": 33,
       "accessibility": 86,
       "best_practices": 88,
       "seo": 77
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3174ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -219,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "31/100"
+        "ev": "33/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "24698.841999999997ms"
+        "ev": "24438.375500000002ms"
       },
       {
         "id": "perf.cls",
@@ -415,7 +416,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-X0BSV06SMK&amp;cx=c&amp;gtm=4e6a91, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2&amp;cx=c&amp;gtm=4e6a91, https://www.googletagmanager.com/gtag/js?id=G-6YPTV5TC0F&amp;cx=c&amp;_slc=1, https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtm.js?id=GTM-KWK3DSF, https://www.googletagmanager.com/gtag/js?id&amp;ver=6.9.10, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-X0BSV06SMK&amp;cx=c&amp;gtm=4e6ac1, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2&amp;cx=c&amp;gtm=4e6ac1, https://www.googletagmanager.com/gtag/js?id=G-6YPTV5TC0F&amp;cx=c&amp;_slc=1, https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtm.js?id=GTM-KWK3DSF, https://www.googletagmanager.com/gtag/js?id&amp;ver=6.9.10, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2"
       }
     ],
     "screenshot": {
@@ -527,6 +528,11 @@
       "sev": "H"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3174ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -563,7 +569,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "24698.841999999997ms"
+      "ev": "24438.375500000002ms"
     },
     {
       "id": "perf.weight",
@@ -659,10 +665,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-X0BSV06SMK&amp;cx=c&amp;gtm=4e6a91, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2&amp;cx=c&amp;gtm=4e6a91, https://www.googletagmanager.com/gtag/js?id=G-6YPTV5TC0F&amp;cx=c&amp;_slc=1, https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtm.js?id=GTM-KWK3DSF, https://www.googletagmanager.com/gtag/js?id&amp;ver=6.9.10, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-X0BSV06SMK&amp;cx=c&amp;gtm=4e6ac1, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2&amp;cx=c&amp;gtm=4e6ac1, https://www.googletagmanager.com/gtag/js?id=G-6YPTV5TC0F&amp;cx=c&amp;_slc=1, https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtm.js?id=GTM-KWK3DSF, https://www.googletagmanager.com/gtag/js?id&amp;ver=6.9.10, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-14",
+      "up": true,
+      "score": 60
+    },
     {
       "d": "2026-10-13",
       "up": true,
@@ -774,5 +785,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

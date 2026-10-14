@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-13T02:46:21.071Z",
-    "run": "1791859342004",
+    "at": "2026-10-14T00:36:27.020Z",
+    "run": "1791937953310",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 53,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 1,
-      "broken": 0
+      "broken": 9
     },
     "tech": {
       "cms": "WordPress 5.0.30",
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "7028ms"
+        "ev": "6352ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -227,7 +227,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "17533.672000000002ms"
+        "ev": "17581.568ms"
       },
       {
         "id": "perf.cls",
@@ -282,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "9/30 crawled link(s) broken (https://dhs.kerala.gov.in/en/iec/, https://dhs.kerala.gov.in/en/%e0%b4%9c%e0%b4%be%e0%b4%97%e0%b5%8d%e0%b4%b0%e0%b4%a4-%e0%b4%a8%e0%b4%bf%e0%b4%b0%e0%b5%8d%e2%80%8d%e0%b4%a6%e0%b5%87%e0%b4%b6%e0%b4%99%e0%b5%8d%e0%b4%99%e0%b4%b3%e0%b5%8d%e2%80%8d/, https://dhs.kerala.gov.in/en/posters/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -311,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "1 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
+        "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/22cb88bc/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -453,10 +454,10 @@
     ]
   },
   "score": {
-    "overall": 48,
+    "overall": 45,
     "security": 46,
     "accessibility": 44,
-    "content": 52,
+    "content": 32,
     "gigw": 12,
     "performance": 66,
     "identity": 91
@@ -489,13 +490,18 @@
       "ev": "ml-IN"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "9/30 crawled link(s) broken (https://dhs.kerala.gov.in/en/iec/, https://dhs.kerala.gov.in/en/%e0%b4%9c%e0%b4%be%e0%b4%97%e0%b5%8d%e0%b4%b0%e0%b4%a4-%e0%b4%a8%e0%b4%bf%e0%b4%b0%e0%b5%8d%e2%80%8d%e0%b4%a6%e0%b5%87%e0%b4%b6%e0%b4%99%e0%b5%8d%e0%b4%99%e0%b4%b3%e0%b5%8d%e2%80%8d/, https://dhs.kerala.gov.in/en/posters/, ...)"
+    },
+    {
       "id": "gigw.contact",
       "sev": "H"
     },
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "7028ms"
+      "ev": "6352ms"
     },
     {
       "id": "sec.hsts",
@@ -535,7 +541,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "17533.672000000002ms"
+      "ev": "17581.568ms"
     },
     {
       "id": "perf.weight",
@@ -572,7 +578,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "1 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
+      "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/22cb88bc/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -617,6 +623,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-14",
+      "up": true,
+      "score": 45
+    },
     {
       "d": "2026-10-13",
       "up": true,
@@ -728,5 +739,5 @@
       "score": 45
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

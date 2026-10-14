@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-13T02:59:50.794Z",
-    "run": "1791860313645",
+    "at": "2026-10-14T00:48:24.445Z",
+    "run": "1791938864094",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 24,
+      "performance": 45,
       "accessibility": 37,
       "best_practices": 77,
       "seo": 67
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -219,17 +219,16 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "24/100"
+        "ev": "45/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "35447.56499999999ms"
+        "ev": "28889.618000000002ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.45"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -281,8 +280,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://www.oushadhi.org/product/ayush-kwath)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -455,12 +453,12 @@
     ]
   },
   "score": {
-    "overall": 44,
+    "overall": 46,
     "security": 48,
     "accessibility": 46,
-    "content": 28,
+    "content": 38,
     "gigw": 18,
-    "performance": 62,
+    "performance": 66,
     "identity": 76
   },
   "status": "poor",
@@ -484,11 +482,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://www.oushadhi.org/product/ayush-kwath)"
     },
     {
       "id": "id.gov_domain",
@@ -546,7 +539,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "35447.56499999999ms"
+      "ev": "28889.618000000002ms"
     },
     {
       "id": "perf.weight",
@@ -621,11 +614,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.45"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -649,6 +637,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-14",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-10-13",
       "up": true,
@@ -760,5 +753,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
