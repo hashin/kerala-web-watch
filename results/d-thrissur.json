@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-14T00:32:12.983Z",
-    "run": "1791937874331",
+    "at": "2026-10-15T00:04:40.156Z",
+    "run": "1792022606930",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 50,
+      "performance": 55,
       "accessibility": 84,
       "best_practices": 69,
       "seo": 83
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "50/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "27611.072999999997ms"
+        "ev": "26916.284500000005ms"
       },
       {
         "id": "perf.cls",
@@ -279,7 +279,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://thrissur.nic.in/en/villages-255/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -441,9 +442,9 @@
         "host": "s3waas.gov.in",
         "count": 6,
         "texts": [
+          "PDF\n                    \n\n                    \n                        Quotation Notice – Supply of a 130 Ah battery for the 100 kVA DG set at the Collectorate\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
           "PDF\n                    \n\n                    \n                        Final Report of the Social Impact Assessment Study – Regarding land acquisition for the construction of the Railway Over Bridge at LC No. 1 between Shornur and Vallathol Nagar railway stations.\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
-          "PDF\n                    \n\n                    \n                        Government of Kerala Extraordinary Gazette – 2616 – Volume 15 – Notification – Regarding land acquisition for the doubling of the railway line between Shoranur Junction and Vallathol Nagar railway stations.\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
-          "PDF\n                    \n\n                    \n                        INVITING QUOTATIONS FOR VEHICLE HIRING\n                        Download Document\n                    \n\n                    Opens downloadable PDF document"
+          "PDF\n                    \n\n                    \n                        Government of Kerala Extraordinary Gazette – 2616 – Volume 15 – Notification – Regarding land acquisition for the doubling of the railway line between Shoranur Junction and Vallathol Nagar railway stations.\n                        Download Document\n                    \n\n                    Opens downloadable PDF document"
         ]
       },
       {
@@ -470,10 +471,10 @@
     ]
   },
   "score": {
-    "overall": 61,
+    "overall": 60,
     "security": 48,
     "accessibility": 60,
-    "content": 52,
+    "content": 42,
     "gigw": 60,
     "performance": 76,
     "identity": 96
@@ -501,6 +502,11 @@
       "ev": "ml-IN"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://thrissur.nic.in/en/villages-255/)"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -524,7 +530,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "27611.072999999997ms"
+      "ev": "26916.284500000005ms"
     },
     {
       "id": "perf.weight",
@@ -603,6 +609,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-15",
+      "up": true,
+      "score": 60
+    },
     {
       "d": "2026-10-14",
       "up": true,
@@ -714,5 +725,5 @@
       "score": 63
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

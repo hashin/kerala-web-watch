@@ -35,13 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-10T01:09:43.528Z",
-    "run": "1791594497641",
+    "at": "2026-10-15T00:03:26.928Z",
+    "run": "1792022522990",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 40,
+      "performance": 56,
       "accessibility": 93,
-      "best_practices": 69,
+      "best_practices": 65,
       "seo": 83
     },
     "axe": {
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "40/100"
+        "ev": "56/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "28271.147999999957ms"
+        "ev": "8584.675500000001ms"
       },
       {
         "id": "perf.cls",
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://kannur.nic.in/en/#SkipContent)"
       },
       {
         "id": "content.broken_pdfs",
@@ -310,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "7 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "7 console error(s): Refused to apply style from 'https://kannur.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       },
       {
         "id": "gigw.contact",
@@ -488,10 +489,10 @@
     ]
   },
   "score": {
-    "overall": 57,
+    "overall": 55,
     "security": 48,
     "accessibility": 40,
-    "content": 56,
+    "content": 46,
     "gigw": 60,
     "performance": 76,
     "identity": 96
@@ -517,6 +518,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://kannur.nic.in/en/#SkipContent)"
     },
     {
       "id": "sec.hsts",
@@ -552,7 +558,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "28271.147999999957ms"
+      "ev": "8584.675500000001ms"
     },
     {
       "id": "perf.weight",
@@ -589,7 +595,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "7 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "7 console error(s): Refused to apply style from 'https://kannur.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
     },
     {
       "id": "gigw.terms",
@@ -626,6 +632,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-15",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-14",
       "up": true,
@@ -737,5 +748,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

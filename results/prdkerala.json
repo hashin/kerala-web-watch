@@ -35,13 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-14T00:49:59.485Z",
-    "run": "1791938934581",
+    "at": "2026-10-15T00:20:31.047Z",
+    "run": "1792023566694",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 13,
+      "performance": 16,
       "accessibility": 80,
-      "best_practices": 96,
+      "best_practices": 92,
       "seo": 85
     },
     "axe": {
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "13/100"
+        "ev": "16/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "16246.544999999998ms"
+        "ev": "22616.914500000003ms"
       },
       {
         "id": "perf.cls",
@@ -236,7 +236,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "19.6MB"
+        "ev": "18.3MB"
       },
       {
         "id": "perf.viewport",
@@ -291,7 +291,8 @@
       },
       {
         "id": "content.broken_images",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -312,7 +313,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/player/22cb88bc/www-player.css' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "25 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -542,12 +543,12 @@
     "overall": 50,
     "security": 42,
     "accessibility": 50,
-    "content": 42,
+    "content": 38,
     "gigw": 32,
     "performance": 72,
     "identity": 91
   },
-  "status": "down",
+  "status": "needs-work",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -612,12 +613,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "16246.544999999998ms"
+      "ev": "22616.914500000003ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "19.6MB"
+      "ev": "18.3MB"
     },
     {
       "id": "id.tech",
@@ -648,13 +649,18 @@
       "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
+      "id": "content.broken_images",
+      "sev": "L",
+      "ev": "1 broken image(s)"
+    },
+    {
       "id": "content.meta_desc",
       "sev": "L"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/player/22cb88bc/www-player.css' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "25 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.feedback",
@@ -708,6 +714,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-15",
+      "up": true,
+      "score": 50
+    },
     {
       "d": "2026-10-14",
       "up": false,
@@ -824,5 +835,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

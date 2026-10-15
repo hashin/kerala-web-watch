@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-14T01:08:33.782Z",
-    "run": "1791940070880",
+    "at": "2026-10-15T00:39:38.575Z",
+    "run": "1792024739886",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 59,
-      "accessibility": 89,
+      "performance": 60,
+      "accessibility": 85,
       "best_practices": 78,
       "seo": 92
     },
@@ -217,17 +217,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "89/100"
+        "ev": "85/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "59/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9224.0425ms"
+        "ev": "8849.073499999999ms"
       },
       {
         "id": "perf.cls",
@@ -358,7 +358,7 @@
       },
       {
         "id": "gigw.rti",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.search",
@@ -436,15 +436,6 @@
         "texts": []
       },
       {
-        "host": "youtube.com",
-        "count": 3,
-        "texts": [
-          "കെസ്മാർട്ട് സഹായി",
-          "സേവന സഹായി",
-          "മാലിന്യ പരിപാലന ചട്ടം 2026 - സഹായി"
-        ]
-      },
-      {
         "host": "legislative.gov.in",
         "count": 1,
         "texts": [
@@ -456,6 +447,14 @@
         "count": 1,
         "texts": [
           "പഞ്ചായത്ത് രാജ് ആക്ട്"
+        ]
+      },
+      {
+        "host": "youtube.com",
+        "count": 2,
+        "texts": [
+          "സേവന സഹായി",
+          "മാലിന്യ പരിപാലന ചട്ടം 2026 - സഹായി"
         ]
       },
       {
@@ -547,6 +546,10 @@
       "ev": "ml-user"
     },
     {
+      "id": "gigw.rti",
+      "sev": "H"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -580,7 +583,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9224.0425ms"
+      "ev": "8849.073499999999ms"
     },
     {
       "id": "perf.weight",
@@ -657,6 +660,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-15",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-14",
       "up": false,
@@ -773,5 +781,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

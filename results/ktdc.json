@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-14T00:46:16.092Z",
-    "run": "1791938694907",
+    "at": "2026-10-15T00:20:55.928Z",
+    "run": "1792023595355",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 54,
+      "performance": 56,
       "accessibility": 75,
       "best_practices": 96,
       "seo": 75
@@ -220,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "54/100"
+        "ev": "56/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "30167.096750000008ms"
+        "ev": "13590.351999999999ms"
       },
       {
         "id": "perf.cls",
@@ -233,8 +233,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "fail",
-        "ev": "15.0MB"
+        "r": "warn",
+        "ev": "7.5MB"
       },
       {
         "id": "perf.viewport",
@@ -311,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "29 console error(s): Loading the image 'https://www.googletagmanager.com/td?id=G-CHYYZYW5J8&v=3&t=t&pid=417421539&gtm=45je6ac1h1v9123782995za20gxf1&seq=1&exp=115938466~115938468~118897920~118897930~120213116~120385422~120469145~120469153~121046263~121046271~121246026~121246034&dl=www.ktdc.com%2F&tdp=G-CHYYZYW5J8;123782995;1;5;0&frm=0&pcid=_UA-19436010-1&bt=0&ct=3&z=0' violates the following Content Security Policy directive: \"img-src 'self' data: https://admin.bookingjini.com https://d3ki85qs1zca4t.cloudfront.net https://www.ktdc.com https://maps.googleapis.com https://maps.gstatic.com\". The action has been blocked."
+        "ev": "29 console error(s): Failed to load resource: net::ERR_INCOMPLETE_CHUNKED_ENCODING"
       },
       {
         "id": "gigw.contact",
@@ -469,12 +469,12 @@
     ]
   },
   "score": {
-    "overall": 57,
+    "overall": 58,
     "security": 90,
     "accessibility": 40,
     "content": 32,
     "gigw": 32,
-    "performance": 76,
+    "performance": 81,
     "identity": 76
   },
   "status": "needs-work",
@@ -547,12 +547,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "30167.096750000008ms"
+      "ev": "13590.351999999999ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "15.0MB"
+      "ev": "7.5MB"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -576,7 +576,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "29 console error(s): Loading the image 'https://www.googletagmanager.com/td?id=G-CHYYZYW5J8&v=3&t=t&pid=417421539&gtm=45je6ac1h1v9123782995za20gxf1&seq=1&exp=115938466~115938468~118897920~118897930~120213116~120385422~120469145~120469153~121046263~121046271~121246026~121246034&dl=www.ktdc.com%2F&tdp=G-CHYYZYW5J8;123782995;1;5;0&frm=0&pcid=_UA-19436010-1&bt=0&ct=3&z=0' violates the following Content Security Policy directive: \"img-src 'self' data: https://admin.bookingjini.com https://d3ki85qs1zca4t.cloudfront.net https://www.ktdc.com https://maps.googleapis.com https://maps.gstatic.com\". The action has been blocked."
+      "ev": "29 console error(s): Failed to load resource: net::ERR_INCOMPLETE_CHUNKED_ENCODING"
     },
     {
       "id": "gigw.terms",
@@ -626,6 +626,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-15",
+      "up": true,
+      "score": 58
+    },
     {
       "d": "2026-10-14",
       "up": true,
@@ -742,5 +747,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,23 +35,23 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-14T00:49:49.812Z",
-    "run": "1791938950719",
+    "at": "2026-10-15T00:27:33.255Z",
+    "run": "1792023987673",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 52,
+      "performance": 64,
       "accessibility": 95,
       "best_practices": 92,
       "seo": 92
     },
     "axe": {
-      "critical": 2,
+      "critical": 4,
       "serious": 10,
       "moderate": 3,
       "minor": 0
     },
     "crawl": {
-      "pages": 22,
+      "pages": 21,
       "pdfs": 0,
       "broken": 1
     },
@@ -169,7 +169,7 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "2 critical violation(s)"
+        "ev": "4 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "52/100"
+        "ev": "64/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6254.841ms"
+        "ev": "4260.168ms"
       },
       {
         "id": "perf.cls",
@@ -281,7 +281,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/22 crawled link(s) broken (http://kerala.gov.in/)"
+        "ev": "1/21 crawled link(s) broken (http://kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -468,7 +468,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "2 critical violation(s)"
+      "ev": "4 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -483,7 +483,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/22 crawled link(s) broken (http://kerala.gov.in/)"
+      "ev": "1/21 crawled link(s) broken (http://kerala.gov.in/)"
     },
     {
       "id": "sec.hsts",
@@ -528,7 +528,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6254.841ms"
+      "ev": "4260.168ms"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -605,6 +605,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-15",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-14",
       "up": true,
@@ -721,5 +726,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

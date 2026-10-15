@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-10T01:46:23.508Z",
-    "run": "1791596728885",
+    "at": "2026-10-15T00:27:09.072Z",
+    "run": "1792023974177",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 34,
+      "accessibility": 56,
+      "best_practices": 70,
+      "seo": 83
+    },
     "axe": {
       "critical": 17,
       "serious": 26,
@@ -52,7 +57,7 @@
     },
     "tech": {
       "cms": null,
-      "server": "Apache",
+      "server": "cloudflare",
       "jquery": "1.12.4"
     },
     "checks": [
@@ -210,24 +215,28 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "56/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "34/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "15258.134750000001ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "1.28"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "6.8MB"
+        "ev": "5.1MB"
       },
       {
         "id": "perf.viewport",
@@ -235,11 +244,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -262,7 +271,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-user"
+        "ev": "ml-"
       },
       {
         "id": "content.obsolete_tech",
@@ -408,7 +417,8 @@
       },
       {
         "id": "id.third_party",
-        "r": "pass"
+        "r": "warn",
+        "ev": "https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920"
       }
     ],
     "screenshot": {
@@ -587,7 +597,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-user"
+      "ev": "ml-"
     },
     {
       "id": "gigw.rti",
@@ -647,9 +657,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "15258.134750000001ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "6.8MB"
+      "ev": "5.1MB"
     },
     {
       "id": "sec.csp",
@@ -711,6 +726,15 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "1.28"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -721,9 +745,19 @@
     {
       "id": "id.canonical",
       "sev": "I"
+    },
+    {
+      "id": "id.third_party",
+      "sev": "I",
+      "ev": "https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-15",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-14",
       "up": false,
@@ -815,5 +849,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

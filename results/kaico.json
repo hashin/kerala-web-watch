@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-14T00:58:26.685Z",
-    "run": "1791939416122",
+    "at": "2026-10-15T00:34:16.186Z",
+    "run": "1792024363669",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 56,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "fail",
+        "ev": "9804ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -111,7 +112,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
@@ -224,7 +225,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "12055.766ms"
+        "ev": "11540.762999999999ms"
       },
       {
         "id": "perf.cls",
@@ -438,8 +439,8 @@
     ]
   },
   "score": {
-    "overall": 55,
-    "security": 44,
+    "overall": 60,
+    "security": 64,
     "accessibility": 70,
     "content": 50,
     "gigw": 18,
@@ -448,10 +449,6 @@
   },
   "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.http_redirect",
-      "sev": "H"
-    },
     {
       "id": "content.last_updated",
       "sev": "H",
@@ -471,6 +468,11 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "kaicltd.com"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "9804ms"
     },
     {
       "id": "sec.hsts",
@@ -513,7 +515,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "12055.766ms"
+      "ev": "11540.762999999999ms"
     },
     {
       "id": "perf.weight",
@@ -590,6 +592,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-15",
+      "up": true,
+      "score": 60
+    },
     {
       "d": "2026-10-14",
       "up": true,
@@ -706,5 +713,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

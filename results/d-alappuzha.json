@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-14T00:31:14.328Z",
-    "run": "1791937807285",
+    "at": "2026-10-15T00:03:23.267Z",
+    "run": "1792022527766",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 45,
+      "performance": 50,
       "accessibility": 96,
       "best_practices": 69,
       "seo": 92
@@ -53,11 +53,11 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "Apache",
       "jquery": null
     },
     "checks": [
@@ -127,7 +127,7 @@
       },
       {
         "id": "sec.hsts",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.mixed_content",
@@ -136,19 +136,19 @@
       },
       {
         "id": "sec.csp",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xfo",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xcto",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.referrer",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.server_banner",
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "45/100"
+        "ev": "50/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "27036.5775ms"
+        "ev": "38748.636ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +233,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "12.6MB"
+        "ev": "12.7MB"
       },
       {
         "id": "perf.viewport",
@@ -279,7 +279,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://alappuzha.nic.in/en/document-category/candidates-expenditure-statements/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -308,7 +309,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "11 console error(s): Refused to apply style from 'https://alappuzha.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+        "ev": "6 console error(s): Refused to apply style from 'https://alappuzha.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       },
       {
         "id": "gigw.contact",
@@ -494,10 +495,10 @@
     ]
   },
   "score": {
-    "overall": 70,
-    "security": 80,
+    "overall": 60,
+    "security": 48,
     "accessibility": 60,
-    "content": 56,
+    "content": 46,
     "gigw": 60,
     "performance": 76,
     "identity": 96
@@ -525,6 +526,19 @@
       "ev": "ml-IN"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://alappuzha.nic.in/en/document-category/candidates-expenditure-statements/)"
+    },
+    {
+      "id": "sec.hsts",
+      "sev": "M"
+    },
+    {
+      "id": "sec.xfo",
+      "sev": "M"
+    },
+    {
       "id": "a11y.labels",
       "sev": "M",
       "ev": "1 form control(s) without a label"
@@ -540,12 +554,24 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "27036.5775ms"
+      "ev": "38748.636ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "12.6MB"
+      "ev": "12.7MB"
+    },
+    {
+      "id": "sec.csp",
+      "sev": "L"
+    },
+    {
+      "id": "sec.xcto",
+      "sev": "L"
+    },
+    {
+      "id": "sec.referrer",
+      "sev": "L"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -565,7 +591,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "11 console error(s): Refused to apply style from 'https://alappuzha.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+      "ev": "6 console error(s): Refused to apply style from 'https://alappuzha.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
     },
     {
       "id": "gigw.terms",
@@ -603,6 +629,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-15",
+      "up": true,
+      "score": 60
+    },
     {
       "d": "2026-10-14",
       "up": true,
@@ -719,5 +750,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

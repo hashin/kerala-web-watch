@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-14T00:59:11.120Z",
-    "run": "1791939484982",
+    "at": "2026-10-15T00:30:44.784Z",
+    "run": "1792024200181",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 53,
       "accessibility": 64,
       "best_practices": 77,
       "seo": 75
@@ -97,8 +97,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "5376ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -187,7 +186,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 126% Malayalam content"
+        "ev": "<html lang=\"en\"> vs. 127% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -225,12 +224,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "53/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9818.126499999998ms"
+        "ev": "8730.3005ms"
       },
       {
         "id": "perf.cls",
@@ -388,7 +387,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "39 days left"
+        "ev": "38 days left"
       },
       {
         "id": "id.www_consistency",
@@ -487,7 +486,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 126% Malayalam content"
+      "ev": "<html lang=\"en\"> vs. 127% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -507,12 +506,7 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "39 days left"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "5376ms"
+      "ev": "38 days left"
     },
     {
       "id": "a11y.axe_serious",
@@ -544,7 +538,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9818.126499999998ms"
+      "ev": "8730.3005ms"
     },
     {
       "id": "perf.weight",
@@ -614,6 +608,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-15",
+      "up": true,
+      "score": 54
+    },
     {
       "d": "2026-10-14",
       "up": true,
@@ -730,5 +729,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

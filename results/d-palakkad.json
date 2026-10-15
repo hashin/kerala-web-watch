@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-14T00:32:41.998Z",
-    "run": "1791937875970",
+    "at": "2026-10-15T00:05:06.554Z",
+    "run": "1792022609921",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 49,
+      "performance": 50,
       "accessibility": 96,
       "best_practices": 69,
       "seo": 83
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "49/100"
+        "ev": "50/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "63256.815000000104ms"
+        "ev": "53363.632ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +233,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "147.1MB"
+        "ev": "73.8MB"
       },
       {
         "id": "perf.viewport",
@@ -279,7 +279,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://palakkad.nic.in/en/#SkipContent)"
       },
       {
         "id": "content.broken_pdfs",
@@ -308,7 +309,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "11 console error(s): Refused to apply style from 'https://palakkad.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+        "ev": "6 console error(s): Refused to apply style from 'https://palakkad.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       },
       {
         "id": "gigw.contact",
@@ -489,10 +490,10 @@
     ]
   },
   "score": {
-    "overall": 62,
+    "overall": 60,
     "security": 48,
     "accessibility": 60,
-    "content": 56,
+    "content": 46,
     "gigw": 60,
     "performance": 76,
     "identity": 96
@@ -520,6 +521,11 @@
       "ev": "ml-IN"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://palakkad.nic.in/en/#SkipContent)"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -543,12 +549,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "63256.815000000104ms"
+      "ev": "53363.632ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "147.1MB"
+      "ev": "73.8MB"
     },
     {
       "id": "sec.csp",
@@ -580,7 +586,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "11 console error(s): Refused to apply style from 'https://palakkad.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+      "ev": "6 console error(s): Refused to apply style from 'https://palakkad.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
     },
     {
       "id": "gigw.terms",
@@ -622,6 +628,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-15",
+      "up": true,
+      "score": 60
+    },
     {
       "d": "2026-10-14",
       "up": true,
@@ -733,5 +744,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

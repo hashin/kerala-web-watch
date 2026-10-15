@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-14T00:46:02.323Z",
-    "run": "1791938678045",
+    "at": "2026-10-15T00:17:31.601Z",
+    "run": "1792023369261",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 5,
+      "accessibility": 83,
+      "best_practices": 81,
+      "seo": 75
+    },
     "axe": {
       "critical": 6,
       "serious": 12,
@@ -90,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3009ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -211,24 +215,28 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "83/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "5/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "7240.8255ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.75"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "24.2MB"
+        "ev": "24.6MB"
       },
       {
         "id": "perf.viewport",
@@ -236,11 +244,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -506,15 +514,15 @@
     ]
   },
   "score": {
-    "overall": 51,
+    "overall": 49,
     "security": 48,
     "accessibility": 40,
     "content": 56,
     "gigw": 32,
-    "performance": 90,
+    "performance": 62,
     "identity": 72
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -540,11 +548,6 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "keralabiodiversity.org"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3009ms"
     },
     {
       "id": "sec.hsts",
@@ -586,9 +589,18 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "7240.8255ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "24.2MB"
+      "ev": "24.6MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -650,6 +662,15 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.75"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.robots",
       "sev": "L",
       "ev": "robots.txt returned 404"
@@ -661,6 +682,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-15",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-10-14",
       "up": true,
@@ -782,5 +808,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-13T03:12:55.227Z",
-    "run": "1791861119893",
+    "at": "2026-10-15T00:41:10.466Z",
+    "run": "1792024828501",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 60,
+      "performance": 59,
       "accessibility": 85,
       "best_practices": 78,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "60/100"
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8013.1900000000005ms"
+        "ev": "9197.288ms"
       },
       {
         "id": "perf.cls",
@@ -236,7 +236,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "10.1MB"
+        "ev": "10.2MB"
       },
       {
         "id": "perf.viewport",
@@ -282,8 +282,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://meeting.lsgkerala.gov.in/Pages/StateWiseDashBoard.aspx)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -548,11 +547,6 @@
       "ev": "ml-user"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://meeting.lsgkerala.gov.in/Pages/StateWiseDashBoard.aspx)"
-    },
-    {
       "id": "gigw.rti",
       "sev": "H"
     },
@@ -590,12 +584,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8013.1900000000005ms"
+      "ev": "9197.288ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "10.1MB"
+      "ev": "10.2MB"
     },
     {
       "id": "perf.tap_targets",
@@ -667,6 +661,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-15",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-14",
       "up": false,
@@ -783,5 +782,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

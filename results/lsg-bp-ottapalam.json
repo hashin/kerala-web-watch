@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T01:56:04.266Z",
-    "run": "1791510903850",
+    "at": "2026-10-15T00:43:37.087Z",
+    "run": "1792024963920",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 60,
-      "accessibility": 89,
+      "accessibility": 85,
       "best_practices": 74,
       "seo": 92
     },
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -217,7 +217,7 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "89/100"
+        "ev": "85/100"
       },
       {
         "id": "perf.lighthouse",
@@ -227,7 +227,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7895.0435ms"
+        "ev": "7759.193000000001ms"
       },
       {
         "id": "perf.cls",
@@ -282,8 +282,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://plan.lsgkerala.gov.in/formulation/Public.aspx)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -541,11 +540,6 @@
       "ev": "ml-user"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://plan.lsgkerala.gov.in/formulation/Public.aspx)"
-    },
-    {
       "id": "gigw.rti",
       "sev": "H"
     },
@@ -583,7 +577,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7895.0435ms"
+      "ev": "7759.193000000001ms"
     },
     {
       "id": "perf.weight",
@@ -660,6 +654,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-15",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-14",
       "up": false,
@@ -776,5 +775,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -29,10 +29,15 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-10-14T00:39:10.132Z",
-    "run": "1791938301897",
+    "at": "2026-10-15T00:14:24.470Z",
+    "run": "1792023218319",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 45,
+      "accessibility": 69,
+      "best_practices": 88,
+      "seo": 83
+    },
     "axe": {
       "critical": 35,
       "serious": 19,
@@ -203,19 +208,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "69/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "45/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "11970.383499999998ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -228,11 +236,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -483,15 +491,15 @@
     ]
   },
   "score": {
-    "overall": 49,
+    "overall": 47,
     "security": 28,
     "accessibility": 52,
     "content": 46,
     "gigw": 36,
-    "performance": 95,
+    "performance": 71,
     "identity": 76
   },
-  "status": "down",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -563,9 +571,18 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "11970.383499999998ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "5.1MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -619,6 +636,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.soft_404",
       "sev": "L",
       "ev": "a nonexistent path returned 200"
@@ -638,6 +659,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-15",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-10-14",
       "up": false,
@@ -754,5 +780,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

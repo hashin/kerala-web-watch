@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-14T00:54:30.023Z",
-    "run": "1791939220326",
+    "at": "2026-10-15T00:27:25.351Z",
+    "run": "1792023992709",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 72,
+      "performance": 47,
       "accessibility": 85,
       "best_practices": 73,
       "seo": 92
@@ -222,11 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "72/100"
+        "ev": "47/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "fail",
+        "ev": "4599.3845ms"
       },
       {
         "id": "perf.cls",
@@ -425,7 +426,7 @@
     "screenshot": {
       "desktop": "government-polytechnic-college-neyyattinkara.webp",
       "mobile": "government-polytechnic-college-neyyattinkara-m.webp",
-      "phash": "ffff0018c3c30f0f"
+      "phash": "ffff00c00e0f0f0f"
     },
     "outlinks": [
       {
@@ -481,12 +482,12 @@
     ]
   },
   "score": {
-    "overall": 46,
+    "overall": 45,
     "security": 24,
     "accessibility": 74,
     "content": 26,
     "gigw": 2,
-    "performance": 81,
+    "performance": 71,
     "identity": 87
   },
   "status": "poor",
@@ -562,6 +563,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "4599.3845ms"
     },
     {
       "id": "perf.weight",
@@ -658,6 +664,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-15",
+      "up": true,
+      "score": 45
+    },
+    {
       "d": "2026-10-14",
       "up": true,
       "score": 46
@@ -753,5 +764,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

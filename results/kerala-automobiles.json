@@ -29,29 +29,29 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-10-14T00:34:42.952Z",
-    "run": "1791938013856",
+    "at": "2026-10-15T00:08:46.353Z",
+    "run": "1792022892139",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 50,
+      "accessibility": 77,
+      "best_practices": 69,
+      "seo": 83
     },
     "axe": {
       "critical": 5,
       "serious": 9,
-      "moderate": 8,
+      "moderate": 9,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
+      "pages": 1,
       "pdfs": 0,
       "broken": 0
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "openresty",
       "jquery": null
     },
     "checks": [
@@ -61,16 +61,15 @@
       },
       {
         "id": "avail.connect",
-        "r": "fail",
-        "ev": "timeout"
+        "r": "pass"
       },
       {
         "id": "avail.status",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -83,7 +82,7 @@
       {
         "id": "avail.blank",
         "r": "fail",
-        "ev": "0 visible characters"
+        "ev": "44 visible characters"
       },
       {
         "id": "avail.under_construction",
@@ -91,7 +90,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "na"
+        "r": "fail",
+        "ev": "8148ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -103,7 +103,7 @@
       },
       {
         "id": "sec.https",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
@@ -111,15 +111,16 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "na"
+        "r": "fail",
+        "ev": "certificate chain invalid, expired, or hostname mismatch"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.hsts",
@@ -127,7 +128,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.csp",
@@ -174,7 +175,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "8 moderate/minor violation(s)"
+        "ev": "9 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -210,20 +211,21 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "77/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "50/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "7817.562999999998ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -235,7 +237,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -301,7 +303,8 @@
       },
       {
         "id": "content.console_errors",
-        "r": "pass"
+        "r": "fail",
+        "ev": "2 console error(s): Access to fetch at 'https://cdn.consentmanager.net/delivery/js/cmp_en.min.js' from origin 'https://keralaautomobilesltd.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -382,11 +385,12 @@
       },
       {
         "id": "id.robots",
-        "r": "na"
+        "r": "fail",
+        "ev": "Disallow: / for User-agent: *"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.soft_404",
@@ -421,14 +425,14 @@
   "status": "broken",
   "issues": [
     {
-      "id": "avail.connect",
-      "sev": "C",
-      "ev": "timeout"
-    },
-    {
       "id": "avail.blank",
       "sev": "C",
-      "ev": "0 visible characters"
+      "ev": "44 visible characters"
+    },
+    {
+      "id": "sec.cert_valid",
+      "sev": "C",
+      "ev": "certificate chain invalid, expired, or hostname mismatch"
     },
     {
       "id": "sec.http_redirect",
@@ -456,6 +460,11 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "keralaautomobilesltd.com"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "8148ms"
     },
     {
       "id": "sec.hsts",
@@ -506,8 +515,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "7817.562999999998ms"
     },
     {
       "id": "sec.csp",
@@ -524,7 +534,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "8 moderate/minor violation(s)"
+      "ev": "9 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -538,6 +548,11 @@
     {
       "id": "content.favicon",
       "sev": "L"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "2 console error(s): Access to fetch at 'https://cdn.consentmanager.net/delivery/js/cmp_en.min.js' from origin 'https://keralaautomobilesltd.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -576,6 +591,11 @@
       "sev": "L"
     },
     {
+      "id": "id.robots",
+      "sev": "L",
+      "ev": "Disallow: / for User-agent: *"
+    },
+    {
       "id": "id.charset_doctype",
       "sev": "L",
       "ev": "missing UTF-8 charset, HTML5 doctype"
@@ -590,6 +610,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-15",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-14",
       "up": false,
@@ -661,5 +686,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

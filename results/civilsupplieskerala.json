@@ -35,35 +35,639 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-21T17:29:33.717Z",
-    "run": "1790011654039",
+    "at": "2026-10-15T00:03:29.919Z",
+    "run": "1792022527232",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 55,
+      "accessibility": 77,
+      "best_practices": 77,
+      "seo": 73
+    },
     "axe": {
-      "critical": 0,
-      "serious": 0,
-      "moderate": 0,
+      "critical": 10,
+      "serious": 11,
+      "moderate": 29,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
-      "pdfs": 0,
-      "broken": 0
+      "pages": 30,
+      "pdfs": 6,
+      "broken": 6
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "",
       "jquery": null
     },
-    "checks": [],
-    "screenshot": null,
-    "outlinks": [],
-    "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://civilsupplieskerala.gov.in/\", waiting until \"load\"\n"
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "warn",
+        "ev": "3098ms"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "fail",
+        "ev": "1 days left"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "pass"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "pass"
+      },
+      {
+        "id": "sec.csp",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "pass"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "pass"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "pass"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "fail",
+        "ev": "ckeditor 4.0.1.1, bootstrap 3.3.1, highcharts 6.1.0"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "fail",
+        "ev": "10 critical violation(s)"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "11 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "29 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "fail",
+        "ev": "<html lang=\"\"> vs. 93% Malayalam content"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "fail",
+        "ev": "10 image(s) missing alt text"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "fail",
+        "ev": "5 low-contrast element(s)"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "heading levels skipped"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "77/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "55/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "11206.5055ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "pass"
+      },
+      {
+        "id": "perf.weight",
+        "r": "fail",
+        "ev": "8.9MB"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "fail"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "pass"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-user"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "pass"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "fail",
+        "ev": "6 linked PDF(s) 404: https://civilsupplieskerala.gov.in/images/RATIONCARD_FAQ.pdf, https://civilsupplieskerala.gov.in/images/FAQ_GasConnection.pdf, https://civilsupplieskerala.gov.in/images/ariyuka_aavsihyapeduka.pdf, https://civilsupplieskerala.gov.in/images/Bhadratha.pdf, https://civilsupplieskerala.gov.in/images/Aadhaar%20seeding%20help-%20corrected-1.pdf, https://civilsupplieskerala.gov.in/images/Aadhaar%20seeding%20help-corrected-2.pdf"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "pass"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "fail"
+      },
+      {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.contact",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.search",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "pass"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "pass"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "na"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "fail"
+      },
+      {
+        "id": "id.robots",
+        "r": "fail",
+        "ev": "robots.txt returned 404"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "fail"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "fail",
+        "ev": "missing HTML5 doctype"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "pass"
+      }
+    ],
+    "screenshot": {
+      "desktop": "civilsupplieskerala.webp",
+      "mobile": "civilsupplieskerala-m.webp",
+      "phash": "007e7e7e7e000000"
+    },
+    "outlinks": [
+      {
+        "host": "kerala.gov.in",
+        "count": 3,
+        "texts": [
+          "എസ് സി എം എസ്",
+          "എ ഇ പി ഡി എസ്",
+          "ഇ-സർവീസ് ഡാഷ്ബോ‍‍ർഡ്"
+        ]
+      },
+      {
+        "host": "impds.nic.in",
+        "count": 1,
+        "texts": [
+          "ഐ എം പി ഡി എസ്"
+        ]
+      },
+      {
+        "host": "facebook.com",
+        "count": 2,
+        "texts": [
+          "https://www.facebook.com/cscadepartment"
+        ]
+      },
+      {
+        "host": "instagram.com",
+        "count": 1,
+        "texts": [
+          "https://www.instagram.com/cscadepartment"
+        ]
+      },
+      {
+        "host": "x.com",
+        "count": 1,
+        "texts": [
+          "https://x.com/cscadepartment"
+        ]
+      },
+      {
+        "host": "youtube.com",
+        "count": 1,
+        "texts": [
+          "https://www.youtube.com/@sscacell9788"
+        ]
+      },
+      {
+        "host": "google.com",
+        "count": 2,
+        "texts": [
+          "\"Ente Ration Card\" Android App ഡൗൺലോഡ് ചെയ്യാൻ ഇവിടെ ക്ലിക്ക് ചെയ്യുക"
+        ]
+      },
+      {
+        "host": "apple.com",
+        "count": 1,
+        "texts": [
+          "\"Ente Ration Card\" IOS App ഡൗൺലോഡ് ചെയ്യാൻ ഇവിടെ ക്ലിക്ക് ചെയ്യുക"
+        ]
+      }
+    ]
   },
-  "score": null,
-  "status": "down",
-  "issues": [],
+  "score": {
+    "overall": 46,
+    "security": 56,
+    "accessibility": 22,
+    "content": 46,
+    "gigw": 28,
+    "performance": 66,
+    "identity": 84
+  },
+  "status": "poor",
+  "issues": [
+    {
+      "id": "sec.cert_expiry",
+      "sev": "H",
+      "ev": "1 days left"
+    },
+    {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "ckeditor 4.0.1.1, bootstrap 3.3.1, highcharts 6.1.0"
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "10 critical violation(s)"
+    },
+    {
+      "id": "a11y.lang",
+      "sev": "H",
+      "ev": "<html lang=\"\"> vs. 93% Malayalam content"
+    },
+    {
+      "id": "content.last_updated",
+      "sev": "H",
+      "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-user"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3098ms"
+    },
+    {
+      "id": "a11y.axe_serious",
+      "sev": "M",
+      "ev": "11 serious violation(s)"
+    },
+    {
+      "id": "a11y.alt",
+      "sev": "M",
+      "ev": "10 image(s) missing alt text"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "5 low-contrast element(s)"
+    },
+    {
+      "id": "content.broken_pdfs",
+      "sev": "M",
+      "ev": "6 linked PDF(s) 404: https://civilsupplieskerala.gov.in/images/RATIONCARD_FAQ.pdf, https://civilsupplieskerala.gov.in/images/FAQ_GasConnection.pdf, https://civilsupplieskerala.gov.in/images/ariyuka_aavsihyapeduka.pdf, https://civilsupplieskerala.gov.in/images/Bhadratha.pdf, https://civilsupplieskerala.gov.in/images/Aadhaar%20seeding%20help-%20corrected-1.pdf, https://civilsupplieskerala.gov.in/images/Aadhaar%20seeding%20help-corrected-2.pdf"
+    },
+    {
+      "id": "gigw.sitemap",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.privacy",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.ownership",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.last_updated",
+      "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "11206.5055ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "8.9MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
+    },
+    {
+      "id": "sec.csp",
+      "sev": "L"
+    },
+    {
+      "id": "a11y.axe_moderate_minor",
+      "sev": "L",
+      "ev": "29 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
+    },
+    {
+      "id": "content.meta_desc",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.feedback",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.terms",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.copyright_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.hyperlink_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.disclaimer",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.screen_reader",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.help",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.search",
+      "sev": "L"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
+      "id": "id.robots",
+      "sev": "L",
+      "ev": "robots.txt returned 404"
+    },
+    {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 404"
+    },
+    {
+      "id": "id.charset_doctype",
+      "sev": "L",
+      "ev": "missing HTML5 doctype"
+    },
+    {
+      "id": "id.canonical",
+      "sev": "I"
+    }
+  ],
   "history": [
+    {
+      "d": "2026-10-15",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-10-14",
       "up": false,
@@ -175,5 +779,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
