@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T00:03:23.267Z",
-    "run": "1792022527766",
+    "at": "2026-10-15T23:47:33.299Z",
+    "run": "1792107983978",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 50,
+      "performance": 51,
       "accessibility": 96,
       "best_practices": 69,
       "seo": 92
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3055ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -219,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "50/100"
+        "ev": "51/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "38748.636ms"
+        "ev": "28853.24050000001ms"
       },
       {
         "id": "perf.cls",
@@ -280,7 +281,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://alappuzha.nic.in/en/document-category/candidates-expenditure-statements/)"
+        "ev": "1/30 crawled link(s) broken (https://alappuzha.nic.in/en/district-collector/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -426,11 +427,11 @@
     "outlinks": [
       {
         "host": "kerala.gov.in",
-        "count": 5,
+        "count": 6,
         "texts": [
           "കേരള സര്‍ക്കാര്‍",
           "E-Office",
-          "Government of Keralam"
+          "E-District"
         ]
       },
       {
@@ -466,6 +467,13 @@
         "count": 1,
         "texts": [
           "Nehru Trophy Boat Race"
+        ]
+      },
+      {
+        "host": "kswmp.org",
+        "count": 1,
+        "texts": [
+          "KSWMP - Kerala Solid Waste Management Project"
         ]
       },
       {
@@ -528,7 +536,12 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://alappuzha.nic.in/en/document-category/candidates-expenditure-statements/)"
+      "ev": "1/30 crawled link(s) broken (https://alappuzha.nic.in/en/district-collector/)"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3055ms"
     },
     {
       "id": "sec.hsts",
@@ -554,7 +567,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "38748.636ms"
+      "ev": "28853.24050000001ms"
     },
     {
       "id": "perf.weight",
@@ -629,6 +642,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-16",
+      "up": true,
+      "score": 60
+    },
     {
       "d": "2026-10-15",
       "up": true,
@@ -750,5 +768,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

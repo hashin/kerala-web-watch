@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T00:26:14.175Z",
-    "run": "1792023883995",
+    "at": "2026-10-16T00:14:43.022Z",
+    "run": "1792109619783",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 28,
+      "performance": 35,
       "accessibility": 80,
       "best_practices": 88,
       "seo": 92
     },
     "axe": {
       "critical": 0,
-      "serious": 13,
+      "serious": 14,
       "moderate": 31,
       "minor": 8
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -174,7 +174,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "13 serious violation(s)"
+        "ev": "14 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -192,7 +192,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "10 low-contrast element(s)"
+        "ev": "11 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -220,22 +220,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "28/100"
+        "ev": "35/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7784.808499999999ms"
+        "ev": "7028.558ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.49"
+        "ev": "0.50"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "456.8MB"
+        "ev": "236.0MB"
       },
       {
         "id": "perf.viewport",
@@ -269,7 +269,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-container"
+        "ev": "ml-user"
       },
       {
         "id": "content.obsolete_tech",
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://www.dtpckollam.com/video-gallery)"
       },
       {
         "id": "content.broken_pdfs",
@@ -310,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "13 console error(s): Cannot read properties of null (reading 'add')"
+        "ev": "12 console error(s): Cannot read properties of null (reading 'add')"
       },
       {
         "id": "gigw.contact",
@@ -423,7 +424,7 @@
     "screenshot": {
       "desktop": "dtpckollam.webp",
       "mobile": "dtpckollam-m.webp",
-      "phash": "f0f06060e0e0e0ff"
+      "phash": "fffef060400000ff"
     },
     "outlinks": [
       {
@@ -453,10 +454,10 @@
     ]
   },
   "score": {
-    "overall": 54,
+    "overall": 53,
     "security": 38,
     "accessibility": 70,
-    "content": 56,
+    "content": 46,
     "gigw": 26,
     "performance": 72,
     "identity": 76
@@ -481,7 +482,12 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-container"
+      "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://www.dtpckollam.com/video-gallery)"
     },
     {
       "id": "gigw.rti",
@@ -499,12 +505,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "13 serious violation(s)"
+      "ev": "14 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "10 low-contrast element(s)"
+      "ev": "11 low-contrast element(s)"
     },
     {
       "id": "gigw.privacy",
@@ -521,12 +527,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7784.808499999999ms"
+      "ev": "7028.558ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "456.8MB"
+      "ev": "236.0MB"
     },
     {
       "id": "sec.csp",
@@ -558,7 +564,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "13 console error(s): Cannot read properties of null (reading 'add')"
+      "ev": "12 console error(s): Cannot read properties of null (reading 'add')"
     },
     {
       "id": "gigw.terms",
@@ -587,7 +593,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.49"
+      "ev": "0.50"
     },
     {
       "id": "perf.images",
@@ -605,6 +611,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-16",
+      "up": true,
+      "score": 53
+    },
     {
       "d": "2026-10-15",
       "up": true,
@@ -726,5 +737,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

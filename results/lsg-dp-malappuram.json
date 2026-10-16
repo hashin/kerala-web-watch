@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-13T02:57:52.426Z",
-    "run": "1791860210489",
+    "at": "2026-10-16T00:08:28.422Z",
+    "run": "1792109242096",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 62,
+      "performance": 65,
       "accessibility": 81,
       "best_practices": 73,
       "seo": 92
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 2
     },
     "tech": {
       "cms": "Drupal 8",
@@ -97,8 +97,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3922ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -122,8 +121,7 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "fail",
-        "ev": "4 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -224,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "62/100"
+        "ev": "65/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "14085.293999999998ms"
+        "ev": "13232.369ms"
       },
       {
         "id": "perf.cls",
@@ -284,7 +282,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://malappuramdp.lsgkerala.gov.in/ml/Plan_details)"
+        "ev": "2/30 crawled link(s) broken (https://malappuramdp.lsgkerala.gov.in/ml/Plan_details, http://kpepf.lsgkerala.gov.in/Contents/Login.aspx)"
       },
       {
         "id": "content.broken_pdfs",
@@ -463,21 +461,16 @@
     ]
   },
   "score": {
-    "overall": 46,
-    "security": 18,
+    "overall": 51,
+    "security": 38,
     "accessibility": 56,
     "content": 42,
     "gigw": 28,
     "performance": 86,
     "identity": 87
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "4 days left"
-    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -506,12 +499,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://malappuramdp.lsgkerala.gov.in/ml/Plan_details)"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3922ms"
+      "ev": "2/30 crawled link(s) broken (https://malappuramdp.lsgkerala.gov.in/ml/Plan_details, http://kpepf.lsgkerala.gov.in/Contents/Login.aspx)"
     },
     {
       "id": "sec.hsts",
@@ -546,7 +534,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "14085.293999999998ms"
+      "ev": "13232.369ms"
     },
     {
       "id": "id.tech",
@@ -628,6 +616,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-16",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-10-15",
       "up": true,
@@ -744,5 +737,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

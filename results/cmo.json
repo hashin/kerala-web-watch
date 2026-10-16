@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T00:03:33.081Z",
-    "run": "1792022529867",
+    "at": "2026-10-15T23:47:52.563Z",
+    "run": "1792107984810",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 47,
+      "accessibility": 88,
+      "best_practices": 88,
+      "seo": 77
     },
     "axe": {
       "critical": 2,
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "4278ms"
+        "ev": "3830ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -120,7 +120,8 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "warn",
+        "ev": "29 days left"
       },
       {
         "id": "sec.tls_version",
@@ -217,25 +218,26 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "88/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "47/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "22732.43750000001ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "7.2MB"
+        "ev": "7.1MB"
       },
       {
         "id": "perf.viewport",
@@ -243,7 +245,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -464,8 +466,8 @@
     ]
   },
   "score": {
-    "overall": 48,
-    "security": 62,
+    "overall": 46,
+    "security": 52,
     "accessibility": 40,
     "content": 32,
     "gigw": 0,
@@ -474,6 +476,11 @@
   },
   "status": "poor",
   "issues": [
+    {
+      "id": "sec.cert_expiry",
+      "sev": "H",
+      "ev": "29 days left"
+    },
     {
       "id": "sec.vuln_js",
       "sev": "H",
@@ -510,7 +517,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "4278ms"
+      "ev": "3830ms"
     },
     {
       "id": "sec.hsts",
@@ -548,13 +555,14 @@
       "sev": "M"
     },
     {
-      "id": "perf.weight",
+      "id": "perf.lcp",
       "sev": "M",
-      "ev": "7.2MB"
+      "ev": "22732.43750000001ms"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "7.1MB"
     },
     {
       "id": "sec.xcto",
@@ -622,6 +630,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-16",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-10-15",
       "up": true,
@@ -743,5 +756,5 @@
       "score": 48
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

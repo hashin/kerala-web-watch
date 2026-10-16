@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T00:03:26.928Z",
-    "run": "1792022522990",
+    "at": "2026-10-15T23:48:49.780Z",
+    "run": "1792108042231",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 56,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -226,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8584.675500000001ms"
+        "ev": "18526.47150000002ms"
       },
       {
         "id": "perf.cls",
@@ -281,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://kannur.nic.in/en/#SkipContent)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -489,10 +488,10 @@
     ]
   },
   "score": {
-    "overall": 55,
+    "overall": 57,
     "security": 48,
     "accessibility": 40,
-    "content": 46,
+    "content": 56,
     "gigw": 60,
     "performance": 76,
     "identity": 96
@@ -518,11 +517,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://kannur.nic.in/en/#SkipContent)"
     },
     {
       "id": "sec.hsts",
@@ -558,7 +552,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8584.675500000001ms"
+      "ev": "18526.47150000002ms"
     },
     {
       "id": "perf.weight",
@@ -632,6 +626,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-16",
+      "up": true,
+      "score": 57
+    },
     {
       "d": "2026-10-15",
       "up": true,
@@ -748,5 +747,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

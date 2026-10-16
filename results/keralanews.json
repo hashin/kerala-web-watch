@@ -35,19 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T00:31:47.384Z",
-    "run": "1792024244785",
+    "at": "2026-10-16T00:14:54.982Z",
+    "run": "1792109638608",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 43,
+      "performance": 37,
       "accessibility": 77,
-      "best_practices": 92,
+      "best_practices": 88,
       "seo": 83
     },
     "axe": {
-      "critical": 12,
-      "serious": 52,
-      "moderate": 31,
+      "critical": 10,
+      "serious": 49,
+      "moderate": 30,
       "minor": 0
     },
     "crawl": {
@@ -170,22 +170,22 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "12 critical violation(s)"
+        "ev": "10 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "52 serious violation(s)"
+        "ev": "49 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "31 moderate/minor violation(s)"
+        "ev": "30 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 157% Malayalam content"
+        "ev": "<html lang=\"en\"> vs. 156% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -195,7 +195,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "26 low-contrast element(s)"
+        "ev": "25 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -223,21 +223,21 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "43/100"
+        "ev": "37/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7007.149000000001ms"
+        "ev": "6481.494500000002ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.35"
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "3.0MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
@@ -424,7 +424,7 @@
     "screenshot": {
       "desktop": "keralanews.webp",
       "mobile": "keralanews-m.webp",
-      "phash": "ff9f00ff0f9f8000"
+      "phash": "ff9f00000080fffd"
     },
     "outlinks": [
       {
@@ -479,7 +479,7 @@
     "accessibility": 20,
     "content": 42,
     "gigw": 26,
-    "performance": 81,
+    "performance": 82,
     "identity": 100
   },
   "status": "poor",
@@ -497,12 +497,12 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "12 critical violation(s)"
+      "ev": "10 critical violation(s)"
     },
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 157% Malayalam content"
+      "ev": "<html lang=\"en\"> vs. 156% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -521,7 +521,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "52 serious violation(s)"
+      "ev": "49 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -531,7 +531,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "26 low-contrast element(s)"
+      "ev": "25 low-contrast element(s)"
     },
     {
       "id": "content.stale_news",
@@ -553,12 +553,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7007.149000000001ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "3.0MB"
+      "ev": "6481.494500000002ms"
     },
     {
       "id": "sec.csp",
@@ -567,7 +562,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "31 moderate/minor violation(s)"
+      "ev": "30 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -614,6 +609,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.35"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -627,6 +627,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-16",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-10-15",
       "up": true,
@@ -743,5 +748,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

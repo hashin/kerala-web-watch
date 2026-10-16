@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T00:30:06.975Z",
-    "run": "1792024170126",
+    "at": "2026-10-16T00:11:25.199Z",
+    "run": "1792109448871",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 52,
@@ -224,7 +224,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "20522.361ms"
+        "ev": "20444.978ms"
       },
       {
         "id": "perf.cls",
@@ -267,7 +267,8 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "pass"
+        "r": "fail",
+        "ev": "ml-info"
       },
       {
         "id": "content.obsolete_tech",
@@ -496,10 +497,10 @@
     ]
   },
   "score": {
-    "overall": 59,
+    "overall": 56,
     "security": 44,
     "accessibility": 72,
-    "content": 62,
+    "content": 42,
     "gigw": 26,
     "performance": 67,
     "identity": 100
@@ -515,6 +516,11 @@
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-info"
     },
     {
       "id": "content.broken_links",
@@ -562,7 +568,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "20522.361ms"
+      "ev": "20444.978ms"
     },
     {
       "id": "perf.weight",
@@ -648,6 +654,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-16",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-10-15",
       "up": true,
@@ -749,5 +760,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,12 +37,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T01:20:44.306Z",
-    "run": "1791336001630",
+    "at": "2026-10-16T00:08:37.619Z",
+    "run": "1792109259415",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 62,
-      "accessibility": 82,
+      "performance": 64,
+      "accessibility": 83,
       "best_practices": 73,
       "seo": 92
     },
@@ -117,16 +117,15 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "10 days left"
+        "r": "na"
       },
       {
         "id": "sec.tls_version",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.hsts",
@@ -219,17 +218,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "82/100"
+        "ev": "83/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "62/100"
+        "ev": "64/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "24435.505500000003ms"
+        "ev": "25313.3595ms"
       },
       {
         "id": "perf.cls",
@@ -456,21 +455,16 @@
     ]
   },
   "score": {
-    "overall": 49,
-    "security": 28,
+    "overall": 52,
+    "security": 38,
     "accessibility": 54,
     "content": 52,
     "gigw": 28,
     "performance": 81,
     "identity": 87
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "10 days left"
-    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -529,7 +523,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "24435.505500000003ms"
+      "ev": "25313.3595ms"
     },
     {
       "id": "perf.weight",
@@ -621,6 +615,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-16",
+      "up": true,
+      "score": 52
+    },
     {
       "d": "2026-10-15",
       "up": true,
@@ -737,5 +736,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

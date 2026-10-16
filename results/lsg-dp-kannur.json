@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-06T02:10:43.569Z",
-    "run": "1791252591924",
+    "at": "2026-10-16T00:12:01.900Z",
+    "run": "1792109471972",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 64,
+      "performance": 63,
       "accessibility": 79,
       "best_practices": 92,
       "seo": 92
@@ -97,8 +97,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3605ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -122,8 +121,7 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "11 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -226,12 +224,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "64/100"
+        "ev": "63/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7567.3335000000025ms"
+        "ev": "7855.744499999999ms"
       },
       {
         "id": "perf.cls",
@@ -458,21 +456,16 @@
     ]
   },
   "score": {
-    "overall": 47,
-    "security": 28,
+    "overall": 50,
+    "security": 38,
     "accessibility": 50,
     "content": 42,
     "gigw": 28,
     "performance": 86,
     "identity": 87
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "11 days left"
-    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -502,11 +495,6 @@
       "id": "content.broken_links",
       "sev": "H",
       "ev": "2/30 crawled link(s) broken (https://kannurdp.lsgkerala.gov.in/ml/Plan_details, http://kannurdp.lsgkerala.gov.in/ml/Plan_details)"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3605ms"
     },
     {
       "id": "sec.hsts",
@@ -541,7 +529,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7567.3335000000025ms"
+      "ev": "7855.744499999999ms"
     },
     {
       "id": "id.tech",
@@ -633,6 +621,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-16",
+      "up": true,
+      "score": 50
+    },
     {
       "d": "2026-10-15",
       "up": true,
@@ -749,5 +742,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

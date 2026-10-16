@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T00:23:37.926Z",
-    "run": "1792023781344",
+    "at": "2026-10-16T00:12:33.186Z",
+    "run": "1792109514500",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 59,
+      "accessibility": 91,
+      "best_practices": 74,
+      "seo": 85
+    },
     "axe": {
       "critical": 0,
       "serious": 3,
@@ -207,24 +212,27 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "91/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "38316.498999999996ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "11.2MB"
+        "ev": "21.3MB"
       },
       {
         "id": "perf.viewport",
@@ -232,11 +240,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -559,9 +567,18 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "38316.498999999996ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "11.2MB"
+      "ev": "21.3MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -614,11 +631,20 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "gigw.emblem",
       "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-16",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-15",
       "up": false,
@@ -720,5 +746,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

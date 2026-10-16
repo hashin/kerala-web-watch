@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T00:04:53.008Z",
-    "run": "1792022621590",
+    "at": "2026-10-15T23:49:18.562Z",
+    "run": "1792108098224",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 36,
+      "performance": 54,
       "accessibility": 93,
       "best_practices": 46,
       "seo": 83
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "36/100"
+        "ev": "54/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "64351.82423999994ms"
+        "ev": "50139.860999999975ms"
       },
       {
         "id": "perf.cls",
@@ -281,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://kozhikode.nic.in/public-utility-category/banks/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -417,7 +416,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-9HR295F7RX&amp;cx=c&amp;gtm=4e6ad1h1, https://www.googletagmanager.com/gtag/js?id=UA-131902160-1"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-9HR295F7RX&amp;cx=c&amp;gtm=4e6ae1, https://www.googletagmanager.com/gtag/js?id=UA-131902160-1"
       }
     ],
     "screenshot": {
@@ -500,10 +499,10 @@
     ]
   },
   "score": {
-    "overall": 57,
+    "overall": 58,
     "security": 48,
     "accessibility": 40,
-    "content": 46,
+    "content": 56,
     "gigw": 70,
     "performance": 76,
     "identity": 96
@@ -529,11 +528,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://kozhikode.nic.in/public-utility-category/banks/)"
     },
     {
       "id": "sec.hsts",
@@ -565,7 +559,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "64351.82423999994ms"
+      "ev": "50139.860999999975ms"
     },
     {
       "id": "perf.weight",
@@ -640,10 +634,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-9HR295F7RX&amp;cx=c&amp;gtm=4e6ad1h1, https://www.googletagmanager.com/gtag/js?id=UA-131902160-1"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-9HR295F7RX&amp;cx=c&amp;gtm=4e6ae1, https://www.googletagmanager.com/gtag/js?id=UA-131902160-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-16",
+      "up": true,
+      "score": 58
+    },
     {
       "d": "2026-10-15",
       "up": true,
@@ -760,5 +759,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

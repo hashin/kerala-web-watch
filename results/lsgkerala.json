@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T00:09:14.745Z",
-    "run": "1792022896815",
+    "at": "2026-10-15T23:53:26.182Z",
+    "run": "1792108358142",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 53,
+      "performance": 60,
       "accessibility": 77,
       "best_practices": 92,
       "seo": 92
@@ -119,8 +119,7 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "fail",
-        "ev": "2 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -222,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "53/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "13942.5655ms"
+        "ev": "12690.117000000002ms"
       },
       {
         "id": "perf.cls",
@@ -418,7 +417,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-Q595STPSXP&amp;cx=c&amp;gtm=4e6ad1, https://www.googletagmanager.com/gtag/js?id=UA-12419584-1"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-Q595STPSXP&amp;cx=c&amp;gtm=4e6ae1, https://www.googletagmanager.com/gtag/js?id=UA-12419584-1"
       }
     ],
     "screenshot": {
@@ -482,21 +481,16 @@
     ]
   },
   "score": {
-    "overall": 49,
-    "security": 36,
+    "overall": 54,
+    "security": 56,
     "accessibility": 50,
     "content": 42,
     "gigw": 22,
     "performance": 86,
     "identity": 91
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "2 days left"
-    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -560,7 +554,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "13942.5655ms"
+      "ev": "12690.117000000002ms"
     },
     {
       "id": "id.tech",
@@ -639,10 +633,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-Q595STPSXP&amp;cx=c&amp;gtm=4e6ad1, https://www.googletagmanager.com/gtag/js?id=UA-12419584-1"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-Q595STPSXP&amp;cx=c&amp;gtm=4e6ae1, https://www.googletagmanager.com/gtag/js?id=UA-12419584-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-16",
+      "up": true,
+      "score": 54
+    },
     {
       "d": "2026-10-15",
       "up": true,
@@ -769,5 +768,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

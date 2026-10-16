@@ -35,25 +35,20 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T00:16:37.482Z",
-    "run": "1792023334294",
+    "at": "2026-10-16T00:04:26.916Z",
+    "run": "1792109023703",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 33,
-      "accessibility": 83,
-      "best_practices": 88,
-      "seo": 69
-    },
+    "lighthouse": null,
     "axe": {
-      "critical": 1,
-      "serious": 15,
-      "moderate": 5,
-      "minor": 0
+      "critical": 0,
+      "serious": 8,
+      "moderate": 1,
+      "minor": 2
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "WordPress 6.8.11",
@@ -111,7 +106,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.cert_valid",
@@ -140,7 +135,7 @@
       },
       {
         "id": "sec.xfo",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xcto",
@@ -156,8 +151,7 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "fail",
-        "ev": "swiper 8.3.2"
+        "r": "pass"
       },
       {
         "id": "sec.safe_browsing",
@@ -169,18 +163,17 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "fail",
-        "ev": "1 critical violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "15 serious violation(s)"
+        "ev": "8 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "5 moderate/minor violation(s)"
+        "ev": "3 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -188,18 +181,15 @@
       },
       {
         "id": "a11y.alt",
-        "r": "fail",
-        "ev": "1 image(s) missing alt text"
+        "r": "pass"
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "6 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
-        "r": "fail",
-        "ev": "heading levels skipped"
+        "r": "pass"
       },
       {
         "id": "a11y.labels",
@@ -216,28 +206,24 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "83/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "33/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "13161.984000000002ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.71"
+        "r": "na"
       },
       {
         "id": "perf.weight",
-        "r": "fail",
-        "ev": "8.0MB"
+        "r": "warn",
+        "ev": "3.1MB"
       },
       {
         "id": "perf.viewport",
@@ -245,11 +231,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -270,8 +256,7 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "fail",
-        "ev": "ml-IN"
+        "r": "pass"
       },
       {
         "id": "content.obsolete_tech",
@@ -283,8 +268,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://kerala.gov.in/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -292,8 +276,7 @@
       },
       {
         "id": "content.broken_images",
-        "r": "fail",
-        "ev": "2 broken image(s)"
+        "r": "pass"
       },
       {
         "id": "content.malayalam",
@@ -313,8 +296,7 @@
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "5 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
@@ -346,11 +328,11 @@
       },
       {
         "id": "gigw.disclaimer",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.screen_reader",
@@ -378,7 +360,7 @@
       },
       {
         "id": "gigw.emblem",
-        "r": "pass"
+        "r": "warn"
       },
       {
         "id": "id.gov_domain",
@@ -390,7 +372,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -398,12 +380,12 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 404"
+        "r": "pass"
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
       },
       {
         "id": "id.canonical",
@@ -426,31 +408,39 @@
     "screenshot": {
       "desktop": "kescpcr.webp",
       "mobile": "kescpcr-m.webp",
-      "phash": "ff00818381e1ffff"
+      "phash": "ff00ff8d180000c0"
     },
     "outlinks": [
       {
-        "host": "gandhi.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "radionellikka.com",
-        "count": 1,
-        "texts": []
-      },
-      {
         "host": "facebook.com",
         "count": 1,
-        "texts": []
+        "texts": [
+          "Facebook"
+        ]
+      },
+      {
+        "host": "youtube.com",
+        "count": 1,
+        "texts": [
+          "youtube"
+        ]
+      },
+      {
+        "host": "twitter.com",
+        "count": 1,
+        "texts": [
+          "twitter"
+        ]
       },
       {
         "host": "instagram.com",
         "count": 1,
-        "texts": []
+        "texts": [
+          "Instagram"
+        ]
       },
       {
-        "host": "youtube.com",
+        "host": "radionellikka.com",
         "count": 1,
         "texts": []
       },
@@ -464,30 +454,24 @@
     ]
   },
   "score": {
-    "overall": 47,
-    "security": 38,
-    "accessibility": 40,
-    "content": 38,
-    "gigw": 36,
-    "performance": 72,
-    "identity": 96
+    "overall": 61,
+    "security": 28,
+    "accessibility": 84,
+    "content": 76,
+    "gigw": 22,
+    "performance": 95,
+    "identity": 92
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
+    {
+      "id": "sec.http_redirect",
+      "sev": "H"
+    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
       "ev": "href=\"http://gmpg.org/xfn/11\""
-    },
-    {
-      "id": "sec.vuln_js",
-      "sev": "H",
-      "ev": "swiper 8.3.2"
-    },
-    {
-      "id": "a11y.axe_critical",
-      "sev": "H",
-      "ev": "1 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -495,33 +479,17 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "content.legacy_font",
-      "sev": "H",
-      "ev": "ml-IN"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://kerala.gov.in/)"
-    },
-    {
       "id": "sec.hsts",
+      "sev": "M"
+    },
+    {
+      "id": "sec.xfo",
       "sev": "M"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "15 serious violation(s)"
-    },
-    {
-      "id": "a11y.alt",
-      "sev": "M",
-      "ev": "1 image(s) missing alt text"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "6 low-contrast element(s)"
+      "ev": "8 serious violation(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -529,6 +497,10 @@
     },
     {
       "id": "gigw.privacy",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.accessibility_statement",
       "sev": "M"
     },
     {
@@ -540,14 +512,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "13161.984000000002ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "8.0MB"
+      "ev": "3.1MB"
     },
     {
       "id": "sec.csp",
@@ -564,12 +531,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "5 moderate/minor violation(s)"
-    },
-    {
-      "id": "a11y.headings",
-      "sev": "L",
-      "ev": "heading levels skipped"
+      "ev": "3 moderate/minor violation(s)"
     },
     {
       "id": "a11y.keyboard",
@@ -577,18 +539,8 @@
       "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
-      "id": "content.broken_images",
-      "sev": "L",
-      "ev": "2 broken image(s)"
-    },
-    {
       "id": "content.meta_desc",
       "sev": "L"
-    },
-    {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "5 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
@@ -607,6 +559,10 @@
       "sev": "L"
     },
     {
+      "id": "gigw.disclaimer",
+      "sev": "L"
+    },
+    {
       "id": "gigw.screen_reader",
       "sev": "L"
     },
@@ -615,21 +571,25 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.71"
-    },
-    {
-      "id": "perf.images",
+      "id": "id.www_consistency",
       "sev": "L"
     },
     {
-      "id": "id.sitemap_xml",
+      "id": "id.soft_404",
       "sev": "L",
-      "ev": "sitemap.xml returned 404"
+      "ev": "a nonexistent path returned 200"
+    },
+    {
+      "id": "gigw.emblem",
+      "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-16",
+      "up": true,
+      "score": 61
+    },
     {
       "d": "2026-10-15",
       "up": true,
@@ -756,5 +716,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

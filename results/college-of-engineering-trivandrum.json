@@ -31,11 +31,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-13T03:07:24.171Z",
-    "run": "1791860721666",
+    "at": "2026-10-16T00:19:07.343Z",
+    "run": "1792109898110",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 43,
+      "performance": 44,
       "accessibility": 90,
       "best_practices": 96,
       "seo": 85
@@ -49,7 +49,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 3,
-      "broken": 6
+      "broken": 0
     },
     "tech": {
       "cms": "WordPress 5.2.21",
@@ -91,8 +91,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "5002ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -217,16 +216,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "43/100"
+        "ev": "44/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10448.426500000001ms"
+        "ev": "9924.958500000002ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.37"
       },
       {
         "id": "perf.weight",
@@ -278,8 +278,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "6/30 crawled link(s) broken (https://www.cet.ac.in/internal-quality-assurance-cell-iqac-cet/, https://ee.cet.ac.in/, https://me.cet.ac.in/, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -520,15 +519,15 @@
     ]
   },
   "score": {
-    "overall": 48,
+    "overall": 50,
     "security": 24,
     "accessibility": 72,
-    "content": 16,
+    "content": 36,
     "gigw": 22,
-    "performance": 86,
+    "performance": 82,
     "identity": 95
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -549,16 +548,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "6/30 crawled link(s) broken (https://www.cet.ac.in/internal-quality-assurance-cell-iqac-cet/, https://ee.cet.ac.in/, https://me.cet.ac.in/, ...)"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "5002ms"
     },
     {
       "id": "sec.hsts",
@@ -611,7 +600,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10448.426500000001ms"
+      "ev": "9924.958500000002ms"
     },
     {
       "id": "id.tech",
@@ -678,6 +667,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.37"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -687,6 +681,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-16",
+      "up": true,
+      "score": 50
+    },
     {
       "d": "2026-10-15",
       "up": true,
@@ -783,5 +782,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

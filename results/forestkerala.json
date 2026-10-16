@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T00:07:30.547Z",
-    "run": "1792022757523",
+    "at": "2026-10-15T23:53:04.512Z",
+    "run": "1792108170001",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 42,
-      "accessibility": 78,
+      "performance": 55,
+      "accessibility": 75,
       "best_practices": 88,
-      "seo": 85
+      "seo": 69
     },
     "axe": {
       "critical": 10,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 20
     },
     "tech": {
       "cms": "WordPress 6.6.2",
@@ -120,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "21 days left"
+        "ev": "20 days left"
       },
       {
         "id": "sec.tls_version",
@@ -218,17 +218,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "78/100"
+        "ev": "75/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "42/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "24821.464499999987ms"
+        "ev": "22703.903999999995ms"
       },
       {
         "id": "perf.cls",
@@ -237,7 +237,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "7.0MB"
+        "ev": "3.6MB"
       },
       {
         "id": "perf.viewport",
@@ -283,8 +283,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://kerala.gov.in/)"
+        "r": "fail",
+        "ev": "20/30 crawled link(s) broken (https://forest.kerala.gov.in/, https://kerala.gov.in/, https://forest.kerala.gov.in/#skip, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -313,7 +313,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "16 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+        "ev": "10 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
       },
       {
         "id": "gigw.contact",
@@ -507,10 +507,10 @@
     ]
   },
   "score": {
-    "overall": 49,
+    "overall": 47,
     "security": 28,
     "accessibility": 40,
-    "content": 38,
+    "content": 28,
     "gigw": 58,
     "performance": 71,
     "identity": 100
@@ -520,7 +520,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "21 days left"
+      "ev": "20 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -550,7 +550,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://kerala.gov.in/)"
+      "ev": "20/30 crawled link(s) broken (https://forest.kerala.gov.in/, https://kerala.gov.in/, https://forest.kerala.gov.in/#skip, ...)"
     },
     {
       "id": "sec.hsts",
@@ -586,12 +586,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "24821.464499999987ms"
+      "ev": "22703.903999999995ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.0MB"
+      "ev": "3.6MB"
     },
     {
       "id": "perf.tap_targets",
@@ -635,7 +635,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "16 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      "ev": "10 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
     },
     {
       "id": "gigw.feedback",
@@ -655,6 +655,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-16",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-10-15",
       "up": true,
@@ -771,5 +776,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-25T00:34:58.899Z",
-    "run": "1790296462043",
+    "at": "2026-10-16T00:23:57.502Z",
+    "run": "1792110185279",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 62,
+      "performance": 59,
       "accessibility": 89,
       "best_practices": 74,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 27,
       "pdfs": 0,
-      "broken": 4
+      "broken": 5
     },
     "tech": {
       "cms": "Drupal 11",
@@ -164,6 +164,10 @@
         "r": "na"
       },
       {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
         "id": "a11y.axe_critical",
         "r": "fail",
         "ev": "1 critical violation(s)"
@@ -218,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "62/100"
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6745.620999999999ms"
+        "ev": "7978.187499999999ms"
       },
       {
         "id": "perf.cls",
@@ -278,8 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "4/27 crawled link(s) broken (http://pothencodeblockpanchayat.lsgkerala.gov.in/about, http://pothencodeblockpanchayat.lsgkerala.gov.in/contact-us, http://pothencodeblockpanchayat.lsgkerala.gov.in/terms, ...)"
+        "r": "fail",
+        "ev": "5/27 crawled link(s) broken (https://lsgkerala.gov.in/, http://pothencodeblockpanchayat.lsgkerala.gov.in/about, http://pothencodeblockpanchayat.lsgkerala.gov.in/contact-us, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -546,7 +550,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "4/27 crawled link(s) broken (http://pothencodeblockpanchayat.lsgkerala.gov.in/about, http://pothencodeblockpanchayat.lsgkerala.gov.in/contact-us, http://pothencodeblockpanchayat.lsgkerala.gov.in/terms, ...)"
+      "ev": "5/27 crawled link(s) broken (https://lsgkerala.gov.in/, http://pothencodeblockpanchayat.lsgkerala.gov.in/about, http://pothencodeblockpanchayat.lsgkerala.gov.in/contact-us, ...)"
     },
     {
       "id": "gigw.rti",
@@ -586,7 +590,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6745.620999999999ms"
+      "ev": "7978.187499999999ms"
     },
     {
       "id": "perf.weight",
@@ -663,6 +667,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-16",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-15",
       "up": false,
@@ -779,5 +788,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

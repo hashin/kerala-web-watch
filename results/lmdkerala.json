@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T00:32:43.423Z",
-    "run": "1792024316503",
+    "at": "2026-10-16T00:15:11.591Z",
+    "run": "1792109628822",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 37,
+      "accessibility": 76,
+      "best_practices": 88,
+      "seo": 69
     },
     "axe": {
       "critical": 9,
@@ -217,25 +217,27 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "76/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "37/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "24465.329999999998ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.37"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "4.6MB"
+        "ev": "4.8MB"
       },
       {
         "id": "perf.viewport",
@@ -442,12 +444,12 @@
     ]
   },
   "score": {
-    "overall": 56,
+    "overall": 54,
     "security": 76,
     "accessibility": 30,
     "content": 42,
     "gigw": 32,
-    "performance": 81,
+    "performance": 67,
     "identity": 100
   },
   "status": "needs-work",
@@ -514,9 +516,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "24465.329999999998ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "4.6MB"
+      "ev": "4.8MB"
     },
     {
       "id": "perf.tap_targets",
@@ -579,11 +586,21 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.37"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-16",
+      "up": true,
+      "score": 54
+    },
     {
       "d": "2026-10-15",
       "up": true,
@@ -705,5 +722,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

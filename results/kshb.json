@@ -35,24 +35,24 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T00:17:55.018Z",
-    "run": "1792023404454",
+    "at": "2026-10-16T00:01:13.240Z",
+    "run": "1792108818015",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 20,
-      "accessibility": 84,
+      "performance": 69,
+      "accessibility": 97,
       "best_practices": 100,
-      "seo": 62
+      "seo": 92
     },
     "axe": {
       "critical": 0,
-      "serious": 8,
-      "moderate": 5,
-      "minor": 1
+      "serious": 1,
+      "moderate": 1,
+      "minor": 0
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 2,
+      "pdfs": 3,
       "broken": 0
     },
     "tech": {
@@ -91,8 +91,7 @@
       },
       {
         "id": "avail.under_construction",
-        "r": "warn",
-        "ev": "\"അറ്റകുറ്റപ്പണി\" alongside 4198 other characters"
+        "r": "pass"
       },
       {
         "id": "avail.ttfb",
@@ -112,7 +111,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.cert_valid",
@@ -132,16 +131,15 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://www.kshbonline.com/\""
+        "r": "pass"
       },
       {
         "id": "sec.csp",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xfo",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xcto",
@@ -174,12 +172,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "8 serious violation(s)"
+        "ev": "1 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "6 moderate/minor violation(s)"
+        "ev": "1 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -192,7 +190,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "7 low-contrast element(s)"
+        "ev": "1 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -209,33 +207,30 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "warn",
-        "ev": "tabindex=\"-1\" alongside outline:none"
+        "r": "pass"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "84/100"
+        "ev": "97/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "20/100"
+        "ev": "69/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "34363.9925ms"
+        "ev": "4520.519ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "1.04"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
-        "r": "fail",
-        "ev": "8.5MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
@@ -243,7 +238,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -268,13 +263,11 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "fail",
-        "ev": "ml-IN"
+        "r": "pass"
       },
       {
         "id": "content.obsolete_tech",
-        "r": "fail",
-        "ev": "<marquee"
+        "r": "pass"
       },
       {
         "id": "content.best_viewed",
@@ -314,7 +307,7 @@
       },
       {
         "id": "gigw.contact",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.feedback",
@@ -342,7 +335,7 @@
       },
       {
         "id": "gigw.disclaimer",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.accessibility_statement",
@@ -354,7 +347,7 @@
       },
       {
         "id": "gigw.help",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.rti",
@@ -386,7 +379,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -398,7 +391,8 @@
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
       },
       {
         "id": "id.canonical",
@@ -421,72 +415,46 @@
     "screenshot": {
       "desktop": "kshb.webp",
       "mobile": "kshb-m.webp",
-      "phash": "ffff0808000000ff"
+      "phash": "3f3f070705013f3f"
     },
     "outlinks": [
       {
         "host": "facebook.com",
-        "count": 2,
+        "count": 1,
         "texts": [
           "facebook"
         ]
       },
       {
         "host": "youtube.com",
-        "count": 2,
+        "count": 1,
         "texts": [
           "youtube"
         ]
       },
       {
-        "host": "kshbonline.com",
-        "count": 2,
-        "texts": [
-          "ഇപ്പോൾ  അപേക്ഷിക്കാം",
-          "അപേക്ഷിക്കാം"
-        ]
-      },
-      {
         "host": "cdit.org",
-        "count": 20,
+        "count": 1,
         "texts": [
           "C-Dit"
-        ]
-      },
-      {
-        "host": "twitter.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "mohua.gov.in",
-        "count": 1,
-        "texts": [
-          "ഹൗസിങ് ആൻഡ് അർബൻ അഫയേർസ് മിനിസ്ട്രി"
         ]
       }
     ]
   },
   "score": {
-    "overall": 56,
-    "security": 62,
-    "accessibility": 70,
-    "content": 42,
-    "gigw": 6,
-    "performance": 62,
-    "identity": 100
+    "overall": 59,
+    "security": 48,
+    "accessibility": 72,
+    "content": 72,
+    "gigw": 0,
+    "performance": 86,
+    "identity": 92
   },
   "status": "needs-work",
   "issues": [
     {
-      "id": "avail.under_construction",
-      "sev": "H",
-      "ev": "\"അറ്റകുറ്റപ്പണി\" alongside 4198 other characters"
-    },
-    {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://www.kshbonline.com/\""
+      "id": "sec.http_redirect",
+      "sev": "H"
     },
     {
       "id": "content.last_updated",
@@ -494,9 +462,8 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "content.legacy_font",
-      "sev": "H",
-      "ev": "ml-IN"
+      "id": "gigw.contact",
+      "sev": "H"
     },
     {
       "id": "gigw.rti",
@@ -507,19 +474,18 @@
       "sev": "M"
     },
     {
+      "id": "sec.xfo",
+      "sev": "M"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "8 serious violation(s)"
+      "ev": "1 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "7 low-contrast element(s)"
-    },
-    {
-      "id": "content.obsolete_tech",
-      "sev": "M",
-      "ev": "<marquee"
+      "ev": "1 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -544,16 +510,11 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "34363.9925ms"
+      "ev": "4520.519ms"
     },
     {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "8.5MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "sec.csp",
+      "sev": "L"
     },
     {
       "id": "sec.xcto",
@@ -566,17 +527,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "6 moderate/minor violation(s)"
+      "ev": "1 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
       "ev": "heading levels skipped"
-    },
-    {
-      "id": "a11y.keyboard",
-      "sev": "L",
-      "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
       "id": "content.meta_desc",
@@ -603,7 +559,15 @@
       "sev": "L"
     },
     {
+      "id": "gigw.disclaimer",
+      "sev": "L"
+    },
+    {
       "id": "gigw.screen_reader",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.help",
       "sev": "L"
     },
     {
@@ -611,13 +575,17 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "1.04"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
+    },
+    {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
+      "id": "id.soft_404",
+      "sev": "L",
+      "ev": "a nonexistent path returned 200"
     },
     {
       "id": "gigw.emblem",
@@ -625,6 +593,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-16",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-10-15",
       "up": true,
@@ -751,5 +724,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T00:15:46.643Z",
-    "run": "1792023271612",
+    "at": "2026-10-16T00:02:44.147Z",
+    "run": "1792108884541",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 32,
+      "performance": 49,
       "accessibility": 89,
       "best_practices": 73,
       "seo": 62
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4588ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -220,17 +221,16 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "32/100"
+        "ev": "49/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "23676.800500000005ms"
+        "ev": "17514.04099999999ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.73"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -462,12 +462,12 @@
     ]
   },
   "score": {
-    "overall": 48,
+    "overall": 49,
     "security": 42,
     "accessibility": 44,
     "content": 42,
     "gigw": 18,
-    "performance": 77,
+    "performance": 81,
     "identity": 100
   },
   "status": "poor",
@@ -500,6 +500,11 @@
       "id": "content.broken_links",
       "sev": "H",
       "ev": "2/30 crawled link(s) broken (https://handsum.kerala.gov.in/, https://dhtschemes.kerala.gov.in/)"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "4588ms"
     },
     {
       "id": "sec.hsts",
@@ -543,7 +548,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "23676.800500000005ms"
+      "ev": "17514.04099999999ms"
     },
     {
       "id": "perf.weight",
@@ -610,11 +615,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.73"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -624,6 +624,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-16",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-10-15",
       "up": true,
@@ -745,5 +750,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

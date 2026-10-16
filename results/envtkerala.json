@@ -37,28 +37,28 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T00:18:22.884Z",
-    "run": "1792023318709",
+    "at": "2026-10-15T23:59:36.000Z",
+    "run": "1792108763759",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 60,
-      "accessibility": 87,
-      "best_practices": 96,
-      "seo": 77
+      "performance": 100,
+      "accessibility": 94,
+      "best_practices": 100,
+      "seo": 82
     },
     "axe": {
       "critical": 0,
-      "serious": 50,
-      "moderate": 8,
-      "minor": 1
+      "serious": 0,
+      "moderate": 2,
+      "minor": 0
     },
     "crawl": {
-      "pages": 30,
-      "pdfs": 7,
+      "pages": 0,
+      "pdfs": 0,
       "broken": 0
     },
     "tech": {
-      "cms": "WordPress 6.5.8",
+      "cms": null,
       "server": "Apache",
       "jquery": null
     },
@@ -97,8 +97,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "7695ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -134,8 +133,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://gmpg.org/xfn/11\""
+        "r": "pass"
       },
       {
         "id": "sec.csp",
@@ -143,7 +141,7 @@
       },
       {
         "id": "sec.xfo",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xcto",
@@ -175,13 +173,12 @@
       },
       {
         "id": "a11y.axe_serious",
-        "r": "fail",
-        "ev": "50 serious violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "9 moderate/minor violation(s)"
+        "ev": "2 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -193,13 +190,11 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "36 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
-        "r": "fail",
-        "ev": "no <h1>"
+        "r": "pass"
       },
       {
         "id": "a11y.labels",
@@ -216,17 +211,16 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "87/100"
+        "ev": "94/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "60/100"
+        "ev": "100/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "9155.880999999998ms"
+        "r": "pass"
       },
       {
         "id": "perf.cls",
@@ -234,8 +228,7 @@
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "3.1MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
@@ -247,11 +240,11 @@
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.copyright_year",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "content.last_updated",
@@ -268,8 +261,7 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "fail",
-        "ev": "ML-NILA"
+        "r": "pass"
       },
       {
         "id": "content.obsolete_tech",
@@ -293,7 +285,8 @@
       },
       {
         "id": "content.malayalam",
-        "r": "pass"
+        "r": "fail",
+        "ev": "Malayalam ratio 0.00, no language toggle found"
       },
       {
         "id": "content.title",
@@ -313,7 +306,7 @@
       },
       {
         "id": "gigw.contact",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.feedback",
@@ -357,11 +350,11 @@
       },
       {
         "id": "gigw.rti",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.search",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.ownership",
@@ -373,7 +366,7 @@
       },
       {
         "id": "gigw.emblem",
-        "r": "pass"
+        "r": "warn"
       },
       {
         "id": "id.gov_domain",
@@ -385,7 +378,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -397,11 +390,12 @@
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
       },
       {
         "id": "id.canonical",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.charset_doctype",
@@ -409,8 +403,7 @@
       },
       {
         "id": "id.tech",
-        "r": "pass",
-        "ev": "WordPress 6.5.8"
+        "r": "pass"
       },
       {
         "id": "id.third_party",
@@ -420,63 +413,18 @@
     "screenshot": {
       "desktop": "envtkerala.webp",
       "mobile": "envtkerala-m.webp",
-      "phash": "ffffffbdffc10301"
+      "phash": "00003c3c3c3c0000"
     },
-    "outlinks": [
-      {
-        "host": "facebook.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "youtube.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "arcgis.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "envfor.nic.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "keralaczma.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "seiaakerala.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "themegrill.com",
-        "count": 1,
-        "texts": [
-          "ColorMag"
-        ]
-      },
-      {
-        "host": "wordpress.org",
-        "count": 1,
-        "texts": [
-          "WordPress"
-        ]
-      }
-    ]
+    "outlinks": []
   },
   "score": {
-    "overall": 56,
-    "security": 38,
-    "accessibility": 72,
-    "content": 52,
-    "gigw": 22,
-    "performance": 71,
-    "identity": 100
+    "overall": 64,
+    "security": 48,
+    "accessibility": 96,
+    "content": 62,
+    "gigw": 0,
+    "performance": 90,
+    "identity": 92
   },
   "status": "needs-work",
   "issues": [
@@ -485,38 +433,30 @@
       "sev": "H"
     },
     {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://gmpg.org/xfn/11\""
-    },
-    {
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "content.legacy_font",
-      "sev": "H",
-      "ev": "ML-NILA"
+      "id": "gigw.contact",
+      "sev": "H"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "7695ms"
+      "id": "gigw.rti",
+      "sev": "H"
     },
     {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
-      "id": "a11y.axe_serious",
-      "sev": "M",
-      "ev": "50 serious violation(s)"
+      "id": "sec.xfo",
+      "sev": "M"
     },
     {
-      "id": "a11y.contrast",
+      "id": "content.malayalam",
       "sev": "M",
-      "ev": "36 low-contrast element(s)"
+      "ev": "Malayalam ratio 0.00, no language toggle found"
     },
     {
       "id": "gigw.sitemap",
@@ -539,16 +479,6 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "9155.880999999998ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "3.1MB"
-    },
-    {
       "id": "perf.tap_targets",
       "sev": "M"
     },
@@ -567,12 +497,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "9 moderate/minor violation(s)"
-    },
-    {
-      "id": "a11y.headings",
-      "sev": "L",
-      "ev": "no <h1>"
+      "ev": "2 moderate/minor violation(s)"
     },
     {
       "id": "content.meta_desc",
@@ -611,11 +536,33 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
+      "id": "gigw.search",
       "sev": "L"
+    },
+    {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
+      "id": "id.soft_404",
+      "sev": "L",
+      "ev": "a nonexistent path returned 200"
+    },
+    {
+      "id": "gigw.emblem",
+      "sev": "I"
+    },
+    {
+      "id": "id.canonical",
+      "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-16",
+      "up": true,
+      "score": 64
+    },
     {
       "d": "2026-10-15",
       "up": true,
@@ -742,5 +689,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
