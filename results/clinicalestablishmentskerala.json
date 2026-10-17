@@ -37,12 +37,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T00:23:56.072Z",
-    "run": "1792023751088",
+    "at": "2026-10-17T00:10:10.332Z",
+    "run": "1792195730574",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 45,
-      "accessibility": 75,
+      "performance": 30,
+      "accessibility": 83,
       "best_practices": 92,
       "seo": 69
     },
@@ -97,8 +97,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3820ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -219,26 +218,27 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "75/100"
+        "ev": "83/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "45/100"
+        "ev": "30/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "30348.64250000001ms"
+        "ev": "34660.5405ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.95"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "8.1MB"
+        "ev": "9.4MB"
       },
       {
         "id": "perf.viewport",
@@ -246,7 +246,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -314,7 +314,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "15 console error(s): Cannot read properties of null (reading 'addEventListener')"
+        "ev": "11 console error(s): Cannot read properties of null (reading 'addEventListener')"
       },
       {
         "id": "gigw.contact",
@@ -495,7 +495,7 @@
     "accessibility": 40,
     "content": 42,
     "gigw": 32,
-    "performance": 66,
+    "performance": 72,
     "identity": 96
   },
   "status": "needs-work",
@@ -524,11 +524,6 @@
       "id": "content.broken_links",
       "sev": "H",
       "ev": "3/30 crawled link(s) broken (https://kerala.gov.in/, https://portal.clinicalestablishments.kerala.gov.in/Grievance/lodge_grievance, https://portal.clinicalestablishments.kerala.gov.in/)"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3820ms"
     },
     {
       "id": "sec.xfo",
@@ -568,16 +563,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "30348.64250000001ms"
+      "ev": "34660.5405ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "8.1MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "ev": "9.4MB"
     },
     {
       "id": "sec.xcto",
@@ -609,7 +600,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "15 console error(s): Cannot read properties of null (reading 'addEventListener')"
+      "ev": "11 console error(s): Cannot read properties of null (reading 'addEventListener')"
     },
     {
       "id": "gigw.feedback",
@@ -640,6 +631,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.95"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -654,6 +650,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-17",
+      "up": true,
+      "score": 53
+    },
     {
       "d": "2026-10-16",
       "up": true,
@@ -785,5 +786,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

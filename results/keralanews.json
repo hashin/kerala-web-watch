@@ -35,19 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-16T00:14:54.982Z",
-    "run": "1792109638608",
+    "at": "2026-10-17T00:18:40.309Z",
+    "run": "1792196259222",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 37,
-      "accessibility": 77,
-      "best_practices": 88,
+      "performance": 33,
+      "accessibility": 73,
+      "best_practices": 92,
       "seo": 83
     },
     "axe": {
-      "critical": 10,
-      "serious": 49,
-      "moderate": 30,
+      "critical": 12,
+      "serious": 51,
+      "moderate": 31,
       "minor": 0
     },
     "crawl": {
@@ -170,22 +170,22 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "10 critical violation(s)"
+        "ev": "12 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "49 serious violation(s)"
+        "ev": "51 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "30 moderate/minor violation(s)"
+        "ev": "31 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 156% Malayalam content"
+        "ev": "<html lang=\"en\"> vs. 157% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -218,22 +218,21 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "77/100"
+        "ev": "73/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "37/100"
+        "ev": "33/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6481.494500000002ms"
+        "ev": "5986.1630000000005ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.35"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -424,7 +423,7 @@
     "screenshot": {
       "desktop": "keralanews.webp",
       "mobile": "keralanews-m.webp",
-      "phash": "ff9f00000080fffd"
+      "phash": "ff80009f1f1f8000"
     },
     "outlinks": [
       {
@@ -474,12 +473,12 @@
     ]
   },
   "score": {
-    "overall": 47,
+    "overall": 48,
     "security": 56,
     "accessibility": 20,
     "content": 42,
     "gigw": 26,
-    "performance": 82,
+    "performance": 86,
     "identity": 100
   },
   "status": "poor",
@@ -497,12 +496,12 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "10 critical violation(s)"
+      "ev": "12 critical violation(s)"
     },
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 156% Malayalam content"
+      "ev": "<html lang=\"en\"> vs. 157% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -521,7 +520,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "49 serious violation(s)"
+      "ev": "51 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -553,7 +552,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6481.494500000002ms"
+      "ev": "5986.1630000000005ms"
     },
     {
       "id": "sec.csp",
@@ -562,7 +561,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "30 moderate/minor violation(s)"
+      "ev": "31 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -609,11 +608,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.35"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -627,6 +621,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-17",
+      "up": true,
+      "score": 48
+    },
     {
       "d": "2026-10-16",
       "up": true,
@@ -748,5 +747,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-16T00:25:57.332Z",
-    "run": "1792110290093",
+    "at": "2026-10-17T00:20:51.643Z",
+    "run": "1792196407024",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
-      "accessibility": 89,
+      "performance": 56,
+      "accessibility": 85,
       "best_practices": 74,
       "seo": 92
     },
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 2
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -217,17 +217,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "89/100"
+        "ev": "85/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "56/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9504.990999999998ms"
+        "ev": "9247.846000000001ms"
       },
       {
         "id": "perf.cls",
@@ -282,8 +282,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "2/30 crawled link(s) broken (https://lsgkerala.gov.in/, http://balusseryblockpanchayat.lsgkerala.gov.in/about)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -548,11 +547,6 @@
       "ev": "ml-user"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "2/30 crawled link(s) broken (https://lsgkerala.gov.in/, http://balusseryblockpanchayat.lsgkerala.gov.in/about)"
-    },
-    {
       "id": "gigw.rti",
       "sev": "H"
     },
@@ -590,7 +584,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9504.990999999998ms"
+      "ev": "9247.846000000001ms"
     },
     {
       "id": "perf.weight",
@@ -667,6 +661,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-17",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-16",
       "up": false,
@@ -798,5 +797,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

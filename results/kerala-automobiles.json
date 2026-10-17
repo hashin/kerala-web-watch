@@ -29,8 +29,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T23:54:03.109Z",
-    "run": "1792108384514",
+    "at": "2026-10-16T23:52:03.063Z",
+    "run": "1792194678070",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 0,
@@ -45,13 +45,13 @@
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
+      "pages": 1,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "openresty",
       "jquery": null
     },
     "checks": [
@@ -61,16 +61,15 @@
       },
       {
         "id": "avail.connect",
-        "r": "fail",
-        "ev": "connect_fail"
+        "r": "pass"
       },
       {
         "id": "avail.status",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -91,7 +90,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "na"
+        "r": "warn",
+        "ev": "3094ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -103,7 +103,7 @@
       },
       {
         "id": "sec.https",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
@@ -111,15 +111,15 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.tls_version",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.hsts",
@@ -127,7 +127,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.csp",
@@ -272,7 +272,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1/1 crawled link(s) broken (https://keralaautomobilesltd.com/#)"
       },
       {
         "id": "content.broken_pdfs",
@@ -378,11 +379,12 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "id.robots",
-        "r": "na"
+        "r": "fail",
+        "ev": "Disallow: / for User-agent: *"
       },
       {
         "id": "id.sitemap_xml",
@@ -390,8 +392,7 @@
       },
       {
         "id": "id.soft_404",
-        "r": "fail",
-        "ev": "a nonexistent path returned 200"
+        "r": "na"
       },
       {
         "id": "id.canonical",
@@ -422,11 +423,6 @@
   "status": "broken",
   "issues": [
     {
-      "id": "avail.connect",
-      "sev": "C",
-      "ev": "connect_fail"
-    },
-    {
       "id": "avail.blank",
       "sev": "C",
       "ev": "0 visible characters"
@@ -446,6 +442,11 @@
       "ev": "no \"last updated\" date found"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/1 crawled link(s) broken (https://keralaautomobilesltd.com/#)"
+    },
+    {
       "id": "gigw.contact",
       "sev": "H"
     },
@@ -457,6 +458,11 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "keralaautomobilesltd.com"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3094ms"
     },
     {
       "id": "sec.hsts",
@@ -577,13 +583,9 @@
       "sev": "L"
     },
     {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
-      "id": "id.soft_404",
+      "id": "id.robots",
       "sev": "L",
-      "ev": "a nonexistent path returned 200"
+      "ev": "Disallow: / for User-agent: *"
     },
     {
       "id": "id.charset_doctype",
@@ -600,6 +602,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-17",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-16",
       "up": false,
@@ -681,5 +688,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

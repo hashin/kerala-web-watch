@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-16T00:04:10.682Z",
-    "run": "1792108372034",
+    "at": "2026-10-16T23:56:25.383Z",
+    "run": "1792194896734",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 46,
-      "accessibility": 56,
+      "performance": 44,
+      "accessibility": 75,
       "best_practices": 69,
       "seo": 83
     },
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 2,
-      "broken": 32
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -218,17 +218,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "75/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "46/100"
+        "ev": "44/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8491.761000000002ms"
+        "ev": "5897.6720000000005ms"
       },
       {
         "id": "perf.cls",
@@ -237,7 +237,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "8.1MB"
+        "ev": "10.2MB"
       },
       {
         "id": "perf.viewport",
@@ -284,18 +284,16 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "30/30 crawled link(s) broken (https://kuhs.ac.in/kuhs_new/, https://kuhs.ac.in/#, https://kuhs.ac.in/kuhs_new/index.php, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
-        "r": "fail",
-        "ev": "2 linked PDF(s) 404: https://kuhs.ac.in/kuhs_new/images/uploads/pdf/general/anthem/kuhs_anthem_guidelines.pdf, https://kuhs.ac.in/kuhs_new/images/uploads/pdf/general/anthem/kuhs_anthem_lyrics.pdf"
+        "r": "pass"
       },
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "3 broken image(s)"
+        "ev": "4 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -316,7 +314,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "21 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+        "ev": "30 console error(s): Failed to load resource: net::ERR_HTTP2_PING_FAILED"
       },
       {
         "id": "gigw.contact",
@@ -392,7 +390,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -453,13 +451,13 @@
     ]
   },
   "score": {
-    "overall": 42,
+    "overall": 46,
     "security": 34,
     "accessibility": 40,
-    "content": 12,
+    "content": 42,
     "gigw": 30,
     "performance": 76,
-    "identity": 96
+    "identity": 92
   },
   "status": "poor",
   "issues": [
@@ -489,11 +487,6 @@
       "ev": "ml-IN"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "30/30 crawled link(s) broken (https://kuhs.ac.in/kuhs_new/, https://kuhs.ac.in/#, https://kuhs.ac.in/kuhs_new/index.php, ...)"
-    },
-    {
       "id": "sec.xfo",
       "sev": "M"
     },
@@ -518,11 +511,6 @@
       "ev": "<marquee"
     },
     {
-      "id": "content.broken_pdfs",
-      "sev": "M",
-      "ev": "2 linked PDF(s) 404: https://kuhs.ac.in/kuhs_new/images/uploads/pdf/general/anthem/kuhs_anthem_guidelines.pdf, https://kuhs.ac.in/kuhs_new/images/uploads/pdf/general/anthem/kuhs_anthem_lyrics.pdf"
-    },
-    {
       "id": "gigw.sitemap",
       "sev": "M"
     },
@@ -545,12 +533,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8491.761000000002ms"
+      "ev": "5897.6720000000005ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "8.1MB"
+      "ev": "10.2MB"
     },
     {
       "id": "sec.csp",
@@ -587,12 +575,12 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "3 broken image(s)"
+      "ev": "4 broken image(s)"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "21 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      "ev": "30 console error(s): Failed to load resource: net::ERR_HTTP2_PING_FAILED"
     },
     {
       "id": "gigw.copyright_policy",
@@ -619,6 +607,10 @@
       "sev": "L"
     },
     {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
@@ -633,6 +625,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-17",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-10-16",
       "up": true,
@@ -764,5 +761,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

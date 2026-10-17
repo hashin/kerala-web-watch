@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T01:45:20.565Z",
-    "run": "1791510311223",
+    "at": "2026-10-17T00:15:09.566Z",
+    "run": "1792196100280",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
+    },
     "axe": {
       "critical": 0,
       "serious": 1,
@@ -115,7 +120,8 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "warn",
+        "ev": "24 days left"
       },
       {
         "id": "sec.tls_version",
@@ -205,11 +211,13 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
@@ -229,11 +237,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -425,6 +433,11 @@
       "sev": "H"
     },
     {
+      "id": "sec.cert_expiry",
+      "sev": "H",
+      "ev": "24 days left"
+    },
+    {
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
@@ -472,6 +485,10 @@
     },
     {
       "id": "gigw.last_updated",
+      "sev": "M"
+    },
+    {
+      "id": "perf.tap_targets",
       "sev": "M"
     },
     {
@@ -537,6 +554,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -565,6 +586,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-17",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-16",
       "up": false,
@@ -686,5 +712,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

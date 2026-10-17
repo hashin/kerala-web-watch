@@ -35,28 +35,28 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-16T00:01:13.240Z",
-    "run": "1792108818015",
+    "at": "2026-10-16T23:59:57.152Z",
+    "run": "1792195180882",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 69,
-      "accessibility": 97,
-      "best_practices": 100,
-      "seo": 92
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
     },
     "axe": {
       "critical": 0,
-      "serious": 1,
-      "moderate": 1,
+      "serious": 2,
+      "moderate": 2,
       "minor": 0
     },
     "crawl": {
-      "pages": 30,
-      "pdfs": 3,
+      "pages": 0,
+      "pdfs": 0,
       "broken": 0
     },
     "tech": {
-      "cms": "WordPress 7.1.3",
+      "cms": null,
       "server": "Apache",
       "jquery": null
     },
@@ -71,7 +71,8 @@
       },
       {
         "id": "avail.status",
-        "r": "pass"
+        "r": "fail",
+        "ev": "final response was 500"
       },
       {
         "id": "avail.redirect_offsite",
@@ -87,7 +88,8 @@
       },
       {
         "id": "avail.blank",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0 visible characters"
       },
       {
         "id": "avail.under_construction",
@@ -172,12 +174,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "1 serious violation(s)"
+        "ev": "2 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "1 moderate/minor violation(s)"
+        "ev": "2 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -189,13 +191,12 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "1 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
         "r": "fail",
-        "ev": "heading levels skipped"
+        "ev": "no <h1>"
       },
       {
         "id": "a11y.labels",
@@ -212,21 +213,20 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "97/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "69/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "4520.519ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -234,11 +234,11 @@
       },
       {
         "id": "perf.viewport",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -246,7 +246,7 @@
       },
       {
         "id": "content.copyright_year",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "content.last_updated",
@@ -291,7 +291,8 @@
       },
       {
         "id": "content.title",
-        "r": "pass"
+        "r": "fail",
+        "ev": "missing <title>"
       },
       {
         "id": "content.meta_desc",
@@ -303,7 +304,8 @@
       },
       {
         "id": "content.console_errors",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 500 ()"
       },
       {
         "id": "gigw.contact",
@@ -383,29 +385,30 @@
       },
       {
         "id": "id.robots",
-        "r": "pass"
+        "r": "fail",
+        "ev": "robots.txt returned 500"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "pass"
+        "r": "fail",
+        "ev": "sitemap.xml returned 500"
       },
       {
         "id": "id.soft_404",
-        "r": "fail",
-        "ev": "a nonexistent path returned 200"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.charset_doctype",
-        "r": "pass"
+        "r": "fail",
+        "ev": "missing HTML5 doctype"
       },
       {
         "id": "id.tech",
-        "r": "pass",
-        "ev": "WordPress 7.1.3"
+        "r": "pass"
       },
       {
         "id": "id.third_party",
@@ -415,43 +418,23 @@
     "screenshot": {
       "desktop": "kshb.webp",
       "mobile": "kshb-m.webp",
-      "phash": "3f3f070705013f3f"
+      "phash": "ffffffffffffffff"
     },
-    "outlinks": [
-      {
-        "host": "facebook.com",
-        "count": 1,
-        "texts": [
-          "facebook"
-        ]
-      },
-      {
-        "host": "youtube.com",
-        "count": 1,
-        "texts": [
-          "youtube"
-        ]
-      },
-      {
-        "host": "cdit.org",
-        "count": 1,
-        "texts": [
-          "C-Dit"
-        ]
-      }
-    ]
+    "outlinks": []
   },
-  "score": {
-    "overall": 59,
-    "security": 48,
-    "accessibility": 72,
-    "content": 72,
-    "gigw": 0,
-    "performance": 86,
-    "identity": 92
-  },
-  "status": "down",
+  "score": null,
+  "status": "broken",
   "issues": [
+    {
+      "id": "avail.status",
+      "sev": "C",
+      "ev": "final response was 500"
+    },
+    {
+      "id": "avail.blank",
+      "sev": "C",
+      "ev": "0 visible characters"
+    },
     {
       "id": "sec.http_redirect",
       "sev": "H"
@@ -470,6 +453,10 @@
       "sev": "H"
     },
     {
+      "id": "perf.viewport",
+      "sev": "H"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -480,12 +467,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "1 serious violation(s)"
+      "ev": "2 serious violation(s)"
     },
     {
-      "id": "a11y.contrast",
+      "id": "content.title",
       "sev": "M",
-      "ev": "1 low-contrast element(s)"
+      "ev": "missing <title>"
     },
     {
       "id": "gigw.sitemap",
@@ -508,9 +495,8 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "4520.519ms"
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -527,12 +513,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "1 moderate/minor violation(s)"
+      "ev": "2 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "heading levels skipped"
+      "ev": "no <h1>"
     },
     {
       "id": "content.meta_desc",
@@ -541,6 +527,11 @@
     {
       "id": "content.favicon",
       "sev": "L"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 500 ()"
     },
     {
       "id": "gigw.feedback",
@@ -583,16 +574,35 @@
       "sev": "L"
     },
     {
-      "id": "id.soft_404",
+      "id": "id.robots",
       "sev": "L",
-      "ev": "a nonexistent path returned 200"
+      "ev": "robots.txt returned 500"
+    },
+    {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 500"
+    },
+    {
+      "id": "id.charset_doctype",
+      "sev": "L",
+      "ev": "missing HTML5 doctype"
     },
     {
       "id": "gigw.emblem",
       "sev": "I"
+    },
+    {
+      "id": "id.canonical",
+      "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-17",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-16",
       "up": false,
@@ -724,5 +734,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

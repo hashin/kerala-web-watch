@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-14T00:50:29.557Z",
-    "run": "1791938936160",
+    "at": "2026-10-17T00:07:20.764Z",
+    "run": "1792195573021",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 0,
@@ -144,11 +144,11 @@
       },
       {
         "id": "sec.xcto",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.referrer",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.server_banner",
@@ -210,7 +210,8 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "pass"
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
       },
       {
         "id": "a11y.lighthouse",
@@ -233,7 +234,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "42.8MB"
+        "ev": "22.1MB"
       },
       {
         "id": "perf.viewport",
@@ -301,7 +302,7 @@
       },
       {
         "id": "content.meta_desc",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.favicon",
@@ -314,7 +315,7 @@
       },
       {
         "id": "gigw.contact",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.feedback",
@@ -358,11 +359,11 @@
       },
       {
         "id": "gigw.rti",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.search",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.ownership",
@@ -469,14 +470,6 @@
       "ev": "28/30 crawled link(s) broken (https://rera.kerala.gov.in/, https://rera.kerala.gov.in/who-is-who, https://rera.kerala.gov.in/organogram-, ...)"
     },
     {
-      "id": "gigw.contact",
-      "sev": "H"
-    },
-    {
-      "id": "gigw.rti",
-      "sev": "H"
-    },
-    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -527,7 +520,7 @@
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "42.8MB"
+      "ev": "22.1MB"
     },
     {
       "id": "perf.tap_targets",
@@ -538,13 +531,22 @@
       "sev": "L"
     },
     {
+      "id": "sec.xcto",
+      "sev": "L"
+    },
+    {
+      "id": "sec.referrer",
+      "sev": "L"
+    },
+    {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
       "ev": "41 moderate/minor violation(s)"
     },
     {
-      "id": "content.meta_desc",
-      "sev": "L"
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
       "id": "content.console_errors",
@@ -580,10 +582,6 @@
       "sev": "L"
     },
     {
-      "id": "gigw.search",
-      "sev": "L"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -616,6 +614,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-17",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-16",
       "up": false,
@@ -737,5 +740,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

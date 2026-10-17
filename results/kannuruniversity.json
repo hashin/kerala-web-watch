@@ -37,24 +37,24 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T23:53:30.444Z",
-    "run": "1792108342892",
+    "at": "2026-10-16T23:55:42.338Z",
+    "run": "1792194871812",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 34,
+      "performance": 32,
       "accessibility": 71,
       "best_practices": 92,
       "seo": 82
     },
     "axe": {
       "critical": 24,
-      "serious": 45,
+      "serious": 43,
       "moderate": 36,
       "minor": 1
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 10,
+      "pdfs": 11,
       "broken": 3
     },
     "tech": {
@@ -177,7 +177,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "45 serious violation(s)"
+        "ev": "43 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -187,7 +187,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"zxx\"> vs. 63% Malayalam content"
+        "ev": "<html lang=\"zxx\"> vs. 46% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -197,7 +197,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "26 low-contrast element(s)"
+        "ev": "24 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -225,22 +225,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "34/100"
+        "ev": "32/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "26281.052499999998ms"
+        "ev": "26381.582000000013ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.85"
+        "ev": "0.89"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "49.9MB"
+        "ev": "50.0MB"
       },
       {
         "id": "perf.viewport",
@@ -266,7 +266,7 @@
       },
       {
         "id": "content.stale_news",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "content.placeholder",
@@ -275,7 +275,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-user"
+        "ev": "ml-caption"
       },
       {
         "id": "content.obsolete_tech",
@@ -563,7 +563,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"zxx\"> vs. 63% Malayalam content"
+      "ev": "<html lang=\"zxx\"> vs. 46% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -573,7 +573,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-user"
+      "ev": "ml-caption"
     },
     {
       "id": "content.broken_links",
@@ -583,7 +583,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "45 serious violation(s)"
+      "ev": "43 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -593,7 +593,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "26 low-contrast element(s)"
+      "ev": "24 low-contrast element(s)"
     },
     {
       "id": "content.copyright_year",
@@ -624,12 +624,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "26281.052499999998ms"
+      "ev": "26381.582000000013ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "49.9MB"
+      "ev": "50.0MB"
     },
     {
       "id": "perf.tap_targets",
@@ -690,7 +690,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.85"
+      "ev": "0.89"
     },
     {
       "id": "perf.images",
@@ -720,6 +720,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-17",
+      "up": true,
+      "score": 43
+    },
     {
       "d": "2026-10-16",
       "up": true,
@@ -841,5 +846,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

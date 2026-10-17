@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T23:57:32.656Z",
-    "run": "1792108608641",
+    "at": "2026-10-16T23:53:27.711Z",
+    "run": "1792194759976",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 36,
+      "performance": 42,
       "accessibility": 85,
       "best_practices": 73,
       "seo": 77
     },
     "axe": {
       "critical": 0,
-      "serious": 18,
+      "serious": 17,
       "moderate": 62,
       "minor": 0
     },
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "5448ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -172,7 +173,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "18 serious violation(s)"
+        "ev": "17 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -218,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "36/100"
+        "ev": "42/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "31315.453500000003ms"
+        "ev": "25518.816999999992ms"
       },
       {
         "id": "perf.cls",
@@ -265,7 +266,8 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "pass"
+        "r": "fail",
+        "ev": "ml-"
       },
       {
         "id": "content.obsolete_tech",
@@ -462,10 +464,10 @@
     ]
   },
   "score": {
-    "overall": 61,
+    "overall": 58,
     "security": 68,
     "accessibility": 70,
-    "content": 62,
+    "content": 42,
     "gigw": 8,
     "performance": 81,
     "identity": 80
@@ -476,6 +478,11 @@
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-"
     },
     {
       "id": "content.broken_links",
@@ -492,6 +499,11 @@
       "ev": "www.ksie.net"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "5448ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -502,7 +514,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "18 serious violation(s)"
+      "ev": "17 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -528,7 +540,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "31315.453500000003ms"
+      "ev": "25518.816999999992ms"
     },
     {
       "id": "perf.weight",
@@ -609,6 +621,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-17",
+      "up": true,
+      "score": 58
+    },
     {
       "d": "2026-10-16",
       "up": true,
@@ -695,5 +712,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

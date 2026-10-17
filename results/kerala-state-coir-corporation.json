@@ -35,30 +35,30 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-14T00:33:58.884Z",
-    "run": "1791938021931",
+    "at": "2026-10-16T23:51:54.701Z",
+    "run": "1792194706685",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 100,
+      "accessibility": 50,
+      "best_practices": 96,
+      "seo": 73
     },
     "axe": {
       "critical": 0,
-      "serious": 6,
-      "moderate": 2,
+      "serious": 2,
+      "moderate": 8,
       "minor": 0
     },
     "crawl": {
-      "pages": 4,
+      "pages": 0,
       "pdfs": 0,
-      "broken": 4
+      "broken": 0
     },
     "tech": {
-      "cms": "WordPress 6.9.10",
+      "cms": null,
       "server": "cloudflare",
-      "jquery": "3.3.1"
+      "jquery": null
     },
     "checks": [
       {
@@ -71,8 +71,7 @@
       },
       {
         "id": "avail.status",
-        "r": "fail",
-        "ev": "final response was 500"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
@@ -156,8 +155,7 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "fail",
-        "ev": "jquery 3.3.1"
+        "r": "pass"
       },
       {
         "id": "sec.safe_browsing",
@@ -174,12 +172,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "6 serious violation(s)"
+        "ev": "2 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "2 moderate/minor violation(s)"
+        "ev": "8 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -191,8 +189,7 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "5 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
@@ -214,20 +211,20 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "50/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "100/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -235,7 +232,7 @@
       },
       {
         "id": "perf.viewport",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.tap_targets",
@@ -243,7 +240,7 @@
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.copyright_year",
@@ -264,8 +261,7 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "fail",
-        "ev": "ml-user"
+        "r": "pass"
       },
       {
         "id": "content.obsolete_tech",
@@ -277,8 +273,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "4/4 crawled link(s) broken (https://www.coircraft.com/chief-ministers-public-grievance-redressal-system/, https://www.coircraft.com/contact/sales-enquiry-form, https://www.coircraft.com/right-to-information, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -303,12 +298,11 @@
       },
       {
         "id": "content.favicon",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "3 console error(s): Failed to load resource: the server responded with a status of 500 ()"
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
@@ -356,7 +350,7 @@
       },
       {
         "id": "gigw.rti",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.search",
@@ -397,72 +391,60 @@
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
       },
       {
         "id": "id.canonical",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.charset_doctype",
-        "r": "pass"
+        "r": "fail",
+        "ev": "missing HTML5 doctype"
       },
       {
         "id": "id.tech",
-        "r": "pass",
-        "ev": "WordPress 6.9.10"
+        "r": "pass"
       },
       {
         "id": "id.third_party",
-        "r": "warn",
-        "ev": "https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920"
+        "r": "pass"
       }
     ],
     "screenshot": {
       "desktop": "kerala-state-coir-corporation.webp",
       "mobile": "kerala-state-coir-corporation-m.webp",
-      "phash": "c3c3c3c7ffffffff"
+      "phash": "00ffffffffffffff"
     },
-    "outlinks": [
-      {
-        "host": "wordpress.org",
-        "count": 1,
-        "texts": [
-          "Learn more about troubleshooting WordPress."
-        ]
-      }
-    ]
+    "outlinks": []
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 61,
+    "security": 68,
+    "accessibility": 82,
+    "content": 62,
+    "gigw": 0,
+    "performance": 70,
+    "identity": 68
+  },
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "avail.status",
-      "sev": "C",
-      "ev": "final response was 500"
-    },
-    {
-      "id": "sec.vuln_js",
-      "sev": "H",
-      "ev": "jquery 3.3.1"
-    },
     {
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "content.legacy_font",
-      "sev": "H",
-      "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "4/4 crawled link(s) broken (https://www.coircraft.com/chief-ministers-public-grievance-redressal-system/, https://www.coircraft.com/contact/sales-enquiry-form, https://www.coircraft.com/right-to-information, ...)"
-    },
-    {
       "id": "gigw.contact",
+      "sev": "H"
+    },
+    {
+      "id": "gigw.rti",
+      "sev": "H"
+    },
+    {
+      "id": "perf.viewport",
       "sev": "H"
     },
     {
@@ -481,12 +463,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "6 serious violation(s)"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "5 low-contrast element(s)"
+      "ev": "2 serious violation(s)"
     },
     {
       "id": "content.title",
@@ -532,7 +509,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "2 moderate/minor violation(s)"
+      "ev": "8 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -544,9 +521,8 @@
       "sev": "L"
     },
     {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "3 console error(s): Failed to load resource: the server responded with a status of 500 ()"
+      "id": "content.favicon",
+      "sev": "L"
     },
     {
       "id": "gigw.feedback",
@@ -581,24 +557,34 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
+      "id": "id.www_consistency",
       "sev": "L"
     },
     {
-      "id": "id.www_consistency",
-      "sev": "L"
+      "id": "id.soft_404",
+      "sev": "L",
+      "ev": "a nonexistent path returned 200"
+    },
+    {
+      "id": "id.charset_doctype",
+      "sev": "L",
+      "ev": "missing HTML5 doctype"
     },
     {
       "id": "gigw.emblem",
       "sev": "I"
     },
     {
-      "id": "id.third_party",
-      "sev": "I",
-      "ev": "https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920"
+      "id": "id.canonical",
+      "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-17",
+      "up": true,
+      "score": 61
+    },
     {
       "d": "2026-10-16",
       "up": false,
@@ -690,5 +676,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

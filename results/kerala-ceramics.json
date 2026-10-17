@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T23:50:57.124Z",
-    "run": "1792108216108",
+    "at": "2026-10-16T23:53:18.505Z",
+    "run": "1792194723329",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 31,
+      "accessibility": 87,
+      "best_practices": 92,
+      "seo": 58
     },
     "axe": {
       "critical": 3,
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "3526ms"
+        "ev": "3594ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -218,20 +218,22 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "87/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "31/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "12798.128499999999ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.89"
       },
       {
         "id": "perf.weight",
@@ -244,7 +246,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -449,7 +451,7 @@
     "accessibility": 30,
     "content": 52,
     "gigw": 32,
-    "performance": 81,
+    "performance": 77,
     "identity": 72
   },
   "status": "poor",
@@ -486,7 +488,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "3526ms"
+      "ev": "3594ms"
     },
     {
       "id": "sec.hsts",
@@ -533,13 +535,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "12798.128499999999ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "5.8MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
     },
     {
       "id": "sec.xcto",
@@ -602,6 +605,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.89"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -621,6 +629,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-17",
+      "up": true,
+      "score": 43
+    },
     {
       "d": "2026-10-16",
       "up": true,
@@ -707,5 +720,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

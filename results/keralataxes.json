@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T23:52:52.032Z",
-    "run": "1792108280414",
+    "at": "2026-10-16T23:54:56.732Z",
+    "run": "1792194798506",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
-      "accessibility": 66,
-      "best_practices": 88,
-      "seo": 85
+      "performance": 41,
+      "accessibility": 90,
+      "best_practices": 96,
+      "seo": 100
     },
     "axe": {
       "critical": 1,
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "4337ms"
+        "ev": "3193ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -217,21 +217,22 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "66/100"
+        "ev": "90/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "41/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11531.971999999998ms"
+        "ev": "47757.26ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.44"
       },
       {
         "id": "perf.weight",
@@ -313,7 +314,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "5 console error(s): Failed to load resource: the server responded with a status of 400 ()"
+        "ev": "5 console error(s): $(...).live is not a function"
       },
       {
         "id": "gigw.contact",
@@ -419,7 +420,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-32MQLJGSM2&amp;cx=c&amp;gtm=4e6af0h2, https://www.googletagmanager.com/gtag/js?id=UA-103783083-2"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-32MQLJGSM2&amp;cx=c&amp;gtm=4e6ae1, https://www.googletagmanager.com/gtag/js?id=UA-103783083-2"
       }
     ],
     "screenshot": {
@@ -560,10 +561,10 @@
     "accessibility": 42,
     "content": 32,
     "gigw": 8,
-    "performance": 81,
+    "performance": 77,
     "identity": 96
   },
-  "status": "down",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -602,7 +603,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "4337ms"
+      "ev": "3193ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -643,7 +644,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11531.971999999998ms"
+      "ev": "47757.26ms"
     },
     {
       "id": "perf.weight",
@@ -675,7 +676,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "5 console error(s): Failed to load resource: the server responded with a status of 400 ()"
+      "ev": "5 console error(s): $(...).live is not a function"
     },
     {
       "id": "gigw.feedback",
@@ -710,6 +711,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.44"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -725,10 +731,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-32MQLJGSM2&amp;cx=c&amp;gtm=4e6af0h2, https://www.googletagmanager.com/gtag/js?id=UA-103783083-2"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-32MQLJGSM2&amp;cx=c&amp;gtm=4e6ae1, https://www.googletagmanager.com/gtag/js?id=UA-103783083-2"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-17",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-10-16",
       "up": false,
@@ -860,5 +871,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

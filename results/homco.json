@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-16T00:21:11.856Z",
-    "run": "1792110000575",
+    "at": "2026-10-17T00:15:15.438Z",
+    "run": "1792196052296",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 28,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3517ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -227,7 +228,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "21331.958ms"
+        "ev": "20647.445999999996ms"
       },
       {
         "id": "perf.cls",
@@ -237,7 +238,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "5.3MB"
+        "ev": "5.2MB"
       },
       {
         "id": "perf.viewport",
@@ -271,7 +272,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-transform"
+        "ev": "ml-user"
       },
       {
         "id": "content.obsolete_tech",
@@ -445,7 +446,7 @@
     "performance": 77,
     "identity": 80
   },
-  "status": "down",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.http_redirect",
@@ -474,7 +475,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-transform"
+      "ev": "ml-user"
     },
     {
       "id": "content.broken_links",
@@ -485,6 +486,11 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "homcokerala.com"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3517ms"
     },
     {
       "id": "sec.hsts",
@@ -524,12 +530,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "21331.958ms"
+      "ev": "20647.445999999996ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "5.3MB"
+      "ev": "5.2MB"
     },
     {
       "id": "sec.xcto",
@@ -606,6 +612,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-17",
+      "up": true,
+      "score": 43
+    },
     {
       "d": "2026-10-16",
       "up": false,
@@ -737,5 +748,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,14 +37,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T23:55:46.320Z",
-    "run": "1792108443110",
+    "at": "2026-10-16T23:53:36.036Z",
+    "run": "1792194714702",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 50,
-      "accessibility": 60,
-      "best_practices": 88,
-      "seo": 85
+      "performance": 40,
+      "accessibility": 90,
+      "best_practices": 96,
+      "seo": 100
     },
     "axe": {
       "critical": 1,
@@ -219,21 +219,22 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "60/100"
+        "ev": "90/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "50/100"
+        "ev": "40/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "15443.258500000009ms"
+        "ev": "48242.71400000024ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.48"
       },
       {
         "id": "perf.weight",
@@ -246,7 +247,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -532,8 +533,8 @@
         "count": 10,
         "texts": [
           "Related Stories",
-          "6 stages of wealth: The framework behind the ET Wealth expo agenda",
-          "Who should be in the room: The five kinds of wealth builders ET Wealth Expo is built for"
+          "ET Wealth Expo 2026: Explore the future of investing, financial security and intergenerational wealth",
+          "6 stages of wealth: The framework behind the ET Wealth expo agenda"
         ]
       },
       {
@@ -566,12 +567,12 @@
     ]
   },
   "score": {
-    "overall": 48,
+    "overall": 49,
     "security": 52,
     "accessibility": 22,
     "content": 32,
     "gigw": 54,
-    "performance": 71,
+    "performance": 77,
     "identity": 96
   },
   "status": "poor",
@@ -646,16 +647,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "15443.258500000009ms"
+      "ev": "48242.71400000024ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
       "ev": "4.2MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
     },
     {
       "id": "sec.xcto",
@@ -701,6 +698,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.48"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -720,6 +722,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-17",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-10-16",
       "up": true,
@@ -851,5 +858,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

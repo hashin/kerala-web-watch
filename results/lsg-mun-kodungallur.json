@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-16T00:07:15.667Z",
-    "run": "1792109171958",
+    "at": "2026-10-17T00:05:21.863Z",
+    "run": "1792195453976",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 61,
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 20,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -226,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "46745.519500000024ms"
+        "ev": "23716.117500000008ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "15.9MB"
+        "ev": "16.2MB"
       },
       {
         "id": "perf.viewport",
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://kodungalloormunicipality.lsgkerala.gov.in/ml/en/en/members)"
       },
       {
         "id": "content.broken_pdfs",
@@ -564,10 +565,10 @@
     ]
   },
   "score": {
-    "overall": 68,
+    "overall": 67,
     "security": 76,
     "accessibility": 70,
-    "content": 56,
+    "content": 46,
     "gigw": 40,
     "performance": 76,
     "identity": 96
@@ -588,6 +589,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://kodungalloormunicipality.lsgkerala.gov.in/ml/en/en/members)"
     },
     {
       "id": "a11y.axe_serious",
@@ -618,12 +624,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "46745.519500000024ms"
+      "ev": "23716.117500000008ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "15.9MB"
+      "ev": "16.2MB"
     },
     {
       "id": "sec.csp",
@@ -679,6 +685,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-17",
+      "up": true,
+      "score": 67
+    },
     {
       "d": "2026-10-16",
       "up": true,
@@ -800,5 +811,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

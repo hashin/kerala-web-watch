@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-11T00:48:16.416Z",
-    "run": "1791679680659",
+    "at": "2026-10-17T00:20:07.023Z",
+    "run": "1792196394272",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 100,
@@ -121,7 +121,8 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "warn",
+        "ev": "24 days left"
       },
       {
         "id": "sec.tls_version",
@@ -374,7 +375,8 @@
       },
       {
         "id": "id.domain_expiry",
-        "r": "pass"
+        "r": "fail",
+        "ev": "58 days left"
       },
       {
         "id": "id.www_consistency",
@@ -418,19 +420,24 @@
     "outlinks": []
   },
   "score": {
-    "overall": 63,
-    "security": 48,
+    "overall": 59,
+    "security": 38,
     "accessibility": 96,
     "content": 72,
     "gigw": 0,
     "performance": 90,
-    "identity": 72
+    "identity": 52
   },
   "status": "needs-work",
   "issues": [
     {
       "id": "sec.http_redirect",
       "sev": "H"
+    },
+    {
+      "id": "sec.cert_expiry",
+      "sev": "H",
+      "ev": "24 days left"
     },
     {
       "id": "content.last_updated",
@@ -449,6 +456,11 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "kstmuseum.com"
+    },
+    {
+      "id": "id.domain_expiry",
+      "sev": "H",
+      "ev": "58 days left"
     },
     {
       "id": "sec.hsts",
@@ -558,6 +570,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-17",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-10-16",
       "up": true,
@@ -689,5 +706,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

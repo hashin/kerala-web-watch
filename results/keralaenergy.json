@@ -37,30 +37,30 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-16T00:24:07.089Z",
-    "run": "1792110202947",
+    "at": "2026-10-17T00:18:27.640Z",
+    "run": "1792196230071",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 66,
-      "accessibility": 90,
+      "performance": 44,
+      "accessibility": 93,
       "best_practices": 69,
-      "seo": 92
+      "seo": 85
     },
     "axe": {
       "critical": 0,
-      "serious": 5,
-      "moderate": 1,
+      "serious": 34,
+      "moderate": 0,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 1,
-      "broken": 1
+      "pdfs": 19,
+      "broken": 0
     },
     "tech": {
-      "cms": "WordPress 7.1.3",
+      "cms": null,
       "server": "Apache",
-      "jquery": null
+      "jquery": "3.7.1"
     },
     "checks": [
       {
@@ -175,12 +175,11 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "5 serious violation(s)"
+        "ev": "34 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
-        "r": "fail",
-        "ev": "1 moderate/minor violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.lang",
@@ -193,12 +192,11 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "4 low-contrast element(s)"
+        "ev": "2 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
-        "r": "fail",
-        "ev": "heading levels skipped"
+        "r": "pass"
       },
       {
         "id": "a11y.labels",
@@ -210,22 +208,23 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "pass"
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "90/100"
+        "ev": "93/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "66/100"
+        "ev": "44/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "4342.8065ms"
+        "ev": "18440.588499999998ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +232,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4.8MB"
       },
       {
         "id": "perf.viewport",
@@ -245,7 +245,7 @@
       },
       {
         "id": "perf.images",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -267,11 +267,12 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-"
+        "ev": "ml-widget"
       },
       {
         "id": "content.obsolete_tech",
-        "r": "pass"
+        "r": "fail",
+        "ev": "<marquee"
       },
       {
         "id": "content.best_viewed",
@@ -279,8 +280,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://keralaenergy.gov.in/message/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -309,7 +309,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "3 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
+        "ev": "5 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
       },
       {
         "id": "gigw.contact",
@@ -409,8 +409,7 @@
       },
       {
         "id": "id.tech",
-        "r": "pass",
-        "ev": "WordPress 7.1.3"
+        "r": "pass"
       },
       {
         "id": "id.third_party",
@@ -420,7 +419,7 @@
     "screenshot": {
       "desktop": "keralaenergy.webp",
       "mobile": "keralaenergy-m.webp",
-      "phash": "00ffffffffff9f00"
+      "phash": "3fffff00000000ff"
     },
     "outlinks": [
       {
@@ -460,6 +459,18 @@
         ]
       },
       {
+        "host": "kfon.co.in",
+        "count": 1,
+        "texts": [
+          "Click here for register/update end office details"
+        ]
+      },
+      {
+        "host": "google.com",
+        "count": 2,
+        "texts": []
+      },
+      {
         "host": "websiteout.net",
         "count": 1,
         "texts": [
@@ -476,12 +487,12 @@
     ]
   },
   "score": {
-    "overall": 66,
+    "overall": 67,
     "security": 62,
-    "accessibility": 72,
+    "accessibility": 78,
     "content": 42,
     "gigw": 48,
-    "performance": 90,
+    "performance": 81,
     "identity": 100
   },
   "status": "needs-work",
@@ -499,12 +510,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://keralaenergy.gov.in/message/)"
+      "ev": "ml-widget"
     },
     {
       "id": "sec.xfo",
@@ -513,12 +519,17 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "5 serious violation(s)"
+      "ev": "34 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "4 low-contrast element(s)"
+      "ev": "2 low-contrast element(s)"
+    },
+    {
+      "id": "content.obsolete_tech",
+      "sev": "M",
+      "ev": "<marquee"
     },
     {
       "id": "gigw.sitemap",
@@ -539,7 +550,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "4342.8065ms"
+      "ev": "18440.588499999998ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "4.8MB"
     },
     {
       "id": "sec.xcto",
@@ -550,14 +566,9 @@
       "sev": "L"
     },
     {
-      "id": "a11y.axe_moderate_minor",
+      "id": "a11y.keyboard",
       "sev": "L",
-      "ev": "1 moderate/minor violation(s)"
-    },
-    {
-      "id": "a11y.headings",
-      "sev": "L",
-      "ev": "heading levels skipped"
+      "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
       "id": "content.meta_desc",
@@ -566,7 +577,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "3 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
+      "ev": "5 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
     },
     {
       "id": "gigw.feedback",
@@ -579,9 +590,18 @@
     {
       "id": "gigw.help",
       "sev": "L"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-17",
+      "up": true,
+      "score": 67
+    },
     {
       "d": "2026-10-16",
       "up": true,
@@ -713,5 +733,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
