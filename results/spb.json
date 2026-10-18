@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-16T23:59:36.997Z",
-    "run": "1792195026591",
+    "at": "2026-10-17T23:31:18.324Z",
+    "run": "1792279728004",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 40,
-      "accessibility": 81,
+      "performance": 35,
+      "accessibility": 90,
       "best_practices": 92,
       "seo": 69
     },
@@ -58,7 +58,7 @@
     "tech": {
       "cms": null,
       "server": "Apache",
-      "jquery": null
+      "jquery": "3.7.1"
     },
     "checks": [
       {
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "4258ms"
+        "ev": "4202ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -218,17 +218,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "81/100"
+        "ev": "90/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "40/100"
+        "ev": "35/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "42701.17149999997ms"
+        "ev": "40004.87549999997ms"
       },
       {
         "id": "perf.cls",
@@ -237,7 +237,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "18.7MB"
+        "ev": "18.4MB"
       },
       {
         "id": "perf.viewport",
@@ -245,7 +245,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -314,7 +314,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "14 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+        "ev": "12 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
       },
       {
         "id": "gigw.contact",
@@ -479,12 +479,12 @@
     ]
   },
   "score": {
-    "overall": 45,
+    "overall": 46,
     "security": 32,
     "accessibility": 40,
     "content": 34,
     "gigw": 32,
-    "performance": 66,
+    "performance": 76,
     "identity": 100
   },
   "status": "poor",
@@ -526,7 +526,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "4258ms"
+      "ev": "4202ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -562,16 +562,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "42701.17149999997ms"
+      "ev": "40004.87549999997ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "18.7MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "ev": "18.4MB"
     },
     {
       "id": "sec.xcto",
@@ -612,7 +608,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "14 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      "ev": "12 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
     },
     {
       "id": "gigw.feedback",
@@ -648,6 +644,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-18",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-10-17",
       "up": true,
@@ -779,5 +780,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

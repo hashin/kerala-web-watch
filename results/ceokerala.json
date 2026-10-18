@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T00:00:24.783Z",
-    "run": "1792195169378",
+    "at": "2026-10-17T23:32:21.563Z",
+    "run": "1792279880556",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 49,
-      "accessibility": 76,
+      "performance": 50,
+      "accessibility": 80,
       "best_practices": 92,
       "seo": 92
     },
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 5,
-      "broken": 1
+      "broken": 5
     },
     "tech": {
       "cms": null,
@@ -215,17 +215,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "76/100"
+        "ev": "80/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "49/100"
+        "ev": "50/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10127.0605ms"
+        "ev": "10204.872000000003ms"
       },
       {
         "id": "perf.cls",
@@ -279,8 +279,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://sutharyam.ceo.kerala.gov.in/)"
+        "r": "fail",
+        "ev": "5/30 crawled link(s) broken (https://www.ceo.kerala.gov.in/voters-corner/polling-stations, https://www.ceo.kerala.gov.in/voters-corner, https://www.ceo.kerala.gov.in/political-parties, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -462,10 +462,10 @@
     ]
   },
   "score": {
-    "overall": 62,
+    "overall": 60,
     "security": 80,
     "accessibility": 50,
-    "content": 46,
+    "content": 36,
     "gigw": 32,
     "performance": 76,
     "identity": 100
@@ -495,7 +495,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://sutharyam.ceo.kerala.gov.in/)"
+      "ev": "5/30 crawled link(s) broken (https://www.ceo.kerala.gov.in/voters-corner/polling-stations, https://www.ceo.kerala.gov.in/voters-corner, https://www.ceo.kerala.gov.in/political-parties, ...)"
     },
     {
       "id": "a11y.axe_serious",
@@ -526,7 +526,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10127.0605ms"
+      "ev": "10204.872000000003ms"
     },
     {
       "id": "perf.tap_targets",
@@ -595,6 +595,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-18",
+      "up": true,
+      "score": 60
+    },
     {
       "d": "2026-10-17",
       "up": true,
@@ -726,5 +731,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

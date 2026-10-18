@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T00:02:28.923Z",
-    "run": "1792195298670",
+    "at": "2026-10-17T23:37:49.114Z",
+    "run": "1792280196616",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 88,
+      "performance": 91,
       "accessibility": 86,
       "best_practices": 96,
       "seo": 92
     },
     "axe": {
       "critical": 1,
-      "serious": 5,
+      "serious": 6,
       "moderate": 8,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 0,
-      "broken": 12
+      "pdfs": 2,
+      "broken": 13
     },
     "tech": {
       "cms": "Drupal 10",
@@ -174,7 +174,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "5 serious violation(s)"
+        "ev": "6 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -220,7 +220,7 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "88/100"
+        "ev": "91/100"
       },
       {
         "id": "perf.lcp",
@@ -257,7 +257,7 @@
       },
       {
         "id": "content.stale_news",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "content.placeholder",
@@ -280,7 +280,7 @@
       {
         "id": "content.broken_links",
         "r": "fail",
-        "ev": "12/30 crawled link(s) broken (https://bams.treasury.kerala.gov.in/, https://bims.treasury.kerala.gov.in/, http://cprcs.kerala.gov.in/, ...)"
+        "ev": "13/30 crawled link(s) broken (https://bams.treasury.kerala.gov.in/, https://bims.treasury.kerala.gov.in/, http://cprcs.kerala.gov.in/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -498,7 +498,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "12/30 crawled link(s) broken (https://bams.treasury.kerala.gov.in/, https://bims.treasury.kerala.gov.in/, http://cprcs.kerala.gov.in/, ...)"
+      "ev": "13/30 crawled link(s) broken (https://bams.treasury.kerala.gov.in/, https://bims.treasury.kerala.gov.in/, http://cprcs.kerala.gov.in/, ...)"
     },
     {
       "id": "sec.hsts",
@@ -507,7 +507,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "5 serious violation(s)"
+      "ev": "6 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -580,6 +580,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-18",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-10-17",
       "up": true,
@@ -716,5 +721,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

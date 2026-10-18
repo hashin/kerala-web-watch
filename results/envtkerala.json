@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T00:01:49.197Z",
-    "run": "1792195138550",
+    "at": "2026-10-17T23:36:36.615Z",
+    "run": "1792279941565",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 60,
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 7,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "WordPress 6.5.13",
@@ -97,8 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "7595ms"
+        "r": "fail",
+        "ev": "13077ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -226,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9357.036999999998ms"
+        "ev": "18533.010000000002ms"
       },
       {
         "id": "perf.cls",
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://envt.kerala.gov.in/#)"
       },
       {
         "id": "content.broken_pdfs",
@@ -385,7 +386,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.robots",
@@ -470,10 +471,10 @@
     ]
   },
   "score": {
-    "overall": 56,
+    "overall": 54,
     "security": 38,
     "accessibility": 72,
-    "content": 52,
+    "content": 42,
     "gigw": 22,
     "performance": 71,
     "identity": 100
@@ -500,9 +501,14 @@
       "ev": "ML-NILA"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://envt.kerala.gov.in/#)"
+    },
+    {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "7595ms"
+      "ev": "13077ms"
     },
     {
       "id": "sec.hsts",
@@ -541,7 +547,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9357.036999999998ms"
+      "ev": "18533.010000000002ms"
     },
     {
       "id": "perf.weight",
@@ -616,6 +622,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-18",
+      "up": true,
+      "score": 54
+    },
     {
       "d": "2026-10-17",
       "up": true,
@@ -752,5 +763,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

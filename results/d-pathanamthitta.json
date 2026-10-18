@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-16T23:49:10.410Z",
-    "run": "1792194490567",
+    "at": "2026-10-17T23:21:47.236Z",
+    "run": "1792279231388",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
+      "performance": 55,
       "accessibility": 96,
       "best_practices": 69,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "20375.935999999998ms"
+        "ev": "20497.269999999997ms"
       },
       {
         "id": "perf.cls",
@@ -279,7 +279,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://pathanamthitta.nic.in/en/#SkipContent)"
       },
       {
         "id": "content.broken_pdfs",
@@ -446,11 +447,11 @@
       },
       {
         "host": "s3waas.gov.in",
-        "count": 4,
+        "count": 5,
         "texts": [
           "Industrial Profile",
-          "District Profile",
-          "Census Report"
+          "webpage",
+          "District Profile"
         ]
       },
       {
@@ -486,10 +487,10 @@
     ]
   },
   "score": {
-    "overall": 63,
+    "overall": 61,
     "security": 48,
     "accessibility": 60,
-    "content": 56,
+    "content": 46,
     "gigw": 64,
     "performance": 81,
     "identity": 96
@@ -517,6 +518,11 @@
       "ev": "ml-IN"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://pathanamthitta.nic.in/en/#SkipContent)"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -540,7 +546,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "20375.935999999998ms"
+      "ev": "20497.269999999997ms"
     },
     {
       "id": "perf.weight",
@@ -611,6 +617,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-18",
+      "up": true,
+      "score": 61
+    },
     {
       "d": "2026-10-17",
       "up": true,
@@ -737,5 +748,5 @@
       "score": 58
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

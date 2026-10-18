@@ -29,8 +29,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-16T23:52:03.063Z",
-    "run": "1792194678070",
+    "at": "2026-10-17T23:24:39.723Z",
+    "run": "1792279438162",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 0,
@@ -45,9 +45,9 @@
       "minor": 0
     },
     "crawl": {
-      "pages": 1,
+      "pages": 0,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -91,7 +91,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "3094ms"
+        "ev": "3721ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -111,15 +111,15 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.hsts",
@@ -272,8 +272,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "1/1 crawled link(s) broken (https://keralaautomobilesltd.com/#)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -379,7 +378,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -442,11 +441,6 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/1 crawled link(s) broken (https://keralaautomobilesltd.com/#)"
-    },
-    {
       "id": "gigw.contact",
       "sev": "H"
     },
@@ -462,7 +456,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "3094ms"
+      "ev": "3721ms"
     },
     {
       "id": "sec.hsts",
@@ -583,6 +577,10 @@
       "sev": "L"
     },
     {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
       "id": "id.robots",
       "sev": "L",
       "ev": "Disallow: / for User-agent: *"
@@ -602,6 +600,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-18",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-17",
       "up": false,
@@ -688,5 +691,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

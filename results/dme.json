@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-16T23:49:30.810Z",
-    "run": "1792194478859",
+    "at": "2026-10-17T23:22:35.090Z",
+    "run": "1792279261984",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 31,
-      "accessibility": 85,
-      "best_practices": 69,
+      "performance": 41,
+      "accessibility": 77,
+      "best_practices": 73,
       "seo": 54
     },
     "axe": {
       "critical": 3,
-      "serious": 27,
+      "serious": 26,
       "moderate": 6,
       "minor": 0
     },
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3042ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -115,15 +116,15 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.tls_version",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.hsts",
@@ -174,7 +175,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "27 serious violation(s)"
+        "ev": "26 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -193,7 +194,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "16 low-contrast element(s)"
+        "ev": "15 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -217,27 +218,27 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "85/100"
+        "ev": "77/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "31/100"
+        "ev": "41/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "16142.575999999994ms"
+        "ev": "44292.636ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.84"
+        "ev": "0.28"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "18.3MB"
+        "ev": "18.2MB"
       },
       {
         "id": "perf.viewport",
@@ -245,7 +246,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -388,7 +389,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -456,13 +457,13 @@
     ]
   },
   "score": {
-    "overall": 57,
+    "overall": 56,
     "security": 76,
     "accessibility": 30,
     "content": 52,
     "gigw": 36,
-    "performance": 72,
-    "identity": 100
+    "performance": 62,
+    "identity": 96
   },
   "status": "needs-work",
   "issues": [
@@ -487,9 +488,14 @@
       "ev": "ml-IN"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3042ms"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "27 serious violation(s)"
+      "ev": "26 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -499,7 +505,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "16 low-contrast element(s)"
+      "ev": "15 low-contrast element(s)"
     },
     {
       "id": "a11y.labels",
@@ -525,12 +531,16 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "16142.575999999994ms"
+      "ev": "44292.636ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "18.3MB"
+      "ev": "18.2MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.referrer",
@@ -587,10 +597,14 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.84"
+      "ev": "0.28"
     },
     {
       "id": "perf.images",
+      "sev": "L"
+    },
+    {
+      "id": "id.www_consistency",
       "sev": "L"
     },
     {
@@ -599,6 +613,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-18",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-10-17",
       "up": true,
@@ -730,5 +749,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,25 +37,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-16T23:53:36.036Z",
-    "run": "1792194714702",
+    "at": "2026-10-17T23:28:03.753Z",
+    "run": "1792279670700",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 40,
-      "accessibility": 90,
-      "best_practices": 96,
-      "seo": 100
+      "performance": 100,
+      "accessibility": 94,
+      "best_practices": 100,
+      "seo": 82
     },
     "axe": {
-      "critical": 1,
-      "serious": 20,
-      "moderate": 18,
+      "critical": 0,
+      "serious": 0,
+      "moderate": 2,
       "minor": 0
     },
     "crawl": {
-      "pages": 30,
-      "pdfs": 20,
-      "broken": 2
+      "pages": 0,
+      "pdfs": 0,
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -113,7 +113,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.cert_valid",
@@ -129,20 +129,19 @@
       },
       {
         "id": "sec.hsts",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://gmpg.org/xfn/11\""
+        "r": "pass"
       },
       {
         "id": "sec.csp",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xfo",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xcto",
@@ -158,8 +157,7 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "fail",
-        "ev": "bootstrap 3.3.4, bootstrap 3.3.2, select2 4.0.0"
+        "r": "pass"
       },
       {
         "id": "sec.safe_browsing",
@@ -171,38 +169,32 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "fail",
-        "ev": "1 critical violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_serious",
-        "r": "fail",
-        "ev": "20 serious violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "18 moderate/minor violation(s)"
+        "ev": "2 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
-        "r": "fail",
-        "ev": "<html lang=\"en-GB\"> vs. 38% Malayalam content"
+        "r": "pass"
       },
       {
         "id": "a11y.alt",
-        "r": "fail",
-        "ev": "1 image(s) missing alt text"
+        "r": "pass"
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "5 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
-        "r": "fail",
-        "ev": "no <h1>"
+        "r": "pass"
       },
       {
         "id": "a11y.labels",
@@ -219,27 +211,24 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "90/100"
+        "ev": "94/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "40/100"
+        "ev": "100/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "48242.71400000024ms"
+        "r": "pass"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.48"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "4.2MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
@@ -247,11 +236,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.copyright_year",
@@ -272,13 +261,11 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "fail",
-        "ev": "ml-act"
+        "r": "pass"
       },
       {
         "id": "content.obsolete_tech",
-        "r": "fail",
-        "ev": "<marquee"
+        "r": "pass"
       },
       {
         "id": "content.best_viewed",
@@ -286,8 +273,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "2/30 crawled link(s) broken (https://kitis.keralataxes.gov.in/, https://keralataxes.gov.in/?p=2165)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -299,7 +285,8 @@
       },
       {
         "id": "content.malayalam",
-        "r": "pass"
+        "r": "fail",
+        "ev": "Malayalam ratio 0.00, no language toggle found"
       },
       {
         "id": "content.title",
@@ -311,32 +298,31 @@
       },
       {
         "id": "content.favicon",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "3 console error(s): $(...).live is not a function"
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.feedback",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.sitemap",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.privacy",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.terms",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.copyright_policy",
@@ -348,7 +334,7 @@
       },
       {
         "id": "gigw.disclaimer",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.accessibility_statement",
@@ -364,11 +350,11 @@
       },
       {
         "id": "gigw.rti",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.search",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.ownership",
@@ -392,7 +378,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -400,16 +386,16 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 404"
+        "r": "pass"
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
       },
       {
         "id": "id.canonical",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.charset_doctype",
@@ -421,181 +407,30 @@
       },
       {
         "id": "id.third_party",
-        "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-32MQLJGSM2&amp;cx=c&amp;gtm=4e6ae1, https://www.googletagmanager.com/gtag/js?id=UA-103783083-2"
+        "r": "pass"
       }
     ],
     "screenshot": {
       "desktop": "keralataxeshome.webp",
       "mobile": "keralataxeshome-m.webp",
-      "phash": "ffff0000a7a7ffff"
+      "phash": "00003c3c3c3c0000"
     },
-    "outlinks": [
-      {
-        "host": "gst.gov.in",
-        "count": 13,
-        "texts": [
-          "GST",
-          "GST Returns Offline Tool",
-          "RFN Verification"
-        ]
-      },
-      {
-        "host": "kerala.gov.in",
-        "count": 19,
-        "texts": [
-          "KVAT / KGST / KML",
-          "Flood Cess",
-          "E-Consignment"
-        ]
-      },
-      {
-        "host": "ewaybill.nic.in",
-        "count": 1,
-        "texts": [
-          "GST e-Way Bill"
-        ]
-      },
-      {
-        "host": "tinxsys.com",
-        "count": 2,
-        "texts": [
-          "CST Search"
-        ]
-      },
-      {
-        "host": "cybercrime.gov.in",
-        "count": 1,
-        "texts": [
-          "Report Cyber Incidents"
-        ]
-      },
-      {
-        "host": "hamoskerala.gov.in",
-        "count": 1,
-        "texts": [
-          "HaMoS"
-        ]
-      },
-      {
-        "host": "spark.gov.in",
-        "count": 1,
-        "texts": [
-          "SPARK"
-        ]
-      },
-      {
-        "host": "ewaybillgst.gov.in",
-        "count": 1,
-        "texts": [
-          "e-Waybill Analytics"
-        ]
-      },
-      {
-        "host": "mail.gov.in",
-        "count": 1,
-        "texts": [
-          "Official e-mail"
-        ]
-      },
-      {
-        "host": "youtube.com",
-        "count": 3,
-        "texts": [
-          "Video Tutorials",
-          "Training Videos on GST",
-          "Awareness Videos"
-        ]
-      },
-      {
-        "host": "cbic-gst.gov.in",
-        "count": 1,
-        "texts": [
-          "Find Tax Rate"
-        ]
-      },
-      {
-        "host": "gstn.org.in",
-        "count": 2,
-        "texts": [
-          "link"
-        ]
-      },
-      {
-        "host": "gstsystem.in",
-        "count": 1,
-        "texts": [
-          "link"
-        ]
-      },
-      {
-        "host": "indiatimes.com",
-        "count": 10,
-        "texts": [
-          "Related Stories",
-          "ET Wealth Expo 2026: Explore the future of investing, financial security and intergenerational wealth",
-          "6 stages of wealth: The framework behind the ET Wealth expo agenda"
-        ]
-      },
-      {
-        "host": "gstn.org",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "cbec.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "finmin.nic.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "webfreecounter.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "cdit.org",
-        "count": 1,
-        "texts": [
-          "C-DIT"
-        ]
-      }
-    ]
+    "outlinks": []
   },
   "score": {
-    "overall": 49,
-    "security": 52,
-    "accessibility": 22,
-    "content": 32,
-    "gigw": 54,
-    "performance": 77,
-    "identity": 96
+    "overall": 64,
+    "security": 48,
+    "accessibility": 96,
+    "content": 62,
+    "gigw": 0,
+    "performance": 90,
+    "identity": 92
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
     {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://gmpg.org/xfn/11\""
-    },
-    {
-      "id": "sec.vuln_js",
-      "sev": "H",
-      "ev": "bootstrap 3.3.4, bootstrap 3.3.2, select2 4.0.0"
-    },
-    {
-      "id": "a11y.axe_critical",
-      "sev": "H",
-      "ev": "1 critical violation(s)"
-    },
-    {
-      "id": "a11y.lang",
-      "sev": "H",
-      "ev": "<html lang=\"en-GB\"> vs. 38% Malayalam content"
+      "id": "sec.http_redirect",
+      "sev": "H"
     },
     {
       "id": "content.last_updated",
@@ -603,34 +438,33 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "content.legacy_font",
-      "sev": "H",
-      "ev": "ml-act"
+      "id": "gigw.contact",
+      "sev": "H"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "2/30 crawled link(s) broken (https://kitis.keralataxes.gov.in/, https://keralataxes.gov.in/?p=2165)"
+      "id": "gigw.rti",
+      "sev": "H"
     },
     {
-      "id": "a11y.axe_serious",
+      "id": "sec.hsts",
+      "sev": "M"
+    },
+    {
+      "id": "sec.xfo",
+      "sev": "M"
+    },
+    {
+      "id": "content.malayalam",
       "sev": "M",
-      "ev": "20 serious violation(s)"
+      "ev": "Malayalam ratio 0.00, no language toggle found"
     },
     {
-      "id": "a11y.alt",
-      "sev": "M",
-      "ev": "1 image(s) missing alt text"
+      "id": "gigw.sitemap",
+      "sev": "M"
     },
     {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "5 low-contrast element(s)"
-    },
-    {
-      "id": "content.obsolete_tech",
-      "sev": "M",
-      "ev": "<marquee"
+      "id": "gigw.privacy",
+      "sev": "M"
     },
     {
       "id": "gigw.accessibility_statement",
@@ -645,14 +479,12 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "48242.71400000024ms"
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "4.2MB"
+      "id": "sec.csp",
+      "sev": "L"
     },
     {
       "id": "sec.xcto",
@@ -665,21 +497,23 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "18 moderate/minor violation(s)"
-    },
-    {
-      "id": "a11y.headings",
-      "sev": "L",
-      "ev": "no <h1>"
+      "ev": "2 moderate/minor violation(s)"
     },
     {
       "id": "content.meta_desc",
       "sev": "L"
     },
     {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "3 console error(s): $(...).live is not a function"
+      "id": "content.favicon",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.feedback",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.terms",
+      "sev": "L"
     },
     {
       "id": "gigw.copyright_policy",
@@ -687,6 +521,10 @@
     },
     {
       "id": "gigw.hyperlink_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.disclaimer",
       "sev": "L"
     },
     {
@@ -698,30 +536,33 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.48"
-    },
-    {
-      "id": "perf.images",
+      "id": "gigw.search",
       "sev": "L"
     },
     {
-      "id": "id.sitemap_xml",
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
+      "id": "id.soft_404",
       "sev": "L",
-      "ev": "sitemap.xml returned 404"
+      "ev": "a nonexistent path returned 200"
     },
     {
       "id": "gigw.emblem",
       "sev": "I"
     },
     {
-      "id": "id.third_party",
-      "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-32MQLJGSM2&amp;cx=c&amp;gtm=4e6ae1, https://www.googletagmanager.com/gtag/js?id=UA-103783083-2"
+      "id": "id.canonical",
+      "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-18",
+      "up": true,
+      "score": 64
+    },
     {
       "d": "2026-10-17",
       "up": true,
@@ -858,5 +699,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

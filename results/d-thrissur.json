@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-16T23:49:24.054Z",
-    "run": "1792194505585",
+    "at": "2026-10-17T23:22:48.600Z",
+    "run": "1792279296124",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 47,
+      "performance": 49,
       "accessibility": 84,
       "best_practices": 69,
       "seo": 83
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "47/100"
+        "ev": "49/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "27495.083ms"
+        "ev": "29763.7935ms"
       },
       {
         "id": "perf.cls",
@@ -279,7 +279,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://thrissur.nic.in/en/taluk7/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -441,9 +442,9 @@
         "host": "s3waas.gov.in",
         "count": 6,
         "texts": [
+          "PDF\n                    \n\n                    \n                        Kerala Government Extraordinary Gazette – 2656 -Volume – 15\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
           "PDF\n                    \n\n                    \n                        Sexual Harassment against Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013 – Order reconstituting the Local Complaints Committee in Thrissur District\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
-          "PDF\n                    \n\n                    \n                        3 Year Completed Employee List\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
-          "PDF\n                    \n\n                    \n                        Land acquisition for the new 110 kV substation at Velur – The report on the Social Impact Assessment is being examined by the appropriate government, which will subsequently issue an order.\n                        Download Document\n                    \n\n                    Opens downloadable PDF document"
+          "PDF\n                    \n\n                    \n                        3 Year Completed Employee List\n                        Download Document\n                    \n\n                    Opens downloadable PDF document"
         ]
       },
       {
@@ -470,10 +471,10 @@
     ]
   },
   "score": {
-    "overall": 61,
+    "overall": 60,
     "security": 48,
     "accessibility": 60,
-    "content": 52,
+    "content": 42,
     "gigw": 60,
     "performance": 76,
     "identity": 96
@@ -501,6 +502,11 @@
       "ev": "ml-IN"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://thrissur.nic.in/en/taluk7/)"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -524,7 +530,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "27495.083ms"
+      "ev": "29763.7935ms"
     },
     {
       "id": "perf.weight",
@@ -603,6 +609,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-18",
+      "up": true,
+      "score": 60
+    },
     {
       "d": "2026-10-17",
       "up": true,
@@ -729,5 +740,5 @@
       "score": 63
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

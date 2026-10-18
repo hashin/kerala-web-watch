@@ -37,13 +37,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T00:16:50.834Z",
-    "run": "1792196177033",
+    "at": "2026-10-17T23:54:05.174Z",
+    "run": "1792281211411",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 59,
+      "accessibility": 73,
+      "best_practices": 92,
+      "seo": 67
+    },
     "axe": {
       "critical": 7,
-      "serious": 8,
+      "serious": 10,
       "moderate": 27,
       "minor": 0
     },
@@ -172,7 +177,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "8 serious violation(s)"
+        "ev": "10 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -192,7 +197,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "1 low-contrast element(s)"
+        "ev": "2 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -213,19 +218,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "73/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "26653.228499999976ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -238,11 +246,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -305,7 +313,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "40 console error(s): Access to font at 'https://gptcmanjeri.in/asset/fonts/Poppins-Regular.woff2' from origin 'https://www.gptcmanjeri.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "40 console error(s): Access to font at 'https://gptcmanjeri.in/asset//fonts/Manjari-Regular.woff2' from origin 'https://www.gptcmanjeri.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -412,7 +420,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920"
+        "ev": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
       }
     ],
     "screenshot": {
@@ -500,7 +508,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "8 serious violation(s)"
+      "ev": "10 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -510,7 +518,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "1 low-contrast element(s)"
+      "ev": "2 low-contrast element(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -536,6 +544,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "26653.228499999976ms"
     },
     {
       "id": "perf.weight",
@@ -575,7 +588,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "40 console error(s): Access to font at 'https://gptcmanjeri.in/asset/fonts/Poppins-Regular.woff2' from origin 'https://www.gptcmanjeri.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "40 console error(s): Access to font at 'https://gptcmanjeri.in/asset//fonts/Manjari-Regular.woff2' from origin 'https://www.gptcmanjeri.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -610,6 +623,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -629,10 +646,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920"
+      "ev": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-18",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-17",
       "up": false,
@@ -744,5 +766,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T00:35:58.550Z",
-    "run": "1792024496963",
+    "at": "2026-10-17T23:48:11.836Z",
+    "run": "1792280843019",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 60,
+      "performance": 61,
       "accessibility": 89,
       "best_practices": 74,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 5
+      "broken": 4
     },
     "tech": {
       "cms": "Drupal 11",
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "60/100"
+        "ev": "61/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10865.663499999999ms"
+        "ev": "8389.326ms"
       },
       {
         "id": "perf.cls",
@@ -282,8 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "5/30 crawled link(s) broken (https://meeting.lsgkerala.gov.in/Pages/StateWiseDashBoard.aspx, http://kunnamangalamblockpanchayat.lsgkerala.gov.in/about, http://kunnamangalamblockpanchayat.lsgkerala.gov.in/contact-us, ...)"
+        "r": "warn",
+        "ev": "4/30 crawled link(s) broken (http://kunnamangalamblockpanchayat.lsgkerala.gov.in/about, http://kunnamangalamblockpanchayat.lsgkerala.gov.in/contact-us, http://kunnamangalamblockpanchayat.lsgkerala.gov.in/terms, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -545,7 +545,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "5/30 crawled link(s) broken (https://meeting.lsgkerala.gov.in/Pages/StateWiseDashBoard.aspx, http://kunnamangalamblockpanchayat.lsgkerala.gov.in/about, http://kunnamangalamblockpanchayat.lsgkerala.gov.in/contact-us, ...)"
+      "ev": "4/30 crawled link(s) broken (http://kunnamangalamblockpanchayat.lsgkerala.gov.in/about, http://kunnamangalamblockpanchayat.lsgkerala.gov.in/contact-us, http://kunnamangalamblockpanchayat.lsgkerala.gov.in/terms, ...)"
     },
     {
       "id": "gigw.rti",
@@ -585,7 +585,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10865.663499999999ms"
+      "ev": "8389.326ms"
     },
     {
       "id": "perf.weight",
@@ -662,6 +662,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-18",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-17",
       "up": false,
@@ -793,5 +798,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

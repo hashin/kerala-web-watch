@@ -35,24 +35,24 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-16T23:50:00.724Z",
-    "run": "1792194570596",
+    "at": "2026-10-17T23:21:22.571Z",
+    "run": "1792279241299",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 92,
-      "accessibility": 78,
+      "performance": 53,
+      "accessibility": 64,
       "best_practices": 96,
       "seo": 92
     },
     "axe": {
       "critical": 0,
-      "serious": 2,
-      "moderate": 1,
+      "serious": 4,
+      "moderate": 9,
       "minor": 0
     },
     "crawl": {
-      "pages": 18,
-      "pdfs": 0,
+      "pages": 20,
+      "pdfs": 4,
       "broken": 0
     },
     "tech": {
@@ -111,7 +111,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.cert_valid",
@@ -174,12 +174,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "2 serious violation(s)"
+        "ev": "4 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "1 moderate/minor violation(s)"
+        "ev": "9 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -192,11 +192,12 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "1 low-contrast element(s)"
+        "ev": "3 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
-        "r": "pass"
+        "r": "fail",
+        "ev": "no <h1>"
       },
       {
         "id": "a11y.labels",
@@ -213,16 +214,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "78/100"
+        "ev": "64/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "92/100"
+        "ev": "53/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "fail",
+        "ev": "14908.171ms"
       },
       {
         "id": "perf.cls",
@@ -238,7 +240,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -264,7 +266,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ML-NILA"
+        "ev": "ml-IN"
       },
       {
         "id": "content.obsolete_tech",
@@ -288,8 +290,7 @@
       },
       {
         "id": "content.malayalam",
-        "r": "fail",
-        "ev": "Malayalam ratio 0.02, no language toggle found"
+        "r": "pass"
       },
       {
         "id": "content.title",
@@ -418,21 +419,33 @@
     "screenshot": {
       "desktop": "dslr.webp",
       "mobile": "dslr-m.webp",
-      "phash": "0000ffffffffffff"
+      "phash": "00031f4f47071f1f"
     },
-    "outlinks": []
+    "outlinks": [
+      {
+        "host": "cdit.org",
+        "count": 3,
+        "texts": [
+          "readmore.."
+        ]
+      }
+    ]
   },
   "score": {
-    "overall": 53,
-    "security": 28,
-    "accessibility": 76,
-    "content": 38,
+    "overall": 47,
+    "security": 8,
+    "accessibility": 72,
+    "content": 48,
     "gigw": 18,
-    "performance": 96,
+    "performance": 76,
     "identity": 91
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
+    {
+      "id": "sec.http_redirect",
+      "sev": "H"
+    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -451,7 +464,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ML-NILA"
+      "ev": "ml-IN"
     },
     {
       "id": "sec.hsts",
@@ -464,17 +477,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "2 serious violation(s)"
+      "ev": "4 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "1 low-contrast element(s)"
-    },
-    {
-      "id": "content.malayalam",
-      "sev": "M",
-      "ev": "Malayalam ratio 0.02, no language toggle found"
+      "ev": "3 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -497,6 +505,15 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "14908.171ms"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
+    },
+    {
       "id": "id.tech",
       "sev": "M",
       "ev": "WordPress 5.3.26 (unsupported major version)"
@@ -516,7 +533,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "1 moderate/minor violation(s)"
+      "ev": "9 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "no <h1>"
     },
     {
       "id": "content.meta_desc",
@@ -578,6 +600,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-18",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-10-17",
       "up": true,
@@ -714,5 +741,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

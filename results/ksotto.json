@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T00:04:26.118Z",
-    "run": "1792195404720",
+    "at": "2026-10-17T23:46:39.521Z",
+    "run": "1792280732993",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 32,
+      "performance": 31,
       "accessibility": 78,
       "best_practices": 88,
       "seo": 62
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "5369ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -221,17 +222,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "32/100"
+        "ev": "31/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11356.5225ms"
+        "ev": "9603.997000000001ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.70"
+        "ev": "1.08"
       },
       {
         "id": "perf.weight",
@@ -270,7 +271,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-transform"
+        "ev": "ml-user"
       },
       {
         "id": "content.obsolete_tech",
@@ -503,12 +504,17 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-transform"
+      "ev": "ml-user"
     },
     {
       "id": "content.broken_links",
       "sev": "H",
       "ev": "1/30 crawled link(s) broken (https://www.portal.ksotto.kerala.gov.in/)"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "5369ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -548,7 +554,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11356.5225ms"
+      "ev": "9603.997000000001ms"
     },
     {
       "id": "perf.weight",
@@ -618,7 +624,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.70"
+      "ev": "1.08"
     },
     {
       "id": "perf.images",
@@ -630,6 +636,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-18",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-17",
       "up": true,
@@ -766,5 +777,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

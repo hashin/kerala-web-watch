@@ -29,11 +29,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T00:11:47.275Z",
-    "run": "1792195848547",
+    "at": "2026-10-17T23:37:01.287Z",
+    "run": "1792280202292",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 57,
+      "performance": 60,
       "accessibility": 92,
       "best_practices": 92,
       "seo": 92
@@ -47,7 +47,7 @@
     "crawl": {
       "pages": 13,
       "pdfs": 0,
-      "broken": 3
+      "broken": 0
     },
     "tech": {
       "cms": "WordPress 7.0.7",
@@ -213,12 +213,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "57/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "24961.9045ms"
+        "ev": "23531.636500000004ms"
       },
       {
         "id": "perf.cls",
@@ -275,8 +275,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "3/13 crawled link(s) broken (http://basheersmarakatrust.com/members/, http://basheersmarakatrust.com/gallery/, http://basheersmarakatrust.com/photos/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -437,15 +436,15 @@
     ]
   },
   "score": {
-    "overall": 44,
+    "overall": 47,
     "security": 48,
     "accessibility": 56,
-    "content": 16,
+    "content": 36,
     "gigw": 0,
     "performance": 76,
     "identity": 80
   },
-  "status": "down",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -466,11 +465,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-lg"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "3/13 crawled link(s) broken (http://basheersmarakatrust.com/members/, http://basheersmarakatrust.com/gallery/, http://basheersmarakatrust.com/photos/)"
     },
     {
       "id": "gigw.rti",
@@ -532,7 +526,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "24961.9045ms"
+      "ev": "23531.636500000004ms"
     },
     {
       "id": "perf.weight",
@@ -604,6 +598,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-18",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-10-17",
       "up": false,
@@ -740,5 +739,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

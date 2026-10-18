@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T23:47:33.299Z",
-    "run": "1792107983978",
+    "at": "2026-10-17T23:21:01.982Z",
+    "run": "1792279166372",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 51,
+      "performance": 55,
       "accessibility": 96,
       "best_practices": 69,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3055ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -220,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "51/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "28853.24050000001ms"
+        "ev": "22235.006500000003ms"
       },
       {
         "id": "perf.cls",
@@ -281,7 +280,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://alappuzha.nic.in/en/district-collector/)"
+        "ev": "2/30 crawled link(s) broken (https://alappuzha.nic.in/en/#SkipContent, https://alappuzha.nic.in/en/document-category/102-aroor/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -536,12 +535,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://alappuzha.nic.in/en/district-collector/)"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3055ms"
+      "ev": "2/30 crawled link(s) broken (https://alappuzha.nic.in/en/#SkipContent, https://alappuzha.nic.in/en/document-category/102-aroor/)"
     },
     {
       "id": "sec.hsts",
@@ -567,7 +561,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "28853.24050000001ms"
+      "ev": "22235.006500000003ms"
     },
     {
       "id": "perf.weight",
@@ -642,6 +636,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-18",
+      "up": true,
+      "score": 60
+    },
     {
       "d": "2026-10-17",
       "up": true,
@@ -773,5 +772,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

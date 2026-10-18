@@ -29,24 +29,24 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-10-16T00:22:56.496Z",
-    "run": "1792110129311",
+    "at": "2026-10-17T23:50:10.644Z",
+    "run": "1792280964484",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 35,
-      "accessibility": 95,
+      "performance": 39,
+      "accessibility": 89,
       "best_practices": 78,
-      "seo": 77
+      "seo": 69
     },
     "axe": {
-      "critical": 0,
+      "critical": 1,
       "serious": 1,
       "moderate": 70,
       "minor": 0
     },
     "crawl": {
       "pages": 22,
-      "pdfs": 1,
+      "pdfs": 2,
       "broken": 0
     },
     "tech": {
@@ -86,12 +86,11 @@
       {
         "id": "avail.under_construction",
         "r": "warn",
-        "ev": "\"coming soon\" alongside 2457 other characters"
+        "ev": "\"coming soon\" alongside 2497 other characters"
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "4854ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -164,7 +163,8 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
@@ -182,7 +182,8 @@
       },
       {
         "id": "a11y.alt",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
@@ -209,17 +210,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "95/100"
+        "ev": "89/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "35/100"
+        "ev": "39/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10656.503499999999ms"
+        "ev": "6361.134999999998ms"
       },
       {
         "id": "perf.cls",
@@ -229,7 +230,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "6.5MB"
+        "ev": "6.3MB"
       },
       {
         "id": "perf.viewport",
@@ -378,7 +379,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "36 days left"
+        "ev": "34 days left"
       },
       {
         "id": "id.www_consistency",
@@ -462,7 +463,12 @@
     {
       "id": "avail.under_construction",
       "sev": "H",
-      "ev": "\"coming soon\" alongside 2457 other characters"
+      "ev": "\"coming soon\" alongside 2497 other characters"
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "1 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -482,12 +488,7 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "36 days left"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "4854ms"
+      "ev": "34 days left"
     },
     {
       "id": "sec.hsts",
@@ -501,6 +502,11 @@
       "id": "a11y.axe_serious",
       "sev": "M",
       "ev": "1 serious violation(s)"
+    },
+    {
+      "id": "a11y.alt",
+      "sev": "M",
+      "ev": "1 image(s) missing alt text"
     },
     {
       "id": "a11y.contrast",
@@ -530,12 +536,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10656.503499999999ms"
+      "ev": "6361.134999999998ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "6.5MB"
+      "ev": "6.3MB"
     },
     {
       "id": "sec.csp",
@@ -607,6 +613,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-18",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-17",
       "up": false,
@@ -733,5 +744,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

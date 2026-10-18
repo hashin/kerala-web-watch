@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T00:05:03.498Z",
-    "run": "1792195422793",
+    "at": "2026-10-17T23:39:15.424Z",
+    "run": "1792280257456",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
+      "performance": 53,
       "accessibility": 87,
       "best_practices": 92,
       "seo": 64
@@ -97,7 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4375ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -121,8 +122,7 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "fail",
-        "ev": "2 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "53/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9674.374999999998ms"
+        "ev": "11288.764000000001ms"
       },
       {
         "id": "perf.cls",
@@ -471,8 +471,8 @@
     ]
   },
   "score": {
-    "overall": 50,
-    "security": 2,
+    "overall": 55,
+    "security": 22,
     "accessibility": 56,
     "content": 62,
     "gigw": 60,
@@ -484,11 +484,6 @@
     {
       "id": "sec.http_redirect",
       "sev": "H"
-    },
-    {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "2 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -509,6 +504,11 @@
       "id": "content.broken_links",
       "sev": "H",
       "ev": "2/30 crawled link(s) broken (https://eoffice.kerala.gov.in/EofficePortal/letterSearchRedirect, http://score.kerala.gov.in/Login.jsp)"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "4375ms"
     },
     {
       "id": "sec.hsts",
@@ -545,7 +545,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9674.374999999998ms"
+      "ev": "11288.764000000001ms"
     },
     {
       "id": "sec.csp",
@@ -616,6 +616,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-18",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-17",
       "up": true,
@@ -747,5 +752,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

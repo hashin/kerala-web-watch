@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T00:10:48.545Z",
-    "run": "1792195770686",
+    "at": "2026-10-17T23:44:29.861Z",
+    "run": "1792280572358",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 55,
@@ -52,8 +52,8 @@
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 7,
-      "broken": 0
+      "pdfs": 6,
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -229,7 +229,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "26.8MB"
+        "ev": "11.8MB"
       },
       {
         "id": "perf.viewport",
@@ -274,7 +274,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://vigilance.kerala.gov.in/contact/directorate)"
       },
       {
         "id": "content.broken_pdfs",
@@ -485,10 +486,10 @@
     ]
   },
   "score": {
-    "overall": 70,
+    "overall": 69,
     "security": 80,
     "accessibility": 84,
-    "content": 72,
+    "content": 62,
     "gigw": 0,
     "performance": 86,
     "identity": 100
@@ -503,6 +504,11 @@
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://vigilance.kerala.gov.in/contact/directorate)"
     },
     {
       "id": "gigw.contact",
@@ -536,7 +542,7 @@
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "26.8MB"
+      "ev": "11.8MB"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -601,6 +607,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-18",
+      "up": true,
+      "score": 69
+    },
     {
       "d": "2026-10-17",
       "up": true,
@@ -727,5 +738,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

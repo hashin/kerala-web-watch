@@ -29,14 +29,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-16T23:51:18.068Z",
-    "run": "1792194600725",
+    "at": "2026-10-17T23:23:58.160Z",
+    "run": "1792279335693",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 53,
-      "accessibility": 73,
-      "best_practices": 88,
-      "seo": 85
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
     },
     "axe": {
       "critical": 10,
@@ -89,7 +89,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "fail",
+        "ev": "19783ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -114,7 +115,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "19 days left"
+        "ev": "18 days left"
       },
       {
         "id": "sec.tls_version",
@@ -212,21 +213,20 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "73/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "53/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "29170.767000000003ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -501,20 +501,20 @@
     ]
   },
   "score": {
-    "overall": 49,
+    "overall": 50,
     "security": 28,
     "accessibility": 40,
     "content": 38,
     "gigw": 58,
-    "performance": 71,
+    "performance": 81,
     "identity": 100
   },
-  "status": "down",
+  "status": "needs-work",
   "issues": [
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "19 days left"
+      "ev": "18 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -547,6 +547,11 @@
       "ev": "1/30 crawled link(s) broken (https://kerala.gov.in/)"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "19783ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -576,11 +581,6 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "29170.767000000003ms"
     },
     {
       "id": "perf.weight",
@@ -649,6 +649,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-18",
+      "up": true,
+      "score": 50
+    },
     {
       "d": "2026-10-17",
       "up": false,
@@ -775,5 +780,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

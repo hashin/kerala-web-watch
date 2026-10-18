@@ -35,13 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T00:09:26.373Z",
-    "run": "1792195620259",
+    "at": "2026-10-17T23:42:37.935Z",
+    "run": "1792280433732",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 35,
+      "performance": 34,
       "accessibility": 84,
-      "best_practices": 88,
+      "best_practices": 92,
       "seo": 92
     },
     "axe": {
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3757ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -220,22 +219,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "35/100"
+        "ev": "34/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "37579.699500000046ms"
+        "ev": "42504.22400000014ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.45"
+        "ev": "0.51"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "51.2MB"
+        "ev": "45.0MB"
       },
       {
         "id": "perf.viewport",
@@ -490,11 +489,6 @@
       "ev": "pravasikerala.org"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3757ms"
-    },
-    {
       "id": "a11y.axe_serious",
       "sev": "M",
       "ev": "24 serious violation(s)"
@@ -520,12 +514,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "37579.699500000046ms"
+      "ev": "42504.22400000014ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "51.2MB"
+      "ev": "45.0MB"
     },
     {
       "id": "sec.csp",
@@ -568,7 +562,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.45"
+      "ev": "0.51"
     },
     {
       "id": "perf.images",
@@ -594,6 +588,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-18",
+      "up": true,
+      "score": 68
+    },
     {
       "d": "2026-10-17",
       "up": true,
@@ -725,5 +724,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

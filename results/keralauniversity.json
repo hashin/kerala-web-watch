@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-13T02:50:58.247Z",
-    "run": "1791859781640",
+    "at": "2026-10-17T23:28:18.804Z",
+    "run": "1792279552947",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 54,
+      "performance": 49,
       "accessibility": 82,
       "best_practices": 85,
       "seo": 82
@@ -49,7 +49,7 @@
     "axe": {
       "critical": 6,
       "serious": 33,
-      "moderate": 14,
+      "moderate": 13,
       "minor": 0
     },
     "crawl": {
@@ -59,7 +59,7 @@
     },
     "tech": {
       "cms": null,
-      "server": "Apache",
+      "server": null,
       "jquery": "1.7.2"
     },
     "checks": [
@@ -69,15 +69,16 @@
       },
       {
         "id": "avail.connect",
-        "r": "pass"
+        "r": "fail",
+        "ev": "timeout"
       },
       {
         "id": "avail.status",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.parked",
@@ -97,7 +98,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.geo_blocked",
@@ -109,7 +110,7 @@
       },
       {
         "id": "sec.https",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.http_redirect",
@@ -117,16 +118,15 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "28 days left"
+        "r": "na"
       },
       {
         "id": "sec.tls_version",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.hsts",
@@ -134,8 +134,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://kusicc.ac.in\""
+        "r": "na"
       },
       {
         "id": "sec.csp",
@@ -184,7 +183,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "14 moderate/minor violation(s)"
+        "ev": "13 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -226,12 +225,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "54/100"
+        "ev": "49/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "13499.434000000001ms"
+        "ev": "10626.474999999999ms"
       },
       {
         "id": "perf.cls",
@@ -392,7 +391,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "id.robots",
@@ -406,7 +405,7 @@
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.canonical",
@@ -560,30 +559,17 @@
       }
     ]
   },
-  "score": {
-    "overall": 34,
-    "security": 4,
-    "accessibility": 22,
-    "content": 28,
-    "gigw": 40,
-    "performance": 86,
-    "identity": 88
-  },
-  "status": "poor",
+  "score": null,
+  "status": "down",
   "issues": [
+    {
+      "id": "avail.connect",
+      "sev": "C",
+      "ev": "timeout"
+    },
     {
       "id": "sec.http_redirect",
       "sev": "H"
-    },
-    {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "28 days left"
-    },
-    {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://kusicc.ac.in\""
     },
     {
       "id": "sec.vuln_js",
@@ -658,7 +644,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "13499.434000000001ms"
+      "ev": "10626.474999999999ms"
     },
     {
       "id": "sec.csp",
@@ -680,7 +666,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "14 moderate/minor violation(s)"
+      "ev": "13 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -725,10 +711,6 @@
       "sev": "L"
     },
     {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
       "id": "id.robots",
       "sev": "L",
       "ev": "robots.txt returned 404"
@@ -748,6 +730,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-18",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-17",
       "up": true,
@@ -874,5 +861,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
