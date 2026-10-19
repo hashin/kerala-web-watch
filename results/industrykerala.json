@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T23:26:39.402Z",
-    "run": "1792279518118",
+    "at": "2026-10-18T23:37:46.521Z",
+    "run": "1792366615126",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 42,
+      "performance": 46,
       "accessibility": 84,
       "best_practices": 88,
       "seo": 73
@@ -120,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "23 days left"
+        "ev": "22 days left"
       },
       {
         "id": "sec.tls_version",
@@ -220,22 +220,21 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "42/100"
+        "ev": "46/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "27127.3695ms"
+        "ev": "14737.224499999997ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.27"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "58.3MB"
+        "ev": "29.3MB"
       },
       {
         "id": "perf.viewport",
@@ -289,7 +288,7 @@
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "2 broken image(s)"
+        "ev": "1 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -310,7 +309,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "8 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+        "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
@@ -515,12 +514,12 @@
     ]
   },
   "score": {
-    "overall": 63,
+    "overall": 64,
     "security": 46,
     "accessibility": 56,
     "content": 78,
     "gigw": 68,
-    "performance": 72,
+    "performance": 76,
     "identity": 88
   },
   "status": "needs-work",
@@ -528,7 +527,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "23 days left"
+      "ev": "22 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -571,12 +570,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "27127.3695ms"
+      "ev": "14737.224499999997ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "58.3MB"
+      "ev": "29.3MB"
     },
     {
       "id": "sec.csp",
@@ -590,7 +589,7 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "2 broken image(s)"
+      "ev": "1 broken image(s)"
     },
     {
       "id": "content.meta_desc",
@@ -599,7 +598,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "8 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
@@ -612,11 +611,6 @@
     {
       "id": "gigw.search",
       "sev": "L"
-    },
-    {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.27"
     },
     {
       "id": "perf.images",
@@ -646,6 +640,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-19",
+      "up": true,
+      "score": 64
+    },
     {
       "d": "2026-10-18",
       "up": true,
@@ -782,5 +781,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

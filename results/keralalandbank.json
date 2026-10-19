@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T23:48:25.350Z",
-    "run": "1792280858853",
+    "at": "2026-10-18T23:56:24.260Z",
+    "run": "1792367735606",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 53,
+      "performance": 65,
       "accessibility": 78,
       "best_practices": 96,
       "seo": 69
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3257ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -221,17 +222,16 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "53/100"
+        "ev": "65/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "4145.062ms"
+        "r": "pass"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "1.81"
+        "ev": "1.35"
       },
       {
         "id": "perf.weight",
@@ -469,12 +469,12 @@
     ]
   },
   "score": {
-    "overall": 47,
+    "overall": 48,
     "security": 48,
     "accessibility": 40,
     "content": 46,
     "gigw": 12,
-    "performance": 82,
+    "performance": 92,
     "identity": 80
   },
   "status": "poor",
@@ -507,6 +507,11 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "keralalandbank.in"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3257ms"
     },
     {
       "id": "sec.hsts",
@@ -551,11 +556,6 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "4145.062ms"
     },
     {
       "id": "sec.csp",
@@ -619,7 +619,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "1.81"
+      "ev": "1.35"
     },
     {
       "id": "perf.images",
@@ -631,6 +631,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-19",
+      "up": true,
+      "score": 48
+    },
     {
       "d": "2026-10-18",
       "up": true,
@@ -772,5 +777,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

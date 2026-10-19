@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T23:27:50.698Z",
-    "run": "1792279599404",
+    "at": "2026-10-18T23:38:07.595Z",
+    "run": "1792366602534",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 31,
-      "accessibility": 87,
+      "performance": 43,
+      "accessibility": 78,
       "best_practices": 92,
       "seo": 58
     },
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3096ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -218,22 +217,21 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "87/100"
+        "ev": "78/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "31/100"
+        "ev": "43/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "23850.474499999997ms"
+        "ev": "24485.849000000002ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.89"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -246,7 +244,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -446,12 +444,12 @@
     ]
   },
   "score": {
-    "overall": 43,
+    "overall": 42,
     "security": 32,
     "accessibility": 30,
     "content": 52,
     "gigw": 32,
-    "performance": 77,
+    "performance": 71,
     "identity": 72
   },
   "status": "poor",
@@ -484,11 +482,6 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "keralaceramics.com"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3096ms"
     },
     {
       "id": "sec.hsts",
@@ -537,12 +530,16 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "23850.474499999997ms"
+      "ev": "24485.849000000002ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
       "ev": "5.8MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.xcto",
@@ -605,11 +602,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.89"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -629,6 +621,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-19",
+      "up": true,
+      "score": 42
+    },
     {
       "d": "2026-10-18",
       "up": true,
@@ -725,5 +722,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

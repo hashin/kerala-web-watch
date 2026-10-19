@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T23:32:21.563Z",
-    "run": "1792279880556",
+    "at": "2026-10-18T23:42:54.804Z",
+    "run": "1792366921014",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 50,
+      "performance": 60,
       "accessibility": 80,
       "best_practices": 92,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 5,
-      "broken": 5
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -220,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "50/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10204.872000000003ms"
+        "ev": "7819.682000000001ms"
       },
       {
         "id": "perf.cls",
@@ -279,8 +279,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "5/30 crawled link(s) broken (https://www.ceo.kerala.gov.in/voters-corner/polling-stations, https://www.ceo.kerala.gov.in/voters-corner, https://www.ceo.kerala.gov.in/political-parties, ...)"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://sutharyam.ceo.kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -462,10 +462,10 @@
     ]
   },
   "score": {
-    "overall": 60,
+    "overall": 62,
     "security": 80,
     "accessibility": 50,
-    "content": 36,
+    "content": 46,
     "gigw": 32,
     "performance": 76,
     "identity": 100
@@ -495,7 +495,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "5/30 crawled link(s) broken (https://www.ceo.kerala.gov.in/voters-corner/polling-stations, https://www.ceo.kerala.gov.in/voters-corner, https://www.ceo.kerala.gov.in/political-parties, ...)"
+      "ev": "1/30 crawled link(s) broken (https://sutharyam.ceo.kerala.gov.in/)"
     },
     {
       "id": "a11y.axe_serious",
@@ -526,7 +526,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10204.872000000003ms"
+      "ev": "7819.682000000001ms"
     },
     {
       "id": "perf.tap_targets",
@@ -595,6 +595,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-19",
+      "up": true,
+      "score": 62
+    },
     {
       "d": "2026-10-18",
       "up": true,
@@ -731,5 +736,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

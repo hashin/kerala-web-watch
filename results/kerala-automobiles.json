@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T23:24:39.723Z",
-    "run": "1792279438162",
+    "at": "2026-10-18T23:36:34.983Z",
+    "run": "1792366559814",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 0,
@@ -96,8 +96,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3721ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -397,7 +396,8 @@
       },
       {
         "id": "id.soft_404",
-        "r": "na"
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
       },
       {
         "id": "id.canonical",
@@ -458,11 +458,6 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "keralaautomobilesltd.com"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3721ms"
     },
     {
       "id": "sec.hsts",
@@ -592,6 +587,11 @@
       "ev": "Disallow: / for User-agent: *"
     },
     {
+      "id": "id.soft_404",
+      "sev": "L",
+      "ev": "a nonexistent path returned 200"
+    },
+    {
       "id": "id.charset_doctype",
       "sev": "L",
       "ev": "missing UTF-8 charset, HTML5 doctype"
@@ -606,6 +606,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-19",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-18",
       "up": false,
@@ -697,5 +702,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

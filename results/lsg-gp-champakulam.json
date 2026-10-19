@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-12T01:06:15.327Z",
-    "run": "1791767131259",
+    "at": "2026-10-19T00:09:40.410Z",
+    "run": "1792368524711",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 58,
+      "performance": 55,
       "accessibility": 89,
       "best_practices": 78,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "58/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9929.736ms"
+        "ev": "9668.328999999998ms"
       },
       {
         "id": "perf.cls",
@@ -236,7 +236,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "8.7MB"
+        "ev": "8.8MB"
       },
       {
         "id": "perf.viewport",
@@ -282,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://plan.lsgkerala.gov.in/formulation/Public.aspx)"
       },
       {
         "id": "content.broken_pdfs",
@@ -544,6 +545,11 @@
       "ev": "ml-user"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://plan.lsgkerala.gov.in/formulation/Public.aspx)"
+    },
+    {
       "id": "gigw.rti",
       "sev": "H"
     },
@@ -581,12 +587,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9929.736ms"
+      "ev": "9668.328999999998ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "8.7MB"
+      "ev": "8.8MB"
     },
     {
       "id": "perf.tap_targets",
@@ -658,6 +664,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-19",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-18",
       "up": false,
@@ -789,5 +800,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

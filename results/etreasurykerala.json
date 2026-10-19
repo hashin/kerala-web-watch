@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T23:30:30.545Z",
-    "run": "1792279782761",
+    "at": "2026-10-18T23:41:31.378Z",
+    "run": "1792366837100",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 45,
+      "performance": 42,
       "accessibility": 82,
       "best_practices": 73,
       "seo": 75
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 23,
       "pdfs": 0,
-      "broken": 4
+      "broken": 5
     },
     "tech": {
       "cms": null,
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "45/100"
+        "ev": "42/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11616.671ms"
+        "ev": "11829.900000000001ms"
       },
       {
         "id": "perf.cls",
@@ -281,8 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "4/23 crawled link(s) broken (https://kerala.gov.in/, https://finance.kerala.gov.in/, https://bims.treasury.kerala.gov.in/, ...)"
+        "r": "fail",
+        "ev": "5/23 crawled link(s) broken (https://etreasury.kerala.gov.in/index.php/ParichayController/parichay_login, https://kerala.gov.in/, https://finance.kerala.gov.in/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -432,10 +432,10 @@
     ]
   },
   "score": {
-    "overall": 56,
+    "overall": 55,
     "security": 72,
     "accessibility": 40,
-    "content": 46,
+    "content": 36,
     "gigw": 26,
     "performance": 81,
     "identity": 92
@@ -465,7 +465,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "4/23 crawled link(s) broken (https://kerala.gov.in/, https://finance.kerala.gov.in/, https://bims.treasury.kerala.gov.in/, ...)"
+      "ev": "5/23 crawled link(s) broken (https://etreasury.kerala.gov.in/index.php/ParichayController/parichay_login, https://kerala.gov.in/, https://finance.kerala.gov.in/, ...)"
     },
     {
       "id": "gigw.rti",
@@ -501,7 +501,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11616.671ms"
+      "ev": "11829.900000000001ms"
     },
     {
       "id": "perf.weight",
@@ -578,6 +578,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-19",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-18",
       "up": true,
@@ -714,5 +719,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

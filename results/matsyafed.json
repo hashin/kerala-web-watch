@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T23:48:45.847Z",
-    "run": "1792280882719",
+    "at": "2026-10-18T23:48:54.549Z",
+    "run": "1792367290488",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 47,
+      "performance": 44,
       "accessibility": 88,
       "best_practices": 69,
       "seo": 100
@@ -132,7 +132,7 @@
       {
         "id": "sec.mixed_content",
         "r": "fail",
-        "ev": "href=\"http://matsyafed.in/components/com_layer_slider/base/static/layerslider/skins/numbers/skin.css\""
+        "ev": "href=\"http://www.matsyafed.in/components/com_layer_slider/base/static/layerslider/skins/numbers/skin.css\""
       },
       {
         "id": "sec.csp",
@@ -220,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "47/100"
+        "ev": "44/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "15755.748499999996ms"
+        "ev": "14788.644ms"
       },
       {
         "id": "perf.cls",
@@ -311,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "2 console error(s): Mixed Content: The page at 'https://www.matsyafed.in/' was loaded over HTTPS, but requested an insecure stylesheet 'http://matsyafed.in/components/com_layer_slider/base/static/layerslider/skins/numbers/skin.css'. This request has been blocked; the content must be served over HTTPS."
+        "ev": "3 console error(s): Mixed Content: The page at 'https://www.matsyafed.in/' was loaded over HTTPS, but requested an insecure stylesheet 'http://www.matsyafed.in/components/com_layer_slider/base/static/layerslider/skins/numbers/skin.css'. This request has been blocked; the content must be served over HTTPS."
       },
       {
         "id": "gigw.contact",
@@ -475,7 +475,7 @@
     {
       "id": "sec.mixed_content",
       "sev": "H",
-      "ev": "href=\"http://matsyafed.in/components/com_layer_slider/base/static/layerslider/skins/numbers/skin.css\""
+      "ev": "href=\"http://www.matsyafed.in/components/com_layer_slider/base/static/layerslider/skins/numbers/skin.css\""
     },
     {
       "id": "sec.vuln_js",
@@ -536,7 +536,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "15755.748499999996ms"
+      "ev": "14788.644ms"
     },
     {
       "id": "perf.weight",
@@ -569,7 +569,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "2 console error(s): Mixed Content: The page at 'https://www.matsyafed.in/' was loaded over HTTPS, but requested an insecure stylesheet 'http://matsyafed.in/components/com_layer_slider/base/static/layerslider/skins/numbers/skin.css'. This request has been blocked; the content must be served over HTTPS."
+      "ev": "3 console error(s): Mixed Content: The page at 'https://www.matsyafed.in/' was loaded over HTTPS, but requested an insecure stylesheet 'http://www.matsyafed.in/components/com_layer_slider/base/static/layerslider/skins/numbers/skin.css'. This request has been blocked; the content must be served over HTTPS."
     },
     {
       "id": "gigw.feedback",
@@ -618,6 +618,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-19",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-10-18",
       "up": true,
@@ -754,5 +759,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

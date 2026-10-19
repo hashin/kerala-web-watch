@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T23:44:25.199Z",
-    "run": "1792280616037",
+    "at": "2026-10-18T23:51:44.398Z",
+    "run": "1792367418492",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 54,
+      "performance": 49,
       "accessibility": 74,
       "best_practices": 50,
       "seo": 91
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3372ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -119,8 +120,8 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "7 days left"
+        "r": "fail",
+        "ev": "6 days left"
       },
       {
         "id": "sec.tls_version",
@@ -223,12 +224,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "54/100"
+        "ev": "49/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11745.998ms"
+        "ev": "12702.268000000002ms"
       },
       {
         "id": "perf.cls",
@@ -419,7 +420,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e6af0h2, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e6ae1, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
       }
     ],
     "screenshot": {
@@ -477,8 +478,8 @@
     ]
   },
   "score": {
-    "overall": 46,
-    "security": 18,
+    "overall": 44,
+    "security": 8,
     "accessibility": 30,
     "content": 66,
     "gigw": 52,
@@ -490,7 +491,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "7 days left"
+      "ev": "6 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -516,6 +517,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3372ms"
     },
     {
       "id": "sec.hsts",
@@ -551,7 +557,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11745.998ms"
+      "ev": "12702.268000000002ms"
     },
     {
       "id": "perf.weight",
@@ -647,10 +653,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e6af0h2, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e6ae1, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-19",
+      "up": true,
+      "score": 44
+    },
     {
       "d": "2026-10-18",
       "up": true,
@@ -787,5 +798,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

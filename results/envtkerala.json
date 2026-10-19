@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T23:36:36.615Z",
-    "run": "1792279941565",
+    "at": "2026-10-18T23:45:42.017Z",
+    "run": "1792366974805",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 60,
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 7,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "WordPress 6.5.13",
@@ -97,8 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "fail",
-        "ev": "13077ms"
+        "r": "warn",
+        "ev": "7450ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -226,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "18533.010000000002ms"
+        "ev": "8804.8445ms"
       },
       {
         "id": "perf.cls",
@@ -281,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://envt.kerala.gov.in/#)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -386,7 +385,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.robots",
@@ -471,10 +470,10 @@
     ]
   },
   "score": {
-    "overall": 54,
+    "overall": 56,
     "security": 38,
     "accessibility": 72,
-    "content": 42,
+    "content": 52,
     "gigw": 22,
     "performance": 71,
     "identity": 100
@@ -501,14 +500,9 @@
       "ev": "ML-NILA"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://envt.kerala.gov.in/#)"
-    },
-    {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "13077ms"
+      "ev": "7450ms"
     },
     {
       "id": "sec.hsts",
@@ -547,7 +541,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "18533.010000000002ms"
+      "ev": "8804.8445ms"
     },
     {
       "id": "perf.weight",
@@ -622,6 +616,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-19",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-10-18",
       "up": true,
@@ -763,5 +762,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

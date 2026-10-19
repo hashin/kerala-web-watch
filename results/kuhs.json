@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T23:39:21.513Z",
-    "run": "1792279683755",
+    "at": "2026-10-18T23:37:48.118Z",
+    "run": "1792366617098",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 43,
+      "performance": 29,
       "accessibility": 56,
       "best_practices": 69,
       "seo": 83
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 2,
-      "broken": 32
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -223,21 +223,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "43/100"
+        "ev": "29/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11730.546999999999ms"
+        "ev": "14091.209999999995ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.47"
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "7.7MB"
+        "r": "fail",
+        "ev": "8.1MB"
       },
       {
         "id": "perf.viewport",
@@ -284,18 +285,16 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "30/30 crawled link(s) broken (https://kuhs.ac.in/kuhs_new/, https://kuhs.ac.in/#, https://kuhs.ac.in/kuhs_new/index.php, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
-        "r": "fail",
-        "ev": "2 linked PDF(s) 404: https://kuhs.ac.in/kuhs_new/images/uploads/pdf/general/anthem/kuhs_anthem_guidelines.pdf, https://kuhs.ac.in/kuhs_new/images/uploads/pdf/general/anthem/kuhs_anthem_lyrics.pdf"
+        "r": "pass"
       },
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "3 broken image(s)"
+        "ev": "5 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -316,7 +315,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "21 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+        "ev": "24 console error(s): Failed to load resource: the server responded with a status of 502 ()"
       },
       {
         "id": "gigw.contact",
@@ -392,7 +391,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -453,13 +452,13 @@
     ]
   },
   "score": {
-    "overall": 43,
+    "overall": 46,
     "security": 34,
     "accessibility": 40,
-    "content": 12,
+    "content": 42,
     "gigw": 30,
-    "performance": 81,
-    "identity": 96
+    "performance": 72,
+    "identity": 92
   },
   "status": "poor",
   "issues": [
@@ -489,11 +488,6 @@
       "ev": "ml-IN"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "30/30 crawled link(s) broken (https://kuhs.ac.in/kuhs_new/, https://kuhs.ac.in/#, https://kuhs.ac.in/kuhs_new/index.php, ...)"
-    },
-    {
       "id": "sec.xfo",
       "sev": "M"
     },
@@ -518,11 +512,6 @@
       "ev": "<marquee"
     },
     {
-      "id": "content.broken_pdfs",
-      "sev": "M",
-      "ev": "2 linked PDF(s) 404: https://kuhs.ac.in/kuhs_new/images/uploads/pdf/general/anthem/kuhs_anthem_guidelines.pdf, https://kuhs.ac.in/kuhs_new/images/uploads/pdf/general/anthem/kuhs_anthem_lyrics.pdf"
-    },
-    {
       "id": "gigw.sitemap",
       "sev": "M"
     },
@@ -545,12 +534,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11730.546999999999ms"
+      "ev": "14091.209999999995ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.7MB"
+      "ev": "8.1MB"
     },
     {
       "id": "sec.csp",
@@ -587,12 +576,12 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "3 broken image(s)"
+      "ev": "5 broken image(s)"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "21 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      "ev": "24 console error(s): Failed to load resource: the server responded with a status of 502 ()"
     },
     {
       "id": "gigw.copyright_policy",
@@ -615,7 +604,16 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.47"
+    },
+    {
       "id": "perf.images",
+      "sev": "L"
+    },
+    {
+      "id": "id.www_consistency",
       "sev": "L"
     },
     {
@@ -633,6 +631,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-19",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-10-18",
       "up": true,
@@ -774,5 +777,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

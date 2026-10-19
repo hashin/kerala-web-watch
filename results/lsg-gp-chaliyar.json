@@ -35,19 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-12T01:07:51.733Z",
-    "run": "1791767231795",
+    "at": "2026-10-19T00:09:04.835Z",
+    "run": "1792368504015",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 60,
-      "accessibility": 85,
+      "performance": 58,
+      "accessibility": 89,
       "best_practices": 78,
       "seo": 92
     },
     "axe": {
       "critical": 1,
-      "serious": 19,
-      "moderate": 25,
+      "serious": 17,
+      "moderate": 32,
       "minor": 0
     },
     "crawl": {
@@ -156,7 +156,8 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "pass"
+        "r": "fail",
+        "ev": "swiper 11.2.10"
       },
       {
         "id": "sec.safe_browsing",
@@ -174,12 +175,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "19 serious violation(s)"
+        "ev": "17 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "25 moderate/minor violation(s)"
+        "ev": "32 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -193,7 +194,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "13 low-contrast element(s)"
+        "ev": "11 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -216,17 +217,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "85/100"
+        "ev": "89/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "60/100"
+        "ev": "58/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8237.354500000001ms"
+        "ev": "9043.496ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +236,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "8.6MB"
+        "ev": "8.7MB"
       },
       {
         "id": "perf.viewport",
@@ -449,9 +450,11 @@
       },
       {
         "host": "kerala.gov.in",
-        "count": 2,
+        "count": 7,
         "texts": [
-          "ഹരിത കര്‍മ്മ സേന"
+          "ഹരിത കര്‍മ്മ സേന",
+          "ഗവർണർ",
+          "മുഖ്യമന്ത്രി"
         ]
       },
       {
@@ -473,6 +476,13 @@
         "count": 1,
         "texts": [
           "പഞ്ചായത്ത് രാജ് ആക്ട്"
+        ]
+      },
+      {
+        "host": "niyamasabha.org",
+        "count": 1,
+        "texts": [
+          "നിയമസഭാംഗങ്ങൾ"
         ]
       },
       {
@@ -514,6 +524,11 @@
       "ev": "http://chaliyarpanchayat.lsgkerala.gov.in"
     },
     {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "swiper 11.2.10"
+    },
+    {
       "id": "a11y.axe_critical",
       "sev": "H",
       "ev": "1 critical violation(s)"
@@ -539,7 +554,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "19 serious violation(s)"
+      "ev": "17 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -549,7 +564,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "13 low-contrast element(s)"
+      "ev": "11 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -566,12 +581,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8237.354500000001ms"
+      "ev": "9043.496ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "8.6MB"
+      "ev": "8.7MB"
     },
     {
       "id": "perf.tap_targets",
@@ -588,7 +603,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "25 moderate/minor violation(s)"
+      "ev": "32 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -643,6 +658,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-19",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-18",
       "up": false,
@@ -774,5 +794,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

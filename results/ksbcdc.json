@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T23:58:17.876Z",
-    "run": "1792281438828",
+    "at": "2026-10-18T23:59:46.787Z",
+    "run": "1792367925915",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 31,
-      "accessibility": 78,
+      "performance": 46,
+      "accessibility": 67,
       "best_practices": 69,
       "seo": 77
     },
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3130ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -218,27 +217,26 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "78/100"
+        "ev": "67/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "31/100"
+        "ev": "46/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "21109.403500000004ms"
+        "ev": "23138.308499999992ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.72"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "8.1MB"
+        "ev": "8.5MB"
       },
       {
         "id": "perf.viewport",
@@ -246,7 +244,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -505,12 +503,12 @@
     ]
   },
   "score": {
-    "overall": 44,
+    "overall": 43,
     "security": 32,
     "accessibility": 30,
     "content": 52,
     "gigw": 36,
-    "performance": 72,
+    "performance": 66,
     "identity": 80
   },
   "status": "poor",
@@ -543,11 +541,6 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "ksbcdc.com"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3130ms"
     },
     {
       "id": "sec.hsts",
@@ -596,12 +589,16 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "21109.403500000004ms"
+      "ev": "23138.308499999992ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "8.1MB"
+      "ev": "8.5MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.xcto",
@@ -660,11 +657,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.72"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -674,6 +666,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-19",
+      "up": true,
+      "score": 43
+    },
     {
       "d": "2026-10-18",
       "up": true,
@@ -810,5 +807,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
