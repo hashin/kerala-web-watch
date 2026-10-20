@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-18T23:37:48.118Z",
-    "run": "1792366617098",
+    "at": "2026-10-20T00:38:26.365Z",
+    "run": "1792456656221",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 29,
+      "performance": 53,
       "accessibility": 56,
       "best_practices": 69,
       "seo": 83
@@ -223,22 +223,21 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "29/100"
+        "ev": "53/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "14091.209999999995ms"
+        "ev": "12084.282ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.47"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
-        "r": "fail",
-        "ev": "8.1MB"
+        "r": "warn",
+        "ev": "7.3MB"
       },
       {
         "id": "perf.viewport",
@@ -294,7 +293,7 @@
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "5 broken image(s)"
+        "ev": "3 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -315,7 +314,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "24 console error(s): Failed to load resource: the server responded with a status of 502 ()"
+        "ev": "21 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
@@ -452,12 +451,12 @@
     ]
   },
   "score": {
-    "overall": 46,
+    "overall": 47,
     "security": 34,
     "accessibility": 40,
     "content": 42,
     "gigw": 30,
-    "performance": 72,
+    "performance": 81,
     "identity": 92
   },
   "status": "poor",
@@ -534,12 +533,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "14091.209999999995ms"
+      "ev": "12084.282ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "8.1MB"
+      "ev": "7.3MB"
     },
     {
       "id": "sec.csp",
@@ -576,12 +575,12 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "5 broken image(s)"
+      "ev": "3 broken image(s)"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "24 console error(s): Failed to load resource: the server responded with a status of 502 ()"
+      "ev": "21 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.copyright_policy",
@@ -602,11 +601,6 @@
     {
       "id": "gigw.help",
       "sev": "L"
-    },
-    {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.47"
     },
     {
       "id": "perf.images",
@@ -631,6 +625,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-20",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-10-19",
       "up": true,
@@ -777,5 +776,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

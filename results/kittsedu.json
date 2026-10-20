@@ -35,24 +35,24 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-18T23:54:28.655Z",
-    "run": "1792367614115",
+    "at": "2026-10-20T00:55:12.851Z",
+    "run": "1792457656167",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 35,
-      "accessibility": 86,
+      "performance": 37,
+      "accessibility": 81,
       "best_practices": 92,
-      "seo": 77
+      "seo": 69
     },
     "axe": {
-      "critical": 0,
-      "serious": 28,
-      "moderate": 24,
+      "critical": 4,
+      "serious": 29,
+      "moderate": 25,
       "minor": 4
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 12,
+      "pdfs": 13,
       "broken": 0
     },
     "tech": {
@@ -168,17 +168,18 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "pass"
+        "r": "fail",
+        "ev": "4 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "28 serious violation(s)"
+        "ev": "29 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "28 moderate/minor violation(s)"
+        "ev": "29 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -186,7 +187,8 @@
       },
       {
         "id": "a11y.alt",
-        "r": "pass"
+        "r": "fail",
+        "ev": "4 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
@@ -214,17 +216,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "86/100"
+        "ev": "81/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "35/100"
+        "ev": "37/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "17596.916000000005ms"
+        "ev": "18918.445ms"
       },
       {
         "id": "perf.cls",
@@ -258,7 +260,7 @@
       },
       {
         "id": "content.stale_news",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "content.placeholder",
@@ -271,7 +273,8 @@
       },
       {
         "id": "content.obsolete_tech",
-        "r": "pass"
+        "r": "fail",
+        "ev": "<marquee"
       },
       {
         "id": "content.best_viewed",
@@ -426,6 +429,13 @@
     },
     "outlinks": [
       {
+        "host": "recruitopen.com",
+        "count": 1,
+        "texts": [
+          "State Level and Local Level Guide License Programme - 2026: Apply Online"
+        ]
+      },
+      {
         "host": "forms.gle",
         "count": 1,
         "texts": [
@@ -445,15 +455,15 @@
     ]
   },
   "score": {
-    "overall": 57,
+    "overall": 48,
     "security": 46,
-    "accessibility": 70,
-    "content": 52,
+    "accessibility": 40,
+    "content": 42,
     "gigw": 36,
     "performance": 71,
     "identity": 72
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.http_redirect",
@@ -463,6 +473,11 @@
       "id": "sec.vuln_js",
       "sev": "H",
       "ev": "jquery 1.12.4, jquery 2.2.4"
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "4 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -486,12 +501,22 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "28 serious violation(s)"
+      "ev": "29 serious violation(s)"
+    },
+    {
+      "id": "a11y.alt",
+      "sev": "M",
+      "ev": "4 image(s) missing alt text"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
       "ev": "24 low-contrast element(s)"
+    },
+    {
+      "id": "content.obsolete_tech",
+      "sev": "M",
+      "ev": "<marquee"
     },
     {
       "id": "gigw.sitemap",
@@ -512,7 +537,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "17596.916000000005ms"
+      "ev": "18918.445ms"
     },
     {
       "id": "perf.weight",
@@ -530,7 +555,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "28 moderate/minor violation(s)"
+      "ev": "29 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -596,6 +621,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-20",
+      "up": true,
+      "score": 48
+    },
     {
       "d": "2026-10-19",
       "up": true,
@@ -737,5 +767,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

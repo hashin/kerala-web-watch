@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-18T23:43:44.203Z",
-    "run": "1792366943414",
+    "at": "2026-10-20T00:42:58.295Z",
+    "run": "1792456902545",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 28,
+      "performance": 38,
       "accessibility": 76,
       "best_practices": 92,
       "seo": 83
@@ -47,7 +47,7 @@
     "axe": {
       "critical": 1,
       "serious": 36,
-      "moderate": 37,
+      "moderate": 35,
       "minor": 0
     },
     "crawl": {
@@ -180,7 +180,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "37 moderate/minor violation(s)"
+        "ev": "35 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -198,7 +198,7 @@
       {
         "id": "a11y.headings",
         "r": "fail",
-        "ev": "no <h1>, heading levels skipped"
+        "ev": "no <h1>"
       },
       {
         "id": "a11y.labels",
@@ -221,22 +221,21 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "28/100"
+        "ev": "38/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "77285.5487499999ms"
+        "ev": "68654.74050000003ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.26"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "62.5MB"
+        "ev": "62.7MB"
       },
       {
         "id": "perf.viewport",
@@ -475,7 +474,7 @@
     "accessibility": 50,
     "content": 92,
     "gigw": 68,
-    "performance": 62,
+    "performance": 66,
     "identity": 96
   },
   "status": "needs-work",
@@ -519,12 +518,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "77285.5487499999ms"
+      "ev": "68654.74050000003ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "62.5MB"
+      "ev": "62.7MB"
     },
     {
       "id": "perf.tap_targets",
@@ -546,12 +545,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "37 moderate/minor violation(s)"
+      "ev": "35 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "no <h1>, heading levels skipped"
+      "ev": "no <h1>"
     },
     {
       "id": "a11y.keyboard",
@@ -580,11 +579,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.26"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -603,6 +597,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-20",
+      "up": true,
+      "score": 62
+    },
     {
       "d": "2026-10-19",
       "up": true,
@@ -739,5 +738,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,19 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-12T01:11:26.839Z",
-    "run": "1791767443098",
+    "at": "2026-10-20T01:06:02.868Z",
+    "run": "1792458318415",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 62,
+      "performance": 59,
       "accessibility": 89,
       "best_practices": 78,
       "seo": 92
     },
     "axe": {
       "critical": 1,
-      "serious": 20,
-      "moderate": 24,
+      "serious": 16,
+      "moderate": 31,
       "minor": 0
     },
     "crawl": {
@@ -156,7 +156,8 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "pass"
+        "r": "fail",
+        "ev": "swiper 11.2.10"
       },
       {
         "id": "sec.safe_browsing",
@@ -174,12 +175,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "20 serious violation(s)"
+        "ev": "16 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "24 moderate/minor violation(s)"
+        "ev": "31 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -193,7 +194,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "14 low-contrast element(s)"
+        "ev": "10 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -221,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "62/100"
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6607.383ms"
+        "ev": "8497.804999999997ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +236,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "8.4MB"
+        "ev": "8.6MB"
       },
       {
         "id": "perf.viewport",
@@ -444,9 +445,11 @@
       },
       {
         "host": "kerala.gov.in",
-        "count": 2,
+        "count": 7,
         "texts": [
-          "ഹരിത കര്‍മ്മ സേന"
+          "ഹരിത കര്‍മ്മ സേന",
+          "ഗവർണർ",
+          "മുഖ്യമന്ത്രി"
         ]
       },
       {
@@ -468,6 +471,13 @@
         "count": 1,
         "texts": [
           "പഞ്ചായത്ത് രാജ് ആക്ട്"
+        ]
+      },
+      {
+        "host": "niyamasabha.org",
+        "count": 1,
+        "texts": [
+          "നിയമസഭാംഗങ്ങൾ"
         ]
       },
       {
@@ -509,6 +519,11 @@
       "ev": "http://chungatharapanchayat.lsgkerala.gov.in"
     },
     {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "swiper 11.2.10"
+    },
+    {
       "id": "a11y.axe_critical",
       "sev": "H",
       "ev": "1 critical violation(s)"
@@ -534,7 +549,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "20 serious violation(s)"
+      "ev": "16 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -544,7 +559,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "14 low-contrast element(s)"
+      "ev": "10 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -561,12 +576,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6607.383ms"
+      "ev": "8497.804999999997ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "8.4MB"
+      "ev": "8.6MB"
     },
     {
       "id": "perf.tap_targets",
@@ -583,7 +598,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "24 moderate/minor violation(s)"
+      "ev": "31 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -638,6 +653,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-20",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-19",
       "up": false,
@@ -774,5 +794,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

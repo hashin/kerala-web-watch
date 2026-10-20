@@ -35,15 +35,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-18T23:51:44.398Z",
-    "run": "1792367418492",
+    "at": "2026-10-20T00:51:20.473Z",
+    "run": "1792457434017",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 49,
-      "accessibility": 74,
-      "best_practices": 50,
-      "seo": 91
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 2,
       "serious": 50,
@@ -95,8 +90,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3372ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -121,7 +115,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "fail",
-        "ev": "6 days left"
+        "ev": "5 days left"
       },
       {
         "id": "sec.tls_version",
@@ -218,22 +212,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "74/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "49/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "12702.268000000002ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -246,11 +237,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -420,7 +411,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e6ae1, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e6ag1, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
       }
     ],
     "screenshot": {
@@ -478,12 +469,12 @@
     ]
   },
   "score": {
-    "overall": 44,
+    "overall": 45,
     "security": 8,
     "accessibility": 30,
     "content": 66,
     "gigw": 52,
-    "performance": 76,
+    "performance": 90,
     "identity": 88
   },
   "status": "poor",
@@ -491,7 +482,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "6 days left"
+      "ev": "5 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -517,11 +508,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3372ms"
     },
     {
       "id": "sec.hsts",
@@ -553,11 +539,6 @@
     {
       "id": "gigw.ownership",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "12702.268000000002ms"
     },
     {
       "id": "perf.weight",
@@ -624,10 +605,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.robots",
       "sev": "L",
       "ev": "robots.txt returned 404"
@@ -653,10 +630,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e6ae1, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e6ag1, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-20",
+      "up": true,
+      "score": 45
+    },
     {
       "d": "2026-10-19",
       "up": true,
@@ -798,5 +780,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

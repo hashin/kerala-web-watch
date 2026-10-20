@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-18T23:57:31.117Z",
-    "run": "1792367792254",
+    "at": "2026-10-20T00:48:50.409Z",
+    "run": "1792457268288",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 59,
+      "performance": 37,
       "accessibility": 80,
       "best_practices": 88,
       "seo": 92
@@ -220,21 +220,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "59/100"
+        "ev": "37/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7116.1375ms"
+        "ev": "7668.3945ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.50"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "202.1MB"
+        "ev": "255.2MB"
       },
       {
         "id": "perf.viewport",
@@ -423,7 +424,7 @@
     "screenshot": {
       "desktop": "dtpckollam.webp",
       "mobile": "dtpckollam-m.webp",
-      "phash": "ff080808080808ff"
+      "phash": "ff8ff0f0600000ff"
     },
     "outlinks": [
       {
@@ -458,7 +459,7 @@
     "accessibility": 70,
     "content": 46,
     "gigw": 26,
-    "performance": 76,
+    "performance": 72,
     "identity": 76
   },
   "status": "needs-work",
@@ -526,12 +527,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7116.1375ms"
+      "ev": "7668.3945ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "202.1MB"
+      "ev": "255.2MB"
     },
     {
       "id": "sec.csp",
@@ -590,6 +591,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.50"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -605,6 +611,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-20",
+      "up": true,
+      "score": 53
+    },
     {
       "d": "2026-10-19",
       "up": true,
@@ -746,5 +757,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

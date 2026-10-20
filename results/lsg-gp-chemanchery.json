@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-12T01:07:38.116Z",
-    "run": "1791767216540",
+    "at": "2026-10-20T01:00:31.057Z",
+    "run": "1792457990283",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 59,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -227,7 +227,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8905.807499999999ms"
+        "ev": "8972.9345ms"
       },
       {
         "id": "perf.cls",
@@ -236,7 +236,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "8.6MB"
+        "ev": "8.7MB"
       },
       {
         "id": "perf.viewport",
@@ -282,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (http://chemancherypanchayat.lsgkerala.gov.in/ml/page/paeraavakaasa-raekha-2026)"
       },
       {
         "id": "content.broken_pdfs",
@@ -541,6 +542,11 @@
       "ev": "ml-user"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (http://chemancherypanchayat.lsgkerala.gov.in/ml/page/paeraavakaasa-raekha-2026)"
+    },
+    {
       "id": "gigw.rti",
       "sev": "H"
     },
@@ -578,12 +584,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8905.807499999999ms"
+      "ev": "8972.9345ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "8.6MB"
+      "ev": "8.7MB"
     },
     {
       "id": "perf.tap_targets",
@@ -655,6 +661,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-20",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-19",
       "up": false,
@@ -791,5 +802,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

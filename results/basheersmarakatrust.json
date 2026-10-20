@@ -37,14 +37,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-18T23:52:09.942Z",
-    "run": "1792367410375",
+    "at": "2026-10-20T00:47:25.245Z",
+    "run": "1792457226977",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
+    },
     "axe": {
       "critical": 0,
       "serious": 0,
-      "moderate": 0,
+      "moderate": 3,
       "minor": 0
     },
     "crawl": {
@@ -53,39 +58,391 @@
       "broken": 0
     },
     "tech": {
-      "cms": null,
-      "server": null,
+      "cms": "WordPress 7.0.7",
+      "server": "nginx/1.29.8",
       "jquery": null
     },
-    "checks": [],
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "fail",
+        "ev": "final response was 500"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "pass"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "fail"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "fail",
+        "ev": "href=\"http://gmpg.org/xfn/11\""
+      },
+      {
+        "id": "sec.csp",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "fail"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "fail"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "fail",
+        "ev": "nginx/1.29.8"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "pass"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "3 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "no <h1>"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "0/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "0/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "na"
+      },
+      {
+        "id": "perf.cls",
+        "r": "na"
+      },
+      {
+        "id": "perf.weight",
+        "r": "pass"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "fail"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "na"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-user"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "pass"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "na"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "pass"
+      },
+      {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "3 console error(s): Failed to load resource: the server responded with a status of 500 ()"
+      },
+      {
+        "id": "gigw.contact",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.search",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "warn"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "fail",
+        "ev": "www.basheersmarakatrust.com"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "fail"
+      },
+      {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "pass"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "pass"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass",
+        "ev": "WordPress 7.0.7"
+      },
+      {
+        "id": "id.third_party",
+        "r": "pass"
+      }
+    ],
     "screenshot": {
-      "desktop": "2026-09-22.webp",
-      "mobile": "2026-09-22-m.webp",
-      "phash": "000030300000ffff"
+      "desktop": "basheersmarakatrust.webp",
+      "mobile": "basheersmarakatrust-m.webp",
+      "phash": "7e7e000000000000"
     },
-    "outlinks": [],
-    "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.basheersmarakatrust.com/\", waiting until \"load\"\n"
+    "outlinks": [
+      {
+        "host": "wordpress.org",
+        "count": 1,
+        "texts": [
+          "Learn more about troubleshooting WordPress."
+        ]
+      }
+    ]
   },
-  "score": {
-    "overall": 47,
-    "security": 48,
-    "accessibility": 56,
-    "content": 36,
-    "gigw": 0,
-    "performance": 76,
-    "identity": 80
-  },
+  "score": null,
   "status": "down",
   "issues": [
+    {
+      "id": "avail.status",
+      "sev": "C",
+      "ev": "final response was 500"
+    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
       "ev": "href=\"http://gmpg.org/xfn/11\""
-    },
-    {
-      "id": "a11y.axe_critical",
-      "sev": "H",
-      "ev": "2 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -95,7 +452,11 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-lg"
+      "ev": "ml-user"
+    },
+    {
+      "id": "gigw.contact",
+      "sev": "H"
     },
     {
       "id": "gigw.rti",
@@ -113,26 +474,6 @@
     {
       "id": "sec.xfo",
       "sev": "M"
-    },
-    {
-      "id": "a11y.axe_serious",
-      "sev": "M",
-      "ev": "20 serious violation(s)"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "19 low-contrast element(s)"
-    },
-    {
-      "id": "content.copyright_year",
-      "sev": "M",
-      "ev": "copyright year 2021"
-    },
-    {
-      "id": "content.obsolete_tech",
-      "sev": "M",
-      "ev": "<marquee"
     },
     {
       "id": "gigw.sitemap",
@@ -155,14 +496,8 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "23531.636500000004ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "9.1MB"
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.xcto",
@@ -180,12 +515,17 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "14 moderate/minor violation(s)"
+      "ev": "3 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "no <h1>"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "8 console error(s): Failed to load resource: the server responded with a status of 403 ()"
+      "ev": "3 console error(s): Failed to load resource: the server responded with a status of 500 ()"
     },
     {
       "id": "gigw.feedback",
@@ -224,11 +564,20 @@
       "sev": "L"
     },
     {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
       "id": "gigw.emblem",
       "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-20",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-19",
       "up": false,
@@ -375,5 +724,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -38,8 +38,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-18T23:57:36.517Z",
-    "run": "1792367790471",
+    "at": "2026-10-20T00:52:10.296Z",
+    "run": "1792457414434",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 38,
@@ -56,7 +56,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 14,
-      "broken": 0
+      "broken": 5
     },
     "tech": {
       "cms": "WordPress 7.0.7",
@@ -230,7 +230,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "4741.512000000001ms"
+        "ev": "5398.886ms"
       },
       {
         "id": "perf.cls",
@@ -289,7 +289,8 @@
       },
       {
         "id": "content.broken_pdfs",
-        "r": "pass"
+        "r": "fail",
+        "ev": "5 linked PDF(s) 404: http://www.gwpctsr.ac.in/wp-content/uploads/meeting-min.pdf, http://www.gwpctsr.ac.in/wp-content/uploads/chart.pdf, http://gwpctsr.ac.in/wp-content/uploads/rules-and-regulations.pdf, https://gwpctsr.ac.in/wp-content/uploads/Rules-and-Regulations-Revision-2021.pdf, https://gwpctsr.ac.in/wp-content/uploads/organization_chart.pdf"
       },
       {
         "id": "content.broken_images",
@@ -504,10 +505,10 @@
     ]
   },
   "score": {
-    "overall": 48,
+    "overall": 46,
     "security": 48,
     "accessibility": 30,
-    "content": 52,
+    "content": 42,
     "gigw": 26,
     "performance": 66,
     "identity": 100
@@ -563,6 +564,11 @@
       "ev": "1 form control(s) without a label"
     },
     {
+      "id": "content.broken_pdfs",
+      "sev": "M",
+      "ev": "5 linked PDF(s) 404: http://www.gwpctsr.ac.in/wp-content/uploads/meeting-min.pdf, http://www.gwpctsr.ac.in/wp-content/uploads/chart.pdf, http://gwpctsr.ac.in/wp-content/uploads/rules-and-regulations.pdf, https://gwpctsr.ac.in/wp-content/uploads/Rules-and-Regulations-Revision-2021.pdf, https://gwpctsr.ac.in/wp-content/uploads/organization_chart.pdf"
+    },
+    {
       "id": "gigw.sitemap",
       "sev": "M"
     },
@@ -585,7 +591,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "4741.512000000001ms"
+      "ev": "5398.886ms"
     },
     {
       "id": "perf.weight",
@@ -666,6 +672,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-20",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-10-19",
       "up": true,
@@ -792,5 +803,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
