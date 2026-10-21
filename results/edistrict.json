@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-20T00:34:14.240Z",
-    "run": "1792456396178",
+    "at": "2026-10-21T00:04:43.255Z",
+    "run": "1792541022192",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 81,
+      "performance": 76,
       "accessibility": 78,
       "best_practices": 69,
       "seo": 73
@@ -128,7 +128,7 @@
       },
       {
         "id": "sec.hsts",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.mixed_content",
@@ -221,7 +221,7 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "81/100"
+        "ev": "76/100"
       },
       {
         "id": "perf.lcp",
@@ -281,7 +281,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "3/16 crawled link(s) broken (https://edistrict.kerala.gov.in/generalService.htm?event=dashboard&token=17924564001558279208495635682835, https://www.kerala.gov.in/, https://services.kerala.gov.in/)"
+        "ev": "3/16 crawled link(s) broken (https://edistrict.kerala.gov.in/generalService.htm?event=dashboard&token=17925410265151764958157741879564, https://www.kerala.gov.in/, https://services.kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -449,8 +449,8 @@
     ]
   },
   "score": {
-    "overall": 48,
-    "security": 52,
+    "overall": 46,
+    "security": 42,
     "accessibility": 42,
     "content": 26,
     "gigw": 22,
@@ -487,11 +487,15 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "3/16 crawled link(s) broken (https://edistrict.kerala.gov.in/generalService.htm?event=dashboard&token=17924564001558279208495635682835, https://www.kerala.gov.in/, https://services.kerala.gov.in/)"
+      "ev": "3/16 crawled link(s) broken (https://edistrict.kerala.gov.in/generalService.htm?event=dashboard&token=17925410265151764958157741879564, https://www.kerala.gov.in/, https://services.kerala.gov.in/)"
     },
     {
       "id": "gigw.rti",
       "sev": "H"
+    },
+    {
+      "id": "sec.hsts",
+      "sev": "M"
     },
     {
       "id": "a11y.axe_serious",
@@ -613,6 +617,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-21",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-10-20",
       "up": true,
@@ -759,5 +768,5 @@
       "score": 51
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

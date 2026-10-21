@@ -37,30 +37,30 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-20T00:54:43.743Z",
-    "run": "1792457604713",
+    "at": "2026-10-21T00:34:29.084Z",
+    "run": "1792542857051",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 30,
-      "accessibility": 96,
-      "best_practices": 69,
-      "seo": 85
+      "performance": 100,
+      "accessibility": 94,
+      "best_practices": 100,
+      "seo": 82
     },
     "axe": {
       "critical": 0,
-      "serious": 34,
-      "moderate": 0,
+      "serious": 0,
+      "moderate": 2,
       "minor": 0
     },
     "crawl": {
-      "pages": 30,
-      "pdfs": 19,
+      "pages": 0,
+      "pdfs": 0,
       "broken": 0
     },
     "tech": {
       "cms": null,
       "server": "Apache",
-      "jquery": "3.7.1"
+      "jquery": null
     },
     "checks": [
       {
@@ -129,16 +129,15 @@
       },
       {
         "id": "sec.hsts",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "src=\"http://localhost/keralaenergy/wp-content/uploads/2023/06/logo.png\""
+        "r": "pass"
       },
       {
         "id": "sec.csp",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xfo",
@@ -174,12 +173,12 @@
       },
       {
         "id": "a11y.axe_serious",
-        "r": "fail",
-        "ev": "34 serious violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_moderate_minor",
-        "r": "pass"
+        "r": "fail",
+        "ev": "2 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -191,8 +190,7 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "2 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
@@ -208,33 +206,29 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "warn",
-        "ev": "tabindex=\"-1\" alongside outline:none"
+        "r": "pass"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "96/100"
+        "ev": "94/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "30/100"
+        "ev": "100/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "19271.374000000003ms"
+        "r": "pass"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "1.09"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "4.8MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
@@ -242,15 +236,15 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
-      },
-      {
-        "id": "perf.images",
         "r": "fail"
       },
       {
-        "id": "content.copyright_year",
+        "id": "perf.images",
         "r": "pass"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "na"
       },
       {
         "id": "content.last_updated",
@@ -267,13 +261,11 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "fail",
-        "ev": "ml-widget"
+        "r": "pass"
       },
       {
         "id": "content.obsolete_tech",
-        "r": "fail",
-        "ev": "<marquee"
+        "r": "pass"
       },
       {
         "id": "content.best_viewed",
@@ -305,16 +297,15 @@
       },
       {
         "id": "content.favicon",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "5 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.feedback",
@@ -326,23 +317,23 @@
       },
       {
         "id": "gigw.privacy",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.terms",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.copyright_policy",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.hyperlink_policy",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.disclaimer",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.accessibility_statement",
@@ -358,11 +349,11 @@
       },
       {
         "id": "gigw.rti",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.search",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.ownership",
@@ -374,7 +365,7 @@
       },
       {
         "id": "gigw.emblem",
-        "r": "pass"
+        "r": "warn"
       },
       {
         "id": "id.gov_domain",
@@ -386,7 +377,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -398,11 +389,12 @@
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
       },
       {
         "id": "id.canonical",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.charset_doctype",
@@ -420,120 +412,48 @@
     "screenshot": {
       "desktop": "keralaenergy.webp",
       "mobile": "keralaenergy-m.webp",
-      "phash": "3fffff00000000ff"
+      "phash": "00003c3c3c3c0000"
     },
-    "outlinks": [
-      {
-        "host": "facebook.com",
-        "count": 1,
-        "texts": [
-          "facebook"
-        ]
-      },
-      {
-        "host": "twitter.com",
-        "count": 1,
-        "texts": [
-          "Twitter"
-        ]
-      },
-      {
-        "host": "youtube.com",
-        "count": 2,
-        "texts": [
-          "Youtube",
-          "Videos"
-        ]
-      },
-      {
-        "host": "socialalpha.org",
-        "count": 1,
-        "texts": [
-          "CEIBIC"
-        ]
-      },
-      {
-        "host": "powerbi.com",
-        "count": 1,
-        "texts": [
-          "Anganjyothi"
-        ]
-      },
-      {
-        "host": "kfon.co.in",
-        "count": 1,
-        "texts": [
-          "Click here for register/update end office details"
-        ]
-      },
-      {
-        "host": "google.com",
-        "count": 2,
-        "texts": []
-      },
-      {
-        "host": "websiteout.net",
-        "count": 1,
-        "texts": [
-          "Free and reliable hit counter for websites"
-        ]
-      },
-      {
-        "host": "cdit.org",
-        "count": 1,
-        "texts": [
-          "CDIT"
-        ]
-      }
-    ]
+    "outlinks": []
   },
   "score": {
-    "overall": 66,
-    "security": 62,
-    "accessibility": 78,
-    "content": 42,
-    "gigw": 48,
-    "performance": 77,
-    "identity": 100
+    "overall": 70,
+    "security": 68,
+    "accessibility": 96,
+    "content": 72,
+    "gigw": 0,
+    "performance": 90,
+    "identity": 92
   },
   "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "src=\"http://localhost/keralaenergy/wp-content/uploads/2023/06/logo.png\""
-    },
     {
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "content.legacy_font",
-      "sev": "H",
-      "ev": "ml-widget"
+      "id": "gigw.contact",
+      "sev": "H"
+    },
+    {
+      "id": "gigw.rti",
+      "sev": "H"
+    },
+    {
+      "id": "sec.hsts",
+      "sev": "M"
     },
     {
       "id": "sec.xfo",
       "sev": "M"
     },
     {
-      "id": "a11y.axe_serious",
-      "sev": "M",
-      "ev": "34 serious violation(s)"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "2 low-contrast element(s)"
-    },
-    {
-      "id": "content.obsolete_tech",
-      "sev": "M",
-      "ev": "<marquee"
-    },
-    {
       "id": "gigw.sitemap",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.privacy",
       "sev": "M"
     },
     {
@@ -549,14 +469,12 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "19271.374000000003ms"
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "4.8MB"
+      "id": "sec.csp",
+      "sev": "L"
     },
     {
       "id": "sec.xcto",
@@ -567,21 +485,36 @@
       "sev": "L"
     },
     {
-      "id": "a11y.keyboard",
+      "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "tabindex=\"-1\" alongside outline:none"
+      "ev": "2 moderate/minor violation(s)"
     },
     {
       "id": "content.meta_desc",
       "sev": "L"
     },
     {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "5 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
+      "id": "content.favicon",
+      "sev": "L"
     },
     {
       "id": "gigw.feedback",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.terms",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.copyright_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.hyperlink_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.disclaimer",
       "sev": "L"
     },
     {
@@ -593,16 +526,33 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "1.09"
+      "id": "gigw.search",
+      "sev": "L"
     },
     {
-      "id": "perf.images",
+      "id": "id.www_consistency",
       "sev": "L"
+    },
+    {
+      "id": "id.soft_404",
+      "sev": "L",
+      "ev": "a nonexistent path returned 200"
+    },
+    {
+      "id": "gigw.emblem",
+      "sev": "I"
+    },
+    {
+      "id": "id.canonical",
+      "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-21",
+      "up": true,
+      "score": 70
+    },
     {
       "d": "2026-10-20",
       "up": true,
@@ -754,5 +704,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

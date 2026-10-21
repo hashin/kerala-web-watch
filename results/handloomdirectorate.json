@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-20T00:43:45.469Z",
-    "run": "1792456951580",
+    "at": "2026-10-21T00:22:16.757Z",
+    "run": "1792542057394",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 29,
+      "accessibility": 89,
+      "best_practices": 73,
+      "seo": 62
     },
     "axe": {
       "critical": 1,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3500ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -215,20 +216,22 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "89/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "29/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "27509.987999999998ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.73"
       },
       {
         "id": "perf.weight",
@@ -241,7 +244,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -460,12 +463,12 @@
     ]
   },
   "score": {
-    "overall": 49,
+    "overall": 48,
     "security": 42,
     "accessibility": 44,
     "content": 42,
     "gigw": 18,
-    "performance": 81,
+    "performance": 77,
     "identity": 100
   },
   "status": "poor",
@@ -498,6 +501,11 @@
       "id": "content.broken_links",
       "sev": "H",
       "ev": "2/30 crawled link(s) broken (https://handsum.kerala.gov.in/, https://dhtschemes.kerala.gov.in/)"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3500ms"
     },
     {
       "id": "sec.hsts",
@@ -539,13 +547,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "27509.987999999998ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "5.9MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
     },
     {
       "id": "sec.xcto",
@@ -607,6 +616,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.73"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -616,6 +630,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-21",
+      "up": true,
+      "score": 48
+    },
     {
       "d": "2026-10-20",
       "up": true,
@@ -762,5 +781,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

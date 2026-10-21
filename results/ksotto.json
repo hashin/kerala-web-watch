@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-20T00:45:17.063Z",
-    "run": "1792457054027",
+    "at": "2026-10-21T00:17:11.960Z",
+    "run": "1792541765431",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 31,
+      "performance": 30,
       "accessibility": 78,
       "best_practices": 88,
       "seo": 62
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4540ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -221,22 +222,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "31/100"
+        "ev": "30/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10869.233500000004ms"
+        "ev": "10667.633999999998ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "1.08"
+        "ev": "1.10"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "7.2MB"
+        "ev": "7.1MB"
       },
       {
         "id": "perf.viewport",
@@ -511,6 +512,11 @@
       "ev": "1/30 crawled link(s) broken (https://www.portal.ksotto.kerala.gov.in/)"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "4540ms"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
       "ev": "32 serious violation(s)"
@@ -548,12 +554,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10869.233500000004ms"
+      "ev": "10667.633999999998ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.2MB"
+      "ev": "7.1MB"
     },
     {
       "id": "sec.xcto",
@@ -618,7 +624,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "1.08"
+      "ev": "1.10"
     },
     {
       "id": "perf.images",
@@ -630,6 +636,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-21",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-20",
       "up": true,
@@ -781,5 +792,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-20T00:33:42.930Z",
-    "run": "1792456340824",
+    "at": "2026-10-21T00:04:04.064Z",
+    "run": "1792540958512",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 38,
+      "performance": 41,
       "accessibility": 77,
       "best_practices": 73,
       "seo": 54
     },
     "axe": {
       "critical": 3,
-      "serious": 26,
+      "serious": 27,
       "moderate": 6,
       "minor": 0
     },
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4165ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -174,7 +175,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "26 serious violation(s)"
+        "ev": "27 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -193,7 +194,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "15 low-contrast element(s)"
+        "ev": "16 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -222,17 +223,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "38/100"
+        "ev": "41/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "97339.158ms"
+        "ev": "71622.52799999999ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.33"
+        "ev": "0.28"
       },
       {
         "id": "perf.weight",
@@ -487,9 +488,14 @@
       "ev": "ml-IN"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "4165ms"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "26 serious violation(s)"
+      "ev": "27 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -499,7 +505,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "15 low-contrast element(s)"
+      "ev": "16 low-contrast element(s)"
     },
     {
       "id": "a11y.labels",
@@ -525,7 +531,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "97339.158ms"
+      "ev": "71622.52799999999ms"
     },
     {
       "id": "perf.weight",
@@ -591,7 +597,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.33"
+      "ev": "0.28"
     },
     {
       "id": "perf.images",
@@ -603,6 +609,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-21",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-10-20",
       "up": true,
@@ -749,5 +760,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

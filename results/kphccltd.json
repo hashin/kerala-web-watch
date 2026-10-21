@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-20T00:58:08.412Z",
-    "run": "1792457829470",
+    "at": "2026-10-21T00:29:00.044Z",
+    "run": "1792542481367",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 50,
+      "performance": 42,
       "accessibility": 84,
       "best_practices": 92,
       "seo": 75
@@ -48,7 +48,7 @@
       "critical": 0,
       "serious": 4,
       "moderate": 19,
-      "minor": 9
+      "minor": 10
     },
     "crawl": {
       "pages": 30,
@@ -120,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "12 days left"
+        "ev": "11 days left"
       },
       {
         "id": "sec.tls_version",
@@ -180,7 +180,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "28 moderate/minor violation(s)"
+        "ev": "29 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -198,7 +198,7 @@
       {
         "id": "a11y.headings",
         "r": "fail",
-        "ev": "no <h1>"
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "50/100"
+        "ev": "42/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "25985.433499999992ms"
+        "ev": "26616.842500000006ms"
       },
       {
         "id": "perf.cls",
@@ -516,7 +516,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "12 days left"
+      "ev": "11 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -567,7 +567,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "25985.433499999992ms"
+      "ev": "26616.842500000006ms"
     },
     {
       "id": "perf.weight",
@@ -581,12 +581,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "28 moderate/minor violation(s)"
+      "ev": "29 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "no <h1>"
+      "ev": "heading levels skipped"
     },
     {
       "id": "a11y.keyboard",
@@ -636,6 +636,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-21",
+      "up": true,
+      "score": 61
+    },
     {
       "d": "2026-10-20",
       "up": true,
@@ -782,5 +787,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

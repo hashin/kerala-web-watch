@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-20T00:35:39.025Z",
-    "run": "1792456454242",
+    "at": "2026-10-21T00:06:02.682Z",
+    "run": "1792541083256",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 44,
+      "performance": 24,
       "accessibility": 84,
       "best_practices": 88,
       "seo": 73
@@ -120,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "21 days left"
+        "ev": "20 days left"
       },
       {
         "id": "sec.tls_version",
@@ -220,16 +220,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "44/100"
+        "ev": "24/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "25565.050999999996ms"
+        "ev": "26548.168249999995ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.71"
       },
       {
         "id": "perf.weight",
@@ -514,12 +515,12 @@
     ]
   },
   "score": {
-    "overall": 64,
+    "overall": 63,
     "security": 46,
     "accessibility": 56,
     "content": 78,
     "gigw": 68,
-    "performance": 76,
+    "performance": 72,
     "identity": 88
   },
   "status": "needs-work",
@@ -527,7 +528,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "21 days left"
+      "ev": "20 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -570,7 +571,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "25565.050999999996ms"
+      "ev": "26548.168249999995ms"
     },
     {
       "id": "perf.weight",
@@ -613,6 +614,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.71"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -640,6 +646,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-21",
+      "up": true,
+      "score": 63
+    },
     {
       "d": "2026-10-20",
       "up": true,
@@ -786,5 +797,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

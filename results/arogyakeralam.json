@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-20T00:34:56.633Z",
-    "run": "1792456352265",
+    "at": "2026-10-21T00:03:42.190Z",
+    "run": "1792540959758",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 50,
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "4514ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -227,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "22914.370499999997ms"
+        "ev": "23070.31250000001ms"
       },
       {
         "id": "perf.cls",
@@ -236,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "6.2MB"
+        "ev": "3.2MB"
       },
       {
         "id": "perf.viewport",
@@ -311,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "4 console error(s): Failed to load resource: the server responded with a status of 400 ()"
+        "ev": "2 console error(s): Failed to load resource: the server responded with a status of 400 ()"
       },
       {
         "id": "gigw.contact",
@@ -544,11 +543,6 @@
       "ev": "ml-box"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "4514ms"
-    },
-    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -585,12 +579,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "22914.370499999997ms"
+      "ev": "23070.31250000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "6.2MB"
+      "ev": "3.2MB"
     },
     {
       "id": "perf.tap_targets",
@@ -626,7 +620,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "4 console error(s): Failed to load resource: the server responded with a status of 400 ()"
+      "ev": "2 console error(s): Failed to load resource: the server responded with a status of 400 ()"
     },
     {
       "id": "gigw.feedback",
@@ -666,6 +660,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-21",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-10-20",
       "up": true,
@@ -817,5 +816,5 @@
       "score": 51
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

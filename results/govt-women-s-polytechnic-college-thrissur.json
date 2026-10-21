@@ -38,11 +38,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-20T00:52:10.296Z",
-    "run": "1792457414434",
+    "at": "2026-10-21T00:25:46.335Z",
+    "run": "1792542286393",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 38,
+      "performance": 48,
       "accessibility": 81,
       "best_practices": 50,
       "seo": 77
@@ -56,7 +56,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 14,
-      "broken": 5
+      "broken": 0
     },
     "tech": {
       "cms": "WordPress 7.0.7",
@@ -225,12 +225,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "38/100"
+        "ev": "48/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "5398.886ms"
+        "ev": "5488.2744999999995ms"
       },
       {
         "id": "perf.cls",
@@ -289,8 +289,7 @@
       },
       {
         "id": "content.broken_pdfs",
-        "r": "fail",
-        "ev": "5 linked PDF(s) 404: http://www.gwpctsr.ac.in/wp-content/uploads/meeting-min.pdf, http://www.gwpctsr.ac.in/wp-content/uploads/chart.pdf, http://gwpctsr.ac.in/wp-content/uploads/rules-and-regulations.pdf, https://gwpctsr.ac.in/wp-content/uploads/Rules-and-Regulations-Revision-2021.pdf, https://gwpctsr.ac.in/wp-content/uploads/organization_chart.pdf"
+        "r": "pass"
       },
       {
         "id": "content.broken_images",
@@ -505,10 +504,10 @@
     ]
   },
   "score": {
-    "overall": 46,
+    "overall": 48,
     "security": 48,
     "accessibility": 30,
-    "content": 42,
+    "content": 52,
     "gigw": 26,
     "performance": 66,
     "identity": 100
@@ -564,11 +563,6 @@
       "ev": "1 form control(s) without a label"
     },
     {
-      "id": "content.broken_pdfs",
-      "sev": "M",
-      "ev": "5 linked PDF(s) 404: http://www.gwpctsr.ac.in/wp-content/uploads/meeting-min.pdf, http://www.gwpctsr.ac.in/wp-content/uploads/chart.pdf, http://gwpctsr.ac.in/wp-content/uploads/rules-and-regulations.pdf, https://gwpctsr.ac.in/wp-content/uploads/Rules-and-Regulations-Revision-2021.pdf, https://gwpctsr.ac.in/wp-content/uploads/organization_chart.pdf"
-    },
-    {
       "id": "gigw.sitemap",
       "sev": "M"
     },
@@ -591,7 +585,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "5398.886ms"
+      "ev": "5488.2744999999995ms"
     },
     {
       "id": "perf.weight",
@@ -672,6 +666,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-21",
+      "up": true,
+      "score": 48
+    },
     {
       "d": "2026-10-20",
       "up": true,
@@ -803,5 +802,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

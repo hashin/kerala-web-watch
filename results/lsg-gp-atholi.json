@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-20T00:59:37.558Z",
-    "run": "1792457937599",
+    "at": "2026-10-21T00:29:11.574Z",
+    "run": "1792542512101",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 60,
+      "performance": 59,
       "accessibility": 85,
       "best_practices": 78,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "60/100"
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9120.187499999998ms"
+        "ev": "10711.0265ms"
       },
       {
         "id": "perf.cls",
@@ -282,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (http://atholipanchayat.lsgkerala.gov.in/C%3A/Users/USER/Desktop/Atholi%2520Grama%2520Panchayat%2520%25E2%2580%2593%2520Topography%2520%26%2520Geography.html)"
       },
       {
         "id": "content.broken_pdfs",
@@ -558,6 +559,11 @@
       "ev": "ml-user"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (http://atholipanchayat.lsgkerala.gov.in/C%3A/Users/USER/Desktop/Atholi%2520Grama%2520Panchayat%2520%25E2%2580%2593%2520Topography%2520%26%2520Geography.html)"
+    },
+    {
       "id": "gigw.rti",
       "sev": "H"
     },
@@ -595,7 +601,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9120.187499999998ms"
+      "ev": "10711.0265ms"
     },
     {
       "id": "perf.weight",
@@ -672,6 +678,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-21",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-20",
       "up": false,
@@ -813,5 +824,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

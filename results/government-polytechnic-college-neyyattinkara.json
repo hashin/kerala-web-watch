@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-20T00:52:29.034Z",
-    "run": "1792457498523",
+    "at": "2026-10-21T00:23:43.394Z",
+    "run": "1792542159148",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 54,
+      "performance": 61,
       "accessibility": 85,
       "best_practices": 73,
       "seo": 92
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 4,
-      "broken": 29
+      "broken": 0
     },
     "tech": {
       "cms": "WordPress 5.8.18",
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "54/100"
+        "ev": "61/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "5183.571499999999ms"
+        "ev": "4806.1605ms"
       },
       {
         "id": "perf.cls",
@@ -236,7 +236,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "7.5MB"
+        "ev": "7.4MB"
       },
       {
         "id": "perf.viewport",
@@ -283,8 +283,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "29/30 crawled link(s) broken (https://gptcnta.ac.in/news/ce-cell-admission-notice/, https://gptcnta.ac.in/college/, https://gptcnta.ac.in/principal/, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -393,8 +392,7 @@
       },
       {
         "id": "id.robots",
-        "r": "fail",
-        "ev": "robots.txt returned 404"
+        "r": "pass"
       },
       {
         "id": "id.sitemap_xml",
@@ -482,13 +480,13 @@
     ]
   },
   "score": {
-    "overall": 45,
+    "overall": 48,
     "security": 24,
     "accessibility": 74,
-    "content": 26,
+    "content": 46,
     "gigw": 2,
     "performance": 71,
-    "identity": 87
+    "identity": 91
   },
   "status": "poor",
   "issues": [
@@ -511,11 +509,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "29/30 crawled link(s) broken (https://gptcnta.ac.in/news/ce-cell-admission-notice/, https://gptcnta.ac.in/college/, https://gptcnta.ac.in/principal/, ...)"
     },
     {
       "id": "gigw.rti",
@@ -567,12 +560,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "5183.571499999999ms"
+      "ev": "4806.1605ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.5MB"
+      "ev": "7.4MB"
     },
     {
       "id": "perf.tap_targets",
@@ -648,11 +641,6 @@
       "sev": "L"
     },
     {
-      "id": "id.robots",
-      "sev": "L",
-      "ev": "robots.txt returned 404"
-    },
-    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
@@ -663,6 +651,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-21",
+      "up": true,
+      "score": 48
+    },
     {
       "d": "2026-10-20",
       "up": true,
@@ -789,5 +782,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

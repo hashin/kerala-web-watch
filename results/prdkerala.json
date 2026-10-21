@@ -35,11 +35,11 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-10-20T00:47:01.064Z",
-    "run": "1792457160579",
+    "at": "2026-10-21T00:25:59.139Z",
+    "run": "1792542294378",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 22,
+      "performance": 12,
       "accessibility": 80,
       "best_practices": 96,
       "seo": 85
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "22/100"
+        "ev": "12/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "21538.427ms"
+        "ev": "20737.267000000007ms"
       },
       {
         "id": "perf.cls",
@@ -236,7 +236,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "19.6MB"
+        "ev": "19.5MB"
       },
       {
         "id": "perf.viewport",
@@ -312,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "25 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
+        "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/player/67288f35/www-player.css' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -605,12 +605,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "21538.427ms"
+      "ev": "20737.267000000007ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "19.6MB"
+      "ev": "19.5MB"
     },
     {
       "id": "id.tech",
@@ -647,7 +647,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "25 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
+      "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/player/67288f35/www-player.css' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -701,6 +701,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-21",
+      "up": true,
+      "score": 50
+    },
     {
       "d": "2026-10-20",
       "up": true,
@@ -847,5 +852,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

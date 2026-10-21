@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-20T00:50:14.432Z",
-    "run": "1792457317305",
+    "at": "2026-10-21T00:20:33.925Z",
+    "run": "1792541996773",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 51,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 2,
-      "broken": 6
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -224,7 +224,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "20442.067ms"
+        "ev": "12610.061ms"
       },
       {
         "id": "perf.cls",
@@ -280,8 +280,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "6/30 crawled link(s) broken (https://gpckaduthuruthy.ac.in/swayam/, https://gpckaduthuruthy.ac.in/nss/, https://gpckaduthuruthy.ac.in/sports/, ...)"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://gpckaduthuruthy.ac.in/technofila-2024/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -497,10 +497,10 @@
     ]
   },
   "score": {
-    "overall": 54,
+    "overall": 56,
     "security": 44,
     "accessibility": 72,
-    "content": 32,
+    "content": 42,
     "gigw": 26,
     "performance": 67,
     "identity": 100
@@ -525,7 +525,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "6/30 crawled link(s) broken (https://gpckaduthuruthy.ac.in/swayam/, https://gpckaduthuruthy.ac.in/nss/, https://gpckaduthuruthy.ac.in/sports/, ...)"
+      "ev": "1/30 crawled link(s) broken (https://gpckaduthuruthy.ac.in/technofila-2024/)"
     },
     {
       "id": "sec.hsts",
@@ -568,7 +568,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "20442.067ms"
+      "ev": "12610.061ms"
     },
     {
       "id": "perf.weight",
@@ -654,6 +654,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-21",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-10-20",
       "up": true,
@@ -780,5 +785,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

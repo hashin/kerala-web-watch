@@ -37,15 +37,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-06T02:08:06.262Z",
-    "run": "1791252444902",
+    "at": "2026-10-21T00:17:09.934Z",
+    "run": "1792541778164",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 57,
-      "accessibility": 82,
-      "best_practices": 100,
-      "seo": 85
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 0,
       "serious": 4,
@@ -55,7 +50,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 2
     },
     "tech": {
       "cms": "Drupal 11",
@@ -215,22 +210,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "82/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "57/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "26454.55600000001ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -243,11 +235,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -282,7 +274,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://nedumangad.lsgkerala.gov.in/node/87)"
+        "ev": "2/30 crawled link(s) broken (https://anthoormunicipality.lsgkerala.gov.in/ml/sitemap.xml, https://nedumangad.lsgkerala.gov.in/node/87)"
       },
       {
         "id": "content.broken_pdfs",
@@ -543,12 +535,12 @@
     ]
   },
   "score": {
-    "overall": 63,
+    "overall": 64,
     "security": 76,
     "accessibility": 70,
     "content": 46,
     "gigw": 16,
-    "performance": 76,
+    "performance": 90,
     "identity": 96
   },
   "status": "needs-work",
@@ -571,7 +563,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://nedumangad.lsgkerala.gov.in/node/87)"
+      "ev": "2/30 crawled link(s) broken (https://anthoormunicipality.lsgkerala.gov.in/ml/sitemap.xml, https://nedumangad.lsgkerala.gov.in/node/87)"
     },
     {
       "id": "gigw.rti",
@@ -602,11 +594,6 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "26454.55600000001ms"
     },
     {
       "id": "perf.weight",
@@ -661,16 +648,17 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-21",
+      "up": true,
+      "score": 64
+    },
     {
       "d": "2026-10-20",
       "up": true,
@@ -822,5 +810,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

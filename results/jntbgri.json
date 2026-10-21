@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-20T00:54:03.279Z",
-    "run": "1792457555892",
+    "at": "2026-10-21T00:24:55.724Z",
+    "run": "1792542251730",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 33,
+      "performance": 30,
       "accessibility": 86,
       "best_practices": 88,
-      "seo": 69
+      "seo": 77
     },
     "axe": {
       "critical": 0,
@@ -57,7 +57,7 @@
     },
     "tech": {
       "cms": "WordPress 6.9.10",
-      "server": "nginx/1.25.5",
+      "server": "Apache",
       "jquery": null
     },
     "checks": [
@@ -152,8 +152,7 @@
       },
       {
         "id": "sec.server_banner",
-        "r": "fail",
-        "ev": "nginx/1.25.5"
+        "r": "pass"
       },
       {
         "id": "sec.vuln_js",
@@ -220,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "33/100"
+        "ev": "30/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "25476.2535ms"
+        "ev": "23806.1175ms"
       },
       {
         "id": "perf.cls",
@@ -234,7 +233,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "7.0MB"
+        "ev": "6.9MB"
       },
       {
         "id": "perf.viewport",
@@ -416,7 +415,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-6YPTV5TC0F&amp;cx=c&amp;gtm=4e6ag1, https://www.googletagmanager.com/gtag/js?id=G-X0BSV06SMK&amp;cx=c&amp;gtm=4e6ag1h1, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2&amp;cx=c&amp;gtm=4e6ag1h1, https://www.googletagmanager.com/gtm.js?id=GTM-KWK3DSF, https://www.googletagmanager.com/gtag/js?id&amp;ver=6.9.10, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2"
+        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-6YPTV5TC0F&amp;cx=c&amp;gtm=4e6aj1, https://www.googletagmanager.com/gtag/js?id=G-X0BSV06SMK&amp;cx=c&amp;gtm=4e6aj1, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2&amp;cx=c&amp;gtm=4e6aj1, https://www.googletagmanager.com/gtm.js?id=GTM-KWK3DSF, https://www.googletagmanager.com/gtag/js?id&amp;ver=6.9.10, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2"
       }
     ],
     "screenshot": {
@@ -503,8 +502,8 @@
     ]
   },
   "score": {
-    "overall": 55,
-    "security": 44,
+    "overall": 56,
+    "security": 48,
     "accessibility": 70,
     "content": 48,
     "gigw": 12,
@@ -569,12 +568,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "25476.2535ms"
+      "ev": "23806.1175ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.0MB"
+      "ev": "6.9MB"
     },
     {
       "id": "perf.tap_targets",
@@ -591,11 +590,6 @@
     {
       "id": "sec.referrer",
       "sev": "L"
-    },
-    {
-      "id": "sec.server_banner",
-      "sev": "L",
-      "ev": "nginx/1.25.5"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -665,10 +659,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-6YPTV5TC0F&amp;cx=c&amp;gtm=4e6ag1, https://www.googletagmanager.com/gtag/js?id=G-X0BSV06SMK&amp;cx=c&amp;gtm=4e6ag1h1, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2&amp;cx=c&amp;gtm=4e6ag1h1, https://www.googletagmanager.com/gtm.js?id=GTM-KWK3DSF, https://www.googletagmanager.com/gtag/js?id&amp;ver=6.9.10, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2"
+      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-6YPTV5TC0F&amp;cx=c&amp;gtm=4e6aj1, https://www.googletagmanager.com/gtag/js?id=G-X0BSV06SMK&amp;cx=c&amp;gtm=4e6aj1, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2&amp;cx=c&amp;gtm=4e6aj1, https://www.googletagmanager.com/gtm.js?id=GTM-KWK3DSF, https://www.googletagmanager.com/gtag/js?id&amp;ver=6.9.10, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-21",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-10-20",
       "up": true,
@@ -815,5 +814,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
