@@ -29,11 +29,11 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-10-17T23:40:54.634Z",
-    "run": "1792280422035",
+    "at": "2026-10-22T00:15:30.896Z",
+    "run": "1792628088799",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 89,
+      "performance": 85,
       "accessibility": 51,
       "best_practices": 69,
       "seo": 75
@@ -89,7 +89,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3708ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -215,7 +216,7 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "89/100"
+        "ev": "85/100"
       },
       {
         "id": "perf.lcp",
@@ -493,6 +494,11 @@
       "ev": "www.telk.com"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3708ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -617,6 +623,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-22",
+      "up": true,
+      "score": 40
+    },
+    {
       "d": "2026-10-21",
       "up": true,
       "score": 40
@@ -727,5 +738,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-18T23:47:55.529Z",
-    "run": "1792367214048",
+    "at": "2026-10-22T00:23:49.561Z",
+    "run": "1792628572664",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 30,
       "accessibility": 83,
       "best_practices": 73,
-      "seo": 75
+      "seo": 58
     },
     "axe": {
       "critical": 6,
@@ -111,7 +111,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
@@ -132,7 +132,7 @@
       {
         "id": "sec.mixed_content",
         "r": "fail",
-        "ev": "href=\"http://localhost/socialnew/\""
+        "ev": "href=\"http://facebook.com\""
       },
       {
         "id": "sec.csp",
@@ -226,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11861.677ms"
+        "ev": "11925.369499999997ms"
       },
       {
         "id": "perf.cls",
@@ -386,7 +386,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.robots",
@@ -471,24 +471,20 @@
     ]
   },
   "score": {
-    "overall": 45,
-    "security": 28,
+    "overall": 50,
+    "security": 48,
     "accessibility": 40,
     "content": 56,
     "gigw": 26,
     "performance": 67,
     "identity": 92
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.http_redirect",
-      "sev": "H"
-    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
-      "ev": "href=\"http://localhost/socialnew/\""
+      "ev": "href=\"http://facebook.com\""
     },
     {
       "id": "a11y.axe_critical",
@@ -551,7 +547,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11861.677ms"
+      "ev": "11925.369499999997ms"
     },
     {
       "id": "perf.weight",
@@ -642,6 +638,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-22",
+      "up": true,
+      "score": 50
+    },
     {
       "d": "2026-10-21",
       "up": true,
@@ -798,5 +799,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

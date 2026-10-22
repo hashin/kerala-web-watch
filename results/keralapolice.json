@@ -35,19 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-21T00:08:12.345Z",
-    "run": "1792541202971",
+    "at": "2026-10-22T00:12:49.993Z",
+    "run": "1792627876605",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 51,
+      "performance": 35,
       "accessibility": 92,
       "best_practices": 96,
       "seo": 92
     },
     "axe": {
       "critical": 0,
-      "serious": 9,
-      "moderate": 22,
+      "serious": 10,
+      "moderate": 28,
       "minor": 3
     },
     "crawl": {
@@ -174,17 +174,17 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "9 serious violation(s)"
+        "ev": "10 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "25 moderate/minor violation(s)"
+        "ev": "31 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 88% Malayalam content"
+        "ev": "<html lang=\"en\"> vs. 87% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -196,7 +196,8 @@
       },
       {
         "id": "a11y.headings",
-        "r": "pass"
+        "r": "fail",
+        "ev": "no <h1>"
       },
       {
         "id": "a11y.labels",
@@ -219,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "51/100"
+        "ev": "35/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "41420.7825ms"
+        "ev": "41588.687249999995ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +234,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "69.1MB"
+        "ev": "11.4MB"
       },
       {
         "id": "perf.viewport",
@@ -393,8 +394,7 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 404"
+        "r": "na"
       },
       {
         "id": "id.soft_404",
@@ -415,13 +415,13 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6aj1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6ak1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
       }
     ],
     "screenshot": {
       "desktop": "keralapolice.webp",
       "mobile": "keralapolice-m.webp",
-      "phash": "fffe92007efe303f"
+      "phash": "ffff80838080803f"
     },
     "outlinks": [
       {
@@ -580,13 +580,13 @@
     ]
   },
   "score": {
-    "overall": 56,
+    "overall": 55,
     "security": 50,
-    "accessibility": 64,
+    "accessibility": 60,
     "content": 46,
     "gigw": 26,
     "performance": 66,
-    "identity": 96
+    "identity": 100
   },
   "status": "needs-work",
   "issues": [
@@ -603,7 +603,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 88% Malayalam content"
+      "ev": "<html lang=\"en\"> vs. 87% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -631,7 +631,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "9 serious violation(s)"
+      "ev": "10 serious violation(s)"
     },
     {
       "id": "gigw.accessibility_statement",
@@ -648,12 +648,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "41420.7825ms"
+      "ev": "41588.687249999995ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "69.1MB"
+      "ev": "11.4MB"
     },
     {
       "id": "perf.tap_targets",
@@ -662,7 +662,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "25 moderate/minor violation(s)"
+      "ev": "31 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "no <h1>"
     },
     {
       "id": "a11y.keyboard",
@@ -703,21 +708,21 @@
       "sev": "L"
     },
     {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 404"
-    },
-    {
       "id": "id.canonical",
       "sev": "I"
     },
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6aj1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6ak1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-22",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-21",
       "up": true,
@@ -874,5 +879,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

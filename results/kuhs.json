@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-21T00:17:51.764Z",
-    "run": "1792541194902",
+    "at": "2026-10-22T00:14:16.502Z",
+    "run": "1792627969995",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 47,
+      "performance": 27,
       "accessibility": 56,
       "best_practices": 69,
       "seo": 83
@@ -53,11 +53,11 @@
     "crawl": {
       "pages": 30,
       "pdfs": 2,
-      "broken": 32
+      "broken": 0
     },
     "tech": {
       "cms": null,
-      "server": "nginx",
+      "server": null,
       "jquery": "2.1.4"
     },
     "checks": [
@@ -67,15 +67,16 @@
       },
       {
         "id": "avail.connect",
-        "r": "pass"
+        "r": "fail",
+        "ev": "timeout"
       },
       {
         "id": "avail.status",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.parked",
@@ -95,7 +96,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.geo_blocked",
@@ -107,7 +108,7 @@
       },
       {
         "id": "sec.https",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.http_redirect",
@@ -131,8 +132,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://14.139.185.154/kuhs_old?site=old\""
+        "r": "na"
       },
       {
         "id": "sec.csp",
@@ -223,21 +223,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "47/100"
+        "ev": "27/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11197.2415ms"
+        "ev": "12656.313999999997ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.47"
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "7.6MB"
+        "r": "fail",
+        "ev": "8.1MB"
       },
       {
         "id": "perf.viewport",
@@ -284,13 +285,11 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "30/30 crawled link(s) broken (https://kuhs.ac.in/kuhs_new/, https://kuhs.ac.in/#, https://kuhs.ac.in/kuhs_new/index.php, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
-        "r": "fail",
-        "ev": "2 linked PDF(s) 404: https://kuhs.ac.in/kuhs_new/images/uploads/pdf/general/anthem/kuhs_anthem_guidelines.pdf, https://kuhs.ac.in/kuhs_new/images/uploads/pdf/general/anthem/kuhs_anthem_lyrics.pdf"
+        "r": "pass"
       },
       {
         "id": "content.broken_images",
@@ -392,7 +391,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -452,21 +451,13 @@
       }
     ]
   },
-  "score": {
-    "overall": 43,
-    "security": 34,
-    "accessibility": 40,
-    "content": 12,
-    "gigw": 30,
-    "performance": 81,
-    "identity": 96
-  },
-  "status": "poor",
+  "score": null,
+  "status": "down",
   "issues": [
     {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://14.139.185.154/kuhs_old?site=old\""
+      "id": "avail.connect",
+      "sev": "C",
+      "ev": "timeout"
     },
     {
       "id": "sec.vuln_js",
@@ -487,11 +478,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "30/30 crawled link(s) broken (https://kuhs.ac.in/kuhs_new/, https://kuhs.ac.in/#, https://kuhs.ac.in/kuhs_new/index.php, ...)"
     },
     {
       "id": "sec.xfo",
@@ -518,11 +504,6 @@
       "ev": "<marquee"
     },
     {
-      "id": "content.broken_pdfs",
-      "sev": "M",
-      "ev": "2 linked PDF(s) 404: https://kuhs.ac.in/kuhs_new/images/uploads/pdf/general/anthem/kuhs_anthem_guidelines.pdf, https://kuhs.ac.in/kuhs_new/images/uploads/pdf/general/anthem/kuhs_anthem_lyrics.pdf"
-    },
-    {
       "id": "gigw.sitemap",
       "sev": "M"
     },
@@ -545,12 +526,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11197.2415ms"
+      "ev": "12656.313999999997ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.6MB"
+      "ev": "8.1MB"
     },
     {
       "id": "sec.csp",
@@ -615,7 +596,16 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.47"
+    },
+    {
       "id": "perf.images",
+      "sev": "L"
+    },
+    {
+      "id": "id.www_consistency",
       "sev": "L"
     },
     {
@@ -633,6 +623,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-22",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-21",
       "up": true,
@@ -789,5 +784,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

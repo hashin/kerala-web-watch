@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-21T00:25:59.139Z",
-    "run": "1792542294378",
+    "at": "2026-10-22T00:23:25.797Z",
+    "run": "1792628541427",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 12,
+      "performance": 14,
       "accessibility": 80,
       "best_practices": 96,
       "seo": 85
@@ -221,17 +221,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "12/100"
+        "ev": "14/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "20737.267000000007ms"
+        "ev": "20751.367ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.65"
+        "ev": "0.75"
       },
       {
         "id": "perf.weight",
@@ -312,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/player/67288f35/www-player.css' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/player/c5756c05/www-player.css' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -605,7 +605,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "20737.267000000007ms"
+      "ev": "20751.367ms"
     },
     {
       "id": "perf.weight",
@@ -647,7 +647,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/player/67288f35/www-player.css' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/player/c5756c05/www-player.css' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -680,7 +680,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.65"
+      "ev": "0.75"
     },
     {
       "id": "perf.images",
@@ -701,6 +701,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-22",
+      "up": true,
+      "score": 50
+    },
     {
       "d": "2026-10-21",
       "up": true,
@@ -852,5 +857,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

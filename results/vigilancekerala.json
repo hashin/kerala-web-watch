@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T23:44:29.861Z",
-    "run": "1792280572358",
+    "at": "2026-10-22T00:25:17.125Z",
+    "run": "1792628641755",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 43,
       "accessibility": 100,
       "best_practices": 73,
       "seo": 100
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 6,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -216,11 +216,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "43/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "fail",
+        "ev": "6167.677ms"
       },
       {
         "id": "perf.cls",
@@ -274,8 +275,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://vigilance.kerala.gov.in/contact/directorate)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -410,7 +410,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-CMG1G06L24&amp;cx=c&amp;gtm=4e6ae1, https://www.googletagmanager.com/gtm.js?id=GTM-PFLTDP3B"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-CMG1G06L24&amp;cx=c&amp;gtm=4e6ak1, https://www.googletagmanager.com/gtm.js?id=GTM-PFLTDP3B"
       }
     ],
     "screenshot": {
@@ -489,9 +489,9 @@
     "overall": 69,
     "security": 80,
     "accessibility": 84,
-    "content": 62,
+    "content": 72,
     "gigw": 0,
-    "performance": 86,
+    "performance": 76,
     "identity": 100
   },
   "status": "needs-work",
@@ -504,11 +504,6 @@
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://vigilance.kerala.gov.in/contact/directorate)"
     },
     {
       "id": "gigw.contact",
@@ -538,6 +533,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "6167.677ms"
     },
     {
       "id": "perf.weight",
@@ -603,10 +603,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-CMG1G06L24&amp;cx=c&amp;gtm=4e6ae1, https://www.googletagmanager.com/gtm.js?id=GTM-PFLTDP3B"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-CMG1G06L24&amp;cx=c&amp;gtm=4e6ak1, https://www.googletagmanager.com/gtm.js?id=GTM-PFLTDP3B"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-22",
+      "up": true,
+      "score": 69
+    },
     {
       "d": "2026-10-21",
       "up": true,
@@ -753,5 +758,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,19 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-21T00:28:30.697Z",
-    "run": "1792542446732",
+    "at": "2026-10-22T00:30:08.496Z",
+    "run": "1792628942750",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 43,
+      "performance": 28,
       "accessibility": 73,
-      "best_practices": 92,
+      "best_practices": 88,
       "seo": 83
     },
     "axe": {
       "critical": 10,
-      "serious": 51,
-      "moderate": 31,
+      "serious": 47,
+      "moderate": 30,
       "minor": 0
     },
     "crawl": {
@@ -175,12 +175,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "51 serious violation(s)"
+        "ev": "47 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "31 moderate/minor violation(s)"
+        "ev": "30 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -195,7 +195,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "25 low-contrast element(s)"
+        "ev": "23 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -223,16 +223,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "43/100"
+        "ev": "28/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6243.273500000001ms"
+        "ev": "6385.763000000002ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.64"
       },
       {
         "id": "perf.weight",
@@ -423,7 +424,7 @@
     "screenshot": {
       "desktop": "keralanews.webp",
       "mobile": "keralanews-m.webp",
-      "phash": "ff80009f1f1f8000"
+      "phash": "ffff00810080ffbf"
     },
     "outlinks": [
       {
@@ -473,12 +474,12 @@
     ]
   },
   "score": {
-    "overall": 48,
+    "overall": 47,
     "security": 56,
     "accessibility": 20,
     "content": 42,
     "gigw": 26,
-    "performance": 86,
+    "performance": 82,
     "identity": 100
   },
   "status": "poor",
@@ -520,7 +521,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "51 serious violation(s)"
+      "ev": "47 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -530,7 +531,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "25 low-contrast element(s)"
+      "ev": "23 low-contrast element(s)"
     },
     {
       "id": "content.stale_news",
@@ -552,7 +553,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6243.273500000001ms"
+      "ev": "6385.763000000002ms"
     },
     {
       "id": "sec.csp",
@@ -561,7 +562,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "31 moderate/minor violation(s)"
+      "ev": "30 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -608,6 +609,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.64"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -621,6 +627,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-22",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-10-21",
       "up": true,
@@ -767,5 +778,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
