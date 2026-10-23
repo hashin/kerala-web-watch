@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T23:49:18.562Z",
-    "run": "1792108098224",
+    "at": "2026-10-23T00:08:39.205Z",
+    "run": "1792714056506",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 54,
+      "performance": 55,
       "accessibility": 93,
       "best_practices": 46,
       "seo": 83
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "54/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "50139.860999999975ms"
+        "ev": "40896.49800000002ms"
       },
       {
         "id": "perf.cls",
@@ -289,7 +289,8 @@
       },
       {
         "id": "content.broken_images",
-        "r": "pass"
+        "r": "fail",
+        "ev": "6 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -310,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "8 console error(s): Refused to apply style from 'https://kozhikode.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+        "ev": "14 console error(s): Refused to apply style from 'https://kozhikode.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       },
       {
         "id": "gigw.contact",
@@ -416,7 +417,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-9HR295F7RX&amp;cx=c&amp;gtm=4e6ae1, https://www.googletagmanager.com/gtag/js?id=UA-131902160-1"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-9HR295F7RX&amp;cx=c&amp;gtm=4e6al1, https://www.googletagmanager.com/gtag/js?id=UA-131902160-1"
       }
     ],
     "screenshot": {
@@ -502,7 +503,7 @@
     "overall": 58,
     "security": 48,
     "accessibility": 40,
-    "content": 56,
+    "content": 52,
     "gigw": 70,
     "performance": 76,
     "identity": 96
@@ -559,7 +560,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "50139.860999999975ms"
+      "ev": "40896.49800000002ms"
     },
     {
       "id": "perf.weight",
@@ -594,9 +595,14 @@
       "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
+      "id": "content.broken_images",
+      "sev": "L",
+      "ev": "6 broken image(s)"
+    },
+    {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "8 console error(s): Refused to apply style from 'https://kozhikode.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+      "ev": "14 console error(s): Refused to apply style from 'https://kozhikode.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
     },
     {
       "id": "gigw.terms",
@@ -634,10 +640,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-9HR295F7RX&amp;cx=c&amp;gtm=4e6ae1, https://www.googletagmanager.com/gtag/js?id=UA-131902160-1"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-9HR295F7RX&amp;cx=c&amp;gtm=4e6al1, https://www.googletagmanager.com/gtag/js?id=UA-131902160-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-23",
+      "up": true,
+      "score": 58
+    },
     {
       "d": "2026-10-22",
       "up": true,
@@ -789,5 +800,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

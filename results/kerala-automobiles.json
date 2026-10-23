@@ -29,11 +29,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-22T00:11:46.903Z",
-    "run": "1792627887808",
+    "at": "2026-10-23T00:15:36.517Z",
+    "run": "1792714492608",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 53,
+      "performance": 63,
       "accessibility": 77,
       "best_practices": 69,
       "seo": 83
@@ -82,7 +82,7 @@
       {
         "id": "avail.blank",
         "r": "fail",
-        "ev": "44 visible characters"
+        "ev": "0 visible characters"
       },
       {
         "id": "avail.under_construction",
@@ -90,7 +90,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4886ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -214,12 +215,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "53/100"
+        "ev": "63/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9311.476999999999ms"
+        "ev": "5126.897999999999ms"
       },
       {
         "id": "perf.cls",
@@ -391,8 +392,7 @@
       },
       {
         "id": "id.soft_404",
-        "r": "fail",
-        "ev": "a nonexistent path returned 200"
+        "r": "na"
       },
       {
         "id": "id.canonical",
@@ -425,7 +425,7 @@
     {
       "id": "avail.blank",
       "sev": "C",
-      "ev": "44 visible characters"
+      "ev": "0 visible characters"
     },
     {
       "id": "sec.http_redirect",
@@ -453,6 +453,11 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "keralaautomobilesltd.com"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "4886ms"
     },
     {
       "id": "sec.hsts",
@@ -505,7 +510,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9311.476999999999ms"
+      "ev": "5126.897999999999ms"
     },
     {
       "id": "sec.csp",
@@ -583,11 +588,6 @@
       "ev": "Disallow: / for User-agent: *"
     },
     {
-      "id": "id.soft_404",
-      "sev": "L",
-      "ev": "a nonexistent path returned 200"
-    },
-    {
       "id": "id.charset_doctype",
       "sev": "L",
       "ev": "missing UTF-8 charset, HTML5 doctype"
@@ -602,6 +602,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-23",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-22",
       "up": false,
@@ -713,5 +718,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -29,19 +29,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-22T00:14:16.502Z",
-    "run": "1792627969995",
+    "at": "2026-10-23T00:18:49.948Z",
+    "run": "1792714656180",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 27,
+      "performance": 50,
       "accessibility": 56,
       "best_practices": 69,
       "seo": 83
     },
     "axe": {
-      "critical": 66,
+      "critical": 52,
       "serious": 56,
-      "moderate": 68,
+      "moderate": 66,
       "minor": 93
     },
     "crawl": {
@@ -51,7 +51,7 @@
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "nginx",
       "jquery": "2.1.4"
     },
     "checks": [
@@ -61,16 +61,15 @@
       },
       {
         "id": "avail.connect",
-        "r": "fail",
-        "ev": "timeout"
+        "r": "pass"
       },
       {
         "id": "avail.status",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -90,7 +89,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -102,23 +101,23 @@
       },
       {
         "id": "sec.https",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.cert_valid",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.tls_version",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.hsts",
@@ -126,7 +125,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "fail",
+        "ev": "href=\"http://14.139.185.154/kuhs_old?site=old\""
       },
       {
         "id": "sec.csp",
@@ -165,7 +165,7 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "66 critical violation(s)"
+        "ev": "52 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
@@ -175,7 +175,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "161 moderate/minor violation(s)"
+        "ev": "159 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -184,7 +184,7 @@
       {
         "id": "a11y.alt",
         "r": "fail",
-        "ev": "66 image(s) missing alt text"
+        "ev": "52 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
@@ -217,22 +217,21 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "27/100"
+        "ev": "50/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "12656.313999999997ms"
+        "ev": "13216.778999999997ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.47"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
-        "r": "fail",
-        "ev": "8.1MB"
+        "r": "warn",
+        "ev": "7.2MB"
       },
       {
         "id": "perf.viewport",
@@ -309,7 +308,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "21 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+        "ev": "22 console error(s): Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR"
       },
       {
         "id": "gigw.contact",
@@ -385,11 +384,11 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "id.robots",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.sitemap_xml",
@@ -398,7 +397,7 @@
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.canonical",
@@ -445,13 +444,25 @@
       }
     ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 42,
+    "security": 14,
+    "accessibility": 40,
+    "content": 42,
+    "gigw": 30,
+    "performance": 81,
+    "identity": 96
+  },
+  "status": "poor",
   "issues": [
     {
-      "id": "avail.connect",
-      "sev": "C",
-      "ev": "timeout"
+      "id": "sec.http_redirect",
+      "sev": "H"
+    },
+    {
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://14.139.185.154/kuhs_old?site=old\""
     },
     {
       "id": "sec.vuln_js",
@@ -461,7 +472,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "66 critical violation(s)"
+      "ev": "52 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -485,7 +496,7 @@
     {
       "id": "a11y.alt",
       "sev": "M",
-      "ev": "66 image(s) missing alt text"
+      "ev": "52 image(s) missing alt text"
     },
     {
       "id": "a11y.contrast",
@@ -520,12 +531,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "12656.313999999997ms"
+      "ev": "13216.778999999997ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "8.1MB"
+      "ev": "7.2MB"
     },
     {
       "id": "sec.csp",
@@ -547,7 +558,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "161 moderate/minor violation(s)"
+      "ev": "159 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -567,7 +578,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "21 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      "ev": "22 console error(s): Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR"
     },
     {
       "id": "gigw.copyright_policy",
@@ -590,16 +601,7 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.47"
-    },
-    {
       "id": "perf.images",
-      "sev": "L"
-    },
-    {
-      "id": "id.www_consistency",
       "sev": "L"
     },
     {
@@ -617,6 +619,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-23",
+      "up": true,
+      "score": 42
+    },
     {
       "d": "2026-10-22",
       "up": false,
@@ -778,5 +785,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T23:21:47.236Z",
-    "run": "1792279231388",
+    "at": "2026-10-23T00:08:48.935Z",
+    "run": "1792714066778",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 55,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -224,7 +224,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "20497.269999999997ms"
+        "ev": "15527.248ms"
       },
       {
         "id": "perf.cls",
@@ -279,8 +279,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://pathanamthitta.nic.in/en/#SkipContent)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -447,11 +446,11 @@
       },
       {
         "host": "s3waas.gov.in",
-        "count": 5,
+        "count": 4,
         "texts": [
           "Industrial Profile",
-          "webpage",
-          "District Profile"
+          "District Profile",
+          "Census Report"
         ]
       },
       {
@@ -487,10 +486,10 @@
     ]
   },
   "score": {
-    "overall": 61,
+    "overall": 63,
     "security": 48,
     "accessibility": 60,
-    "content": 46,
+    "content": 56,
     "gigw": 64,
     "performance": 81,
     "identity": 96
@@ -518,11 +517,6 @@
       "ev": "ml-IN"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://pathanamthitta.nic.in/en/#SkipContent)"
-    },
-    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -546,7 +540,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "20497.269999999997ms"
+      "ev": "15527.248ms"
     },
     {
       "id": "perf.weight",
@@ -617,6 +611,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-23",
+      "up": true,
+      "score": 63
+    },
     {
       "d": "2026-10-22",
       "up": true,
@@ -768,5 +767,5 @@
       "score": 58
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T23:46:08.753Z",
-    "run": "1792280729120",
+    "at": "2026-10-23T00:33:09.054Z",
+    "run": "1792715544807",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 27,
+      "accessibility": 66,
+      "best_practices": 59,
+      "seo": 83
+    },
     "axe": {
       "critical": 0,
       "serious": 14,
@@ -208,24 +213,28 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "66/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "27/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "65338.95449999998ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.28"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "13.2MB"
+        "ev": "13.5MB"
       },
       {
         "id": "perf.viewport",
@@ -233,11 +242,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -579,9 +588,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "65338.95449999998ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "13.2MB"
+      "ev": "13.5MB"
     },
     {
       "id": "sec.csp",
@@ -640,6 +654,15 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.28"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -658,6 +681,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-23",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-22",
       "up": false,
@@ -794,5 +822,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

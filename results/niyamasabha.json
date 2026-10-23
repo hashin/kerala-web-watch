@@ -35,17 +35,17 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-21T00:12:24.244Z",
-    "run": "1792541480821",
+    "at": "2026-10-23T00:17:53.341Z",
+    "run": "1792714536382",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 87,
+      "performance": 83,
       "accessibility": 45,
       "best_practices": 85,
-      "seo": 92
+      "seo": 83
     },
     "axe": {
-      "critical": 118,
+      "critical": 119,
       "serious": 19,
       "moderate": 4,
       "minor": 0
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 20,
-      "broken": 0
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -170,7 +170,7 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "118 critical violation(s)"
+        "ev": "119 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
@@ -185,12 +185,12 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"\"> vs. 81% Malayalam content"
+        "ev": "<html lang=\"\"> vs. 78% Malayalam content"
       },
       {
         "id": "a11y.alt",
         "r": "fail",
-        "ev": "118 image(s) missing alt text"
+        "ev": "119 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
@@ -222,11 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "87/100"
+        "ev": "83/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "fail",
+        "ev": "4444.408ms"
       },
       {
         "id": "perf.cls",
@@ -280,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "2/30 crawled link(s) broken (https://niyamasabha.org/codes/speaker.htm, https://niyamasabha.org/codes/k-lamps.htm)"
       },
       {
         "id": "content.broken_pdfs",
@@ -393,8 +395,7 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 404"
+        "r": "na"
       },
       {
         "id": "id.soft_404",
@@ -482,13 +483,13 @@
     ]
   },
   "score": {
-    "overall": 43,
+    "overall": 40,
     "security": 44,
     "accessibility": 22,
-    "content": 66,
+    "content": 56,
     "gigw": 18,
-    "performance": 66,
-    "identity": 68
+    "performance": 56,
+    "identity": 72
   },
   "status": "poor",
   "issues": [
@@ -500,17 +501,22 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "118 critical violation(s)"
+      "ev": "119 critical violation(s)"
     },
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"\"> vs. 81% Malayalam content"
+      "ev": "<html lang=\"\"> vs. 78% Malayalam content"
     },
     {
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "2/30 crawled link(s) broken (https://niyamasabha.org/codes/speaker.htm, https://niyamasabha.org/codes/k-lamps.htm)"
     },
     {
       "id": "perf.viewport",
@@ -537,7 +543,7 @@
     {
       "id": "a11y.alt",
       "sev": "M",
-      "ev": "118 image(s) missing alt text"
+      "ev": "119 image(s) missing alt text"
     },
     {
       "id": "a11y.contrast",
@@ -568,6 +574,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "4444.408ms"
     },
     {
       "id": "perf.tap_targets",
@@ -645,11 +656,6 @@
       "sev": "L"
     },
     {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 404"
-    },
-    {
       "id": "id.charset_doctype",
       "sev": "L",
       "ev": "missing UTF-8 charset, HTML5 doctype"
@@ -664,6 +670,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-23",
+      "up": true,
+      "score": 40
+    },
     {
       "d": "2026-10-22",
       "up": true,
@@ -820,5 +831,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

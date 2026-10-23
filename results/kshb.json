@@ -37,18 +37,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-16T23:59:57.152Z",
-    "run": "1792195180882",
+    "at": "2026-10-23T00:26:05.109Z",
+    "run": "1792715130594",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 100,
+      "accessibility": 94,
+      "best_practices": 100,
+      "seo": 82
     },
     "axe": {
       "critical": 0,
-      "serious": 2,
+      "serious": 0,
       "moderate": 2,
       "minor": 0
     },
@@ -73,8 +73,7 @@
       },
       {
         "id": "avail.status",
-        "r": "fail",
-        "ev": "final response was 500"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
@@ -90,8 +89,7 @@
       },
       {
         "id": "avail.blank",
-        "r": "fail",
-        "ev": "0 visible characters"
+        "r": "pass"
       },
       {
         "id": "avail.under_construction",
@@ -99,7 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4082ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -119,15 +118,15 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.tls_version",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.hsts",
@@ -175,8 +174,7 @@
       },
       {
         "id": "a11y.axe_serious",
-        "r": "fail",
-        "ev": "2 serious violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -197,8 +195,7 @@
       },
       {
         "id": "a11y.headings",
-        "r": "fail",
-        "ev": "no <h1>"
+        "r": "pass"
       },
       {
         "id": "a11y.labels",
@@ -215,20 +212,20 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "94/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "100/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -236,7 +233,7 @@
       },
       {
         "id": "perf.viewport",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.tap_targets",
@@ -244,7 +241,7 @@
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.copyright_year",
@@ -293,8 +290,7 @@
       },
       {
         "id": "content.title",
-        "r": "fail",
-        "ev": "missing <title>"
+        "r": "pass"
       },
       {
         "id": "content.meta_desc",
@@ -306,8 +302,7 @@
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 500 ()"
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
@@ -387,17 +382,16 @@
       },
       {
         "id": "id.robots",
-        "r": "fail",
-        "ev": "robots.txt returned 500"
+        "r": "pass"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 500"
+        "r": "pass"
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
       },
       {
         "id": "id.canonical",
@@ -405,8 +399,7 @@
       },
       {
         "id": "id.charset_doctype",
-        "r": "fail",
-        "ev": "missing HTML5 doctype"
+        "r": "pass"
       },
       {
         "id": "id.tech",
@@ -420,23 +413,21 @@
     "screenshot": {
       "desktop": "kshb.webp",
       "mobile": "kshb-m.webp",
-      "phash": "ffffffffffffffff"
+      "phash": "00003c3c3c3c0000"
     },
     "outlinks": []
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 65,
+    "security": 48,
+    "accessibility": 96,
+    "content": 72,
+    "gigw": 0,
+    "performance": 90,
+    "identity": 92
+  },
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "avail.status",
-      "sev": "C",
-      "ev": "final response was 500"
-    },
-    {
-      "id": "avail.blank",
-      "sev": "C",
-      "ev": "0 visible characters"
-    },
     {
       "id": "sec.http_redirect",
       "sev": "H"
@@ -455,8 +446,9 @@
       "sev": "H"
     },
     {
-      "id": "perf.viewport",
-      "sev": "H"
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "4082ms"
     },
     {
       "id": "sec.hsts",
@@ -465,16 +457,6 @@
     {
       "id": "sec.xfo",
       "sev": "M"
-    },
-    {
-      "id": "a11y.axe_serious",
-      "sev": "M",
-      "ev": "2 serious violation(s)"
-    },
-    {
-      "id": "content.title",
-      "sev": "M",
-      "ev": "missing <title>"
     },
     {
       "id": "gigw.sitemap",
@@ -518,22 +500,12 @@
       "ev": "2 moderate/minor violation(s)"
     },
     {
-      "id": "a11y.headings",
-      "sev": "L",
-      "ev": "no <h1>"
-    },
-    {
       "id": "content.meta_desc",
       "sev": "L"
     },
     {
       "id": "content.favicon",
       "sev": "L"
-    },
-    {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 500 ()"
     },
     {
       "id": "gigw.feedback",
@@ -568,27 +540,13 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.www_consistency",
       "sev": "L"
     },
     {
-      "id": "id.robots",
+      "id": "id.soft_404",
       "sev": "L",
-      "ev": "robots.txt returned 500"
-    },
-    {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 500"
-    },
-    {
-      "id": "id.charset_doctype",
-      "sev": "L",
-      "ev": "missing HTML5 doctype"
+      "ev": "a nonexistent path returned 200"
     },
     {
       "id": "gigw.emblem",
@@ -600,6 +558,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-23",
+      "up": true,
+      "score": 65
+    },
     {
       "d": "2026-10-22",
       "up": false,
@@ -761,5 +724,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

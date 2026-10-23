@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-18T23:34:08.917Z",
-    "run": "1792366366062",
+    "at": "2026-10-23T00:09:46.699Z",
+    "run": "1792714123586",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 49,
+      "performance": 55,
       "accessibility": 84,
       "best_practices": 69,
       "seo": 83
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 2
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "49/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "32924.592000000004ms"
+        "ev": "33133.1085ms"
       },
       {
         "id": "perf.cls",
@@ -279,8 +279,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "2/30 crawled link(s) broken (https://thrissur.nic.in/en/revenue-divisions/, https://thrissur.nic.in/en/major-institutions/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -442,9 +441,9 @@
         "host": "s3waas.gov.in",
         "count": 6,
         "texts": [
+          "PDF\n                    \n\n                    \n                        Orange Alert\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
           "PDF\n                    \n\n                    \n                        Kerala Government Extraordinary Gazette – 2656 -Volume – 15\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
-          "PDF\n                    \n\n                    \n                        Sexual Harassment against Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013 – Order reconstituting the Local Complaints Committee in Thrissur District\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
-          "PDF\n                    \n\n                    \n                        3 Year Completed Employee List\n                        Download Document\n                    \n\n                    Opens downloadable PDF document"
+          "PDF\n                    \n\n                    \n                        Sexual Harassment against Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013 – Order reconstituting the Local Complaints Committee in Thrissur District\n                        Download Document\n                    \n\n                    Opens downloadable PDF document"
         ]
       },
       {
@@ -471,10 +470,10 @@
     ]
   },
   "score": {
-    "overall": 60,
+    "overall": 61,
     "security": 48,
     "accessibility": 60,
-    "content": 42,
+    "content": 52,
     "gigw": 60,
     "performance": 76,
     "identity": 96
@@ -502,11 +501,6 @@
       "ev": "ml-IN"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "2/30 crawled link(s) broken (https://thrissur.nic.in/en/revenue-divisions/, https://thrissur.nic.in/en/major-institutions/)"
-    },
-    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -530,7 +524,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "32924.592000000004ms"
+      "ev": "33133.1085ms"
     },
     {
       "id": "perf.weight",
@@ -609,6 +603,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-23",
+      "up": true,
+      "score": 61
+    },
     {
       "d": "2026-10-22",
       "up": true,
@@ -760,5 +759,5 @@
       "score": 63
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

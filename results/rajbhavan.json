@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-16T23:55:32.926Z",
-    "run": "1792194885587",
+    "at": "2026-10-23T00:17:21.986Z",
+    "run": "1792714520334",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 32,
+      "performance": 53,
       "accessibility": 65,
       "best_practices": 69,
       "seo": 83
@@ -59,7 +59,7 @@
     },
     "tech": {
       "cms": null,
-      "server": "Apache",
+      "server": null,
       "jquery": null
     },
     "checks": [
@@ -69,15 +69,16 @@
       },
       {
         "id": "avail.connect",
-        "r": "pass"
+        "r": "fail",
+        "ev": "timeout"
       },
       {
         "id": "avail.status",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.parked",
@@ -97,7 +98,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.geo_blocked",
@@ -109,23 +110,23 @@
       },
       {
         "id": "sec.https",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.http_redirect",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.cert_valid",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.tls_version",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.hsts",
@@ -133,8 +134,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic\""
+        "r": "na"
       },
       {
         "id": "sec.csp",
@@ -222,17 +222,16 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "32/100"
+        "ev": "53/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9669.803000000004ms"
+        "ev": "25018.877ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.91"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -389,20 +388,19 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "id.robots",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 404"
+        "r": "na"
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.canonical",
@@ -419,7 +417,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-FH946TSYK5&amp;cx=c&amp;gtm=4e6ae1h1, https://www.googletagmanager.com/gtag/js?id=UA-103783083-7"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-FH946TSYK5&amp;cx=c&amp;gtm=4e6al1, https://www.googletagmanager.com/gtag/js?id=UA-103783083-7"
       }
     ],
     "screenshot": {
@@ -498,21 +496,17 @@
       }
     ]
   },
-  "score": {
-    "overall": 49,
-    "security": 28,
-    "accessibility": 52,
-    "content": 52,
-    "gigw": 26,
-    "performance": 82,
-    "identity": 92
-  },
-  "status": "poor",
+  "score": null,
+  "status": "down",
   "issues": [
     {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic\""
+      "id": "avail.connect",
+      "sev": "C",
+      "ev": "timeout"
+    },
+    {
+      "id": "sec.http_redirect",
+      "sev": "H"
     },
     {
       "id": "sec.vuln_js",
@@ -580,7 +574,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9669.803000000004ms"
+      "ev": "25018.877ms"
     },
     {
       "id": "sec.csp",
@@ -639,22 +633,8 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.91"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
-    },
-    {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 404"
     },
     {
       "id": "id.canonical",
@@ -663,10 +643,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-FH946TSYK5&amp;cx=c&amp;gtm=4e6ae1h1, https://www.googletagmanager.com/gtag/js?id=UA-103783083-7"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-FH946TSYK5&amp;cx=c&amp;gtm=4e6al1, https://www.googletagmanager.com/gtag/js?id=UA-103783083-7"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-23",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-22",
       "up": true,
@@ -828,5 +813,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

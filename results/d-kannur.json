@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-15T23:48:49.780Z",
-    "run": "1792108042231",
+    "at": "2026-10-23T00:07:46.776Z",
+    "run": "1792713988606",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
+      "performance": 50,
       "accessibility": 93,
       "best_practices": 65,
       "seo": 83
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "50/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "18526.47150000002ms"
+        "ev": "18023.363500000007ms"
       },
       {
         "id": "perf.cls",
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://kannur.nic.in/en/constituencies/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -488,10 +489,10 @@
     ]
   },
   "score": {
-    "overall": 57,
+    "overall": 55,
     "security": 48,
     "accessibility": 40,
-    "content": 56,
+    "content": 46,
     "gigw": 60,
     "performance": 76,
     "identity": 96
@@ -517,6 +518,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://kannur.nic.in/en/constituencies/)"
     },
     {
       "id": "sec.hsts",
@@ -552,7 +558,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "18526.47150000002ms"
+      "ev": "18023.363500000007ms"
     },
     {
       "id": "perf.weight",
@@ -626,6 +632,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-23",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-22",
       "up": true,
@@ -777,5 +788,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

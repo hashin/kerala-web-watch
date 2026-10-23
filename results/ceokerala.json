@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-22T00:17:06.757Z",
-    "run": "1792628165209",
+    "at": "2026-10-23T00:27:04.387Z",
+    "run": "1792715163910",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 48,
+      "performance": 59,
       "accessibility": 76,
       "best_practices": 92,
       "seo": 92
     },
     "axe": {
       "critical": 4,
-      "serious": 3,
+      "serious": 2,
       "moderate": 22,
       "minor": 5
     },
     "crawl": {
       "pages": 30,
       "pdfs": 5,
-      "broken": 4
+      "broken": 5
     },
     "tech": {
       "cms": null,
@@ -174,7 +174,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "3 serious violation(s)"
+        "ev": "2 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -191,8 +191,7 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "1 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
@@ -220,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "48/100"
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10719.225999999999ms"
+        "ev": "9788.225500000004ms"
       },
       {
         "id": "perf.cls",
@@ -279,8 +278,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "4/30 crawled link(s) broken (https://www.ceo.kerala.gov.in/voters-corner/polling-stations, https://www.ceo.kerala.gov.in/political-parties, https://www.ceo.kerala.gov.in/elections, ...)"
+        "r": "fail",
+        "ev": "5/30 crawled link(s) broken (https://www.ceo.kerala.gov.in/voters-corner/polling-stations, https://www.ceo.kerala.gov.in/voters-corner, https://www.ceo.kerala.gov.in/political-parties, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -462,10 +461,10 @@
     ]
   },
   "score": {
-    "overall": 62,
+    "overall": 63,
     "security": 80,
-    "accessibility": 50,
-    "content": 46,
+    "accessibility": 60,
+    "content": 36,
     "gigw": 32,
     "performance": 76,
     "identity": 100
@@ -495,17 +494,12 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "4/30 crawled link(s) broken (https://www.ceo.kerala.gov.in/voters-corner/polling-stations, https://www.ceo.kerala.gov.in/political-parties, https://www.ceo.kerala.gov.in/elections, ...)"
+      "ev": "5/30 crawled link(s) broken (https://www.ceo.kerala.gov.in/voters-corner/polling-stations, https://www.ceo.kerala.gov.in/voters-corner, https://www.ceo.kerala.gov.in/political-parties, ...)"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "3 serious violation(s)"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "1 low-contrast element(s)"
+      "ev": "2 serious violation(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -526,7 +520,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10719.225999999999ms"
+      "ev": "9788.225500000004ms"
     },
     {
       "id": "perf.tap_targets",
@@ -595,6 +589,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-23",
+      "up": true,
+      "score": 63
+    },
     {
       "d": "2026-10-22",
       "up": true,
@@ -751,5 +750,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

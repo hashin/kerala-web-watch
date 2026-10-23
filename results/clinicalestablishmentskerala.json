@@ -37,12 +37,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T00:10:10.332Z",
-    "run": "1792195730574",
+    "at": "2026-10-23T00:34:29.306Z",
+    "run": "1792715596349",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 30,
-      "accessibility": 83,
+      "performance": 44,
+      "accessibility": 75,
       "best_practices": 92,
       "seo": 69
     },
@@ -218,22 +218,21 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "83/100"
+        "ev": "75/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "30/100"
+        "ev": "44/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "34660.5405ms"
+        "ev": "52280.49050000001ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.95"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -246,7 +245,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -314,7 +313,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "11 console error(s): Cannot read properties of null (reading 'addEventListener')"
+        "ev": "10 console error(s): Cannot read properties of null (reading 'addEventListener')"
       },
       {
         "id": "gigw.contact",
@@ -495,7 +494,7 @@
     "accessibility": 40,
     "content": 42,
     "gigw": 32,
-    "performance": 72,
+    "performance": 66,
     "identity": 96
   },
   "status": "needs-work",
@@ -563,12 +562,16 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "34660.5405ms"
+      "ev": "52280.49050000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
       "ev": "9.4MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.xcto",
@@ -600,7 +603,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "11 console error(s): Cannot read properties of null (reading 'addEventListener')"
+      "ev": "10 console error(s): Cannot read properties of null (reading 'addEventListener')"
     },
     {
       "id": "gigw.feedback",
@@ -631,11 +634,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.95"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -650,6 +648,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-23",
+      "up": true,
+      "score": 53
+    },
     {
       "d": "2026-10-22",
       "up": true,
@@ -811,5 +814,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

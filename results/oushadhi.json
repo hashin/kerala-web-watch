@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-22T00:25:06.136Z",
-    "run": "1792628663642",
+    "at": "2026-10-23T00:29:49.187Z",
+    "run": "1792715329822",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 30,
+      "performance": 41,
       "accessibility": 37,
       "best_practices": 77,
       "seo": 67
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 3
     },
     "tech": {
       "cms": null,
@@ -219,17 +219,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "30/100"
+        "ev": "41/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "19307.938000000002ms"
+        "ev": "9161.499499999998ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.45"
+        "ev": "0.62"
       },
       {
         "id": "perf.weight",
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3/30 crawled link(s) broken (https://www.oushadhi.org/careers, https://www.oushadhi.org/notice-board, https://www.oushadhi.org/tenders)"
       },
       {
         "id": "content.broken_pdfs",
@@ -454,10 +455,10 @@
     ]
   },
   "score": {
-    "overall": 46,
+    "overall": 44,
     "security": 48,
     "accessibility": 46,
-    "content": 38,
+    "content": 28,
     "gigw": 18,
     "performance": 62,
     "identity": 76
@@ -483,6 +484,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "3/30 crawled link(s) broken (https://www.oushadhi.org/careers, https://www.oushadhi.org/notice-board, https://www.oushadhi.org/tenders)"
     },
     {
       "id": "id.gov_domain",
@@ -540,7 +546,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "19307.938000000002ms"
+      "ev": "9161.499499999998ms"
     },
     {
       "id": "perf.weight",
@@ -617,7 +623,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.45"
+      "ev": "0.62"
     },
     {
       "id": "perf.images",
@@ -643,6 +649,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-23",
+      "up": true,
+      "score": 44
+    },
     {
       "d": "2026-10-22",
       "up": true,
@@ -799,5 +810,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

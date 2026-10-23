@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T23:21:24.069Z",
-    "run": "1792279233780",
+    "at": "2026-10-23T00:17:26.297Z",
+    "run": "1792714554632",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 39,
+      "performance": 29,
       "accessibility": 96,
       "best_practices": 46,
       "seo": 83
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "39/100"
+        "ev": "29/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6996.754000000001ms"
+        "ev": "13276.754500000001ms"
       },
       {
         "id": "perf.cls",
@@ -279,7 +279,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://trivandrum.nic.in/en/courts/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -419,7 +420,7 @@
     "screenshot": {
       "desktop": "d-thiruvananthapuram.webp",
       "mobile": "d-thiruvananthapuram-m.webp",
-      "phash": "ffff403900007fff"
+      "phash": "fffffb000000ffff"
     },
     "outlinks": [
       {
@@ -440,9 +441,9 @@
         "host": "s3waas.gov.in",
         "count": 31,
         "texts": [
-          "17/10/2026-01",
-          "16/10/2026-01",
-          "15/10/2026-02"
+          "22/10/2026-01",
+          "21/10/2026-01",
+          "20/10/2026-01"
         ]
       },
       {
@@ -490,10 +491,10 @@
     ]
   },
   "score": {
-    "overall": 62,
+    "overall": 60,
     "security": 48,
     "accessibility": 60,
-    "content": 56,
+    "content": 46,
     "gigw": 60,
     "performance": 76,
     "identity": 96
@@ -521,6 +522,11 @@
       "ev": "ml-IN"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://trivandrum.nic.in/en/courts/)"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -544,7 +550,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6996.754000000001ms"
+      "ev": "13276.754500000001ms"
     },
     {
       "id": "perf.weight",
@@ -618,6 +624,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-23",
+      "up": true,
+      "score": 60
+    },
     {
       "d": "2026-10-22",
       "up": true,
@@ -769,5 +780,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

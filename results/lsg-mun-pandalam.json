@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T00:07:51.965Z",
-    "run": "1792195627076",
+    "at": "2026-10-23T00:29:02.297Z",
+    "run": "1792715264799",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 51,
+      "performance": 48,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 85
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 2
     },
     "tech": {
       "cms": "Drupal 11",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "51/100"
+        "ev": "48/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6713.7305ms"
+        "ev": "7516.549ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "13.2MB"
+        "ev": "14.2MB"
       },
       {
         "id": "perf.viewport",
@@ -282,7 +282,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://pandalammunicipality.lsgkerala.gov.in/ml/en/calendar-field_event_date/month/202109)"
+        "ev": "2/30 crawled link(s) broken (https://pandalammunicipality.lsgkerala.gov.in/ml/en/calendar-field_event_date/month/201208, https://meeting.lsgkerala.gov.in/Pages/StateWiseDashBoard.aspx)"
       },
       {
         "id": "content.broken_pdfs",
@@ -566,7 +566,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://pandalammunicipality.lsgkerala.gov.in/ml/en/calendar-field_event_date/month/202109)"
+      "ev": "2/30 crawled link(s) broken (https://pandalammunicipality.lsgkerala.gov.in/ml/en/calendar-field_event_date/month/201208, https://meeting.lsgkerala.gov.in/Pages/StateWiseDashBoard.aspx)"
     },
     {
       "id": "gigw.rti",
@@ -601,12 +601,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6713.7305ms"
+      "ev": "7516.549ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "13.2MB"
+      "ev": "14.2MB"
     },
     {
       "id": "sec.csp",
@@ -662,6 +662,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-23",
+      "up": true,
+      "score": 64
+    },
     {
       "d": "2026-10-22",
       "up": true,
@@ -813,5 +818,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

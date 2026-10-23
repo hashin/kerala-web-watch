@@ -35,19 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T23:36:15.401Z",
-    "run": "1792280162205",
+    "at": "2026-10-23T00:19:36.567Z",
+    "run": "1792714767706",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 100,
-      "accessibility": 94,
-      "best_practices": 100,
-      "seo": 82
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
     },
     "axe": {
       "critical": 0,
-      "serious": 0,
-      "moderate": 2,
+      "serious": 1,
+      "moderate": 4,
       "minor": 0
     },
     "crawl": {
@@ -71,7 +71,8 @@
       },
       {
         "id": "avail.status",
-        "r": "pass"
+        "r": "fail",
+        "ev": "final response was 403"
       },
       {
         "id": "avail.redirect_offsite",
@@ -171,12 +172,13 @@
       },
       {
         "id": "a11y.axe_serious",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "2 moderate/minor violation(s)"
+        "ev": "4 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -209,20 +211,20 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "94/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "100/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -230,7 +232,7 @@
       },
       {
         "id": "perf.viewport",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.tap_targets",
@@ -238,7 +240,7 @@
       },
       {
         "id": "perf.images",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -299,7 +301,8 @@
       },
       {
         "id": "content.console_errors",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 403 ()"
       },
       {
         "id": "gigw.contact",
@@ -380,16 +383,17 @@
       },
       {
         "id": "id.robots",
-        "r": "pass"
+        "r": "fail",
+        "ev": "robots.txt returned 403"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "pass"
+        "r": "fail",
+        "ev": "sitemap.xml returned 403"
       },
       {
         "id": "id.soft_404",
-        "r": "fail",
-        "ev": "a nonexistent path returned 200"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
@@ -397,7 +401,8 @@
       },
       {
         "id": "id.charset_doctype",
-        "r": "pass"
+        "r": "fail",
+        "ev": "missing UTF-8 charset, HTML5 doctype"
       },
       {
         "id": "id.tech",
@@ -411,21 +416,18 @@
     "screenshot": {
       "desktop": "keralabiodiversity.webp",
       "mobile": "keralabiodiversity-m.webp",
-      "phash": "00003c3c3c3c0000"
+      "phash": "0f07ffffffffffff"
     },
     "outlinks": []
   },
-  "score": {
-    "overall": 68,
-    "security": 68,
-    "accessibility": 96,
-    "content": 72,
-    "gigw": 0,
-    "performance": 90,
-    "identity": 72
-  },
+  "score": null,
   "status": "down",
   "issues": [
+    {
+      "id": "avail.status",
+      "sev": "C",
+      "ev": "final response was 403"
+    },
     {
       "id": "content.last_updated",
       "sev": "H",
@@ -440,6 +442,10 @@
       "sev": "H"
     },
     {
+      "id": "perf.viewport",
+      "sev": "H"
+    },
+    {
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "keralabiodiversity.org"
@@ -451,6 +457,11 @@
     {
       "id": "sec.xfo",
       "sev": "M"
+    },
+    {
+      "id": "a11y.axe_serious",
+      "sev": "M",
+      "ev": "1 serious violation(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -491,7 +502,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "2 moderate/minor violation(s)"
+      "ev": "4 moderate/minor violation(s)"
     },
     {
       "id": "content.meta_desc",
@@ -500,6 +511,11 @@
     {
       "id": "content.favicon",
       "sev": "L"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 403 ()"
     },
     {
       "id": "gigw.feedback",
@@ -534,13 +550,27 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
     {
-      "id": "id.soft_404",
+      "id": "id.robots",
       "sev": "L",
-      "ev": "a nonexistent path returned 200"
+      "ev": "robots.txt returned 403"
+    },
+    {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 403"
+    },
+    {
+      "id": "id.charset_doctype",
+      "sev": "L",
+      "ev": "missing UTF-8 charset, HTML5 doctype"
     },
     {
       "id": "gigw.emblem",
@@ -552,6 +582,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-23",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-22",
       "up": false,
@@ -713,5 +748,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
