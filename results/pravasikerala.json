@@ -35,13 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-23T00:29:07.691Z",
-    "run": "1792715234926",
+    "at": "2026-10-24T00:18:13.240Z",
+    "run": "1792800965803",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 34,
+      "performance": 31,
       "accessibility": 84,
-      "best_practices": 92,
+      "best_practices": 88,
       "seo": 92
     },
     "axe": {
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3995ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -219,22 +220,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "34/100"
+        "ev": "31/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "37470.354000000094ms"
+        "ev": "42888.966ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.51"
+        "ev": "0.89"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "45.1MB"
+        "ev": "57.5MB"
       },
       {
         "id": "perf.viewport",
@@ -420,7 +421,7 @@
     "screenshot": {
       "desktop": "pravasikerala.webp",
       "mobile": "pravasikerala-m.webp",
-      "phash": "ffffff0000ff0000"
+      "phash": "ffff3f7f7f030000"
     },
     "outlinks": [
       {
@@ -489,6 +490,11 @@
       "ev": "pravasikerala.org"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3995ms"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
       "ev": "24 serious violation(s)"
@@ -514,12 +520,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "37470.354000000094ms"
+      "ev": "42888.966ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "45.1MB"
+      "ev": "57.5MB"
     },
     {
       "id": "sec.csp",
@@ -562,7 +568,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.51"
+      "ev": "0.89"
     },
     {
       "id": "perf.images",
@@ -588,6 +594,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-24",
+      "up": true,
+      "score": 68
+    },
     {
       "d": "2026-10-23",
       "up": true,
@@ -749,5 +760,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

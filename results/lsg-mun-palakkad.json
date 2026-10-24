@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:45:42.768Z",
-    "run": "1790905475090",
+    "at": "2026-10-24T00:12:52.273Z",
+    "run": "1792800717743",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 62,
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 3,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -226,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10814.544ms"
+        "ev": "9822.2585ms"
       },
       {
         "id": "perf.cls",
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://palakkadmunicipality.lsgkerala.gov.in/ml/sitemap.xml)"
       },
       {
         "id": "content.broken_pdfs",
@@ -570,10 +571,10 @@
     ]
   },
   "score": {
-    "overall": 68,
+    "overall": 67,
     "security": 76,
     "accessibility": 70,
-    "content": 56,
+    "content": 46,
     "gigw": 36,
     "performance": 81,
     "identity": 96
@@ -594,6 +595,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://palakkadmunicipality.lsgkerala.gov.in/ml/sitemap.xml)"
     },
     {
       "id": "a11y.axe_serious",
@@ -624,7 +630,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10814.544ms"
+      "ev": "9822.2585ms"
     },
     {
       "id": "perf.weight",
@@ -689,6 +695,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-24",
+      "up": true,
+      "score": 67
+    },
     {
       "d": "2026-10-23",
       "up": true,
@@ -845,5 +856,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

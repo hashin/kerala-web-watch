@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-23T00:15:36.517Z",
-    "run": "1792714492608",
+    "at": "2026-10-24T00:02:25.115Z",
+    "run": "1792800105593",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 63,
+      "performance": 68,
       "accessibility": 77,
       "best_practices": 69,
       "seo": 83
@@ -51,9 +51,9 @@
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
+      "pages": 1,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -88,7 +88,7 @@
       {
         "id": "avail.blank",
         "r": "fail",
-        "ev": "0 visible characters"
+        "ev": "44 visible characters"
       },
       {
         "id": "avail.under_construction",
@@ -96,8 +96,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "4886ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -221,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "63/100"
+        "ev": "68/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "5126.897999999999ms"
+        "ev": "4977.066ms"
       },
       {
         "id": "perf.cls",
@@ -279,7 +278,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1/1 crawled link(s) broken (https://keralaautomobilesltd.com/#)"
       },
       {
         "id": "content.broken_pdfs",
@@ -385,7 +385,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "id.robots",
@@ -431,7 +431,7 @@
     {
       "id": "avail.blank",
       "sev": "C",
-      "ev": "0 visible characters"
+      "ev": "44 visible characters"
     },
     {
       "id": "sec.http_redirect",
@@ -448,6 +448,11 @@
       "ev": "no \"last updated\" date found"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/1 crawled link(s) broken (https://keralaautomobilesltd.com/#)"
+    },
+    {
       "id": "gigw.contact",
       "sev": "H"
     },
@@ -459,11 +464,6 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "keralaautomobilesltd.com"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "4886ms"
     },
     {
       "id": "sec.hsts",
@@ -516,7 +516,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "5126.897999999999ms"
+      "ev": "4977.066ms"
     },
     {
       "id": "sec.csp",
@@ -585,10 +585,6 @@
       "sev": "L"
     },
     {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
       "id": "id.robots",
       "sev": "L",
       "ev": "Disallow: / for User-agent: *"
@@ -608,6 +604,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-24",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-23",
       "up": false,
@@ -724,5 +725,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

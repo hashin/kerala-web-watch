@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-23T00:27:14.924Z",
-    "run": "1792715190863",
+    "at": "2026-10-24T00:17:29.036Z",
+    "run": "1792801005788",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 16,
+      "performance": 34,
       "accessibility": 77,
       "best_practices": 73,
       "seo": 100
@@ -223,22 +223,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "16/100"
+        "ev": "34/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "16883.95500000001ms"
+        "ev": "16194.480999999998ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.56"
+        "ev": "0.59"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "3.7MB"
+        "ev": "3.4MB"
       },
       {
         "id": "perf.viewport",
@@ -394,13 +394,11 @@
       },
       {
         "id": "id.robots",
-        "r": "fail",
-        "ev": "robots.txt returned 404"
+        "r": "pass"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 404"
+        "r": "pass"
       },
       {
         "id": "id.soft_404",
@@ -421,7 +419,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-8FQD430GF9&amp;cx=c&amp;gtm=4e6al1, https://www.googletagmanager.com/gtag/js?id=UA-108303959-1"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-8FQD430GF9&amp;cx=c&amp;gtm=4e6al1h1, https://www.googletagmanager.com/gtag/js?id=UA-108303959-1"
       }
     ],
     "screenshot": {
@@ -550,13 +548,13 @@
     ]
   },
   "score": {
-    "overall": 54,
+    "overall": 55,
     "security": 38,
     "accessibility": 70,
     "content": 52,
     "gigw": 18,
     "performance": 77,
-    "identity": 92
+    "identity": 100
   },
   "status": "needs-work",
   "issues": [
@@ -617,12 +615,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "16883.95500000001ms"
+      "ev": "16194.480999999998ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "3.7MB"
+      "ev": "3.4MB"
     },
     {
       "id": "sec.xcto",
@@ -697,21 +695,11 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.56"
+      "ev": "0.59"
     },
     {
       "id": "perf.images",
       "sev": "L"
-    },
-    {
-      "id": "id.robots",
-      "sev": "L",
-      "ev": "robots.txt returned 404"
-    },
-    {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 404"
     },
     {
       "id": "gigw.emblem",
@@ -724,10 +712,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-8FQD430GF9&amp;cx=c&amp;gtm=4e6al1, https://www.googletagmanager.com/gtag/js?id=UA-108303959-1"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-8FQD430GF9&amp;cx=c&amp;gtm=4e6al1h1, https://www.googletagmanager.com/gtag/js?id=UA-108303959-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-24",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-23",
       "up": true,
@@ -889,5 +882,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

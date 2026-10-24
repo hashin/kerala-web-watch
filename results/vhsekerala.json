@@ -35,15 +35,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-23T00:33:39.907Z",
-    "run": "1792715582173",
+    "at": "2026-10-24T00:19:04.615Z",
+    "run": "1792801108319",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 66,
-      "accessibility": 95,
-      "best_practices": 92,
-      "seo": 92
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 2,
       "serious": 10,
@@ -215,22 +210,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "95/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "66/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "4159.284ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -242,11 +234,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -391,12 +383,12 @@
       {
         "id": "id.robots",
         "r": "fail",
-        "ev": "robots.txt returned 500"
+        "ev": "robots.txt returned 502"
       },
       {
         "id": "id.sitemap_xml",
         "r": "fail",
-        "ev": "sitemap.xml returned 500"
+        "ev": "sitemap.xml returned 502"
       },
       {
         "id": "id.soft_404",
@@ -450,12 +442,12 @@
     ]
   },
   "score": {
-    "overall": 55,
+    "overall": 57,
     "security": 70,
     "accessibility": 40,
     "content": 40,
     "gigw": 28,
-    "performance": 86,
+    "performance": 100,
     "identity": 88
   },
   "status": "needs-work",
@@ -526,11 +518,6 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "4159.284ms"
-    },
-    {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
       "ev": "3 moderate/minor violation(s)"
@@ -578,22 +565,18 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.www_consistency",
       "sev": "L"
     },
     {
       "id": "id.robots",
       "sev": "L",
-      "ev": "robots.txt returned 500"
+      "ev": "robots.txt returned 502"
     },
     {
       "id": "id.sitemap_xml",
       "sev": "L",
-      "ev": "sitemap.xml returned 500"
+      "ev": "sitemap.xml returned 502"
     },
     {
       "id": "gigw.emblem",
@@ -605,6 +588,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-24",
+      "up": true,
+      "score": 57
+    },
     {
       "d": "2026-10-23",
       "up": true,
@@ -766,5 +754,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

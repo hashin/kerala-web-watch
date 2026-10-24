@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-23T00:17:26.297Z",
-    "run": "1792714554632",
+    "at": "2026-10-23T23:57:00.308Z",
+    "run": "1792799762382",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 29,
+      "performance": 47,
       "accessibility": 96,
       "best_practices": 46,
       "seo": 83
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "29/100"
+        "ev": "47/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "13276.754500000001ms"
+        "ev": "29612.61199999999ms"
       },
       {
         "id": "perf.cls",
@@ -279,8 +279,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://trivandrum.nic.in/en/courts/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -441,9 +440,9 @@
         "host": "s3waas.gov.in",
         "count": 31,
         "texts": [
+          "23/10/2026-01",
           "22/10/2026-01",
-          "21/10/2026-01",
-          "20/10/2026-01"
+          "21/10/2026-01"
         ]
       },
       {
@@ -491,10 +490,10 @@
     ]
   },
   "score": {
-    "overall": 60,
+    "overall": 62,
     "security": 48,
     "accessibility": 60,
-    "content": 46,
+    "content": 56,
     "gigw": 60,
     "performance": 76,
     "identity": 96
@@ -522,11 +521,6 @@
       "ev": "ml-IN"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://trivandrum.nic.in/en/courts/)"
-    },
-    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -550,7 +544,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "13276.754500000001ms"
+      "ev": "29612.61199999999ms"
     },
     {
       "id": "perf.weight",
@@ -624,6 +618,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-24",
+      "up": true,
+      "score": 62
+    },
     {
       "d": "2026-10-23",
       "up": true,
@@ -780,5 +779,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

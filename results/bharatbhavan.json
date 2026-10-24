@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-13T03:01:50.332Z",
-    "run": "1791860454767",
+    "at": "2026-10-24T00:21:26.124Z",
+    "run": "1792801231194",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 0,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3184ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -313,7 +314,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "2 console error(s): $(...).attr(...).fancybox is not a function"
+        "ev": "3 console error(s): $(...).attr(...).fancybox is not a function"
       },
       {
         "id": "gigw.contact",
@@ -507,6 +508,11 @@
       "ev": "www.bharatbhavankerala.org"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3184ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -585,7 +591,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "2 console error(s): $(...).attr(...).fancybox is not a function"
+      "ev": "3 console error(s): $(...).attr(...).fancybox is not a function"
     },
     {
       "id": "gigw.feedback",
@@ -635,6 +641,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-24",
+      "up": true,
+      "score": 41
+    },
     {
       "d": "2026-10-23",
       "up": true,
@@ -791,5 +802,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

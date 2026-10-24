@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-23T00:25:50.944Z",
-    "run": "1792715056812",
+    "at": "2026-10-24T00:14:28.875Z",
+    "run": "1792800802514",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 32,
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "6079ms"
+        "ev": "5620ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -227,7 +227,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11470.330000000004ms"
+        "ev": "11178.1045ms"
       },
       {
         "id": "perf.cls",
@@ -236,8 +236,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "fail",
-        "ev": "13.4MB"
+        "r": "warn",
+        "ev": "7.1MB"
       },
       {
         "id": "perf.viewport",
@@ -313,7 +313,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "4 console error(s): Framing 'https://www.facebook.com/' violates the following Content Security Policy directive: \"frame-src 'self' https://www.google.com https://maps.google.com https://*.google.com https://www.youtube.com https://www.youtube-nocookie.com\". The request has been blocked.\n"
+        "ev": "2 console error(s): Framing 'https://www.facebook.com/' violates the following Content Security Policy directive: \"frame-src 'self' https://www.google.com https://maps.google.com https://*.google.com https://www.youtube.com https://www.youtube-nocookie.com\". The request has been blocked.\n"
       },
       {
         "id": "gigw.contact",
@@ -481,7 +481,7 @@
     "accessibility": 40,
     "content": 42,
     "gigw": 22,
-    "performance": 72,
+    "performance": 77,
     "identity": 100
   },
   "status": "needs-work",
@@ -514,7 +514,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "6079ms"
+      "ev": "5620ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -554,12 +554,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11470.330000000004ms"
+      "ev": "11178.1045ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "13.4MB"
+      "ev": "7.1MB"
     },
     {
       "id": "sec.xcto",
@@ -591,7 +591,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "4 console error(s): Framing 'https://www.facebook.com/' violates the following Content Security Policy directive: \"frame-src 'self' https://www.google.com https://maps.google.com https://*.google.com https://www.youtube.com https://www.youtube-nocookie.com\". The request has been blocked.\n"
+      "ev": "2 console error(s): Framing 'https://www.facebook.com/' violates the following Content Security Policy directive: \"frame-src 'self' https://www.google.com https://maps.google.com https://*.google.com https://www.youtube.com https://www.youtube-nocookie.com\". The request has been blocked.\n"
     },
     {
       "id": "gigw.feedback",
@@ -636,6 +636,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-24",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-23",
       "up": true,
@@ -802,5 +807,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

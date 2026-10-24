@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-23T00:17:53.341Z",
-    "run": "1792714536382",
+    "at": "2026-10-24T00:09:08.810Z",
+    "run": "1792800488327",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 83,
+      "performance": 84,
       "accessibility": 45,
       "best_practices": 85,
-      "seo": 83
+      "seo": 92
     },
     "axe": {
       "critical": 119,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 20,
-      "broken": 2
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "83/100"
+        "ev": "84/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "4444.408ms"
+        "ev": "4276.974ms"
       },
       {
         "id": "perf.cls",
@@ -281,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "2/30 crawled link(s) broken (https://niyamasabha.org/codes/speaker.htm, https://niyamasabha.org/codes/k-lamps.htm)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -395,7 +394,8 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "na"
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
       },
       {
         "id": "id.soft_404",
@@ -483,13 +483,13 @@
     ]
   },
   "score": {
-    "overall": 40,
+    "overall": 42,
     "security": 44,
     "accessibility": 22,
-    "content": 56,
+    "content": 66,
     "gigw": 18,
     "performance": 56,
-    "identity": 72
+    "identity": 68
   },
   "status": "poor",
   "issues": [
@@ -512,11 +512,6 @@
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "2/30 crawled link(s) broken (https://niyamasabha.org/codes/speaker.htm, https://niyamasabha.org/codes/k-lamps.htm)"
     },
     {
       "id": "perf.viewport",
@@ -578,7 +573,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "4444.408ms"
+      "ev": "4276.974ms"
     },
     {
       "id": "perf.tap_targets",
@@ -656,6 +651,11 @@
       "sev": "L"
     },
     {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 404"
+    },
+    {
       "id": "id.charset_doctype",
       "sev": "L",
       "ev": "missing UTF-8 charset, HTML5 doctype"
@@ -670,6 +670,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-24",
+      "up": true,
+      "score": 42
+    },
     {
       "d": "2026-10-23",
       "up": true,
@@ -831,5 +836,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

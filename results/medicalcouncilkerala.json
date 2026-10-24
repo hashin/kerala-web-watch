@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-23T00:31:40.453Z",
-    "run": "1792715447101",
+    "at": "2026-10-24T00:16:07.079Z",
+    "run": "1792800914952",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 35,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 1,
-      "broken": 4
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -225,7 +225,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "14517.875999999997ms"
+        "ev": "14682.107000000005ms"
       },
       {
         "id": "perf.cls",
@@ -281,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "4/30 crawled link(s) broken (https://www.automation.medicalcouncil.kerala.gov.in/registration/practioner.xhtml, https://www.automation.medicalcouncil.kerala.gov.in/signin.xhtml, https://www.automation.medicalcouncil.kerala.gov.in/index.xhtml, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -481,10 +480,10 @@
     ]
   },
   "score": {
-    "overall": 55,
+    "overall": 56,
     "security": 62,
     "accessibility": 50,
-    "content": 38,
+    "content": 48,
     "gigw": 22,
     "performance": 77,
     "identity": 100
@@ -510,11 +509,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-box"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "4/30 crawled link(s) broken (https://www.automation.medicalcouncil.kerala.gov.in/registration/practioner.xhtml, https://www.automation.medicalcouncil.kerala.gov.in/signin.xhtml, https://www.automation.medicalcouncil.kerala.gov.in/index.xhtml, ...)"
     },
     {
       "id": "sec.hsts",
@@ -553,7 +547,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "14517.875999999997ms"
+      "ev": "14682.107000000005ms"
     },
     {
       "id": "perf.weight",
@@ -640,6 +634,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-24",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-10-23",
       "up": true,
@@ -806,5 +805,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

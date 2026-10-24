@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-23T00:09:46.699Z",
-    "run": "1792714123586",
+    "at": "2026-10-23T23:57:23.657Z",
+    "run": "1792799773625",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 54,
       "accessibility": 84,
       "best_practices": 69,
       "seo": 83
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "54/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "33133.1085ms"
+        "ev": "30607.769999999997ms"
       },
       {
         "id": "perf.cls",
@@ -279,7 +279,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "2/30 crawled link(s) broken (https://thrissur.nic.in/en/municipalities/, https://thrissur.nic.in/en/major-institutions/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -441,9 +442,9 @@
         "host": "s3waas.gov.in",
         "count": 6,
         "texts": [
-          "PDF\n                    \n\n                    \n                        Orange Alert\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
-          "PDF\n                    \n\n                    \n                        Kerala Government Extraordinary Gazette – 2656 -Volume – 15\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
-          "PDF\n                    \n\n                    \n                        Sexual Harassment against Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013 – Order reconstituting the Local Complaints Committee in Thrissur District\n                        Download Document\n                    \n\n                    Opens downloadable PDF document"
+          "PDF\n                    \n\n                    \n                        Orange Alert 23/10/2026\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
+          "PDF\n                    \n\n                    \n                        Orange Alert 22/10/2026\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
+          "PDF\n                    \n\n                    \n                        Kerala Government Extraordinary Gazette – 2656 -Volume – 15\n                        Download Document\n                    \n\n                    Opens downloadable PDF document"
         ]
       },
       {
@@ -470,10 +471,10 @@
     ]
   },
   "score": {
-    "overall": 61,
+    "overall": 60,
     "security": 48,
     "accessibility": 60,
-    "content": 52,
+    "content": 42,
     "gigw": 60,
     "performance": 76,
     "identity": 96
@@ -501,6 +502,11 @@
       "ev": "ml-IN"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "2/30 crawled link(s) broken (https://thrissur.nic.in/en/municipalities/, https://thrissur.nic.in/en/major-institutions/)"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -524,7 +530,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "33133.1085ms"
+      "ev": "30607.769999999997ms"
     },
     {
       "id": "perf.weight",
@@ -603,6 +609,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-24",
+      "up": true,
+      "score": 60
+    },
     {
       "d": "2026-10-23",
       "up": true,
@@ -759,5 +770,5 @@
       "score": 63
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-23T00:46:30.696Z",
-    "run": "1792716344104",
+    "at": "2026-10-24T00:28:55.039Z",
+    "run": "1792801661756",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 57,
       "accessibility": 81,
       "best_practices": 96,
       "seo": 67
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 3
     },
     "tech": {
       "cms": null,
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "57/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6930.1055000000015ms"
+        "ev": "6729.476999999999ms"
       },
       {
         "id": "perf.cls",
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3/30 crawled link(s) broken (https://ksicl.org/#content, https://ksicl.org/#, https://ksicl.org/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -383,11 +384,11 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "34 days left"
+        "ev": "33 days left"
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -457,15 +458,15 @@
     ]
   },
   "score": {
-    "overall": 51,
+    "overall": 49,
     "security": 62,
     "accessibility": 40,
-    "content": 52,
+    "content": 42,
     "gigw": 28,
     "performance": 81,
-    "identity": 52
+    "identity": 48
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -488,6 +489,11 @@
       "ev": "ml-IN"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "3/30 crawled link(s) broken (https://ksicl.org/#content, https://ksicl.org/#, https://ksicl.org/)"
+    },
+    {
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "ksicl.org"
@@ -495,7 +501,7 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "34 days left"
+      "ev": "33 days left"
     },
     {
       "id": "sec.hsts",
@@ -535,7 +541,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6930.1055000000015ms"
+      "ev": "6729.476999999999ms"
     },
     {
       "id": "perf.weight",
@@ -610,6 +616,10 @@
       "sev": "L"
     },
     {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
       "id": "id.robots",
       "sev": "L",
       "ev": "robots.txt returned 404"
@@ -625,6 +635,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-24",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-10-23",
       "up": true,
@@ -791,5 +806,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

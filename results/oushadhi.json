@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-23T00:29:49.187Z",
-    "run": "1792715329822",
+    "at": "2026-10-24T00:18:26.833Z",
+    "run": "1792801064770",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 41,
+      "performance": 29,
       "accessibility": 37,
       "best_practices": 77,
       "seo": 67
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 3
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -219,17 +219,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "41/100"
+        "ev": "29/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9161.499499999998ms"
+        "ev": "18460.281499999997ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.62"
+        "ev": "0.53"
       },
       {
         "id": "perf.weight",
@@ -281,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "3/30 crawled link(s) broken (https://www.oushadhi.org/careers, https://www.oushadhi.org/notice-board, https://www.oushadhi.org/tenders)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -389,7 +388,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -455,13 +454,13 @@
     ]
   },
   "score": {
-    "overall": 44,
+    "overall": 45,
     "security": 48,
     "accessibility": 46,
-    "content": 28,
+    "content": 38,
     "gigw": 18,
     "performance": 62,
-    "identity": 76
+    "identity": 72
   },
   "status": "poor",
   "issues": [
@@ -484,11 +483,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "3/30 crawled link(s) broken (https://www.oushadhi.org/careers, https://www.oushadhi.org/notice-board, https://www.oushadhi.org/tenders)"
     },
     {
       "id": "id.gov_domain",
@@ -546,7 +540,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9161.499499999998ms"
+      "ev": "18460.281499999997ms"
     },
     {
       "id": "perf.weight",
@@ -623,10 +617,14 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.62"
+      "ev": "0.53"
     },
     {
       "id": "perf.images",
+      "sev": "L"
+    },
+    {
+      "id": "id.www_consistency",
       "sev": "L"
     },
     {
@@ -649,6 +647,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-24",
+      "up": true,
+      "score": 45
+    },
     {
       "d": "2026-10-23",
       "up": true,
@@ -810,5 +813,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

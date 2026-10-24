@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-23T00:22:54.418Z",
-    "run": "1792714914687",
+    "at": "2026-10-24T00:06:32.031Z",
+    "run": "1792800329573",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 54,
+      "accessibility": 64,
+      "best_practices": 77,
+      "seo": 92
+    },
     "axe": {
       "critical": 0,
       "serious": 2,
@@ -90,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3054ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -209,19 +215,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "64/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "54/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "10472.631499999996ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -233,11 +242,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -424,17 +433,17 @@
         ]
       },
       {
-        "host": "schmitz-sofa.de",
+        "host": "ilconsumatore.com",
         "count": 1,
         "texts": [
-          "betcio"
+          "padişahbet"
         ]
       },
       {
-        "host": "jojobet-yeniadres.com",
+        "host": "sekabetnews.com",
         "count": 1,
         "texts": [
-          "jojobet giriş"
+          "sekabet"
         ]
       },
       {
@@ -445,10 +454,10 @@
         ]
       },
       {
-        "host": "ishin-zemi.jp",
+        "host": "laboteck.com",
         "count": 1,
         "texts": [
-          "meritking"
+          "kingroyal"
         ]
       },
       {
@@ -526,7 +535,7 @@
         "host": "x.com",
         "count": 1,
         "texts": [
-          "Deneme Bonusu"
+          "Metin2 Pvp Serverler"
         ]
       },
       {
@@ -537,24 +546,38 @@
         ]
       },
       {
-        "host": "siteleri.my",
+        "host": "airmonitor.com",
         "count": 1,
         "texts": [
-          "jojobet giriş"
+          "jojobet"
+        ]
+      },
+      {
+        "host": "worldslargesttoymuseum.com",
+        "count": 1,
+        "texts": [
+          "jojobet"
+        ]
+      },
+      {
+        "host": "caldesi.com",
+        "count": 1,
+        "texts": [
+          "jojobet"
         ]
       }
     ]
   },
   "score": {
-    "overall": 51,
+    "overall": 49,
     "security": 34,
     "accessibility": 70,
     "content": 32,
     "gigw": 0,
-    "performance": 100,
+    "performance": 86,
     "identity": 100
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.injected_links",
@@ -574,6 +597,11 @@
     {
       "id": "gigw.rti",
       "sev": "H"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3054ms"
     },
     {
       "id": "sec.hsts",
@@ -618,6 +646,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "10472.631499999996ms"
     },
     {
       "id": "sec.csp",
@@ -693,11 +726,20 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "gigw.emblem",
       "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-24",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-10-23",
       "up": true,
@@ -859,5 +901,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

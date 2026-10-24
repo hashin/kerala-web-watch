@@ -35,19 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-23T00:18:49.948Z",
-    "run": "1792714656180",
+    "at": "2026-10-24T00:05:51.340Z",
+    "run": "1792800265510",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 50,
+      "performance": 57,
       "accessibility": 56,
       "best_practices": 69,
       "seo": 83
     },
     "axe": {
-      "critical": 52,
+      "critical": 66,
       "serious": 56,
-      "moderate": 66,
+      "moderate": 68,
       "minor": 93
     },
     "crawl": {
@@ -111,19 +111,19 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.hsts",
@@ -171,7 +171,7 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "52 critical violation(s)"
+        "ev": "66 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
@@ -181,7 +181,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "159 moderate/minor violation(s)"
+        "ev": "161 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -190,7 +190,7 @@
       {
         "id": "a11y.alt",
         "r": "fail",
-        "ev": "52 image(s) missing alt text"
+        "ev": "66 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
@@ -223,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "50/100"
+        "ev": "57/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "13216.778999999997ms"
+        "ev": "10673.645499999999ms"
       },
       {
         "id": "perf.cls",
@@ -236,8 +236,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "7.2MB"
+        "r": "fail",
+        "ev": "8.3MB"
       },
       {
         "id": "perf.viewport",
@@ -253,7 +253,8 @@
       },
       {
         "id": "content.copyright_year",
-        "r": "pass"
+        "r": "fail",
+        "ev": "copyright year 2018"
       },
       {
         "id": "content.last_updated",
@@ -314,7 +315,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "22 console error(s): Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR"
+        "ev": "22 console error(s): Failed to load resource: net::ERR_HTTP2_PING_FAILED"
       },
       {
         "id": "gigw.contact",
@@ -334,7 +335,7 @@
       },
       {
         "id": "gigw.terms",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.copyright_policy",
@@ -394,7 +395,7 @@
       },
       {
         "id": "id.robots",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.sitemap_xml",
@@ -403,7 +404,7 @@
       },
       {
         "id": "id.soft_404",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
@@ -434,14 +435,6 @@
         "texts": []
       },
       {
-        "host": "google.com",
-        "count": 3,
-        "texts": [
-          "നിബന്ധനകൾ",
-          "ഒരു മാപ്പ് പിശക് റിപ്പോർട്ട് ചെയ്യുക"
-        ]
-      },
-      {
         "host": "g.co",
         "count": 1,
         "texts": [
@@ -451,20 +444,16 @@
     ]
   },
   "score": {
-    "overall": 42,
-    "security": 14,
+    "overall": 44,
+    "security": 34,
     "accessibility": 40,
-    "content": 42,
-    "gigw": 30,
-    "performance": 81,
+    "content": 32,
+    "gigw": 26,
+    "performance": 76,
     "identity": 96
   },
   "status": "poor",
   "issues": [
-    {
-      "id": "sec.http_redirect",
-      "sev": "H"
-    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -478,7 +467,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "52 critical violation(s)"
+      "ev": "66 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -502,12 +491,17 @@
     {
       "id": "a11y.alt",
       "sev": "M",
-      "ev": "52 image(s) missing alt text"
+      "ev": "66 image(s) missing alt text"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
       "ev": "19 low-contrast element(s)"
+    },
+    {
+      "id": "content.copyright_year",
+      "sev": "M",
+      "ev": "copyright year 2018"
     },
     {
       "id": "content.obsolete_tech",
@@ -537,12 +531,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "13216.778999999997ms"
+      "ev": "10673.645499999999ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.2MB"
+      "ev": "8.3MB"
     },
     {
       "id": "sec.csp",
@@ -564,7 +558,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "159 moderate/minor violation(s)"
+      "ev": "161 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -584,7 +578,11 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "22 console error(s): Failed to load resource: net::ERR_HTTP2_PROTOCOL_ERROR"
+      "ev": "22 console error(s): Failed to load resource: net::ERR_HTTP2_PING_FAILED"
+    },
+    {
+      "id": "gigw.terms",
+      "sev": "L"
     },
     {
       "id": "gigw.copyright_policy",
@@ -625,6 +623,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-24",
+      "up": true,
+      "score": 44
+    },
     {
       "d": "2026-10-23",
       "up": true,
@@ -791,5 +794,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

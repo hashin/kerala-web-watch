@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-23T00:40:24.888Z",
-    "run": "1792715963160",
+    "at": "2026-10-24T00:31:16.284Z",
+    "run": "1792801776576",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 27,
+      "performance": 29,
       "accessibility": 83,
-      "best_practices": 96,
+      "best_practices": 73,
       "seo": 85
     },
     "axe": {
       "critical": 1,
-      "serious": 14,
+      "serious": 17,
       "moderate": 5,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 3
     },
     "tech": {
       "cms": null,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3648ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -175,7 +176,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "14 serious violation(s)"
+        "ev": "17 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -222,17 +223,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "27/100"
+        "ev": "29/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "24550.023ms"
+        "ev": "23766.429999999997ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "1.55"
+        "ev": "1.71"
       },
       {
         "id": "perf.weight",
@@ -284,7 +285,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://homcokerala.com/homco/)"
+        "ev": "3/30 crawled link(s) broken (https://homcokerala.com/homco/, https://homcokerala.com/2024/04/01/mother-tincture/, https://homcokerala.com/2024/04/01/triturations/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -312,7 +313,8 @@
       },
       {
         "id": "content.console_errors",
-        "r": "pass"
+        "r": "fail",
+        "ev": "3 console error(s): Failed to load resource: net::ERR_CONNECTION_RESET"
       },
       {
         "id": "gigw.contact",
@@ -437,10 +439,10 @@
     ]
   },
   "score": {
-    "overall": 43,
+    "overall": 42,
     "security": 22,
     "accessibility": 40,
-    "content": 50,
+    "content": 46,
     "gigw": 28,
     "performance": 77,
     "identity": 80
@@ -479,12 +481,17 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://homcokerala.com/homco/)"
+      "ev": "3/30 crawled link(s) broken (https://homcokerala.com/homco/, https://homcokerala.com/2024/04/01/mother-tincture/, https://homcokerala.com/2024/04/01/triturations/)"
     },
     {
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "homcokerala.com"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3648ms"
     },
     {
       "id": "sec.hsts",
@@ -493,7 +500,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "14 serious violation(s)"
+      "ev": "17 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -524,7 +531,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "24550.023ms"
+      "ev": "23766.429999999997ms"
     },
     {
       "id": "perf.weight",
@@ -553,6 +560,11 @@
       "id": "a11y.keyboard",
       "sev": "L",
       "ev": "tabindex=\"-1\" alongside outline:none"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "3 console error(s): Failed to load resource: net::ERR_CONNECTION_RESET"
     },
     {
       "id": "gigw.feedback",
@@ -589,7 +601,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "1.55"
+      "ev": "1.71"
     },
     {
       "id": "perf.images",
@@ -606,6 +618,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-24",
+      "up": true,
+      "score": 42
+    },
     {
       "d": "2026-10-23",
       "up": true,
@@ -772,5 +789,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

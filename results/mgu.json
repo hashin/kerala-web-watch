@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-23T00:17:55.652Z",
-    "run": "1792714590368",
+    "at": "2026-10-24T00:04:47.436Z",
+    "run": "1792800224986",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 69,
+      "performance": 75,
       "accessibility": 100,
       "best_practices": 92,
       "seo": 92
@@ -51,8 +51,8 @@
       "minor": 0
     },
     "crawl": {
-      "pages": 5,
-      "pdfs": 5,
+      "pages": 6,
+      "pdfs": 4,
       "broken": 1
     },
     "tech": {
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "6665ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -218,12 +217,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "69/100"
+        "ev": "75/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "4934.18ms"
+        "ev": "4732.947999999999ms"
       },
       {
         "id": "perf.cls",
@@ -232,7 +231,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "156.7MB"
+        "ev": "128.0MB"
       },
       {
         "id": "perf.viewport",
@@ -279,8 +278,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "1/5 crawled link(s) broken (https://assist.mgu.ac.in/onlineservices/)"
+        "r": "warn",
+        "ev": "1/6 crawled link(s) broken (https://assist.mgu.ac.in/onlineservices/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -386,19 +385,19 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.robots",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.soft_404",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
@@ -420,15 +419,15 @@
     "screenshot": {
       "desktop": "mgu.webp",
       "mobile": "mgu-m.webp",
-      "phash": "3f7f79010081817f"
+      "phash": "feffff000000c37f"
     },
     "outlinks": []
   },
   "score": {
-    "overall": 52,
+    "overall": 54,
     "security": 42,
     "accessibility": 86,
-    "content": 18,
+    "content": 28,
     "gigw": 0,
     "performance": 76,
     "identity": 100
@@ -457,7 +456,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/5 crawled link(s) broken (https://assist.mgu.ac.in/onlineservices/)"
+      "ev": "1/6 crawled link(s) broken (https://assist.mgu.ac.in/onlineservices/)"
     },
     {
       "id": "gigw.contact",
@@ -466,11 +465,6 @@
     {
       "id": "gigw.rti",
       "sev": "H"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "6665ms"
     },
     {
       "id": "sec.hsts",
@@ -509,12 +503,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "4934.18ms"
+      "ev": "4732.947999999999ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "156.7MB"
+      "ev": "128.0MB"
     },
     {
       "id": "sec.csp",
@@ -590,6 +584,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-24",
+      "up": true,
+      "score": 54
+    },
     {
       "d": "2026-10-23",
       "up": true,
@@ -746,5 +745,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
