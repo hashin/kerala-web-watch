@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-10T01:16:52.213Z",
-    "run": "1791594928663",
+    "at": "2026-10-24T23:39:22.504Z",
+    "run": "1792885114092",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 47,
-      "accessibility": 69,
-      "best_practices": 92,
+      "performance": 52,
+      "accessibility": 79,
+      "best_practices": 88,
       "seo": 77
     },
     "axe": {
       "critical": 37,
-      "serious": 34,
+      "serious": 53,
       "moderate": 206,
       "minor": 1
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -174,7 +174,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "34 serious violation(s)"
+        "ev": "53 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -193,7 +193,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "14 low-contrast element(s)"
+        "ev": "15 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -216,17 +216,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "69/100"
+        "ev": "79/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "47/100"
+        "ev": "52/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "30805.254000000004ms"
+        "ev": "28079.648999999998ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "54.5MB"
+        "ev": "26.9MB"
       },
       {
         "id": "perf.viewport",
@@ -281,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://entekeralam.kerala.gov.in/discussion)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -311,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "8 console error(s): Failed to load resource: the server responded with a status of 403 ()"
+        "ev": "15 console error(s): Failed to load resource: the server responded with a status of 521 ()"
       },
       {
         "id": "gigw.contact",
@@ -319,7 +318,7 @@
       },
       {
         "id": "gigw.feedback",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.sitemap",
@@ -347,7 +346,7 @@
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.screen_reader",
@@ -537,15 +536,23 @@
         "host": "youtube.com",
         "count": 1,
         "texts": []
+      },
+      {
+        "host": "ux4g.gov.in",
+        "count": 2,
+        "texts": [
+          "Upgrade",
+          "Created by"
+        ]
       }
     ]
   },
   "score": {
-    "overall": 56,
+    "overall": 59,
     "security": 64,
     "accessibility": 40,
-    "content": 42,
-    "gigw": 40,
+    "content": 52,
+    "gigw": 54,
     "performance": 76,
     "identity": 96
   },
@@ -567,11 +574,6 @@
       "ev": "ml-"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://entekeralam.kerala.gov.in/discussion)"
-    },
-    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -582,7 +584,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "34 serious violation(s)"
+      "ev": "53 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -592,14 +594,10 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "14 low-contrast element(s)"
+      "ev": "15 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
-      "sev": "M"
-    },
-    {
-      "id": "gigw.accessibility_statement",
       "sev": "M"
     },
     {
@@ -613,12 +611,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "30805.254000000004ms"
+      "ev": "28079.648999999998ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "54.5MB"
+      "ev": "26.9MB"
     },
     {
       "id": "sec.csp",
@@ -659,11 +657,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "8 console error(s): Failed to load resource: the server responded with a status of 403 ()"
-    },
-    {
-      "id": "gigw.feedback",
-      "sev": "L"
+      "ev": "15 console error(s): Failed to load resource: the server responded with a status of 521 ()"
     },
     {
       "id": "gigw.copyright_policy",
@@ -695,6 +689,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-25",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-10-24",
       "up": true,
@@ -856,5 +855,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

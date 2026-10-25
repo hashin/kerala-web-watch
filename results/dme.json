@@ -35,13 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-23T23:58:38.363Z",
-    "run": "1792799822092",
+    "at": "2026-10-24T23:36:13.525Z",
+    "run": "1792884914364",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
+    },
     "axe": {
       "critical": 3,
-      "serious": 27,
+      "serious": 26,
       "moderate": 6,
       "minor": 0
     },
@@ -169,7 +174,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "27 serious violation(s)"
+        "ev": "26 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -188,7 +193,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "16 low-contrast element(s)"
+        "ev": "15 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -211,11 +216,13 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
@@ -236,11 +243,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -447,12 +454,12 @@
     ]
   },
   "score": {
-    "overall": 59,
+    "overall": 57,
     "security": 76,
     "accessibility": 30,
     "content": 52,
     "gigw": 36,
-    "performance": 90,
+    "performance": 76,
     "identity": 100
   },
   "status": "needs-work",
@@ -480,7 +487,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "27 serious violation(s)"
+      "ev": "26 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -490,7 +497,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "16 low-contrast element(s)"
+      "ev": "15 low-contrast element(s)"
     },
     {
       "id": "a11y.labels",
@@ -517,6 +524,10 @@
       "id": "perf.weight",
       "sev": "M",
       "ev": "18.5MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.referrer",
@@ -571,11 +582,20 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "gigw.emblem",
       "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-25",
+      "up": true,
+      "score": 57
+    },
     {
       "d": "2026-10-24",
       "up": true,
@@ -742,5 +762,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

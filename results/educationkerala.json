@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-23T23:59:36.567Z",
-    "run": "1792799820311",
+    "at": "2026-10-24T23:36:33.503Z",
+    "run": "1792884854271",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 50,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 9,
-      "broken": 4
+      "broken": 3
     },
     "tech": {
       "cms": "WordPress 5.0.3",
@@ -226,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8309.598499999998ms"
+        "ev": "8559.991000000002ms"
       },
       {
         "id": "perf.cls",
@@ -259,8 +259,7 @@
       },
       {
         "id": "content.stale_news",
-        "r": "fail",
-        "ev": "newest dated item: 2025-06-01"
+        "r": "na"
       },
       {
         "id": "content.placeholder",
@@ -282,7 +281,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "4/30 crawled link(s) broken (http://archive.education.kerala.gov.in/, https://sametham.kite.kerala.gov.in/, https://edumission.kerala.gov.in/, ...)"
+        "ev": "3/30 crawled link(s) broken (http://archive.education.kerala.gov.in/, https://edumission.kerala.gov.in/, https://samanwaya.kite.kerala.gov.in/index.php/auth/login)"
       },
       {
         "id": "content.broken_pdfs",
@@ -386,7 +385,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.robots",
@@ -477,13 +476,13 @@
     ]
   },
   "score": {
-    "overall": 47,
+    "overall": 49,
     "security": 38,
     "accessibility": 42,
-    "content": 36,
+    "content": 46,
     "gigw": 30,
     "performance": 86,
-    "identity": 87
+    "identity": 91
   },
   "status": "poor",
   "issues": [
@@ -515,7 +514,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "4/30 crawled link(s) broken (http://archive.education.kerala.gov.in/, https://sametham.kite.kerala.gov.in/, https://edumission.kerala.gov.in/, ...)"
+      "ev": "3/30 crawled link(s) broken (http://archive.education.kerala.gov.in/, https://edumission.kerala.gov.in/, https://samanwaya.kite.kerala.gov.in/index.php/auth/login)"
     },
     {
       "id": "sec.hsts",
@@ -535,11 +534,6 @@
       "id": "a11y.contrast",
       "sev": "M",
       "ev": "13 low-contrast element(s)"
-    },
-    {
-      "id": "content.stale_news",
-      "sev": "M",
-      "ev": "newest dated item: 2025-06-01"
     },
     {
       "id": "gigw.sitemap",
@@ -564,7 +558,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8309.598499999998ms"
+      "ev": "8559.991000000002ms"
     },
     {
       "id": "id.tech",
@@ -622,16 +616,17 @@
       "sev": "L"
     },
     {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-25",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-10-24",
       "up": true,
@@ -793,5 +788,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

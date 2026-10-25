@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T00:15:21.150Z",
-    "run": "1792800874213",
+    "at": "2026-10-24T23:53:14.115Z",
+    "run": "1792885950472",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 65,
+      "accessibility": 89,
+      "best_practices": 78,
+      "seo": 92
+    },
     "axe": {
       "critical": 0,
       "serious": 18,
@@ -209,24 +214,27 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "89/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "65/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "7292.134000000001ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "4.7MB"
+        "ev": "4.5MB"
       },
       {
         "id": "perf.viewport",
@@ -234,11 +242,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -412,7 +420,7 @@
     "screenshot": {
       "desktop": "lsg-corp-thiruvananthapuram.webp",
       "mobile": "lsg-corp-thiruvananthapuram-m.webp",
-      "phash": "ff0000ff0f0f0f0f"
+      "phash": "fffff4ff07010704"
     },
     "outlinks": [
       {
@@ -568,9 +576,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "7292.134000000001ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "4.7MB"
+      "ev": "4.5MB"
     },
     {
       "id": "sec.csp",
@@ -628,6 +641,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
@@ -638,6 +655,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-25",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-24",
       "up": false,
@@ -809,5 +831,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

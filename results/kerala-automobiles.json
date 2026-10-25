@@ -35,8 +35,8 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-10-24T00:02:25.115Z",
-    "run": "1792800105593",
+    "at": "2026-10-24T23:41:48.233Z",
+    "run": "1792885293748",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 68,
@@ -51,9 +51,9 @@
       "minor": 0
     },
     "crawl": {
-      "pages": 1,
+      "pages": 0,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -225,7 +225,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "4977.066ms"
+        "ev": "5038.5435ms"
       },
       {
         "id": "perf.cls",
@@ -278,8 +278,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "1/1 crawled link(s) broken (https://keralaautomobilesltd.com/#)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -385,7 +384,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -398,7 +397,8 @@
       },
       {
         "id": "id.soft_404",
-        "r": "na"
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
       },
       {
         "id": "id.canonical",
@@ -446,11 +446,6 @@
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/1 crawled link(s) broken (https://keralaautomobilesltd.com/#)"
     },
     {
       "id": "gigw.contact",
@@ -516,7 +511,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "4977.066ms"
+      "ev": "5038.5435ms"
     },
     {
       "id": "sec.csp",
@@ -585,9 +580,18 @@
       "sev": "L"
     },
     {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
       "id": "id.robots",
       "sev": "L",
       "ev": "Disallow: / for User-agent: *"
+    },
+    {
+      "id": "id.soft_404",
+      "sev": "L",
+      "ev": "a nonexistent path returned 200"
     },
     {
       "id": "id.charset_doctype",
@@ -604,6 +608,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-25",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-24",
       "up": false,
@@ -725,5 +734,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

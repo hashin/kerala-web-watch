@@ -35,23 +35,23 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T00:18:44.796Z",
-    "run": "1792196307642",
+    "at": "2026-10-25T00:06:00.152Z",
+    "run": "1792886711851",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 100,
-      "accessibility": 94,
-      "best_practices": 100,
-      "seo": 82
+      "performance": 64,
+      "accessibility": 83,
+      "best_practices": 88,
+      "seo": 92
     },
     "axe": {
       "critical": 0,
-      "serious": 0,
-      "moderate": 2,
-      "minor": 0
+      "serious": 10,
+      "moderate": 27,
+      "minor": 4
     },
     "crawl": {
-      "pages": 0,
+      "pages": 30,
       "pdfs": 0,
       "broken": 0
     },
@@ -131,7 +131,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "pass"
+        "r": "fail",
+        "ev": "href=\"http://www.sametikerala.com/\""
       },
       {
         "id": "sec.csp",
@@ -139,11 +140,11 @@
       },
       {
         "id": "sec.xfo",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.xcto",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.referrer",
@@ -171,12 +172,13 @@
       },
       {
         "id": "a11y.axe_serious",
-        "r": "pass"
+        "r": "fail",
+        "ev": "10 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "2 moderate/minor violation(s)"
+        "ev": "31 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -188,7 +190,8 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -204,21 +207,23 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "pass"
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "94/100"
+        "ev": "83/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "100/100"
+        "ev": "64/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "fail",
+        "ev": "9834.600999999999ms"
       },
       {
         "id": "perf.cls",
@@ -226,7 +231,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3.8MB"
       },
       {
         "id": "perf.viewport",
@@ -234,20 +240,19 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
-      },
-      {
-        "id": "perf.images",
         "r": "pass"
       },
       {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
         "id": "content.copyright_year",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "content.last_updated",
-        "r": "fail",
-        "ev": "no \"last updated\" date found"
+        "r": "pass"
       },
       {
         "id": "content.stale_news",
@@ -259,11 +264,13 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "pass"
+        "r": "fail",
+        "ev": "ml-icon"
       },
       {
         "id": "content.obsolete_tech",
-        "r": "pass"
+        "r": "fail",
+        "ev": "<marquee"
       },
       {
         "id": "content.best_viewed",
@@ -279,12 +286,12 @@
       },
       {
         "id": "content.broken_images",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 broken image(s)"
       },
       {
         "id": "content.malayalam",
-        "r": "fail",
-        "ev": "Malayalam ratio 0.00, no language toggle found"
+        "r": "pass"
       },
       {
         "id": "content.title",
@@ -296,15 +303,16 @@
       },
       {
         "id": "content.favicon",
-        "r": "fail"
-      },
-      {
-        "id": "content.console_errors",
         "r": "pass"
       },
       {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      },
+      {
         "id": "gigw.contact",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.feedback",
@@ -312,7 +320,7 @@
       },
       {
         "id": "gigw.sitemap",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.privacy",
@@ -336,11 +344,11 @@
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.screen_reader",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.help",
@@ -348,7 +356,7 @@
       },
       {
         "id": "gigw.rti",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.search",
@@ -360,7 +368,7 @@
       },
       {
         "id": "gigw.last_updated",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.emblem",
@@ -384,16 +392,16 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "pass"
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
       },
       {
         "id": "id.soft_404",
-        "r": "fail",
-        "ev": "a nonexistent path returned 200"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.charset_doctype",
@@ -411,57 +419,105 @@
     "screenshot": {
       "desktop": "keralasoils.webp",
       "mobile": "keralasoils-m.webp",
-      "phash": "00003c3c3c3c0000"
+      "phash": "ffff000004dbe0ff"
     },
-    "outlinks": []
+    "outlinks": [
+      {
+        "host": "google.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "youtu.be",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "youtube.com",
+        "count": 5,
+        "texts": []
+      },
+      {
+        "host": "keralaagriculture.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "kau.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "sametikerala.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "kerala.gov.in",
+        "count": 2,
+        "texts": []
+      },
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "twitter.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "cdit.org",
+        "count": 1,
+        "texts": [
+          "C-DIT"
+        ]
+      }
+    ]
   },
   "score": {
-    "overall": 69,
-    "security": 68,
-    "accessibility": 96,
-    "content": 62,
-    "gigw": 0,
-    "performance": 90,
+    "overall": 68,
+    "security": 62,
+    "accessibility": 74,
+    "content": 58,
+    "gigw": 52,
+    "performance": 81,
     "identity": 92
   },
   "status": "needs-work",
   "issues": [
     {
-      "id": "content.last_updated",
+      "id": "sec.mixed_content",
       "sev": "H",
-      "ev": "no \"last updated\" date found"
+      "ev": "href=\"http://www.sametikerala.com/\""
     },
     {
-      "id": "gigw.contact",
-      "sev": "H"
-    },
-    {
-      "id": "gigw.rti",
-      "sev": "H"
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-icon"
     },
     {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
-      "id": "sec.xfo",
-      "sev": "M"
-    },
-    {
-      "id": "content.malayalam",
+      "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "Malayalam ratio 0.00, no language toggle found"
+      "ev": "10 serious violation(s)"
     },
     {
-      "id": "gigw.sitemap",
-      "sev": "M"
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "1 low-contrast element(s)"
+    },
+    {
+      "id": "content.obsolete_tech",
+      "sev": "M",
+      "ev": "<marquee"
     },
     {
       "id": "gigw.privacy",
-      "sev": "M"
-    },
-    {
-      "id": "gigw.accessibility_statement",
       "sev": "M"
     },
     {
@@ -469,19 +525,17 @@
       "sev": "M"
     },
     {
-      "id": "gigw.last_updated",
-      "sev": "M"
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "9834.600999999999ms"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "3.8MB"
     },
     {
       "id": "sec.csp",
-      "sev": "L"
-    },
-    {
-      "id": "sec.xcto",
       "sev": "L"
     },
     {
@@ -491,15 +545,26 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "2 moderate/minor violation(s)"
+      "ev": "31 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
+    },
+    {
+      "id": "content.broken_images",
+      "sev": "L",
+      "ev": "1 broken image(s)"
     },
     {
       "id": "content.meta_desc",
       "sev": "L"
     },
     {
-      "id": "content.favicon",
-      "sev": "L"
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
@@ -522,10 +587,6 @@
       "sev": "L"
     },
     {
-      "id": "gigw.screen_reader",
-      "sev": "L"
-    },
-    {
       "id": "gigw.help",
       "sev": "L"
     },
@@ -534,24 +595,29 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
     {
-      "id": "id.soft_404",
+      "id": "id.sitemap_xml",
       "sev": "L",
-      "ev": "a nonexistent path returned 200"
+      "ev": "sitemap.xml returned 404"
     },
     {
       "id": "gigw.emblem",
       "sev": "I"
-    },
-    {
-      "id": "id.canonical",
-      "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-25",
+      "up": true,
+      "score": 68
+    },
     {
       "d": "2026-10-24",
       "up": true,
@@ -713,5 +779,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

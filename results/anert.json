@@ -35,15 +35,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T00:19:29.500Z",
-    "run": "1792801106367",
+    "at": "2026-10-24T23:54:45.095Z",
+    "run": "1792886022332",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 31,
-      "accessibility": 72,
-      "best_practices": 88,
-      "seo": 83
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 5,
       "serious": 12,
@@ -186,7 +181,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"ma\"> vs. 133% Malayalam content"
+        "ev": "<html lang=\"ma\"> vs. 134% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -219,23 +214,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "72/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "31/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "18655.843ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "1.02"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -248,11 +239,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -543,12 +534,12 @@
     ]
   },
   "score": {
-    "overall": 41,
+    "overall": 43,
     "security": 38,
     "accessibility": 10,
     "content": 36,
     "gigw": 48,
-    "performance": 72,
+    "performance": 90,
     "identity": 92
   },
   "status": "poor",
@@ -571,7 +562,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"ma\"> vs. 133% Malayalam content"
+      "ev": "<html lang=\"ma\"> vs. 134% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -624,11 +615,6 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "18655.843ms"
     },
     {
       "id": "perf.weight",
@@ -701,15 +687,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "1.02"
-    },
-    {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -728,6 +705,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-25",
+      "up": true,
+      "score": 43
+    },
     {
       "d": "2026-10-24",
       "up": true,
@@ -899,5 +881,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

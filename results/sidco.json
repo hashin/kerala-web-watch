@@ -37,12 +37,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T00:24:43.614Z",
-    "run": "1792801419790",
+    "at": "2026-10-24T23:54:59.251Z",
+    "run": "1792886039760",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 33,
-      "accessibility": 78,
+      "performance": 32,
+      "accessibility": 79,
       "best_practices": 73,
       "seo": 85
     },
@@ -97,8 +97,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3125ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -218,22 +217,22 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "78/100"
+        "ev": "79/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "33/100"
+        "ev": "32/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6747.256500000001ms"
+        "ev": "7904.681499999999ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "1.32"
+        "ev": "0.79"
       },
       {
         "id": "perf.weight",
@@ -483,11 +482,6 @@
       "ev": "www.keralasidco.com"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3125ms"
-    },
-    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -528,7 +522,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6747.256500000001ms"
+      "ev": "7904.681499999999ms"
     },
     {
       "id": "perf.weight",
@@ -602,7 +596,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "1.32"
+      "ev": "0.79"
     },
     {
       "id": "perf.images",
@@ -614,6 +608,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-25",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-10-24",
       "up": true,
@@ -775,5 +774,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

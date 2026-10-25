@@ -29,8 +29,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T00:07:46.377Z",
-    "run": "1792800351342",
+    "at": "2026-10-24T23:47:48.846Z",
+    "run": "1792885326246",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 58,
@@ -47,7 +47,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 1,
-      "broken": 7
+      "broken": 31
     },
     "tech": {
       "cms": null,
@@ -109,16 +109,15 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "fail",
-        "ev": "2 days left"
+        "r": "na"
       },
       {
         "id": "sec.tls_version",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.hsts",
@@ -221,7 +220,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9471.928999999998ms"
+        "ev": "9139.176ms"
       },
       {
         "id": "perf.cls",
@@ -263,7 +262,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-user"
+        "ev": "Ml-"
       },
       {
         "id": "content.obsolete_tech",
@@ -277,7 +276,7 @@
       {
         "id": "content.broken_links",
         "r": "fail",
-        "ev": "6/30 crawled link(s) broken (https://pwd.kerala.gov.in/IMF_website/Administration/administrationwing.php?id=WasupuqNf9ivVwQ_2lbDPATRwAFmm0DC51-3Lh6En66-ZxseHfPusKoKVLiiFhN_64VzfFsqpAWrLOnBwK5rAgysixlSHkSxVCwkOW50MUw&id_ml=TUw=, https://pwd.kerala.gov.in/IMF_website/Architectural/architectural_wing.php?id=Id-E2pH4ZEHjQZwUSFLuSUY58yNjBRKDtLAQeaSjPYTe1fSx6zRgHv4lY1cGPomR-k_6Wx_TmtSHGSG8HaQaYZKo7RZSwB5LHJgeVOObyJw&id_ml=TUw=, https://pwd.kerala.gov.in/IMF_website/Bridges/Bridgeswing.php?id=xKnwZJTToN-Vk9LdRMA03MN-ujJfhrPD2JgoRMwEDJK-cbT76lmL3HFbThg2taNZeiR6VF_CB0GB3sOYXHqmM8gORWLj3oy5FGN3b640294&id_ml=TUw=, ...)"
+        "ev": "30/30 crawled link(s) broken (https://pwd.kerala.gov.in/IMF_website/index/index.php?id_ml=RU4=, https://www.pwd.kerala.gov.in/IMF_website/includes/PWD_4U_mobileApp.php?id_ml=, https://www.pwd.kerala.gov.in/IMF_website/Projects/wings_list.php?id_ml=, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -487,24 +486,19 @@
     ]
   },
   "score": {
-    "overall": 44,
-    "security": 20,
+    "overall": 49,
+    "security": 40,
     "accessibility": 50,
     "content": 28,
     "gigw": 36,
     "performance": 71,
     "identity": 96
   },
-  "status": "down",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.http_redirect",
       "sev": "H"
-    },
-    {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "2 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -524,12 +518,12 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-user"
+      "ev": "Ml-"
     },
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "6/30 crawled link(s) broken (https://pwd.kerala.gov.in/IMF_website/Administration/administrationwing.php?id=WasupuqNf9ivVwQ_2lbDPATRwAFmm0DC51-3Lh6En66-ZxseHfPusKoKVLiiFhN_64VzfFsqpAWrLOnBwK5rAgysixlSHkSxVCwkOW50MUw&id_ml=TUw=, https://pwd.kerala.gov.in/IMF_website/Architectural/architectural_wing.php?id=Id-E2pH4ZEHjQZwUSFLuSUY58yNjBRKDtLAQeaSjPYTe1fSx6zRgHv4lY1cGPomR-k_6Wx_TmtSHGSG8HaQaYZKo7RZSwB5LHJgeVOObyJw&id_ml=TUw=, https://pwd.kerala.gov.in/IMF_website/Bridges/Bridgeswing.php?id=xKnwZJTToN-Vk9LdRMA03MN-ujJfhrPD2JgoRMwEDJK-cbT76lmL3HFbThg2taNZeiR6VF_CB0GB3sOYXHqmM8gORWLj3oy5FGN3b640294&id_ml=TUw=, ...)"
+      "ev": "30/30 crawled link(s) broken (https://pwd.kerala.gov.in/IMF_website/index/index.php?id_ml=RU4=, https://www.pwd.kerala.gov.in/IMF_website/includes/PWD_4U_mobileApp.php?id_ml=, https://www.pwd.kerala.gov.in/IMF_website/Projects/wings_list.php?id_ml=, ...)"
     },
     {
       "id": "gigw.contact",
@@ -566,7 +560,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9471.928999999998ms"
+      "ev": "9139.176ms"
     },
     {
       "id": "perf.weight",
@@ -645,6 +639,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-25",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-10-24",
       "up": false,
@@ -811,5 +810,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

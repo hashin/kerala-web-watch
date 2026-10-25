@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T00:21:36.536Z",
-    "run": "1792801286559",
+    "at": "2026-10-24T23:55:56.875Z",
+    "run": "1792886144777",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 61,
@@ -48,7 +48,7 @@
     },
     "axe": {
       "critical": 0,
-      "serious": 1,
+      "serious": 0,
       "moderate": 0,
       "minor": 0
     },
@@ -90,7 +90,7 @@
       {
         "id": "avail.blank",
         "r": "fail",
-        "ev": "46 visible characters"
+        "ev": "0 visible characters"
       },
       {
         "id": "avail.under_construction",
@@ -174,8 +174,7 @@
       },
       {
         "id": "a11y.axe_serious",
-        "r": "fail",
-        "ev": "1 serious violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -191,8 +190,7 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "1 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
@@ -223,7 +221,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6948.248ms"
+        "ev": "6795.817000000001ms"
       },
       {
         "id": "perf.cls",
@@ -306,7 +304,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "5 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
+        "ev": "8 console error(s): Access to fetch at 'https://gcek-website-backend.onrender.com/api/v1/static-assets?prefix=websites/gcek/' from origin 'https://www.gcek.ac.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -428,7 +426,7 @@
     {
       "id": "avail.blank",
       "sev": "C",
-      "ev": "46 visible characters"
+      "ev": "0 visible characters"
     },
     {
       "id": "content.last_updated",
@@ -457,16 +455,6 @@
       "sev": "M"
     },
     {
-      "id": "a11y.axe_serious",
-      "sev": "M",
-      "ev": "1 serious violation(s)"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "1 low-contrast element(s)"
-    },
-    {
       "id": "gigw.sitemap",
       "sev": "M"
     },
@@ -489,7 +477,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6948.248ms"
+      "ev": "6795.817000000001ms"
     },
     {
       "id": "perf.tap_targets",
@@ -502,7 +490,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "5 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
+      "ev": "8 console error(s): Access to fetch at 'https://gcek-website-backend.onrender.com/api/v1/static-assets?prefix=websites/gcek/' from origin 'https://www.gcek.ac.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -560,6 +548,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-25",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-24",
       "up": false,
@@ -701,5 +694,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

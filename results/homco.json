@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T00:31:16.284Z",
-    "run": "1792801776576",
+    "at": "2026-10-25T00:03:20.793Z",
+    "run": "1792886539766",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 29,
+      "performance": 26,
       "accessibility": 83,
-      "best_practices": 73,
+      "best_practices": 96,
       "seo": 85
     },
     "axe": {
       "critical": 1,
-      "serious": 17,
+      "serious": 14,
       "moderate": 5,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 3
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3648ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -176,7 +175,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "17 serious violation(s)"
+        "ev": "14 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -223,22 +222,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "29/100"
+        "ev": "26/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "23766.429999999997ms"
+        "ev": "24498.311500000007ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "1.71"
+        "ev": "1.56"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "5.3MB"
+        "ev": "5.2MB"
       },
       {
         "id": "perf.viewport",
@@ -285,7 +284,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "3/30 crawled link(s) broken (https://homcokerala.com/homco/, https://homcokerala.com/2024/04/01/mother-tincture/, https://homcokerala.com/2024/04/01/triturations/)"
+        "ev": "1/30 crawled link(s) broken (https://homcokerala.com/homco/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -313,8 +312,7 @@
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "3 console error(s): Failed to load resource: net::ERR_CONNECTION_RESET"
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
@@ -439,10 +437,10 @@
     ]
   },
   "score": {
-    "overall": 42,
+    "overall": 43,
     "security": 22,
     "accessibility": 40,
-    "content": 46,
+    "content": 50,
     "gigw": 28,
     "performance": 77,
     "identity": 80
@@ -481,17 +479,12 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "3/30 crawled link(s) broken (https://homcokerala.com/homco/, https://homcokerala.com/2024/04/01/mother-tincture/, https://homcokerala.com/2024/04/01/triturations/)"
+      "ev": "1/30 crawled link(s) broken (https://homcokerala.com/homco/)"
     },
     {
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "homcokerala.com"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3648ms"
     },
     {
       "id": "sec.hsts",
@@ -500,7 +493,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "17 serious violation(s)"
+      "ev": "14 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -531,12 +524,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "23766.429999999997ms"
+      "ev": "24498.311500000007ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "5.3MB"
+      "ev": "5.2MB"
     },
     {
       "id": "sec.xcto",
@@ -560,11 +553,6 @@
       "id": "a11y.keyboard",
       "sev": "L",
       "ev": "tabindex=\"-1\" alongside outline:none"
-    },
-    {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "3 console error(s): Failed to load resource: net::ERR_CONNECTION_RESET"
     },
     {
       "id": "gigw.feedback",
@@ -601,7 +589,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "1.71"
+      "ev": "1.56"
     },
     {
       "id": "perf.images",
@@ -618,6 +606,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-25",
+      "up": true,
+      "score": 43
+    },
     {
       "d": "2026-10-24",
       "up": true,
@@ -789,5 +782,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T00:02:52.251Z",
-    "run": "1792800069952",
+    "at": "2026-10-24T23:38:31.769Z",
+    "run": "1792885016820",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 58,
+      "performance": 57,
       "accessibility": 70,
       "best_practices": 88,
       "seo": 77
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 29,
       "pdfs": 5,
-      "broken": 3
+      "broken": 5
     },
     "tech": {
       "cms": null,
@@ -223,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "58/100"
+        "ev": "57/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6613.55ms"
+        "ev": "7361.767ms"
       },
       {
         "id": "perf.cls",
@@ -282,8 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "3/29 crawled link(s) broken (https://kerala.gov.in/, https://services.kerala.gov.in/, https://edistrict.kerala.gov.in/)"
+        "r": "fail",
+        "ev": "5/29 crawled link(s) broken (https://survey.entebhoomi.kerala.gov.in/portal/home/?lang=ml, https://survey.entebhoomi.kerala.gov.in/portal/purchase/, https://kerala.gov.in/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -482,10 +482,10 @@
     ]
   },
   "score": {
-    "overall": 49,
+    "overall": 47,
     "security": 80,
     "accessibility": 20,
-    "content": 42,
+    "content": 32,
     "gigw": 0,
     "performance": 76,
     "identity": 96
@@ -519,7 +519,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "3/29 crawled link(s) broken (https://kerala.gov.in/, https://services.kerala.gov.in/, https://edistrict.kerala.gov.in/)"
+      "ev": "5/29 crawled link(s) broken (https://survey.entebhoomi.kerala.gov.in/portal/home/?lang=ml, https://survey.entebhoomi.kerala.gov.in/portal/purchase/, https://kerala.gov.in/, ...)"
     },
     {
       "id": "gigw.contact",
@@ -563,7 +563,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6613.55ms"
+      "ev": "7361.767ms"
     },
     {
       "id": "perf.tap_targets",
@@ -632,6 +632,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-25",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-10-24",
       "up": true,
@@ -798,5 +803,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T00:05:51.340Z",
-    "run": "1792800265510",
+    "at": "2026-10-24T23:42:06.244Z",
+    "run": "1792885276676",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 57,
+      "performance": 47,
       "accessibility": 56,
       "best_practices": 69,
       "seo": 83
@@ -223,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "57/100"
+        "ev": "47/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10673.645499999999ms"
+        "ev": "13986.826000000005ms"
       },
       {
         "id": "perf.cls",
@@ -237,7 +237,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "8.3MB"
+        "ev": "8.1MB"
       },
       {
         "id": "perf.viewport",
@@ -253,8 +253,7 @@
       },
       {
         "id": "content.copyright_year",
-        "r": "fail",
-        "ev": "copyright year 2018"
+        "r": "pass"
       },
       {
         "id": "content.last_updated",
@@ -315,7 +314,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "22 console error(s): Failed to load resource: net::ERR_HTTP2_PING_FAILED"
+        "ev": "21 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
@@ -335,7 +334,7 @@
       },
       {
         "id": "gigw.terms",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.copyright_policy",
@@ -391,7 +390,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -435,6 +434,14 @@
         "texts": []
       },
       {
+        "host": "google.com",
+        "count": 3,
+        "texts": [
+          "നിബന്ധനകൾ",
+          "ഒരു മാപ്പ് പിശക് റിപ്പോർട്ട് ചെയ്യുക"
+        ]
+      },
+      {
         "host": "g.co",
         "count": 1,
         "texts": [
@@ -444,13 +451,13 @@
     ]
   },
   "score": {
-    "overall": 44,
+    "overall": 46,
     "security": 34,
     "accessibility": 40,
-    "content": 32,
-    "gigw": 26,
+    "content": 42,
+    "gigw": 30,
     "performance": 76,
-    "identity": 96
+    "identity": 92
   },
   "status": "poor",
   "issues": [
@@ -499,11 +506,6 @@
       "ev": "19 low-contrast element(s)"
     },
     {
-      "id": "content.copyright_year",
-      "sev": "M",
-      "ev": "copyright year 2018"
-    },
-    {
       "id": "content.obsolete_tech",
       "sev": "M",
       "ev": "<marquee"
@@ -531,12 +533,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10673.645499999999ms"
+      "ev": "13986.826000000005ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "8.3MB"
+      "ev": "8.1MB"
     },
     {
       "id": "sec.csp",
@@ -578,11 +580,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "22 console error(s): Failed to load resource: net::ERR_HTTP2_PING_FAILED"
-    },
-    {
-      "id": "gigw.terms",
-      "sev": "L"
+      "ev": "21 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.copyright_policy",
@@ -609,6 +607,10 @@
       "sev": "L"
     },
     {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
@@ -623,6 +625,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-25",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-10-24",
       "up": true,
@@ -794,5 +801,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

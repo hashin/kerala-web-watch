@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-23T00:23:13.482Z",
-    "run": "1792714921451",
+    "at": "2026-10-24T23:51:10.355Z",
+    "run": "1792885801712",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 92,
+      "performance": 90,
       "accessibility": 86,
       "best_practices": 96,
       "seo": 92
     },
     "axe": {
       "critical": 1,
-      "serious": 6,
+      "serious": 8,
       "moderate": 8,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 2,
-      "broken": 13
+      "pdfs": 5,
+      "broken": 12
     },
     "tech": {
       "cms": "Drupal 10",
@@ -174,7 +174,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "6 serious violation(s)"
+        "ev": "8 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -220,7 +220,7 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "92/100"
+        "ev": "90/100"
       },
       {
         "id": "perf.lcp",
@@ -280,7 +280,7 @@
       {
         "id": "content.broken_links",
         "r": "fail",
-        "ev": "13/30 crawled link(s) broken (https://bams.treasury.kerala.gov.in/, https://bims.treasury.kerala.gov.in/, http://cprcs.kerala.gov.in/, ...)"
+        "ev": "12/30 crawled link(s) broken (https://bams.treasury.kerala.gov.in/, https://bims.treasury.kerala.gov.in/, http://cprcs.kerala.gov.in/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -498,7 +498,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "13/30 crawled link(s) broken (https://bams.treasury.kerala.gov.in/, https://bims.treasury.kerala.gov.in/, http://cprcs.kerala.gov.in/, ...)"
+      "ev": "12/30 crawled link(s) broken (https://bams.treasury.kerala.gov.in/, https://bims.treasury.kerala.gov.in/, http://cprcs.kerala.gov.in/, ...)"
     },
     {
       "id": "sec.hsts",
@@ -507,7 +507,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "6 serious violation(s)"
+      "ev": "8 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -580,6 +580,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-25",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-10-24",
       "up": true,
@@ -751,5 +756,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

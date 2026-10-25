@@ -35,15 +35,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T00:32:05.083Z",
-    "run": "1792801876285",
+    "at": "2026-10-24T23:57:22.269Z",
+    "run": "1792886190961",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 54,
-      "accessibility": 74,
-      "best_practices": 50,
-      "seo": 91
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 2,
       "serious": 50,
@@ -119,8 +114,7 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "fail",
-        "ev": "1 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -217,22 +211,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "74/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "54/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "11619.516ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -245,11 +236,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -419,7 +410,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e6al1, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e6al1h1, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
       }
     ],
     "screenshot": {
@@ -477,21 +468,16 @@
     ]
   },
   "score": {
-    "overall": 44,
-    "security": 8,
+    "overall": 50,
+    "security": 28,
     "accessibility": 30,
     "content": 66,
     "gigw": 52,
-    "performance": 76,
+    "performance": 90,
     "identity": 88
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "1 days left"
-    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -547,11 +533,6 @@
     {
       "id": "gigw.ownership",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "11619.516ms"
     },
     {
       "id": "perf.weight",
@@ -618,10 +599,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.robots",
       "sev": "L",
       "ev": "robots.txt returned 404"
@@ -647,10 +624,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e6al1, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e6al1h1, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-25",
+      "up": true,
+      "score": 50
+    },
     {
       "d": "2026-10-24",
       "up": true,
@@ -817,5 +799,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

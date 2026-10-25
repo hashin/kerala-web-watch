@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T00:21:53.237Z",
-    "run": "1792801230617",
+    "at": "2026-10-24T23:58:17.638Z",
+    "run": "1792886218556",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 53,
+      "performance": 55,
       "accessibility": 83,
       "best_practices": 88,
       "seo": 92
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "53/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "13261.547ms"
+        "ev": "11876.215500000002ms"
       },
       {
         "id": "perf.cls",
@@ -257,7 +257,8 @@
       },
       {
         "id": "content.stale_news",
-        "r": "na"
+        "r": "fail",
+        "ev": "newest dated item: 2027-11-15"
       },
       {
         "id": "content.placeholder",
@@ -507,10 +508,10 @@
     ]
   },
   "score": {
-    "overall": 65,
+    "overall": 64,
     "security": 46,
     "accessibility": 74,
-    "content": 62,
+    "content": 52,
     "gigw": 56,
     "performance": 81,
     "identity": 96
@@ -547,6 +548,11 @@
       "ev": "8 low-contrast element(s)"
     },
     {
+      "id": "content.stale_news",
+      "sev": "M",
+      "ev": "newest dated item: 2027-11-15"
+    },
+    {
       "id": "content.obsolete_tech",
       "sev": "M",
       "ev": "<marquee"
@@ -562,7 +568,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "13261.547ms"
+      "ev": "11876.215500000002ms"
     },
     {
       "id": "perf.weight",
@@ -632,6 +638,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-25",
+      "up": true,
+      "score": 64
+    },
     {
       "d": "2026-10-24",
       "up": true,
@@ -803,5 +814,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
