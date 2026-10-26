@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T23:38:53.708Z",
-    "run": "1792885093627",
+    "at": "2026-10-25T23:34:41.090Z",
+    "run": "1792971207181",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 44,
+      "accessibility": 78,
+      "best_practices": 92,
+      "seo": 58
     },
     "axe": {
       "critical": 3,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3153ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -217,20 +218,21 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "78/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "44/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "40340.54449999999ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -443,12 +445,12 @@
     ]
   },
   "score": {
-    "overall": 43,
+    "overall": 42,
     "security": 32,
     "accessibility": 30,
     "content": 52,
     "gigw": 32,
-    "performance": 81,
+    "performance": 71,
     "identity": 72
   },
   "status": "poor",
@@ -481,6 +483,11 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "keralaceramics.com"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3153ms"
     },
     {
       "id": "sec.hsts",
@@ -525,6 +532,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "40340.54449999999ms"
     },
     {
       "id": "perf.weight",
@@ -615,6 +627,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-26",
+      "up": true,
+      "score": 42
+    },
     {
       "d": "2026-10-25",
       "up": true,
@@ -746,5 +763,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

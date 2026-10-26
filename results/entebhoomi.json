@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T23:38:31.769Z",
-    "run": "1792885016820",
+    "at": "2026-10-25T23:32:17.718Z",
+    "run": "1792971037881",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 57,
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 29,
       "pdfs": 5,
-      "broken": 5
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -228,7 +228,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7361.767ms"
+        "ev": "7018.842ms"
       },
       {
         "id": "perf.cls",
@@ -282,8 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "5/29 crawled link(s) broken (https://survey.entebhoomi.kerala.gov.in/portal/home/?lang=ml, https://survey.entebhoomi.kerala.gov.in/portal/purchase/, https://kerala.gov.in/, ...)"
+        "r": "warn",
+        "ev": "2/29 crawled link(s) broken (https://services.kerala.gov.in/, https://edistrict.kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -482,10 +482,10 @@
     ]
   },
   "score": {
-    "overall": 47,
+    "overall": 49,
     "security": 80,
     "accessibility": 20,
-    "content": 32,
+    "content": 42,
     "gigw": 0,
     "performance": 76,
     "identity": 96
@@ -519,7 +519,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "5/29 crawled link(s) broken (https://survey.entebhoomi.kerala.gov.in/portal/home/?lang=ml, https://survey.entebhoomi.kerala.gov.in/portal/purchase/, https://kerala.gov.in/, ...)"
+      "ev": "2/29 crawled link(s) broken (https://services.kerala.gov.in/, https://edistrict.kerala.gov.in/)"
     },
     {
       "id": "gigw.contact",
@@ -563,7 +563,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7361.767ms"
+      "ev": "7018.842ms"
     },
     {
       "id": "perf.tap_targets",
@@ -632,6 +632,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-26",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-10-25",
       "up": true,
@@ -803,5 +808,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

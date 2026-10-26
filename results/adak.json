@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T23:51:37.072Z",
-    "run": "1792885809909",
+    "at": "2026-10-25T23:49:24.721Z",
+    "run": "1792972072757",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
+      "performance": 32,
       "accessibility": 77,
       "best_practices": 96,
       "seo": 83
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -219,21 +219,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "32/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "48505.650499999974ms"
+        "ev": "51510.8975ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.69"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "2367.9MB"
+        "ev": "2568.9MB"
       },
       {
         "id": "perf.viewport",
@@ -280,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://www.kerala.gov.in/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -454,12 +454,12 @@
     ]
   },
   "score": {
-    "overall": 77,
+    "overall": 78,
     "security": 96,
     "accessibility": 72,
-    "content": 46,
+    "content": 56,
     "gigw": 76,
-    "performance": 76,
+    "performance": 72,
     "identity": 92
   },
   "status": "needs-work",
@@ -468,11 +468,6 @@
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://www.kerala.gov.in/)"
     },
     {
       "id": "a11y.axe_serious",
@@ -505,12 +500,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "48505.650499999974ms"
+      "ev": "51510.8975ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "2367.9MB"
+      "ev": "2568.9MB"
     },
     {
       "id": "sec.csp",
@@ -533,6 +528,11 @@
     {
       "id": "gigw.feedback",
       "sev": "L"
+    },
+    {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.69"
     },
     {
       "id": "perf.images",
@@ -558,6 +558,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-26",
+      "up": true,
+      "score": 78
+    },
     {
       "d": "2026-10-25",
       "up": true,
@@ -729,5 +734,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,29 +35,29 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-07T01:03:24.213Z",
-    "run": "1791334903644",
+    "at": "2026-10-25T23:34:54.359Z",
+    "run": "1792971201696",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 43,
+      "accessibility": 75,
+      "best_practices": 92,
+      "seo": 73
     },
     "axe": {
-      "critical": 4,
-      "serious": 12,
-      "moderate": 76,
+      "critical": 2,
+      "serious": 11,
+      "moderate": 73,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 6,
-      "broken": 35
+      "broken": 3
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "Apache",
       "jquery": "3.7.1"
     },
     "checks": [
@@ -71,8 +71,7 @@
       },
       {
         "id": "avail.status",
-        "r": "fail",
-        "ev": "final response was 503"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
@@ -120,8 +119,7 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "18 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -171,17 +169,17 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "4 critical violation(s)"
+        "ev": "2 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "12 serious violation(s)"
+        "ev": "11 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "76 moderate/minor violation(s)"
+        "ev": "73 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -216,25 +214,26 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "75/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "43/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "18597.907499999998ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "22.3MB"
+        "ev": "25.2MB"
       },
       {
         "id": "perf.viewport",
@@ -268,7 +267,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-shape"
+        "ev": "ML-NILA"
       },
       {
         "id": "content.obsolete_tech",
@@ -280,13 +279,12 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "30/30 crawled link(s) broken (https://kerala.gov.in/#main-content, https://kerala.gov.in/#, https://kerala.gov.in/sitemap, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
         "r": "fail",
-        "ev": "5 linked PDF(s) 404: https://itmission.kerala.gov.in/sites/default/files/Guidelines/cert-k%20alert.pdf, https://itmission.kerala.gov.in/sites/default/files/Guidelines/ransomware_attack_prevention_and_recovery_measures1.pdf, https://kerala.gov.in/assets/public_uploads/public_holiday_2025.pdf, https://kerala.gov.in/assets/public_uploads/public_holiday_2026.pdf, https://kerala.gov.in/assets/uploads/VisitAnalysisReport.pdf"
+        "ev": "3 linked PDF(s) 404: https://document.kerala.gov.in/documents/governmentorders//govtorder1004202312:31:37.pdf, https://itmission.kerala.gov.in/sites/default/files/Guidelines/cert-k%20alert.pdf, https://itmission.kerala.gov.in/sites/default/files/Guidelines/ransomware_attack_prevention_and_recovery_measures1.pdf"
       },
       {
         "id": "content.broken_images",
@@ -312,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "7 console error(s): Failed to load resource: the server responded with a status of 503 (Service Temporarily Unavailable)"
+        "ev": "6 console error(s): Connecting to 'https://www.youtube.com/s/player/cbcfbf2f/www-player.css' violates the following Content Security Policy directive: \"connect-src 'self' blob: data: *.userway.org kchat1.kerala.gov.in *.google-analytics.com\". The action has been blocked."
       },
       {
         "id": "gigw.contact",
@@ -393,12 +391,11 @@
       {
         "id": "id.robots",
         "r": "fail",
-        "ev": "robots.txt returned 503"
+        "ev": "robots.txt returned 404"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 503"
+        "r": "pass"
       },
       {
         "id": "id.soft_404",
@@ -512,19 +509,17 @@
       }
     ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 61,
+    "security": 80,
+    "accessibility": 60,
+    "content": 32,
+    "gigw": 34,
+    "performance": 66,
+    "identity": 92
+  },
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "avail.status",
-      "sev": "C",
-      "ev": "final response was 503"
-    },
-    {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "18 days left"
-    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -533,7 +528,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "4 critical violation(s)"
+      "ev": "2 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -543,12 +538,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-shape"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "30/30 crawled link(s) broken (https://kerala.gov.in/#main-content, https://kerala.gov.in/#, https://kerala.gov.in/sitemap, ...)"
+      "ev": "ML-NILA"
     },
     {
       "id": "gigw.rti",
@@ -557,12 +547,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "12 serious violation(s)"
+      "ev": "11 serious violation(s)"
     },
     {
       "id": "content.broken_pdfs",
       "sev": "M",
-      "ev": "5 linked PDF(s) 404: https://itmission.kerala.gov.in/sites/default/files/Guidelines/cert-k%20alert.pdf, https://itmission.kerala.gov.in/sites/default/files/Guidelines/ransomware_attack_prevention_and_recovery_measures1.pdf, https://kerala.gov.in/assets/public_uploads/public_holiday_2025.pdf, https://kerala.gov.in/assets/public_uploads/public_holiday_2026.pdf, https://kerala.gov.in/assets/uploads/VisitAnalysisReport.pdf"
+      "ev": "3 linked PDF(s) 404: https://document.kerala.gov.in/documents/governmentorders//govtorder1004202312:31:37.pdf, https://itmission.kerala.gov.in/sites/default/files/Guidelines/cert-k%20alert.pdf, https://itmission.kerala.gov.in/sites/default/files/Guidelines/ransomware_attack_prevention_and_recovery_measures1.pdf"
     },
     {
       "id": "content.title",
@@ -582,9 +572,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "18597.907499999998ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "22.3MB"
+      "ev": "25.2MB"
     },
     {
       "id": "perf.tap_targets",
@@ -593,7 +588,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "76 moderate/minor violation(s)"
+      "ev": "73 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -612,7 +607,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "7 console error(s): Failed to load resource: the server responded with a status of 503 (Service Temporarily Unavailable)"
+      "ev": "6 console error(s): Connecting to 'https://www.youtube.com/s/player/cbcfbf2f/www-player.css' violates the following Content Security Policy directive: \"connect-src 'self' blob: data: *.userway.org kchat1.kerala.gov.in *.google-analytics.com\". The action has been blocked."
     },
     {
       "id": "gigw.terms",
@@ -641,12 +636,7 @@
     {
       "id": "id.robots",
       "sev": "L",
-      "ev": "robots.txt returned 503"
-    },
-    {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 503"
+      "ev": "robots.txt returned 404"
     },
     {
       "id": "id.canonical",
@@ -659,6 +649,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-26",
+      "up": true,
+      "score": 61
+    },
     {
       "d": "2026-10-25",
       "up": false,
@@ -830,5 +825,5 @@
       "score": 61
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

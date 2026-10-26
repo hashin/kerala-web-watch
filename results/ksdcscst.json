@@ -35,30 +35,30 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T23:48:03.328Z",
-    "run": "1792885644577",
+    "at": "2026-10-25T23:40:47.117Z",
+    "run": "1792971625944",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 40,
-      "accessibility": 84,
-      "best_practices": 96,
-      "seo": 91
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
     },
     "axe": {
-      "critical": 1,
-      "serious": 5,
-      "moderate": 9,
+      "critical": 0,
+      "serious": 2,
+      "moderate": 2,
       "minor": 0
     },
     "crawl": {
-      "pages": 23,
+      "pages": 0,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
       "server": "",
-      "jquery": "3.6.0"
+      "jquery": null
     },
     "checks": [
       {
@@ -71,7 +71,8 @@
       },
       {
         "id": "avail.status",
-        "r": "pass"
+        "r": "fail",
+        "ev": "final response was 503"
       },
       {
         "id": "avail.redirect_offsite",
@@ -87,7 +88,8 @@
       },
       {
         "id": "avail.blank",
-        "r": "pass"
+        "r": "fail",
+        "ev": "27 visible characters"
       },
       {
         "id": "avail.under_construction",
@@ -95,8 +97,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3346ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -132,8 +133,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://ksdcsmart.kerala.gov.in/\""
+        "r": "pass"
       },
       {
         "id": "sec.csp",
@@ -157,8 +157,7 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "fail",
-        "ev": "swiper 11.1.9"
+        "r": "pass"
       },
       {
         "id": "sec.safe_browsing",
@@ -170,18 +169,17 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "fail",
-        "ev": "1 critical violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "5 serious violation(s)"
+        "ev": "2 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "9 moderate/minor violation(s)"
+        "ev": "2 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -193,18 +191,16 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "2 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
         "r": "fail",
-        "ev": "no <h1>, heading levels skipped"
+        "ev": "no <h1>"
       },
       {
         "id": "a11y.labels",
-        "r": "fail",
-        "ev": "1 form control(s) without a label"
+        "r": "pass"
       },
       {
         "id": "a11y.skip_link",
@@ -212,41 +208,37 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "warn",
-        "ev": "tabindex=\"-1\" alongside outline:none"
+        "r": "pass"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "84/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "40/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "36975.526999999995ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.34"
+        "r": "na"
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "7.9MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -254,7 +246,7 @@
       },
       {
         "id": "content.copyright_year",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "content.last_updated",
@@ -283,8 +275,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/23 crawled link(s) broken (http://ksdcsmart.kerala.gov.in/CDS_Login)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -300,7 +291,8 @@
       },
       {
         "id": "content.title",
-        "r": "pass"
+        "r": "fail",
+        "ev": "missing <title>"
       },
       {
         "id": "content.meta_desc",
@@ -308,16 +300,16 @@
       },
       {
         "id": "content.favicon",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "2 console error(s): Access to fetch at 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit' from origin 'https://www.ksdcscst.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 503 ()"
       },
       {
         "id": "gigw.contact",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.feedback",
@@ -361,7 +353,7 @@
       },
       {
         "id": "gigw.rti",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.search",
@@ -399,7 +391,7 @@
       {
         "id": "id.sitemap_xml",
         "r": "fail",
-        "ev": "sitemap.xml returned 404"
+        "ev": "sitemap.xml returned 503"
       },
       {
         "id": "id.soft_404",
@@ -411,7 +403,8 @@
       },
       {
         "id": "id.charset_doctype",
-        "r": "pass"
+        "r": "fail",
+        "ev": "missing UTF-8 charset, HTML5 doctype"
       },
       {
         "id": "id.tech",
@@ -425,35 +418,22 @@
     "screenshot": {
       "desktop": "ksdcscst.webp",
       "mobile": "ksdcscst-m.webp",
-      "phash": "ff3f000200007fff"
+      "phash": "3fffffffffffffff"
     },
     "outlinks": []
   },
-  "score": {
-    "overall": 46,
-    "security": 28,
-    "accessibility": 40,
-    "content": 62,
-    "gigw": 18,
-    "performance": 77,
-    "identity": 88
-  },
-  "status": "down",
+  "score": null,
+  "status": "broken",
   "issues": [
     {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://ksdcsmart.kerala.gov.in/\""
+      "id": "avail.status",
+      "sev": "C",
+      "ev": "final response was 503"
     },
     {
-      "id": "sec.vuln_js",
-      "sev": "H",
-      "ev": "swiper 11.1.9"
-    },
-    {
-      "id": "a11y.axe_critical",
-      "sev": "H",
-      "ev": "1 critical violation(s)"
+      "id": "avail.blank",
+      "sev": "C",
+      "ev": "27 visible characters"
     },
     {
       "id": "content.last_updated",
@@ -461,14 +441,16 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/23 crawled link(s) broken (http://ksdcsmart.kerala.gov.in/CDS_Login)"
+      "id": "gigw.contact",
+      "sev": "H"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3346ms"
+      "id": "gigw.rti",
+      "sev": "H"
+    },
+    {
+      "id": "perf.viewport",
+      "sev": "H"
     },
     {
       "id": "sec.hsts",
@@ -481,17 +463,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "5 serious violation(s)"
+      "ev": "2 serious violation(s)"
     },
     {
-      "id": "a11y.contrast",
+      "id": "content.title",
       "sev": "M",
-      "ev": "2 low-contrast element(s)"
-    },
-    {
-      "id": "a11y.labels",
-      "sev": "M",
-      "ev": "1 form control(s) without a label"
+      "ev": "missing <title>"
     },
     {
       "id": "gigw.sitemap",
@@ -514,14 +491,8 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "36975.526999999995ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "7.9MB"
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -538,26 +509,25 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "9 moderate/minor violation(s)"
+      "ev": "2 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "no <h1>, heading levels skipped"
-    },
-    {
-      "id": "a11y.keyboard",
-      "sev": "L",
-      "ev": "tabindex=\"-1\" alongside outline:none"
+      "ev": "no <h1>"
     },
     {
       "id": "content.meta_desc",
       "sev": "L"
     },
     {
+      "id": "content.favicon",
+      "sev": "L"
+    },
+    {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "2 console error(s): Access to fetch at 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit' from origin 'https://www.ksdcscst.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 503 ()"
     },
     {
       "id": "gigw.feedback",
@@ -592,11 +562,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.34"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -612,7 +577,12 @@
     {
       "id": "id.sitemap_xml",
       "sev": "L",
-      "ev": "sitemap.xml returned 404"
+      "ev": "sitemap.xml returned 503"
+    },
+    {
+      "id": "id.charset_doctype",
+      "sev": "L",
+      "ev": "missing UTF-8 charset, HTML5 doctype"
     },
     {
       "id": "gigw.emblem",
@@ -624,6 +594,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-26",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-25",
       "up": false,
@@ -795,5 +770,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

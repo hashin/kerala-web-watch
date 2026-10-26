@@ -37,19 +37,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T23:45:17.293Z",
-    "run": "1792885424193",
+    "at": "2026-10-25T23:42:13.291Z",
+    "run": "1792971639923",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 31,
+      "performance": 33,
       "accessibility": 81,
       "best_practices": 73,
       "seo": 75
     },
     "axe": {
-      "critical": 2,
-      "serious": 11,
-      "moderate": 4,
+      "critical": 0,
+      "serious": 10,
+      "moderate": 5,
       "minor": 0
     },
     "crawl": {
@@ -172,18 +172,17 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "fail",
-        "ev": "2 critical violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "11 serious violation(s)"
+        "ev": "10 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "4 moderate/minor violation(s)"
+        "ev": "5 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -200,7 +199,8 @@
       },
       {
         "id": "a11y.headings",
-        "r": "pass"
+        "r": "fail",
+        "ev": "no <h1>"
       },
       {
         "id": "a11y.labels",
@@ -223,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "31/100"
+        "ev": "33/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "220569.22399999943ms"
+        "ev": "225652.92525000038ms"
       },
       {
         "id": "perf.cls",
@@ -295,7 +295,7 @@
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "5 broken image(s)"
+        "ev": "6 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -316,7 +316,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "13 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "14 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -423,7 +423,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-L1XGWRVKHS&amp;cx=c&amp;gtm=4e6am0h2, https://www.googletagmanager.com/gtag/js?id=UA-103783083-39"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-L1XGWRVKHS&amp;cx=c&amp;gtm=4e6al1, https://www.googletagmanager.com/gtag/js?id=UA-103783083-39"
       }
     ],
     "screenshot": {
@@ -452,9 +452,9 @@
     ]
   },
   "score": {
-    "overall": 43,
+    "overall": 47,
     "security": 38,
-    "accessibility": 54,
+    "accessibility": 70,
     "content": 18,
     "gigw": 8,
     "performance": 66,
@@ -471,11 +471,6 @@
       "id": "sec.vuln_js",
       "sev": "H",
       "ev": "bootstrap 3.3.7, bootstrap 3.4.1"
-    },
-    {
-      "id": "a11y.axe_critical",
-      "sev": "H",
-      "ev": "2 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -503,7 +498,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "11 serious violation(s)"
+      "ev": "10 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -539,7 +534,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "220569.22399999943ms"
+      "ev": "225652.92525000038ms"
     },
     {
       "id": "perf.weight",
@@ -566,7 +561,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "4 moderate/minor violation(s)"
+      "ev": "5 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "no <h1>"
     },
     {
       "id": "a11y.keyboard",
@@ -576,7 +576,7 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "5 broken image(s)"
+      "ev": "6 broken image(s)"
     },
     {
       "id": "content.meta_desc",
@@ -585,7 +585,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "13 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "14 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.feedback",
@@ -636,10 +636,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-L1XGWRVKHS&amp;cx=c&amp;gtm=4e6am0h2, https://www.googletagmanager.com/gtag/js?id=UA-103783083-39"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-L1XGWRVKHS&amp;cx=c&amp;gtm=4e6al1, https://www.googletagmanager.com/gtag/js?id=UA-103783083-39"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-26",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-10-25",
       "up": true,
@@ -811,5 +816,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T23:40:03.228Z",
-    "run": "1792885133710",
+    "at": "2026-10-25T23:36:14.411Z",
+    "run": "1792971281092",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 46,
+      "performance": 53,
       "accessibility": 93,
       "best_practices": 92,
       "seo": 92
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4486ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -216,12 +217,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "46/100"
+        "ev": "53/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10975.393999999998ms"
+        "ev": "9656.488000000001ms"
       },
       {
         "id": "perf.cls",
@@ -452,6 +453,11 @@
       "ev": "www.keralatourism.org"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "4486ms"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
       "ev": "4 serious violation(s)"
@@ -484,7 +490,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10975.393999999998ms"
+      "ev": "9656.488000000001ms"
     },
     {
       "id": "perf.weight",
@@ -554,6 +560,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-26",
+      "up": true,
+      "score": 71
+    },
     {
       "d": "2026-10-25",
       "up": true,
@@ -725,5 +736,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

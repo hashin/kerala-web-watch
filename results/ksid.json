@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T23:48:41.669Z",
-    "run": "1792885677374",
+    "at": "2026-10-25T23:37:31.038Z",
+    "run": "1792971408472",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 31,
@@ -97,7 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3203ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -228,12 +229,12 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "18843.966ms"
+        "ev": "18936.643999999993ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "1.00"
+        "ev": "0.97"
       },
       {
         "id": "perf.weight",
@@ -509,6 +510,11 @@
       "sev": "H"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3203ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -550,7 +556,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "18843.966ms"
+      "ev": "18936.643999999993ms"
     },
     {
       "id": "perf.weight",
@@ -629,7 +635,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "1.00"
+      "ev": "0.97"
     },
     {
       "id": "perf.images",
@@ -641,6 +647,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-26",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-10-25",
       "up": true,
@@ -812,5 +823,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

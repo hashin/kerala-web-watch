@@ -35,15 +35,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T23:55:15.199Z",
-    "run": "1792886094097",
+    "at": "2026-10-25T23:49:58.208Z",
+    "run": "1792972177347",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 39,
-      "accessibility": 76,
-      "best_practices": 100,
-      "seo": 67
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 2,
       "serious": 33,
@@ -53,7 +48,7 @@
     "crawl": {
       "pages": 7,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -216,23 +211,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "76/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "39/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "11125.0955ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.31"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -245,11 +236,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -283,8 +274,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/7 crawled link(s) broken (https://www.kerala.gov.in/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -458,15 +448,15 @@
     ]
   },
   "score": {
-    "overall": 46,
+    "overall": 50,
     "security": 56,
     "accessibility": 40,
-    "content": 36,
+    "content": 46,
     "gigw": 0,
-    "performance": 77,
+    "performance": 95,
     "identity": 92
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
     {
       "id": "sec.cert_expiry",
@@ -492,11 +482,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-container"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/7 crawled link(s) broken (https://www.kerala.gov.in/)"
     },
     {
       "id": "gigw.contact",
@@ -545,11 +530,6 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "11125.0955ms"
     },
     {
       "id": "perf.weight",
@@ -608,15 +588,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.31"
-    },
-    {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -635,6 +606,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-26",
+      "up": true,
+      "score": 50
+    },
     {
       "d": "2026-10-25",
       "up": true,
@@ -806,5 +782,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T23:48:55.750Z",
-    "run": "1792885683330",
+    "at": "2026-10-25T23:44:32.111Z",
+    "run": "1792971807619",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 54,
       "accessibility": 75,
       "best_practices": 96,
       "seo": 75
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 2,
-      "broken": 2
+      "broken": 3
     },
     "tech": {
       "cms": null,
@@ -220,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "54/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11276.895500000002ms"
+        "ev": "11073.359499999997ms"
       },
       {
         "id": "perf.cls",
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://www.ktdc.com/bolgatty-palace)"
       },
       {
         "id": "content.broken_pdfs",
@@ -311,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "28 console error(s): Connecting to 'https://fonts.googleapis.com/css?family=Prata&display=swap' violates the following Content Security Policy directive: \"connect-src 'self' https://bookingjini.info https://kernel.bookingjini.com https://stats.g.doubleclick.net https://www.google-analytics.com https://maps.googleapis.com https://maps.gstatic.com\". The action has been blocked."
+        "ev": "28 console error(s): Connecting to 'https://fonts.googleapis.com/css2?family=Manrope:wght@200;400&display=swap' violates the following Content Security Policy directive: \"connect-src 'self' https://bookingjini.info https://kernel.bookingjini.com https://stats.g.doubleclick.net https://www.google-analytics.com https://maps.googleapis.com https://maps.gstatic.com\". The action has been blocked."
       },
       {
         "id": "gigw.contact",
@@ -469,10 +470,10 @@
     ]
   },
   "score": {
-    "overall": 58,
+    "overall": 56,
     "security": 90,
     "accessibility": 40,
-    "content": 32,
+    "content": 22,
     "gigw": 32,
     "performance": 81,
     "identity": 76
@@ -493,6 +494,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://www.ktdc.com/bolgatty-palace)"
     },
     {
       "id": "id.gov_domain",
@@ -547,7 +553,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11276.895500000002ms"
+      "ev": "11073.359499999997ms"
     },
     {
       "id": "perf.weight",
@@ -576,7 +582,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "28 console error(s): Connecting to 'https://fonts.googleapis.com/css?family=Prata&display=swap' violates the following Content Security Policy directive: \"connect-src 'self' https://bookingjini.info https://kernel.bookingjini.com https://stats.g.doubleclick.net https://www.google-analytics.com https://maps.googleapis.com https://maps.gstatic.com\". The action has been blocked."
+      "ev": "28 console error(s): Connecting to 'https://fonts.googleapis.com/css2?family=Manrope:wght@200;400&display=swap' violates the following Content Security Policy directive: \"connect-src 'self' https://bookingjini.info https://kernel.bookingjini.com https://stats.g.doubleclick.net https://www.google-analytics.com https://maps.googleapis.com https://maps.gstatic.com\". The action has been blocked."
     },
     {
       "id": "gigw.terms",
@@ -626,6 +632,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-26",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-10-25",
       "up": true,
@@ -797,5 +808,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

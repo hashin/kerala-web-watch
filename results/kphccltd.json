@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-25T00:06:59.337Z",
-    "run": "1792886760153",
+    "at": "2026-10-25T23:57:20.752Z",
+    "run": "1792972576882",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 44,
+      "performance": 42,
       "accessibility": 84,
       "best_practices": 92,
       "seo": 75
     },
     "axe": {
       "critical": 0,
-      "serious": 4,
+      "serious": 3,
       "moderate": 19,
       "minor": 10
     },
@@ -119,8 +119,8 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "7 days left"
+        "r": "fail",
+        "ev": "6 days left"
       },
       {
         "id": "sec.tls_version",
@@ -175,7 +175,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "4 serious violation(s)"
+        "ev": "3 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "44/100"
+        "ev": "42/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "25770.125000000015ms"
+        "ev": "24351.111500000006ms"
       },
       {
         "id": "perf.cls",
@@ -503,8 +503,8 @@
     ]
   },
   "score": {
-    "overall": 61,
-    "security": 46,
+    "overall": 58,
+    "security": 36,
     "accessibility": 70,
     "content": 56,
     "gigw": 36,
@@ -516,7 +516,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "7 days left"
+      "ev": "6 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -541,7 +541,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "4 serious violation(s)"
+      "ev": "3 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -567,7 +567,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "25770.125000000015ms"
+      "ev": "24351.111500000006ms"
     },
     {
       "id": "perf.weight",
@@ -636,6 +636,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-26",
+      "up": true,
+      "score": 58
+    },
     {
       "d": "2026-10-25",
       "up": true,
@@ -807,5 +812,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

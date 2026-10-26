@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-25T00:00:09.621Z",
-    "run": "1792886361015",
+    "at": "2026-10-25T23:52:33.657Z",
+    "run": "1792972306338",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 0,
@@ -46,7 +46,7 @@
     },
     "axe": {
       "critical": 4,
-      "serious": 16,
+      "serious": 15,
       "moderate": 10,
       "minor": 0
     },
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "3772ms"
+        "ev": "3731ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -159,7 +159,7 @@
       {
         "id": "sec.vuln_js",
         "r": "fail",
-        "ev": "jquery 1.4.2, jquery 2.2.3"
+        "ev": "jquery 1.4.2, jquery 2.2.3, bootstrap 3.3.6"
       },
       {
         "id": "sec.safe_browsing",
@@ -177,7 +177,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "16 serious violation(s)"
+        "ev": "15 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -196,7 +196,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "4 low-contrast element(s)"
+        "ev": "3 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -293,7 +293,7 @@
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "21 broken image(s)"
+        "ev": "20 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -314,7 +314,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "45 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+        "ev": "43 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
@@ -388,11 +388,11 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "28 days left"
+        "ev": "27 days left"
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "id.robots",
@@ -428,7 +428,7 @@
     "screenshot": {
       "desktop": "government-polytechnic-college-ezhukone.webp",
       "mobile": "government-polytechnic-college-ezhukone-m.webp",
-      "phash": "0000ffffffffff9f"
+      "phash": "ffffffffe7ffffff"
     },
     "outlinks": [
       {
@@ -539,7 +539,7 @@
     "content": 0,
     "gigw": 12,
     "performance": 86,
-    "identity": 48
+    "identity": 52
   },
   "status": "poor",
   "issues": [
@@ -551,7 +551,7 @@
     {
       "id": "sec.vuln_js",
       "sev": "H",
-      "ev": "jquery 1.4.2, jquery 2.2.3"
+      "ev": "jquery 1.4.2, jquery 2.2.3, bootstrap 3.3.6"
     },
     {
       "id": "a11y.axe_critical",
@@ -585,12 +585,12 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "28 days left"
+      "ev": "27 days left"
     },
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "3772ms"
+      "ev": "3731ms"
     },
     {
       "id": "sec.hsts",
@@ -603,7 +603,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "16 serious violation(s)"
+      "ev": "15 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -613,7 +613,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "4 low-contrast element(s)"
+      "ev": "3 low-contrast element(s)"
     },
     {
       "id": "content.copyright_year",
@@ -675,7 +675,7 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "21 broken image(s)"
+      "ev": "20 broken image(s)"
     },
     {
       "id": "content.meta_desc",
@@ -684,7 +684,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "45 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      "ev": "43 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
@@ -719,10 +719,6 @@
       "sev": "L"
     },
     {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
       "id": "id.robots",
       "sev": "L",
       "ev": "robots.txt returned 404"
@@ -742,6 +738,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-26",
+      "up": true,
+      "score": 33
+    },
     {
       "d": "2026-10-25",
       "up": true,
@@ -888,5 +889,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
