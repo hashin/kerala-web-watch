@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-25T23:44:32.111Z",
-    "run": "1792971807619",
+    "at": "2026-10-27T00:58:31.645Z",
+    "run": "1793062667098",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 54,
+      "performance": 55,
       "accessibility": 75,
       "best_practices": 96,
       "seo": 75
     },
     "axe": {
       "critical": 1,
-      "serious": 81,
+      "serious": 82,
       "moderate": 13,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 2,
-      "broken": 3
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -173,7 +173,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "81 serious violation(s)"
+        "ev": "82 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -220,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "54/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11073.359499999997ms"
+        "ev": "15415.5025ms"
       },
       {
         "id": "perf.cls",
@@ -281,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://www.ktdc.com/bolgatty-palace)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -312,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "28 console error(s): Connecting to 'https://fonts.googleapis.com/css2?family=Manrope:wght@200;400&display=swap' violates the following Content Security Policy directive: \"connect-src 'self' https://bookingjini.info https://kernel.bookingjini.com https://stats.g.doubleclick.net https://www.google-analytics.com https://maps.googleapis.com https://maps.gstatic.com\". The action has been blocked."
+        "ev": "28 console error(s): Connecting to 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' violates the following Content Security Policy directive: \"connect-src 'self' https://bookingjini.info https://kernel.bookingjini.com https://stats.g.doubleclick.net https://www.google-analytics.com https://maps.googleapis.com https://maps.gstatic.com\". The action has been blocked."
       },
       {
         "id": "gigw.contact",
@@ -470,10 +469,10 @@
     ]
   },
   "score": {
-    "overall": 56,
+    "overall": 58,
     "security": 90,
     "accessibility": 40,
-    "content": 22,
+    "content": 32,
     "gigw": 32,
     "performance": 81,
     "identity": 76
@@ -496,11 +495,6 @@
       "ev": "ml-user"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://www.ktdc.com/bolgatty-palace)"
-    },
-    {
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "www.ktdc.com"
@@ -512,7 +506,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "81 serious violation(s)"
+      "ev": "82 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -553,7 +547,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11073.359499999997ms"
+      "ev": "15415.5025ms"
     },
     {
       "id": "perf.weight",
@@ -582,7 +576,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "28 console error(s): Connecting to 'https://fonts.googleapis.com/css2?family=Manrope:wght@200;400&display=swap' violates the following Content Security Policy directive: \"connect-src 'self' https://bookingjini.info https://kernel.bookingjini.com https://stats.g.doubleclick.net https://www.google-analytics.com https://maps.googleapis.com https://maps.gstatic.com\". The action has been blocked."
+      "ev": "28 console error(s): Connecting to 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' violates the following Content Security Policy directive: \"connect-src 'self' https://bookingjini.info https://kernel.bookingjini.com https://stats.g.doubleclick.net https://www.google-analytics.com https://maps.googleapis.com https://maps.gstatic.com\". The action has been blocked."
     },
     {
       "id": "gigw.terms",
@@ -632,6 +626,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-27",
+      "up": true,
+      "score": 58
+    },
     {
       "d": "2026-10-26",
       "up": true,
@@ -808,5 +807,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-23T00:22:58.831Z",
-    "run": "1792714940113",
+    "at": "2026-10-27T01:10:30.554Z",
+    "run": "1793063390064",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 67,
+      "performance": 62,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 85
@@ -54,8 +54,8 @@
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 0,
-      "broken": 0
+      "pdfs": 1,
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "67/100"
+        "ev": "62/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "5862.701000000001ms"
+        "ev": "11031.114000000001ms"
       },
       {
         "id": "perf.cls",
@@ -285,7 +285,8 @@
       },
       {
         "id": "content.broken_pdfs",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 linked PDF(s) 404: https://irittymunicipality.lsgkerala.gov.in/ml/index.php/system/files/2026-05/%E0%B4%87%E0%B4%B0%E0%B4%BF%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B4%BF%20%E0%B4%A8%E0%B4%97%E0%B4%B0%E0%B4%B8%E0%B4%AD%20%E0%B4%AA%E0%B5%8C%E0%B4%B0%E0%B4%BE%E0%B4%B5%E0%B4%95%E0%B4%BE%E0%B4%B6%20%E0%B4%B0%E0%B5%87%E0%B4%96.pdf"
       },
       {
         "id": "content.broken_images",
@@ -561,10 +562,10 @@
     ]
   },
   "score": {
-    "overall": 69,
+    "overall": 67,
     "security": 76,
     "accessibility": 70,
-    "content": 56,
+    "content": 46,
     "gigw": 40,
     "performance": 81,
     "identity": 96
@@ -597,6 +598,11 @@
       "ev": "3 low-contrast element(s)"
     },
     {
+      "id": "content.broken_pdfs",
+      "sev": "M",
+      "ev": "1 linked PDF(s) 404: https://irittymunicipality.lsgkerala.gov.in/ml/index.php/system/files/2026-05/%E0%B4%87%E0%B4%B0%E0%B4%BF%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B4%BF%20%E0%B4%A8%E0%B4%97%E0%B4%B0%E0%B4%B8%E0%B4%AD%20%E0%B4%AA%E0%B5%8C%E0%B4%B0%E0%B4%BE%E0%B4%B5%E0%B4%95%E0%B4%BE%E0%B4%B6%20%E0%B4%B0%E0%B5%87%E0%B4%96.pdf"
+    },
+    {
       "id": "gigw.sitemap",
       "sev": "M"
     },
@@ -615,7 +621,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "5862.701000000001ms"
+      "ev": "11031.114000000001ms"
     },
     {
       "id": "perf.weight",
@@ -676,6 +682,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-27",
+      "up": true,
+      "score": 67
+    },
     {
       "d": "2026-10-26",
       "up": true,
@@ -857,5 +868,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

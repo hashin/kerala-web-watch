@@ -35,15 +35,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-01T01:25:55.552Z",
-    "run": "1790817852337",
+    "at": "2026-10-27T01:07:48.095Z",
+    "run": "1793063226500",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 54,
-      "accessibility": 66,
-      "best_practices": 69,
-      "seo": 75
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 7,
       "serious": 45,
@@ -53,7 +48,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 4,
-      "broken": 2
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -215,27 +210,24 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "66/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "54/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "66269.48550000001ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "43.8MB"
+        "ev": "21.9MB"
       },
       {
         "id": "perf.viewport",
@@ -243,11 +235,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -286,8 +278,7 @@
       },
       {
         "id": "content.broken_pdfs",
-        "r": "fail",
-        "ev": "2 linked PDF(s) 404: https://kase.in/assets/admin/newsimages/attach/nattach_1889542170.pdf, https://kase.in/assets/admin/notificationattach/notify_1699923957.pdf"
+        "r": "pass"
       },
       {
         "id": "content.broken_images",
@@ -312,7 +303,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "30 console error(s): Cannot read properties of null (reading 'addEventListener')"
+        "ev": "23 console error(s): Failed to load resource: net::ERR_CERT_DATE_INVALID"
       },
       {
         "id": "gigw.contact",
@@ -492,12 +483,12 @@
     ]
   },
   "score": {
-    "overall": 34,
+    "overall": 38,
     "security": 4,
     "accessibility": 52,
-    "content": 32,
+    "content": 42,
     "gigw": 12,
-    "performance": 66,
+    "performance": 90,
     "identity": 68
   },
   "status": "poor",
@@ -564,11 +555,6 @@
       "ev": "<marquee"
     },
     {
-      "id": "content.broken_pdfs",
-      "sev": "M",
-      "ev": "2 linked PDF(s) 404: https://kase.in/assets/admin/newsimages/attach/nattach_1889542170.pdf, https://kase.in/assets/admin/notificationattach/notify_1699923957.pdf"
-    },
-    {
       "id": "gigw.privacy",
       "sev": "M"
     },
@@ -585,18 +571,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "66269.48550000001ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "43.8MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "ev": "21.9MB"
     },
     {
       "id": "sec.csp",
@@ -632,7 +609,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "30 console error(s): Cannot read properties of null (reading 'addEventListener')"
+      "ev": "23 console error(s): Failed to load resource: net::ERR_CERT_DATE_INVALID"
     },
     {
       "id": "gigw.feedback",
@@ -663,10 +640,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -690,6 +663,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-27",
+      "up": true,
+      "score": 38
+    },
     {
       "d": "2026-10-26",
       "up": true,
@@ -861,5 +839,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

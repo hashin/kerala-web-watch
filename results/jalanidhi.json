@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-25T23:53:12.267Z",
-    "run": "1792972339413",
+    "at": "2026-10-27T01:10:07.630Z",
+    "run": "1793063354726",
     "vantage": "gh-us",
     "lighthouse": null,
     "axe": {
@@ -302,7 +302,8 @@
       },
       {
         "id": "content.console_errors",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 console error(s): Refused to apply style from 'https://static.zohocdn.com/analytics/v3_zr/thirdparty/zaclient/css/vendor_legacy.undefined.css' because its MIME type ('application/json') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       },
       {
         "id": "gigw.contact",
@@ -410,7 +411,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e6al1, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e6an1, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
       }
     ],
     "screenshot": {
@@ -468,15 +469,15 @@
     ]
   },
   "score": {
-    "overall": 50,
+    "overall": 49,
     "security": 28,
     "accessibility": 30,
-    "content": 66,
+    "content": 62,
     "gigw": 52,
     "performance": 90,
     "identity": 88
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -571,6 +572,11 @@
       "sev": "L"
     },
     {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "1 console error(s): Refused to apply style from 'https://static.zohocdn.com/analytics/v3_zr/thirdparty/zaclient/css/vendor_legacy.undefined.css' because its MIME type ('application/json') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+    },
+    {
       "id": "gigw.feedback",
       "sev": "L"
     },
@@ -624,10 +630,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e6al1, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-D5D8GZZ2Z3&amp;cx=c&amp;gtm=4e6an1, https://www.googletagmanager.com/gtag/js?id=UA-110897288-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-27",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-10-26",
       "up": true,
@@ -804,5 +815,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

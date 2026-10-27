@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-25T23:53:42.881Z",
-    "run": "1792972381685",
+    "at": "2026-10-27T01:16:13.778Z",
+    "run": "1793063732367",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 59,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -227,7 +227,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9183.7755ms"
+        "ev": "9288.4925ms"
       },
       {
         "id": "perf.cls",
@@ -282,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (http://atholipanchayat.lsgkerala.gov.in/node/0e6df330-00a0-426b-b31b-793b01e6deaf)"
       },
       {
         "id": "content.broken_pdfs",
@@ -558,6 +559,11 @@
       "ev": "ml-user"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (http://atholipanchayat.lsgkerala.gov.in/node/0e6df330-00a0-426b-b31b-793b01e6deaf)"
+    },
+    {
       "id": "gigw.rti",
       "sev": "H"
     },
@@ -595,7 +601,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9183.7755ms"
+      "ev": "9288.4925ms"
     },
     {
       "id": "perf.weight",
@@ -672,6 +678,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-27",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-26",
       "up": false,
@@ -843,5 +854,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

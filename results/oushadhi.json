@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-25T23:39:21.670Z",
-    "run": "1792971464424",
+    "at": "2026-10-27T01:04:37.584Z",
+    "run": "1793063019341",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 49,
+      "accessibility": 37,
+      "best_practices": 77,
+      "seo": 67
+    },
     "axe": {
       "critical": 11,
       "serious": 15,
@@ -48,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 2
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -208,19 +213,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "37/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "49/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "27339.244ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -233,11 +241,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -272,8 +280,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "2/30 crawled link(s) broken (https://www.oushadhi.org/about-us, https://www.oushadhi.org/product/ayush-kwath)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -282,7 +289,7 @@
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "3 broken image(s)"
+        "ev": "2 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -303,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "7 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+        "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
@@ -446,12 +453,12 @@
     ]
   },
   "score": {
-    "overall": 47,
+    "overall": 46,
     "security": 48,
     "accessibility": 46,
-    "content": 28,
+    "content": 38,
     "gigw": 18,
-    "performance": 90,
+    "performance": 66,
     "identity": 72
   },
   "status": "poor",
@@ -475,11 +482,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "2/30 crawled link(s) broken (https://www.oushadhi.org/about-us, https://www.oushadhi.org/product/ayush-kwath)"
     },
     {
       "id": "id.gov_domain",
@@ -535,9 +537,18 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "27339.244ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "18.0MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -559,7 +570,7 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "3 broken image(s)"
+      "ev": "2 broken image(s)"
     },
     {
       "id": "content.meta_desc",
@@ -568,7 +579,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "7 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
@@ -603,6 +614,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -626,6 +641,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-27",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-10-26",
       "up": true,
@@ -802,5 +822,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

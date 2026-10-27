@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-25T23:57:20.752Z",
-    "run": "1792972576882",
+    "at": "2026-10-27T01:15:48.685Z",
+    "run": "1793063684049",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 42,
+      "performance": 41,
       "accessibility": 84,
       "best_practices": 92,
       "seo": 75
     },
     "axe": {
       "critical": 0,
-      "serious": 3,
+      "serious": 4,
       "moderate": 19,
       "minor": 10
     },
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3663ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -120,7 +121,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "fail",
-        "ev": "6 days left"
+        "ev": "5 days left"
       },
       {
         "id": "sec.tls_version",
@@ -175,7 +176,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "3 serious violation(s)"
+        "ev": "4 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -221,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "42/100"
+        "ev": "41/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "24351.111500000006ms"
+        "ev": "23571.601999999995ms"
       },
       {
         "id": "perf.cls",
@@ -516,7 +517,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "6 days left"
+      "ev": "5 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -539,9 +540,14 @@
       "ev": "ml-"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3663ms"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "3 serious violation(s)"
+      "ev": "4 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -567,7 +573,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "24351.111500000006ms"
+      "ev": "23571.601999999995ms"
     },
     {
       "id": "perf.weight",
@@ -636,6 +642,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-27",
+      "up": true,
+      "score": 58
+    },
     {
       "d": "2026-10-26",
       "up": true,
@@ -812,5 +823,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

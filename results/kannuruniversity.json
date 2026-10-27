@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T00:02:30.725Z",
-    "run": "1792800081746",
+    "at": "2026-10-27T00:51:50.813Z",
+    "run": "1793062229856",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 34,
+      "performance": 33,
       "accessibility": 66,
       "best_practices": 92,
       "seo": 82
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 11,
-      "broken": 3
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -187,7 +187,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"zxx\"> vs. 64% Malayalam content"
+        "ev": "<html lang=\"zxx\"> vs. 56% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -225,22 +225,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "34/100"
+        "ev": "33/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "26400.907000000007ms"
+        "ev": "29214.214500000006ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.85"
+        "ev": "0.95"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "49.9MB"
+        "ev": "51.0MB"
       },
       {
         "id": "perf.viewport",
@@ -275,7 +275,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-caption"
+        "ev": "ml-user"
       },
       {
         "id": "content.obsolete_tech",
@@ -288,7 +288,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "2/30 crawled link(s) broken (https://www.kannuruniversity.ac.in/ml/about/all-dignitaries/pro-chancellor/, http://officialportal.kannuruniversity.ac.in/enquiry/)"
+        "ev": "1/30 crawled link(s) broken (http://officialportal.kannuruniversity.ac.in/enquiry/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -430,7 +430,7 @@
     "screenshot": {
       "desktop": "kannuruniversity.webp",
       "mobile": "kannuruniversity-m.webp",
-      "phash": "00ffc2fe330000ff"
+      "phash": "00fffe1a0e0b1eff"
     },
     "outlinks": [
       {
@@ -563,7 +563,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"zxx\"> vs. 64% Malayalam content"
+      "ev": "<html lang=\"zxx\"> vs. 56% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -573,12 +573,12 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-caption"
+      "ev": "ml-user"
     },
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "2/30 crawled link(s) broken (https://www.kannuruniversity.ac.in/ml/about/all-dignitaries/pro-chancellor/, http://officialportal.kannuruniversity.ac.in/enquiry/)"
+      "ev": "1/30 crawled link(s) broken (http://officialportal.kannuruniversity.ac.in/enquiry/)"
     },
     {
       "id": "a11y.axe_serious",
@@ -624,12 +624,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "26400.907000000007ms"
+      "ev": "29214.214500000006ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "49.9MB"
+      "ev": "51.0MB"
     },
     {
       "id": "perf.tap_targets",
@@ -690,7 +690,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.85"
+      "ev": "0.95"
     },
     {
       "id": "perf.images",
@@ -720,6 +720,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-27",
+      "up": true,
+      "score": 43
+    },
     {
       "d": "2026-10-26",
       "up": true,
@@ -891,5 +896,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

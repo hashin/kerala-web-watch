@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T00:24:45.155Z",
-    "run": "1792801444391",
+    "at": "2026-10-27T01:10:03.995Z",
+    "run": "1793063356306",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 70,
+      "performance": 68,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 92
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 2
+      "broken": 0
     },
     "tech": {
       "cms": "WordPress 7.1.3",
@@ -155,7 +155,7 @@
       {
         "id": "sec.server_banner",
         "r": "fail",
-        "ev": "PHP/8.3.35"
+        "ev": "PHP/8.3.36"
       },
       {
         "id": "sec.vuln_js",
@@ -223,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "70/100"
+        "ev": "68/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8957.667000000001ms"
+        "ev": "10840.870999999996ms"
       },
       {
         "id": "perf.cls",
@@ -282,8 +282,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "2/30 crawled link(s) broken (https://www.gptcmdy.ac.in/departments/civil-engineering/, http://mail.gptcmdy.ac.in/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -387,7 +386,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.robots",
@@ -498,15 +497,15 @@
     ]
   },
   "score": {
-    "overall": 49,
+    "overall": 51,
     "security": 48,
     "accessibility": 50,
-    "content": 46,
+    "content": 56,
     "gigw": 0,
     "performance": 76,
     "identity": 100
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -527,11 +526,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-slider"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "2/30 crawled link(s) broken (https://www.gptcmdy.ac.in/departments/civil-engineering/, http://mail.gptcmdy.ac.in/)"
     },
     {
       "id": "gigw.contact",
@@ -578,7 +572,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8957.667000000001ms"
+      "ev": "10840.870999999996ms"
     },
     {
       "id": "perf.tap_targets",
@@ -595,7 +589,7 @@
     {
       "id": "sec.server_banner",
       "sev": "L",
-      "ev": "PHP/8.3.35"
+      "ev": "PHP/8.3.36"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -654,6 +648,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-27",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-10-26",
       "up": true,
@@ -810,5 +809,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

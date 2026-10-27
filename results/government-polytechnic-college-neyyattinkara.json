@@ -37,10 +37,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-25T23:51:25.075Z",
-    "run": "1792972211320",
+    "at": "2026-10-27T01:08:32.734Z",
+    "run": "1793063247420",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 47,
+      "accessibility": 85,
+      "best_practices": 73,
+      "seo": 92
+    },
     "axe": {
       "critical": 0,
       "serious": 13,
@@ -211,19 +216,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "85/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "47/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "4764.9895ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -236,11 +244,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -472,15 +480,15 @@
     ]
   },
   "score": {
-    "overall": 50,
+    "overall": 48,
     "security": 24,
     "accessibility": 74,
     "content": 46,
     "gigw": 2,
-    "performance": 95,
+    "performance": 71,
     "identity": 91
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -550,9 +558,18 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "4764.9895ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "7.5MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "id.tech",
@@ -620,6 +637,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
@@ -630,6 +651,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-27",
+      "up": true,
+      "score": 48
+    },
     {
       "d": "2026-10-26",
       "up": true,
@@ -786,5 +812,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

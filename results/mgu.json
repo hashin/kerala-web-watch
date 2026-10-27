@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T23:40:35.918Z",
-    "run": "1792885162507",
+    "at": "2026-10-27T00:53:54.722Z",
+    "run": "1793062379074",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 76,
+      "performance": 73,
       "accessibility": 100,
       "best_practices": 92,
       "seo": 92
     },
     "axe": {
-      "critical": 8,
-      "serious": 18,
-      "moderate": 56,
+      "critical": 0,
+      "serious": 1,
+      "moderate": 4,
       "minor": 0
     },
     "crawl": {
-      "pages": 30,
-      "pdfs": 8,
-      "broken": 0
+      "pages": 6,
+      "pdfs": 2,
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -127,12 +127,11 @@
       },
       {
         "id": "sec.hsts",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://ml.mgu.ac.in/\""
+        "r": "pass"
       },
       {
         "id": "sec.csp",
@@ -170,18 +169,17 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "fail",
-        "ev": "8 critical violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "18 serious violation(s)"
+        "ev": "1 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "56 moderate/minor violation(s)"
+        "ev": "4 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -189,8 +187,7 @@
       },
       {
         "id": "a11y.alt",
-        "r": "fail",
-        "ev": "2 image(s) missing alt text"
+        "r": "pass"
       },
       {
         "id": "a11y.contrast",
@@ -198,8 +195,7 @@
       },
       {
         "id": "a11y.headings",
-        "r": "fail",
-        "ev": "heading levels skipped"
+        "r": "pass"
       },
       {
         "id": "a11y.labels",
@@ -221,12 +217,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "76/100"
+        "ev": "73/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "4497.677ms"
+        "ev": "4619.406999999999ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +231,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "68.8MB"
+        "ev": "128.0MB"
       },
       {
         "id": "perf.viewport",
@@ -251,7 +247,7 @@
       },
       {
         "id": "content.copyright_year",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "content.last_updated",
@@ -282,7 +278,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/6 crawled link(s) broken (https://assist.mgu.ac.in/onlineservices/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -291,7 +288,7 @@
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "1 broken image(s)"
+        "ev": "2 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -312,11 +309,11 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "23 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+        "ev": "10 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.feedback",
@@ -324,7 +321,7 @@
       },
       {
         "id": "gigw.sitemap",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.privacy",
@@ -332,7 +329,7 @@
       },
       {
         "id": "gigw.terms",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.copyright_policy",
@@ -348,7 +345,7 @@
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.screen_reader",
@@ -360,11 +357,11 @@
       },
       {
         "id": "gigw.rti",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.search",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.ownership",
@@ -404,7 +401,7 @@
       },
       {
         "id": "id.canonical",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.charset_doctype",
@@ -416,94 +413,22 @@
       },
       {
         "id": "id.third_party",
-        "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-WJMEB38L75&amp;cx=c&amp;gtm=4e6al1h1, https://www.googletagmanager.com/gtag/js?id=UA-108617030-1"
+        "r": "pass"
       }
     ],
     "screenshot": {
       "desktop": "mgu.webp",
       "mobile": "mgu-m.webp",
-      "phash": "ff818181818187ff"
+      "phash": "feffff000000837f"
     },
-    "outlinks": [
-      {
-        "host": "ugc.ac.in",
-        "count": 1,
-        "texts": [
-          "e-Samadhaan"
-        ]
-      },
-      {
-        "host": "studyinindia.gov.in",
-        "count": 1,
-        "texts": [
-          "Study in India"
-        ]
-      },
-      {
-        "host": "mguaa.com",
-        "count": 1,
-        "texts": [
-          "Alumni"
-        ]
-      },
-      {
-        "host": "mgugreenlab.com",
-        "count": 1,
-        "texts": [
-          "MGU Green Lab"
-        ]
-      },
-      {
-        "host": "iqacmgu.org",
-        "count": 1,
-        "texts": [
-          "Faculty Portal"
-        ]
-      },
-      {
-        "host": "whatsapp.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "facebook.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "instagram.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "youtube.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "kerala.gov.in",
-        "count": 2,
-        "texts": [
-          "Higher Education Department",
-          "SOAFT"
-        ]
-      },
-      {
-        "host": "digitallocker.gov.in",
-        "count": 1,
-        "texts": [
-          "National Academic Depository"
-        ]
-      }
-    ]
+    "outlinks": []
   },
   "score": {
-    "overall": 51,
-    "security": 32,
-    "accessibility": 52,
-    "content": 38,
-    "gigw": 46,
+    "overall": 54,
+    "security": 42,
+    "accessibility": 86,
+    "content": 28,
+    "gigw": 0,
     "performance": 76,
     "identity": 100
   },
@@ -514,19 +439,9 @@
       "sev": "H"
     },
     {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://ml.mgu.ac.in/\""
-    },
-    {
       "id": "sec.vuln_js",
       "sev": "H",
       "ev": "jquery 3.3.1, jquery 1.10.2"
-    },
-    {
-      "id": "a11y.axe_critical",
-      "sev": "H",
-      "ev": "8 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -539,14 +454,26 @@
       "ev": "ml-"
     },
     {
-      "id": "a11y.axe_serious",
-      "sev": "M",
-      "ev": "18 serious violation(s)"
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/6 crawled link(s) broken (https://assist.mgu.ac.in/onlineservices/)"
     },
     {
-      "id": "a11y.alt",
+      "id": "gigw.contact",
+      "sev": "H"
+    },
+    {
+      "id": "gigw.rti",
+      "sev": "H"
+    },
+    {
+      "id": "sec.hsts",
+      "sev": "M"
+    },
+    {
+      "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "2 image(s) missing alt text"
+      "ev": "1 serious violation(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -554,7 +481,15 @@
       "ev": "<marquee"
     },
     {
+      "id": "gigw.sitemap",
+      "sev": "M"
+    },
+    {
       "id": "gigw.privacy",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.accessibility_statement",
       "sev": "M"
     },
     {
@@ -568,12 +503,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "4497.677ms"
+      "ev": "4619.406999999999ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "68.8MB"
+      "ev": "128.0MB"
     },
     {
       "id": "sec.csp",
@@ -587,17 +522,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "56 moderate/minor violation(s)"
-    },
-    {
-      "id": "a11y.headings",
-      "sev": "L",
-      "ev": "heading levels skipped"
+      "ev": "4 moderate/minor violation(s)"
     },
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "1 broken image(s)"
+      "ev": "2 broken image(s)"
     },
     {
       "id": "content.meta_desc",
@@ -606,10 +536,14 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "23 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      "ev": "10 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.terms",
       "sev": "L"
     },
     {
@@ -633,6 +567,10 @@
       "sev": "L"
     },
     {
+      "id": "gigw.search",
+      "sev": "L"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -641,12 +579,16 @@
       "sev": "I"
     },
     {
-      "id": "id.third_party",
-      "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-WJMEB38L75&amp;cx=c&amp;gtm=4e6al1h1, https://www.googletagmanager.com/gtag/js?id=UA-108617030-1"
+      "id": "id.canonical",
+      "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-27",
+      "up": true,
+      "score": 54
+    },
     {
       "d": "2026-10-26",
       "up": true,
@@ -818,5 +760,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

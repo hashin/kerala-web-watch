@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T23:39:33.938Z",
-    "run": "1792884938976",
+    "at": "2026-10-27T00:48:30.177Z",
+    "run": "1793061853846",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 53,
+      "performance": 52,
       "accessibility": 81,
       "best_practices": 73,
       "seo": 62
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 2,
-      "broken": 0
+      "broken": 6
     },
     "tech": {
       "cms": "WordPress 5.0.30",
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "5854ms"
+        "ev": "6287ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "53/100"
+        "ev": "52/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "15637.805999999999ms"
+        "ev": "17244.548499999997ms"
       },
       {
         "id": "perf.cls",
@@ -282,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "6/30 crawled link(s) broken (https://dhs.kerala.gov.in/en/climate-change-diseases/, https://dhs.kerala.gov.in/en/animal-bite/, https://dhs.kerala.gov.in/en/disaster-management/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -311,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "2 console error(s): Access to fetch at 'https://www.youtube.com/s/player/cbcfbf2f/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "2 console error(s): Access to fetch at 'https://www.youtube.com/s/player/dce23b30/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -453,10 +454,10 @@
     ]
   },
   "score": {
-    "overall": 48,
+    "overall": 45,
     "security": 46,
     "accessibility": 44,
-    "content": 52,
+    "content": 32,
     "gigw": 12,
     "performance": 66,
     "identity": 91
@@ -489,13 +490,18 @@
       "ev": "ml-IN"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "6/30 crawled link(s) broken (https://dhs.kerala.gov.in/en/climate-change-diseases/, https://dhs.kerala.gov.in/en/animal-bite/, https://dhs.kerala.gov.in/en/disaster-management/, ...)"
+    },
+    {
       "id": "gigw.contact",
       "sev": "H"
     },
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "5854ms"
+      "ev": "6287ms"
     },
     {
       "id": "sec.hsts",
@@ -535,7 +541,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "15637.805999999999ms"
+      "ev": "17244.548499999997ms"
     },
     {
       "id": "perf.weight",
@@ -572,7 +578,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "2 console error(s): Access to fetch at 'https://www.youtube.com/s/player/cbcfbf2f/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "2 console error(s): Access to fetch at 'https://www.youtube.com/s/player/dce23b30/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -617,6 +623,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-27",
+      "up": true,
+      "score": 45
+    },
     {
       "d": "2026-10-26",
       "up": true,
@@ -793,5 +804,5 @@
       "score": 45
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

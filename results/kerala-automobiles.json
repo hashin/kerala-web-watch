@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-25T23:33:14.911Z",
-    "run": "1792971150117",
+    "at": "2026-10-27T00:47:06.846Z",
+    "run": "1793061973554",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 72,
-      "accessibility": 77,
-      "best_practices": 69,
-      "seo": 83
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
     },
     "axe": {
       "critical": 5,
       "serious": 9,
-      "moderate": 9,
+      "moderate": 8,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
+      "pages": 1,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -116,15 +116,15 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.hsts",
@@ -179,7 +179,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "9 moderate/minor violation(s)"
+        "ev": "8 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -215,21 +215,20 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "77/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "72/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "4996.673ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -241,7 +240,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -278,7 +277,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1/1 crawled link(s) broken (https://keralaautomobilesltd.com/#)"
       },
       {
         "id": "content.broken_pdfs",
@@ -384,7 +384,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "id.robots",
@@ -393,12 +393,11 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.soft_404",
-        "r": "fail",
-        "ev": "a nonexistent path returned 200"
+        "r": "na"
       },
       {
         "id": "id.canonical",
@@ -446,6 +445,11 @@
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/1 crawled link(s) broken (https://keralaautomobilesltd.com/#)"
     },
     {
       "id": "gigw.contact",
@@ -509,9 +513,8 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "4996.673ms"
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -528,7 +531,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "9 moderate/minor violation(s)"
+      "ev": "8 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -580,18 +583,9 @@
       "sev": "L"
     },
     {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
       "id": "id.robots",
       "sev": "L",
       "ev": "Disallow: / for User-agent: *"
-    },
-    {
-      "id": "id.soft_404",
-      "sev": "L",
-      "ev": "a nonexistent path returned 200"
     },
     {
       "id": "id.charset_doctype",
@@ -608,6 +602,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-27",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-26",
       "up": false,
@@ -739,5 +738,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

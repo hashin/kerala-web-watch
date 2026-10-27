@@ -35,13 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-14T00:31:10.405Z",
-    "run": "1791937813312",
+    "at": "2026-10-27T00:43:03.988Z",
+    "run": "1793061723231",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 38,
+      "performance": 42,
       "accessibility": 76,
-      "best_practices": 92,
+      "best_practices": 88,
       "seo": 85
     },
     "axe": {
@@ -58,7 +58,7 @@
     "tech": {
       "cms": null,
       "server": null,
-      "jquery": "3.1.1"
+      "jquery": "3.7.1"
     },
     "checks": [
       {
@@ -155,8 +155,7 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "fail",
-        "ev": "jquery 3.1.1, bootstrap 4.0.0, jquery 1.8.3"
+        "r": "pass"
       },
       {
         "id": "sec.safe_browsing",
@@ -219,22 +218,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "38/100"
+        "ev": "42/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8241.985ms"
+        "ev": "9619.143ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.40"
+        "ev": "0.29"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "15.0MB"
+        "ev": "15.3MB"
       },
       {
         "id": "perf.viewport",
@@ -309,7 +308,8 @@
       },
       {
         "id": "content.console_errors",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 console error(s): e.indexOf is not a function"
       },
       {
         "id": "gigw.contact",
@@ -505,10 +505,10 @@
     ]
   },
   "score": {
-    "overall": 54,
-    "security": 60,
+    "overall": 59,
+    "security": 80,
     "accessibility": 46,
-    "content": 50,
+    "content": 46,
     "gigw": 42,
     "performance": 72,
     "identity": 68
@@ -518,11 +518,6 @@
     {
       "id": "sec.http_redirect",
       "sev": "H"
-    },
-    {
-      "id": "sec.vuln_js",
-      "sev": "H",
-      "ev": "jquery 3.1.1, bootstrap 4.0.0, jquery 1.8.3"
     },
     {
       "id": "a11y.axe_critical",
@@ -579,17 +574,22 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8241.985ms"
+      "ev": "9619.143ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "15.0MB"
+      "ev": "15.3MB"
     },
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
       "ev": "38 moderate/minor violation(s)"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "1 console error(s): e.indexOf is not a function"
     },
     {
       "id": "gigw.feedback",
@@ -622,7 +622,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.40"
+      "ev": "0.29"
     },
     {
       "id": "perf.images",
@@ -648,6 +648,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-27",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-10-26",
       "up": true,
@@ -819,5 +824,5 @@
       "score": 54
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

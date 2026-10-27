@@ -35,30 +35,30 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-25T23:51:11.015Z",
-    "run": "1792972243625",
+    "at": "2026-10-27T01:08:39.454Z",
+    "run": "1793063276221",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 34,
+      "accessibility": 83,
+      "best_practices": 73,
+      "seo": 85
     },
     "axe": {
-      "critical": 0,
-      "serious": 5,
-      "moderate": 5,
-      "minor": 0
+      "critical": 3,
+      "serious": 41,
+      "moderate": 27,
+      "minor": 13
     },
     "crawl": {
-      "pages": 0,
+      "pages": 30,
       "pdfs": 0,
       "broken": 0
     },
     "tech": {
-      "cms": null,
+      "cms": "WordPress 7.1.3",
       "server": "cloudflare",
-      "jquery": null
+      "jquery": "2.2.4"
     },
     "checks": [
       {
@@ -71,8 +71,7 @@
       },
       {
         "id": "avail.status",
-        "r": "fail",
-        "ev": "final response was 523"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
@@ -96,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3156ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -113,7 +111,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
@@ -141,7 +139,7 @@
       },
       {
         "id": "sec.xfo",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xcto",
@@ -149,7 +147,7 @@
       },
       {
         "id": "sec.referrer",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.server_banner",
@@ -157,7 +155,8 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "pass"
+        "r": "fail",
+        "ev": "jquery 2.2.4, jquery-ui 1.11.4, jquery-ui-dialog 1.11.4, bootstrap 3.3.6, jquery-validation 1.14.0, moment.js 2.11.0, swiper 8.3.2"
       },
       {
         "id": "sec.safe_browsing",
@@ -169,17 +168,18 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "pass"
+        "r": "fail",
+        "ev": "3 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "5 serious violation(s)"
+        "ev": "41 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "5 moderate/minor violation(s)"
+        "ev": "40 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -187,7 +187,8 @@
       },
       {
         "id": "a11y.alt",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
@@ -209,29 +210,32 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "pass"
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "83/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "34/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "47950.982500000006ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "fail",
+        "ev": "22.3MB"
       },
       {
         "id": "perf.viewport",
@@ -239,7 +243,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -247,7 +251,7 @@
       },
       {
         "id": "content.copyright_year",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "content.last_updated",
@@ -269,7 +273,8 @@
       },
       {
         "id": "content.obsolete_tech",
-        "r": "pass"
+        "r": "fail",
+        "ev": "<marquee"
       },
       {
         "id": "content.best_viewed",
@@ -301,20 +306,20 @@
       },
       {
         "id": "content.favicon",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 523 ()"
+        "ev": "13 console error(s): $ is not a function"
       },
       {
         "id": "gigw.contact",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.feedback",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.sitemap",
@@ -350,15 +355,15 @@
       },
       {
         "id": "gigw.help",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.rti",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.search",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.ownership",
@@ -382,7 +387,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.robots",
@@ -390,8 +395,7 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 523"
+        "r": "pass"
       },
       {
         "id": "id.soft_404",
@@ -399,7 +403,7 @@
       },
       {
         "id": "id.canonical",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.charset_doctype",
@@ -407,40 +411,94 @@
       },
       {
         "id": "id.tech",
-        "r": "pass"
+        "r": "pass",
+        "ev": "WordPress 7.1.3"
       },
       {
         "id": "id.third_party",
-        "r": "pass"
+        "r": "warn",
+        "ev": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
       }
     ],
     "screenshot": {
       "desktop": "giftres.webp",
       "mobile": "giftres-m.webp",
-      "phash": "ffff00000097f7f3"
+      "phash": "9fbf3c0c18187f3f"
     },
     "outlinks": [
       {
-        "host": "cloudflare.com",
-        "count": 2,
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "youtube.com",
+        "count": 4,
         "texts": [
-          "cloudflare.com",
-          "Additional    troubleshooting information here."
+          "Approaching the 16th Finance Commission- Managing Imbalances and Sensitivities",
+          "GIFT & KEA: Panel discussion on Kerala Economy: Directives for the future",
+          "GIFT RCBP Course Preview"
         ]
+      },
+      {
+        "host": "instagram.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "x.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "linkedin.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "tandfonline.com",
+        "count": 1,
+        "texts": [
+          "Innovation and Development"
+        ]
+      },
+      {
+        "host": "icsr.info",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "cusat.ac.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "nsdcindia.org",
+        "count": 1,
+        "texts": []
       }
     ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 50,
+    "security": 48,
+    "accessibility": 40,
+    "content": 42,
+    "gigw": 30,
+    "performance": 76,
+    "identity": 100
+  },
+  "status": "needs-work",
   "issues": [
     {
-      "id": "avail.status",
-      "sev": "C",
-      "ev": "final response was 523"
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "jquery 2.2.4, jquery-ui 1.11.4, jquery-ui-dialog 1.11.4, bootstrap 3.3.6, jquery-validation 1.14.0, moment.js 2.11.0, swiper 8.3.2"
     },
     {
-      "id": "sec.http_redirect",
-      "sev": "H"
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "3 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -453,31 +511,32 @@
       "ev": "ml-"
     },
     {
-      "id": "gigw.contact",
-      "sev": "H"
-    },
-    {
-      "id": "gigw.rti",
-      "sev": "H"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3156ms"
-    },
-    {
       "id": "sec.hsts",
+      "sev": "M"
+    },
+    {
+      "id": "sec.xfo",
       "sev": "M"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "5 serious violation(s)"
+      "ev": "41 serious violation(s)"
+    },
+    {
+      "id": "a11y.alt",
+      "sev": "M",
+      "ev": "1 image(s) missing alt text"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
       "ev": "3 low-contrast element(s)"
+    },
+    {
+      "id": "content.obsolete_tech",
+      "sev": "M",
+      "ev": "<marquee"
     },
     {
       "id": "gigw.sitemap",
@@ -500,8 +559,14 @@
       "sev": "M"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "47950.982500000006ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "22.3MB"
     },
     {
       "id": "sec.csp",
@@ -512,9 +577,13 @@
       "sev": "L"
     },
     {
+      "id": "sec.referrer",
+      "sev": "L"
+    },
+    {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "5 moderate/minor violation(s)"
+      "ev": "40 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -522,21 +591,18 @@
       "ev": "heading levels skipped"
     },
     {
-      "id": "content.meta_desc",
-      "sev": "L"
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
-      "id": "content.favicon",
+      "id": "content.meta_desc",
       "sev": "L"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 523 ()"
-    },
-    {
-      "id": "gigw.feedback",
-      "sev": "L"
+      "ev": "13 console error(s): $ is not a function"
     },
     {
       "id": "gigw.terms",
@@ -559,36 +625,25 @@
       "sev": "L"
     },
     {
-      "id": "gigw.help",
-      "sev": "L"
-    },
-    {
-      "id": "gigw.search",
-      "sev": "L"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
-    },
-    {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 523"
     },
     {
       "id": "gigw.emblem",
       "sev": "I"
     },
     {
-      "id": "id.canonical",
-      "sev": "I"
+      "id": "id.third_party",
+      "sev": "I",
+      "ev": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-27",
+      "up": true,
+      "score": 50
+    },
     {
       "d": "2026-10-26",
       "up": false,
@@ -765,5 +820,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

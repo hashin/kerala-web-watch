@@ -37,15 +37,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-02T01:34:57.354Z",
-    "run": "1790904341589",
+    "at": "2026-10-27T01:01:12.773Z",
+    "run": "1793062830649",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 60,
-      "accessibility": 82,
-      "best_practices": 100,
-      "seo": 85
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 0,
       "serious": 6,
@@ -54,8 +49,8 @@
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 1,
-      "broken": 25
+      "pdfs": 0,
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -97,8 +92,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "fail",
-        "ev": "8261ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -216,22 +210,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "82/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "60/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "23618.652000000002ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -244,11 +235,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -282,13 +273,12 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "24/30 crawled link(s) broken (https://chengannurmunicipality.lsgkerala.gov.in/en, https://chengannurmunicipality.lsgkerala.gov.in/ml, https://chengannurmunicipality.lsgkerala.gov.in/#, ...)"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://chengannurmunicipality.lsgkerala.gov.in/Localbody%20Map)"
       },
       {
         "id": "content.broken_pdfs",
-        "r": "fail",
-        "ev": "1 linked PDF(s) 404: https://chengannurmunicipality.lsgkerala.gov.in/ml/system/files/2025-07/MOTHERROLL_M04013019_001_FINAL_93277a653b72b5f5de3c5c453b0ff32d.pdf"
+        "r": "pass"
       },
       {
         "id": "content.broken_images",
@@ -552,12 +542,12 @@
     ]
   },
   "score": {
-    "overall": 60,
+    "overall": 64,
     "security": 76,
     "accessibility": 70,
-    "content": 26,
+    "content": 46,
     "gigw": 16,
-    "performance": 76,
+    "performance": 90,
     "identity": 96
   },
   "status": "needs-work",
@@ -580,16 +570,11 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "24/30 crawled link(s) broken (https://chengannurmunicipality.lsgkerala.gov.in/en, https://chengannurmunicipality.lsgkerala.gov.in/ml, https://chengannurmunicipality.lsgkerala.gov.in/#, ...)"
+      "ev": "1/30 crawled link(s) broken (https://chengannurmunicipality.lsgkerala.gov.in/Localbody%20Map)"
     },
     {
       "id": "gigw.rti",
       "sev": "H"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "8261ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -600,11 +585,6 @@
       "id": "a11y.contrast",
       "sev": "M",
       "ev": "3 low-contrast element(s)"
-    },
-    {
-      "id": "content.broken_pdfs",
-      "sev": "M",
-      "ev": "1 linked PDF(s) 404: https://chengannurmunicipality.lsgkerala.gov.in/ml/system/files/2025-07/MOTHERROLL_M04013019_001_FINAL_93277a653b72b5f5de3c5c453b0ff32d.pdf"
     },
     {
       "id": "gigw.sitemap",
@@ -621,11 +601,6 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "23618.652000000002ms"
     },
     {
       "id": "perf.weight",
@@ -680,16 +655,17 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-27",
+      "up": true,
+      "score": 64
+    },
     {
       "d": "2026-10-26",
       "up": true,
@@ -861,5 +837,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

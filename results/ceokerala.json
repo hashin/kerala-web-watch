@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T23:49:16.285Z",
-    "run": "1792885738025",
+    "at": "2026-10-27T00:54:03.816Z",
+    "run": "1793062388993",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 58,
+      "accessibility": 76,
+      "best_practices": 92,
+      "seo": 92
     },
     "axe": {
-      "critical": 0,
+      "critical": 4,
       "serious": 2,
-      "moderate": 2,
-      "minor": 0
+      "moderate": 22,
+      "minor": 5
     },
     "crawl": {
-      "pages": 0,
-      "pdfs": 0,
-      "broken": 0
+      "pages": 30,
+      "pdfs": 5,
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -71,8 +71,7 @@
       },
       {
         "id": "avail.status",
-        "r": "fail",
-        "ev": "final response was 500"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
@@ -88,8 +87,7 @@
       },
       {
         "id": "avail.blank",
-        "r": "fail",
-        "ev": "49 visible characters"
+        "r": "pass"
       },
       {
         "id": "avail.under_construction",
@@ -133,11 +131,12 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "pass"
+        "r": "fail",
+        "ev": "href=\"http://www.kerala.gov.in/\""
       },
       {
         "id": "sec.csp",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.xfo",
@@ -169,7 +168,8 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "pass"
+        "r": "fail",
+        "ev": "4 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
@@ -179,7 +179,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "2 moderate/minor violation(s)"
+        "ev": "27 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -196,7 +196,7 @@
       {
         "id": "a11y.headings",
         "r": "fail",
-        "ev": "no <h1>"
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -208,33 +208,35 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "pass"
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "76/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "58/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "9157.26325ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.tap_targets",
@@ -255,7 +257,7 @@
       },
       {
         "id": "content.stale_news",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "content.placeholder",
@@ -263,7 +265,8 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "pass"
+        "r": "fail",
+        "ev": "ml-user"
       },
       {
         "id": "content.obsolete_tech",
@@ -275,7 +278,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://sutharyam.ceo.kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -291,25 +295,24 @@
       },
       {
         "id": "content.title",
-        "r": "fail",
-        "ev": "missing <title>"
+        "r": "pass"
       },
       {
         "id": "content.meta_desc",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.favicon",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+        "ev": "12 console error(s): Loading the image 'https://www.googletagmanager.com/td?id=G-7WH4ZDGVFD&v=3&t=t&pid=2075030399&gtm=45je6aq0h2v9165721242za200zd9165721242xf1&seq=1&exp=115938465~115938468~118897920~118897930~120213116~120385422~120412526~120420415~120469145~120469153~121246026~121246034&dl=www.ceo.kerala.gov.in%2F&tdp=G-7WH4ZDGVFD;165721242;0;0;0&frm=0&rtg=165721242&slo=0&hlo=0&lst=3&bt=0&ct=3&z=0' violates the following Content Security Policy directive: \"img-src 'self' https://www.ceo.kerala.gov.in/ https://sec-kerala.s3.ap-south-1.amazonaws.com/ data: https://i.ytimg.com\". The action has been blocked."
       },
       {
         "id": "gigw.contact",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.feedback",
@@ -341,7 +344,7 @@
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.screen_reader",
@@ -353,11 +356,11 @@
       },
       {
         "id": "gigw.rti",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.search",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.ownership",
@@ -369,7 +372,7 @@
       },
       {
         "id": "gigw.emblem",
-        "r": "warn"
+        "r": "pass"
       },
       {
         "id": "id.gov_domain",
@@ -381,7 +384,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.robots",
@@ -401,8 +404,7 @@
       },
       {
         "id": "id.charset_doctype",
-        "r": "fail",
-        "ev": "missing HTML5 doctype"
+        "r": "pass"
       },
       {
         "id": "id.tech",
@@ -410,28 +412,74 @@
       },
       {
         "id": "id.third_party",
-        "r": "pass"
+        "r": "warn",
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-7WH4ZDGVFD"
       }
     ],
     "screenshot": {
       "desktop": "ceokerala.webp",
       "mobile": "ceokerala-m.webp",
-      "phash": "1fffffffffffffff"
+      "phash": "ff00000200ffffff"
     },
-    "outlinks": []
+    "outlinks": [
+      {
+        "host": "eci.gov.in",
+        "count": 10,
+        "texts": [
+          "NewSupplement-4 2026",
+          "Read more",
+          "Overseas Voters\n                            Single window for NRI voters\n                            Read more"
+        ]
+      },
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "instagram.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "youtube.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "x.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "india.gov.in",
+        "count": 1,
+        "texts": [
+          "Government of India"
+        ]
+      }
+    ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 64,
+    "security": 80,
+    "accessibility": 60,
+    "content": 46,
+    "gigw": 32,
+    "performance": 76,
+    "identity": 100
+  },
+  "status": "needs-work",
   "issues": [
     {
-      "id": "avail.status",
-      "sev": "C",
-      "ev": "final response was 500"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://www.kerala.gov.in/\""
     },
     {
-      "id": "avail.blank",
-      "sev": "C",
-      "ev": "49 visible characters"
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "4 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -439,16 +487,14 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "gigw.contact",
-      "sev": "H"
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-user"
     },
     {
-      "id": "gigw.rti",
-      "sev": "H"
-    },
-    {
-      "id": "perf.viewport",
-      "sev": "H"
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://sutharyam.ceo.kerala.gov.in/)"
     },
     {
       "id": "a11y.axe_serious",
@@ -456,20 +502,11 @@
       "ev": "2 serious violation(s)"
     },
     {
-      "id": "content.title",
-      "sev": "M",
-      "ev": "missing <title>"
-    },
-    {
       "id": "gigw.sitemap",
       "sev": "M"
     },
     {
       "id": "gigw.privacy",
-      "sev": "M"
-    },
-    {
-      "id": "gigw.accessibility_statement",
       "sev": "M"
     },
     {
@@ -481,35 +518,33 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "9157.26325ms"
+    },
+    {
       "id": "perf.tap_targets",
       "sev": "M"
     },
     {
-      "id": "sec.csp",
-      "sev": "L"
-    },
-    {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "2 moderate/minor violation(s)"
+      "ev": "27 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "no <h1>"
+      "ev": "heading levels skipped"
     },
     {
-      "id": "content.meta_desc",
-      "sev": "L"
-    },
-    {
-      "id": "content.favicon",
-      "sev": "L"
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+      "ev": "12 console error(s): Loading the image 'https://www.googletagmanager.com/td?id=G-7WH4ZDGVFD&v=3&t=t&pid=2075030399&gtm=45je6aq0h2v9165721242za200zd9165721242xf1&seq=1&exp=115938465~115938468~118897920~118897930~120213116~120385422~120412526~120420415~120469145~120469153~121246026~121246034&dl=www.ceo.kerala.gov.in%2F&tdp=G-7WH4ZDGVFD;165721242;0;0;0&frm=0&rtg=165721242&slo=0&hlo=0&lst=3&bt=0&ct=3&z=0' violates the following Content Security Policy directive: \"img-src 'self' https://www.ceo.kerala.gov.in/ https://sec-kerala.s3.ap-south-1.amazonaws.com/ data: https://i.ytimg.com\". The action has been blocked."
     },
     {
       "id": "gigw.feedback",
@@ -540,32 +575,25 @@
       "sev": "L"
     },
     {
-      "id": "gigw.search",
-      "sev": "L"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
     {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
-      "id": "id.charset_doctype",
-      "sev": "L",
-      "ev": "missing HTML5 doctype"
-    },
-    {
-      "id": "gigw.emblem",
-      "sev": "I"
-    },
-    {
       "id": "id.canonical",
       "sev": "I"
+    },
+    {
+      "id": "id.third_party",
+      "sev": "I",
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-7WH4ZDGVFD"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-27",
+      "up": true,
+      "score": 64
+    },
     {
       "d": "2026-10-26",
       "up": false,
@@ -742,5 +770,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

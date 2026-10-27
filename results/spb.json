@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-25T23:38:44.864Z",
-    "run": "1792971384847",
+    "at": "2026-10-27T00:54:38.724Z",
+    "run": "1793062326498",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 45,
-      "accessibility": 81,
-      "best_practices": 92,
-      "seo": 69
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
     },
     "axe": {
       "critical": 2,
-      "serious": 1,
+      "serious": 3,
       "moderate": 7,
       "minor": 1
     },
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "3794ms"
+        "ev": "4032ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -133,7 +133,7 @@
       {
         "id": "sec.mixed_content",
         "r": "fail",
-        "ev": "href=\"http://www.planspace.kerala.gov.in/\""
+        "ev": "href=\"http://spb.kerala.gov.in\""
       },
       {
         "id": "sec.csp",
@@ -158,7 +158,7 @@
       {
         "id": "sec.vuln_js",
         "r": "fail",
-        "ev": "chart.js 2.5.0, swiper 8.4.5"
+        "ev": "chart.js 2.5.0"
       },
       {
         "id": "sec.safe_browsing",
@@ -176,7 +176,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "1 serious violation(s)"
+        "ev": "3 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -194,7 +194,8 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "2 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -218,26 +219,25 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "81/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "45/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "44204.83300000001ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "18.4MB"
+        "ev": "18.2MB"
       },
       {
         "id": "perf.viewport",
@@ -314,7 +314,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "12 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+        "ev": "29 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
       },
       {
         "id": "gigw.contact",
@@ -479,12 +479,12 @@
     ]
   },
   "score": {
-    "overall": 45,
+    "overall": 43,
     "security": 32,
-    "accessibility": 40,
+    "accessibility": 30,
     "content": 34,
     "gigw": 32,
-    "performance": 66,
+    "performance": 76,
     "identity": 100
   },
   "status": "poor",
@@ -496,12 +496,12 @@
     {
       "id": "sec.mixed_content",
       "sev": "H",
-      "ev": "href=\"http://www.planspace.kerala.gov.in/\""
+      "ev": "href=\"http://spb.kerala.gov.in\""
     },
     {
       "id": "sec.vuln_js",
       "sev": "H",
-      "ev": "chart.js 2.5.0, swiper 8.4.5"
+      "ev": "chart.js 2.5.0"
     },
     {
       "id": "a11y.axe_critical",
@@ -526,17 +526,22 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "3794ms"
+      "ev": "4032ms"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "1 serious violation(s)"
+      "ev": "3 serious violation(s)"
     },
     {
       "id": "a11y.alt",
       "sev": "M",
       "ev": "1 image(s) missing alt text"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "2 low-contrast element(s)"
     },
     {
       "id": "a11y.labels",
@@ -560,14 +565,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "44204.83300000001ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "18.4MB"
+      "ev": "18.2MB"
     },
     {
       "id": "perf.tap_targets",
@@ -612,7 +612,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "12 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      "ev": "29 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
     },
     {
       "id": "gigw.feedback",
@@ -648,6 +648,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-27",
+      "up": true,
+      "score": 43
+    },
     {
       "d": "2026-10-26",
       "up": true,
@@ -824,5 +829,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

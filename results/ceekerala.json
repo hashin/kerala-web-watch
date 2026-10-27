@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-25T23:39:06.675Z",
-    "run": "1792971507009",
+    "at": "2026-10-27T01:02:22.148Z",
+    "run": "1793062898654",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 58,
@@ -53,9 +53,9 @@
       "minor": 0
     },
     "crawl": {
-      "pages": 24,
+      "pages": 27,
       "pdfs": 6,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -225,7 +225,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8182.294ms"
+        "ev": "8517.634ms"
       },
       {
         "id": "perf.cls",
@@ -279,7 +279,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/27 crawled link(s) broken (https://cee.kerala.gov.in/pga2026/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -433,10 +434,10 @@
     ]
   },
   "score": {
-    "overall": 61,
+    "overall": 59,
     "security": 76,
     "accessibility": 52,
-    "content": 48,
+    "content": 38,
     "gigw": 28,
     "performance": 86,
     "identity": 88
@@ -461,6 +462,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/27 crawled link(s) broken (https://cee.kerala.gov.in/pga2026/)"
     },
     {
       "id": "a11y.axe_serious",
@@ -491,7 +497,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8182.294ms"
+      "ev": "8517.634ms"
     },
     {
       "id": "sec.referrer",
@@ -580,6 +586,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-27",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-10-26",
       "up": true,
@@ -756,5 +767,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
