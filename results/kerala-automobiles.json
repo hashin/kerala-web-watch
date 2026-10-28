@@ -29,25 +29,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-27T00:47:06.846Z",
-    "run": "1793061973554",
+    "at": "2026-10-28T00:45:18.838Z",
+    "run": "1793148306761",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 74,
+      "accessibility": 77,
+      "best_practices": 69,
+      "seo": 83
     },
     "axe": {
       "critical": 5,
       "serious": 9,
-      "moderate": 8,
+      "moderate": 9,
       "minor": 0
     },
     "crawl": {
-      "pages": 1,
+      "pages": 0,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -82,7 +82,7 @@
       {
         "id": "avail.blank",
         "r": "fail",
-        "ev": "0 visible characters"
+        "ev": "44 visible characters"
       },
       {
         "id": "avail.under_construction",
@@ -173,7 +173,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "8 moderate/minor violation(s)"
+        "ev": "9 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -209,20 +209,21 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "77/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "74/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "5085.278ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -234,7 +235,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -271,8 +272,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "1/1 crawled link(s) broken (https://keralaautomobilesltd.com/#)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -378,7 +378,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -387,11 +387,12 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.soft_404",
-        "r": "na"
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
       },
       {
         "id": "id.canonical",
@@ -424,7 +425,7 @@
     {
       "id": "avail.blank",
       "sev": "C",
-      "ev": "0 visible characters"
+      "ev": "44 visible characters"
     },
     {
       "id": "sec.http_redirect",
@@ -439,11 +440,6 @@
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/1 crawled link(s) broken (https://keralaautomobilesltd.com/#)"
     },
     {
       "id": "gigw.contact",
@@ -507,8 +503,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "5085.278ms"
     },
     {
       "id": "sec.csp",
@@ -525,7 +522,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "8 moderate/minor violation(s)"
+      "ev": "9 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -577,9 +574,18 @@
       "sev": "L"
     },
     {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
       "id": "id.robots",
       "sev": "L",
       "ev": "Disallow: / for User-agent: *"
+    },
+    {
+      "id": "id.soft_404",
+      "sev": "L",
+      "ev": "a nonexistent path returned 200"
     },
     {
       "id": "id.charset_doctype",
@@ -596,6 +602,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-28",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-27",
       "up": false,
@@ -732,5 +743,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

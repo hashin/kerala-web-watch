@@ -37,14 +37,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-27T01:13:04.865Z",
-    "run": "1793063434448",
+    "at": "2026-10-28T01:04:07.656Z",
+    "run": "1793149306295",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 53,
+      "accessibility": 86,
+      "best_practices": 73,
+      "seo": 85
     },
     "axe": {
       "critical": 2,
@@ -98,7 +98,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "6189ms"
+        "ev": "3841ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -114,7 +114,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
@@ -188,7 +188,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en-GB\"> vs. 38% Malayalam content"
+        "ev": "<html lang=\"en-GB\"> vs. 43% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -221,25 +221,26 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "86/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "53/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "30052.820500000016ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "37.5MB"
+        "ev": "36.6MB"
       },
       {
         "id": "perf.viewport",
@@ -473,20 +474,16 @@
     ]
   },
   "score": {
-    "overall": 47,
-    "security": 32,
+    "overall": 51,
+    "security": 52,
     "accessibility": 20,
     "content": 48,
     "gigw": 62,
-    "performance": 76,
+    "performance": 66,
     "identity": 100
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.http_redirect",
-      "sev": "H"
-    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -505,7 +502,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en-GB\"> vs. 38% Malayalam content"
+      "ev": "<html lang=\"en-GB\"> vs. 43% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -520,7 +517,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "6189ms"
+      "ev": "3841ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -550,9 +547,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "30052.820500000016ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "37.5MB"
+      "ev": "36.6MB"
     },
     {
       "id": "perf.tap_targets",
@@ -609,6 +611,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-28",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-10-27",
       "up": true,
@@ -790,5 +797,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

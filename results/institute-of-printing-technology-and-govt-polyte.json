@@ -29,10 +29,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T00:22:18.129Z",
-    "run": "1792801303771",
+    "at": "2026-10-28T01:01:08.716Z",
+    "run": "1793149234880",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
+    },
     "axe": {
       "critical": 1,
       "serious": 5,
@@ -111,7 +116,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "fail",
-        "ev": "-818 days left"
+        "ev": "-822 days left"
       },
       {
         "id": "sec.tls_version",
@@ -205,11 +210,13 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
@@ -230,11 +237,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -508,7 +515,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "-818 days left"
+      "ev": "-822 days left"
     },
     {
       "id": "a11y.axe_critical",
@@ -567,6 +574,10 @@
       "id": "perf.weight",
       "sev": "M",
       "ev": "28.4MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -637,6 +648,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.robots",
       "sev": "L",
       "ev": "robots.txt returned 404"
@@ -652,6 +667,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-28",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-27",
       "up": false,
@@ -808,5 +828,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

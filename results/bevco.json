@@ -34,11 +34,627 @@
     "vantage": "gh-us",
     "suspect": false
   },
-  "deep": null,
+  "deep": {
+    "at": "2026-10-28T00:48:59.119Z",
+    "run": "1793148451312",
+    "vantage": "gh-us",
+    "lighthouse": {
+      "performance": 27,
+      "accessibility": 80,
+      "best_practices": 96,
+      "seo": 92
+    },
+    "axe": {
+      "critical": 2,
+      "serious": 31,
+      "moderate": 12,
+      "minor": 0
+    },
+    "crawl": {
+      "pages": 30,
+      "pdfs": 3,
+      "broken": 33
+    },
+    "tech": {
+      "cms": null,
+      "server": null,
+      "jquery": null
+    },
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "fail",
+        "ev": "connect_fail"
+      },
+      {
+        "id": "avail.status",
+        "r": "na"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "na"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "na"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "na"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "fail"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "fail",
+        "ev": "certificate chain invalid, expired, or hostname mismatch"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "fail"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "na"
+      },
+      {
+        "id": "sec.csp",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "fail"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "fail"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "fail",
+        "ev": "Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1k"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "fail",
+        "ev": "swiper 6.4.11"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "fail",
+        "ev": "2 critical violation(s)"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "31 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "12 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "fail",
+        "ev": "2 image(s) missing alt text"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "fail",
+        "ev": "14 low-contrast element(s)"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "no <h1>, heading levels skipped"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "80/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "27/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "28838.0605ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "pass"
+      },
+      {
+        "id": "perf.weight",
+        "r": "fail",
+        "ev": "24.8MB"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "fail"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "na"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-IN"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "pass"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "fail",
+        "ev": "30/30 crawled link(s) broken (https://bevco.in/#content, https://bevco.in/ml/, https://bevco.in/documents-reports?itd_says=RjdiOStuVmlyNEEzb3ZWNERWUHUvUT09#page, ...)"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "fail",
+        "ev": "3 linked PDF(s) 404: https://bevco.in/wp-content/uploads/REPORTS/2025/06/NOTICE/NOTICE___28-05-2025_GUIDELINES-FOR-REFUND-OF-EARNEST-MONEY-DEPOSITEMD.pdf, https://bevco.in/wp-content/uploads/REPORTS/2025/02/NOTICE/NOTICE___11-02-2025_NOTICE-INVITING-OFFERS-FOR-REGISTRATION-FOR-SALE-OF-IMFL-WINE-AND-BEER-TO-KSBC-UNDER-RATE-CONTRACT.pdf, https://bevco.in/wp-content/uploads/REPORTS/2024/10/NOTICE/NOTICE___05-10-2024_KSBC-PRICE-APPROVAL-OF-BRANDS-QUOTED-%E2%80%93-RATE-CONTRACT-FOR-THE-UPCOMING-PERIOD-%E2%80%93-INTIMATION-REG.pdf"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "na"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "pass"
+      },
+      {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "6 console error(s): requestStorageAccess: Permission denied."
+      },
+      {
+        "id": "gigw.contact",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.search",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "pass"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "fail",
+        "ev": "bevco.in"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "na"
+      },
+      {
+        "id": "id.robots",
+        "r": "na"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "na"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "na"
+      },
+      {
+        "id": "id.canonical",
+        "r": "pass"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "pass"
+      }
+    ],
+    "screenshot": {
+      "desktop": "bevco.webp",
+      "mobile": "bevco-m.webp",
+      "phash": "ffffffff2c0000fc"
+    },
+    "outlinks": [
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "instagram.com",
+        "count": 2,
+        "texts": []
+      },
+      {
+        "host": "wikipedia.org",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "ksbc.co.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "whatsapp.com",
+        "count": 1,
+        "texts": [
+          "9447297907"
+        ]
+      },
+      {
+        "host": "google.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "keralataxes.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "kerala.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "keralaexcise.gov.in",
+        "count": 1,
+        "texts": []
+      }
+    ]
+  },
   "score": null,
   "status": "broken",
-  "issues": [],
+  "issues": [
+    {
+      "id": "avail.connect",
+      "sev": "C",
+      "ev": "connect_fail"
+    },
+    {
+      "id": "sec.cert_valid",
+      "sev": "C",
+      "ev": "certificate chain invalid, expired, or hostname mismatch"
+    },
+    {
+      "id": "sec.http_redirect",
+      "sev": "H"
+    },
+    {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "swiper 6.4.11"
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "2 critical violation(s)"
+    },
+    {
+      "id": "content.last_updated",
+      "sev": "H",
+      "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-IN"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "30/30 crawled link(s) broken (https://bevco.in/#content, https://bevco.in/ml/, https://bevco.in/documents-reports?itd_says=RjdiOStuVmlyNEEzb3ZWNERWUHUvUT09#page, ...)"
+    },
+    {
+      "id": "id.gov_domain",
+      "sev": "H",
+      "ev": "bevco.in"
+    },
+    {
+      "id": "sec.hsts",
+      "sev": "M"
+    },
+    {
+      "id": "sec.xfo",
+      "sev": "M"
+    },
+    {
+      "id": "a11y.axe_serious",
+      "sev": "M",
+      "ev": "31 serious violation(s)"
+    },
+    {
+      "id": "a11y.alt",
+      "sev": "M",
+      "ev": "2 image(s) missing alt text"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "14 low-contrast element(s)"
+    },
+    {
+      "id": "content.broken_pdfs",
+      "sev": "M",
+      "ev": "3 linked PDF(s) 404: https://bevco.in/wp-content/uploads/REPORTS/2025/06/NOTICE/NOTICE___28-05-2025_GUIDELINES-FOR-REFUND-OF-EARNEST-MONEY-DEPOSITEMD.pdf, https://bevco.in/wp-content/uploads/REPORTS/2025/02/NOTICE/NOTICE___11-02-2025_NOTICE-INVITING-OFFERS-FOR-REGISTRATION-FOR-SALE-OF-IMFL-WINE-AND-BEER-TO-KSBC-UNDER-RATE-CONTRACT.pdf, https://bevco.in/wp-content/uploads/REPORTS/2024/10/NOTICE/NOTICE___05-10-2024_KSBC-PRICE-APPROVAL-OF-BRANDS-QUOTED-%E2%80%93-RATE-CONTRACT-FOR-THE-UPCOMING-PERIOD-%E2%80%93-INTIMATION-REG.pdf"
+    },
+    {
+      "id": "gigw.privacy",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.ownership",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.last_updated",
+      "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "28838.0605ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "24.8MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
+    },
+    {
+      "id": "sec.csp",
+      "sev": "L"
+    },
+    {
+      "id": "sec.xcto",
+      "sev": "L"
+    },
+    {
+      "id": "sec.referrer",
+      "sev": "L"
+    },
+    {
+      "id": "sec.server_banner",
+      "sev": "L",
+      "ev": "Apache/2.4.37 (Red Hat Enterprise Linux) OpenSSL/1.1.1k"
+    },
+    {
+      "id": "a11y.axe_moderate_minor",
+      "sev": "L",
+      "ev": "12 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "no <h1>, heading levels skipped"
+    },
+    {
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "6 console error(s): requestStorageAccess: Permission denied."
+    },
+    {
+      "id": "gigw.feedback",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.terms",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.copyright_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.hyperlink_policy",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.disclaimer",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.screen_reader",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.help",
+      "sev": "L"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    }
+  ],
   "history": [
+    {
+      "d": "2026-10-28",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-27",
       "up": false,
@@ -215,5 +831,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

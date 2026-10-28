@@ -35,55 +35,418 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-27T00:53:09.433Z",
-    "run": "1793062373146",
+    "at": "2026-10-28T00:43:55.196Z",
+    "run": "1793148158879",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 75,
+      "accessibility": 83,
+      "best_practices": 73,
+      "seo": 90
+    },
     "axe": {
       "critical": 0,
-      "serious": 0,
-      "moderate": 0,
+      "serious": 20,
+      "moderate": 16,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
-      "pdfs": 0,
-      "broken": 0
+      "pages": 14,
+      "pdfs": 20,
+      "broken": 34
     },
     "tech": {
       "cms": null,
       "server": null,
       "jquery": null
     },
-    "checks": [],
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "fail",
+        "ev": "connect_fail"
+      },
+      {
+        "id": "avail.status",
+        "r": "na"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "na"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "na"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "na"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "fail",
+        "ev": "certificate chain invalid, expired, or hostname mismatch"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "fail"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "na"
+      },
+      {
+        "id": "sec.csp",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "fail"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "fail"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "fail",
+        "ev": "Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.6.38"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "fail",
+        "ev": "jquery-ui 1.7.3, jquery-ui-dialog 1.7.3, jquery-validation 1.15.1"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "20 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "16 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "fail",
+        "ev": "<html lang=\"en-US\"> vs. 99% Malayalam content"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "fail",
+        "ev": "19 low-contrast element(s)"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "no <h1>, heading levels skipped"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "83/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "75/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "4055.5195000000003ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "pass"
+      },
+      {
+        "id": "perf.weight",
+        "r": "pass"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "pass"
+      },
+      {
+        "id": "perf.images",
+        "r": "pass"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "na"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-user"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "pass"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "fail",
+        "ev": "14/14 crawled link(s) broken (https://egrantz.kerala.gov.in/#about-us, https://egrantz.kerala.gov.in/#scholarships, https://egrantz.kerala.gov.in/#login, ...)"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "fail",
+        "ev": "20 linked PDF(s) 404: https://egrantz.kerala.gov.in/egrantz_uploads/8d1f2c736db0f52a6c369ae49b895493.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/f6fec3b4c7e966507a7f0c56aa1a5caf.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/fee3b4a76b38be2f47e7484c35372a39.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/overseas%20notification%2026-27.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/a0b77c26ce26536a5338e55ca12edfd6.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/a4c9d0a2e4df570475d8a4c448d1cd28.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/5feee394ade51f51720ddb27a266a50e.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/2d4bff24b8b04383d5fe06f7bb9eb1a9.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/7c53ae72e34ee672419d8e093bb51589.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/afa5bfe3a7fade2018410df1332bc1c2.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/be67ab36ba08701479e9511cde9ae3f3.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/83fe96a8b5b2d5ffbcaad662baca8915.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/6414a810f9b0865071c5a1f46aac408b.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/d3c63aabbf194791169bdc6ca515a87f.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/436ff11b791287002dcdf9fe9d3e13ac.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/dca5f8a43de4814e7f10a3960c27c33f.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/ddf0ce20b64d1d3c765295c753723c11.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/45241434689234814487bbb91f0d787c.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/104305df348499a4bc89fe5b3a7f6bec.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/b3a448a7e3abdde6fd612e0ac9a391eb.pdf"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "pass"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "fail"
+      },
+      {
+        "id": "content.favicon",
+        "r": "fail"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "9 console error(s): Mixed Content: The page at 'https://egrantz.kerala.gov.in/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext'. This request has been blocked; the content must be served over HTTPS."
+      },
+      {
+        "id": "gigw.contact",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.search",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "warn"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "pass"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "na"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "na"
+      },
+      {
+        "id": "id.robots",
+        "r": "na"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "na"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "na"
+      },
+      {
+        "id": "id.canonical",
+        "r": "fail"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "warn",
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-BNB7HHKSYL&amp;cx=c&amp;gtm=4e6aq1, https://www.googletagmanager.com/gtag/js?id=UA-130113507-1"
+      }
+    ],
     "screenshot": {
       "desktop": "2026-09-21.webp",
       "mobile": "2026-09-21-m.webp",
       "phash": "00f0f0f0f0f0f0c3"
     },
-    "outlinks": [],
-    "error": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://egrantz.kerala.gov.in/\nCall log:\n  - navigating to \"https://egrantz.kerala.gov.in/\", waiting until \"load\"\n"
+    "outlinks": [
+      {
+        "host": "cdit.org",
+        "count": 1,
+        "texts": [
+          "Developed by  C-DIT"
+        ]
+      }
+    ]
   },
-  "score": {
-    "overall": 40,
-    "security": 14,
-    "accessibility": 52,
-    "content": 28,
-    "gigw": 2,
-    "performance": 100,
-    "identity": 92
-  },
+  "score": null,
   "status": "broken",
   "issues": [
     {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "0 days left"
+      "id": "avail.connect",
+      "sev": "C",
+      "ev": "connect_fail"
     },
     {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&amp;subset=latin,latin-ext\""
+      "id": "sec.cert_valid",
+      "sev": "C",
+      "ev": "certificate chain invalid, expired, or hostname mismatch"
     },
     {
       "id": "sec.vuln_js",
@@ -108,7 +471,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "3/14 crawled link(s) broken (https://egrantz.kerala.gov.in//Public_Dashboard/dashboard_public, https://egrantz.kerala.gov.in/index.html, https://egrantz.kerala.gov.in/www.scdd.kerala.gov.in)"
+      "ev": "14/14 crawled link(s) broken (https://egrantz.kerala.gov.in/#about-us, https://egrantz.kerala.gov.in/#scholarships, https://egrantz.kerala.gov.in/#login, ...)"
     },
     {
       "id": "gigw.rti",
@@ -129,6 +492,11 @@
       "ev": "19 low-contrast element(s)"
     },
     {
+      "id": "content.broken_pdfs",
+      "sev": "M",
+      "ev": "20 linked PDF(s) 404: https://egrantz.kerala.gov.in/egrantz_uploads/8d1f2c736db0f52a6c369ae49b895493.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/f6fec3b4c7e966507a7f0c56aa1a5caf.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/fee3b4a76b38be2f47e7484c35372a39.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/overseas%20notification%2026-27.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/a0b77c26ce26536a5338e55ca12edfd6.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/a4c9d0a2e4df570475d8a4c448d1cd28.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/5feee394ade51f51720ddb27a266a50e.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/2d4bff24b8b04383d5fe06f7bb9eb1a9.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/7c53ae72e34ee672419d8e093bb51589.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/afa5bfe3a7fade2018410df1332bc1c2.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/be67ab36ba08701479e9511cde9ae3f3.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/83fe96a8b5b2d5ffbcaad662baca8915.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/6414a810f9b0865071c5a1f46aac408b.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/d3c63aabbf194791169bdc6ca515a87f.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/436ff11b791287002dcdf9fe9d3e13ac.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/dca5f8a43de4814e7f10a3960c27c33f.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/ddf0ce20b64d1d3c765295c753723c11.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/45241434689234814487bbb91f0d787c.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/104305df348499a4bc89fe5b3a7f6bec.pdf, https://egrantz.kerala.gov.in/egrantz_uploads/b3a448a7e3abdde6fd612e0ac9a391eb.pdf"
+    },
+    {
       "id": "gigw.sitemap",
       "sev": "M"
     },
@@ -147,6 +515,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "4055.5195000000003ms"
     },
     {
       "id": "sec.csp",
@@ -217,16 +590,6 @@
       "sev": "L"
     },
     {
-      "id": "id.robots",
-      "sev": "L",
-      "ev": "robots.txt returned 404"
-    },
-    {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 404"
-    },
-    {
       "id": "gigw.emblem",
       "sev": "I"
     },
@@ -237,10 +600,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-BNB7HHKSYL&amp;cx=c&amp;gtm=4e6al1, https://www.googletagmanager.com/gtag/js?id=UA-130113507-1"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-BNB7HHKSYL&amp;cx=c&amp;gtm=4e6aq1, https://www.googletagmanager.com/gtag/js?id=UA-130113507-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-28",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-27",
       "up": false,
@@ -417,5 +785,5 @@
       "score": 45
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

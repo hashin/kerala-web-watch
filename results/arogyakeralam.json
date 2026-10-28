@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-27T00:43:37.833Z",
-    "run": "1793061727493",
+    "at": "2026-10-28T00:41:26.112Z",
+    "run": "1793148010842",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 48,
+      "performance": 37,
       "accessibility": 86,
       "best_practices": 92,
       "seo": 69
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3438ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -222,16 +221,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "48/100"
+        "ev": "37/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "21480.401000000005ms"
+        "ev": "23467.622999999992ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.41"
       },
       {
         "id": "perf.weight",
@@ -513,7 +513,7 @@
     "accessibility": 50,
     "content": 52,
     "gigw": 22,
-    "performance": 71,
+    "performance": 67,
     "identity": 100
   },
   "status": "needs-work",
@@ -542,11 +542,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-box"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3438ms"
     },
     {
       "id": "sec.hsts",
@@ -585,7 +580,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "21480.401000000005ms"
+      "ev": "23467.622999999992ms"
     },
     {
       "id": "perf.weight",
@@ -657,6 +652,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.41"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -666,6 +666,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-28",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-10-27",
       "up": true,
@@ -852,5 +857,5 @@
       "score": 51
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-25T23:52:33.657Z",
-    "run": "1792972306338",
+    "at": "2026-10-28T00:59:48.546Z",
+    "run": "1793149140768",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 0,
@@ -46,8 +46,8 @@
     },
     "axe": {
       "critical": 4,
-      "serious": 15,
-      "moderate": 10,
+      "serious": 27,
+      "moderate": 24,
       "minor": 0
     },
     "crawl": {
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3731ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -177,12 +176,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "15 serious violation(s)"
+        "ev": "27 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "10 moderate/minor violation(s)"
+        "ev": "24 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -196,11 +195,12 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "3 low-contrast element(s)"
+        "ev": "15 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
-        "r": "pass"
+        "r": "fail",
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -293,7 +293,7 @@
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "20 broken image(s)"
+        "ev": "29 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -314,7 +314,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "43 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+        "ev": "48 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
@@ -388,11 +388,11 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "27 days left"
+        "ev": "25 days left"
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -428,7 +428,7 @@
     "screenshot": {
       "desktop": "government-polytechnic-college-ezhukone.webp",
       "mobile": "government-polytechnic-college-ezhukone-m.webp",
-      "phash": "ffffffffe7ffffff"
+      "phash": "0000ffffffffffff"
     },
     "outlinks": [
       {
@@ -533,13 +533,13 @@
     ]
   },
   "score": {
-    "overall": 33,
+    "overall": 32,
     "security": 24,
-    "accessibility": 46,
+    "accessibility": 42,
     "content": 0,
     "gigw": 12,
     "performance": 86,
-    "identity": 52
+    "identity": 48
   },
   "status": "poor",
   "issues": [
@@ -585,12 +585,7 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "27 days left"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3731ms"
+      "ev": "25 days left"
     },
     {
       "id": "sec.hsts",
@@ -603,7 +598,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "15 serious violation(s)"
+      "ev": "27 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -613,7 +608,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "3 low-contrast element(s)"
+      "ev": "15 low-contrast element(s)"
     },
     {
       "id": "content.copyright_year",
@@ -670,12 +665,17 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "10 moderate/minor violation(s)"
+      "ev": "24 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
     },
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "20 broken image(s)"
+      "ev": "29 broken image(s)"
     },
     {
       "id": "content.meta_desc",
@@ -684,7 +684,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "43 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      "ev": "48 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
@@ -719,6 +719,10 @@
       "sev": "L"
     },
     {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
       "id": "id.robots",
       "sev": "L",
       "ev": "robots.txt returned 404"
@@ -738,6 +742,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-28",
+      "up": true,
+      "score": 32
+    },
     {
       "d": "2026-10-27",
       "up": true,
@@ -894,5 +903,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

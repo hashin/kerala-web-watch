@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-27T00:48:30.177Z",
-    "run": "1793061853846",
+    "at": "2026-10-28T00:45:53.694Z",
+    "run": "1793148097359",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 52,
+      "performance": 32,
       "accessibility": 81,
       "best_practices": 73,
       "seo": 62
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 2,
-      "broken": 6
+      "broken": 0
     },
     "tech": {
       "cms": "WordPress 5.0.30",
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "6287ms"
+        "ev": "6891ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -222,16 +222,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "52/100"
+        "ev": "32/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "17244.548499999997ms"
+        "ev": "17053.0215ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.77"
       },
       {
         "id": "perf.weight",
@@ -282,8 +283,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "6/30 crawled link(s) broken (https://dhs.kerala.gov.in/en/climate-change-diseases/, https://dhs.kerala.gov.in/en/animal-bite/, https://dhs.kerala.gov.in/en/disaster-management/, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -312,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "2 console error(s): Access to fetch at 'https://www.youtube.com/s/player/dce23b30/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/6b2fce74/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -454,12 +454,12 @@
     ]
   },
   "score": {
-    "overall": 45,
+    "overall": 47,
     "security": 46,
     "accessibility": 44,
-    "content": 32,
+    "content": 52,
     "gigw": 12,
-    "performance": 66,
+    "performance": 62,
     "identity": 91
   },
   "status": "poor",
@@ -490,18 +490,13 @@
       "ev": "ml-IN"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "6/30 crawled link(s) broken (https://dhs.kerala.gov.in/en/climate-change-diseases/, https://dhs.kerala.gov.in/en/animal-bite/, https://dhs.kerala.gov.in/en/disaster-management/, ...)"
-    },
-    {
       "id": "gigw.contact",
       "sev": "H"
     },
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "6287ms"
+      "ev": "6891ms"
     },
     {
       "id": "sec.hsts",
@@ -541,7 +536,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "17244.548499999997ms"
+      "ev": "17053.0215ms"
     },
     {
       "id": "perf.weight",
@@ -578,7 +573,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "2 console error(s): Access to fetch at 'https://www.youtube.com/s/player/dce23b30/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/6b2fce74/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -609,6 +604,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.77"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -623,6 +623,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-28",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-10-27",
       "up": true,
@@ -804,5 +809,5 @@
       "score": 45
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

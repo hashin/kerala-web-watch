@@ -38,12 +38,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-27T01:10:34.447Z",
-    "run": "1793063362189",
+    "at": "2026-10-28T01:01:46.294Z",
+    "run": "1793149233518",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 48,
-      "accessibility": 80,
+      "performance": 45,
+      "accessibility": 79,
       "best_practices": 65,
       "seo": 69
     },
@@ -98,7 +98,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3414ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -220,17 +221,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "80/100"
+        "ev": "79/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "48/100"
+        "ev": "45/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "13395.429000000004ms"
+        "ev": "13926.253999999995ms"
       },
       {
         "id": "perf.cls",
@@ -239,7 +240,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "12.6MB"
+        "ev": "12.3MB"
       },
       {
         "id": "perf.viewport",
@@ -315,7 +316,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "7 console error(s): Mixed Content: The page at 'https://gptcpala.org/' was loaded over HTTPS, but requested an insecure font 'http://gpcpala1.infrastruct.in/wp-content/uploads/2022/11/HelveticaNeue-Light.ttf'. This request has been blocked; the content must be served over HTTPS."
+        "ev": "6 console error(s): Mixed Content: The page at 'https://gptcpala.org/' was loaded over HTTPS, but requested an insecure font 'http://gpcpala1.infrastruct.in/wp-content/uploads/2022/11/HelveticaNeue-Light.ttf'. This request has been blocked; the content must be served over HTTPS."
       },
       {
         "id": "gigw.contact",
@@ -427,7 +428,7 @@
     "screenshot": {
       "desktop": "govt-polytechnic-college-pala.webp",
       "mobile": "govt-polytechnic-college-pala-m.webp",
-      "phash": "ff3c3c3c3c3c3c3c"
+      "phash": "ff006cf9f1fe0000"
     },
     "outlinks": [
       {
@@ -524,6 +525,11 @@
       "ev": "www.gptcpala.org"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3414ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -579,12 +585,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "13395.429000000004ms"
+      "ev": "13926.253999999995ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "12.6MB"
+      "ev": "12.3MB"
     },
     {
       "id": "perf.tap_targets",
@@ -624,7 +630,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "7 console error(s): Mixed Content: The page at 'https://gptcpala.org/' was loaded over HTTPS, but requested an insecure font 'http://gpcpala1.infrastruct.in/wp-content/uploads/2022/11/HelveticaNeue-Light.ttf'. This request has been blocked; the content must be served over HTTPS."
+      "ev": "6 console error(s): Mixed Content: The page at 'https://gptcpala.org/' was loaded over HTTPS, but requested an insecure font 'http://gpcpala1.infrastruct.in/wp-content/uploads/2022/11/HelveticaNeue-Light.ttf'. This request has been blocked; the content must be served over HTTPS."
     },
     {
       "id": "gigw.terms",
@@ -664,6 +670,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-28",
+      "up": true,
+      "score": 43
+    },
     {
       "d": "2026-10-27",
       "up": true,
@@ -825,5 +836,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-27T00:52:00.277Z",
-    "run": "1793062099008",
+    "at": "2026-10-28T00:50:48.529Z",
+    "run": "1793148596338",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 53,
+      "performance": 55,
       "accessibility": 81,
       "best_practices": 65,
       "seo": 77
@@ -97,8 +97,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "6513ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -187,7 +186,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en-GB\"> vs. 36% Malayalam content"
+        "ev": "<html lang=\"en-GB\"> vs. 37% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -223,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "53/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9273.321000000002ms"
+        "ev": "11767.533ms"
       },
       {
         "id": "perf.cls",
@@ -418,7 +417,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://connect.facebook.net/en_US/all.js?hash=d61e93f81c3ab31cf96cc1f5a6ddb083, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
+        "ev": "https://connect.facebook.net/en_US/all.js?hash=61928ad9eb5f6ed45d70c99316aa4bfb, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
       }
     ],
     "screenshot": {
@@ -489,7 +488,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en-GB\"> vs. 36% Malayalam content"
+      "ev": "<html lang=\"en-GB\"> vs. 37% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -500,11 +499,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "6513ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -540,7 +534,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9273.321000000002ms"
+      "ev": "11767.533ms"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -596,10 +590,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://connect.facebook.net/en_US/all.js?hash=d61e93f81c3ab31cf96cc1f5a6ddb083, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
+      "ev": "https://connect.facebook.net/en_US/all.js?hash=61928ad9eb5f6ed45d70c99316aa4bfb, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-28",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-10-27",
       "up": true,
@@ -781,5 +780,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

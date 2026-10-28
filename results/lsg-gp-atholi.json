@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-27T01:16:13.778Z",
-    "run": "1793063732367",
+    "at": "2026-10-28T01:11:47.142Z",
+    "run": "1793149865853",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 59,
-      "accessibility": 85,
+      "accessibility": 89,
       "best_practices": 78,
       "seo": 92
     },
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -217,7 +217,7 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "85/100"
+        "ev": "89/100"
       },
       {
         "id": "perf.lighthouse",
@@ -227,7 +227,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9288.4925ms"
+        "ev": "9195.413499999999ms"
       },
       {
         "id": "perf.cls",
@@ -282,8 +282,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (http://atholipanchayat.lsgkerala.gov.in/node/0e6df330-00a0-426b-b31b-793b01e6deaf)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -559,11 +558,6 @@
       "ev": "ml-user"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (http://atholipanchayat.lsgkerala.gov.in/node/0e6df330-00a0-426b-b31b-793b01e6deaf)"
-    },
-    {
       "id": "gigw.rti",
       "sev": "H"
     },
@@ -601,7 +595,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9288.4925ms"
+      "ev": "9195.413499999999ms"
     },
     {
       "id": "perf.weight",
@@ -678,6 +672,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-28",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-27",
       "up": false,
@@ -854,5 +853,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

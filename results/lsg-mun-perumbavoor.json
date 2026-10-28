@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T23:42:13.867Z",
-    "run": "1792280492102",
+    "at": "2026-10-28T01:05:39.448Z",
+    "run": "1793149497373",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 61,
+      "performance": 60,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 85
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "61/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9561.409999999998ms"
+        "ev": "8393.902999999998ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "23.9MB"
+        "ev": "21.1MB"
       },
       {
         "id": "perf.viewport",
@@ -281,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://perumbavoormunicipality.lsgkerala.gov.in/ml/support)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -543,10 +542,10 @@
     ]
   },
   "score": {
-    "overall": 67,
+    "overall": 68,
     "security": 76,
     "accessibility": 70,
-    "content": 46,
+    "content": 56,
     "gigw": 40,
     "performance": 76,
     "identity": 96
@@ -567,11 +566,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://perumbavoormunicipality.lsgkerala.gov.in/ml/support)"
     },
     {
       "id": "a11y.axe_serious",
@@ -602,12 +596,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9561.409999999998ms"
+      "ev": "8393.902999999998ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "23.9MB"
+      "ev": "21.1MB"
     },
     {
       "id": "sec.csp",
@@ -663,6 +657,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-28",
+      "up": true,
+      "score": 68
+    },
     {
       "d": "2026-10-27",
       "up": true,
@@ -839,5 +838,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

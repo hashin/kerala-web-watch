@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-27T01:04:37.584Z",
-    "run": "1793063019341",
+    "at": "2026-10-28T01:02:57.318Z",
+    "run": "1793149307633",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 49,
+      "performance": 41,
       "accessibility": 37,
       "best_practices": 77,
       "seo": 67
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -219,16 +219,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "49/100"
+        "ev": "41/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "27339.244ms"
+        "ev": "12408.267ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.55"
       },
       {
         "id": "perf.weight",
@@ -280,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://www.oushadhi.org/officers)"
       },
       {
         "id": "content.broken_pdfs",
@@ -421,9 +423,9 @@
       }
     ],
     "screenshot": {
-      "desktop": "2026-09-22.webp",
-      "mobile": "2026-09-22-m.webp",
-      "phash": "ff00fe79f8d8f8fc"
+      "desktop": "oushadhi.webp",
+      "mobile": "oushadhi-m.webp",
+      "phash": "ff5f1f1f03060f0f"
     },
     "outlinks": [
       {
@@ -453,12 +455,12 @@
     ]
   },
   "score": {
-    "overall": 46,
+    "overall": 44,
     "security": 48,
     "accessibility": 46,
-    "content": 38,
+    "content": 28,
     "gigw": 18,
-    "performance": 66,
+    "performance": 62,
     "identity": 72
   },
   "status": "poor",
@@ -482,6 +484,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://www.oushadhi.org/officers)"
     },
     {
       "id": "id.gov_domain",
@@ -539,7 +546,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "27339.244ms"
+      "ev": "12408.267ms"
     },
     {
       "id": "perf.weight",
@@ -614,6 +621,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.55"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -641,6 +653,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-28",
+      "up": true,
+      "score": 44
+    },
     {
       "d": "2026-10-27",
       "up": true,
@@ -822,5 +839,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

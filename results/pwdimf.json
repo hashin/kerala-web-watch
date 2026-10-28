@@ -37,29 +37,29 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-27T00:52:01.213Z",
-    "run": "1793062190071",
+    "at": "2026-10-28T00:49:20.351Z",
+    "run": "1793148500205",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
+      "performance": 57,
       "accessibility": 74,
       "best_practices": 88,
-      "seo": 82
+      "seo": 83
     },
     "axe": {
       "critical": 0,
-      "serious": 16,
+      "serious": 20,
       "moderate": 24,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 1,
-      "broken": 6
+      "broken": 2
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "",
       "jquery": null
     },
     "checks": [
@@ -69,16 +69,15 @@
       },
       {
         "id": "avail.connect",
-        "r": "fail",
-        "ev": "timeout"
+        "r": "pass"
       },
       {
         "id": "avail.status",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -98,7 +97,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -110,7 +109,7 @@
       },
       {
         "id": "sec.https",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
@@ -134,7 +133,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "fail",
+        "ev": "href=\"http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic\""
       },
       {
         "id": "sec.csp",
@@ -176,7 +176,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "16 serious violation(s)"
+        "ev": "20 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -194,7 +194,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "7 low-contrast element(s)"
+        "ev": "9 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "57/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8538.705499999998ms"
+        "ev": "10367.169000000002ms"
       },
       {
         "id": "perf.cls",
@@ -236,7 +236,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "4.1MB"
+        "ev": "4.2MB"
       },
       {
         "id": "perf.viewport",
@@ -282,13 +282,13 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "5/30 crawled link(s) broken (https://www.pwd.kerala.gov.in/includes/PWD_4U_mobileApp.php?id_ml=, https://www.pwd.kerala.gov.in/Projects/wings_list.php?id_ml=, https://www.pwd.kerala.gov.in/Buildings/List_vacantOffice.php?id=SfZgJUaOFlE0caP7pyfp4EA6yYz_N4ij3lSWE7XHstzV0Hs1pntqqqJ5a3CCibv5y3KBOQkBY8LJ1-pN1Cs7ITIrD_E2p9NliQqTQWkVVqc&main_id=KPXfIY2D3ZJ6YWjXwpBzl9bjVjTCZX_9vg1FOL-o6k-L4O63T_yWObpmXYHn-i_J9L7C5yTFcejbVHplTBm6IvRtgieY7BLfe0xq0Z2XwEE&id_ml=, ...)"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://thottariyaampwd.kerala.gov.in/pms/home/project/projects?projectStatusId=2)"
       },
       {
         "id": "content.broken_pdfs",
         "r": "fail",
-        "ev": "1 linked PDF(s) 404: https://www.pwd.kerala.gov.in/NEW/Avenue_split-compressed.pdf"
+        "ev": "1 linked PDF(s) 404: https://www.pwd.kerala.gov.in/IMF_website/NEW/Avenue_split-compressed.pdf"
       },
       {
         "id": "content.broken_images",
@@ -493,17 +493,25 @@
       }
     ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 57,
+    "security": 40,
+    "accessibility": 70,
+    "content": 28,
+    "gigw": 56,
+    "performance": 71,
+    "identity": 96
+  },
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "avail.connect",
-      "sev": "C",
-      "ev": "timeout"
-    },
     {
       "id": "sec.http_redirect",
       "sev": "H"
+    },
+    {
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic\""
     },
     {
       "id": "sec.vuln_js",
@@ -518,17 +526,17 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "5/30 crawled link(s) broken (https://www.pwd.kerala.gov.in/includes/PWD_4U_mobileApp.php?id_ml=, https://www.pwd.kerala.gov.in/Projects/wings_list.php?id_ml=, https://www.pwd.kerala.gov.in/Buildings/List_vacantOffice.php?id=SfZgJUaOFlE0caP7pyfp4EA6yYz_N4ij3lSWE7XHstzV0Hs1pntqqqJ5a3CCibv5y3KBOQkBY8LJ1-pN1Cs7ITIrD_E2p9NliQqTQWkVVqc&main_id=KPXfIY2D3ZJ6YWjXwpBzl9bjVjTCZX_9vg1FOL-o6k-L4O63T_yWObpmXYHn-i_J9L7C5yTFcejbVHplTBm6IvRtgieY7BLfe0xq0Z2XwEE&id_ml=, ...)"
+      "ev": "1/30 crawled link(s) broken (https://thottariyaampwd.kerala.gov.in/pms/home/project/projects?projectStatusId=2)"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "16 serious violation(s)"
+      "ev": "20 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "7 low-contrast element(s)"
+      "ev": "9 low-contrast element(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -538,7 +546,7 @@
     {
       "id": "content.broken_pdfs",
       "sev": "M",
-      "ev": "1 linked PDF(s) 404: https://www.pwd.kerala.gov.in/NEW/Avenue_split-compressed.pdf"
+      "ev": "1 linked PDF(s) 404: https://www.pwd.kerala.gov.in/IMF_website/NEW/Avenue_split-compressed.pdf"
     },
     {
       "id": "content.malayalam",
@@ -556,12 +564,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8538.705499999998ms"
+      "ev": "10367.169000000002ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "4.1MB"
+      "ev": "4.2MB"
     },
     {
       "id": "perf.tap_targets",
@@ -635,6 +643,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-28",
+      "up": true,
+      "score": 57
+    },
     {
       "d": "2026-10-27",
       "up": false,
@@ -816,5 +829,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

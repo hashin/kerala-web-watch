@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-19T00:09:40.410Z",
-    "run": "1792368524711",
+    "at": "2026-10-28T01:16:23.713Z",
+    "run": "1793150142201",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
-      "accessibility": 89,
+      "performance": 59,
+      "accessibility": 85,
       "best_practices": 78,
       "seo": 92
     },
     "axe": {
       "critical": 1,
-      "serious": 16,
+      "serious": 14,
       "moderate": 27,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -175,7 +175,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "16 serious violation(s)"
+        "ev": "14 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -194,7 +194,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "10 low-contrast element(s)"
+        "ev": "8 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -217,17 +217,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "89/100"
+        "ev": "85/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9668.328999999998ms"
+        "ev": "9917.356ms"
       },
       {
         "id": "perf.cls",
@@ -282,8 +282,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://plan.lsgkerala.gov.in/formulation/Public.aspx)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -545,11 +544,6 @@
       "ev": "ml-user"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://plan.lsgkerala.gov.in/formulation/Public.aspx)"
-    },
-    {
       "id": "gigw.rti",
       "sev": "H"
     },
@@ -560,7 +554,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "16 serious violation(s)"
+      "ev": "14 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -570,7 +564,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "10 low-contrast element(s)"
+      "ev": "8 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -587,7 +581,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9668.328999999998ms"
+      "ev": "9917.356ms"
     },
     {
       "id": "perf.weight",
@@ -664,6 +658,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-28",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-27",
       "up": false,
@@ -840,5 +839,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-27T00:43:48.805Z",
-    "run": "1793061783990",
+    "at": "2026-10-28T00:42:38.877Z",
+    "run": "1793148080830",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 54,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 3
     },
     "tech": {
       "cms": null,
@@ -224,7 +224,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "26122.325500000006ms"
+        "ev": "24733.292250000006ms"
       },
       {
         "id": "perf.cls",
@@ -279,7 +279,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3/30 crawled link(s) broken (https://malappuram.nic.in/en/#SkipContent, https://malappuram.nic.in/en/, https://malappuram.nic.in/en/public-utility-category/colleges/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -451,11 +452,11 @@
       },
       {
         "host": "s3waas.gov.in",
-        "count": 7,
+        "count": 5,
         "texts": [
-          "PDF\n                    \n\n                    \n                        Land Acquisition – Malappuram – Ernad Taluk – Manjeri, Narukara, Payyanad, Pandikkad, and Vettikattiri Villages – Manjeri-Olipuzha Road Development – ​​4(1) Notification for conducting a Social Impact Assessment.\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
-          "PDF\n                    \n\n                    \n                        RTA MINUTES – DECISION\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
-          "LA Munampathkadavu Appropriate Govt Order"
+          "PDF\n                    \n\n                    \n                        General Transfer 2026 – Village Field Assistant & Office Attendant\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
+          "PDF\n                    \n\n                    \n                        LA-Malappuram- Kondotty Taluk- Nediyiruppu Village- RWY 10 Boundary wall for RESA – Perimeter Road & Watch Tower for RESA land – SIA Draft Report\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
+          "PDF\n                    \n\n                    \n                        Land Acquisition – Malappuram – Ernad Taluk – Manjeri, Narukara, Payyanad, Pandikkad, and Vettikattiri Villages – Manjeri-Olipuzha Road Development – ​​4(1) Notification for conducting a Social Impact Assessment.\n                        Download Document\n                    \n\n                    Opens downloadable PDF document"
         ]
       },
       {
@@ -501,10 +502,10 @@
     ]
   },
   "score": {
-    "overall": 62,
+    "overall": 60,
     "security": 48,
     "accessibility": 60,
-    "content": 52,
+    "content": 42,
     "gigw": 60,
     "performance": 81,
     "identity": 96
@@ -532,6 +533,11 @@
       "ev": "ml-IN"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "3/30 crawled link(s) broken (https://malappuram.nic.in/en/#SkipContent, https://malappuram.nic.in/en/, https://malappuram.nic.in/en/public-utility-category/colleges/)"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -555,7 +561,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "26122.325500000006ms"
+      "ev": "24733.292250000006ms"
     },
     {
       "id": "perf.weight",
@@ -634,6 +640,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-28",
+      "up": true,
+      "score": 60
+    },
     {
       "d": "2026-10-27",
       "up": true,
@@ -810,5 +821,5 @@
       "score": 60
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

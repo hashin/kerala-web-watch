@@ -37,15 +37,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-27T01:10:30.554Z",
-    "run": "1793063390064",
+    "at": "2026-10-28T00:54:56.271Z",
+    "run": "1793148857051",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 62,
-      "accessibility": 82,
-      "best_practices": 100,
-      "seo": 85
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 0,
       "serious": 5,
@@ -54,8 +49,8 @@
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 1,
-      "broken": 1
+      "pdfs": 0,
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -215,22 +210,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "82/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "62/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "11031.114000000001ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -243,11 +235,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -285,8 +277,7 @@
       },
       {
         "id": "content.broken_pdfs",
-        "r": "fail",
-        "ev": "1 linked PDF(s) 404: https://irittymunicipality.lsgkerala.gov.in/ml/index.php/system/files/2026-05/%E0%B4%87%E0%B4%B0%E0%B4%BF%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B4%BF%20%E0%B4%A8%E0%B4%97%E0%B4%B0%E0%B4%B8%E0%B4%AD%20%E0%B4%AA%E0%B5%8C%E0%B4%B0%E0%B4%BE%E0%B4%B5%E0%B4%95%E0%B4%BE%E0%B4%B6%20%E0%B4%B0%E0%B5%87%E0%B4%96.pdf"
+        "r": "pass"
       },
       {
         "id": "content.broken_images",
@@ -562,12 +553,12 @@
     ]
   },
   "score": {
-    "overall": 67,
+    "overall": 70,
     "security": 76,
     "accessibility": 70,
-    "content": 46,
+    "content": 56,
     "gigw": 40,
-    "performance": 81,
+    "performance": 95,
     "identity": 96
   },
   "status": "needs-work",
@@ -598,11 +589,6 @@
       "ev": "3 low-contrast element(s)"
     },
     {
-      "id": "content.broken_pdfs",
-      "sev": "M",
-      "ev": "1 linked PDF(s) 404: https://irittymunicipality.lsgkerala.gov.in/ml/index.php/system/files/2026-05/%E0%B4%87%E0%B4%B0%E0%B4%BF%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B4%BF%20%E0%B4%A8%E0%B4%97%E0%B4%B0%E0%B4%B8%E0%B4%AD%20%E0%B4%AA%E0%B5%8C%E0%B4%B0%E0%B4%BE%E0%B4%B5%E0%B4%95%E0%B4%BE%E0%B4%B6%20%E0%B4%B0%E0%B5%87%E0%B4%96.pdf"
-    },
-    {
       "id": "gigw.sitemap",
       "sev": "M"
     },
@@ -617,11 +603,6 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "11031.114000000001ms"
     },
     {
       "id": "perf.weight",
@@ -672,16 +653,17 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-28",
+      "up": true,
+      "score": 70
+    },
     {
       "d": "2026-10-27",
       "up": true,
@@ -868,5 +850,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
