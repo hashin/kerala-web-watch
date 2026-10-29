@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-28T00:41:21.487Z",
-    "run": "1793148030928",
+    "at": "2026-10-29T01:10:51.633Z",
+    "run": "1793236202494",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 54,
       "accessibility": 84,
       "best_practices": 69,
       "seo": 83
@@ -57,7 +57,7 @@
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "Apache",
       "jquery": null
     },
     "checks": [
@@ -127,7 +127,7 @@
       },
       {
         "id": "sec.hsts",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.mixed_content",
@@ -136,19 +136,19 @@
       },
       {
         "id": "sec.csp",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xfo",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xcto",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.referrer",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.server_banner",
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "54/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "24133.488750000004ms"
+        "ev": "34860.76400000001ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +233,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "10.1MB"
+        "ev": "10.4MB"
       },
       {
         "id": "perf.viewport",
@@ -308,7 +308,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "15 console error(s): Refused to apply style from 'https://kasargod.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+        "ev": "6 console error(s): Refused to apply style from 'https://kasargod.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       },
       {
         "id": "gigw.contact",
@@ -414,7 +414,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-041NGNDMW5&amp;cx=c&amp;gtm=4e6aq1, https://www.googletagmanager.com/gtag/js?id=UA-131905579-1"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-041NGNDMW5&amp;cx=c&amp;gtm=4e6ar1, https://www.googletagmanager.com/gtag/js?id=UA-131905579-1"
       }
     ],
     "screenshot": {
@@ -495,8 +495,8 @@
     ]
   },
   "score": {
-    "overall": 70,
-    "security": 80,
+    "overall": 62,
+    "security": 48,
     "accessibility": 60,
     "content": 56,
     "gigw": 60,
@@ -526,6 +526,14 @@
       "ev": "ml-IN"
     },
     {
+      "id": "sec.hsts",
+      "sev": "M"
+    },
+    {
+      "id": "sec.xfo",
+      "sev": "M"
+    },
+    {
       "id": "a11y.labels",
       "sev": "M",
       "ev": "1 form control(s) without a label"
@@ -541,12 +549,24 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "24133.488750000004ms"
+      "ev": "34860.76400000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "10.1MB"
+      "ev": "10.4MB"
+    },
+    {
+      "id": "sec.csp",
+      "sev": "L"
+    },
+    {
+      "id": "sec.xcto",
+      "sev": "L"
+    },
+    {
+      "id": "sec.referrer",
+      "sev": "L"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -566,7 +586,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "15 console error(s): Refused to apply style from 'https://kasargod.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+      "ev": "6 console error(s): Refused to apply style from 'https://kasargod.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
     },
     {
       "id": "gigw.terms",
@@ -600,10 +620,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-041NGNDMW5&amp;cx=c&amp;gtm=4e6aq1, https://www.googletagmanager.com/gtag/js?id=UA-131905579-1"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-041NGNDMW5&amp;cx=c&amp;gtm=4e6ar1, https://www.googletagmanager.com/gtag/js?id=UA-131905579-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-29",
+      "up": true,
+      "score": 62
+    },
     {
       "d": "2026-10-28",
       "up": true,
@@ -785,5 +810,5 @@
       "score": 69
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

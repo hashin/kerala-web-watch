@@ -35,51 +35,434 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-28T01:05:05.214Z",
-    "run": "1793149432788",
+    "at": "2026-10-29T01:34:41.426Z",
+    "run": "1793237632361",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 51,
+      "accessibility": 78,
+      "best_practices": 92,
+      "seo": 92
+    },
     "axe": {
-      "critical": 0,
-      "serious": 0,
-      "moderate": 0,
+      "critical": 5,
+      "serious": 88,
+      "moderate": 24,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
+      "pages": 30,
       "pdfs": 0,
       "broken": 0
     },
     "tech": {
       "cms": null,
-      "server": null,
-      "jquery": null
+      "server": "",
+      "jquery": "3.5.1"
     },
-    "checks": [],
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "pass"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "fail"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "pass"
+      },
+      {
+        "id": "sec.csp",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "fail"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "fail"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "pass"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "fail",
+        "ev": "swiper 4.5.0"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "fail",
+        "ev": "5 critical violation(s)"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "88 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "24 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "fail",
+        "ev": "1 image(s) missing alt text"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "fail",
+        "ev": "41 low-contrast element(s)"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "no <h1>, heading levels skipped"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "78/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "51/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "15877.925000000007ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "pass"
+      },
+      {
+        "id": "perf.weight",
+        "r": "fail",
+        "ev": "18.6MB"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "pass"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "pass"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-user"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "pass"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "na"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "pass"
+      },
+      {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      },
+      {
+        "id": "gigw.contact",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.help",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.search",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "pass"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "pass"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "na"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "na"
+      },
+      {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "fail"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "pass"
+      }
+    ],
     "screenshot": {
       "desktop": "imgkerala.webp",
       "mobile": "imgkerala-m.webp",
       "phash": "ff7f008000001cff"
     },
-    "outlinks": [],
-    "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://img.kerala.gov.in/\", waiting until \"load\"\n"
+    "outlinks": [
+      {
+        "host": "p4panorama.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "istm.gov.in",
+        "count": 1,
+        "texts": [
+          "Institute of Secretariat Training and Management (ISTM)"
+        ]
+      },
+      {
+        "host": "dopt.gov.in",
+        "count": 1,
+        "texts": [
+          "Department of Personnel & Training"
+        ]
+      },
+      {
+        "host": "ux4g.gov.in",
+        "count": 1,
+        "texts": [
+          "Contact UX4G"
+        ]
+      }
+    ]
   },
   "score": {
-    "overall": 51,
-    "security": 28,
+    "overall": 56,
+    "security": 48,
     "accessibility": 40,
     "content": 56,
     "gigw": 54,
     "performance": 76,
     "identity": 96
   },
-  "status": "broken",
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "1 days left"
-    },
     {
       "id": "sec.vuln_js",
       "sev": "H",
@@ -111,7 +494,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "83 serious violation(s)"
+      "ev": "88 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -121,7 +504,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "36 low-contrast element(s)"
+      "ev": "41 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -138,12 +521,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "58272.545ms"
+      "ev": "15877.925000000007ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "23.8MB"
+      "ev": "18.6MB"
     },
     {
       "id": "sec.csp",
@@ -208,6 +591,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-29",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-10-28",
       "up": false,
@@ -399,5 +787,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

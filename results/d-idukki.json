@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-27T00:42:51.002Z",
-    "run": "1793061717688",
+    "at": "2026-10-29T01:10:45.335Z",
+    "run": "1793236191318",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 48,
+      "performance": 53,
       "accessibility": 84,
       "best_practices": 69,
       "seo": 83
@@ -57,7 +57,7 @@
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "Apache",
       "jquery": null
     },
     "checks": [
@@ -127,7 +127,7 @@
       },
       {
         "id": "sec.hsts",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.mixed_content",
@@ -136,19 +136,19 @@
       },
       {
         "id": "sec.csp",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xfo",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xcto",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.referrer",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.server_banner",
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "48/100"
+        "ev": "53/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "25932.785659301753ms"
+        "ev": "31718.705499999993ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +233,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "17.0MB"
+        "ev": "17.2MB"
       },
       {
         "id": "perf.viewport",
@@ -308,7 +308,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "13 console error(s): Refused to apply style from 'https://idukki.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+        "ev": "6 console error(s): Refused to apply style from 'https://idukki.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       },
       {
         "id": "gigw.contact",
@@ -462,8 +462,8 @@
     ]
   },
   "score": {
-    "overall": 69,
-    "security": 80,
+    "overall": 61,
+    "security": 48,
     "accessibility": 60,
     "content": 52,
     "gigw": 60,
@@ -493,6 +493,14 @@
       "ev": "ml-IN"
     },
     {
+      "id": "sec.hsts",
+      "sev": "M"
+    },
+    {
+      "id": "sec.xfo",
+      "sev": "M"
+    },
+    {
       "id": "a11y.labels",
       "sev": "M",
       "ev": "1 form control(s) without a label"
@@ -508,12 +516,24 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "25932.785659301753ms"
+      "ev": "31718.705499999993ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "17.0MB"
+      "ev": "17.2MB"
+    },
+    {
+      "id": "sec.csp",
+      "sev": "L"
+    },
+    {
+      "id": "sec.xcto",
+      "sev": "L"
+    },
+    {
+      "id": "sec.referrer",
+      "sev": "L"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -537,7 +557,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "13 console error(s): Refused to apply style from 'https://idukki.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+      "ev": "6 console error(s): Refused to apply style from 'https://idukki.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
     },
     {
       "id": "gigw.terms",
@@ -579,6 +599,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-29",
+      "up": true,
+      "score": 61
+    },
     {
       "d": "2026-10-28",
       "up": true,
@@ -760,5 +785,5 @@
       "score": 65
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

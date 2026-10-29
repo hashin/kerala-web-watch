@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-28T01:05:19.620Z",
-    "run": "1793149447658",
+    "at": "2026-10-29T01:32:16.877Z",
+    "run": "1793237456091",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
+      "performance": 57,
       "accessibility": 98,
       "best_practices": 100,
-      "seo": 100
+      "seo": 92
     },
     "axe": {
       "critical": 0,
@@ -56,7 +56,7 @@
       "broken": 2
     },
     "tech": {
-      "cms": "WordPress 7.0.7",
+      "cms": "WordPress 7.0.8",
       "server": "nginx/1.25.5",
       "jquery": null
     },
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "fail",
+        "ev": "11334ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -219,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "57/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11068.498500000002ms"
+        "ev": "11325.442000000008ms"
       },
       {
         "id": "perf.cls",
@@ -410,7 +411,7 @@
       {
         "id": "id.tech",
         "r": "pass",
-        "ev": "WordPress 7.0.7"
+        "ev": "WordPress 7.0.8"
       },
       {
         "id": "id.third_party",
@@ -469,6 +470,11 @@
       "ev": "kaicltd.com"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "11334ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -509,7 +515,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11068.498500000002ms"
+      "ev": "11325.442000000008ms"
     },
     {
       "id": "perf.weight",
@@ -586,6 +592,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-29",
+      "up": true,
+      "score": 60
+    },
     {
       "d": "2026-10-28",
       "up": true,
@@ -772,5 +783,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

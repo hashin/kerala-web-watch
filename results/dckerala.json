@@ -35,51 +35,464 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-28T01:06:45.311Z",
-    "run": "1793149591544",
+    "at": "2026-10-29T01:28:05.385Z",
+    "run": "1793237218216",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 36,
+      "accessibility": 85,
+      "best_practices": 96,
+      "seo": 85
+    },
     "axe": {
-      "critical": 0,
-      "serious": 0,
-      "moderate": 0,
+      "critical": 1,
+      "serious": 25,
+      "moderate": 2,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
+      "pages": 30,
       "pdfs": 0,
       "broken": 0
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "Apache",
       "jquery": null
     },
-    "checks": [],
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "warn",
+        "ev": "\"അറ്റകുറ്റപ്പണി\" alongside 2127 other characters"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "pass"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "pass"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "fail",
+        "ev": "href=\"http://www.cdit.org\""
+      },
+      {
+        "id": "sec.csp",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "pass"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "pass"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "pass"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "pass"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "fail",
+        "ev": "1 critical violation(s)"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "25 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "2 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "fail",
+        "ev": "1 image(s) missing alt text"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "fail",
+        "ev": "4 low-contrast element(s)"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "heading levels skipped"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "85/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "36/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "29990.597500000003ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "fail",
+        "ev": "0.67"
+      },
+      {
+        "id": "perf.weight",
+        "r": "fail",
+        "ev": "34.0MB"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "pass"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "pass"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-IN"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "pass"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "pass"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "fail"
+      },
+      {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.contact",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.search",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "warn"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "pass"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "na"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "pass"
+      },
+      {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "pass"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "pass"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "pass"
+      }
+    ],
     "screenshot": {
       "desktop": "dckerala.webp",
       "mobile": "dckerala-m.webp",
-      "phash": "0707ffffffffffff"
+      "phash": "1fffff8f8efc1800"
     },
-    "outlinks": [],
-    "error": "page.goto: net::ERR_CERT_DATE_INVALID at https://dc.kerala.gov.in/\nCall log:\n  - navigating to \"https://dc.kerala.gov.in/\", waiting until \"load\"\n"
+    "outlinks": [
+      {
+        "host": "cdsco.gov.in",
+        "count": 2,
+        "texts": [
+          "സെൻട്രൽ ഡ്രഗ്‌സ് സ്റ്റാൻഡേർഡ് കൺട്രോൾ ഓർഗനൈസേഷൻ"
+        ]
+      },
+      {
+        "host": "nppaindia.nic.in",
+        "count": 1,
+        "texts": [
+          "ദേശീയ ഫാർമസ്യൂട്ടിക്കൽ പ്രൈസിംഗ് അതോറിറ്റി"
+        ]
+      },
+      {
+        "host": "kspconline.in",
+        "count": 1,
+        "texts": [
+          "സംസ്ഥാന ഫർമസി കൌൺസിൽ"
+        ]
+      },
+      {
+        "host": "nppaimis.nic.in",
+        "count": 1,
+        "texts": [
+          "ഫർമാ ജൻ സമാധാൻ"
+        ]
+      },
+      {
+        "host": "eraktkosh.in",
+        "count": 1,
+        "texts": [
+          "e-RaktKosh"
+        ]
+      },
+      {
+        "host": "cdit.org",
+        "count": 1,
+        "texts": [
+          "CDIT"
+        ]
+      }
+    ]
   },
-  "score": null,
-  "status": "broken",
+  "score": {
+    "overall": 59,
+    "security": 80,
+    "accessibility": 40,
+    "content": 56,
+    "gigw": 22,
+    "performance": 72,
+    "identity": 100
+  },
+  "status": "needs-work",
   "issues": [
     {
-      "id": "avail.status",
-      "sev": "C",
-      "ev": "final response was 403"
-    },
-    {
-      "id": "sec.http_redirect",
-      "sev": "H"
-    },
-    {
-      "id": "sec.cert_expiry",
+      "id": "avail.under_construction",
       "sev": "H",
-      "ev": "0 days left"
+      "ev": "\"അറ്റകുറ്റപ്പണി\" alongside 2127 other characters"
+    },
+    {
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://www.cdit.org\""
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "1 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -87,34 +500,24 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "gigw.contact",
-      "sev": "H"
-    },
-    {
-      "id": "gigw.rti",
-      "sev": "H"
-    },
-    {
-      "id": "perf.viewport",
-      "sev": "H"
-    },
-    {
-      "id": "sec.hsts",
-      "sev": "M"
-    },
-    {
-      "id": "sec.xfo",
-      "sev": "M"
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-IN"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "1 serious violation(s)"
+      "ev": "25 serious violation(s)"
     },
     {
-      "id": "content.malayalam",
+      "id": "a11y.alt",
       "sev": "M",
-      "ev": "Malayalam ratio 0.00, no language toggle found"
+      "ev": "1 image(s) missing alt text"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "4 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -137,38 +540,33 @@
       "sev": "M"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "29990.597500000003ms"
     },
     {
-      "id": "sec.csp",
-      "sev": "L"
-    },
-    {
-      "id": "sec.xcto",
-      "sev": "L"
-    },
-    {
-      "id": "sec.referrer",
-      "sev": "L"
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "34.0MB"
     },
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "4 moderate/minor violation(s)"
+      "ev": "2 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
+    },
+    {
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
       "id": "content.meta_desc",
       "sev": "L"
-    },
-    {
-      "id": "content.favicon",
-      "sev": "L"
-    },
-    {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 403 ()"
     },
     {
       "id": "gigw.feedback",
@@ -199,42 +597,25 @@
       "sev": "L"
     },
     {
-      "id": "gigw.search",
-      "sev": "L"
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.67"
     },
     {
       "id": "perf.images",
       "sev": "L"
     },
     {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
-      "id": "id.robots",
-      "sev": "L",
-      "ev": "robots.txt returned 403"
-    },
-    {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 403"
-    },
-    {
-      "id": "id.charset_doctype",
-      "sev": "L",
-      "ev": "missing UTF-8 charset, HTML5 doctype"
-    },
-    {
       "id": "gigw.emblem",
-      "sev": "I"
-    },
-    {
-      "id": "id.canonical",
       "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-29",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-10-28",
       "up": false,
@@ -416,5 +797,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-28T00:56:18.645Z",
-    "run": "1793148959342",
+    "at": "2026-10-29T01:29:19.929Z",
+    "run": "1793237338725",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 40,
+      "accessibility": 76,
+      "best_practices": 100,
+      "seo": 67
+    },
     "axe": {
       "critical": 2,
       "serious": 33,
@@ -115,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "23 days left"
+        "ev": "22 days left"
       },
       {
         "id": "sec.tls_version",
@@ -211,19 +216,23 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "76/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "40/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "11085.371ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.31"
       },
       {
         "id": "perf.weight",
@@ -236,11 +245,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -448,20 +457,20 @@
     ]
   },
   "score": {
-    "overall": 50,
+    "overall": 48,
     "security": 56,
     "accessibility": 40,
     "content": 46,
     "gigw": 0,
-    "performance": 95,
+    "performance": 77,
     "identity": 92
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "23 days left"
+      "ev": "22 days left"
     },
     {
       "id": "sec.vuln_js",
@@ -532,6 +541,11 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "11085.371ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "3.4MB"
@@ -588,6 +602,15 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.31"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -606,6 +629,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-29",
+      "up": true,
+      "score": 48
+    },
     {
       "d": "2026-10-28",
       "up": true,
@@ -792,5 +820,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

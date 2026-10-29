@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-28T00:54:32.044Z",
-    "run": "1793148828807",
+    "at": "2026-10-29T01:30:02.730Z",
+    "run": "1793237362704",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 50,
+      "performance": 57,
       "accessibility": 88,
       "best_practices": 92,
       "seo": 100
@@ -220,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "50/100"
+        "ev": "57/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "14845.577500000001ms"
+        "ev": "15388.492999999999ms"
       },
       {
         "id": "perf.cls",
@@ -310,7 +310,8 @@
       },
       {
         "id": "content.console_errors",
-        "r": "pass"
+        "r": "fail",
+        "ev": "4 console error(s): Cannot read properties of undefined (reading 'length')"
       },
       {
         "id": "gigw.contact",
@@ -460,7 +461,7 @@
     "overall": 47,
     "security": 18,
     "accessibility": 62,
-    "content": 40,
+    "content": 36,
     "gigw": 42,
     "performance": 76,
     "identity": 72
@@ -535,7 +536,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "14845.577500000001ms"
+      "ev": "15388.492999999999ms"
     },
     {
       "id": "perf.weight",
@@ -564,6 +565,11 @@
       "id": "a11y.headings",
       "sev": "L",
       "ev": "heading levels skipped"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "4 console error(s): Cannot read properties of undefined (reading 'length')"
     },
     {
       "id": "gigw.feedback",
@@ -612,6 +618,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-29",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-10-28",
       "up": true,
@@ -798,5 +809,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

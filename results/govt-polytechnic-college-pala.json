@@ -38,11 +38,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-28T01:01:46.294Z",
-    "run": "1793149233518",
+    "at": "2026-10-29T01:31:46.421Z",
+    "run": "1793237425923",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 45,
+      "performance": 51,
       "accessibility": 79,
       "best_practices": 65,
       "seo": 69
@@ -59,7 +59,7 @@
       "broken": 0
     },
     "tech": {
-      "cms": "WordPress 7.1.3",
+      "cms": "WordPress 7.1.4",
       "server": "nginx",
       "jquery": null
     },
@@ -98,8 +98,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3414ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -226,12 +225,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "45/100"
+        "ev": "51/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "13926.253999999995ms"
+        "ev": "13600.354ms"
       },
       {
         "id": "perf.cls",
@@ -240,7 +239,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "12.3MB"
+        "ev": "11.9MB"
       },
       {
         "id": "perf.viewport",
@@ -418,7 +417,7 @@
       {
         "id": "id.tech",
         "r": "pass",
-        "ev": "WordPress 7.1.3"
+        "ev": "WordPress 7.1.4"
       },
       {
         "id": "id.third_party",
@@ -525,11 +524,6 @@
       "ev": "www.gptcpala.org"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3414ms"
-    },
-    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -585,12 +579,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "13926.253999999995ms"
+      "ev": "13600.354ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "12.3MB"
+      "ev": "11.9MB"
     },
     {
       "id": "perf.tap_targets",
@@ -670,6 +664,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-29",
+      "up": true,
+      "score": 43
+    },
     {
       "d": "2026-10-28",
       "up": true,
@@ -836,5 +835,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

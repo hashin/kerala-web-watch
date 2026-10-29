@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-28T01:01:47.401Z",
-    "run": "1793149254604",
+    "at": "2026-10-29T01:23:15.553Z",
+    "run": "1793236948334",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 36,
+      "accessibility": 70,
+      "best_practices": 96,
+      "seo": 92
+    },
     "axe": {
       "critical": 28,
       "serious": 61,
@@ -115,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "18 days left"
+        "ev": "17 days left"
       },
       {
         "id": "sec.tls_version",
@@ -180,7 +185,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 137% Malayalam content"
+        "ev": "<html lang=\"en\"> vs. 136% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -212,24 +217,27 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "70/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "36/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "11030.867499999998ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "5.4MB"
+        "ev": "5.3MB"
       },
       {
         "id": "perf.viewport",
@@ -237,11 +245,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -482,20 +490,20 @@
     ]
   },
   "score": {
-    "overall": 50,
+    "overall": 47,
     "security": 56,
     "accessibility": 20,
     "content": 56,
     "gigw": 22,
-    "performance": 95,
+    "performance": 71,
     "identity": 96
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "18 days left"
+      "ev": "17 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -510,7 +518,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 137% Malayalam content"
+      "ev": "<html lang=\"en\"> vs. 136% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -558,9 +566,18 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "11030.867499999998ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "5.4MB"
+      "ev": "5.3MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -615,6 +632,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -629,6 +650,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-29",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-10-28",
       "up": true,
@@ -815,5 +841,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

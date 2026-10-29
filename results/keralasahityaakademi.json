@@ -37,25 +37,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-28T01:11:42.937Z",
-    "run": "1793149883216",
+    "at": "2026-10-29T01:37:46.964Z",
+    "run": "1793237819441",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 62,
+      "accessibility": 71,
+      "best_practices": 88,
+      "seo": 75
     },
     "axe": {
-      "critical": 0,
-      "serious": 4,
-      "moderate": 5,
+      "critical": 97,
+      "serious": 31,
+      "moderate": 66,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
+      "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -73,8 +73,7 @@
       },
       {
         "id": "avail.status",
-        "r": "fail",
-        "ev": "final response was 502"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
@@ -130,11 +129,12 @@
       },
       {
         "id": "sec.hsts",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.mixed_content",
-        "r": "pass"
+        "r": "fail",
+        "ev": "href=\"http://keralasangeethanatakaakademi.in/\""
       },
       {
         "id": "sec.csp",
@@ -142,11 +142,11 @@
       },
       {
         "id": "sec.xfo",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xcto",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.referrer",
@@ -158,7 +158,8 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "pass"
+        "r": "fail",
+        "ev": "jquery 3.4.1, bootstrap 4.3.0, swiper 4.5.0"
       },
       {
         "id": "sec.safe_browsing",
@@ -170,35 +171,37 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "pass"
+        "r": "fail",
+        "ev": "97 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "4 serious violation(s)"
+        "ev": "31 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "5 moderate/minor violation(s)"
+        "ev": "66 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
-        "r": "pass"
+        "r": "fail",
+        "ev": "<html lang=\"\"> vs. 135% Malayalam content"
       },
       {
         "id": "a11y.alt",
-        "r": "pass"
+        "r": "fail",
+        "ev": "97 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "2 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
         "r": "fail",
-        "ev": "heading levels skipped"
+        "ev": "no <h1>, heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -215,24 +218,26 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "71/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "62/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "6096.532740000001ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "fail",
+        "ev": "61.7MB"
       },
       {
         "id": "perf.viewport",
@@ -240,7 +245,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -278,7 +283,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://keralasahityaakademi.org/wp-login.php?action=logout&redirect_to=index.php&_wpnonce=d8d85bc6d5)"
       },
       {
         "id": "content.broken_pdfs",
@@ -307,11 +313,11 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 502 ()"
+        "ev": "8 console error(s): Access to fetch at 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit' from origin 'https://keralasahityaakademi.org' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.feedback",
@@ -359,7 +365,7 @@
       },
       {
         "id": "gigw.search",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.ownership",
@@ -371,7 +377,7 @@
       },
       {
         "id": "gigw.emblem",
-        "r": "warn"
+        "r": "pass"
       },
       {
         "id": "id.gov_domain",
@@ -384,7 +390,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.robots",
@@ -392,8 +398,7 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 502"
+        "r": "pass"
       },
       {
         "id": "id.soft_404",
@@ -413,31 +418,89 @@
       },
       {
         "id": "id.third_party",
-        "r": "pass"
+        "r": "warn",
+        "ev": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
       }
     ],
     "screenshot": {
       "desktop": "keralasahityaakademi.webp",
       "mobile": "keralasahityaakademi-m.webp",
-      "phash": "9fbf00000097ffff"
+      "phash": "ffff010501b97bff"
     },
     "outlinks": [
       {
-        "host": "cloudflare.com",
+        "host": "youtube.com",
+        "count": 2,
+        "texts": []
+      },
+      {
+        "host": "youtu.be",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "digitaloceanspaces.com",
+        "count": 20,
+        "texts": [
+          "കുഞ്ചൻനമ്പ്യാർ ശേഖരം",
+          "കൊട്ടാരത്തിൽ ശങ്കുണ്ണി ശേഖരം",
+          "സി. വി. രാമൻപിള്ള ശേഖരം"
+        ]
+      },
+      {
+        "host": "archive.org",
+        "count": 2,
+        "texts": [
+          "വടക്കൻ പാട്ടുകൾ\n\t\t\t\t\t\t\t\t\tവടക്കൻ കേരളത്തിൽ ഉടലെടുത്ത വീരാരാധനാപരമായ നാടോടിപ്പാട്ടുകളാണ് വടക്കൻ പാട്ടുകൾ.",
+          "നളചരിതം\n\t\t\t\t\t\t\t\t\tആട്ടക്കഥാ സാഹിത്യത്തിൽ എന്തുകൊണ്ടും പ്രഥമസ്ഥാനത്തിന് അർഹമായ കൃതി എന്ന് നിരൂപകർ വാഴ്ത്തുന്ന കൃതിയാണ് ഉണ്ണായിവാരിയരുടെ നളചരിതം."
+        ]
+      },
+      {
+        "host": "facebook.com",
         "count": 1,
         "texts": [
-          "cloudflare.com"
+          "ഫേസ്ബുക് ലൂടെ ഫോളോ ചെയ്യുക"
+        ]
+      },
+      {
+        "host": "solminds.com",
+        "count": 1,
+        "texts": [
+          "website developed"
         ]
       }
     ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 41,
+    "security": 46,
+    "accessibility": 32,
+    "content": 38,
+    "gigw": 2,
+    "performance": 76,
+    "identity": 80
+  },
+  "status": "poor",
   "issues": [
     {
-      "id": "avail.status",
-      "sev": "C",
-      "ev": "final response was 502"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://keralasangeethanatakaakademi.in/\""
+    },
+    {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "jquery 3.4.1, bootstrap 4.3.0, swiper 4.5.0"
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "97 critical violation(s)"
+    },
+    {
+      "id": "a11y.lang",
+      "sev": "H",
+      "ev": "<html lang=\"\"> vs. 135% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -450,8 +513,9 @@
       "ev": "ml-"
     },
     {
-      "id": "gigw.contact",
-      "sev": "H"
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://keralasahityaakademi.org/wp-login.php?action=logout&redirect_to=index.php&_wpnonce=d8d85bc6d5)"
     },
     {
       "id": "gigw.rti",
@@ -463,18 +527,18 @@
       "ev": "www.keralasahityaakademi.org"
     },
     {
-      "id": "sec.hsts",
+      "id": "sec.xfo",
       "sev": "M"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "4 serious violation(s)"
+      "ev": "31 serious violation(s)"
     },
     {
-      "id": "a11y.contrast",
+      "id": "a11y.alt",
       "sev": "M",
-      "ev": "2 low-contrast element(s)"
+      "ev": "97 image(s) missing alt text"
     },
     {
       "id": "gigw.sitemap",
@@ -497,26 +561,28 @@
       "sev": "M"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "6096.532740000001ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "61.7MB"
     },
     {
       "id": "sec.csp",
       "sev": "L"
     },
     {
-      "id": "sec.xcto",
-      "sev": "L"
-    },
-    {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "5 moderate/minor violation(s)"
+      "ev": "66 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "heading levels skipped"
+      "ev": "no <h1>, heading levels skipped"
     },
     {
       "id": "content.meta_desc",
@@ -529,7 +595,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 502 ()"
+      "ev": "8 console error(s): Access to fetch at 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit' from origin 'https://keralasahityaakademi.org' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -560,32 +626,25 @@
       "sev": "L"
     },
     {
-      "id": "gigw.search",
-      "sev": "L"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
     {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 502"
-    },
-    {
-      "id": "gigw.emblem",
-      "sev": "I"
-    },
-    {
       "id": "id.canonical",
       "sev": "I"
+    },
+    {
+      "id": "id.third_party",
+      "sev": "I",
+      "ev": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-29",
+      "up": true,
+      "score": 41
+    },
     {
       "d": "2026-10-28",
       "up": false,
@@ -772,5 +831,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

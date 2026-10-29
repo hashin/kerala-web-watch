@@ -37,34 +37,434 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-28T00:55:02.441Z",
-    "run": "1793148831557",
+    "at": "2026-10-29T01:24:49.733Z",
+    "run": "1793237004380",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 31,
+      "accessibility": 52,
+      "best_practices": 92,
+      "seo": 82
+    },
     "axe": {
-      "critical": 0,
-      "serious": 0,
-      "moderate": 0,
+      "critical": 11,
+      "serious": 36,
+      "moderate": 28,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
-      "pdfs": 0,
+      "pages": 30,
+      "pdfs": 7,
       "broken": 0
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "Apache",
       "jquery": null
     },
-    "checks": [],
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "pass"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "pass"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "pass"
+      },
+      {
+        "id": "sec.csp",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "pass"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "fail"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "pass"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "fail",
+        "ev": "moment.js 2.15.1"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "fail",
+        "ev": "11 critical violation(s)"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "36 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "28 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "fail",
+        "ev": "<html lang=\"\"> vs. 103% Malayalam content"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "fail",
+        "ev": "7 image(s) missing alt text"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "fail",
+        "ev": "2 low-contrast element(s)"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "no <h1>, heading levels skipped"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "fail",
+        "ev": "1 form control(s) without a label"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "52/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "31/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "21116.398999999998ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "fail",
+        "ev": "0.73"
+      },
+      {
+        "id": "perf.weight",
+        "r": "warn",
+        "ev": "6.8MB"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "fail"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "na"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-user"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "pass"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "pass"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "pass"
+      },
+      {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "6 console error(s): Connecting to 'https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i&display=swap' violates the following Content Security Policy directive: \"connect-src 'self' https://cdn.ux4g.gov.in\". The action has been blocked."
+      },
+      {
+        "id": "gigw.contact",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.help",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.search",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "warn"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "pass"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "na"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "fail"
+      },
+      {
+        "id": "id.robots",
+        "r": "fail",
+        "ev": "robots.txt returned 404"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "fail"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "fail",
+        "ev": "missing HTML5 doctype"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "pass"
+      }
+    ],
     "screenshot": {
       "desktop": "keralaprisons.webp",
       "mobile": "keralaprisons-m.webp",
       "phash": "ff3f1e040041c340"
     },
-    "outlinks": [],
-    "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://keralaprisons.gov.in/malayalam/\", waiting until \"load\"\n"
+    "outlinks": [
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "youtube.com",
+        "count": 2,
+        "texts": [
+          "Video Tutorial"
+        ]
+      },
+      {
+        "host": "eprisons.nic.in",
+        "count": 2,
+        "texts": [
+          "ePrisons\n                                            തടവുകാരുടെ മാനേജുമെന്റുമായി ബന്ധപ്പെട്ട പ്രവർത്തനങ്ങൾ കമ്പ്യൂട്ടറൈസ് ചെയ്യുന്നതിനുള്ള സംയോജിത സംവിധാനം"
+        ]
+      },
+      {
+        "host": "kerala.gov.in",
+        "count": 1,
+        "texts": [
+          "eOffice\n                                            വെബ് അധിഷ്ഠിതമായി ഫയൽ പ്രോസസ്സിങ്ങിനും അപ്രൂവലിലും വിവരങ്ങൾ പങ്കിടുന്നതിനുമുള്ള പ്ലാറ്റ്‌ഫോം"
+        ]
+      },
+      {
+        "host": "ux4g.gov.in",
+        "count": 1,
+        "texts": [
+          "Created by"
+        ]
+      }
+    ]
   },
   "score": {
     "overall": 47,
@@ -90,7 +490,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"\"> vs. 101% Malayalam content"
+      "ev": "<html lang=\"\"> vs. 103% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -109,7 +509,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "37 serious violation(s)"
+      "ev": "36 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -119,7 +519,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "3 low-contrast element(s)"
+      "ev": "2 low-contrast element(s)"
     },
     {
       "id": "a11y.labels",
@@ -145,12 +545,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "27931.2555ms"
+      "ev": "21116.398999999998ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "6.6MB"
+      "ev": "6.8MB"
     },
     {
       "id": "perf.tap_targets",
@@ -178,7 +578,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "7 console error(s): Connecting to 'https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i&display=swap' violates the following Content Security Policy directive: \"connect-src 'self' https://cdn.ux4g.gov.in\". The action has been blocked."
+      "ev": "6 console error(s): Connecting to 'https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i&display=swap' violates the following Content Security Policy directive: \"connect-src 'self' https://cdn.ux4g.gov.in\". The action has been blocked."
     },
     {
       "id": "gigw.feedback",
@@ -207,7 +607,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.77"
+      "ev": "0.73"
     },
     {
       "id": "perf.images",
@@ -242,6 +642,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-29",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-10-28",
       "up": true,
@@ -423,5 +828,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

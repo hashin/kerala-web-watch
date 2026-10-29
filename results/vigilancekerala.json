@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-27T01:14:09.881Z",
-    "run": "1793063575835",
+    "at": "2026-10-29T01:32:38.373Z",
+    "run": "1793237441015",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 65,
+      "performance": 42,
       "accessibility": 100,
       "best_practices": 73,
       "seo": 100
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 6,
-      "broken": 0
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -216,11 +216,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "65/100"
+        "ev": "42/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "fail",
+        "ev": "6142.990000000001ms"
       },
       {
         "id": "perf.cls",
@@ -229,7 +230,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "13.0MB"
+        "ev": "16.1MB"
       },
       {
         "id": "perf.viewport",
@@ -274,11 +275,13 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://vigilance.kerala.gov.in/wings/courts-tribunals-wings)"
       },
       {
         "id": "content.broken_pdfs",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 linked PDF(s) 404: https://vigilance.kerala.gov.in/storage/tender/IT3nkLiS3M1jDwNxPkq9xdFZTem3D3lyHCW75KEt.pdf"
       },
       {
         "id": "content.broken_images",
@@ -409,7 +412,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-CMG1G06L24&amp;cx=c&amp;gtm=4e6an1, https://www.googletagmanager.com/gtm.js?id=GTM-PFLTDP3B"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-CMG1G06L24&amp;cx=c&amp;gtm=4e6as0h2, https://www.googletagmanager.com/gtm.js?id=GTM-PFLTDP3B"
       }
     ],
     "screenshot": {
@@ -485,12 +488,12 @@
     ]
   },
   "score": {
-    "overall": 70,
+    "overall": 66,
     "security": 80,
     "accessibility": 84,
-    "content": 72,
+    "content": 52,
     "gigw": 0,
-    "performance": 86,
+    "performance": 76,
     "identity": 100
   },
   "status": "needs-work",
@@ -505,6 +508,11 @@
       "ev": "no \"last updated\" date found"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://vigilance.kerala.gov.in/wings/courts-tribunals-wings)"
+    },
+    {
       "id": "gigw.contact",
       "sev": "H"
     },
@@ -512,6 +520,11 @@
       "id": "a11y.axe_serious",
       "sev": "M",
       "ev": "5 serious violation(s)"
+    },
+    {
+      "id": "content.broken_pdfs",
+      "sev": "M",
+      "ev": "1 linked PDF(s) 404: https://vigilance.kerala.gov.in/storage/tender/IT3nkLiS3M1jDwNxPkq9xdFZTem3D3lyHCW75KEt.pdf"
     },
     {
       "id": "gigw.sitemap",
@@ -534,9 +547,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "6142.990000000001ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "13.0MB"
+      "ev": "16.1MB"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -597,10 +615,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-CMG1G06L24&amp;cx=c&amp;gtm=4e6an1, https://www.googletagmanager.com/gtm.js?id=GTM-PFLTDP3B"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-CMG1G06L24&amp;cx=c&amp;gtm=4e6as0h2, https://www.googletagmanager.com/gtm.js?id=GTM-PFLTDP3B"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-29",
+      "up": true,
+      "score": 66
+    },
     {
       "d": "2026-10-28",
       "up": true,
@@ -782,5 +805,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

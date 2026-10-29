@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-28T00:56:30.750Z",
-    "run": "1793148872046",
+    "at": "2026-10-29T01:31:05.535Z",
+    "run": "1793237402731",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 14,
-      "accessibility": 80,
-      "best_practices": 96,
+      "performance": 28,
+      "accessibility": 76,
+      "best_practices": 92,
       "seo": 85
     },
     "axe": {
       "critical": 11,
-      "serious": 25,
+      "serious": 24,
       "moderate": 2,
       "minor": 1
     },
     "crawl": {
       "pages": 30,
       "pdfs": 14,
-      "broken": 5
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 8",
@@ -175,7 +175,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "25 serious violation(s)"
+        "ev": "24 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -193,7 +193,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "5 low-contrast element(s)"
+        "ev": "4 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -216,27 +216,27 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "80/100"
+        "ev": "76/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "14/100"
+        "ev": "28/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "18727.462ms"
+        "ev": "24466.700999999997ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.75"
+        "ev": "0.65"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "18.3MB"
+        "ev": "19.6MB"
       },
       {
         "id": "perf.viewport",
@@ -286,12 +286,12 @@
       },
       {
         "id": "content.broken_pdfs",
-        "r": "fail",
-        "ev": "5 linked PDF(s) 404: https://prd.kerala.gov.in/sites/default/files/pdf/documentEOI2.pdf, https://prd.kerala.gov.in/sites/default/files/pdf/24a1367e-fe83-4a86-ba04-22c3f163846a.pdf, https://prd.kerala.gov.in/sites/default/files/inline-files/janapadham%20oct%202026.pdf, https://prd.kerala.gov.in/sites/default/files/inline-files/Kerala%20Calling%27%20October%202026%20.pdf, https://prd.kerala.gov.in/sites/default/files/inline-files/Janapatham_September%20final.pdf"
+        "r": "pass"
       },
       {
         "id": "content.broken_images",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -312,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/player/6eded988/www-player.css' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "25 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -532,10 +532,10 @@
     ]
   },
   "score": {
-    "overall": 50,
+    "overall": 51,
     "security": 42,
     "accessibility": 50,
-    "content": 42,
+    "content": 48,
     "gigw": 32,
     "performance": 72,
     "identity": 91
@@ -574,17 +574,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "25 serious violation(s)"
+      "ev": "24 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "5 low-contrast element(s)"
-    },
-    {
-      "id": "content.broken_pdfs",
-      "sev": "M",
-      "ev": "5 linked PDF(s) 404: https://prd.kerala.gov.in/sites/default/files/pdf/documentEOI2.pdf, https://prd.kerala.gov.in/sites/default/files/pdf/24a1367e-fe83-4a86-ba04-22c3f163846a.pdf, https://prd.kerala.gov.in/sites/default/files/inline-files/janapadham%20oct%202026.pdf, https://prd.kerala.gov.in/sites/default/files/inline-files/Kerala%20Calling%27%20October%202026%20.pdf, https://prd.kerala.gov.in/sites/default/files/inline-files/Janapatham_September%20final.pdf"
+      "ev": "4 low-contrast element(s)"
     },
     {
       "id": "gigw.privacy",
@@ -605,12 +600,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "18727.462ms"
+      "ev": "24466.700999999997ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "18.3MB"
+      "ev": "19.6MB"
     },
     {
       "id": "id.tech",
@@ -641,13 +636,18 @@
       "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
+      "id": "content.broken_images",
+      "sev": "L",
+      "ev": "1 broken image(s)"
+    },
+    {
       "id": "content.meta_desc",
       "sev": "L"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/player/6eded988/www-player.css' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "25 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.feedback",
@@ -680,7 +680,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.75"
+      "ev": "0.65"
     },
     {
       "id": "perf.images",
@@ -701,6 +701,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-29",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-10-28",
       "up": true,
@@ -887,5 +892,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

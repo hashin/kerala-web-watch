@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-28T01:07:58.844Z",
-    "run": "1793149642027",
+    "at": "2026-10-29T01:30:25.922Z",
+    "run": "1793237389884",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 72,
+      "performance": 69,
       "accessibility": 71,
       "best_practices": 96,
       "seo": 91
@@ -49,7 +49,7 @@
     "axe": {
       "critical": 16,
       "serious": 13,
-      "moderate": 14,
+      "moderate": 15,
       "minor": 0
     },
     "crawl": {
@@ -182,7 +182,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "14 moderate/minor violation(s)"
+        "ev": "15 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -224,11 +224,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "72/100"
+        "ev": "69/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "fail",
+        "ev": "4232.9675ms"
       },
       {
         "id": "perf.cls",
@@ -238,7 +239,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "4.9MB"
+        "ev": "5.1MB"
       },
       {
         "id": "perf.viewport",
@@ -272,7 +273,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-"
+        "ev": "ml-user"
       },
       {
         "id": "content.obsolete_tech",
@@ -491,12 +492,12 @@
     ]
   },
   "score": {
-    "overall": 48,
+    "overall": 47,
     "security": 48,
     "accessibility": 40,
     "content": 60,
     "gigw": 0,
-    "performance": 77,
+    "performance": 67,
     "identity": 88
   },
   "status": "poor",
@@ -519,7 +520,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-"
+      "ev": "ml-user"
     },
     {
       "id": "gigw.rti",
@@ -569,9 +570,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "4232.9675ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "4.9MB"
+      "ev": "5.1MB"
     },
     {
       "id": "perf.tap_targets",
@@ -593,7 +599,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "14 moderate/minor violation(s)"
+      "ev": "15 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -670,6 +676,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-29",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-10-28",
       "up": true,
@@ -831,5 +842,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

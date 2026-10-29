@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-28T01:00:06.965Z",
-    "run": "1793149139713",
+    "at": "2026-10-29T01:21:11.921Z",
+    "run": "1793236822461",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
-      "accessibility": 76,
+      "performance": 55,
+      "accessibility": 80,
       "best_practices": 96,
       "seo": 83
     },
@@ -213,17 +213,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "76/100"
+        "ev": "80/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "12168.007999999998ms"
+        "ev": "9423.857499999998ms"
       },
       {
         "id": "perf.cls",
@@ -240,7 +240,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -309,7 +309,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "14 console error(s): Connecting to 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' violates the following Content Security Policy directive: \"connect-src 'self' https://bookingjini.info https://kernel.bookingjini.com https://stats.g.doubleclick.net https://www.google-analytics.com https://maps.googleapis.com https://maps.gstatic.com\". The action has been blocked."
+        "ev": "14 console error(s): Connecting to 'https://fonts.googleapis.com/css?family=Prata&display=swap' violates the following Content Security Policy directive: \"connect-src 'self' https://bookingjini.info https://kernel.bookingjini.com https://stats.g.doubleclick.net https://www.google-analytics.com https://maps.googleapis.com https://maps.gstatic.com\". The action has been blocked."
       },
       {
         "id": "gigw.contact",
@@ -467,12 +467,12 @@
     ]
   },
   "score": {
-    "overall": 64,
+    "overall": 65,
     "security": 90,
     "accessibility": 70,
     "content": 32,
     "gigw": 32,
-    "performance": 71,
+    "performance": 81,
     "identity": 76
   },
   "status": "needs-work",
@@ -535,16 +535,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "12168.007999999998ms"
+      "ev": "9423.857499999998ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
       "ev": "7.1MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -568,7 +564,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "14 console error(s): Connecting to 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' violates the following Content Security Policy directive: \"connect-src 'self' https://bookingjini.info https://kernel.bookingjini.com https://stats.g.doubleclick.net https://www.google-analytics.com https://maps.googleapis.com https://maps.gstatic.com\". The action has been blocked."
+      "ev": "14 console error(s): Connecting to 'https://fonts.googleapis.com/css?family=Prata&display=swap' violates the following Content Security Policy directive: \"connect-src 'self' https://bookingjini.info https://kernel.bookingjini.com https://stats.g.doubleclick.net https://www.google-analytics.com https://maps.googleapis.com https://maps.gstatic.com\". The action has been blocked."
     },
     {
       "id": "gigw.terms",
@@ -618,6 +614,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-29",
+      "up": true,
+      "score": 65
+    },
     {
       "d": "2026-10-28",
       "up": true,
@@ -804,5 +805,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

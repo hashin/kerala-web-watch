@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-28T00:47:11.865Z",
-    "run": "1793148318839",
+    "at": "2026-10-29T01:17:40.626Z",
+    "run": "1793236564797",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 44,
+      "performance": 39,
       "accessibility": 92,
       "best_practices": 96,
       "seo": 92
@@ -47,13 +47,13 @@
     "axe": {
       "critical": 0,
       "serious": 10,
-      "moderate": 22,
+      "moderate": 28,
       "minor": 3
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3062ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -179,12 +180,12 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "25 moderate/minor violation(s)"
+        "ev": "31 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 88% Malayalam content"
+        "ev": "<html lang=\"en\"> vs. 89% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -196,7 +197,8 @@
       },
       {
         "id": "a11y.headings",
-        "r": "pass"
+        "r": "fail",
+        "ev": "no <h1>"
       },
       {
         "id": "a11y.labels",
@@ -219,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "44/100"
+        "ev": "39/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "38445.185249999995ms"
+        "ev": "39715.248250000004ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "20.2MB"
+        "ev": "21.0MB"
       },
       {
         "id": "perf.viewport",
@@ -279,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://keralapolice.gov.in/page/state-police-duty-meet-winners)"
       },
       {
         "id": "content.broken_pdfs",
@@ -414,13 +417,13 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K&amp;cx=c&amp;gtm=4e6ar0h2, https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6ar0h2, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K&amp;cx=c&amp;gtm=4e6ar1, https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6ar1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
       }
     ],
     "screenshot": {
       "desktop": "keralapolice.webp",
       "mobile": "keralapolice-m.webp",
-      "phash": "ffffc4c4d191903f"
+      "phash": "ffff808060e0f83f"
     },
     "outlinks": [
       {
@@ -579,10 +582,10 @@
     ]
   },
   "score": {
-    "overall": 57,
+    "overall": 55,
     "security": 50,
-    "accessibility": 64,
-    "content": 56,
+    "accessibility": 60,
+    "content": 46,
     "gigw": 26,
     "performance": 66,
     "identity": 96
@@ -602,7 +605,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 88% Malayalam content"
+      "ev": "<html lang=\"en\"> vs. 89% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -615,8 +618,18 @@
       "ev": "ml-"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://keralapolice.gov.in/page/state-police-duty-meet-winners)"
+    },
+    {
       "id": "gigw.contact",
       "sev": "H"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3062ms"
     },
     {
       "id": "sec.xfo",
@@ -642,12 +655,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "38445.185249999995ms"
+      "ev": "39715.248250000004ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "20.2MB"
+      "ev": "21.0MB"
     },
     {
       "id": "perf.tap_targets",
@@ -656,7 +669,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "25 moderate/minor violation(s)"
+      "ev": "31 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "no <h1>"
     },
     {
       "id": "a11y.keyboard",
@@ -708,10 +726,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K&amp;cx=c&amp;gtm=4e6ar0h2, https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6ar0h2, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K&amp;cx=c&amp;gtm=4e6ar1, https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6ar1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-29",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-28",
       "up": true,
@@ -903,5 +926,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
