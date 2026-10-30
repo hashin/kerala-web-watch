@@ -2,8 +2,8 @@
   "id": "ministerelectricity",
   "url": "https://minister-electricity.kerala.gov.in",
   "light": {
-    "at": "2026-10-29T22:24:14.533Z",
-    "status_class": "timeout",
+    "at": "2026-10-30T03:55:11.778Z",
+    "status_class": "connect_fail",
     "dns": true,
     "status": null,
     "final_url": null,
@@ -11,7 +11,13 @@
     "ttfb_ms": null,
     "title": null,
     "byte_size": null,
-    "tls": null,
+    "tls": {
+      "valid": false,
+      "protocol": "TLSv1.3",
+      "expires": "Apr 14 05:54:59 2026 GMT",
+      "days_left": -199,
+      "issuer": "Let's Encrypt"
+    },
     "headers": {
       "hsts": false,
       "csp": false,
@@ -21,7 +27,7 @@
       "server": null
     },
     "content_hash": null,
-    "http_redirects_to_https": false,
+    "http_redirects_to_https": true,
     "geo_block_suspect": false,
     "domain": "kerala.gov.in",
     "final_domain": null,
@@ -55,7 +61,7 @@
     "error": "page.goto: net::ERR_CERT_DATE_INVALID at https://minister-electricity.kerala.gov.in/\nCall log:\n  - navigating to \"https://minister-electricity.kerala.gov.in/\", waiting until \"load\"\n"
   },
   "score": null,
-  "status": "down",
+  "status": "broken",
   "issues": [],
   "history": [
     {

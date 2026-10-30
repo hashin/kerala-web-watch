@@ -2,22 +2,20 @@
   "id": "dmgkerala",
   "url": "https://dmg.kerala.gov.in",
   "light": {
-    "at": "2026-10-29T22:15:49.467Z",
-    "status_class": "ok",
+    "at": "2026-10-30T03:47:52.729Z",
+    "status_class": "http_503",
     "dns": true,
-    "status": 200,
-    "final_url": "https://dmg.kerala.gov.in/cgi-sys/suspendedpage.cgi",
-    "redirects": [
-      "https://dmg.kerala.gov.in -> https://dmg.kerala.gov.in/cgi-sys/suspendedpage.cgi"
-    ],
-    "ttfb_ms": 278,
-    "title": "Under Maintenance",
-    "byte_size": 2199,
+    "status": 503,
+    "final_url": "https://dmg.kerala.gov.in",
+    "redirects": [],
+    "ttfb_ms": 980,
+    "title": "Scheduled Maintenance",
+    "byte_size": 2063,
     "tls": {
       "valid": true,
       "protocol": "TLSv1.3",
-      "expires": "Nov 10 10:32:44 2026 GMT",
-      "days_left": 12,
+      "expires": "Jan 27 23:03:51 2027 GMT",
+      "days_left": 90,
       "issuer": "Let's Encrypt"
     },
     "headers": {
@@ -28,13 +26,13 @@
       "referrer": false,
       "server": "Apache"
     },
-    "content_hash": "e4c6a24b5e44408676941317dd594ba5db079d6d2f06571f992d3dedca94796a",
+    "content_hash": "47397780cdad9b3fca0c3b3f41c0a06d8c62d52718574628eea10dda84ebf433",
     "http_redirects_to_https": false,
     "geo_block_suspect": false,
     "domain": "kerala.gov.in",
     "final_domain": "kerala.gov.in",
     "vantage": "gh-us",
-    "suspect": false
+    "suspect": true
   },
   "deep": {
     "at": "2026-10-24T23:54:57.436Z",
@@ -565,6 +563,11 @@
   ],
   "history": [
     {
+      "d": "2026-10-30",
+      "up": true,
+      "score": 61
+    },
+    {
       "d": "2026-10-29",
       "up": true,
       "score": 61
@@ -760,5 +763,5 @@
       "score": null
     }
   ],
-  "deep_bump": false
+  "deep_bump": true
 }
