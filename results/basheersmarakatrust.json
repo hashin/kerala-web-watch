@@ -29,8 +29,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-29T01:32:55.617Z",
-    "run": "1793237558376",
+    "at": "2026-10-30T01:44:40.048Z",
+    "run": "1793324663981",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 0,
@@ -50,7 +50,7 @@
       "broken": 0
     },
     "tech": {
-      "cms": "WordPress 7.0.7",
+      "cms": "WordPress 7.1.4",
       "server": "nginx/1.29.8",
       "jquery": null
     },
@@ -290,7 +290,7 @@
       },
       {
         "id": "content.meta_desc",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.favicon",
@@ -299,7 +299,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "3 console error(s): Failed to load resource: the server responded with a status of 500 ()"
+        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 500 ()"
       },
       {
         "id": "gigw.contact",
@@ -401,7 +401,7 @@
       {
         "id": "id.tech",
         "r": "pass",
-        "ev": "WordPress 7.0.7"
+        "ev": "WordPress 7.1.4"
       },
       {
         "id": "id.third_party",
@@ -515,9 +515,13 @@
       "ev": "no <h1>"
     },
     {
+      "id": "content.meta_desc",
+      "sev": "L"
+    },
+    {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "3 console error(s): Failed to load resource: the server responded with a status of 500 ()"
+      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 500 ()"
     },
     {
       "id": "gigw.feedback",
@@ -565,6 +569,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-30",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-29",
       "up": false,
@@ -761,5 +770,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

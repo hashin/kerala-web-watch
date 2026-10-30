@@ -35,54 +35,455 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-29T01:37:01.109Z",
-    "run": "1793237809289",
+    "at": "2026-10-30T01:51:11.102Z",
+    "run": "1793325022420",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 36,
+      "accessibility": 82,
+      "best_practices": 73,
+      "seo": 85
+    },
     "axe": {
-      "critical": 0,
-      "serious": 0,
-      "moderate": 0,
+      "critical": 1,
+      "serious": 11,
+      "moderate": 2,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
+      "pages": 30,
       "pdfs": 0,
       "broken": 0
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "Apache",
       "jquery": null
     },
-    "checks": [],
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "warn",
+        "ev": "3702ms"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "fail"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "fail",
+        "ev": "href=\"http://gmpg.org/xfn/11\""
+      },
+      {
+        "id": "sec.csp",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "fail"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "fail"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "pass"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "pass"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "fail",
+        "ev": "1 critical violation(s)"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "11 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "2 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "fail",
+        "ev": "1 image(s) missing alt text"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "fail",
+        "ev": "2 low-contrast element(s)"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "heading levels skipped"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "82/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "36/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "5981.4665ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "fail",
+        "ev": "0.72"
+      },
+      {
+        "id": "perf.weight",
+        "r": "warn",
+        "ev": "5.7MB"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "pass"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "na"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-IN"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "pass"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "na"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "fail"
+      },
+      {
+        "id": "content.favicon",
+        "r": "fail"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "1 console error(s): Creating a worker from 'blob:https://kslub.kerala.gov.in/3c66fe3c-a9bc-4899-b88d-56dde774b793' violates the following Content Security Policy directive: \"child-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com https://www.youtube-nocookie.com\". Note that 'worker-src' was not explicitly set, so 'child-src' is used as a fallback. The action has been blocked."
+      },
+      {
+        "id": "gigw.contact",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.search",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "warn"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "pass"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "na"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "pass"
+      },
+      {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "pass"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "pass"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "pass"
+      }
+    ],
     "screenshot": {
       "desktop": "kslub.webp",
       "mobile": "kslub-m.webp",
-      "phash": "003c66420c663c00"
+      "phash": "ffff39f800006958"
     },
-    "outlinks": [],
-    "error": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://kslub.kerala.gov.in/\nCall log:\n  - navigating to \"https://kslub.kerala.gov.in/\", waiting until \"load\"\n"
+    "outlinks": [
+      {
+        "host": "nrsc.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "kslublris.com",
+        "count": 2,
+        "texts": []
+      },
+      {
+        "host": "jalasamrdhi.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "kattakadalac.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "thrithalalac.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "kottarakkaralac.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "cdit.org",
+        "count": 1,
+        "texts": [
+          "CDIT"
+        ]
+      }
+    ]
   },
   "score": {
-    "overall": 58,
-    "security": 38,
-    "accessibility": 76,
-    "content": 72,
-    "gigw": 0,
-    "performance": 90,
-    "identity": 96
+    "overall": 53,
+    "security": 62,
+    "accessibility": 40,
+    "content": 48,
+    "gigw": 18,
+    "performance": 77,
+    "identity": 100
   },
-  "status": "down",
+  "status": "needs-work",
   "issues": [
     {
-      "id": "sec.http_redirect",
-      "sev": "H"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://gmpg.org/xfn/11\""
     },
     {
-      "id": "sec.cert_expiry",
+      "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "7 days left"
+      "ev": "1 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -90,30 +491,33 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "gigw.contact",
-      "sev": "H"
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-IN"
     },
     {
-      "id": "gigw.rti",
-      "sev": "H"
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3702ms"
     },
     {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
-      "id": "sec.xfo",
-      "sev": "M"
-    },
-    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "1 serious violation(s)"
+      "ev": "11 serious violation(s)"
+    },
+    {
+      "id": "a11y.alt",
+      "sev": "M",
+      "ev": "1 image(s) missing alt text"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "1 low-contrast element(s)"
+      "ev": "2 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -136,12 +540,14 @@
       "sev": "M"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "5981.4665ms"
     },
     {
-      "id": "sec.csp",
-      "sev": "L"
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "5.7MB"
     },
     {
       "id": "sec.xcto",
@@ -157,12 +563,27 @@
       "ev": "2 moderate/minor violation(s)"
     },
     {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
+    },
+    {
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
+    },
+    {
       "id": "content.meta_desc",
       "sev": "L"
     },
     {
       "id": "content.favicon",
       "sev": "L"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "1 console error(s): Creating a worker from 'blob:https://kslub.kerala.gov.in/3c66fe3c-a9bc-4899-b88d-56dde774b793' violates the following Content Security Policy directive: \"child-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com https://www.youtube-nocookie.com\". Note that 'worker-src' was not explicitly set, so 'child-src' is used as a fallback. The action has been blocked."
     },
     {
       "id": "gigw.feedback",
@@ -197,20 +618,25 @@
       "sev": "L"
     },
     {
-      "id": "id.soft_404",
+      "id": "perf.cls",
       "sev": "L",
-      "ev": "a nonexistent path returned 200"
+      "ev": "0.72"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
     },
     {
       "id": "gigw.emblem",
       "sev": "I"
-    },
-    {
-      "id": "id.canonical",
-      "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-30",
+      "up": true,
+      "score": 53
+    },
     {
       "d": "2026-10-29",
       "up": false,
@@ -397,5 +823,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

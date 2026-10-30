@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-29T01:20:47.883Z",
-    "run": "1793236687740",
+    "at": "2026-10-30T01:32:20.856Z",
+    "run": "1793323778337",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 0,
@@ -46,7 +46,7 @@
     },
     "axe": {
       "critical": 2,
-      "serious": 3,
+      "serious": 1,
       "moderate": 7,
       "minor": 1
     },
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "4196ms"
+        "ev": "6297ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -158,7 +158,7 @@
       {
         "id": "sec.vuln_js",
         "r": "fail",
-        "ev": "chart.js 2.5.0"
+        "ev": "chart.js 2.5.0, swiper 8.4.5"
       },
       {
         "id": "sec.safe_browsing",
@@ -176,7 +176,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "3 serious violation(s)"
+        "ev": "1 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -194,8 +194,7 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "2 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
@@ -237,7 +236,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "18.3MB"
+        "ev": "18.5MB"
       },
       {
         "id": "perf.viewport",
@@ -479,9 +478,9 @@
     ]
   },
   "score": {
-    "overall": 43,
+    "overall": 46,
     "security": 32,
-    "accessibility": 30,
+    "accessibility": 40,
     "content": 34,
     "gigw": 32,
     "performance": 76,
@@ -501,7 +500,7 @@
     {
       "id": "sec.vuln_js",
       "sev": "H",
-      "ev": "chart.js 2.5.0"
+      "ev": "chart.js 2.5.0, swiper 8.4.5"
     },
     {
       "id": "a11y.axe_critical",
@@ -526,22 +525,17 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "4196ms"
+      "ev": "6297ms"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "3 serious violation(s)"
+      "ev": "1 serious violation(s)"
     },
     {
       "id": "a11y.alt",
       "sev": "M",
       "ev": "1 image(s) missing alt text"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "2 low-contrast element(s)"
     },
     {
       "id": "a11y.labels",
@@ -567,7 +561,7 @@
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "18.3MB"
+      "ev": "18.5MB"
     },
     {
       "id": "perf.tap_targets",
@@ -648,6 +642,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-30",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-10-29",
       "up": true,
@@ -839,5 +838,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

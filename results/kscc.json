@@ -35,15 +35,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-29T01:38:48.614Z",
-    "run": "1793237879422",
+    "at": "2026-10-30T01:42:34.464Z",
+    "run": "1793324513503",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 10,
-      "accessibility": 90,
-      "best_practices": 77,
-      "seo": 92
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 3,
       "serious": 4,
@@ -214,23 +209,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "90/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "10/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "5874.6655ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.56"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -242,11 +233,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -382,7 +373,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "31 days left"
+        "ev": "30 days left"
       },
       {
         "id": "id.www_consistency",
@@ -426,12 +417,12 @@
     "outlinks": []
   },
   "score": {
-    "overall": 51,
+    "overall": 53,
     "security": 44,
     "accessibility": 60,
     "content": 56,
     "gigw": 18,
-    "performance": 82,
+    "performance": 100,
     "identity": 60
   },
   "status": "needs-work",
@@ -464,7 +455,7 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "31 days left"
+      "ev": "30 days left"
     },
     {
       "id": "sec.hsts",
@@ -498,11 +489,6 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "5874.6655ms"
     },
     {
       "id": "sec.csp",
@@ -571,18 +557,14 @@
     {
       "id": "gigw.search",
       "sev": "L"
-    },
-    {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.56"
-    },
-    {
-      "id": "perf.images",
-      "sev": "L"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-30",
+      "up": true,
+      "score": 53
+    },
     {
       "d": "2026-10-29",
       "up": true,
@@ -774,5 +756,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

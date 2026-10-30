@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-14T01:02:35.715Z",
-    "run": "1791939703372",
+    "at": "2026-10-30T01:44:34.635Z",
+    "run": "1793324624942",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 60,
+      "performance": 59,
       "accessibility": 85,
       "best_practices": 74,
       "seo": 92
     },
     "axe": {
       "critical": 1,
-      "serious": 13,
+      "serious": 14,
       "moderate": 25,
       "minor": 0
     },
     "crawl": {
       "pages": 24,
       "pdfs": 0,
-      "broken": 5
+      "broken": 4
     },
     "tech": {
       "cms": "Drupal 11",
@@ -175,7 +175,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "13 serious violation(s)"
+        "ev": "14 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -194,7 +194,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "6 low-contrast element(s)"
+        "ev": "7 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "60/100"
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "5431.495000000001ms"
+        "ev": "8428.3115ms"
       },
       {
         "id": "perf.cls",
@@ -282,8 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "5/24 crawled link(s) broken (https://plan.lsgkerala.gov.in/formulation/Public.aspx, http://athiyannoorblockpanchayat.lsgkerala.gov.in/about, http://athiyannoorblockpanchayat.lsgkerala.gov.in/contact-us, ...)"
+        "r": "warn",
+        "ev": "4/24 crawled link(s) broken (http://athiyannoorblockpanchayat.lsgkerala.gov.in/about, http://athiyannoorblockpanchayat.lsgkerala.gov.in/contact-us, http://athiyannoorblockpanchayat.lsgkerala.gov.in/terms, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -545,7 +545,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "5/24 crawled link(s) broken (https://plan.lsgkerala.gov.in/formulation/Public.aspx, http://athiyannoorblockpanchayat.lsgkerala.gov.in/about, http://athiyannoorblockpanchayat.lsgkerala.gov.in/contact-us, ...)"
+      "ev": "4/24 crawled link(s) broken (http://athiyannoorblockpanchayat.lsgkerala.gov.in/about, http://athiyannoorblockpanchayat.lsgkerala.gov.in/contact-us, http://athiyannoorblockpanchayat.lsgkerala.gov.in/terms, ...)"
     },
     {
       "id": "gigw.rti",
@@ -558,7 +558,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "13 serious violation(s)"
+      "ev": "14 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -568,7 +568,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "6 low-contrast element(s)"
+      "ev": "7 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -585,7 +585,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "5431.495000000001ms"
+      "ev": "8428.3115ms"
     },
     {
       "id": "perf.weight",
@@ -662,6 +662,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-30",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-29",
       "up": false,
@@ -848,5 +853,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

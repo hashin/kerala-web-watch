@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-27T00:43:03.988Z",
-    "run": "1793061723231",
+    "at": "2026-10-30T01:18:00.119Z",
+    "run": "1793323010629",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 42,
+      "performance": 40,
       "accessibility": 76,
-      "best_practices": 88,
-      "seo": 85
+      "best_practices": 92,
+      "seo": 77
     },
     "axe": {
       "critical": 63,
@@ -155,7 +155,8 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "pass"
+        "r": "fail",
+        "ev": "jquery 1.8.3"
       },
       {
         "id": "sec.safe_browsing",
@@ -218,22 +219,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "42/100"
+        "ev": "40/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9619.143ms"
+        "ev": "12052.285ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.29"
+        "ev": "0.31"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "15.3MB"
+        "ev": "15.0MB"
       },
       {
         "id": "perf.viewport",
@@ -267,7 +268,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-"
+        "ev": "ml-user"
       },
       {
         "id": "content.obsolete_tech",
@@ -308,8 +309,7 @@
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "1 console error(s): e.indexOf is not a function"
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
@@ -386,7 +386,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.robots",
@@ -422,7 +422,7 @@
     "screenshot": {
       "desktop": "cial.webp",
       "mobile": "cial-m.webp",
-      "phash": "ffff70e0e06060e4"
+      "phash": "e0fce6c60c1c187c"
     },
     "outlinks": [
       {
@@ -505,19 +505,24 @@
     ]
   },
   "score": {
-    "overall": 59,
-    "security": 80,
+    "overall": 55,
+    "security": 60,
     "accessibility": 46,
-    "content": 46,
+    "content": 50,
     "gigw": 42,
     "performance": 72,
-    "identity": 68
+    "identity": 72
   },
   "status": "needs-work",
   "issues": [
     {
       "id": "sec.http_redirect",
       "sev": "H"
+    },
+    {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "jquery 1.8.3"
     },
     {
       "id": "a11y.axe_critical",
@@ -532,7 +537,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-"
+      "ev": "ml-user"
     },
     {
       "id": "id.gov_domain",
@@ -574,22 +579,17 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9619.143ms"
+      "ev": "12052.285ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "15.3MB"
+      "ev": "15.0MB"
     },
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
       "ev": "38 moderate/minor violation(s)"
-    },
-    {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "1 console error(s): e.indexOf is not a function"
     },
     {
       "id": "gigw.feedback",
@@ -622,14 +622,10 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.29"
+      "ev": "0.31"
     },
     {
       "id": "perf.images",
-      "sev": "L"
-    },
-    {
-      "id": "id.www_consistency",
       "sev": "L"
     },
     {
@@ -648,6 +644,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-30",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-29",
       "up": true,
@@ -834,5 +835,5 @@
       "score": 54
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

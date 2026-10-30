@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-29T01:30:02.730Z",
-    "run": "1793237362704",
+    "at": "2026-10-30T01:33:28.877Z",
+    "run": "1793323966917",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 57,
+      "performance": 42,
       "accessibility": 88,
       "best_practices": 92,
       "seo": 100
@@ -220,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "57/100"
+        "ev": "42/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "15388.492999999999ms"
+        "ev": "20091.419ms"
       },
       {
         "id": "perf.cls",
@@ -311,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "4 console error(s): Cannot read properties of undefined (reading 'length')"
+        "ev": "3 console error(s): Cannot read properties of undefined (reading 'length')"
       },
       {
         "id": "gigw.contact",
@@ -536,7 +536,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "15388.492999999999ms"
+      "ev": "20091.419ms"
     },
     {
       "id": "perf.weight",
@@ -569,7 +569,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "4 console error(s): Cannot read properties of undefined (reading 'length')"
+      "ev": "3 console error(s): Cannot read properties of undefined (reading 'length')"
     },
     {
       "id": "gigw.feedback",
@@ -618,6 +618,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-30",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-10-29",
       "up": true,
@@ -809,5 +814,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

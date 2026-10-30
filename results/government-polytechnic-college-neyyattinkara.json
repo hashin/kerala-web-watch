@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-29T01:35:05.449Z",
-    "run": "1793237638419",
+    "at": "2026-10-30T01:46:47.998Z",
+    "run": "1793324743041",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 43,
+      "performance": 66,
       "accessibility": 85,
       "best_practices": 73,
       "seo": 92
@@ -55,10 +55,10 @@
     "crawl": {
       "pages": 30,
       "pdfs": 4,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
-      "cms": "WordPress 5.8.18",
+      "cms": "WordPress 5.8.19",
       "server": null,
       "jquery": null
     },
@@ -222,12 +222,11 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "43/100"
+        "ev": "66/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "5396.956ms"
+        "r": "pass"
       },
       {
         "id": "perf.cls",
@@ -283,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://gptcnta.ac.in/visiting-faculty-scheme/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -414,7 +414,7 @@
       {
         "id": "id.tech",
         "r": "warn",
-        "ev": "WordPress 5.8.18 (unsupported major version)"
+        "ev": "WordPress 5.8.19 (unsupported major version)"
       },
       {
         "id": "id.third_party",
@@ -480,12 +480,12 @@
     ]
   },
   "score": {
-    "overall": 48,
+    "overall": 47,
     "security": 24,
     "accessibility": 74,
-    "content": 46,
+    "content": 36,
     "gigw": 2,
-    "performance": 71,
+    "performance": 81,
     "identity": 91
   },
   "status": "poor",
@@ -509,6 +509,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://gptcnta.ac.in/visiting-faculty-scheme/)"
     },
     {
       "id": "gigw.rti",
@@ -558,11 +563,6 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "5396.956ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "7.5MB"
@@ -574,7 +574,7 @@
     {
       "id": "id.tech",
       "sev": "M",
-      "ev": "WordPress 5.8.18 (unsupported major version)"
+      "ev": "WordPress 5.8.19 (unsupported major version)"
     },
     {
       "id": "sec.csp",
@@ -651,6 +651,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-30",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-10-29",
       "up": true,
@@ -822,5 +827,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

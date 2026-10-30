@@ -37,10 +37,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-29T01:35:41.095Z",
-    "run": "1793237705825",
+    "at": "2026-10-30T01:39:40.790Z",
+    "run": "1793324345163",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 58,
+      "accessibility": 73,
+      "best_practices": 92,
+      "seo": 67
+    },
     "axe": {
       "critical": 7,
       "serious": 10,
@@ -213,19 +218,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "73/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "58/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "8118.490740000003ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -238,11 +246,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -305,7 +313,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "40 console error(s): Access to font at 'https://gptcmanjeri.in/asset//fonts/Manjari-Regular.woff2' from origin 'https://www.gptcmanjeri.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "40 console error(s): Access to font at 'https://gptcmanjeri.in/asset/fonts/Poppins-Regular.woff2' from origin 'https://www.gptcmanjeri.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -538,6 +546,11 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "8118.490740000003ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "6.4MB"
@@ -575,7 +588,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "40 console error(s): Access to font at 'https://gptcmanjeri.in/asset//fonts/Manjari-Regular.woff2' from origin 'https://www.gptcmanjeri.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "40 console error(s): Access to font at 'https://gptcmanjeri.in/asset/fonts/Poppins-Regular.woff2' from origin 'https://www.gptcmanjeri.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -610,6 +623,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -633,6 +650,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-30",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-29",
       "up": false,
@@ -804,5 +826,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

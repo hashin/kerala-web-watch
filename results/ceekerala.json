@@ -37,25 +37,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-29T01:20:56.407Z",
-    "run": "1793236813009",
+    "at": "2026-10-30T01:26:06.815Z",
+    "run": "1793323523131",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 58,
-      "accessibility": 62,
+      "accessibility": 69,
       "best_practices": 96,
       "seo": 91
     },
     "axe": {
-      "critical": 2,
-      "serious": 7,
+      "critical": 1,
+      "serious": 8,
       "moderate": 11,
       "minor": 0
     },
     "crawl": {
-      "pages": 26,
+      "pages": 27,
       "pdfs": 6,
-      "broken": 2
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -170,12 +170,12 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "2 critical violation(s)"
+        "ev": "1 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "7 serious violation(s)"
+        "ev": "8 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -184,8 +184,7 @@
       },
       {
         "id": "a11y.lang",
-        "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 118% Malayalam content"
+        "r": "pass"
       },
       {
         "id": "a11y.alt",
@@ -194,7 +193,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "6 low-contrast element(s)"
+        "ev": "7 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -216,7 +215,7 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "62/100"
+        "ev": "69/100"
       },
       {
         "id": "perf.lighthouse",
@@ -226,7 +225,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9181.794000000002ms"
+        "ev": "8812.690999999999ms"
       },
       {
         "id": "perf.cls",
@@ -281,7 +280,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "2/26 crawled link(s) broken (https://cee.kerala.gov.in/dnbmbbsonline2026/, https://cee.kerala.gov.in/pga2026/)"
+        "ev": "1/27 crawled link(s) broken (https://cee.kerala.gov.in/pga2026/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -435,9 +434,9 @@
     ]
   },
   "score": {
-    "overall": 54,
+    "overall": 59,
     "security": 76,
-    "accessibility": 32,
+    "accessibility": 52,
     "content": 38,
     "gigw": 28,
     "performance": 86,
@@ -452,12 +451,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "2 critical violation(s)"
-    },
-    {
-      "id": "a11y.lang",
-      "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 118% Malayalam content"
+      "ev": "1 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -472,17 +466,17 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "2/26 crawled link(s) broken (https://cee.kerala.gov.in/dnbmbbsonline2026/, https://cee.kerala.gov.in/pga2026/)"
+      "ev": "1/27 crawled link(s) broken (https://cee.kerala.gov.in/pga2026/)"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "7 serious violation(s)"
+      "ev": "8 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "6 low-contrast element(s)"
+      "ev": "7 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -503,7 +497,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9181.794000000002ms"
+      "ev": "8812.690999999999ms"
     },
     {
       "id": "sec.referrer",
@@ -592,6 +586,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-30",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-10-29",
       "up": true,
@@ -783,5 +782,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

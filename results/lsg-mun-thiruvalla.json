@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-30T01:18:19.457Z",
-    "run": "1790730910511",
+    "at": "2026-10-30T01:32:46.086Z",
+    "run": "1793323926875",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 60,
+      "performance": 61,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 85
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -165,6 +165,10 @@
         "r": "na"
       },
       {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
         "id": "a11y.axe_critical",
         "r": "pass"
       },
@@ -217,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "60/100"
+        "ev": "61/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "43642.51149999999ms"
+        "ev": "57992.162999999986ms"
       },
       {
         "id": "perf.cls",
@@ -277,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://thiruvallamunicipality.lsgkerala.gov.in/ml/node/78)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -546,10 +549,10 @@
     ]
   },
   "score": {
-    "overall": 64,
+    "overall": 65,
     "security": 76,
     "accessibility": 70,
-    "content": 46,
+    "content": 56,
     "gigw": 20,
     "performance": 76,
     "identity": 96
@@ -570,11 +573,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://thiruvallamunicipality.lsgkerala.gov.in/ml/node/78)"
     },
     {
       "id": "gigw.rti",
@@ -609,7 +607,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "43642.51149999999ms"
+      "ev": "57992.162999999986ms"
     },
     {
       "id": "perf.weight",
@@ -670,6 +668,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-30",
+      "up": true,
+      "score": 65
+    },
     {
       "d": "2026-10-29",
       "up": true,
@@ -856,5 +859,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

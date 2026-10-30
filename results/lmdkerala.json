@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-29T01:44:22.086Z",
-    "run": "1793238188247",
+    "at": "2026-10-30T01:45:07.254Z",
+    "run": "1793324659078",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 37,
-      "accessibility": 76,
+      "performance": 31,
+      "accessibility": 84,
       "best_practices": 88,
       "seo": 69
     },
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3280ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -218,22 +217,22 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "76/100"
+        "ev": "84/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "37/100"
+        "ev": "31/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "27482.755499999996ms"
+        "ev": "11483.478499999997ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.37"
+        "ev": "0.92"
       },
       {
         "id": "perf.weight",
@@ -246,7 +245,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -445,12 +444,12 @@
     ]
   },
   "score": {
-    "overall": 54,
+    "overall": 55,
     "security": 76,
     "accessibility": 30,
     "content": 42,
     "gigw": 32,
-    "performance": 67,
+    "performance": 77,
     "identity": 100
   },
   "status": "needs-work",
@@ -474,11 +473,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3280ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -524,16 +518,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "27482.755499999996ms"
+      "ev": "11483.478499999997ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
       "ev": "4.8MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
     },
     {
       "id": "sec.referrer",
@@ -594,7 +584,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.37"
+      "ev": "0.92"
     },
     {
       "id": "perf.images",
@@ -602,6 +592,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-30",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-10-29",
       "up": true,
@@ -793,5 +788,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

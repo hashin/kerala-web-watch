@@ -35,51 +35,436 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-29T01:28:58.724Z",
-    "run": "1793237315024",
+    "at": "2026-10-30T01:34:12.282Z",
+    "run": "1793323992132",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 45,
+      "accessibility": 62,
+      "best_practices": 92,
+      "seo": 82
+    },
     "axe": {
-      "critical": 0,
-      "serious": 0,
-      "moderate": 0,
+      "critical": 10,
+      "serious": 36,
+      "moderate": 11,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
+      "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "Apache",
       "jquery": null
     },
-    "checks": [],
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "pass"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "pass"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "fail",
+        "ev": "href=\"http://sslchiexam.kerala.gov.in/\""
+      },
+      {
+        "id": "sec.csp",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "pass"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "fail"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "fail",
+        "ev": "PHP/7.4.24"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "fail",
+        "ev": "jquery 3.4.1, jquery-ui 1.12.1, moment.js 2.24.0, jquery.datatables 1.10.20"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "fail",
+        "ev": "10 critical violation(s)"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "36 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "11 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "fail",
+        "ev": "<html lang=\"en\"> vs. 143% Malayalam content"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "fail",
+        "ev": "9 image(s) missing alt text"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "fail",
+        "ev": "32 low-contrast element(s)"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "heading levels skipped"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "62/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "45/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "8308ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "pass"
+      },
+      {
+        "id": "perf.weight",
+        "r": "warn",
+        "ev": "3.8MB"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "fail"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "na"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ML-NILA"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "fail",
+        "ev": "<blink"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://sslcexam.kerala.gov.in/)"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "na"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "pass"
+      },
+      {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.contact",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.search",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "pass"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "pass"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "na"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "na"
+      },
+      {
+        "id": "id.robots",
+        "r": "fail",
+        "ev": "robots.txt returned 404"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "fail"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "pass"
+      }
+    ],
     "screenshot": {
       "desktop": "2026-09-22.webp",
       "mobile": "2026-09-22-m.webp",
       "phash": "00f87cc7c3c3c3ff"
     },
-    "outlinks": [],
-    "error": "page.goto: net::ERR_CERT_DATE_INVALID at https://pareekshabhavan.kerala.gov.in/\nCall log:\n  - navigating to \"https://pareekshabhavan.kerala.gov.in/\", waiting until \"load\"\n"
+    "outlinks": [
+      {
+        "host": "bpekerala.in",
+        "count": 4,
+        "texts": [
+          "എൽ എസ്‌ എസ്‌  & യു എസ്‌ എസ്‌",
+          "നീലക്കുറിഞ്ഞി",
+          "നീലക്കുറിഞ്ഞി 2026 പുനർമൂല്യനിർണ്ണയ ഫലം പ്രസിദ്ധീകരിച്ചു"
+        ]
+      },
+      {
+        "host": "india.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "digilocker.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "digitalindia.gov.in",
+        "count": 1,
+        "texts": []
+      }
+    ]
   },
   "score": {
-    "overall": 45,
-    "security": 38,
+    "overall": 43,
+    "security": 48,
     "accessibility": 22,
-    "content": 50,
+    "content": 40,
     "gigw": 22,
-    "performance": 95,
+    "performance": 71,
     "identity": 92
   },
-  "status": "broken",
+  "status": "poor",
   "issues": [
-    {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "22 days left"
-    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -111,13 +496,18 @@
       "ev": "ML-NILA"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://sslcexam.kerala.gov.in/)"
+    },
+    {
       "id": "gigw.rti",
       "sev": "H"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "37 serious violation(s)"
+      "ev": "36 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -127,7 +517,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "33 low-contrast element(s)"
+      "ev": "32 low-contrast element(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -147,9 +537,18 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "8308ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "3.8MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -203,6 +602,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.robots",
       "sev": "L",
       "ev": "robots.txt returned 404"
@@ -218,6 +621,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-30",
+      "up": true,
+      "score": 43
+    },
     {
       "d": "2026-10-29",
       "up": false,
@@ -409,5 +817,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

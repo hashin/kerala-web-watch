@@ -37,15 +37,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-29T01:20:13.007Z",
-    "run": "1793236746080",
+    "at": "2026-10-30T01:25:23.130Z",
+    "run": "1793323436057",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 65,
-      "accessibility": 48,
-      "best_practices": 88,
-      "seo": 82
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 11,
       "serious": 37,
@@ -55,7 +50,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 14,
-      "broken": 7
+      "broken": 8
     },
     "tech": {
       "cms": null,
@@ -219,22 +214,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "48/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "65/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "5925.981000000001ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -247,11 +239,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -287,7 +279,7 @@
       {
         "id": "content.broken_links",
         "r": "fail",
-        "ev": "7/30 crawled link(s) broken (https://www.bims.treasury.kerala.gov.in/, https://www.bams.treasury.kerala.gov.in/, https://www.pension.treasury.kerala.gov.in/, ...)"
+        "ev": "8/30 crawled link(s) broken (https://www.bims.treasury.kerala.gov.in/, https://www.bams.treasury.kerala.gov.in/, https://www.pension.treasury.kerala.gov.in/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -456,12 +448,12 @@
     ]
   },
   "score": {
-    "overall": 41,
+    "overall": 44,
     "security": 42,
     "accessibility": 20,
     "content": 26,
     "gigw": 38,
-    "performance": 71,
+    "performance": 95,
     "identity": 92
   },
   "status": "poor",
@@ -499,7 +491,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "7/30 crawled link(s) broken (https://www.bims.treasury.kerala.gov.in/, https://www.bams.treasury.kerala.gov.in/, https://www.pension.treasury.kerala.gov.in/, ...)"
+      "ev": "8/30 crawled link(s) broken (https://www.bims.treasury.kerala.gov.in/, https://www.bams.treasury.kerala.gov.in/, https://www.pension.treasury.kerala.gov.in/, ...)"
     },
     {
       "id": "sec.xfo",
@@ -538,18 +530,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "5925.981000000001ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "3.4MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -612,10 +595,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
@@ -631,6 +610,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-30",
+      "up": true,
+      "score": 44
+    },
     {
       "d": "2026-10-29",
       "up": true,
@@ -822,5 +806,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

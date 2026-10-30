@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-29T01:40:46.784Z",
-    "run": "1793238003021",
+    "at": "2026-10-30T01:46:30.860Z",
+    "run": "1793324727737",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 59,
-      "accessibility": 89,
+      "accessibility": 85,
       "best_practices": 78,
       "seo": 92
     },
     "axe": {
       "critical": 1,
-      "serious": 16,
+      "serious": 17,
       "moderate": 29,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 2
     },
     "tech": {
       "cms": "Drupal 11",
@@ -175,7 +175,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "16 serious violation(s)"
+        "ev": "17 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -194,7 +194,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "8 low-contrast element(s)"
+        "ev": "9 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -217,7 +217,7 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "89/100"
+        "ev": "85/100"
       },
       {
         "id": "perf.lighthouse",
@@ -227,7 +227,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "12148.968ms"
+        "ev": "12104.993999999999ms"
       },
       {
         "id": "perf.cls",
@@ -282,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "2/30 crawled link(s) broken (https://plan.lsgkerala.gov.in/formulation/Public.aspx, https://meeting.lsgkerala.gov.in/Pages/StateWiseDashBoard.aspx)"
       },
       {
         "id": "content.broken_pdfs",
@@ -557,13 +558,18 @@
       "ev": "ml-user"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "2/30 crawled link(s) broken (https://plan.lsgkerala.gov.in/formulation/Public.aspx, https://meeting.lsgkerala.gov.in/Pages/StateWiseDashBoard.aspx)"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "16 serious violation(s)"
+      "ev": "17 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -573,7 +579,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "8 low-contrast element(s)"
+      "ev": "9 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -590,7 +596,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "12148.968ms"
+      "ev": "12104.993999999999ms"
     },
     {
       "id": "perf.weight",
@@ -667,6 +673,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-30",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-29",
       "up": false,
@@ -858,5 +869,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

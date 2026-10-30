@@ -35,28 +35,28 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-29T01:12:40.125Z",
-    "run": "1793236310035",
+    "at": "2026-10-30T01:23:30.145Z",
+    "run": "1793323127804",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 31,
       "accessibility": 81,
       "best_practices": 73,
       "seo": 62
     },
     "axe": {
-      "critical": 0,
-      "serious": 1,
+      "critical": 4,
+      "serious": 8,
       "moderate": 2,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
-      "pdfs": 0,
+      "pages": 30,
+      "pdfs": 2,
       "broken": 0
     },
     "tech": {
-      "cms": null,
+      "cms": "WordPress 5.0.31",
       "server": "Apache",
       "jquery": null
     },
@@ -87,8 +87,7 @@
       },
       {
         "id": "avail.blank",
-        "r": "fail",
-        "ev": "40 visible characters"
+        "r": "pass"
       },
       {
         "id": "avail.under_construction",
@@ -97,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "7284ms"
+        "ev": "5930ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -133,7 +132,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "pass"
+        "r": "fail",
+        "ev": "href=\"http://gmpg.org/xfn/11\""
       },
       {
         "id": "sec.csp",
@@ -149,7 +149,7 @@
       },
       {
         "id": "sec.referrer",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.server_banner",
@@ -157,7 +157,8 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "pass"
+        "r": "fail",
+        "ev": "tinyMCE 4.8.0, jquery 1.12.4"
       },
       {
         "id": "sec.safe_browsing",
@@ -169,12 +170,13 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "pass"
+        "r": "fail",
+        "ev": "4 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "1 serious violation(s)"
+        "ev": "8 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -187,11 +189,13 @@
       },
       {
         "id": "a11y.alt",
-        "r": "pass"
+        "r": "fail",
+        "ev": "4 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "2 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -207,7 +211,8 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "pass"
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
       },
       {
         "id": "a11y.lighthouse",
@@ -217,25 +222,26 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "31/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "15066.513999999997ms"
+        "ev": "16387.5515ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.77"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "10.3MB"
+        "ev": "19.6MB"
       },
       {
         "id": "perf.viewport",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.tap_targets",
@@ -256,7 +262,7 @@
       },
       {
         "id": "content.stale_news",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "content.placeholder",
@@ -265,7 +271,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-opacity"
+        "ev": "ml-IN"
       },
       {
         "id": "content.obsolete_tech",
@@ -289,8 +295,7 @@
       },
       {
         "id": "content.malayalam",
-        "r": "fail",
-        "ev": "Malayalam ratio 0.00, no language toggle found"
+        "r": "pass"
       },
       {
         "id": "content.title",
@@ -302,12 +307,12 @@
       },
       {
         "id": "content.favicon",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "5 console error(s): Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+        "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/11a45ffb/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -343,7 +348,7 @@
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.screen_reader",
@@ -355,11 +360,11 @@
       },
       {
         "id": "gigw.rti",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.search",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.ownership",
@@ -400,7 +405,7 @@
       },
       {
         "id": "id.canonical",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.charset_doctype",
@@ -408,7 +413,8 @@
       },
       {
         "id": "id.tech",
-        "r": "pass"
+        "r": "warn",
+        "ev": "WordPress 5.0.31 (unsupported major version)"
       },
       {
         "id": "id.third_party",
@@ -418,17 +424,60 @@
     "screenshot": {
       "desktop": "dhs.webp",
       "mobile": "dhs-m.webp",
-      "phash": "0fffffffffffffff"
+      "phash": "ff600f004000ffff"
     },
-    "outlinks": []
+    "outlinks": [
+      {
+        "host": "dropbox.com",
+        "count": 1,
+        "texts": [
+          "കോവിഡ് 19 അറിയേണ്ടതെല്ലാം / AWARENESS"
+        ]
+      },
+      {
+        "host": "keralahealthconference.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "google.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "mysterythemes.com",
+        "count": 1,
+        "texts": [
+          "Mystery Themes"
+        ]
+      }
+    ]
   },
-  "score": null,
-  "status": "broken",
+  "score": {
+    "overall": 47,
+    "security": 46,
+    "accessibility": 44,
+    "content": 52,
+    "gigw": 12,
+    "performance": 62,
+    "identity": 91
+  },
+  "status": "poor",
   "issues": [
     {
-      "id": "avail.blank",
-      "sev": "C",
-      "ev": "40 visible characters"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://gmpg.org/xfn/11\""
+    },
+    {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "tinyMCE 4.8.0, jquery 1.12.4"
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "4 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -438,24 +487,16 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-opacity"
+      "ev": "ml-IN"
     },
     {
       "id": "gigw.contact",
       "sev": "H"
     },
     {
-      "id": "gigw.rti",
-      "sev": "H"
-    },
-    {
-      "id": "perf.viewport",
-      "sev": "H"
-    },
-    {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "7284ms"
+      "ev": "5930ms"
     },
     {
       "id": "sec.hsts",
@@ -464,12 +505,17 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "1 serious violation(s)"
+      "ev": "8 serious violation(s)"
     },
     {
-      "id": "content.malayalam",
+      "id": "a11y.alt",
       "sev": "M",
-      "ev": "Malayalam ratio 0.00, no language toggle found"
+      "ev": "4 image(s) missing alt text"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "2 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -477,10 +523,6 @@
     },
     {
       "id": "gigw.privacy",
-      "sev": "M"
-    },
-    {
-      "id": "gigw.accessibility_statement",
       "sev": "M"
     },
     {
@@ -494,23 +536,24 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "15066.513999999997ms"
+      "ev": "16387.5515ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "10.3MB"
+      "ev": "19.6MB"
     },
     {
       "id": "perf.tap_targets",
       "sev": "M"
     },
     {
-      "id": "sec.csp",
-      "sev": "L"
+      "id": "id.tech",
+      "sev": "M",
+      "ev": "WordPress 5.0.31 (unsupported major version)"
     },
     {
-      "id": "sec.referrer",
+      "id": "sec.csp",
       "sev": "L"
     },
     {
@@ -519,17 +562,18 @@
       "ev": "2 moderate/minor violation(s)"
     },
     {
-      "id": "content.meta_desc",
-      "sev": "L"
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
-      "id": "content.favicon",
+      "id": "content.meta_desc",
       "sev": "L"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "5 console error(s): Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+      "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/11a45ffb/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -560,8 +604,9 @@
       "sev": "L"
     },
     {
-      "id": "gigw.search",
-      "sev": "L"
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.77"
     },
     {
       "id": "perf.images",
@@ -575,13 +620,14 @@
     {
       "id": "gigw.emblem",
       "sev": "I"
-    },
-    {
-      "id": "id.canonical",
-      "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-30",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-10-29",
       "up": false,
@@ -773,5 +819,5 @@
       "score": 45
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

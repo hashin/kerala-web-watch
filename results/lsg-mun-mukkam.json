@@ -37,19 +37,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T23:52:17.830Z",
-    "run": "1792885895835",
+    "at": "2026-10-30T01:34:54.788Z",
+    "run": "1793324055424",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 60,
-      "accessibility": 82,
-      "best_practices": 100,
-      "seo": 85
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 0,
       "serious": 5,
-      "moderate": 11,
+      "moderate": 10,
       "minor": 0
     },
     "crawl": {
@@ -180,12 +175,11 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "11 moderate/minor violation(s)"
+        "ev": "10 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
-        "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 35% Malayalam content"
+        "r": "pass"
       },
       {
         "id": "a11y.alt",
@@ -216,22 +210,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "82/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "60/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "59529.18799999997ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -244,11 +235,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -555,12 +546,12 @@
     ]
   },
   "score": {
-    "overall": 63,
+    "overall": 69,
     "security": 76,
-    "accessibility": 50,
+    "accessibility": 70,
     "content": 56,
     "gigw": 36,
-    "performance": 76,
+    "performance": 90,
     "identity": 96
   },
   "status": "needs-work",
@@ -569,11 +560,6 @@
       "id": "sec.mixed_content",
       "sev": "H",
       "ev": "href=\"http://mukkammunicipality.lsgkerala.gov.in/en\""
-    },
-    {
-      "id": "a11y.lang",
-      "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 35% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -612,11 +598,6 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "59529.18799999997ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "22.9MB"
@@ -628,7 +609,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "11 moderate/minor violation(s)"
+      "ev": "10 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -669,16 +650,17 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-30",
+      "up": true,
+      "score": 69
+    },
     {
       "d": "2026-10-29",
       "up": true,
@@ -865,5 +847,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

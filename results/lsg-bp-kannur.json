@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-29T01:35:20.414Z",
-    "run": "1793237676939",
+    "at": "2026-10-30T01:45:27.735Z",
+    "run": "1793324674637",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 60,
-      "accessibility": 85,
+      "performance": 59,
+      "accessibility": 89,
       "best_practices": 78,
       "seo": 92
     },
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -217,17 +217,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "85/100"
+        "ev": "89/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "60/100"
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11419.319500000001ms"
+        "ev": "11589.349000000002ms"
       },
       {
         "id": "perf.cls",
@@ -282,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://meeting.lsgkerala.gov.in/Pages/StateWiseDashBoard.aspx)"
       },
       {
         "id": "content.broken_pdfs",
@@ -552,6 +553,11 @@
       "ev": "ml-user"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://meeting.lsgkerala.gov.in/Pages/StateWiseDashBoard.aspx)"
+    },
+    {
       "id": "gigw.rti",
       "sev": "H"
     },
@@ -589,7 +595,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11419.319500000001ms"
+      "ev": "11589.349000000002ms"
     },
     {
       "id": "perf.weight",
@@ -666,6 +672,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-30",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-29",
       "up": false,
@@ -862,5 +873,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

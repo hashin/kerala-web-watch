@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T00:04:02.818Z",
-    "run": "1792800190012",
+    "at": "2026-10-30T01:19:23.910Z",
+    "run": "1793323108231",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 77,
+      "performance": 80,
       "accessibility": 78,
       "best_practices": 69,
       "seo": 73
@@ -53,11 +53,11 @@
     "crawl": {
       "pages": 16,
       "pdfs": 1,
-      "broken": 17
+      "broken": 2
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "Apache",
       "jquery": null
     },
     "checks": [
@@ -67,16 +67,15 @@
       },
       {
         "id": "avail.connect",
-        "r": "fail",
-        "ev": "connect_fail"
+        "r": "pass"
       },
       {
         "id": "avail.status",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -96,7 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -108,7 +107,7 @@
       },
       {
         "id": "sec.https",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
@@ -116,8 +115,7 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "fail",
-        "ev": "certificate chain invalid, expired, or hostname mismatch"
+        "r": "pass"
       },
       {
         "id": "sec.cert_expiry",
@@ -133,7 +131,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.csp",
@@ -222,7 +220,7 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "77/100"
+        "ev": "80/100"
       },
       {
         "id": "perf.lcp",
@@ -281,8 +279,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "16/16 crawled link(s) broken (https://edistrict.kerala.gov.in/#, https://edistrict.kerala.gov.in/edportalsignin.jsp, https://edistrict.kerala.gov.in/governmentOrders.jsp?lang=en, ...)"
+        "r": "warn",
+        "ev": "1/16 crawled link(s) broken (https://services.kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -391,15 +389,17 @@
       },
       {
         "id": "id.robots",
-        "r": "na"
+        "r": "fail",
+        "ev": "robots.txt returned 404"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "na"
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
       },
       {
         "id": "id.soft_404",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
@@ -447,19 +447,17 @@
       }
     ]
   },
-  "score": null,
-  "status": "broken",
+  "score": {
+    "overall": 51,
+    "security": 62,
+    "accessibility": 42,
+    "content": 26,
+    "gigw": 22,
+    "performance": 86,
+    "identity": 88
+  },
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "avail.connect",
-      "sev": "C",
-      "ev": "connect_fail"
-    },
-    {
-      "id": "sec.cert_valid",
-      "sev": "C",
-      "ev": "certificate chain invalid, expired, or hostname mismatch"
-    },
     {
       "id": "sec.vuln_js",
       "sev": "H",
@@ -483,7 +481,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "16/16 crawled link(s) broken (https://edistrict.kerala.gov.in/#, https://edistrict.kerala.gov.in/edportalsignin.jsp, https://edistrict.kerala.gov.in/governmentOrders.jsp?lang=en, ...)"
+      "ev": "1/16 crawled link(s) broken (https://services.kerala.gov.in/)"
     },
     {
       "id": "gigw.rti",
@@ -589,6 +587,16 @@
       "sev": "L"
     },
     {
+      "id": "id.robots",
+      "sev": "L",
+      "ev": "robots.txt returned 404"
+    },
+    {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 404"
+    },
+    {
       "id": "id.charset_doctype",
       "sev": "L",
       "ev": "missing HTML5 doctype"
@@ -603,6 +611,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-30",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-10-29",
       "up": false,
@@ -794,5 +807,5 @@
       "score": 51
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
