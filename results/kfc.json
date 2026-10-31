@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-30T01:33:20.077Z",
-    "run": "1793323957461",
+    "at": "2026-10-31T01:22:46.823Z",
+    "run": "1793409719982",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 26,
+      "performance": 36,
       "accessibility": 87,
       "best_practices": 96,
       "seo": 85
     },
     "axe": {
       "critical": 0,
-      "serious": 16,
+      "serious": 19,
       "moderate": 6,
       "minor": 0
     },
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3248ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -172,7 +173,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "16 serious violation(s)"
+        "ev": "19 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -190,7 +191,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "3 low-contrast element(s)"
+        "ev": "6 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -218,17 +219,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "26/100"
+        "ev": "36/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "13976.45ms"
+        "ev": "7360.9529999999995ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "1.13"
+        "ev": "1.75"
       },
       {
         "id": "perf.weight",
@@ -502,14 +503,19 @@
       "ev": "www.kfc.org"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3248ms"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "16 serious violation(s)"
+      "ev": "19 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "3 low-contrast element(s)"
+      "ev": "6 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -526,7 +532,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "13976.45ms"
+      "ev": "7360.9529999999995ms"
     },
     {
       "id": "perf.weight",
@@ -588,7 +594,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "1.13"
+      "ev": "1.75"
     },
     {
       "id": "perf.images",
@@ -600,6 +606,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-31",
+      "up": true,
+      "score": 72
+    },
     {
       "d": "2026-10-30",
       "up": true,
@@ -796,5 +807,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

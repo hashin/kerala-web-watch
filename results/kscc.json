@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-30T01:42:34.464Z",
-    "run": "1793324513503",
+    "at": "2026-10-31T01:37:39.710Z",
+    "run": "1793410617740",
     "vantage": "gh-us",
     "lighthouse": null,
     "axe": {
@@ -146,8 +146,7 @@
       },
       {
         "id": "sec.server_banner",
-        "r": "fail",
-        "ev": "PHP/7.4.33"
+        "r": "pass"
       },
       {
         "id": "sec.vuln_js",
@@ -373,7 +372,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "30 days left"
+        "ev": "29 days left"
       },
       {
         "id": "id.www_consistency",
@@ -417,8 +416,8 @@
     "outlinks": []
   },
   "score": {
-    "overall": 53,
-    "security": 44,
+    "overall": 54,
+    "security": 48,
     "accessibility": 60,
     "content": 56,
     "gigw": 18,
@@ -455,7 +454,7 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "30 days left"
+      "ev": "29 days left"
     },
     {
       "id": "sec.hsts",
@@ -501,11 +500,6 @@
     {
       "id": "sec.referrer",
       "sev": "L"
-    },
-    {
-      "id": "sec.server_banner",
-      "sev": "L",
-      "ev": "PHP/7.4.33"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -560,6 +554,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-31",
+      "up": true,
+      "score": 54
+    },
     {
       "d": "2026-10-30",
       "up": true,
@@ -756,5 +755,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

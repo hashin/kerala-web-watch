@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-30T01:52:22.725Z",
-    "run": "1793324995620",
+    "at": "2026-10-31T01:26:37.121Z",
+    "run": "1793409815480",
     "vantage": "gh-us",
     "lighthouse": null,
     "axe": {
@@ -91,7 +91,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "4682ms"
+        "ev": "4802ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -152,7 +152,8 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "pass"
+        "r": "fail",
+        "ev": "highcharts 9.3.3"
       },
       {
         "id": "sec.safe_browsing",
@@ -180,7 +181,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 56% Malayalam content"
+        "ev": "<html lang=\"en\"> vs. 47% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -481,8 +482,8 @@
     ]
   },
   "score": {
-    "overall": 62,
-    "security": 80,
+    "overall": 57,
+    "security": 60,
     "accessibility": 20,
     "content": 46,
     "gigw": 78,
@@ -497,6 +498,11 @@
       "ev": "href=\"http://www.nic.in/\""
     },
     {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "highcharts 9.3.3"
+    },
+    {
       "id": "a11y.axe_critical",
       "sev": "H",
       "ev": "18 critical violation(s)"
@@ -504,7 +510,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 56% Malayalam content"
+      "ev": "<html lang=\"en\"> vs. 47% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -524,7 +530,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "4682ms"
+      "ev": "4802ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -602,6 +608,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-31",
+      "up": true,
+      "score": 57
+    },
     {
       "d": "2026-10-30",
       "up": true,
@@ -798,5 +809,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

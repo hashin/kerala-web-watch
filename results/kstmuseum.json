@@ -35,28 +35,23 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T00:20:07.023Z",
-    "run": "1792196394272",
+    "at": "2026-10-31T01:31:00.179Z",
+    "run": "1793410207718",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 100,
-      "accessibility": 94,
-      "best_practices": 100,
-      "seo": 82
-    },
+    "lighthouse": null,
     "axe": {
-      "critical": 0,
-      "serious": 0,
+      "critical": 1,
+      "serious": 4,
       "moderate": 2,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
+      "pages": 30,
       "pdfs": 0,
       "broken": 0
     },
     "tech": {
-      "cms": null,
+      "cms": "WordPress 7.1.4",
       "server": "Apache",
       "jquery": null
     },
@@ -119,8 +114,7 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "24 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -132,7 +126,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "pass"
+        "r": "fail",
+        "ev": "href=\"http://localhost/meuseum/\""
       },
       {
         "id": "sec.csp",
@@ -168,11 +163,13 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
-        "r": "pass"
+        "r": "fail",
+        "ev": "4 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -185,15 +182,18 @@
       },
       {
         "id": "a11y.alt",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "2 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
-        "r": "pass"
+        "r": "fail",
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -205,29 +205,29 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "pass"
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "94/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "100/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4.5MB"
       },
       {
         "id": "perf.viewport",
@@ -235,15 +235,15 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "content.last_updated",
@@ -260,7 +260,8 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "pass"
+        "r": "fail",
+        "ev": "ml-IN"
       },
       {
         "id": "content.obsolete_tech",
@@ -280,7 +281,8 @@
       },
       {
         "id": "content.broken_images",
-        "r": "pass"
+        "r": "fail",
+        "ev": "7 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -300,11 +302,12 @@
       },
       {
         "id": "content.console_errors",
-        "r": "pass"
+        "r": "fail",
+        "ev": "12 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
       },
       {
         "id": "gigw.contact",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.feedback",
@@ -364,7 +367,7 @@
       },
       {
         "id": "gigw.emblem",
-        "r": "warn"
+        "r": "pass"
       },
       {
         "id": "id.gov_domain",
@@ -374,28 +377,29 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "58 days left"
+        "ev": "44 days left"
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "id.robots",
-        "r": "pass"
+        "r": "fail",
+        "ev": "robots.txt returned 404"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "pass"
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
       },
       {
         "id": "id.soft_404",
-        "r": "fail",
-        "ev": "a nonexistent path returned 200"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.charset_doctype",
@@ -403,7 +407,8 @@
       },
       {
         "id": "id.tech",
-        "r": "pass"
+        "r": "pass",
+        "ev": "WordPress 7.1.4"
       },
       {
         "id": "id.third_party",
@@ -413,29 +418,75 @@
     "screenshot": {
       "desktop": "kstmuseum.webp",
       "mobile": "kstmuseum-m.webp",
-      "phash": "00003c3c3c3c0000"
+      "phash": "00ffffffffffff00"
     },
-    "outlinks": []
+    "outlinks": [
+      {
+        "host": "facebook.com",
+        "count": 2,
+        "texts": [
+          "facebook"
+        ]
+      },
+      {
+        "host": "twitter.com",
+        "count": 2,
+        "texts": [
+          "twitter"
+        ]
+      },
+      {
+        "host": "linkedin.com",
+        "count": 2,
+        "texts": [
+          "linkedin"
+        ]
+      },
+      {
+        "host": "google.com",
+        "count": 1,
+        "texts": [
+          "google plus"
+        ]
+      },
+      {
+        "host": "whatsapp.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "cdit.org",
+        "count": 1,
+        "texts": [
+          "CDIT"
+        ]
+      }
+    ]
   },
   "score": {
-    "overall": 59,
-    "security": 38,
-    "accessibility": 96,
-    "content": 72,
+    "overall": 38,
+    "security": 28,
+    "accessibility": 40,
+    "content": 44,
     "gigw": 0,
-    "performance": 90,
+    "performance": 95,
     "identity": 52
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.http_redirect",
       "sev": "H"
     },
     {
-      "id": "sec.cert_expiry",
+      "id": "sec.mixed_content",
       "sev": "H",
-      "ev": "24 days left"
+      "ev": "href=\"http://localhost/meuseum/\""
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "1 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -443,8 +494,9 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "gigw.contact",
-      "sev": "H"
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-IN"
     },
     {
       "id": "gigw.rti",
@@ -458,7 +510,7 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "58 days left"
+      "ev": "44 days left"
     },
     {
       "id": "sec.hsts",
@@ -467,6 +519,21 @@
     {
       "id": "sec.xfo",
       "sev": "M"
+    },
+    {
+      "id": "a11y.axe_serious",
+      "sev": "M",
+      "ev": "4 serious violation(s)"
+    },
+    {
+      "id": "a11y.alt",
+      "sev": "M",
+      "ev": "1 image(s) missing alt text"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "2 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -489,8 +556,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "4.5MB"
     },
     {
       "id": "sec.csp",
@@ -510,12 +578,32 @@
       "ev": "2 moderate/minor violation(s)"
     },
     {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
+    },
+    {
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
+    },
+    {
+      "id": "content.broken_images",
+      "sev": "L",
+      "ev": "7 broken image(s)"
+    },
+    {
       "id": "content.meta_desc",
       "sev": "L"
     },
     {
       "id": "content.favicon",
       "sev": "L"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "12 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
     },
     {
       "id": "gigw.feedback",
@@ -550,24 +638,22 @@
       "sev": "L"
     },
     {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
-      "id": "id.soft_404",
+      "id": "id.robots",
       "sev": "L",
-      "ev": "a nonexistent path returned 200"
+      "ev": "robots.txt returned 404"
     },
     {
-      "id": "gigw.emblem",
-      "sev": "I"
-    },
-    {
-      "id": "id.canonical",
-      "sev": "I"
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 404"
     }
   ],
   "history": [
+    {
+      "d": "2026-10-31",
+      "up": true,
+      "score": 38
+    },
     {
       "d": "2026-10-30",
       "up": true,
@@ -769,5 +855,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

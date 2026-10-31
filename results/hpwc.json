@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-30T01:47:43.015Z",
-    "run": "1793324701886",
+    "at": "2026-10-31T01:27:43.718Z",
+    "run": "1793409911784",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 0,
@@ -48,7 +48,7 @@
     },
     "axe": {
       "critical": 2,
-      "serious": 3,
+      "serious": 4,
       "moderate": 12,
       "minor": 0
     },
@@ -98,7 +98,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "4654ms"
+        "ev": "4350ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -160,7 +160,7 @@
       {
         "id": "sec.vuln_js",
         "r": "fail",
-        "ev": "bootstrap 3.4.2, swiper 8.4.5"
+        "ev": "bootstrap 3.4.2"
       },
       {
         "id": "sec.safe_browsing",
@@ -178,7 +178,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "3 serious violation(s)"
+        "ev": "4 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -188,7 +188,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en-GB\"> vs. 43% Malayalam content"
+        "ev": "<html lang=\"en-GB\"> vs. 48% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -197,7 +197,8 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -239,7 +240,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "36.6MB"
+        "ev": "45.4MB"
       },
       {
         "id": "perf.viewport",
@@ -473,9 +474,9 @@
     ]
   },
   "score": {
-    "overall": 52,
+    "overall": 50,
     "security": 52,
-    "accessibility": 20,
+    "accessibility": 10,
     "content": 48,
     "gigw": 62,
     "performance": 76,
@@ -491,7 +492,7 @@
     {
       "id": "sec.vuln_js",
       "sev": "H",
-      "ev": "bootstrap 3.4.2, swiper 8.4.5"
+      "ev": "bootstrap 3.4.2"
     },
     {
       "id": "a11y.axe_critical",
@@ -501,7 +502,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en-GB\"> vs. 43% Malayalam content"
+      "ev": "<html lang=\"en-GB\"> vs. 48% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -516,17 +517,22 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "4654ms"
+      "ev": "4350ms"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "3 serious violation(s)"
+      "ev": "4 serious violation(s)"
     },
     {
       "id": "a11y.alt",
       "sev": "M",
       "ev": "1 image(s) missing alt text"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "1 low-contrast element(s)"
     },
     {
       "id": "a11y.labels",
@@ -548,7 +554,7 @@
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "36.6MB"
+      "ev": "45.4MB"
     },
     {
       "id": "perf.tap_targets",
@@ -605,6 +611,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-31",
+      "up": true,
+      "score": 50
+    },
     {
       "d": "2026-10-30",
       "up": true,
@@ -801,5 +812,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

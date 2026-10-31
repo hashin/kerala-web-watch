@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-30T01:19:21.155Z",
-    "run": "1793323080121",
+    "at": "2026-10-31T01:00:49.063Z",
+    "run": "1793408383779",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 52,
+      "performance": 31,
       "accessibility": 85,
       "best_practices": 69,
       "seo": 54
     },
     "axe": {
       "critical": 3,
-      "serious": 27,
+      "serious": 28,
       "moderate": 6,
       "minor": 0
     },
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "4025ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -175,7 +174,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "27 serious violation(s)"
+        "ev": "28 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -194,7 +193,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "16 low-contrast element(s)"
+        "ev": "17 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -223,21 +222,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "52/100"
+        "ev": "31/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "20253.708000000006ms"
+        "ev": "11872.262500000003ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.84"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "18.5MB"
+        "ev": "18.4MB"
       },
       {
         "id": "perf.viewport",
@@ -461,7 +461,7 @@
     "accessibility": 30,
     "content": 52,
     "gigw": 36,
-    "performance": 76,
+    "performance": 72,
     "identity": 100
   },
   "status": "needs-work",
@@ -487,14 +487,9 @@
       "ev": "ml-IN"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "4025ms"
-    },
-    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "27 serious violation(s)"
+      "ev": "28 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -504,7 +499,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "16 low-contrast element(s)"
+      "ev": "17 low-contrast element(s)"
     },
     {
       "id": "a11y.labels",
@@ -530,12 +525,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "20253.708000000006ms"
+      "ev": "11872.262500000003ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "18.5MB"
+      "ev": "18.4MB"
     },
     {
       "id": "sec.referrer",
@@ -590,6 +585,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.84"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -599,6 +599,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-31",
+      "up": true,
+      "score": 57
+    },
     {
       "d": "2026-10-30",
       "up": true,
@@ -795,5 +800,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

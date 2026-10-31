@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-30T01:43:53.602Z",
-    "run": "1793324570211",
+    "at": "2026-10-31T01:29:19.169Z",
+    "run": "1793410100986",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 46,
+      "performance": 51,
       "accessibility": 73,
       "best_practices": 92,
       "seo": 83
@@ -223,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "46/100"
+        "ev": "51/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6101.062ms"
+        "ev": "8067.292000000001ms"
       },
       {
         "id": "perf.cls",
@@ -236,7 +236,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3.0MB"
       },
       {
         "id": "perf.viewport",
@@ -313,7 +314,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "6 console error(s): Syntax error, unrecognized expression: #zXavGpnb28w?si=mLnWKZT8ocFxNSVs"
+        "ev": "7 console error(s): Syntax error, unrecognized expression: #zXavGpnb28w?si=mLnWKZT8ocFxNSVs"
       },
       {
         "id": "gigw.contact",
@@ -473,12 +474,12 @@
     ]
   },
   "score": {
-    "overall": 48,
+    "overall": 47,
     "security": 56,
     "accessibility": 20,
     "content": 42,
     "gigw": 26,
-    "performance": 86,
+    "performance": 81,
     "identity": 100
   },
   "status": "poor",
@@ -552,7 +553,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6101.062ms"
+      "ev": "8067.292000000001ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "3.0MB"
     },
     {
       "id": "sec.csp",
@@ -581,7 +587,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "6 console error(s): Syntax error, unrecognized expression: #zXavGpnb28w?si=mLnWKZT8ocFxNSVs"
+      "ev": "7 console error(s): Syntax error, unrecognized expression: #zXavGpnb28w?si=mLnWKZT8ocFxNSVs"
     },
     {
       "id": "gigw.feedback",
@@ -621,6 +627,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-31",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-10-30",
       "up": true,
@@ -812,5 +823,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

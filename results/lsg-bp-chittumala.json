@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T00:25:12.384Z",
-    "run": "1792196665103",
+    "at": "2026-10-31T01:30:41.799Z",
+    "run": "1793410191043",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 53,
-      "accessibility": 80,
+      "performance": 60,
+      "accessibility": 83,
       "best_practices": 78,
       "seo": 83
     },
     "axe": {
       "critical": 3,
-      "serious": 15,
+      "serious": 14,
       "moderate": 32,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 2
     },
     "tech": {
       "cms": "Drupal 11",
@@ -175,7 +175,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "15 serious violation(s)"
+        "ev": "14 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -217,17 +217,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "80/100"
+        "ev": "83/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "53/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8976.996500000001ms"
+        "ev": "8756.553ms"
       },
       {
         "id": "perf.cls",
@@ -283,7 +283,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/30 crawled link(s) broken (http://chittumalablockpanchayat.lsgkerala.gov.in/about)"
+        "ev": "2/30 crawled link(s) broken (http://chittumalablockpanchayat.lsgkerala.gov.in/about, http://chittumalablockpanchayat.lsgkerala.gov.in/contact-us)"
       },
       {
         "id": "content.broken_pdfs",
@@ -423,7 +423,7 @@
     "screenshot": {
       "desktop": "lsg-bp-chittumala.webp",
       "mobile": "lsg-bp-chittumala-m.webp",
-      "phash": "fff8507e7000feff"
+      "phash": "fff970d8780000ff"
     },
     "outlinks": [
       {
@@ -555,7 +555,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (http://chittumalablockpanchayat.lsgkerala.gov.in/about)"
+      "ev": "2/30 crawled link(s) broken (http://chittumalablockpanchayat.lsgkerala.gov.in/about, http://chittumalablockpanchayat.lsgkerala.gov.in/contact-us)"
     },
     {
       "id": "gigw.rti",
@@ -568,7 +568,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "15 serious violation(s)"
+      "ev": "14 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -595,7 +595,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8976.996500000001ms"
+      "ev": "8756.553ms"
     },
     {
       "id": "perf.weight",
@@ -672,6 +672,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-31",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-30",
       "up": false,
@@ -873,5 +878,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

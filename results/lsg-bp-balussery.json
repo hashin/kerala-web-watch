@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-28T01:09:45.880Z",
-    "run": "1793149743351",
+    "at": "2026-10-31T01:29:22.667Z",
+    "run": "1793410117731",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 56,
+      "accessibility": 89,
+      "best_practices": 74,
+      "seo": 92
+    },
     "axe": {
       "critical": 1,
       "serious": 13,
@@ -48,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -211,19 +216,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "89/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "56/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "11010.839ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -236,11 +244,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -274,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (http://balusseryblockpanchayat.lsgkerala.gov.in/about)"
       },
       {
         "id": "content.broken_pdfs",
@@ -539,6 +548,11 @@
       "ev": "ml-user"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (http://balusseryblockpanchayat.lsgkerala.gov.in/about)"
+    },
+    {
       "id": "gigw.rti",
       "sev": "H"
     },
@@ -574,9 +588,18 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "11010.839ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "8.7MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -630,6 +653,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
@@ -640,6 +667,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-31",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-30",
       "up": false,
@@ -841,5 +873,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

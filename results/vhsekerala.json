@@ -35,15 +35,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-30T01:44:23.979Z",
-    "run": "1793324633624",
+    "at": "2026-10-31T01:19:30.328Z",
+    "run": "1793409537922",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 55,
-      "accessibility": 95,
-      "best_practices": 92,
-      "seo": 92
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 2,
       "serious": 10,
@@ -53,7 +48,7 @@
     "crawl": {
       "pages": 22,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -215,22 +210,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "95/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "55/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "7877.164ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -242,11 +234,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -280,8 +272,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/22 crawled link(s) broken (https://admission.vhseportal.kerala.gov.in/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -449,12 +440,12 @@
     ]
   },
   "score": {
-    "overall": 56,
+    "overall": 58,
     "security": 70,
     "accessibility": 40,
-    "content": 40,
+    "content": 50,
     "gigw": 28,
-    "performance": 86,
+    "performance": 100,
     "identity": 92
   },
   "status": "needs-work",
@@ -478,11 +469,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/22 crawled link(s) broken (https://admission.vhseportal.kerala.gov.in/)"
     },
     {
       "id": "sec.hsts",
@@ -523,11 +509,6 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "7877.164ms"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -577,10 +558,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -599,6 +576,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-31",
+      "up": true,
+      "score": 58
+    },
     {
       "d": "2026-10-30",
       "up": true,
@@ -795,5 +777,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

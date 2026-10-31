@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-30T01:42:07.077Z",
-    "run": "1793324475818",
+    "at": "2026-10-31T01:23:15.767Z",
+    "run": "1793409723921",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 44,
+      "performance": 46,
       "accessibility": 83,
       "best_practices": 78,
       "seo": 69
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 2
     },
     "tech": {
       "cms": "WordPress 5.6.23",
@@ -222,17 +222,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "44/100"
+        "ev": "46/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "4776.501ms"
+        "ev": "4557.7210000000005ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.95"
+        "ev": "0.79"
       },
       {
         "id": "perf.weight",
@@ -284,7 +284,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/30 crawled link(s) broken (http://ipaffairs.org/?p=975)"
+        "ev": "2/30 crawled link(s) broken (http://ipaffairs.org/?p=975, http://ipaffairs.org/%e0%b4%87%e0%b4%a8%e0%b5%8d%e2%80%8d%e0%b4%b8%e0%b5%8d%e0%b4%b1%e0%b5%8d%e0%b4%b1%e0%b4%bf%e0%b4%b1%e0%b5%8d%e0%b4%b1%e0%b4%bf%e0%b4%af%e0%b5%81%e0%b4%9f%e0%b5%8d%e0%b4%9f%e0%b5%8d-%e0%b4%93%e0%b4%ab/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -472,7 +472,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (http://ipaffairs.org/?p=975)"
+      "ev": "2/30 crawled link(s) broken (http://ipaffairs.org/?p=975, http://ipaffairs.org/%e0%b4%87%e0%b4%a8%e0%b5%8d%e2%80%8d%e0%b4%b8%e0%b5%8d%e0%b4%b1%e0%b5%8d%e0%b4%b1%e0%b4%bf%e0%b4%b1%e0%b5%8d%e0%b4%b1%e0%b4%bf%e0%b4%af%e0%b5%81%e0%b4%9f%e0%b5%8d%e0%b4%9f%e0%b5%8d-%e0%b4%93%e0%b4%ab/)"
     },
     {
       "id": "id.gov_domain",
@@ -521,7 +521,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "4776.501ms"
+      "ev": "4557.7210000000005ms"
     },
     {
       "id": "perf.weight",
@@ -591,7 +591,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.95"
+      "ev": "0.79"
     },
     {
       "id": "perf.images",
@@ -603,6 +603,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-31",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-30",
       "up": false,
@@ -804,5 +809,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-30T01:39:11.441Z",
-    "run": "1793324256053",
+    "at": "2026-10-31T01:18:23.254Z",
+    "run": "1793409392174",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 46,
+      "performance": 55,
       "accessibility": 77,
       "best_practices": 96,
       "seo": 83
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "46/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "46254.39100000002ms"
+        "ev": "52261.18425ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +233,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "2844.2MB"
+        "ev": "2402.1MB"
       },
       {
         "id": "perf.viewport",
@@ -280,7 +280,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://etenders.kerala.gov.in/nicgep/app)"
       },
       {
         "id": "content.broken_pdfs",
@@ -420,7 +421,7 @@
     "screenshot": {
       "desktop": "adak.webp",
       "mobile": "adak-m.webp",
-      "phash": "180000ffebfbfcee"
+      "phash": "000000fffff6f0f3"
     },
     "outlinks": [
       {
@@ -453,10 +454,10 @@
     ]
   },
   "score": {
-    "overall": 79,
+    "overall": 77,
     "security": 96,
     "accessibility": 72,
-    "content": 56,
+    "content": 46,
     "gigw": 76,
     "performance": 76,
     "identity": 92
@@ -467,6 +468,11 @@
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://etenders.kerala.gov.in/nicgep/app)"
     },
     {
       "id": "a11y.axe_serious",
@@ -499,12 +505,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "46254.39100000002ms"
+      "ev": "52261.18425ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "2844.2MB"
+      "ev": "2402.1MB"
     },
     {
       "id": "sec.csp",
@@ -552,6 +558,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-31",
+      "up": true,
+      "score": 77
+    },
     {
       "d": "2026-10-30",
       "up": true,
@@ -748,5 +759,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

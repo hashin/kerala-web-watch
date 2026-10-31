@@ -35,30 +35,30 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-30T01:36:47.082Z",
-    "run": "1793324140211",
+    "at": "2026-10-31T01:31:09.114Z",
+    "run": "1793410108498",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 31,
-      "accessibility": 72,
-      "best_practices": 88,
-      "seo": 83
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
     },
     "axe": {
-      "critical": 5,
-      "serious": 12,
-      "moderate": 27,
-      "minor": 1
+      "critical": 0,
+      "serious": 2,
+      "moderate": 2,
+      "minor": 0
     },
     "crawl": {
-      "pages": 30,
+      "pages": 0,
       "pdfs": 0,
       "broken": 0
     },
     "tech": {
       "cms": null,
       "server": "nginx/1.24.0 (Ubuntu)",
-      "jquery": "3.5.1"
+      "jquery": null
     },
     "checks": [
       {
@@ -71,7 +71,8 @@
       },
       {
         "id": "avail.status",
-        "r": "pass"
+        "r": "fail",
+        "ev": "final response was 500"
       },
       {
         "id": "avail.redirect_offsite",
@@ -87,7 +88,8 @@
       },
       {
         "id": "avail.blank",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0 visible characters"
       },
       {
         "id": "avail.under_construction",
@@ -95,7 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "fail",
+        "ev": "15841ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -131,8 +134,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://ireda.gov.in/\""
+        "r": "pass"
       },
       {
         "id": "sec.csp",
@@ -140,11 +142,11 @@
       },
       {
         "id": "sec.xfo",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xcto",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.referrer",
@@ -157,8 +159,7 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "fail",
-        "ev": "jquery-validation 1.15.0, jquery-ui 1.12.1"
+        "r": "pass"
       },
       {
         "id": "sec.safe_browsing",
@@ -170,43 +171,38 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "fail",
-        "ev": "5 critical violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "12 serious violation(s)"
+        "ev": "2 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "28 moderate/minor violation(s)"
+        "ev": "2 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
-        "r": "fail",
-        "ev": "<html lang=\"ma\"> vs. 134% Malayalam content"
+        "r": "pass"
       },
       {
         "id": "a11y.alt",
-        "r": "fail",
-        "ev": "3 image(s) missing alt text"
+        "r": "pass"
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "5 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
         "r": "fail",
-        "ev": "heading levels skipped"
+        "ev": "no <h1>"
       },
       {
         "id": "a11y.labels",
-        "r": "fail",
-        "ev": "1 form control(s) without a label"
+        "r": "pass"
       },
       {
         "id": "a11y.skip_link",
@@ -214,41 +210,37 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "warn",
-        "ev": "tabindex=\"-1\" alongside outline:none"
+        "r": "pass"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "72/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "31/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "19327.685999999994ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.92"
+        "r": "na"
       },
       {
         "id": "perf.weight",
-        "r": "fail",
-        "ev": "11.9MB"
+        "r": "na"
       },
       {
         "id": "perf.viewport",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -256,8 +248,7 @@
       },
       {
         "id": "content.copyright_year",
-        "r": "fail",
-        "ev": "copyright year 2023"
+        "r": "na"
       },
       {
         "id": "content.last_updated",
@@ -274,13 +265,11 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "fail",
-        "ev": "ml-"
+        "r": "pass"
       },
       {
         "id": "content.obsolete_tech",
-        "r": "fail",
-        "ev": "<marquee"
+        "r": "pass"
       },
       {
         "id": "content.best_viewed",
@@ -304,24 +293,25 @@
       },
       {
         "id": "content.title",
-        "r": "pass"
+        "r": "fail",
+        "ev": "missing <title>"
       },
       {
         "id": "content.meta_desc",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.favicon",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "6 console error(s): n(...).fitVids is not a function"
+        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
       },
       {
         "id": "gigw.contact",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.feedback",
@@ -329,11 +319,11 @@
       },
       {
         "id": "gigw.sitemap",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.privacy",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.terms",
@@ -353,7 +343,7 @@
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.screen_reader",
@@ -365,7 +355,7 @@
       },
       {
         "id": "gigw.rti",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.search",
@@ -397,7 +387,8 @@
       },
       {
         "id": "id.robots",
-        "r": "pass"
+        "r": "fail",
+        "ev": "robots.txt returned 500"
       },
       {
         "id": "id.sitemap_xml",
@@ -405,8 +396,7 @@
       },
       {
         "id": "id.soft_404",
-        "r": "fail",
-        "ev": "a nonexistent path returned 200"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
@@ -414,7 +404,8 @@
       },
       {
         "id": "id.charset_doctype",
-        "r": "pass"
+        "r": "fail",
+        "ev": "missing HTML5 doctype"
       },
       {
         "id": "id.tech",
@@ -428,150 +419,22 @@
     "screenshot": {
       "desktop": "anert.webp",
       "mobile": "anert-m.webp",
-      "phash": "ffff3c3c3c380000"
+      "phash": "ffffffffffffffff"
     },
-    "outlinks": [
-      {
-        "host": "kerala.gov.in",
-        "count": 4,
-        "texts": [
-          "കൂടുതൽ വായിക്കുക",
-          "വൈദ്യുതി മന്ത്രി",
-          "ഇലക്ട്രിക്കൽ ഇൻസ്പെക്ടറേറ്റ്"
-        ]
-      },
-      {
-        "host": "youtube.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "cea.nic.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "kseb.in",
-        "count": 2,
-        "texts": [
-          "കെ.എസ്.ഇ.ബി.എൽ"
-        ]
-      },
-      {
-        "host": "ireda.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "niwe.res.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "nise.res.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "ceikerala.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "keralaenergy.gov.in",
-        "count": 2,
-        "texts": [
-          "ഇ.എം.സി"
-        ]
-      },
-      {
-        "host": "india.gov.in",
-        "count": 2,
-        "texts": [
-          "ഇന്ത്യയുടെ നാഷണൽ പോർട്ടൽ"
-        ]
-      },
-      {
-        "host": "mnre.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "erckerala.org",
-        "count": 2,
-        "texts": [
-          "കെ.എസ്.ഇ.ആർ.സി"
-        ]
-      },
-      {
-        "host": "cercind.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "recregistryindia.nic.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "keralacm.gov.in",
-        "count": 1,
-        "texts": [
-          "കേരള മുഖ്യമന്ത്രി"
-        ]
-      },
-      {
-        "host": "facebook.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "instagram.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "x.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "linkedin.com",
-        "count": 1,
-        "texts": []
-      }
-    ]
+    "outlinks": []
   },
-  "score": {
-    "overall": 41,
-    "security": 38,
-    "accessibility": 10,
-    "content": 36,
-    "gigw": 48,
-    "performance": 72,
-    "identity": 92
-  },
-  "status": "poor",
+  "score": null,
+  "status": "broken",
   "issues": [
     {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://ireda.gov.in/\""
+      "id": "avail.status",
+      "sev": "C",
+      "ev": "final response was 500"
     },
     {
-      "id": "sec.vuln_js",
-      "sev": "H",
-      "ev": "jquery-validation 1.15.0, jquery-ui 1.12.1"
-    },
-    {
-      "id": "a11y.axe_critical",
-      "sev": "H",
-      "ev": "5 critical violation(s)"
-    },
-    {
-      "id": "a11y.lang",
-      "sev": "H",
-      "ev": "<html lang=\"ma\"> vs. 134% Malayalam content"
+      "id": "avail.blank",
+      "sev": "C",
+      "ev": "0 visible characters"
     },
     {
       "id": "content.last_updated",
@@ -579,43 +442,51 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "content.legacy_font",
-      "sev": "H",
-      "ev": "ml-"
+      "id": "gigw.contact",
+      "sev": "H"
+    },
+    {
+      "id": "gigw.rti",
+      "sev": "H"
+    },
+    {
+      "id": "perf.viewport",
+      "sev": "H"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "15841ms"
     },
     {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
+      "id": "sec.xfo",
+      "sev": "M"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "12 serious violation(s)"
+      "ev": "2 serious violation(s)"
     },
     {
-      "id": "a11y.alt",
+      "id": "content.title",
       "sev": "M",
-      "ev": "3 image(s) missing alt text"
+      "ev": "missing <title>"
     },
     {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "5 low-contrast element(s)"
+      "id": "gigw.sitemap",
+      "sev": "M"
     },
     {
-      "id": "a11y.labels",
-      "sev": "M",
-      "ev": "1 form control(s) without a label"
+      "id": "gigw.privacy",
+      "sev": "M"
     },
     {
-      "id": "content.copyright_year",
-      "sev": "M",
-      "ev": "copyright year 2023"
-    },
-    {
-      "id": "content.obsolete_tech",
-      "sev": "M",
-      "ev": "<marquee"
+      "id": "gigw.accessibility_statement",
+      "sev": "M"
     },
     {
       "id": "gigw.ownership",
@@ -626,17 +497,15 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "19327.685999999994ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "11.9MB"
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
+      "sev": "L"
+    },
+    {
+      "id": "sec.xcto",
       "sev": "L"
     },
     {
@@ -651,22 +520,25 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "28 moderate/minor violation(s)"
+      "ev": "2 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "heading levels skipped"
+      "ev": "no <h1>"
     },
     {
-      "id": "a11y.keyboard",
-      "sev": "L",
-      "ev": "tabindex=\"-1\" alongside outline:none"
+      "id": "content.meta_desc",
+      "sev": "L"
+    },
+    {
+      "id": "content.favicon",
+      "sev": "L"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "6 console error(s): n(...).fitVids is not a function"
+      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
     },
     {
       "id": "gigw.feedback",
@@ -701,11 +573,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.92"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -714,9 +581,14 @@
       "sev": "L"
     },
     {
-      "id": "id.soft_404",
+      "id": "id.robots",
       "sev": "L",
-      "ev": "a nonexistent path returned 200"
+      "ev": "robots.txt returned 500"
+    },
+    {
+      "id": "id.charset_doctype",
+      "sev": "L",
+      "ev": "missing HTML5 doctype"
     },
     {
       "id": "gigw.emblem",
@@ -728,6 +600,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-10-31",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-10-30",
       "up": true,
@@ -929,5 +806,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
