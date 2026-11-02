@@ -2,7 +2,7 @@
   "id": "kudumbashree",
   "url": "https://www.kudumbashree.org",
   "light": {
-    "at": "2026-11-01T21:43:23.419Z",
+    "at": "2026-11-02T03:54:00.723Z",
     "status_class": "timeout",
     "dns": true,
     "status": null,
@@ -11,7 +11,13 @@
     "ttfb_ms": null,
     "title": null,
     "byte_size": null,
-    "tls": null,
+    "tls": {
+      "valid": true,
+      "protocol": "TLSv1.2",
+      "expires": "Jan 27 13:02:44 2027 GMT",
+      "days_left": 86,
+      "issuer": "Let's Encrypt"
+    },
     "headers": {
       "hsts": false,
       "csp": false,
@@ -26,7 +32,7 @@
     "domain": "kudumbashree.org",
     "final_domain": null,
     "vantage": "gh-us",
-    "suspect": true
+    "suspect": false
   },
   "deep": {
     "at": "2026-11-02T01:07:49.109Z",
@@ -501,7 +507,7 @@
     "performance": 67,
     "identity": 76
   },
-  "status": "poor",
+  "status": "down",
   "issues": [
     {
       "id": "sec.cert_expiry",
@@ -673,7 +679,7 @@
   "history": [
     {
       "d": "2026-11-02",
-      "up": true,
+      "up": false,
       "score": 43
     },
     {
@@ -882,5 +888,5 @@
       "score": null
     }
   ],
-  "deep_bump": false
+  "deep_bump": true
 }
