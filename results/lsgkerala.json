@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-31T01:04:31.164Z",
-    "run": "1793408620264",
+    "at": "2026-11-02T01:06:34.945Z",
+    "run": "1793581542115",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 57,
+      "performance": 61,
       "accessibility": 77,
       "best_practices": 92,
       "seo": 92
     },
     "axe": {
       "critical": 2,
-      "serious": 53,
+      "serious": 48,
       "moderate": 42,
       "minor": 14
     },
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "4292ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -176,7 +175,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "53 serious violation(s)"
+        "ev": "48 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -194,7 +193,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "42 low-contrast element(s)"
+        "ev": "37 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -222,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "57/100"
+        "ev": "61/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "13902.372500000003ms"
+        "ev": "12326.8065ms"
       },
       {
         "id": "perf.cls",
@@ -518,19 +517,14 @@
       "ev": "ml-lsgd"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "4292ms"
-    },
-    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "53 serious violation(s)"
+      "ev": "48 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "42 low-contrast element(s)"
+      "ev": "37 low-contrast element(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -560,7 +554,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "13902.372500000003ms"
+      "ev": "12326.8065ms"
     },
     {
       "id": "id.tech",
@@ -643,6 +637,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-02",
+      "up": true,
+      "score": 54
+    },
     {
       "d": "2026-11-01",
       "up": true,
@@ -854,5 +853,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

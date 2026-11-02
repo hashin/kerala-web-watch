@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-01T00:50:42.071Z",
-    "run": "1793494165070",
+    "at": "2026-11-02T01:35:23.750Z",
+    "run": "1793583113602",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 38,
-      "accessibility": 76,
-      "best_practices": 88,
-      "seo": 69
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
     },
     "axe": {
       "critical": 9,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 8
     },
     "tech": {
       "cms": "Drupal 11",
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3433ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -217,22 +218,20 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "76/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "38/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "27953.764500000012ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.35"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -271,7 +270,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-transform"
+        "ev": "ml-user"
       },
       {
         "id": "content.obsolete_tech",
@@ -283,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "8/30 crawled link(s) broken (https://lmd.kerala.gov.in/inspections/, https://lmd.kerala.gov.in/inspections-2/, https://lmd.kerala.gov.in/nomination-of-directors-by-the-companies/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -444,12 +444,12 @@
     ]
   },
   "score": {
-    "overall": 54,
+    "overall": 53,
     "security": 76,
     "accessibility": 30,
-    "content": 42,
+    "content": 22,
     "gigw": 32,
-    "performance": 67,
+    "performance": 81,
     "identity": 100
   },
   "status": "needs-work",
@@ -472,7 +472,17 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-transform"
+      "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "8/30 crawled link(s) broken (https://lmd.kerala.gov.in/inspections/, https://lmd.kerala.gov.in/inspections-2/, https://lmd.kerala.gov.in/nomination-of-directors-by-the-companies/, ...)"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3433ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -514,11 +524,6 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "27953.764500000012ms"
     },
     {
       "id": "perf.weight",
@@ -586,16 +591,16 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.35"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-02",
+      "up": true,
+      "score": 53
+    },
     {
       "d": "2026-11-01",
       "up": true,
@@ -802,5 +807,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

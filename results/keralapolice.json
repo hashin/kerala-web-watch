@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-01T00:27:02.888Z",
-    "run": "1793492695258",
+    "at": "2026-11-02T01:05:40.787Z",
+    "run": "1793581424142",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 35,
+      "performance": 39,
       "accessibility": 92,
       "best_practices": 96,
-      "seo": 83
+      "seo": 92
     },
     "axe": {
       "critical": 0,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 2
+      "broken": 3
     },
     "tech": {
       "cms": null,
@@ -220,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "35/100"
+        "ev": "39/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "40381.3425ms"
+        "ev": "39942.53075000001ms"
       },
       {
         "id": "perf.cls",
@@ -281,7 +281,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "2/30 crawled link(s) broken (https://keralapolice.gov.in/#, https://keralapolice.gov.in/page/former-chiefs)"
+        "ev": "3/30 crawled link(s) broken (https://keralapolice.gov.in/login, https://keralapolice.gov.in/page/about-us, https://keralapolice.gov.in/page/governance)"
       },
       {
         "id": "content.broken_pdfs",
@@ -416,13 +416,13 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6as1h1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6as1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
       }
     ],
     "screenshot": {
       "desktop": "keralapolice.webp",
       "mobile": "keralapolice-m.webp",
-      "phash": "ffff80870080803f"
+      "phash": "ffff8080e0e0f03f"
     },
     "outlinks": [
       {
@@ -619,7 +619,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "2/30 crawled link(s) broken (https://keralapolice.gov.in/#, https://keralapolice.gov.in/page/former-chiefs)"
+      "ev": "3/30 crawled link(s) broken (https://keralapolice.gov.in/login, https://keralapolice.gov.in/page/about-us, https://keralapolice.gov.in/page/governance)"
     },
     {
       "id": "gigw.contact",
@@ -649,7 +649,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "40381.3425ms"
+      "ev": "39942.53075000001ms"
     },
     {
       "id": "perf.weight",
@@ -720,10 +720,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6as1h1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6as1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-02",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-11-01",
       "up": true,
@@ -935,5 +940,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

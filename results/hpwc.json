@@ -37,18 +37,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-01T00:47:31.864Z",
-    "run": "1793493702023",
+    "at": "2026-11-02T01:26:34.847Z",
+    "run": "1793582460793",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 55,
+      "accessibility": 86,
+      "best_practices": 73,
+      "seo": 77
     },
     "axe": {
       "critical": 2,
-      "serious": 4,
+      "serious": 3,
       "moderate": 12,
       "minor": 0
     },
@@ -98,7 +98,7 @@
       {
         "id": "avail.ttfb",
         "r": "fail",
-        "ev": "13183ms"
+        "ev": "14075ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -118,15 +118,15 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.hsts",
@@ -160,7 +160,7 @@
       {
         "id": "sec.vuln_js",
         "r": "fail",
-        "ev": "bootstrap 3.4.2"
+        "ev": "bootstrap 3.4.2, swiper 8.4.5"
       },
       {
         "id": "sec.safe_browsing",
@@ -178,7 +178,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "4 serious violation(s)"
+        "ev": "3 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -188,7 +188,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en-GB\"> vs. 48% Malayalam content"
+        "ev": "<html lang=\"en-GB\"> vs. 43% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -197,8 +197,7 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "1 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
@@ -222,25 +221,26 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "86/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "25108.015000000007ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "55.4MB"
+        "ev": "36.8MB"
       },
       {
         "id": "perf.viewport",
@@ -287,7 +287,7 @@
       {
         "id": "content.broken_links",
         "r": "fail",
-        "ev": "7/30 crawled link(s) broken (https://hpwc.kerala.gov.in/#content, https://hpwc.kerala.gov.in/staff-details/, https://hpwc.kerala.gov.in/organogram/, ...)"
+        "ev": "7/30 crawled link(s) broken (https://hpwc.kerala.gov.in/#content, https://hpwc.kerala.gov.in/staff-details/, https://hpwc.kerala.gov.in/who-is-who/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -296,7 +296,7 @@
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "2 broken image(s)"
+        "ev": "1 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -317,7 +317,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "27 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+        "ev": "38 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
       },
       {
         "id": "gigw.contact",
@@ -393,7 +393,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.robots",
@@ -405,7 +405,7 @@
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.canonical",
@@ -475,12 +475,12 @@
     ]
   },
   "score": {
-    "overall": 42,
+    "overall": 43,
     "security": 32,
-    "accessibility": 10,
+    "accessibility": 20,
     "content": 28,
     "gigw": 62,
-    "performance": 76,
+    "performance": 66,
     "identity": 100
   },
   "status": "poor",
@@ -497,7 +497,7 @@
     {
       "id": "sec.vuln_js",
       "sev": "H",
-      "ev": "bootstrap 3.4.2"
+      "ev": "bootstrap 3.4.2, swiper 8.4.5"
     },
     {
       "id": "a11y.axe_critical",
@@ -507,7 +507,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en-GB\"> vs. 48% Malayalam content"
+      "ev": "<html lang=\"en-GB\"> vs. 43% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -522,27 +522,22 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "7/30 crawled link(s) broken (https://hpwc.kerala.gov.in/#content, https://hpwc.kerala.gov.in/staff-details/, https://hpwc.kerala.gov.in/organogram/, ...)"
+      "ev": "7/30 crawled link(s) broken (https://hpwc.kerala.gov.in/#content, https://hpwc.kerala.gov.in/staff-details/, https://hpwc.kerala.gov.in/who-is-who/, ...)"
     },
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "13183ms"
+      "ev": "14075ms"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "4 serious violation(s)"
+      "ev": "3 serious violation(s)"
     },
     {
       "id": "a11y.alt",
       "sev": "M",
       "ev": "1 image(s) missing alt text"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "1 low-contrast element(s)"
     },
     {
       "id": "a11y.labels",
@@ -562,9 +557,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "25108.015000000007ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "55.4MB"
+      "ev": "36.8MB"
     },
     {
       "id": "perf.tap_targets",
@@ -596,7 +596,7 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "2 broken image(s)"
+      "ev": "1 broken image(s)"
     },
     {
       "id": "content.favicon",
@@ -605,7 +605,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "27 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      "ev": "38 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
     },
     {
       "id": "gigw.feedback",
@@ -621,6 +621,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-02",
+      "up": true,
+      "score": 43
+    },
     {
       "d": "2026-11-01",
       "up": true,
@@ -827,5 +832,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

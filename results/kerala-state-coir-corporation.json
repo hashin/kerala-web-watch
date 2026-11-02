@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-01T00:25:33.893Z",
-    "run": "1793492683704",
+    "at": "2026-11-02T01:04:27.035Z",
+    "run": "1793581406311",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 60,
+      "accessibility": 75,
+      "best_practices": 88,
+      "seo": 69
+    },
     "axe": {
       "critical": 6,
       "serious": 26,
@@ -48,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 3,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "WordPress 7.1.4",
@@ -210,19 +215,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "75/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "43618.92099999999ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -235,11 +243,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -273,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://www.coircraft.com/about-us/mission-vision)"
       },
       {
         "id": "content.broken_pdfs",
@@ -416,7 +425,7 @@
     "screenshot": {
       "desktop": "kerala-state-coir-corporation.webp",
       "mobile": "kerala-state-coir-corporation-m.webp",
-      "phash": "fffffb10185c1802"
+      "phash": "ffffff626e602400"
     },
     "outlinks": [
       {
@@ -437,15 +446,15 @@
     ]
   },
   "score": {
-    "overall": 51,
+    "overall": 47,
     "security": 48,
     "accessibility": 40,
-    "content": 42,
+    "content": 32,
     "gigw": 36,
-    "performance": 90,
+    "performance": 66,
     "identity": 80
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.vuln_js",
@@ -466,6 +475,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://www.coircraft.com/about-us/mission-vision)"
     },
     {
       "id": "id.gov_domain",
@@ -517,9 +531,18 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "43618.92099999999ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "14.2MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -582,6 +605,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "gigw.emblem",
       "sev": "I"
     },
@@ -592,6 +619,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-02",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-11-01",
       "up": true,
@@ -763,5 +795,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-01T00:37:14.202Z",
-    "run": "1793492758483",
+    "at": "2026-11-02T01:19:21.835Z",
+    "run": "1793581683025",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 53,
+      "accessibility": 56,
+      "best_practices": 69,
+      "seo": 83
     },
     "axe": {
       "critical": 66,
@@ -218,20 +218,21 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "56/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "53/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "13262.792500000001ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -244,7 +245,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -542,13 +543,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "13262.792500000001ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "7.7MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -631,6 +633,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-02",
+      "up": true,
+      "score": 43
+    },
     {
       "d": "2026-11-01",
       "up": true,
@@ -842,5 +849,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

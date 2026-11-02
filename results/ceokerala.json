@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-01T00:32:05.419Z",
-    "run": "1793493069848",
+    "at": "2026-11-02T01:08:43.615Z",
+    "run": "1793581653662",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 50,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "fail",
+        "ev": "15258ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -224,7 +225,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10092.318ms"
+        "ev": "10105.933ms"
       },
       {
         "id": "perf.cls",
@@ -497,6 +498,11 @@
       "ev": "1/30 crawled link(s) broken (https://sutharyam.ceo.kerala.gov.in/)"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "15258ms"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
       "ev": "2 serious violation(s)"
@@ -520,7 +526,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10092.318ms"
+      "ev": "10105.933ms"
     },
     {
       "id": "perf.tap_targets",
@@ -589,6 +595,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-02",
+      "up": true,
+      "score": 64
+    },
     {
       "d": "2026-11-01",
       "up": true,
@@ -795,5 +806,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

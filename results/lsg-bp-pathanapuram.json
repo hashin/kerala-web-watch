@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-16T00:16:38.945Z",
-    "run": "1792109758248",
+    "at": "2026-11-02T01:37:36.812Z",
+    "run": "1793583375284",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
+      "performance": 57,
       "accessibility": 85,
       "best_practices": 78,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 2
     },
     "tech": {
       "cms": "Drupal 11",
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "57/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8561.998499999998ms"
+        "ev": "10569.424500000001ms"
       },
       {
         "id": "perf.cls",
@@ -282,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "2/30 crawled link(s) broken (https://lsgkerala.gov.in/ml/act-rule, https://meeting.lsgkerala.gov.in/Pages/StateWiseDashBoard.aspx)"
       },
       {
         "id": "content.broken_pdfs",
@@ -547,6 +548,11 @@
       "ev": "ml-user"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "2/30 crawled link(s) broken (https://lsgkerala.gov.in/ml/act-rule, https://meeting.lsgkerala.gov.in/Pages/StateWiseDashBoard.aspx)"
+    },
+    {
       "id": "gigw.rti",
       "sev": "H"
     },
@@ -584,7 +590,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8561.998499999998ms"
+      "ev": "10569.424500000001ms"
     },
     {
       "id": "perf.weight",
@@ -661,6 +667,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-02",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-01",
       "up": false,
@@ -867,5 +878,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
