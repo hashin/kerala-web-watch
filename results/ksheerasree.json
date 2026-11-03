@@ -2,31 +2,37 @@
   "id": "ksheerasree",
   "url": "https://ksheerasree.kerala.gov.in",
   "light": {
-    "at": "2026-11-03T00:20:34.202Z",
-    "status_class": "timeout",
+    "at": "2026-11-03T13:26:18.161Z",
+    "status_class": "http_403",
     "dns": true,
-    "status": null,
-    "final_url": null,
+    "status": 403,
+    "final_url": "https://ksheerasree.kerala.gov.in",
     "redirects": [],
-    "ttfb_ms": null,
-    "title": null,
-    "byte_size": null,
-    "tls": null,
+    "ttfb_ms": 845,
+    "title": "403 Forbidden",
+    "byte_size": 162,
+    "tls": {
+      "valid": true,
+      "protocol": "TLSv1.3",
+      "expires": "Dec 15 06:36:56 2026 GMT",
+      "days_left": 42,
+      "issuer": "Let's Encrypt"
+    },
     "headers": {
-      "hsts": false,
+      "hsts": true,
       "csp": false,
       "xfo": false,
       "xcto": false,
       "referrer": false,
-      "server": null
+      "server": "nginx"
     },
-    "content_hash": null,
+    "content_hash": "db952d69f8efbd164d44fddcc0c0577d815955c67e9cb82e73f3e38d25c88352",
     "http_redirects_to_https": true,
     "geo_block_suspect": false,
     "domain": "kerala.gov.in",
-    "final_domain": null,
+    "final_domain": "kerala.gov.in",
     "vantage": "gh-us",
-    "suspect": true
+    "suspect": false
   },
   "deep": {
     "at": "2026-11-03T03:29:46.131Z",
@@ -484,7 +490,7 @@
     "performance": 95,
     "identity": 88
   },
-  "status": "needs-work",
+  "status": "down",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -604,7 +610,7 @@
   "history": [
     {
       "d": "2026-11-03",
-      "up": true,
+      "up": false,
       "score": 57
     },
     {
@@ -818,5 +824,5 @@
       "score": null
     }
   ],
-  "deep_bump": false
+  "deep_bump": true
 }

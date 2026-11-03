@@ -2,31 +2,40 @@
   "id": "compose",
   "url": "https://compose.kerala.gov.in",
   "light": {
-    "at": "2026-11-03T00:17:44.322Z",
-    "status_class": "timeout",
+    "at": "2026-11-03T13:24:02.720Z",
+    "status_class": "ok",
     "dns": true,
-    "status": null,
-    "final_url": null,
-    "redirects": [],
-    "ttfb_ms": null,
-    "title": null,
-    "byte_size": null,
-    "tls": null,
-    "headers": {
-      "hsts": false,
-      "csp": false,
-      "xfo": false,
-      "xcto": false,
-      "referrer": false,
-      "server": null
+    "status": 200,
+    "final_url": "https://compose.kerala.gov.in/home.jsp",
+    "redirects": [
+      "https://compose.kerala.gov.in -> https://compose.kerala.gov.in/home",
+      "https://compose.kerala.gov.in/home -> https://compose.kerala.gov.in/home.jsp"
+    ],
+    "ttfb_ms": 248,
+    "title": "COMPOSE Ver 2.0",
+    "byte_size": 106262,
+    "tls": {
+      "valid": true,
+      "protocol": "TLSv1.2",
+      "expires": "Jan 14 10:15:09 2027 GMT",
+      "days_left": 72,
+      "issuer": "eMudhra Technologies Limited"
     },
-    "content_hash": null,
+    "headers": {
+      "hsts": true,
+      "csp": true,
+      "xfo": true,
+      "xcto": true,
+      "referrer": false,
+      "server": "Apache"
+    },
+    "content_hash": "9f01e2c8d8ebbd69aae3b79b7b4b7d3fb3d5959184c79ba8d39e70fcd806ff9c",
     "http_redirects_to_https": true,
     "geo_block_suspect": false,
     "domain": "kerala.gov.in",
-    "final_domain": null,
+    "final_domain": "kerala.gov.in",
     "vantage": "gh-us",
-    "suspect": true
+    "suspect": false
   },
   "deep": {
     "at": "2026-11-03T03:22:20.799Z",
@@ -863,5 +872,5 @@
       "score": null
     }
   ],
-  "deep_bump": false
+  "deep_bump": true
 }
