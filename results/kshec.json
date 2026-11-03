@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-02T01:11:32.463Z",
-    "run": "1793581815718",
+    "at": "2026-11-03T03:15:35.358Z",
+    "run": "1793675658917",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 27,
+      "performance": 44,
       "accessibility": 76,
       "best_practices": 92,
       "seo": 83
@@ -47,7 +47,7 @@
     "axe": {
       "critical": 1,
       "serious": 36,
-      "moderate": 33,
+      "moderate": 35,
       "minor": 0
     },
     "crawl": {
@@ -180,7 +180,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "33 moderate/minor violation(s)"
+        "ev": "35 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -198,7 +198,7 @@
       {
         "id": "a11y.headings",
         "r": "fail",
-        "ev": "no <h1>"
+        "ev": "no <h1>, heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -221,17 +221,16 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "27/100"
+        "ev": "44/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "68020.53199999998ms"
+        "ev": "68450.25200000011ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.38"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -475,7 +474,7 @@
     "accessibility": 50,
     "content": 92,
     "gigw": 68,
-    "performance": 62,
+    "performance": 66,
     "identity": 96
   },
   "status": "needs-work",
@@ -519,7 +518,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "68020.53199999998ms"
+      "ev": "68450.25200000011ms"
     },
     {
       "id": "perf.weight",
@@ -546,12 +545,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "33 moderate/minor violation(s)"
+      "ev": "35 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "no <h1>"
+      "ev": "no <h1>, heading levels skipped"
     },
     {
       "id": "a11y.keyboard",
@@ -578,11 +577,6 @@
     {
       "id": "gigw.help",
       "sev": "L"
-    },
-    {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.38"
     },
     {
       "id": "perf.images",
@@ -814,5 +808,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

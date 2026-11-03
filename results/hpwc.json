@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-02T01:26:34.847Z",
-    "run": "1793582460793",
+    "at": "2026-11-03T03:30:02.754Z",
+    "run": "1793676456379",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 46,
       "accessibility": 86,
       "best_practices": 73,
       "seo": 77
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 7
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -97,8 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "fail",
-        "ev": "14075ms"
+        "r": "warn",
+        "ev": "5543ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -114,7 +114,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
@@ -226,12 +226,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "46/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "25108.015000000007ms"
+        "ev": "26449.325000000008ms"
       },
       {
         "id": "perf.cls",
@@ -240,7 +240,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "36.8MB"
+        "ev": "46.4MB"
       },
       {
         "id": "perf.viewport",
@@ -286,8 +286,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "7/30 crawled link(s) broken (https://hpwc.kerala.gov.in/#content, https://hpwc.kerala.gov.in/staff-details/, https://hpwc.kerala.gov.in/who-is-who/, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -296,7 +295,7 @@
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "1 broken image(s)"
+        "ev": "2 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -317,7 +316,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "38 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+        "ev": "27 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
       },
       {
         "id": "gigw.contact",
@@ -393,7 +392,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.robots",
@@ -405,7 +404,7 @@
       },
       {
         "id": "id.soft_404",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
@@ -475,20 +474,16 @@
     ]
   },
   "score": {
-    "overall": 43,
-    "security": 32,
+    "overall": 51,
+    "security": 52,
     "accessibility": 20,
-    "content": 28,
+    "content": 48,
     "gigw": 62,
     "performance": 66,
     "identity": 100
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.http_redirect",
-      "sev": "H"
-    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -520,14 +515,9 @@
       "ev": "ml-children"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "7/30 crawled link(s) broken (https://hpwc.kerala.gov.in/#content, https://hpwc.kerala.gov.in/staff-details/, https://hpwc.kerala.gov.in/who-is-who/, ...)"
-    },
-    {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "14075ms"
+      "ev": "5543ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -559,12 +549,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "25108.015000000007ms"
+      "ev": "26449.325000000008ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "36.8MB"
+      "ev": "46.4MB"
     },
     {
       "id": "perf.tap_targets",
@@ -596,7 +586,7 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "1 broken image(s)"
+      "ev": "2 broken image(s)"
     },
     {
       "id": "content.favicon",
@@ -605,7 +595,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "38 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      "ev": "27 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
     },
     {
       "id": "gigw.feedback",
@@ -624,7 +614,7 @@
     {
       "d": "2026-11-03",
       "up": true,
-      "score": 43
+      "score": 51
     },
     {
       "d": "2026-11-02",
@@ -837,5 +827,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

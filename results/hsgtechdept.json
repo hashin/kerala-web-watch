@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T23:45:10.481Z",
-    "run": "1792885498889",
+    "at": "2026-11-03T03:16:22.128Z",
+    "run": "1793675710428",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 100,
-      "accessibility": 94,
-      "best_practices": 100,
-      "seo": 82
+      "performance": 34,
+      "accessibility": 82,
+      "best_practices": 92,
+      "seo": 85
     },
     "axe": {
-      "critical": 0,
-      "serious": 0,
-      "moderate": 2,
-      "minor": 0
+      "critical": 4,
+      "serious": 11,
+      "moderate": 4,
+      "minor": 1
     },
     "crawl": {
-      "pages": 0,
+      "pages": 21,
       "pdfs": 0,
-      "broken": 0
+      "broken": 6
     },
     "tech": {
       "cms": null,
@@ -111,7 +111,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
@@ -119,8 +119,7 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "16 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -128,15 +127,16 @@
       },
       {
         "id": "sec.hsts",
-        "r": "fail"
-      },
-      {
-        "id": "sec.mixed_content",
         "r": "pass"
       },
       {
+        "id": "sec.mixed_content",
+        "r": "fail",
+        "ev": "href=\"http://gmpg.org/xfn/11\""
+      },
+      {
         "id": "sec.csp",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.xfo",
@@ -168,16 +168,18 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "pass"
+        "r": "fail",
+        "ev": "4 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
-        "r": "pass"
+        "r": "fail",
+        "ev": "11 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "2 moderate/minor violation(s)"
+        "ev": "5 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -185,15 +187,18 @@
       },
       {
         "id": "a11y.alt",
-        "r": "pass"
+        "r": "fail",
+        "ev": "4 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "10 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
-        "r": "pass"
+        "r": "fail",
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -205,25 +210,28 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "pass"
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "94/100"
+        "ev": "82/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "100/100"
+        "ev": "34/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "fail",
+        "ev": "7227.889000000001ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1.52"
       },
       {
         "id": "perf.weight",
@@ -235,15 +243,15 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
-      },
-      {
-        "id": "perf.images",
         "r": "pass"
       },
       {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
         "id": "content.copyright_year",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "content.last_updated",
@@ -260,7 +268,8 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "pass"
+        "r": "fail",
+        "ev": "ml-IN"
       },
       {
         "id": "content.obsolete_tech",
@@ -272,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "6/21 crawled link(s) broken (https://hsgtechdept.kerala.gov.in/category/whatsnew/, https://hsgtechdept.kerala.gov.in/2022/04/30/ghis-scheme/, https://hsgtechdept.kerala.gov.in/2022/04/30/cehm-scheme/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -284,8 +294,7 @@
       },
       {
         "id": "content.malayalam",
-        "r": "fail",
-        "ev": "Malayalam ratio 0.00, no language toggle found"
+        "r": "pass"
       },
       {
         "id": "content.title",
@@ -297,15 +306,16 @@
       },
       {
         "id": "content.favicon",
-        "r": "fail"
-      },
-      {
-        "id": "content.console_errors",
         "r": "pass"
       },
       {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "3 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      },
+      {
         "id": "gigw.contact",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.feedback",
@@ -353,7 +363,7 @@
       },
       {
         "id": "gigw.search",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.ownership",
@@ -365,7 +375,7 @@
       },
       {
         "id": "gigw.emblem",
-        "r": "warn"
+        "r": "pass"
       },
       {
         "id": "id.gov_domain",
@@ -377,7 +387,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.robots",
@@ -389,12 +399,11 @@
       },
       {
         "id": "id.soft_404",
-        "r": "fail",
-        "ev": "a nonexistent path returned 200"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.charset_doctype",
@@ -412,29 +421,71 @@
     "screenshot": {
       "desktop": "hsgtechdept.webp",
       "mobile": "hsgtechdept-m.webp",
-      "phash": "00003c3c3c3c0000"
+      "phash": "00ffff1ff860ff1f"
     },
-    "outlinks": []
+    "outlinks": [
+      {
+        "host": "ulgis.com",
+        "count": 1,
+        "texts": [
+          "വെബ് ജി.ഐ.എസ്"
+        ]
+      },
+      {
+        "host": "hudco.org.in",
+        "count": 1,
+        "texts": [
+          "ഹഡ്‌കോ"
+        ]
+      },
+      {
+        "host": "lichousing.com",
+        "count": 1,
+        "texts": [
+          "എൽഐസി ഹൗസിംഗ് ഫിനാൻസ് ലിമിറ്റഡ്"
+        ]
+      },
+      {
+        "host": "kudumbashree.org",
+        "count": 1,
+        "texts": [
+          "കുടുംബശ്രീ"
+        ]
+      },
+      {
+        "host": "google.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "cdit.org",
+        "count": 1,
+        "texts": [
+          "CDIT"
+        ]
+      }
+    ]
   },
   "score": {
-    "overall": 61,
-    "security": 38,
-    "accessibility": 96,
-    "content": 62,
-    "gigw": 0,
-    "performance": 90,
-    "identity": 92
+    "overall": 49,
+    "security": 62,
+    "accessibility": 40,
+    "content": 32,
+    "gigw": 2,
+    "performance": 82,
+    "identity": 100
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
     {
-      "id": "sec.http_redirect",
-      "sev": "H"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://gmpg.org/xfn/11\""
     },
     {
-      "id": "sec.cert_expiry",
+      "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "16 days left"
+      "ev": "4 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -442,25 +493,37 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "gigw.contact",
-      "sev": "H"
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-IN"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "6/21 crawled link(s) broken (https://hsgtechdept.kerala.gov.in/category/whatsnew/, https://hsgtechdept.kerala.gov.in/2022/04/30/ghis-scheme/, https://hsgtechdept.kerala.gov.in/2022/04/30/cehm-scheme/, ...)"
     },
     {
       "id": "gigw.rti",
       "sev": "H"
     },
     {
-      "id": "sec.hsts",
-      "sev": "M"
-    },
-    {
       "id": "sec.xfo",
       "sev": "M"
     },
     {
-      "id": "content.malayalam",
+      "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "Malayalam ratio 0.00, no language toggle found"
+      "ev": "11 serious violation(s)"
+    },
+    {
+      "id": "a11y.alt",
+      "sev": "M",
+      "ev": "4 image(s) missing alt text"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "10 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -483,12 +546,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
-    },
-    {
-      "id": "sec.csp",
-      "sev": "L"
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "7227.889000000001ms"
     },
     {
       "id": "sec.xcto",
@@ -501,15 +561,26 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "2 moderate/minor violation(s)"
+      "ev": "5 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
+    },
+    {
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
       "id": "content.meta_desc",
       "sev": "L"
     },
     {
-      "id": "content.favicon",
-      "sev": "L"
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "3 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
@@ -540,32 +611,20 @@
       "sev": "L"
     },
     {
-      "id": "gigw.search",
-      "sev": "L"
-    },
-    {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
-      "id": "id.soft_404",
+      "id": "perf.cls",
       "sev": "L",
-      "ev": "a nonexistent path returned 200"
+      "ev": "1.52"
     },
     {
-      "id": "gigw.emblem",
-      "sev": "I"
-    },
-    {
-      "id": "id.canonical",
-      "sev": "I"
+      "id": "perf.images",
+      "sev": "L"
     }
   ],
   "history": [
     {
       "d": "2026-11-03",
       "up": true,
-      "score": 61
+      "score": 49
     },
     {
       "d": "2026-11-02",
@@ -783,5 +842,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

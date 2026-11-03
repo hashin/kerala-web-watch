@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-02T01:00:01.082Z",
-    "run": "1793581140648",
+    "at": "2026-11-03T03:01:57.257Z",
+    "run": "1793674857116",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 56,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 1,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -226,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10423.73ms"
+        "ev": "10853.453999999998ms"
       },
       {
         "id": "perf.cls",
@@ -282,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://epos.kerala.gov.in/FPSDayWiseInterface.jsp)"
       },
       {
         "id": "content.broken_pdfs",
@@ -458,10 +459,10 @@
     ]
   },
   "score": {
-    "overall": 49,
+    "overall": 47,
     "security": 36,
     "accessibility": 52,
-    "content": 52,
+    "content": 42,
     "gigw": 26,
     "performance": 61,
     "identity": 88
@@ -491,6 +492,11 @@
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://epos.kerala.gov.in/FPSDayWiseInterface.jsp)"
     },
     {
       "id": "perf.viewport",
@@ -539,7 +545,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10423.73ms"
+      "ev": "10853.453999999998ms"
     },
     {
       "id": "perf.weight",
@@ -631,7 +637,7 @@
     {
       "d": "2026-11-03",
       "up": true,
-      "score": 49
+      "score": 47
     },
     {
       "d": "2026-11-02",
@@ -844,5 +850,5 @@
       "score": 49
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-02T01:19:23.247Z",
-    "run": "1793582302389",
+    "at": "2026-11-03T03:25:35.218Z",
+    "run": "1793676264892",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 37,
+      "performance": 54,
       "accessibility": 84,
       "best_practices": 88,
       "seo": 85
@@ -220,17 +220,16 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "37/100"
+        "ev": "54/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9782.512499999999ms"
+        "ev": "7837.909ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.48"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -384,11 +383,11 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "34 days left"
+        "ev": "33 days left"
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "id.robots",
@@ -396,7 +395,7 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.soft_404",
@@ -459,8 +458,8 @@
     "accessibility": 70,
     "content": 52,
     "gigw": 26,
-    "performance": 72,
-    "identity": 52
+    "performance": 76,
+    "identity": 56
   },
   "status": "poor",
   "issues": [
@@ -500,7 +499,7 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "34 days left"
+      "ev": "33 days left"
     },
     {
       "id": "sec.hsts",
@@ -535,7 +534,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9782.512499999999ms"
+      "ev": "7837.909ms"
     },
     {
       "id": "perf.weight",
@@ -603,16 +602,7 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.48"
-    },
-    {
       "id": "perf.images",
-      "sev": "L"
-    },
-    {
-      "id": "id.www_consistency",
       "sev": "L"
     },
     {
@@ -843,5 +833,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

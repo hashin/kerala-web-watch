@@ -29,11 +29,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T01:47:40.898Z",
-    "run": "1791510418261",
+    "at": "2026-11-03T03:31:14.244Z",
+    "run": "1793676629186",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 67,
+      "performance": 73,
       "accessibility": 63,
       "best_practices": 88,
       "seo": 92
@@ -106,7 +106,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
@@ -115,7 +115,8 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "warn",
+        "ev": "27 days left"
       },
       {
         "id": "sec.tls_version",
@@ -216,12 +217,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "67/100"
+        "ev": "73/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "4132.987999999999ms"
+        "ev": "4010.7219999999998ms"
       },
       {
         "id": "perf.cls",
@@ -412,7 +413,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-3J77CD95RX&amp;cx=c&amp;gtm=4e6a72, https://www.googletagmanager.com/gtag/js?id=UA-37163079-44"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-3J77CD95RX&amp;cx=c&amp;gtm=4e6au1, https://www.googletagmanager.com/gtag/js?id=UA-37163079-44"
       }
     ],
     "screenshot": {
@@ -434,7 +435,7 @@
     ]
   },
   "score": null,
-  "status": "down",
+  "status": "broken",
   "issues": [
     {
       "id": "avail.connect",
@@ -447,8 +448,9 @@
       "ev": "certificate chain invalid, expired, or hostname mismatch"
     },
     {
-      "id": "sec.http_redirect",
-      "sev": "H"
+      "id": "sec.cert_expiry",
+      "sev": "H",
+      "ev": "27 days left"
     },
     {
       "id": "a11y.axe_critical",
@@ -523,7 +525,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "4132.987999999999ms"
+      "ev": "4010.7219999999998ms"
     },
     {
       "id": "perf.weight",
@@ -587,7 +589,7 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-3J77CD95RX&amp;cx=c&amp;gtm=4e6a72, https://www.googletagmanager.com/gtag/js?id=UA-37163079-44"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-3J77CD95RX&amp;cx=c&amp;gtm=4e6au1, https://www.googletagmanager.com/gtag/js?id=UA-37163079-44"
     }
   ],
   "history": [
@@ -802,5 +804,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

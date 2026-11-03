@@ -29,11 +29,11 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-11-02T01:01:03.208Z",
-    "run": "1793581201084",
+    "at": "2026-11-03T03:04:12.787Z",
+    "run": "1793674992611",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 65,
+      "performance": 50,
       "accessibility": 75,
       "best_practices": 92,
       "seo": 73
@@ -215,16 +215,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "65/100"
+        "ev": "50/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9938.379710000001ms"
+        "ev": "11156.795999999998ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.26"
       },
       {
         "id": "perf.weight",
@@ -263,7 +264,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-"
+        "ev": "ml-user"
       },
       {
         "id": "content.obsolete_tech",
@@ -468,7 +469,7 @@
     "accessibility": 22,
     "content": 28,
     "gigw": 0,
-    "performance": 81,
+    "performance": 77,
     "identity": 88
   },
   "status": "poor",
@@ -496,7 +497,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-"
+      "ev": "ml-user"
     },
     {
       "id": "content.broken_links",
@@ -554,7 +555,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9938.379710000001ms"
+      "ev": "11156.795999999998ms"
     },
     {
       "id": "perf.weight",
@@ -615,6 +616,11 @@
     {
       "id": "gigw.help",
       "sev": "L"
+    },
+    {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.26"
     },
     {
       "id": "perf.images",
@@ -855,5 +861,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

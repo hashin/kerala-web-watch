@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-02T01:19:56.414Z",
-    "run": "1793582361781",
+    "at": "2026-11-03T03:28:11.454Z",
+    "run": "1793676456939",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 70,
+      "accessibility": 73,
+      "best_practices": 88,
+      "seo": 82
+    },
     "axe": {
       "critical": 6,
       "serious": 21,
@@ -206,24 +211,27 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "73/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "70/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "9310.106999999998ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "5.8MB"
+        "ev": "5.7MB"
       },
       {
         "id": "perf.viewport",
@@ -231,11 +239,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -449,12 +457,12 @@
     ]
   },
   "score": {
-    "overall": 60,
+    "overall": 58,
     "security": 68,
     "accessibility": 62,
     "content": 32,
     "gigw": 22,
-    "performance": 95,
+    "performance": 81,
     "identity": 96
   },
   "status": "needs-work",
@@ -518,9 +526,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "9310.106999999998ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "5.8MB"
+      "ev": "5.7MB"
     },
     {
       "id": "sec.csp",
@@ -582,6 +595,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.robots",
       "sev": "L",
       "ev": "robots.txt returned 404"
@@ -595,7 +612,7 @@
     {
       "d": "2026-11-03",
       "up": true,
-      "score": 60
+      "score": 58
     },
     {
       "d": "2026-11-02",
@@ -808,5 +825,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

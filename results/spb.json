@@ -35,29 +35,29 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-02T01:12:38.634Z",
-    "run": "1793581594947",
+    "at": "2026-11-03T03:12:36.137Z",
+    "run": "1793675391443",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 35,
+      "accessibility": 81,
+      "best_practices": 73,
+      "seo": 69
     },
     "axe": {
       "critical": 2,
-      "serious": 2,
+      "serious": 1,
       "moderate": 7,
       "minor": 1
     },
     "crawl": {
       "pages": 30,
       "pdfs": 20,
-      "broken": 7
+      "broken": 1
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "Apache",
       "jquery": "3.7.1"
     },
     "checks": [
@@ -67,16 +67,15 @@
       },
       {
         "id": "avail.connect",
-        "r": "fail",
-        "ev": "timeout"
+        "r": "pass"
       },
       {
         "id": "avail.status",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -96,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "na"
+        "r": "warn",
+        "ev": "5025ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -108,7 +108,7 @@
       },
       {
         "id": "sec.https",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
@@ -116,15 +116,15 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.hsts",
@@ -132,7 +132,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "fail",
+        "ev": "href=\"http://spb.kerala.gov.in\""
       },
       {
         "id": "sec.csp",
@@ -175,7 +176,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "2 serious violation(s)"
+        "ev": "1 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -217,25 +218,26 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "81/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "35/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "37962.886499999986ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "13.2MB"
+        "ev": "18.4MB"
       },
       {
         "id": "perf.viewport",
@@ -281,18 +283,17 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "6/30 crawled link(s) broken (https://spb.kerala.gov.in/4341/, https://spb.kerala.gov.in/6857/, https://spb.kerala.gov.in/6660/, ...)"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (http://www.planspace.kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
-        "r": "fail",
-        "ev": "1 linked PDF(s) 404: http://spb.kerala.gov.in/wp-content/uploads/2026/07/ra2_20260724_135355.pdf"
+        "r": "pass"
       },
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "1 broken image(s)"
+        "ev": "2 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -313,7 +314,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "9 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+        "ev": "30 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
       },
       {
         "id": "gigw.contact",
@@ -389,19 +390,19 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.robots",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.soft_404",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
@@ -477,17 +478,25 @@
       }
     ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 45,
+    "security": 32,
+    "accessibility": 40,
+    "content": 34,
+    "gigw": 32,
+    "performance": 66,
+    "identity": 100
+  },
+  "status": "poor",
   "issues": [
-    {
-      "id": "avail.connect",
-      "sev": "C",
-      "ev": "timeout"
-    },
     {
       "id": "sec.http_redirect",
       "sev": "H"
+    },
+    {
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://spb.kerala.gov.in\""
     },
     {
       "id": "sec.vuln_js",
@@ -512,12 +521,17 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "6/30 crawled link(s) broken (https://spb.kerala.gov.in/4341/, https://spb.kerala.gov.in/6857/, https://spb.kerala.gov.in/6660/, ...)"
+      "ev": "1/30 crawled link(s) broken (http://www.planspace.kerala.gov.in/)"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "5025ms"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "2 serious violation(s)"
+      "ev": "1 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -528,11 +542,6 @@
       "id": "a11y.labels",
       "sev": "M",
       "ev": "1 form control(s) without a label"
-    },
-    {
-      "id": "content.broken_pdfs",
-      "sev": "M",
-      "ev": "1 linked PDF(s) 404: http://spb.kerala.gov.in/wp-content/uploads/2026/07/ra2_20260724_135355.pdf"
     },
     {
       "id": "gigw.sitemap",
@@ -551,9 +560,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "37962.886499999986ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "13.2MB"
+      "ev": "18.4MB"
     },
     {
       "id": "perf.tap_targets",
@@ -585,7 +599,7 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "1 broken image(s)"
+      "ev": "2 broken image(s)"
     },
     {
       "id": "content.meta_desc",
@@ -598,7 +612,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "9 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      "ev": "30 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
     },
     {
       "id": "gigw.feedback",
@@ -636,8 +650,8 @@
   "history": [
     {
       "d": "2026-11-03",
-      "up": false,
-      "score": null
+      "up": true,
+      "score": 45
     },
     {
       "d": "2026-11-02",
@@ -850,5 +864,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

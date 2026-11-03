@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-02T01:28:45.214Z",
-    "run": "1793582867228",
+    "at": "2026-11-03T03:26:36.354Z",
+    "run": "1793676317923",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 39,
+      "performance": 36,
       "accessibility": 81,
       "best_practices": 92,
       "seo": 69
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 14,
-      "broken": 0
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "39/100"
+        "ev": "36/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "19287.930999999997ms"
+        "ev": "18581.7805ms"
       },
       {
         "id": "perf.cls",
@@ -282,11 +282,13 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://www.kittsedu.org/profile)"
       },
       {
         "id": "content.broken_pdfs",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 linked PDF(s) 404: https://www.kittsedu.org/userfiles/tender-supply-office-stationery.pdf"
       },
       {
         "id": "content.broken_images",
@@ -455,10 +457,10 @@
     ]
   },
   "score": {
-    "overall": 48,
+    "overall": 45,
     "security": 46,
     "accessibility": 40,
-    "content": 42,
+    "content": 22,
     "gigw": 36,
     "performance": 71,
     "identity": 72
@@ -490,6 +492,11 @@
       "ev": "ml-container"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://www.kittsedu.org/profile)"
+    },
+    {
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "www.kittsedu.org"
@@ -519,6 +526,11 @@
       "ev": "<marquee"
     },
     {
+      "id": "content.broken_pdfs",
+      "sev": "M",
+      "ev": "1 linked PDF(s) 404: https://www.kittsedu.org/userfiles/tender-supply-office-stationery.pdf"
+    },
+    {
       "id": "gigw.sitemap",
       "sev": "M"
     },
@@ -537,7 +549,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "19287.930999999997ms"
+      "ev": "18581.7805ms"
     },
     {
       "id": "perf.weight",
@@ -624,7 +636,7 @@
     {
       "d": "2026-11-03",
       "up": true,
-      "score": 48
+      "score": 45
     },
     {
       "d": "2026-11-02",
@@ -837,5 +849,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

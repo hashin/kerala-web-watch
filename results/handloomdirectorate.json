@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-02T01:16:41.922Z",
-    "run": "1793581876020",
+    "at": "2026-11-03T03:14:54.761Z",
+    "run": "1793675616866",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 31,
-      "accessibility": 89,
+      "accessibility": 86,
       "best_practices": 73,
       "seo": 62
     },
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 7
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "7432ms"
+        "ev": "4363ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -216,7 +216,7 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "89/100"
+        "ev": "86/100"
       },
       {
         "id": "perf.lighthouse",
@@ -226,17 +226,17 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "23327.48899999999ms"
+        "ev": "28305.856499999994ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.74"
+        "ev": "0.73"
       },
       {
         "id": "perf.weight",
-        "r": "fail",
-        "ev": "9.1MB"
+        "r": "warn",
+        "ev": "5.9MB"
       },
       {
         "id": "perf.viewport",
@@ -282,8 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "7/30 crawled link(s) broken (https://handloom.kerala.gov.in/#, https://handloom.kerala.gov.in/handloom-industry/, https://handloom.kerala.gov.in/966-2/, ...)"
+        "r": "warn",
+        "ev": "2/30 crawled link(s) broken (https://handsum.kerala.gov.in/, https://dhtschemes.kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -312,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "13 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+        "ev": "8 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
       },
       {
         "id": "gigw.contact",
@@ -463,12 +463,12 @@
     ]
   },
   "score": {
-    "overall": 46,
+    "overall": 48,
     "security": 42,
     "accessibility": 44,
-    "content": 32,
+    "content": 42,
     "gigw": 18,
-    "performance": 72,
+    "performance": 77,
     "identity": 100
   },
   "status": "poor",
@@ -500,12 +500,12 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "7/30 crawled link(s) broken (https://handloom.kerala.gov.in/#, https://handloom.kerala.gov.in/handloom-industry/, https://handloom.kerala.gov.in/966-2/, ...)"
+      "ev": "2/30 crawled link(s) broken (https://handsum.kerala.gov.in/, https://dhtschemes.kerala.gov.in/)"
     },
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "7432ms"
+      "ev": "4363ms"
     },
     {
       "id": "sec.hsts",
@@ -549,12 +549,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "23327.48899999999ms"
+      "ev": "28305.856499999994ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "9.1MB"
+      "ev": "5.9MB"
     },
     {
       "id": "sec.xcto",
@@ -581,7 +581,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "13 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      "ev": "8 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
     },
     {
       "id": "gigw.feedback",
@@ -618,7 +618,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.74"
+      "ev": "0.73"
     },
     {
       "id": "perf.images",
@@ -633,7 +633,7 @@
     {
       "d": "2026-11-03",
       "up": true,
-      "score": 46
+      "score": 48
     },
     {
       "d": "2026-11-02",
@@ -846,5 +846,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

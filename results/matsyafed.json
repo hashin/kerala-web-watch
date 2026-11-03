@@ -35,13 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-02T01:15:30.604Z",
-    "run": "1793582088235",
+    "at": "2026-11-03T03:17:54.879Z",
+    "run": "1793675833836",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 48,
       "accessibility": 88,
-      "best_practices": 69,
+      "best_practices": 92,
       "seo": 100
     },
     "axe": {
@@ -132,7 +132,7 @@
       {
         "id": "sec.mixed_content",
         "r": "fail",
-        "ev": "href=\"http://matsyafed.in/components/com_layer_slider/base/static/layerslider/skins/numbers/skin.css\""
+        "ev": "href=\"http://webmail.matsyafed.in/\""
       },
       {
         "id": "sec.csp",
@@ -225,7 +225,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "15217.116000000002ms"
+        "ev": "19433.967499999995ms"
       },
       {
         "id": "perf.cls",
@@ -311,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "2 console error(s): Mixed Content: The page at 'https://www.matsyafed.in/' was loaded over HTTPS, but requested an insecure stylesheet 'http://matsyafed.in/components/com_layer_slider/base/static/layerslider/skins/numbers/skin.css'. This request has been blocked; the content must be served over HTTPS."
+        "ev": "1 console error(s): Cannot read properties of undefined (reading 'length')"
       },
       {
         "id": "gigw.contact",
@@ -475,7 +475,7 @@
     {
       "id": "sec.mixed_content",
       "sev": "H",
-      "ev": "href=\"http://matsyafed.in/components/com_layer_slider/base/static/layerslider/skins/numbers/skin.css\""
+      "ev": "href=\"http://webmail.matsyafed.in/\""
     },
     {
       "id": "sec.vuln_js",
@@ -536,7 +536,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "15217.116000000002ms"
+      "ev": "19433.967499999995ms"
     },
     {
       "id": "perf.weight",
@@ -569,7 +569,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "2 console error(s): Mixed Content: The page at 'https://www.matsyafed.in/' was loaded over HTTPS, but requested an insecure stylesheet 'http://matsyafed.in/components/com_layer_slider/base/static/layerslider/skins/numbers/skin.css'. This request has been blocked; the content must be served over HTTPS."
+      "ev": "1 console error(s): Cannot read properties of undefined (reading 'length')"
     },
     {
       "id": "gigw.feedback",
@@ -834,5 +834,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
