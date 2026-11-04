@@ -37,23 +37,23 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-03T03:14:57.216Z",
-    "run": "1793675655063",
+    "at": "2026-11-04T01:45:44.913Z",
+    "run": "1793756702663",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 58,
-      "accessibility": 69,
+      "accessibility": 64,
       "best_practices": 96,
       "seo": 91
     },
     "axe": {
-      "critical": 1,
+      "critical": 2,
       "serious": 8,
       "moderate": 11,
       "minor": 0
     },
     "crawl": {
-      "pages": 26,
+      "pages": 25,
       "pdfs": 6,
       "broken": 0
     },
@@ -122,7 +122,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "27 days left"
+        "ev": "26 days left"
       },
       {
         "id": "sec.tls_version",
@@ -171,7 +171,7 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "1 critical violation(s)"
+        "ev": "2 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
@@ -185,7 +185,8 @@
       },
       {
         "id": "a11y.lang",
-        "r": "pass"
+        "r": "fail",
+        "ev": "<html lang=\"en\"> vs. 110% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -216,7 +217,7 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "69/100"
+        "ev": "64/100"
       },
       {
         "id": "perf.lighthouse",
@@ -226,7 +227,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9008.327ms"
+        "ev": "8932.274000000001ms"
       },
       {
         "id": "perf.cls",
@@ -434,9 +435,9 @@
     ]
   },
   "score": {
-    "overall": 58,
+    "overall": 53,
     "security": 66,
-    "accessibility": 52,
+    "accessibility": 32,
     "content": 48,
     "gigw": 28,
     "performance": 86,
@@ -451,12 +452,17 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "27 days left"
+      "ev": "26 days left"
     },
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "1 critical violation(s)"
+      "ev": "2 critical violation(s)"
+    },
+    {
+      "id": "a11y.lang",
+      "sev": "H",
+      "ev": "<html lang=\"en\"> vs. 110% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -497,7 +503,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9008.327ms"
+      "ev": "8932.274000000001ms"
     },
     {
       "id": "sec.referrer",
@@ -586,6 +592,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-04",
+      "up": true,
+      "score": 53
+    },
     {
       "d": "2026-11-03",
       "up": true,
@@ -802,5 +813,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

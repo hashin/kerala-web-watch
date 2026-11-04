@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-29T01:27:47.269Z",
-    "run": "1793237226305",
+    "at": "2026-11-04T01:54:04.653Z",
+    "run": "1793757202645",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 49,
+      "performance": 55,
       "accessibility": 85,
       "best_practices": 100,
       "seo": 85
@@ -184,8 +184,7 @@
       },
       {
         "id": "a11y.lang",
-        "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 39% Malayalam content"
+        "r": "pass"
       },
       {
         "id": "a11y.alt",
@@ -222,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "49/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "14560.022999999994ms"
+        "ev": "13830.760999999999ms"
       },
       {
         "id": "perf.cls",
@@ -561,9 +560,9 @@
     ]
   },
   "score": {
-    "overall": 63,
+    "overall": 68,
     "security": 76,
-    "accessibility": 50,
+    "accessibility": 70,
     "content": 56,
     "gigw": 36,
     "performance": 76,
@@ -575,11 +574,6 @@
       "id": "sec.mixed_content",
       "sev": "H",
       "ev": "href=\"http://kalpettamunicipality.lsgkerala.gov.in/en\""
-    },
-    {
-      "id": "a11y.lang",
-      "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 39% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -620,7 +614,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "14560.022999999994ms"
+      "ev": "13830.760999999999ms"
     },
     {
       "id": "perf.weight",
@@ -685,6 +679,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-04",
+      "up": true,
+      "score": 68
+    },
     {
       "d": "2026-11-03",
       "up": true,
@@ -896,5 +895,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

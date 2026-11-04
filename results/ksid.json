@@ -37,25 +37,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-03T03:15:59.304Z",
-    "run": "1793675741922",
+    "at": "2026-11-04T01:52:09.479Z",
+    "run": "1793757087051",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 31,
+      "accessibility": 86,
+      "best_practices": 88,
+      "seo": 62
     },
     "axe": {
-      "critical": 0,
-      "serious": 1,
-      "moderate": 2,
+      "critical": 3,
+      "serious": 16,
+      "moderate": 1,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
+      "pages": 19,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -73,8 +73,7 @@
       },
       {
         "id": "avail.status",
-        "r": "fail",
-        "ev": "final response was 500"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
@@ -90,8 +89,7 @@
       },
       {
         "id": "avail.blank",
-        "r": "fail",
-        "ev": "40 visible characters"
+        "r": "pass"
       },
       {
         "id": "avail.under_construction",
@@ -99,7 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3287ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -135,7 +134,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "pass"
+        "r": "fail",
+        "ev": "href=\"http://facebook.com\""
       },
       {
         "id": "sec.csp",
@@ -143,7 +143,7 @@
       },
       {
         "id": "sec.xfo",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.xcto",
@@ -171,17 +171,18 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "pass"
+        "r": "fail",
+        "ev": "3 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "1 serious violation(s)"
+        "ev": "16 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "2 moderate/minor violation(s)"
+        "ev": "1 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -189,15 +190,18 @@
       },
       {
         "id": "a11y.alt",
-        "r": "pass"
+        "r": "fail",
+        "ev": "3 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "9 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
-        "r": "pass"
+        "r": "fail",
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -209,29 +213,33 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "pass"
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "86/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "31/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "18867.84799999999ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "1.00"
       },
       {
         "id": "perf.weight",
-        "r": "na"
+        "r": "warn",
+        "ev": "4.5MB"
       },
       {
         "id": "perf.viewport",
@@ -239,7 +247,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -247,7 +255,7 @@
       },
       {
         "id": "content.copyright_year",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "content.last_updated",
@@ -264,7 +272,8 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "pass"
+        "r": "fail",
+        "ev": "ml-IN"
       },
       {
         "id": "content.obsolete_tech",
@@ -276,7 +285,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/19 crawled link(s) broken (https://insurance.kerala.gov.in/insurance/?page_id=3489&lang=ml)"
       },
       {
         "id": "content.broken_pdfs",
@@ -284,12 +294,12 @@
       },
       {
         "id": "content.broken_images",
-        "r": "pass"
+        "r": "fail",
+        "ev": "4 broken image(s)"
       },
       {
         "id": "content.malayalam",
-        "r": "fail",
-        "ev": "Malayalam ratio 0.00, no language toggle found"
+        "r": "pass"
       },
       {
         "id": "content.title",
@@ -306,11 +316,11 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 500 ()"
+        "ev": "5 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.feedback",
@@ -358,7 +368,7 @@
       },
       {
         "id": "gigw.search",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.ownership",
@@ -382,7 +392,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.robots",
@@ -398,7 +408,7 @@
       },
       {
         "id": "id.canonical",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.charset_doctype",
@@ -416,22 +426,69 @@
     "screenshot": {
       "desktop": "ksid.webp",
       "mobile": "ksid-m.webp",
-      "phash": "7e7e380000000000"
+      "phash": "00fff900e0e0ffff"
     },
-    "outlinks": []
+    "outlinks": [
+      {
+        "host": "facebook.com",
+        "count": 2,
+        "texts": [
+          "ഫേസ്ബുക്ക്"
+        ]
+      },
+      {
+        "host": "twitter.com",
+        "count": 1,
+        "texts": [
+          "ട്വിറ്റർ"
+        ]
+      },
+      {
+        "host": "linkedin.com",
+        "count": 1,
+        "texts": [
+          "ലിങ്ക്ഡ്ഇൻ"
+        ]
+      },
+      {
+        "host": "youtube.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "instagram.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "cdit.org",
+        "count": 1,
+        "texts": [
+          "CDIT"
+        ]
+      }
+    ]
   },
-  "score": null,
-  "status": "broken",
+  "score": {
+    "overall": 49,
+    "security": 62,
+    "accessibility": 40,
+    "content": 34,
+    "gigw": 2,
+    "performance": 77,
+    "identity": 100
+  },
+  "status": "poor",
   "issues": [
     {
-      "id": "avail.status",
-      "sev": "C",
-      "ev": "final response was 500"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://facebook.com\""
     },
     {
-      "id": "avail.blank",
-      "sev": "C",
-      "ev": "40 visible characters"
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "3 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -439,30 +496,42 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "gigw.contact",
-      "sev": "H"
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-IN"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/19 crawled link(s) broken (https://insurance.kerala.gov.in/insurance/?page_id=3489&lang=ml)"
     },
     {
       "id": "gigw.rti",
       "sev": "H"
     },
     {
-      "id": "sec.hsts",
-      "sev": "M"
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3287ms"
     },
     {
-      "id": "sec.xfo",
+      "id": "sec.hsts",
       "sev": "M"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "1 serious violation(s)"
+      "ev": "16 serious violation(s)"
     },
     {
-      "id": "content.malayalam",
+      "id": "a11y.alt",
       "sev": "M",
-      "ev": "Malayalam ratio 0.00, no language toggle found"
+      "ev": "3 image(s) missing alt text"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "9 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -485,8 +554,14 @@
       "sev": "M"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "18867.84799999999ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "4.5MB"
     },
     {
       "id": "sec.xcto",
@@ -499,7 +574,22 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "2 moderate/minor violation(s)"
+      "ev": "1 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
+    },
+    {
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
+    },
+    {
+      "id": "content.broken_images",
+      "sev": "L",
+      "ev": "4 broken image(s)"
     },
     {
       "id": "content.meta_desc",
@@ -512,7 +602,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 500 ()"
+      "ev": "5 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
@@ -543,27 +633,25 @@
       "sev": "L"
     },
     {
-      "id": "gigw.search",
-      "sev": "L"
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "1.00"
     },
     {
       "id": "perf.images",
       "sev": "L"
     },
     {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
       "id": "gigw.emblem",
-      "sev": "I"
-    },
-    {
-      "id": "id.canonical",
       "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-04",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-11-03",
       "up": false,
@@ -780,5 +868,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-03T03:26:18.872Z",
-    "run": "1793676333312",
+    "at": "2026-11-04T02:00:10.128Z",
+    "run": "1793757563575",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 70,
+      "performance": 82,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 92
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "WordPress 7.1.4",
@@ -223,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "70/100"
+        "ev": "82/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8820.429ms"
+        "ev": "4283.938ms"
       },
       {
         "id": "perf.cls",
@@ -282,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://www.gptcmdy.ac.in/departments/civil-engineering/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -497,15 +498,15 @@
     ]
   },
   "score": {
-    "overall": 51,
+    "overall": 49,
     "security": 48,
     "accessibility": 50,
-    "content": 56,
+    "content": 46,
     "gigw": 0,
     "performance": 76,
     "identity": 100
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -526,6 +527,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-slider"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://www.gptcmdy.ac.in/departments/civil-engineering/)"
     },
     {
       "id": "gigw.contact",
@@ -572,7 +578,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8820.429ms"
+      "ev": "4283.938ms"
     },
     {
       "id": "perf.tap_targets",
@@ -648,6 +654,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-04",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-11-03",
       "up": true,
@@ -844,5 +855,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

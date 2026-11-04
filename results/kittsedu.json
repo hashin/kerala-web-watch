@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-03T03:26:36.354Z",
-    "run": "1793676317923",
+    "at": "2026-11-04T02:00:28.730Z",
+    "run": "1793757571795",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 36,
+      "performance": 43,
       "accessibility": 81,
       "best_practices": 92,
       "seo": 69
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 14,
-      "broken": 2
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "36/100"
+        "ev": "43/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "18581.7805ms"
+        "ev": "16345.22ms"
       },
       {
         "id": "perf.cls",
@@ -282,13 +282,11 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://www.kittsedu.org/profile)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
-        "r": "fail",
-        "ev": "1 linked PDF(s) 404: https://www.kittsedu.org/userfiles/tender-supply-office-stationery.pdf"
+        "r": "pass"
       },
       {
         "id": "content.broken_images",
@@ -457,10 +455,10 @@
     ]
   },
   "score": {
-    "overall": 45,
+    "overall": 48,
     "security": 46,
     "accessibility": 40,
-    "content": 22,
+    "content": 42,
     "gigw": 36,
     "performance": 71,
     "identity": 72
@@ -492,11 +490,6 @@
       "ev": "ml-container"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://www.kittsedu.org/profile)"
-    },
-    {
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "www.kittsedu.org"
@@ -526,11 +519,6 @@
       "ev": "<marquee"
     },
     {
-      "id": "content.broken_pdfs",
-      "sev": "M",
-      "ev": "1 linked PDF(s) 404: https://www.kittsedu.org/userfiles/tender-supply-office-stationery.pdf"
-    },
-    {
       "id": "gigw.sitemap",
       "sev": "M"
     },
@@ -549,7 +537,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "18581.7805ms"
+      "ev": "16345.22ms"
     },
     {
       "id": "perf.weight",
@@ -633,6 +621,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-04",
+      "up": true,
+      "score": 48
+    },
     {
       "d": "2026-11-03",
       "up": true,
@@ -849,5 +842,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

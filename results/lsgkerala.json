@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-03T03:09:36.914Z",
-    "run": "1793675311930",
+    "at": "2026-11-04T01:42:42.967Z",
+    "run": "1793756509245",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 66,
+      "performance": 52,
       "accessibility": 77,
       "best_practices": 92,
       "seo": 92
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "5544ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -222,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "66/100"
+        "ev": "52/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "12453.996000000001ms"
+        "ev": "12429.434000000003ms"
       },
       {
         "id": "perf.cls",
@@ -418,7 +417,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-Q595STPSXP&amp;cx=c&amp;gtm=4e6b20h2, https://www.googletagmanager.com/gtag/js?id=UA-12419584-1"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-Q595STPSXP&amp;cx=c&amp;gtm=4e6b21, https://www.googletagmanager.com/gtag/js?id=UA-12419584-1"
       }
     ],
     "screenshot": {
@@ -518,11 +517,6 @@
       "ev": "ml-lsgd"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "5544ms"
-    },
-    {
       "id": "a11y.axe_serious",
       "sev": "M",
       "ev": "48 serious violation(s)"
@@ -560,7 +554,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "12453.996000000001ms"
+      "ev": "12429.434000000003ms"
     },
     {
       "id": "id.tech",
@@ -639,10 +633,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-Q595STPSXP&amp;cx=c&amp;gtm=4e6b20h2, https://www.googletagmanager.com/gtag/js?id=UA-12419584-1"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-Q595STPSXP&amp;cx=c&amp;gtm=4e6b21, https://www.googletagmanager.com/gtag/js?id=UA-12419584-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-04",
+      "up": true,
+      "score": 54
+    },
     {
       "d": "2026-11-03",
       "up": true,
@@ -864,5 +863,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-03T03:32:00.675Z",
-    "run": "1793676674245",
+    "at": "2026-11-04T02:04:35.250Z",
+    "run": "1793757826149",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 65,
+      "performance": 66,
       "accessibility": 78,
       "best_practices": 96,
       "seo": 69
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3421ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -221,7 +222,7 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "65/100"
+        "ev": "66/100"
       },
       {
         "id": "perf.lcp",
@@ -230,7 +231,7 @@
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.39"
+        "ev": "0.40"
       },
       {
         "id": "perf.weight",
@@ -383,7 +384,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "49 days left"
+        "ev": "48 days left"
       },
       {
         "id": "id.www_consistency",
@@ -421,7 +422,7 @@
     "screenshot": {
       "desktop": "keralalandbank.webp",
       "mobile": "keralalandbank-m.webp",
-      "phash": "4eff330307df8707"
+      "phash": "fffffe000001ffdf"
     },
     "outlinks": [
       {
@@ -511,7 +512,12 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "49 days left"
+      "ev": "48 days left"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3421ms"
     },
     {
       "id": "sec.hsts",
@@ -619,7 +625,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.39"
+      "ev": "0.40"
     },
     {
       "id": "perf.images",
@@ -631,6 +637,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-04",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-11-03",
       "up": true,
@@ -852,5 +863,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

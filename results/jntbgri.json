@@ -35,15 +35,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-03T03:27:14.989Z",
-    "run": "1793676391690",
+    "at": "2026-11-04T01:56:33.963Z",
+    "run": "1793757352341",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 34,
-      "accessibility": 86,
-      "best_practices": 88,
-      "seo": 77
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 0,
       "serious": 11,
@@ -53,7 +48,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 26
     },
     "tech": {
       "cms": "WordPress 6.9.10",
@@ -213,22 +208,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "86/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "34/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "24670.36099999999ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -241,11 +233,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -279,7 +271,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "26/30 crawled link(s) broken (https://jntbgri.res.in/about-jntbgri/, https://jntbgri.res.in/director-message/, https://jntbgri.res.in/previous-directors/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -415,7 +408,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-6YPTV5TC0F&amp;cx=c&amp;gtm=4e6b20h2, https://www.googletagmanager.com/gtag/js?id=G-X0BSV06SMK&amp;cx=c&amp;gtm=4e6au1h1, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2&amp;cx=c&amp;gtm=4e6au1h1, https://www.googletagmanager.com/gtm.js?id=GTM-KWK3DSF, https://www.googletagmanager.com/gtag/js?id&amp;ver=6.9.10, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2"
+        "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-6YPTV5TC0F&amp;cx=c&amp;gtm=4e6b21h1, https://www.googletagmanager.com/gtag/js?id=G-X0BSV06SMK&amp;cx=c&amp;gtm=4e6b30h2, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2&amp;cx=c&amp;gtm=4e6b30h2, https://www.googletagmanager.com/gtm.js?id=GTM-KWK3DSF, https://www.googletagmanager.com/gtag/js?id&amp;ver=6.9.10, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2"
       }
     ],
     "screenshot": {
@@ -502,12 +495,12 @@
     ]
   },
   "score": {
-    "overall": 56,
+    "overall": 55,
     "security": 48,
     "accessibility": 70,
-    "content": 48,
+    "content": 28,
     "gigw": 12,
-    "performance": 71,
+    "performance": 95,
     "identity": 100
   },
   "status": "needs-work",
@@ -526,6 +519,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-element"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "26/30 crawled link(s) broken (https://jntbgri.res.in/about-jntbgri/, https://jntbgri.res.in/director-message/, https://jntbgri.res.in/previous-directors/, ...)"
     },
     {
       "id": "gigw.rti",
@@ -566,18 +564,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "24670.36099999999ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "6.9MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -649,20 +638,21 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "gigw.emblem",
       "sev": "I"
     },
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-6YPTV5TC0F&amp;cx=c&amp;gtm=4e6b20h2, https://www.googletagmanager.com/gtag/js?id=G-X0BSV06SMK&amp;cx=c&amp;gtm=4e6au1h1, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2&amp;cx=c&amp;gtm=4e6au1h1, https://www.googletagmanager.com/gtm.js?id=GTM-KWK3DSF, https://www.googletagmanager.com/gtag/js?id&amp;ver=6.9.10, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2"
+      "ev": "https://www.google-analytics.com/analytics.js, https://www.googletagmanager.com/gtag/js?id=G-6YPTV5TC0F&amp;cx=c&amp;gtm=4e6b21h1, https://www.googletagmanager.com/gtag/js?id=G-X0BSV06SMK&amp;cx=c&amp;gtm=4e6b30h2, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2&amp;cx=c&amp;gtm=4e6b30h2, https://www.googletagmanager.com/gtm.js?id=GTM-KWK3DSF, https://www.googletagmanager.com/gtag/js?id&amp;ver=6.9.10, https://www.googletagmanager.com/gtag/js?id=UA-124894103-2"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-04",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-11-03",
       "up": true,
@@ -879,5 +869,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

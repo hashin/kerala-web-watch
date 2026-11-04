@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-03T03:06:58.885Z",
-    "run": "1793675126408",
+    "at": "2026-11-04T01:40:11.114Z",
+    "run": "1793756353238",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 23,
+      "performance": 34,
       "accessibility": 98,
       "best_practices": 69,
       "seo": 83
@@ -57,26 +57,26 @@
     },
     "tech": {
       "cms": "Drupal 8",
-      "server": "Apache",
+      "server": null,
       "jquery": null
     },
     "checks": [
       {
         "id": "avail.dns",
-        "r": "pass"
+        "r": "fail",
+        "ev": "keralapsc.gov.in did not resolve"
       },
       {
         "id": "avail.connect",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.status",
-        "r": "fail",
-        "ev": "final response was 403"
+        "r": "na"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.parked",
@@ -96,7 +96,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.geo_blocked",
@@ -108,23 +108,23 @@
       },
       {
         "id": "sec.https",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.http_redirect",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.cert_valid",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.tls_version",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.hsts",
@@ -132,8 +132,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://www.keralapsc.gov.in/home-2\""
+        "r": "na"
       },
       {
         "id": "sec.csp",
@@ -219,17 +218,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "23/100"
+        "ev": "34/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "13451.294999999996ms"
+        "ev": "8761.192000000001ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.61"
+        "ev": "0.64"
       },
       {
         "id": "perf.weight",
@@ -286,7 +285,7 @@
       {
         "id": "content.broken_pdfs",
         "r": "fail",
-        "ev": "6 linked PDF(s) 404: https://www.keralapsc.gov.in/sites/default/files/inline-files/authorised-signatory-1.pdf, https://www.keralapsc.gov.in/sites/default/files/inline-files/inter-812-895-25.pdf, https://www.keralapsc.gov.in/sites/default/files/inline-files/scrolling-date%20change.pdf, https://www.keralapsc.gov.in/sites/default/files/inline-files/FORM%20OF%20MEDICAL%20CERTIFICATE%20-WOMAN%20%20CIVIL%20EXCISE%20OFFICER%20%28TRAINEE%29.pdf, https://www.keralapsc.gov.in/sites/default/files/inline-files/FORM%20OF%20MEDICAL%20CERTIFICATE%20-%20CIVIL%20EXCISE%20OFFICER%20%28TRAINEE%29_0.pdf, https://www.keralapsc.gov.in/sites/default/files/inline-files/ariyippu-97-26.pdf"
+        "ev": "6 linked PDF(s) 404: https://www.keralapsc.gov.in/index.php/sites/default/files/inline-files/authorised-signatory-1.pdf, https://www.keralapsc.gov.in/sites/default/files/inline-files/inter-812-895-25.pdf, https://www.keralapsc.gov.in/sites/default/files/inline-files/scrolling-date%20change.pdf, https://www.keralapsc.gov.in/sites/default/files/inline-files/FORM%20OF%20MEDICAL%20CERTIFICATE%20-WOMAN%20%20CIVIL%20EXCISE%20OFFICER%20%28TRAINEE%29.pdf, https://www.keralapsc.gov.in/sites/default/files/inline-files/FORM%20OF%20MEDICAL%20CERTIFICATE%20-%20CIVIL%20EXCISE%20OFFICER%20%28TRAINEE%29_0.pdf, https://www.keralapsc.gov.in/sites/default/files/inline-files/ariyippu-97-26.pdf"
       },
       {
         "id": "content.broken_images",
@@ -388,17 +387,15 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "id.robots",
-        "r": "fail",
-        "ev": "robots.txt returned 403"
+        "r": "na"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 403"
+        "r": "na"
       },
       {
         "id": "id.soft_404",
@@ -463,14 +460,9 @@
   "status": "down",
   "issues": [
     {
-      "id": "avail.status",
+      "id": "avail.dns",
       "sev": "C",
-      "ev": "final response was 403"
-    },
-    {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://www.keralapsc.gov.in/home-2\""
+      "ev": "keralapsc.gov.in did not resolve"
     },
     {
       "id": "sec.vuln_js",
@@ -508,7 +500,7 @@
     {
       "id": "content.broken_pdfs",
       "sev": "M",
-      "ev": "6 linked PDF(s) 404: https://www.keralapsc.gov.in/sites/default/files/inline-files/authorised-signatory-1.pdf, https://www.keralapsc.gov.in/sites/default/files/inline-files/inter-812-895-25.pdf, https://www.keralapsc.gov.in/sites/default/files/inline-files/scrolling-date%20change.pdf, https://www.keralapsc.gov.in/sites/default/files/inline-files/FORM%20OF%20MEDICAL%20CERTIFICATE%20-WOMAN%20%20CIVIL%20EXCISE%20OFFICER%20%28TRAINEE%29.pdf, https://www.keralapsc.gov.in/sites/default/files/inline-files/FORM%20OF%20MEDICAL%20CERTIFICATE%20-%20CIVIL%20EXCISE%20OFFICER%20%28TRAINEE%29_0.pdf, https://www.keralapsc.gov.in/sites/default/files/inline-files/ariyippu-97-26.pdf"
+      "ev": "6 linked PDF(s) 404: https://www.keralapsc.gov.in/index.php/sites/default/files/inline-files/authorised-signatory-1.pdf, https://www.keralapsc.gov.in/sites/default/files/inline-files/inter-812-895-25.pdf, https://www.keralapsc.gov.in/sites/default/files/inline-files/scrolling-date%20change.pdf, https://www.keralapsc.gov.in/sites/default/files/inline-files/FORM%20OF%20MEDICAL%20CERTIFICATE%20-WOMAN%20%20CIVIL%20EXCISE%20OFFICER%20%28TRAINEE%29.pdf, https://www.keralapsc.gov.in/sites/default/files/inline-files/FORM%20OF%20MEDICAL%20CERTIFICATE%20-%20CIVIL%20EXCISE%20OFFICER%20%28TRAINEE%29_0.pdf, https://www.keralapsc.gov.in/sites/default/files/inline-files/ariyippu-97-26.pdf"
     },
     {
       "id": "gigw.ownership",
@@ -521,7 +513,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "13451.294999999996ms"
+      "ev": "8761.192000000001ms"
     },
     {
       "id": "perf.weight",
@@ -580,25 +572,11 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.61"
+      "ev": "0.64"
     },
     {
       "id": "perf.images",
       "sev": "L"
-    },
-    {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
-      "id": "id.robots",
-      "sev": "L",
-      "ev": "robots.txt returned 403"
-    },
-    {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 403"
     },
     {
       "id": "gigw.emblem",
@@ -611,6 +589,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-04",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-03",
       "up": false,
@@ -822,5 +805,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

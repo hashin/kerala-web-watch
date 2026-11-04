@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T23:39:22.504Z",
-    "run": "1792885114092",
+    "at": "2026-11-04T01:41:33.305Z",
+    "run": "1793756411115",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 52,
+      "performance": 43,
       "accessibility": 79,
       "best_practices": 88,
       "seo": 77
     },
     "axe": {
       "critical": 37,
-      "serious": 53,
+      "serious": 52,
       "moderate": 206,
       "minor": 1
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -174,7 +174,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "53 serious violation(s)"
+        "ev": "52 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -193,7 +193,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "15 low-contrast element(s)"
+        "ev": "14 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "52/100"
+        "ev": "43/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "28079.648999999998ms"
+        "ev": "25655.780249999993ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "26.9MB"
+        "ev": "54.6MB"
       },
       {
         "id": "perf.viewport",
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://entekeralam.kerala.gov.in/discussion)"
       },
       {
         "id": "content.broken_pdfs",
@@ -310,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "15 console error(s): Failed to load resource: the server responded with a status of 521 ()"
+        "ev": "9 console error(s): Failed to load resource: the server responded with a status of 521 ()"
       },
       {
         "id": "gigw.contact",
@@ -318,7 +319,7 @@
       },
       {
         "id": "gigw.feedback",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.sitemap",
@@ -420,7 +421,7 @@
     "screenshot": {
       "desktop": "ksum.webp",
       "mobile": "ksum-m.webp",
-      "phash": "ff38fe1e0c000647"
+      "phash": "ff30703838280001"
     },
     "outlinks": [
       {
@@ -548,11 +549,11 @@
     ]
   },
   "score": {
-    "overall": 59,
+    "overall": 57,
     "security": 64,
     "accessibility": 40,
-    "content": 52,
-    "gigw": 54,
+    "content": 42,
+    "gigw": 50,
     "performance": 76,
     "identity": 96
   },
@@ -574,6 +575,11 @@
       "ev": "ml-"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://entekeralam.kerala.gov.in/discussion)"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -584,7 +590,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "53 serious violation(s)"
+      "ev": "52 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -594,7 +600,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "15 low-contrast element(s)"
+      "ev": "14 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -611,12 +617,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "28079.648999999998ms"
+      "ev": "25655.780249999993ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "26.9MB"
+      "ev": "54.6MB"
     },
     {
       "id": "sec.csp",
@@ -657,7 +663,11 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "15 console error(s): Failed to load resource: the server responded with a status of 521 ()"
+      "ev": "9 console error(s): Failed to load resource: the server responded with a status of 521 ()"
+    },
+    {
+      "id": "gigw.feedback",
+      "sev": "L"
     },
     {
       "id": "gigw.copyright_policy",
@@ -689,6 +699,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-04",
+      "up": true,
+      "score": 57
+    },
     {
       "d": "2026-11-03",
       "up": true,
@@ -900,5 +915,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

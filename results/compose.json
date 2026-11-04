@@ -38,8 +38,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-03T03:22:20.799Z",
-    "run": "1793676098303",
+    "at": "2026-11-04T01:58:12.422Z",
+    "run": "1793757452504",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 27,
@@ -60,7 +60,7 @@
     },
     "tech": {
       "cms": null,
-      "server": "Apache",
+      "server": "Apache/2.4.27 (Unix) OpenSSL/1.0.2k-fips mod_jk/1.2.44",
       "jquery": "1.9.1"
     },
     "checks": [
@@ -155,8 +155,7 @@
       },
       {
         "id": "sec.server_banner",
-        "r": "fail",
-        "ev": "Apache/2.4.27 (Unix) OpenSSL/1.0.2k-fips mod_jk/1.2.44"
+        "r": "pass"
       },
       {
         "id": "sec.vuln_js",
@@ -230,7 +229,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "18405.584ms"
+        "ev": "9264.45ms"
       },
       {
         "id": "perf.cls",
@@ -491,8 +490,8 @@
     ]
   },
   "score": {
-    "overall": 47,
-    "security": 52,
+    "overall": 48,
+    "security": 56,
     "accessibility": 42,
     "content": 32,
     "gigw": 16,
@@ -574,7 +573,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "18405.584ms"
+      "ev": "9264.45ms"
     },
     {
       "id": "perf.tap_targets",
@@ -583,11 +582,6 @@
     {
       "id": "sec.referrer",
       "sev": "L"
-    },
-    {
-      "id": "sec.server_banner",
-      "sev": "L",
-      "ev": "Apache/2.4.27 (Unix) OpenSSL/1.0.2k-fips mod_jk/1.2.44"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -661,6 +655,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-04",
+      "up": true,
+      "score": 48
+    },
     {
       "d": "2026-11-03",
       "up": true,
@@ -872,5 +871,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
