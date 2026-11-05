@@ -37,24 +37,24 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-01T00:26:47.713Z",
-    "run": "1793492733894",
+    "at": "2026-11-05T01:50:22.284Z",
+    "run": "1793843344420",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 52,
-      "accessibility": 82,
+      "performance": 53,
+      "accessibility": 78,
       "best_practices": 85,
       "seo": 82
     },
     "axe": {
       "critical": 6,
       "serious": 33,
-      "moderate": 13,
+      "moderate": 14,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 16,
+      "pdfs": 17,
       "broken": 0
     },
     "tech": {
@@ -183,12 +183,12 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "13 moderate/minor violation(s)"
+        "ev": "14 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 48% Malayalam content"
+        "ev": "<html lang=\"en\"> vs. 53% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -220,17 +220,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "82/100"
+        "ev": "78/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "52/100"
+        "ev": "53/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "14815.479ms"
+        "ev": "12653.108ms"
       },
       {
         "id": "perf.cls",
@@ -246,7 +246,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -560,12 +560,12 @@
     ]
   },
   "score": {
-    "overall": 37,
+    "overall": 36,
     "security": 14,
     "accessibility": 22,
     "content": 28,
     "gigw": 40,
-    "performance": 86,
+    "performance": 76,
     "identity": 88
   },
   "status": "poor",
@@ -592,7 +592,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 48% Malayalam content"
+      "ev": "<html lang=\"en\"> vs. 53% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -652,7 +652,11 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "14815.479ms"
+      "ev": "12653.108ms"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -674,7 +678,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "13 moderate/minor violation(s)"
+      "ev": "14 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -742,6 +746,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-05",
+      "up": true,
+      "score": 36
+    },
     {
       "d": "2026-11-04",
       "up": true,
@@ -958,5 +967,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-04T01:56:36.118Z",
-    "run": "1793757294044",
+    "at": "2026-11-05T02:07:25.310Z",
+    "run": "1793844360046",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 52,
+      "performance": 33,
       "accessibility": 77,
       "best_practices": 96,
       "seo": 83
@@ -97,8 +97,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3875ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -220,21 +219,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "52/100"
+        "ev": "33/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "49411.28075ms"
+        "ev": "49099.907ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.69"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "2923.5MB"
+        "ev": "2246.0MB"
       },
       {
         "id": "perf.viewport",
@@ -454,12 +454,12 @@
     ]
   },
   "score": {
-    "overall": 79,
+    "overall": 78,
     "security": 96,
     "accessibility": 72,
     "content": 56,
     "gigw": 76,
-    "performance": 76,
+    "performance": 72,
     "identity": 92
   },
   "status": "needs-work",
@@ -468,11 +468,6 @@
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3875ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -505,12 +500,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "49411.28075ms"
+      "ev": "49099.907ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "2923.5MB"
+      "ev": "2246.0MB"
     },
     {
       "id": "sec.csp",
@@ -533,6 +528,11 @@
     {
       "id": "gigw.feedback",
       "sev": "L"
+    },
+    {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.69"
     },
     {
       "id": "perf.images",
@@ -558,6 +558,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-05",
+      "up": true,
+      "score": 78
+    },
     {
       "d": "2026-11-04",
       "up": true,
@@ -779,5 +784,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

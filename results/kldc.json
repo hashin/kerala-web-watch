@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-27T01:18:29.264Z",
-    "run": "1793063871623",
+    "at": "2026-11-05T02:08:03.638Z",
+    "run": "1793844451746",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 45,
+      "performance": 50,
       "accessibility": 66,
       "best_practices": 73,
       "seo": 92
@@ -220,22 +220,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "45/100"
+        "ev": "50/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "4878.723ms"
+        "ev": "5291.2564999999995ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.47"
+        "ev": "0.28"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "579.0MB"
+        "ev": "578.9MB"
       },
       {
         "id": "perf.viewport",
@@ -310,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "11 console error(s): Mixed Content: The page at 'https://kldc.org/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Montserrat:400,700'. This request has been blocked; the content must be served over HTTPS."
+        "ev": "10 console error(s): Mixed Content: The page at 'https://kldc.org/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Montserrat:400,700'. This request has been blocked; the content must be served over HTTPS."
       },
       {
         "id": "gigw.contact",
@@ -384,7 +384,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "34 days left"
+        "ev": "25 days left"
       },
       {
         "id": "id.www_consistency",
@@ -477,7 +477,7 @@
     "performance": 72,
     "identity": 56
   },
-  "status": "broken",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -512,7 +512,7 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "34 days left"
+      "ev": "25 days left"
     },
     {
       "id": "sec.hsts",
@@ -551,12 +551,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "4878.723ms"
+      "ev": "5291.2564999999995ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "579.0MB"
+      "ev": "578.9MB"
     },
     {
       "id": "sec.csp",
@@ -587,7 +587,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "11 console error(s): Mixed Content: The page at 'https://kldc.org/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Montserrat:400,700'. This request has been blocked; the content must be served over HTTPS."
+      "ev": "10 console error(s): Mixed Content: The page at 'https://kldc.org/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Montserrat:400,700'. This request has been blocked; the content must be served over HTTPS."
     },
     {
       "id": "gigw.feedback",
@@ -620,7 +620,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.47"
+      "ev": "0.28"
     },
     {
       "id": "perf.images",
@@ -641,6 +641,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-05",
+      "up": true,
+      "score": 45
+    },
     {
       "d": "2026-11-04",
       "up": false,
@@ -857,5 +862,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

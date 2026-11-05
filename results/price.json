@@ -37,25 +37,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-04T01:58:56.276Z",
-    "run": "1793757486817",
+    "at": "2026-11-05T01:58:22.929Z",
+    "run": "1793843890806",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 72,
-      "accessibility": 86,
-      "best_practices": 88,
-      "seo": 54
+      "performance": 100,
+      "accessibility": 94,
+      "best_practices": 96,
+      "seo": 90
     },
     "axe": {
       "critical": 0,
-      "serious": 38,
-      "moderate": 20,
+      "serious": 0,
+      "moderate": 2,
       "minor": 0
     },
     "crawl": {
-      "pages": 30,
+      "pages": 0,
       "pdfs": 0,
-      "broken": 10
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -89,7 +89,8 @@
       },
       {
         "id": "avail.blank",
-        "r": "pass"
+        "r": "fail",
+        "ev": "69 visible characters"
       },
       {
         "id": "avail.under_construction",
@@ -133,8 +134,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://irrigation.kerala.gov.in/\""
+        "r": "pass"
       },
       {
         "id": "sec.csp",
@@ -158,8 +158,7 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "fail",
-        "ev": "jquery.datatables 1.10.22"
+        "r": "pass"
       },
       {
         "id": "sec.safe_browsing",
@@ -175,13 +174,12 @@
       },
       {
         "id": "a11y.axe_serious",
-        "r": "fail",
-        "ev": "38 serious violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "20 moderate/minor violation(s)"
+        "ev": "2 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -193,13 +191,11 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "3 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
-        "r": "fail",
-        "ev": "heading levels skipped"
+        "r": "pass"
       },
       {
         "id": "a11y.labels",
@@ -211,23 +207,21 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "warn",
-        "ev": "tabindex=\"-1\" alongside outline:none"
+        "r": "pass"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "86/100"
+        "ev": "94/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "72/100"
+        "ev": "100/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "4770ms"
+        "r": "pass"
       },
       {
         "id": "perf.cls",
@@ -243,16 +237,15 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
-      },
-      {
-        "id": "perf.images",
         "r": "fail"
       },
       {
+        "id": "perf.images",
+        "r": "pass"
+      },
+      {
         "id": "content.copyright_year",
-        "r": "fail",
-        "ev": "copyright year 2022"
+        "r": "na"
       },
       {
         "id": "content.last_updated",
@@ -261,7 +254,7 @@
       },
       {
         "id": "content.stale_news",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "content.placeholder",
@@ -269,8 +262,7 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "fail",
-        "ev": "ml-"
+        "r": "pass"
       },
       {
         "id": "content.obsolete_tech",
@@ -282,8 +274,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "10/30 crawled link(s) broken (https://price2.kerala.gov.in/price2_ver1/about.html, https://price.kerala.gov.in/price_agri_id/about, https://price.kerala.gov.in/price_electrical/about, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -291,8 +282,7 @@
       },
       {
         "id": "content.broken_images",
-        "r": "fail",
-        "ev": "1 broken image(s)"
+        "r": "pass"
       },
       {
         "id": "content.malayalam",
@@ -304,20 +294,19 @@
       },
       {
         "id": "content.meta_desc",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.favicon",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "5 console error(s): Failed to load resource: the server responded with a status of 405 ()"
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.feedback",
@@ -329,11 +318,11 @@
       },
       {
         "id": "gigw.privacy",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.terms",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.copyright_policy",
@@ -345,7 +334,7 @@
       },
       {
         "id": "gigw.disclaimer",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.accessibility_statement",
@@ -357,7 +346,7 @@
       },
       {
         "id": "gigw.help",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.rti",
@@ -369,7 +358,7 @@
       },
       {
         "id": "gigw.ownership",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.last_updated",
@@ -423,100 +412,19 @@
       }
     ],
     "screenshot": {
-      "desktop": "2026-09-22.webp",
-      "mobile": "2026-09-22-m.webp",
-      "phash": "0000000000ffffff"
+      "desktop": "price.webp",
+      "mobile": "price-m.webp",
+      "phash": "00003c3c243c0000"
     },
-    "outlinks": [
-      {
-        "host": "google.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "apple.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "india.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "digitalindia.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "mygov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "keralaagriculture.gov.in",
-        "count": 1,
-        "texts": [
-          "Agriculture"
-        ]
-      },
-      {
-        "host": "kau.in",
-        "count": 1,
-        "texts": [
-          "KAU"
-        ]
-      },
-      {
-        "host": "keralasoils.gov.in",
-        "count": 1,
-        "texts": [
-          "Soil Conservation"
-        ]
-      },
-      {
-        "host": "cpwd.gov.in",
-        "count": 1,
-        "texts": [
-          "CPWD"
-        ]
-      },
-      {
-        "host": "kerala.nic.in",
-        "count": 1,
-        "texts": [
-          "NIC Kerala"
-        ]
-      },
-      {
-        "host": "kseb.in",
-        "count": 1,
-        "texts": [
-          "KSEB"
-        ]
-      }
-    ]
+    "outlinks": []
   },
-  "score": {
-    "overall": 58,
-    "security": 60,
-    "accessibility": 70,
-    "content": 22,
-    "gigw": 30,
-    "performance": 86,
-    "identity": 88
-  },
-  "status": "needs-work",
+  "score": null,
+  "status": "broken",
   "issues": [
     {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://irrigation.kerala.gov.in/\""
-    },
-    {
-      "id": "sec.vuln_js",
-      "sev": "H",
-      "ev": "jquery.datatables 1.10.22"
+      "id": "avail.blank",
+      "sev": "C",
+      "ev": "69 visible characters"
     },
     {
       "id": "content.last_updated",
@@ -524,36 +432,19 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "content.legacy_font",
-      "sev": "H",
-      "ev": "ml-"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "10/30 crawled link(s) broken (https://price2.kerala.gov.in/price2_ver1/about.html, https://price.kerala.gov.in/price_agri_id/about, https://price.kerala.gov.in/price_electrical/about, ...)"
+      "id": "gigw.contact",
+      "sev": "H"
     },
     {
       "id": "gigw.rti",
       "sev": "H"
     },
     {
-      "id": "a11y.axe_serious",
-      "sev": "M",
-      "ev": "38 serious violation(s)"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "3 low-contrast element(s)"
-    },
-    {
-      "id": "content.copyright_year",
-      "sev": "M",
-      "ev": "copyright year 2022"
-    },
-    {
       "id": "gigw.sitemap",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.privacy",
       "sev": "M"
     },
     {
@@ -561,41 +452,36 @@
       "sev": "M"
     },
     {
+      "id": "gigw.ownership",
+      "sev": "M"
+    },
+    {
       "id": "gigw.last_updated",
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "4770ms"
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "20 moderate/minor violation(s)"
+      "ev": "2 moderate/minor violation(s)"
     },
     {
-      "id": "a11y.headings",
-      "sev": "L",
-      "ev": "heading levels skipped"
+      "id": "content.meta_desc",
+      "sev": "L"
     },
     {
-      "id": "a11y.keyboard",
-      "sev": "L",
-      "ev": "tabindex=\"-1\" alongside outline:none"
-    },
-    {
-      "id": "content.broken_images",
-      "sev": "L",
-      "ev": "1 broken image(s)"
-    },
-    {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "5 console error(s): Failed to load resource: the server responded with a status of 405 ()"
+      "id": "content.favicon",
+      "sev": "L"
     },
     {
       "id": "gigw.feedback",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.terms",
       "sev": "L"
     },
     {
@@ -607,15 +493,19 @@
       "sev": "L"
     },
     {
+      "id": "gigw.disclaimer",
+      "sev": "L"
+    },
+    {
       "id": "gigw.screen_reader",
       "sev": "L"
     },
     {
-      "id": "gigw.search",
+      "id": "gigw.help",
       "sev": "L"
     },
     {
-      "id": "perf.images",
+      "id": "gigw.search",
       "sev": "L"
     },
     {
@@ -642,6 +532,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-05",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-04",
       "up": true,
@@ -863,5 +758,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

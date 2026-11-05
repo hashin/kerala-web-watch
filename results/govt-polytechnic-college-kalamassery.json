@@ -37,14 +37,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-03T03:26:22.749Z",
-    "run": "1793676345786",
+    "at": "2026-11-05T02:09:40.512Z",
+    "run": "1793844544079",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 66,
+      "accessibility": 71,
+      "best_practices": 96,
+      "seo": 91
+    },
     "axe": {
       "critical": 16,
       "serious": 13,
-      "moderate": 15,
+      "moderate": 14,
       "minor": 0
     },
     "crawl": {
@@ -177,7 +182,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "15 moderate/minor violation(s)"
+        "ev": "14 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -213,24 +218,28 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "71/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "66/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "4719.652ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.26"
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "5.1MB"
+        "r": "fail",
+        "ev": "11.0MB"
       },
       {
         "id": "perf.viewport",
@@ -238,11 +247,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -264,7 +273,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-user"
+        "ev": "ml-"
       },
       {
         "id": "content.obsolete_tech",
@@ -483,12 +492,12 @@
     ]
   },
   "score": {
-    "overall": 49,
+    "overall": 46,
     "security": 48,
     "accessibility": 40,
     "content": 60,
     "gigw": 0,
-    "performance": 95,
+    "performance": 62,
     "identity": 88
   },
   "status": "poor",
@@ -511,7 +520,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-user"
+      "ev": "ml-"
     },
     {
       "id": "gigw.rti",
@@ -561,9 +570,18 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "4719.652ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "5.1MB"
+      "ev": "11.0MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.xcto",
@@ -581,7 +599,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "15 moderate/minor violation(s)"
+      "ev": "14 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -626,6 +644,15 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.26"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -649,6 +676,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-05",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-11-04",
       "up": true,
@@ -845,5 +877,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

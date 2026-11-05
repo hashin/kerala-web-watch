@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-04T01:43:33.863Z",
-    "run": "1793756525732",
+    "at": "2026-11-05T01:45:58.266Z",
+    "run": "1793843066469",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 53,
+      "performance": 47,
       "accessibility": 75,
       "best_practices": 92,
       "seo": 73
@@ -48,12 +48,12 @@
       "critical": 2,
       "serious": 11,
       "moderate": 73,
-      "minor": 1
+      "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 6,
-      "broken": 4
+      "broken": 3
     },
     "tech": {
       "cms": null,
@@ -179,7 +179,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "74 moderate/minor violation(s)"
+        "ev": "73 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "53/100"
+        "ev": "47/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "26595.011000000002ms"
+        "ev": "18411.0785ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +233,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "12.2MB"
+        "ev": "24.2MB"
       },
       {
         "id": "perf.viewport",
@@ -267,7 +267,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-shape"
+        "ev": "ML-NILA"
       },
       {
         "id": "content.obsolete_tech",
@@ -279,8 +279,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://kerala.gov.in/achievementloadmore)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -311,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "6 console error(s): Connecting to 'https://www.youtube.com/s/player/4a1e575f/www-player.css' violates the following Content Security Policy directive: \"connect-src 'self' blob: data: *.userway.org kchat1.kerala.gov.in *.google-analytics.com\". The action has been blocked."
+        "ev": "6 console error(s): Connecting to 'https://www.youtube.com/s/player/a5c2aafe/www-player.css' violates the following Content Security Policy directive: \"connect-src 'self' blob: data: *.userway.org kchat1.kerala.gov.in *.google-analytics.com\". The action has been blocked."
       },
       {
         "id": "gigw.contact",
@@ -347,7 +346,7 @@
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.screen_reader",
@@ -514,8 +513,8 @@
     "overall": 61,
     "security": 80,
     "accessibility": 60,
-    "content": 22,
-    "gigw": 44,
+    "content": 32,
+    "gigw": 34,
     "performance": 66,
     "identity": 92
   },
@@ -539,12 +538,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-shape"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://kerala.gov.in/achievementloadmore)"
+      "ev": "ML-NILA"
     },
     {
       "id": "gigw.rti",
@@ -566,6 +560,10 @@
       "ev": "missing <title>"
     },
     {
+      "id": "gigw.accessibility_statement",
+      "sev": "M"
+    },
+    {
       "id": "gigw.ownership",
       "sev": "M"
     },
@@ -576,12 +574,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "26595.011000000002ms"
+      "ev": "18411.0785ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "12.2MB"
+      "ev": "24.2MB"
     },
     {
       "id": "perf.tap_targets",
@@ -590,7 +588,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "74 moderate/minor violation(s)"
+      "ev": "73 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -609,7 +607,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "6 console error(s): Connecting to 'https://www.youtube.com/s/player/4a1e575f/www-player.css' violates the following Content Security Policy directive: \"connect-src 'self' blob: data: *.userway.org kchat1.kerala.gov.in *.google-analytics.com\". The action has been blocked."
+      "ev": "6 console error(s): Connecting to 'https://www.youtube.com/s/player/a5c2aafe/www-player.css' violates the following Content Security Policy directive: \"connect-src 'self' blob: data: *.userway.org kchat1.kerala.gov.in *.google-analytics.com\". The action has been blocked."
     },
     {
       "id": "gigw.terms",
@@ -651,6 +649,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-05",
+      "up": true,
+      "score": 61
+    },
     {
       "d": "2026-11-04",
       "up": true,
@@ -872,5 +875,5 @@
       "score": 61
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

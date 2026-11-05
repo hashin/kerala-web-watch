@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-04T01:35:52.362Z",
-    "run": "1793756084132",
+    "at": "2026-11-05T01:43:38.260Z",
+    "run": "1793842948601",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 56,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 1,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -226,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10924.683999999997ms"
+        "ev": "11665.992000000002ms"
       },
       {
         "id": "perf.cls",
@@ -282,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://epos.kerala.gov.in/version_abstract)"
       },
       {
         "id": "content.broken_pdfs",
@@ -458,10 +459,10 @@
     ]
   },
   "score": {
-    "overall": 49,
+    "overall": 47,
     "security": 36,
     "accessibility": 52,
-    "content": 52,
+    "content": 42,
     "gigw": 26,
     "performance": 61,
     "identity": 88
@@ -491,6 +492,11 @@
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://epos.kerala.gov.in/version_abstract)"
     },
     {
       "id": "perf.viewport",
@@ -539,7 +545,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10924.683999999997ms"
+      "ev": "11665.992000000002ms"
     },
     {
       "id": "perf.weight",
@@ -628,6 +634,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-05",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-11-04",
       "up": true,
@@ -849,5 +860,5 @@
       "score": 49
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

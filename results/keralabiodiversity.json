@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-02T01:11:55.326Z",
-    "run": "1793581846909",
+    "at": "2026-11-05T01:59:09.350Z",
+    "run": "1793843863807",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 59,
+      "performance": 34,
       "accessibility": 83,
       "best_practices": 96,
       "seo": 75
@@ -221,21 +221,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "59/100"
+        "ev": "34/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6378.687ms"
+        "ev": "6799.1619999999975ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.69"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "10.9MB"
+        "ev": "21.1MB"
       },
       {
         "id": "perf.viewport",
@@ -260,7 +261,7 @@
       },
       {
         "id": "content.stale_news",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "content.placeholder",
@@ -510,12 +511,12 @@
     ]
   },
   "score": {
-    "overall": 56,
+    "overall": 55,
     "security": 80,
     "accessibility": 40,
     "content": 56,
     "gigw": 22,
-    "performance": 66,
+    "performance": 62,
     "identity": 72
   },
   "status": "needs-work",
@@ -583,12 +584,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6378.687ms"
+      "ev": "6799.1619999999975ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "10.9MB"
+      "ev": "21.1MB"
     },
     {
       "id": "perf.tap_targets",
@@ -642,6 +643,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.69"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -657,6 +663,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-05",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-11-04",
       "up": true,
@@ -883,5 +894,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

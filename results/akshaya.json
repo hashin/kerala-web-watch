@@ -29,13 +29,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-09-21T17:26:01.682Z",
-    "run": "1790011483989",
+    "at": "2026-11-05T01:42:31.003Z",
+    "run": "1793842888446",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 38,
+      "performance": 29,
       "accessibility": 74,
-      "best_practices": 54,
+      "best_practices": 35,
       "seo": 75
     },
     "axe": {
@@ -109,15 +109,15 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.tls_version",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.hsts",
@@ -157,6 +157,10 @@
       {
         "id": "sec.safe_browsing",
         "r": "na"
+      },
+      {
+        "id": "sec.injected_links",
+        "r": "pass"
       },
       {
         "id": "a11y.axe_critical",
@@ -212,12 +216,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "38/100"
+        "ev": "29/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "37670.08999999999ms"
+        "ev": "33040.21900000001ms"
       },
       {
         "id": "perf.cls",
@@ -227,7 +231,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "18.8MB"
+        "ev": "9.9MB"
       },
       {
         "id": "perf.viewport",
@@ -302,7 +306,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "14 console error(s): Mixed Content: The page at 'https://akshaya.kerala.gov.in/' was loaded over HTTPS, but requested an insecure frame 'http://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/akshayacsckerala/&width&height=258&colorscheme=light&show_faces=true&header=false&stream=false&show_border=false&appId=133982306765662'. This request has been blocked; the content must be served over HTTPS."
+        "ev": "13 console error(s): Mixed Content: The page at 'https://akshaya.kerala.gov.in/' was loaded over HTTPS, but requested an insecure frame 'http://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/akshayacsckerala/&width&height=258&colorscheme=light&show_faces=true&header=false&stream=false&show_border=false&appId=133982306765662'. This request has been blocked; the content must be served over HTTPS."
       },
       {
         "id": "gigw.contact",
@@ -518,12 +522,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "37670.08999999999ms"
+      "ev": "33040.21900000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "18.8MB"
+      "ev": "9.9MB"
     },
     {
       "id": "perf.tap_targets",
@@ -564,7 +568,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "14 console error(s): Mixed Content: The page at 'https://akshaya.kerala.gov.in/' was loaded over HTTPS, but requested an insecure frame 'http://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/akshayacsckerala/&width&height=258&colorscheme=light&show_faces=true&header=false&stream=false&show_border=false&appId=133982306765662'. This request has been blocked; the content must be served over HTTPS."
+      "ev": "13 console error(s): Mixed Content: The page at 'https://akshaya.kerala.gov.in/' was loaded over HTTPS, but requested an insecure frame 'http://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/akshayacsckerala/&width&height=258&colorscheme=light&show_faces=true&header=false&stream=false&show_border=false&appId=133982306765662'. This request has been blocked; the content must be served over HTTPS."
     },
     {
       "id": "gigw.terms",
@@ -614,6 +618,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-05",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-11-04",
       "up": true,
@@ -830,5 +839,5 @@
       "score": 49
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

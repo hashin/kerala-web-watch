@@ -35,13 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-04T02:04:24.232Z",
-    "run": "1793757822108",
+    "at": "2026-11-05T02:06:54.818Z",
+    "run": "1793844378190",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 53,
+      "accessibility": 86,
+      "best_practices": 96,
+      "seo": 85
+    },
     "axe": {
       "critical": 0,
-      "serious": 13,
+      "serious": 14,
       "moderate": 10,
       "minor": 0
     },
@@ -169,7 +174,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "13 serious violation(s)"
+        "ev": "14 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -187,7 +192,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "10 low-contrast element(s)"
+        "ev": "11 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -208,24 +213,28 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "86/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "53/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "12119.203ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.30"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "5.5MB"
+        "ev": "4.9MB"
       },
       {
         "id": "perf.viewport",
@@ -233,11 +242,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -411,7 +420,7 @@
     "screenshot": {
       "desktop": "govt-polytechnic-college-kaduthuruthy.webp",
       "mobile": "govt-polytechnic-college-kaduthuruthy-m.webp",
-      "phash": "ffff000f1f0fdcf0"
+      "phash": "ffff3f1f0b010380"
     },
     "outlinks": [
       {
@@ -488,12 +497,12 @@
     ]
   },
   "score": {
-    "overall": 59,
+    "overall": 56,
     "security": 44,
     "accessibility": 72,
     "content": 42,
     "gigw": 26,
-    "performance": 95,
+    "performance": 67,
     "identity": 100
   },
   "status": "needs-work",
@@ -529,12 +538,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "13 serious violation(s)"
+      "ev": "14 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "10 low-contrast element(s)"
+      "ev": "11 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -557,9 +566,18 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "12119.203ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "5.5MB"
+      "ev": "4.9MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -622,11 +640,25 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.30"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "gigw.emblem",
       "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-05",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-11-04",
       "up": true,
@@ -828,5 +860,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

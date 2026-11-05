@@ -37,10 +37,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T23:48:09.589Z",
-    "run": "1792885640614",
+    "at": "2026-11-05T01:58:06.288Z",
+    "run": "1793843825833",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 48,
+      "accessibility": 82,
+      "best_practices": 100,
+      "seo": 85
+    },
     "axe": {
       "critical": 0,
       "serious": 6,
@@ -49,7 +54,7 @@
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 0,
+      "pdfs": 1,
       "broken": 1
     },
     "tech": {
@@ -210,19 +215,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "82/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "48/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "66926.44600000004ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -235,11 +243,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -273,12 +281,12 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://pandalammunicipality.lsgkerala.gov.in/en/members)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 linked PDF(s) 404: https://pandalammunicipality.lsgkerala.gov.in/ml/sites/pandalammunicipality.lsgkerala.gov.in/files/2019-12/Master-plan-Pandalam.pdf"
       },
       {
         "id": "content.broken_images",
@@ -530,12 +538,12 @@
     ]
   },
   "score": {
-    "overall": 65,
+    "overall": 64,
     "security": 76,
     "accessibility": 70,
     "content": 46,
     "gigw": 20,
-    "performance": 90,
+    "performance": 76,
     "identity": 96
   },
   "status": "needs-work",
@@ -556,11 +564,6 @@
       "ev": "ml-user"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://pandalammunicipality.lsgkerala.gov.in/en/members)"
-    },
-    {
       "id": "gigw.rti",
       "sev": "H"
     },
@@ -573,6 +576,11 @@
       "id": "a11y.contrast",
       "sev": "M",
       "ev": "3 low-contrast element(s)"
+    },
+    {
+      "id": "content.broken_pdfs",
+      "sev": "M",
+      "ev": "1 linked PDF(s) 404: https://pandalammunicipality.lsgkerala.gov.in/ml/sites/pandalammunicipality.lsgkerala.gov.in/files/2019-12/Master-plan-Pandalam.pdf"
     },
     {
       "id": "gigw.sitemap",
@@ -589,6 +597,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "66926.44600000004ms"
     },
     {
       "id": "perf.weight",
@@ -639,12 +652,21 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-05",
+      "up": true,
+      "score": 64
+    },
     {
       "d": "2026-11-04",
       "up": true,
@@ -861,5 +883,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

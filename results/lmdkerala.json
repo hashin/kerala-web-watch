@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-04T02:06:39.331Z",
-    "run": "1793757944469",
+    "at": "2026-11-05T02:15:07.221Z",
+    "run": "1793844858579",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 38,
-      "accessibility": 76,
+      "performance": 31,
+      "accessibility": 84,
       "best_practices": 88,
       "seo": 69
     },
     "axe": {
       "critical": 9,
-      "serious": 29,
+      "serious": 28,
       "moderate": 4,
       "minor": 0
     },
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "4028ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -175,7 +174,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "29 serious violation(s)"
+        "ev": "28 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -194,7 +193,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "16 low-contrast element(s)"
+        "ev": "15 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -218,22 +217,22 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "76/100"
+        "ev": "84/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "38/100"
+        "ev": "31/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "19893.812999999987ms"
+        "ev": "10833.514999999998ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.35"
+        "ev": "1.10"
       },
       {
         "id": "perf.weight",
@@ -246,7 +245,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -445,12 +444,12 @@
     ]
   },
   "score": {
-    "overall": 54,
+    "overall": 55,
     "security": 76,
     "accessibility": 30,
     "content": 42,
     "gigw": 32,
-    "performance": 67,
+    "performance": 77,
     "identity": 100
   },
   "status": "needs-work",
@@ -476,14 +475,9 @@
       "ev": "ml-user"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "4028ms"
-    },
-    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "29 serious violation(s)"
+      "ev": "28 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -493,7 +487,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "16 low-contrast element(s)"
+      "ev": "15 low-contrast element(s)"
     },
     {
       "id": "a11y.labels",
@@ -524,16 +518,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "19893.812999999987ms"
+      "ev": "10833.514999999998ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
       "ev": "4.8MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
     },
     {
       "id": "sec.referrer",
@@ -594,7 +584,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.35"
+      "ev": "1.10"
     },
     {
       "id": "perf.images",
@@ -602,6 +592,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-05",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-11-04",
       "up": true,
@@ -823,5 +818,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
