@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-05T01:46:26.487Z",
-    "run": "1793842951005",
+    "at": "2026-11-06T01:50:17.497Z",
+    "run": "1793929557760",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 29,
+      "performance": 55,
       "accessibility": 81,
       "best_practices": 73,
       "seo": 62
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 3,
-      "broken": 0
+      "broken": 2
     },
     "tech": {
       "cms": "WordPress 5.0.31",
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "5887ms"
+        "ev": "6813ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -222,17 +222,16 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "29/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "17804.203ms"
+        "ev": "16770.144750000007ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.77"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -283,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "2/30 crawled link(s) broken (https://dhs.kerala.gov.in/en/advisories/, https://dhs.kerala.gov.in/en/%e0%b4%a1%e0%b5%86%e0%b4%af%e0%b4%bf%e0%b4%b2%e0%b4%bf-%e0%b4%ac%e0%b5%81%e0%b4%b3%e0%b5%8d%e0%b4%b3%e0%b4%b1%e0%b5%8d%e0%b4%b1%e0%b4%bf%e0%b4%a8%e0%b5%8d%e2%80%8d/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -311,8 +311,7 @@
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/ef321720/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
@@ -457,9 +456,9 @@
     "overall": 47,
     "security": 46,
     "accessibility": 44,
-    "content": 52,
+    "content": 46,
     "gigw": 12,
-    "performance": 62,
+    "performance": 66,
     "identity": 91
   },
   "status": "poor",
@@ -490,13 +489,18 @@
       "ev": "ml-IN"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "2/30 crawled link(s) broken (https://dhs.kerala.gov.in/en/advisories/, https://dhs.kerala.gov.in/en/%e0%b4%a1%e0%b5%86%e0%b4%af%e0%b4%bf%e0%b4%b2%e0%b4%bf-%e0%b4%ac%e0%b5%81%e0%b4%b3%e0%b5%8d%e0%b4%b3%e0%b4%b1%e0%b5%8d%e0%b4%b1%e0%b4%bf%e0%b4%a8%e0%b5%8d%e2%80%8d/)"
+    },
+    {
       "id": "gigw.contact",
       "sev": "H"
     },
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "5887ms"
+      "ev": "6813ms"
     },
     {
       "id": "sec.hsts",
@@ -536,7 +540,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "17804.203ms"
+      "ev": "16770.144750000007ms"
     },
     {
       "id": "perf.weight",
@@ -571,11 +575,6 @@
       "sev": "L"
     },
     {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/ef321720/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
-    },
-    {
       "id": "gigw.feedback",
       "sev": "L"
     },
@@ -604,11 +603,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.77"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -623,6 +617,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-06",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-11-05",
       "up": true,
@@ -849,5 +848,5 @@
       "score": 45
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

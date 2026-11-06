@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-27T01:07:48.095Z",
-    "run": "1793063226500",
+    "at": "2026-11-06T02:05:55.302Z",
+    "run": "1793930684465",
     "vantage": "gh-us",
     "lighthouse": null,
     "axe": {
@@ -227,7 +227,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "21.9MB"
+        "ev": "53.5MB"
       },
       {
         "id": "perf.viewport",
@@ -303,7 +303,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "23 console error(s): Failed to load resource: net::ERR_CERT_DATE_INVALID"
+        "ev": "30 console error(s): Cannot read properties of null (reading 'addEventListener')"
       },
       {
         "id": "gigw.contact",
@@ -573,7 +573,7 @@
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "21.9MB"
+      "ev": "53.5MB"
     },
     {
       "id": "sec.csp",
@@ -609,7 +609,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "23 console error(s): Failed to load resource: net::ERR_CERT_DATE_INVALID"
+      "ev": "30 console error(s): Cannot read properties of null (reading 'addEventListener')"
     },
     {
       "id": "gigw.feedback",
@@ -663,6 +663,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-06",
+      "up": true,
+      "score": 38
+    },
     {
       "d": "2026-11-05",
       "up": true,
@@ -884,5 +889,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

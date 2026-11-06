@@ -37,12 +37,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-05T02:12:34.221Z",
-    "run": "1793844723501",
+    "at": "2026-11-06T02:07:08.339Z",
+    "run": "1793930801487",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 35,
-      "accessibility": 94,
+      "performance": 33,
+      "accessibility": 91,
       "best_practices": 100,
       "seo": 92
     },
@@ -58,7 +58,7 @@
       "broken": 0
     },
     "tech": {
-      "cms": "WordPress 7.1.4",
+      "cms": null,
       "server": "Apache",
       "jquery": null
     },
@@ -113,7 +113,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
@@ -210,31 +210,33 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "pass"
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "94/100"
+        "ev": "91/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "35/100"
+        "ev": "33/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9628.106000000003ms"
+        "ev": "27629.67149999999ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.58"
+        "ev": "0.76"
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "fail",
+        "ev": "19.4MB"
       },
       {
         "id": "perf.viewport",
@@ -242,7 +244,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -396,8 +398,7 @@
       },
       {
         "id": "id.soft_404",
-        "r": "fail",
-        "ev": "a nonexistent path returned 200"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
@@ -409,8 +410,7 @@
       },
       {
         "id": "id.tech",
-        "r": "pass",
-        "ev": "WordPress 7.1.4"
+        "r": "pass"
       },
       {
         "id": "id.third_party",
@@ -420,7 +420,7 @@
     "screenshot": {
       "desktop": "keri.webp",
       "mobile": "keri-m.webp",
-      "phash": "ff00003f9fffffff"
+      "phash": "ff0000f1f0f0ffff"
     },
     "outlinks": [
       {
@@ -464,20 +464,16 @@
     ]
   },
   "score": {
-    "overall": 59,
-    "security": 60,
-    "accessibility": 72,
+    "overall": 62,
+    "security": 80,
+    "accessibility": 70,
     "content": 52,
     "gigw": 2,
-    "performance": 82,
-    "identity": 96
+    "performance": 62,
+    "identity": 100
   },
   "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.http_redirect",
-      "sev": "H"
-    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -530,7 +526,16 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9628.106000000003ms"
+      "ev": "27629.67149999999ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "19.4MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -541,6 +546,11 @@
       "id": "a11y.headings",
       "sev": "L",
       "ev": "heading levels skipped"
+    },
+    {
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
       "id": "content.meta_desc",
@@ -581,16 +591,11 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.58"
+      "ev": "0.76"
     },
     {
       "id": "perf.images",
       "sev": "L"
-    },
-    {
-      "id": "id.soft_404",
-      "sev": "L",
-      "ev": "a nonexistent path returned 200"
     },
     {
       "id": "gigw.emblem",
@@ -598,6 +603,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-06",
+      "up": true,
+      "score": 62
+    },
     {
       "d": "2026-11-05",
       "up": true,
@@ -819,5 +829,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

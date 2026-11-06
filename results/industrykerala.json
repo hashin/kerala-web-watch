@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-05T01:45:23.222Z",
-    "run": "1793843042263",
+    "at": "2026-11-06T01:48:25.437Z",
+    "run": "1793929626599",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 43,
+      "performance": 46,
       "accessibility": 84,
       "best_practices": 88,
       "seo": 73
@@ -120,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "fail",
-        "ev": "5 days left"
+        "ev": "4 days left"
       },
       {
         "id": "sec.tls_version",
@@ -220,17 +220,16 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "43/100"
+        "ev": "46/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "27269.915000000005ms"
+        "ev": "26486.0725ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.27"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -310,7 +309,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "7 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+        "ev": "8 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
@@ -520,7 +519,7 @@
     "accessibility": 56,
     "content": 78,
     "gigw": 68,
-    "performance": 72,
+    "performance": 76,
     "identity": 88
   },
   "status": "needs-work",
@@ -528,7 +527,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "5 days left"
+      "ev": "4 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -571,7 +570,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "27269.915000000005ms"
+      "ev": "26486.0725ms"
     },
     {
       "id": "perf.weight",
@@ -599,7 +598,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "7 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      "ev": "8 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
@@ -612,11 +611,6 @@
     {
       "id": "gigw.search",
       "sev": "L"
-    },
-    {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.27"
     },
     {
       "id": "perf.images",
@@ -646,6 +640,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-06",
+      "up": true,
+      "score": 61
+    },
     {
       "d": "2026-11-05",
       "up": true,
@@ -872,5 +871,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

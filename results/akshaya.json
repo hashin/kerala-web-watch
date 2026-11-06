@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-05T01:42:31.003Z",
-    "run": "1793842888446",
+    "at": "2026-11-06T01:44:56.680Z",
+    "run": "1793929445305",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 29,
+      "performance": 28,
       "accessibility": 74,
       "best_practices": 35,
       "seo": 75
@@ -115,15 +115,16 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "na"
+        "r": "fail",
+        "ev": "5 days left"
       },
       {
         "id": "sec.tls_version",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.hsts",
@@ -222,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "29/100"
+        "ev": "28/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "33040.21900000001ms"
+        "ev": "33910.7905ms"
       },
       {
         "id": "perf.cls",
@@ -237,7 +238,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "9.9MB"
+        "ev": "11.0MB"
       },
       {
         "id": "perf.viewport",
@@ -312,7 +313,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "13 console error(s): Mixed Content: The page at 'https://akshaya.kerala.gov.in/' was loaded over HTTPS, but requested an insecure frame 'http://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/akshayacsckerala/&width&height=258&colorscheme=light&show_faces=true&header=false&stream=false&show_border=false&appId=133982306765662'. This request has been blocked; the content must be served over HTTPS."
+        "ev": "14 console error(s): Mixed Content: The page at 'https://akshaya.kerala.gov.in/' was loaded over HTTPS, but requested an insecure frame 'http://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/akshayacsckerala/&width&height=258&colorscheme=light&show_faces=true&header=false&stream=false&show_border=false&appId=133982306765662'. This request has been blocked; the content must be served over HTTPS."
       },
       {
         "id": "gigw.contact",
@@ -456,8 +457,8 @@
     ]
   },
   "score": {
-    "overall": 49,
-    "security": 34,
+    "overall": 44,
+    "security": 14,
     "accessibility": 50,
     "content": 56,
     "gigw": 26,
@@ -466,6 +467,11 @@
   },
   "status": "poor",
   "issues": [
+    {
+      "id": "sec.cert_expiry",
+      "sev": "H",
+      "ev": "5 days left"
+    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -528,12 +534,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "33040.21900000001ms"
+      "ev": "33910.7905ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "9.9MB"
+      "ev": "11.0MB"
     },
     {
       "id": "perf.tap_targets",
@@ -574,7 +580,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "13 console error(s): Mixed Content: The page at 'https://akshaya.kerala.gov.in/' was loaded over HTTPS, but requested an insecure frame 'http://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/akshayacsckerala/&width&height=258&colorscheme=light&show_faces=true&header=false&stream=false&show_border=false&appId=133982306765662'. This request has been blocked; the content must be served over HTTPS."
+      "ev": "14 console error(s): Mixed Content: The page at 'https://akshaya.kerala.gov.in/' was loaded over HTTPS, but requested an insecure frame 'http://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/akshayacsckerala/&width&height=258&colorscheme=light&show_faces=true&header=false&stream=false&show_border=false&appId=133982306765662'. This request has been blocked; the content must be served over HTTPS."
     },
     {
       "id": "gigw.terms",
@@ -624,6 +630,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-06",
+      "up": true,
+      "score": 44
+    },
     {
       "d": "2026-11-05",
       "up": true,
@@ -845,5 +856,5 @@
       "score": 49
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

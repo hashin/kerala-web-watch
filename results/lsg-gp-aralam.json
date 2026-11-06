@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-03T03:31:33.624Z",
-    "run": "1793676653602",
+    "at": "2026-11-06T02:17:27.752Z",
+    "run": "1793931408600",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 59,
+      "accessibility": 89,
+      "best_practices": 78,
+      "seo": 92
+    },
     "axe": {
       "critical": 1,
       "serious": 16,
@@ -211,24 +216,27 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "89/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "10271.2645ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "8.5MB"
+        "ev": "8.6MB"
       },
       {
         "id": "perf.viewport",
@@ -236,11 +244,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -562,9 +570,18 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "10271.2645ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "8.5MB"
+      "ev": "8.6MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -618,6 +635,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
@@ -628,6 +649,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-06",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-05",
       "up": false,
@@ -849,5 +875,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

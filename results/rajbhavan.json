@@ -37,19 +37,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-03T03:07:58.589Z",
-    "run": "1793675235454",
+    "at": "2026-11-06T01:53:40.292Z",
+    "run": "1793929975532",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 38,
-      "accessibility": 65,
+      "performance": 54,
+      "accessibility": 78,
       "best_practices": 69,
       "seo": 83
     },
     "axe": {
       "critical": 2,
       "serious": 12,
-      "moderate": 10,
+      "moderate": 11,
       "minor": 0
     },
     "crawl": {
@@ -182,7 +182,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "10 moderate/minor violation(s)"
+        "ev": "11 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -217,22 +217,21 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "65/100"
+        "ev": "78/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "38/100"
+        "ev": "54/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10237.139000000003ms"
+        "ev": "13863.2275ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.40"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -419,13 +418,13 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-FH946TSYK5&amp;cx=c&amp;gtm=4e6b20h2, https://www.googletagmanager.com/gtag/js?id=UA-103783083-7"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-FH946TSYK5&amp;cx=c&amp;gtm=4e6b41, https://www.googletagmanager.com/gtag/js?id=UA-103783083-7"
       }
     ],
     "screenshot": {
       "desktop": "rajbhavan.webp",
       "mobile": "rajbhavan-m.webp",
-      "phash": "c381c383c3c73fff"
+      "phash": "c3c1ff87870337ff"
     },
     "outlinks": [
       {
@@ -497,7 +496,7 @@
     "accessibility": 52,
     "content": 52,
     "gigw": 30,
-    "performance": 82,
+    "performance": 86,
     "identity": 92
   },
   "status": "needs-work",
@@ -573,7 +572,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10237.139000000003ms"
+      "ev": "13863.2275ms"
     },
     {
       "id": "sec.csp",
@@ -590,7 +589,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "10 moderate/minor violation(s)"
+      "ev": "11 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -628,11 +627,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.40"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -652,10 +646,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-FH946TSYK5&amp;cx=c&amp;gtm=4e6b20h2, https://www.googletagmanager.com/gtag/js?id=UA-103783083-7"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-FH946TSYK5&amp;cx=c&amp;gtm=4e6b41, https://www.googletagmanager.com/gtag/js?id=UA-103783083-7"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-06",
+      "up": true,
+      "score": 50
+    },
     {
       "d": "2026-11-05",
       "up": true,
@@ -887,5 +886,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

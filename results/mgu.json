@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-05T01:52:44.275Z",
-    "run": "1793843497182",
+    "at": "2026-11-06T01:50:53.737Z",
+    "run": "1793929783520",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 75,
+      "performance": 71,
       "accessibility": 100,
       "best_practices": 92,
       "seo": 92
     },
     "axe": {
       "critical": 8,
-      "serious": 17,
-      "moderate": 57,
+      "serious": 18,
+      "moderate": 56,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 4,
-      "broken": 0
+      "pdfs": 5,
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -176,12 +176,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "17 serious violation(s)"
+        "ev": "18 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "57 moderate/minor violation(s)"
+        "ev": "56 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "75/100"
+        "ev": "71/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "4332.468ms"
+        "ev": "5193.030999999999ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "69.0MB"
+        "ev": "68.2MB"
       },
       {
         "id": "perf.viewport",
@@ -282,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://iqac.mgu.ac.in/ssr/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -417,7 +418,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-WJMEB38L75&amp;cx=c&amp;gtm=4e6b31, https://www.googletagmanager.com/gtag/js?id=UA-108617030-1"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-WJMEB38L75&amp;cx=c&amp;gtm=4e6b41, https://www.googletagmanager.com/gtag/js?id=UA-108617030-1"
       }
     ],
     "screenshot": {
@@ -499,10 +500,10 @@
     ]
   },
   "score": {
-    "overall": 51,
+    "overall": 50,
     "security": 32,
     "accessibility": 52,
-    "content": 38,
+    "content": 28,
     "gigw": 46,
     "performance": 76,
     "identity": 100
@@ -539,9 +540,14 @@
       "ev": "ml-"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://iqac.mgu.ac.in/ssr/)"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "17 serious violation(s)"
+      "ev": "18 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -568,12 +574,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "4332.468ms"
+      "ev": "5193.030999999999ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "69.0MB"
+      "ev": "68.2MB"
     },
     {
       "id": "sec.csp",
@@ -587,7 +593,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "57 moderate/minor violation(s)"
+      "ev": "56 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -643,10 +649,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-WJMEB38L75&amp;cx=c&amp;gtm=4e6b31, https://www.googletagmanager.com/gtag/js?id=UA-108617030-1"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-WJMEB38L75&amp;cx=c&amp;gtm=4e6b41, https://www.googletagmanager.com/gtag/js?id=UA-108617030-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-06",
+      "up": true,
+      "score": 50
+    },
     {
       "d": "2026-11-05",
       "up": true,
@@ -868,5 +879,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

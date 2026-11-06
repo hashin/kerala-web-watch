@@ -35,28 +35,23 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-05T02:04:25.155Z",
-    "run": "1793844191888",
+    "at": "2026-11-06T02:05:25.194Z",
+    "run": "1793930683580",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 33,
-      "accessibility": 88,
-      "best_practices": 69,
-      "seo": 62
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 0,
-      "serious": 13,
+      "serious": 12,
       "moderate": 1,
       "minor": 1
     },
     "crawl": {
       "pages": 30,
       "pdfs": 1,
-      "broken": 27
+      "broken": 0
     },
     "tech": {
-      "cms": "WordPress 7.1.4",
+      "cms": null,
       "server": "Apache",
       "jquery": null
     },
@@ -127,16 +122,16 @@
       },
       {
         "id": "sec.hsts",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.mixed_content",
         "r": "fail",
-        "ev": "src=\"http://www.hit-counts.com/counter.php?t=MTQ0OTU4Mw==\""
+        "ev": "href=\"http://facebook.com\""
       },
       {
         "id": "sec.csp",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.xfo",
@@ -173,7 +168,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "13 serious violation(s)"
+        "ev": "12 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -191,7 +186,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "8 low-contrast element(s)"
+        "ev": "7 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -213,28 +208,24 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "88/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "33/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "15939.639000000003ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.81"
+        "r": "na"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "6.3MB"
+        "ev": "3.2MB"
       },
       {
         "id": "perf.viewport",
@@ -242,11 +233,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -280,8 +271,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "27/30 crawled link(s) broken (https://groundwater.kerala.gov.in/2018/03/07/about-us/, https://groundwater.kerala.gov.in/2018/05/28/branches/, https://groundwater.kerala.gov.in/who-is-who/, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -310,7 +300,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "11 console error(s): Failed to load resource: net::ERR_CERT_COMMON_NAME_INVALID"
+        "ev": "3 console error(s): Failed to load resource: net::ERR_CERT_COMMON_NAME_INVALID"
       },
       {
         "id": "gigw.contact",
@@ -362,7 +352,7 @@
       },
       {
         "id": "gigw.search",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.ownership",
@@ -390,13 +380,11 @@
       },
       {
         "id": "id.robots",
-        "r": "fail",
-        "ev": "robots.txt returned 500"
+        "r": "pass"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 500"
+        "r": "pass"
       },
       {
         "id": "id.soft_404",
@@ -412,8 +400,7 @@
       },
       {
         "id": "id.tech",
-        "r": "pass",
-        "ev": "WordPress 7.1.4"
+        "r": "pass"
       },
       {
         "id": "id.third_party",
@@ -476,20 +463,20 @@
     ]
   },
   "score": {
-    "overall": 55,
-    "security": 48,
+    "overall": 63,
+    "security": 62,
     "accessibility": 70,
-    "content": 32,
-    "gigw": 22,
-    "performance": 77,
-    "identity": 92
+    "content": 52,
+    "gigw": 18,
+    "performance": 95,
+    "identity": 100
   },
   "status": "needs-work",
   "issues": [
     {
       "id": "sec.mixed_content",
       "sev": "H",
-      "ev": "src=\"http://www.hit-counts.com/counter.php?t=MTQ0OTU4Mw==\""
+      "ev": "href=\"http://facebook.com\""
     },
     {
       "id": "content.last_updated",
@@ -502,27 +489,18 @@
       "ev": "ml-IN"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "27/30 crawled link(s) broken (https://groundwater.kerala.gov.in/2018/03/07/about-us/, https://groundwater.kerala.gov.in/2018/05/28/branches/, https://groundwater.kerala.gov.in/who-is-who/, ...)"
-    },
-    {
-      "id": "sec.hsts",
-      "sev": "M"
-    },
-    {
       "id": "sec.xfo",
       "sev": "M"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "13 serious violation(s)"
+      "ev": "12 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "8 low-contrast element(s)"
+      "ev": "7 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -545,18 +523,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "15939.639000000003ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "6.3MB"
-    },
-    {
-      "id": "sec.csp",
-      "sev": "L"
+      "ev": "3.2MB"
     },
     {
       "id": "sec.xcto",
@@ -588,7 +557,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "11 console error(s): Failed to load resource: net::ERR_CERT_COMMON_NAME_INVALID"
+      "ev": "3 console error(s): Failed to load resource: net::ERR_CERT_COMMON_NAME_INVALID"
     },
     {
       "id": "gigw.feedback",
@@ -619,23 +588,8 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.81"
-    },
-    {
-      "id": "perf.images",
+      "id": "gigw.search",
       "sev": "L"
-    },
-    {
-      "id": "id.robots",
-      "sev": "L",
-      "ev": "robots.txt returned 500"
-    },
-    {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 500"
     },
     {
       "id": "gigw.emblem",
@@ -643,6 +597,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-06",
+      "up": true,
+      "score": 63
+    },
     {
       "d": "2026-11-05",
       "up": true,
@@ -864,5 +823,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

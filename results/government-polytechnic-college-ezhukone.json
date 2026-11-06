@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-05T02:02:30.708Z",
-    "run": "1793844144959",
+    "at": "2026-11-06T02:02:57.628Z",
+    "run": "1793930532881",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 0,
@@ -45,20 +45,20 @@
       "seo": 0
     },
     "axe": {
-      "critical": 1,
-      "serious": 0,
-      "moderate": 3,
+      "critical": 4,
+      "serious": 24,
+      "moderate": 24,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
-      "pdfs": 0,
-      "broken": 0
+      "pages": 30,
+      "pdfs": 6,
+      "broken": 36
     },
     "tech": {
       "cms": null,
-      "server": "nginx",
-      "jquery": null
+      "server": "Apache",
+      "jquery": "1.4.2"
     },
     "checks": [
       {
@@ -71,8 +71,7 @@
       },
       {
         "id": "avail.status",
-        "r": "fail",
-        "ev": "final response was 401"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
@@ -132,31 +131,34 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "pass"
+        "r": "fail",
+        "ev": "href=\"http://www.dtekerala.gov.in/index.php/en/\""
       },
       {
         "id": "sec.csp",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xfo",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xcto",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.referrer",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.server_banner",
-        "r": "pass"
+        "r": "fail",
+        "ev": "PHP/8.2.35"
       },
       {
         "id": "sec.vuln_js",
-        "r": "pass"
+        "r": "fail",
+        "ev": "jquery 1.4.2, jquery 2.2.3, bootstrap 3.3.6"
       },
       {
         "id": "sec.safe_browsing",
@@ -169,16 +171,17 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "1 critical violation(s)"
+        "ev": "4 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
-        "r": "pass"
+        "r": "fail",
+        "ev": "24 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "3 moderate/minor violation(s)"
+        "ev": "24 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -186,16 +189,18 @@
       },
       {
         "id": "a11y.alt",
-        "r": "pass"
+        "r": "fail",
+        "ev": "4 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "15 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
         "r": "fail",
-        "ev": "no <h1>"
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -245,7 +250,8 @@
       },
       {
         "id": "content.copyright_year",
-        "r": "na"
+        "r": "fail",
+        "ev": "copyright year 2024"
       },
       {
         "id": "content.last_updated",
@@ -254,7 +260,7 @@
       },
       {
         "id": "content.stale_news",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "content.placeholder",
@@ -262,11 +268,13 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "pass"
+        "r": "fail",
+        "ev": "ml-user"
       },
       {
         "id": "content.obsolete_tech",
-        "r": "pass"
+        "r": "fail",
+        "ev": "<marquee"
       },
       {
         "id": "content.best_viewed",
@@ -274,15 +282,18 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "30/30 crawled link(s) broken (https://www.gpcezhukone.org/, https://www.gpcezhukone.org/home/aicte, https://www.gpcezhukone.org/home/committee, ...)"
       },
       {
         "id": "content.broken_pdfs",
-        "r": "pass"
+        "r": "fail",
+        "ev": "6 linked PDF(s) 404: https://www.gpcezhukone.org/pdf/Board%20of%20Governors.pdf, https://www.gpcezhukone.org/pdf/MandatoryDisclosure2026.pdf, https://www.gpcezhukone.org/news/spot_admission20260903.pdf, https://www.gpcezhukone.org/news/diploma-regular-select-list2.PDF, https://www.gpcezhukone.org/news/LE_Prospectus.pdf, https://www.gpcezhukone.org/news/ListOfColleges.pdf"
       },
       {
         "id": "content.broken_images",
-        "r": "pass"
+        "r": "fail",
+        "ev": "28 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -298,16 +309,16 @@
       },
       {
         "id": "content.favicon",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "5 console error(s): Failed to load resource: the server responded with a status of 401 ()"
+        "ev": "47 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.feedback",
@@ -315,7 +326,7 @@
       },
       {
         "id": "gigw.sitemap",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.privacy",
@@ -335,7 +346,7 @@
       },
       {
         "id": "gigw.disclaimer",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.accessibility_statement",
@@ -377,7 +388,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "17 days left"
+        "ev": "16 days left"
       },
       {
         "id": "id.www_consistency",
@@ -386,12 +397,12 @@
       {
         "id": "id.robots",
         "r": "fail",
-        "ev": "robots.txt returned 401"
+        "ev": "robots.txt returned 404"
       },
       {
         "id": "id.sitemap_xml",
         "r": "fail",
-        "ev": "sitemap.xml returned 401"
+        "ev": "sitemap.xml returned 404"
       },
       {
         "id": "id.soft_404",
@@ -417,22 +428,135 @@
     "screenshot": {
       "desktop": "government-polytechnic-college-ezhukone.webp",
       "mobile": "government-polytechnic-college-ezhukone-m.webp",
-      "phash": "c7e7ffffffffffff"
+      "phash": "0000ffffffffffff"
     },
-    "outlinks": []
+    "outlinks": [
+      {
+        "host": "goo.gl",
+        "count": 1,
+        "texts": [
+          "Site Map"
+        ]
+      },
+      {
+        "host": "aicte.gov.in",
+        "count": 1,
+        "texts": [
+          "AICTE Scholarship/Fellowship Schemes"
+        ]
+      },
+      {
+        "host": "google.com",
+        "count": 2,
+        "texts": [
+          "Students Grievance Redressal",
+          "templatemo"
+        ]
+      },
+      {
+        "host": "whatsapp.com",
+        "count": 1,
+        "texts": [
+          "Join Whatsapp Group"
+        ]
+      },
+      {
+        "host": "polyadmission.org",
+        "count": 1,
+        "texts": [
+          "Admission Portal"
+        ]
+      },
+      {
+        "host": "forms.gle",
+        "count": 1,
+        "texts": [
+          "Registration link"
+        ]
+      },
+      {
+        "host": "dtekerala.gov.in",
+        "count": 1,
+        "texts": [
+          "DTE"
+        ]
+      },
+      {
+        "host": "kerala.gov.in",
+        "count": 1,
+        "texts": [
+          "SBTE"
+        ]
+      },
+      {
+        "host": "sitttrkerala.ac.in",
+        "count": 1,
+        "texts": [
+          "SITTTR"
+        ]
+      },
+      {
+        "host": "nitttrc.ac.in",
+        "count": 1,
+        "texts": [
+          "NITTTR"
+        ]
+      },
+      {
+        "host": "tekerala.org",
+        "count": 1,
+        "texts": [
+          "TEKERALA"
+        ]
+      },
+      {
+        "host": "aicte-india.org",
+        "count": 1,
+        "texts": [
+          "AICTE"
+        ]
+      },
+      {
+        "host": "mhrd.gov.in",
+        "count": 1,
+        "texts": [
+          "MHRD"
+        ]
+      },
+      {
+        "host": "spark.gov.in",
+        "count": 1,
+        "texts": [
+          "SPARK"
+        ]
+      }
+    ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 32,
+    "security": 24,
+    "accessibility": 42,
+    "content": 0,
+    "gigw": 12,
+    "performance": 86,
+    "identity": 48
+  },
+  "status": "poor",
   "issues": [
     {
-      "id": "avail.status",
-      "sev": "C",
-      "ev": "final response was 401"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://www.dtekerala.gov.in/index.php/en/\""
+    },
+    {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "jquery 1.4.2, jquery 2.2.3, bootstrap 3.3.6"
     },
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "1 critical violation(s)"
+      "ev": "4 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -440,8 +564,14 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "gigw.contact",
-      "sev": "H"
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "30/30 crawled link(s) broken (https://www.gpcezhukone.org/, https://www.gpcezhukone.org/home/aicte, https://www.gpcezhukone.org/home/committee, ...)"
     },
     {
       "id": "gigw.rti",
@@ -455,15 +585,45 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "17 days left"
+      "ev": "16 days left"
     },
     {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
-      "id": "gigw.sitemap",
+      "id": "sec.xfo",
       "sev": "M"
+    },
+    {
+      "id": "a11y.axe_serious",
+      "sev": "M",
+      "ev": "24 serious violation(s)"
+    },
+    {
+      "id": "a11y.alt",
+      "sev": "M",
+      "ev": "4 image(s) missing alt text"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "15 low-contrast element(s)"
+    },
+    {
+      "id": "content.copyright_year",
+      "sev": "M",
+      "ev": "copyright year 2024"
+    },
+    {
+      "id": "content.obsolete_tech",
+      "sev": "M",
+      "ev": "<marquee"
+    },
+    {
+      "id": "content.broken_pdfs",
+      "sev": "M",
+      "ev": "6 linked PDF(s) 404: https://www.gpcezhukone.org/pdf/Board%20of%20Governors.pdf, https://www.gpcezhukone.org/pdf/MandatoryDisclosure2026.pdf, https://www.gpcezhukone.org/news/spot_admission20260903.pdf, https://www.gpcezhukone.org/news/diploma-regular-select-list2.PDF, https://www.gpcezhukone.org/news/LE_Prospectus.pdf, https://www.gpcezhukone.org/news/ListOfColleges.pdf"
     },
     {
       "id": "gigw.privacy",
@@ -486,27 +646,45 @@
       "sev": "M"
     },
     {
+      "id": "sec.csp",
+      "sev": "L"
+    },
+    {
+      "id": "sec.xcto",
+      "sev": "L"
+    },
+    {
+      "id": "sec.referrer",
+      "sev": "L"
+    },
+    {
+      "id": "sec.server_banner",
+      "sev": "L",
+      "ev": "PHP/8.2.35"
+    },
+    {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "3 moderate/minor violation(s)"
+      "ev": "24 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "no <h1>"
+      "ev": "heading levels skipped"
+    },
+    {
+      "id": "content.broken_images",
+      "sev": "L",
+      "ev": "28 broken image(s)"
     },
     {
       "id": "content.meta_desc",
       "sev": "L"
     },
     {
-      "id": "content.favicon",
-      "sev": "L"
-    },
-    {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "5 console error(s): Failed to load resource: the server responded with a status of 401 ()"
+      "ev": "47 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
@@ -522,10 +700,6 @@
     },
     {
       "id": "gigw.hyperlink_policy",
-      "sev": "L"
-    },
-    {
-      "id": "gigw.disclaimer",
       "sev": "L"
     },
     {
@@ -551,12 +725,12 @@
     {
       "id": "id.robots",
       "sev": "L",
-      "ev": "robots.txt returned 401"
+      "ev": "robots.txt returned 404"
     },
     {
       "id": "id.sitemap_xml",
       "sev": "L",
-      "ev": "sitemap.xml returned 401"
+      "ev": "sitemap.xml returned 404"
     },
     {
       "id": "gigw.emblem",
@@ -568,6 +742,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-06",
+      "up": true,
+      "score": 32
+    },
     {
       "d": "2026-11-05",
       "up": false,
@@ -769,5 +948,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

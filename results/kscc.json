@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-05T02:07:48.576Z",
-    "run": "1793844415280",
+    "at": "2026-11-06T02:08:15.272Z",
+    "run": "1793930849751",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 10,
+      "performance": 14,
       "accessibility": 90,
       "best_practices": 77,
-      "seo": 85
+      "seo": 92
     },
     "axe": {
       "critical": 3,
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "10/100"
+        "ev": "14/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6884.425500000001ms"
+        "ev": "6054.691ms"
       },
       {
         "id": "perf.cls",
@@ -381,7 +381,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "24 days left"
+        "ev": "23 days left"
       },
       {
         "id": "id.www_consistency",
@@ -463,7 +463,7 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "24 days left"
+      "ev": "23 days left"
     },
     {
       "id": "sec.hsts",
@@ -501,7 +501,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6884.425500000001ms"
+      "ev": "6054.691ms"
     },
     {
       "id": "sec.csp",
@@ -577,6 +577,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-06",
+      "up": true,
+      "score": 52
+    },
     {
       "d": "2026-11-05",
       "up": true,
@@ -803,5 +808,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,28 +35,28 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-05T02:14:05.000Z",
-    "run": "1793844796696",
+    "at": "2026-11-06T02:14:01.435Z",
+    "run": "1793931202841",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 58,
-      "accessibility": 81,
+      "performance": 87,
+      "accessibility": 95,
       "best_practices": 96,
-      "seo": 67
+      "seo": 90
     },
     "axe": {
-      "critical": 1,
-      "serious": 9,
-      "moderate": 4,
+      "critical": 0,
+      "serious": 2,
+      "moderate": 1,
       "minor": 0
     },
     "crawl": {
-      "pages": 30,
+      "pages": 29,
       "pdfs": 0,
       "broken": 0
     },
     "tech": {
-      "cms": null,
+      "cms": "WordPress 6.9.10",
       "server": "Apache",
       "jquery": null
     },
@@ -136,11 +136,11 @@
       },
       {
         "id": "sec.csp",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xfo",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xcto",
@@ -168,18 +168,17 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "fail",
-        "ev": "1 critical violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "9 serious violation(s)"
+        "ev": "2 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "4 moderate/minor violation(s)"
+        "ev": "1 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -187,8 +186,7 @@
       },
       {
         "id": "a11y.alt",
-        "r": "fail",
-        "ev": "1 image(s) missing alt text"
+        "r": "pass"
       },
       {
         "id": "a11y.contrast",
@@ -197,8 +195,7 @@
       },
       {
         "id": "a11y.headings",
-        "r": "fail",
-        "ev": "heading levels skipped"
+        "r": "pass"
       },
       {
         "id": "a11y.labels",
@@ -210,23 +207,21 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "warn",
-        "ev": "tabindex=\"-1\" alongside outline:none"
+        "r": "pass"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "81/100"
+        "ev": "95/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "58/100"
+        "ev": "87/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "6239.367ms"
+        "r": "pass"
       },
       {
         "id": "perf.cls",
@@ -234,8 +229,7 @@
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "3.4MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
@@ -268,8 +262,7 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "fail",
-        "ev": "ml-IN"
+        "r": "pass"
       },
       {
         "id": "content.obsolete_tech",
@@ -345,7 +338,7 @@
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.screen_reader",
@@ -361,7 +354,7 @@
       },
       {
         "id": "gigw.search",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.ownership",
@@ -383,11 +376,11 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "21 days left"
+        "ev": "20 days left"
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -405,7 +398,7 @@
       },
       {
         "id": "id.canonical",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.charset_doctype",
@@ -413,7 +406,8 @@
       },
       {
         "id": "id.tech",
-        "r": "pass"
+        "r": "pass",
+        "ev": "WordPress 6.9.10"
       },
       {
         "id": "id.third_party",
@@ -423,7 +417,7 @@
     "screenshot": {
       "desktop": "ksicl.webp",
       "mobile": "ksicl-m.webp",
-      "phash": "00ff000000ffffff"
+      "phash": "1eff00ffefef0000"
     },
     "outlinks": [
       {
@@ -457,13 +451,13 @@
     ]
   },
   "score": {
-    "overall": 51,
-    "security": 62,
-    "accessibility": 40,
-    "content": 52,
-    "gigw": 28,
-    "performance": 81,
-    "identity": 52
+    "overall": 60,
+    "security": 48,
+    "accessibility": 76,
+    "content": 72,
+    "gigw": 22,
+    "performance": 96,
+    "identity": 48
   },
   "status": "needs-work",
   "issues": [
@@ -473,19 +467,9 @@
       "ev": "href=\"http://gmpg.org/xfn/11\""
     },
     {
-      "id": "a11y.axe_critical",
-      "sev": "H",
-      "ev": "1 critical violation(s)"
-    },
-    {
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
-    },
-    {
-      "id": "content.legacy_font",
-      "sev": "H",
-      "ev": "ml-IN"
     },
     {
       "id": "id.gov_domain",
@@ -495,21 +479,20 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "21 days left"
+      "ev": "20 days left"
     },
     {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
-      "id": "a11y.axe_serious",
-      "sev": "M",
-      "ev": "9 serious violation(s)"
+      "id": "sec.xfo",
+      "sev": "M"
     },
     {
-      "id": "a11y.alt",
+      "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "1 image(s) missing alt text"
+      "ev": "2 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -525,6 +508,10 @@
       "sev": "M"
     },
     {
+      "id": "gigw.accessibility_statement",
+      "sev": "M"
+    },
+    {
       "id": "gigw.ownership",
       "sev": "M"
     },
@@ -533,14 +520,8 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "6239.367ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "3.4MB"
+      "id": "sec.csp",
+      "sev": "L"
     },
     {
       "id": "sec.xcto",
@@ -553,17 +534,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "4 moderate/minor violation(s)"
-    },
-    {
-      "id": "a11y.headings",
-      "sev": "L",
-      "ev": "heading levels skipped"
-    },
-    {
-      "id": "a11y.keyboard",
-      "sev": "L",
-      "ev": "tabindex=\"-1\" alongside outline:none"
+      "ev": "1 moderate/minor violation(s)"
     },
     {
       "id": "content.meta_desc",
@@ -602,11 +573,11 @@
       "sev": "L"
     },
     {
-      "id": "gigw.search",
+      "id": "perf.images",
       "sev": "L"
     },
     {
-      "id": "perf.images",
+      "id": "id.www_consistency",
       "sev": "L"
     },
     {
@@ -622,9 +593,18 @@
     {
       "id": "gigw.emblem",
       "sev": "I"
+    },
+    {
+      "id": "id.canonical",
+      "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-06",
+      "up": true,
+      "score": 60
+    },
     {
       "d": "2026-11-05",
       "up": true,
@@ -856,5 +836,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,19 +37,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-31T01:14:35.609Z",
-    "run": "1793409231574",
+    "at": "2026-11-06T01:59:04.006Z",
+    "run": "1793930302912",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 72,
-      "accessibility": 82,
-      "best_practices": 100,
-      "seo": 85
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 0,
       "serious": 4,
-      "moderate": 10,
+      "moderate": 11,
       "minor": 0
     },
     "crawl": {
@@ -180,7 +175,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "10 moderate/minor violation(s)"
+        "ev": "11 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -215,22 +210,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "82/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "72/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "4149.300499999999ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -243,11 +235,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -550,12 +542,12 @@
     ]
   },
   "score": {
-    "overall": 68,
+    "overall": 69,
     "security": 76,
     "accessibility": 70,
     "content": 56,
     "gigw": 36,
-    "performance": 76,
+    "performance": 90,
     "identity": 96
   },
   "status": "needs-work",
@@ -602,11 +594,6 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "4149.300499999999ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "9.0MB"
@@ -618,7 +605,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "10 moderate/minor violation(s)"
+      "ev": "11 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -659,16 +646,17 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-06",
+      "up": true,
+      "score": 69
+    },
     {
       "d": "2026-11-05",
       "up": true,
@@ -900,5 +888,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

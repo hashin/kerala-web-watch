@@ -35,15 +35,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-05T02:07:31.744Z",
-    "run": "1793844369987",
+    "at": "2026-11-06T02:11:08.717Z",
+    "run": "1793931025664",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 66,
-      "accessibility": 83,
-      "best_practices": 88,
-      "seo": 92
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 0,
       "serious": 10,
@@ -95,8 +90,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "6317ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -213,22 +207,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "83/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "66/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "10020.499499999998ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -241,11 +232,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -385,7 +376,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -478,15 +469,15 @@
     ]
   },
   "score": {
-    "overall": 68,
+    "overall": 69,
     "security": 62,
     "accessibility": 74,
     "content": 58,
     "gigw": 52,
-    "performance": 81,
-    "identity": 96
+    "performance": 95,
+    "identity": 92
   },
-  "status": "down",
+  "status": "needs-work",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -497,11 +488,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-icon"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "6317ms"
     },
     {
       "id": "sec.hsts",
@@ -529,11 +515,6 @@
     {
       "id": "gigw.ownership",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "10020.499499999998ms"
     },
     {
       "id": "perf.weight",
@@ -601,7 +582,7 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
+      "id": "id.www_consistency",
       "sev": "L"
     },
     {
@@ -615,6 +596,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-06",
+      "up": true,
+      "score": 69
+    },
     {
       "d": "2026-11-05",
       "up": false,
@@ -836,5 +822,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

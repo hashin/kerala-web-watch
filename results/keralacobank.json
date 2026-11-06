@@ -37,15 +37,20 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-05T01:54:39.097Z",
-    "run": "1793843615266",
+    "at": "2026-11-06T01:57:00.780Z",
+    "run": "1793930164926",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 30,
+      "accessibility": 62,
+      "best_practices": 92,
+      "seo": 92
+    },
     "axe": {
       "critical": 9,
-      "serious": 105,
+      "serious": 106,
       "moderate": 1,
-      "minor": 99
+      "minor": 102
     },
     "crawl": {
       "pages": 30,
@@ -171,12 +176,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "105 serious violation(s)"
+        "ev": "106 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "100 moderate/minor violation(s)"
+        "ev": "103 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -210,24 +215,28 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "62/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "30/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "32693.364ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "1.08"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "10.2MB"
+        "ev": "10.3MB"
       },
       {
         "id": "perf.viewport",
@@ -235,11 +244,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -302,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "36 console error(s): Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        "ev": "34 console error(s): Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
       },
       {
         "id": "gigw.contact",
@@ -410,7 +419,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-SEW3VVY9T5&amp;cx=c&amp;gtm=4e6b31, https://www.googletagmanager.com/gtag/js?id=G-V8GXMSME5N, https://www.googletagmanager.com/gtag/js?id=G-SEW3VVY9T5"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-SEW3VVY9T5&amp;cx=c&amp;gtm=4e6b41, https://www.googletagmanager.com/gtag/js?id=G-V8GXMSME5N, https://www.googletagmanager.com/gtag/js?id=G-SEW3VVY9T5"
       }
     ],
     "screenshot": {
@@ -495,12 +504,12 @@
     ]
   },
   "score": {
-    "overall": 43,
+    "overall": 40,
     "security": 28,
     "accessibility": 46,
     "content": 52,
     "gigw": 0,
-    "performance": 90,
+    "performance": 62,
     "identity": 76
   },
   "status": "poor",
@@ -549,7 +558,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "105 serious violation(s)"
+      "ev": "106 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -582,9 +591,18 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "32693.364ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "10.2MB"
+      "ev": "10.3MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -601,7 +619,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "100 moderate/minor violation(s)"
+      "ev": "103 moderate/minor violation(s)"
     },
     {
       "id": "content.favicon",
@@ -610,7 +628,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "36 console error(s): Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+      "ev": "34 console error(s): Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
     },
     {
       "id": "gigw.feedback",
@@ -645,6 +663,15 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "1.08"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.soft_404",
       "sev": "L",
       "ev": "a nonexistent path returned 200"
@@ -652,10 +679,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-SEW3VVY9T5&amp;cx=c&amp;gtm=4e6b31, https://www.googletagmanager.com/gtag/js?id=G-V8GXMSME5N, https://www.googletagmanager.com/gtag/js?id=G-SEW3VVY9T5"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-SEW3VVY9T5&amp;cx=c&amp;gtm=4e6b41, https://www.googletagmanager.com/gtag/js?id=G-V8GXMSME5N, https://www.googletagmanager.com/gtag/js?id=G-SEW3VVY9T5"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-06",
+      "up": true,
+      "score": 40
+    },
     {
       "d": "2026-11-05",
       "up": true,
@@ -877,5 +909,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

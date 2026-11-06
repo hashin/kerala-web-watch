@@ -35,23 +35,23 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-30T01:19:51.488Z",
-    "run": "1793323152745",
+    "at": "2026-11-06T01:45:35.544Z",
+    "run": "1793929502239",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 51,
-      "accessibility": 64,
+      "performance": 76,
+      "accessibility": 78,
       "best_practices": 96,
       "seo": 92
     },
     "axe": {
       "critical": 0,
-      "serious": 4,
-      "moderate": 9,
+      "serious": 2,
+      "moderate": 1,
       "minor": 0
     },
     "crawl": {
-      "pages": 20,
+      "pages": 18,
       "pdfs": 4,
       "broken": 0
     },
@@ -111,7 +111,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
@@ -174,12 +174,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "4 serious violation(s)"
+        "ev": "2 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "9 moderate/minor violation(s)"
+        "ev": "1 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -192,12 +192,11 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "3 low-contrast element(s)"
+        "ev": "1 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
-        "r": "fail",
-        "ev": "heading levels skipped"
+        "r": "pass"
       },
       {
         "id": "a11y.labels",
@@ -214,21 +213,21 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "64/100"
+        "ev": "78/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "51/100"
+        "ev": "76/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "14968.81ms"
+        "r": "pass"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.29"
       },
       {
         "id": "perf.weight",
@@ -240,7 +239,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -266,7 +265,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-IN"
+        "ev": "ML-NILA"
       },
       {
         "id": "content.obsolete_tech",
@@ -290,7 +289,8 @@
       },
       {
         "id": "content.malayalam",
-        "r": "pass"
+        "r": "fail",
+        "ev": "Malayalam ratio 0.01, no language toggle found"
       },
       {
         "id": "content.title",
@@ -419,33 +419,21 @@
     "screenshot": {
       "desktop": "dslr.webp",
       "mobile": "dslr-m.webp",
-      "phash": "00031f4f47071f1f"
+      "phash": "0000ffffffffffff"
     },
-    "outlinks": [
-      {
-        "host": "cdit.org",
-        "count": 3,
-        "texts": [
-          "readmore.."
-        ]
-      }
-    ]
+    "outlinks": []
   },
   "score": {
-    "overall": 47,
-    "security": 8,
-    "accessibility": 72,
-    "content": 48,
+    "overall": 53,
+    "security": 28,
+    "accessibility": 76,
+    "content": 38,
     "gigw": 18,
-    "performance": 76,
+    "performance": 92,
     "identity": 91
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.http_redirect",
-      "sev": "H"
-    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -464,7 +452,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-IN"
+      "ev": "ML-NILA"
     },
     {
       "id": "sec.hsts",
@@ -477,12 +465,17 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "4 serious violation(s)"
+      "ev": "2 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "3 low-contrast element(s)"
+      "ev": "1 low-contrast element(s)"
+    },
+    {
+      "id": "content.malayalam",
+      "sev": "M",
+      "ev": "Malayalam ratio 0.01, no language toggle found"
     },
     {
       "id": "gigw.sitemap",
@@ -505,15 +498,6 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "14968.81ms"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
-    },
-    {
       "id": "id.tech",
       "sev": "M",
       "ev": "WordPress 5.3.27 (unsupported major version)"
@@ -533,12 +517,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "9 moderate/minor violation(s)"
-    },
-    {
-      "id": "a11y.headings",
-      "sev": "L",
-      "ev": "heading levels skipped"
+      "ev": "1 moderate/minor violation(s)"
     },
     {
       "id": "content.meta_desc",
@@ -586,6 +565,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.29"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -600,6 +584,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-06",
+      "up": true,
+      "score": 53
+    },
     {
       "d": "2026-11-05",
       "up": true,
@@ -831,5 +820,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

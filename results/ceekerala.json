@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-05T01:51:55.779Z",
-    "run": "1793843469968",
+    "at": "2026-11-06T01:55:02.706Z",
+    "run": "1793930051594",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 58,
@@ -53,9 +53,9 @@
       "minor": 0
     },
     "crawl": {
-      "pages": 29,
+      "pages": 30,
       "pdfs": 7,
-      "broken": 1
+      "broken": 3
     },
     "tech": {
       "cms": null,
@@ -122,7 +122,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "25 days left"
+        "ev": "24 days left"
       },
       {
         "id": "sec.tls_version",
@@ -227,7 +227,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8210.747ms"
+        "ev": "9027.536ms"
       },
       {
         "id": "perf.cls",
@@ -282,7 +282,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/29 crawled link(s) broken (https://cee.kerala.gov.in/pga2026/)"
+        "ev": "3/30 crawled link(s) broken (https://cee.kerala.gov.in/pga2026/, https://cee.kerala.gov.in/dnbmbbsonline2026/, https://cee.kerala.gov.in/mdhonline2026/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -453,7 +453,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "25 days left"
+      "ev": "24 days left"
     },
     {
       "id": "sec.vuln_js",
@@ -478,7 +478,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/29 crawled link(s) broken (https://cee.kerala.gov.in/pga2026/)"
+      "ev": "3/30 crawled link(s) broken (https://cee.kerala.gov.in/pga2026/, https://cee.kerala.gov.in/dnbmbbsonline2026/, https://cee.kerala.gov.in/mdhonline2026/)"
     },
     {
       "id": "a11y.axe_serious",
@@ -509,7 +509,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8210.747ms"
+      "ev": "9027.536ms"
     },
     {
       "id": "sec.referrer",
@@ -598,6 +598,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-06",
+      "up": true,
+      "score": 52
+    },
     {
       "d": "2026-11-05",
       "up": true,
@@ -824,5 +829,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

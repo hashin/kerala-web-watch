@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-30T01:41:13.048Z",
-    "run": "1793324429959",
+    "at": "2026-11-06T01:59:38.975Z",
+    "run": "1793930330076",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 61,
+      "performance": 56,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 85
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "61/100"
+        "ev": "56/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "26891.172ms"
+        "ev": "12137.067500000001ms"
       },
       {
         "id": "perf.cls",
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://tender.lsgkerala.gov.in/pages/tenderLSGD.php?intID=3&lbid=198)"
       },
       {
         "id": "content.broken_pdfs",
@@ -549,10 +550,10 @@
     ]
   },
   "score": {
-    "overall": 68,
+    "overall": 66,
     "security": 76,
     "accessibility": 70,
-    "content": 56,
+    "content": 46,
     "gigw": 36,
     "performance": 76,
     "identity": 96
@@ -573,6 +574,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://tender.lsgkerala.gov.in/pages/tenderLSGD.php?intID=3&lbid=198)"
     },
     {
       "id": "a11y.axe_serious",
@@ -603,7 +609,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "26891.172ms"
+      "ev": "12137.067500000001ms"
     },
     {
       "id": "perf.weight",
@@ -668,6 +674,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-06",
+      "up": true,
+      "score": 66
+    },
     {
       "d": "2026-11-05",
       "up": true,
@@ -899,5 +910,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

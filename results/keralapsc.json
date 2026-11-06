@@ -29,8 +29,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-05T01:47:44.399Z",
-    "run": "1793843193389",
+    "at": "2026-11-06T01:50:51.996Z",
+    "run": "1793929775853",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 27,
@@ -90,7 +90,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3941ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -127,7 +128,7 @@
       {
         "id": "sec.mixed_content",
         "r": "fail",
-        "ev": "href=\"http://www.keralapsc.gov.in/home-2\""
+        "ev": "href=\"http://www.keralapsc.gov.in/index.php/home-2\""
       },
       {
         "id": "sec.csp",
@@ -218,17 +219,17 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9061.402ms"
+        "ev": "12469.354000000001ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.68"
+        "ev": "0.58"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "3.2MB"
+        "ev": "3.3MB"
       },
       {
         "id": "perf.viewport",
@@ -464,7 +465,7 @@
     {
       "id": "sec.mixed_content",
       "sev": "H",
-      "ev": "href=\"http://www.keralapsc.gov.in/home-2\""
+      "ev": "href=\"http://www.keralapsc.gov.in/index.php/home-2\""
     },
     {
       "id": "sec.vuln_js",
@@ -491,6 +492,11 @@
       "sev": "H"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3941ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -515,12 +521,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9061.402ms"
+      "ev": "12469.354000000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "3.2MB"
+      "ev": "3.3MB"
     },
     {
       "id": "id.tech",
@@ -574,7 +580,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.68"
+      "ev": "0.58"
     },
     {
       "id": "perf.images",
@@ -605,6 +611,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-06",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-05",
       "up": false,
@@ -826,5 +837,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

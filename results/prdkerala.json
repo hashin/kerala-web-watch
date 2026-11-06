@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-05T01:59:52.887Z",
-    "run": "1793843928621",
+    "at": "2026-11-06T02:01:41.925Z",
+    "run": "1793930432661",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 13,
+      "performance": 10,
       "accessibility": 80,
-      "best_practices": 92,
+      "best_practices": 96,
       "seo": 85
     },
     "axe": {
       "critical": 11,
-      "serious": 25,
+      "serious": 24,
       "moderate": 2,
       "minor": 1
     },
     "crawl": {
       "pages": 30,
       "pdfs": 15,
-      "broken": 0
+      "broken": 13
     },
     "tech": {
       "cms": "Drupal 8",
@@ -175,7 +175,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "25 serious violation(s)"
+        "ev": "24 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -221,22 +221,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "13/100"
+        "ev": "10/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "19963.3665ms"
+        "ev": "23579.707ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.65"
+        "ev": "0.75"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "19.9MB"
+        "ev": "20.4MB"
       },
       {
         "id": "perf.viewport",
@@ -282,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "13/30 crawled link(s) broken (https://prd.kerala.gov.in/index.php/ml/forms, https://prd.kerala.gov.in/index.php/ml/orders, https://prd.kerala.gov.in/index.php/ml/node/329596, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -290,8 +291,7 @@
       },
       {
         "id": "content.broken_images",
-        "r": "fail",
-        "ev": "1 broken image(s)"
+        "r": "pass"
       },
       {
         "id": "content.malayalam",
@@ -312,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "25 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/_/ytembeds/_/ss/k=ytembeds.base.afZ9fqZNBls.L.X.O/am=AAAAQABgDA/d=1/br=1/rs=AGKMywHeTTarVC0U8CXlL4jYLdsAMLqP-Q/m=root,base' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -532,15 +532,15 @@
     ]
   },
   "score": {
-    "overall": 51,
+    "overall": 49,
     "security": 42,
     "accessibility": 50,
-    "content": 48,
+    "content": 32,
     "gigw": 32,
     "performance": 72,
     "identity": 91
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -568,13 +568,18 @@
       "ev": "ML-NILA"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "13/30 crawled link(s) broken (https://prd.kerala.gov.in/index.php/ml/forms, https://prd.kerala.gov.in/index.php/ml/orders, https://prd.kerala.gov.in/index.php/ml/node/329596, ...)"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "25 serious violation(s)"
+      "ev": "24 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -600,12 +605,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "19963.3665ms"
+      "ev": "23579.707ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "19.9MB"
+      "ev": "20.4MB"
     },
     {
       "id": "id.tech",
@@ -636,18 +641,13 @@
       "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
-      "id": "content.broken_images",
-      "sev": "L",
-      "ev": "1 broken image(s)"
-    },
-    {
       "id": "content.meta_desc",
       "sev": "L"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "25 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/_/ytembeds/_/ss/k=ytembeds.base.afZ9fqZNBls.L.X.O/am=AAAAQABgDA/d=1/br=1/rs=AGKMywHeTTarVC0U8CXlL4jYLdsAMLqP-Q/m=root,base' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -680,7 +680,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.65"
+      "ev": "0.75"
     },
     {
       "id": "perf.images",
@@ -701,6 +701,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-06",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-11-05",
       "up": true,
@@ -927,5 +932,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

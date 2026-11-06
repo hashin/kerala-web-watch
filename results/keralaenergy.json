@@ -37,28 +37,28 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-05T02:06:09.986Z",
-    "run": "1793844271729",
+    "at": "2026-11-06T02:11:03.142Z",
+    "run": "1793931016970",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 31,
-      "accessibility": 83,
+      "performance": 64,
+      "accessibility": 90,
       "best_practices": 69,
-      "seo": 54
+      "seo": 85
     },
     "axe": {
-      "critical": 1,
-      "serious": 35,
-      "moderate": 3,
+      "critical": 0,
+      "serious": 5,
+      "moderate": 1,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 20,
-      "broken": 0
+      "pdfs": 1,
+      "broken": 27
     },
     "tech": {
-      "cms": null,
+      "cms": "WordPress 7.1.4",
       "server": "Apache",
       "jquery": "3.7.1"
     },
@@ -97,7 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3396ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -113,7 +114,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.cert_valid",
@@ -138,11 +139,11 @@
       },
       {
         "id": "sec.csp",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xfo",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xcto",
@@ -170,18 +171,17 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "fail",
-        "ev": "1 critical violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "35 serious violation(s)"
+        "ev": "5 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "3 moderate/minor violation(s)"
+        "ev": "1 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -189,13 +189,12 @@
       },
       {
         "id": "a11y.alt",
-        "r": "fail",
-        "ev": "1 image(s) missing alt text"
+        "r": "pass"
       },
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "2 low-contrast element(s)"
+        "ev": "4 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -212,33 +211,30 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "warn",
-        "ev": "tabindex=\"-1\" alongside outline:none"
+        "r": "pass"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "83/100"
+        "ev": "90/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "31/100"
+        "ev": "64/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "21913.9695ms"
+        "ev": "4562.986ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "1.06"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "5.5MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
@@ -250,7 +246,7 @@
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.copyright_year",
@@ -272,12 +268,11 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-widget"
+        "ev": "ml-"
       },
       {
         "id": "content.obsolete_tech",
-        "r": "fail",
-        "ev": "<marquee"
+        "r": "pass"
       },
       {
         "id": "content.best_viewed",
@@ -285,7 +280,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "27/30 crawled link(s) broken (https://keralaenergy.gov.in/?p=737, https://keralaenergy.gov.in/?p=2229, https://keralaenergy.gov.in/?p=2231, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -350,7 +346,7 @@
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.screen_reader",
@@ -415,7 +411,8 @@
       },
       {
         "id": "id.tech",
-        "r": "pass"
+        "r": "pass",
+        "ev": "WordPress 7.1.4"
       },
       {
         "id": "id.third_party",
@@ -425,7 +422,7 @@
     "screenshot": {
       "desktop": "keralaenergy.webp",
       "mobile": "keralaenergy-m.webp",
-      "phash": "3fffff00000000ff"
+      "phash": "00ffffffffff9f00"
     },
     "outlinks": [
       {
@@ -465,18 +462,6 @@
         ]
       },
       {
-        "host": "kfon.co.in",
-        "count": 1,
-        "texts": [
-          "Click here for register/update end office details"
-        ]
-      },
-      {
-        "host": "google.com",
-        "count": 2,
-        "texts": []
-      },
-      {
         "host": "websiteout.net",
         "count": 1,
         "texts": [
@@ -493,25 +478,24 @@
     ]
   },
   "score": {
-    "overall": 58,
-    "security": 62,
-    "accessibility": 40,
-    "content": 42,
-    "gigw": 58,
-    "performance": 77,
+    "overall": 56,
+    "security": 28,
+    "accessibility": 72,
+    "content": 32,
+    "gigw": 48,
+    "performance": 90,
     "identity": 96
   },
   "status": "needs-work",
   "issues": [
     {
+      "id": "sec.http_redirect",
+      "sev": "H"
+    },
+    {
       "id": "sec.mixed_content",
       "sev": "H",
       "ev": "src=\"http://localhost/keralaenergy/wp-content/uploads/2023/06/logo.png\""
-    },
-    {
-      "id": "a11y.axe_critical",
-      "sev": "H",
-      "ev": "1 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -521,34 +505,42 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-widget"
+      "ev": "ml-"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "27/30 crawled link(s) broken (https://keralaenergy.gov.in/?p=737, https://keralaenergy.gov.in/?p=2229, https://keralaenergy.gov.in/?p=2231, ...)"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3396ms"
     },
     {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
-      "id": "a11y.axe_serious",
-      "sev": "M",
-      "ev": "35 serious violation(s)"
+      "id": "sec.xfo",
+      "sev": "M"
     },
     {
-      "id": "a11y.alt",
+      "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "1 image(s) missing alt text"
+      "ev": "5 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "2 low-contrast element(s)"
-    },
-    {
-      "id": "content.obsolete_tech",
-      "sev": "M",
-      "ev": "<marquee"
+      "ev": "4 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.accessibility_statement",
       "sev": "M"
     },
     {
@@ -562,12 +554,11 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "21913.9695ms"
+      "ev": "4562.986ms"
     },
     {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "5.5MB"
+      "id": "sec.csp",
+      "sev": "L"
     },
     {
       "id": "sec.xcto",
@@ -580,17 +571,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "3 moderate/minor violation(s)"
+      "ev": "1 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
       "ev": "heading levels skipped"
-    },
-    {
-      "id": "a11y.keyboard",
-      "sev": "L",
-      "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
       "id": "content.meta_desc",
@@ -614,21 +600,17 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "1.06"
-    },
-    {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.soft_404",
       "sev": "L",
       "ev": "a nonexistent path returned 200"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-06",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-11-05",
       "up": true,
@@ -860,5 +842,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
