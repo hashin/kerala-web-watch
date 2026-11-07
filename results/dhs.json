@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-06T01:50:17.497Z",
-    "run": "1793929557760",
+    "at": "2026-11-07T01:08:23.315Z",
+    "run": "1794013515985",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 31,
       "accessibility": 81,
       "best_practices": 73,
       "seo": 62
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 3,
-      "broken": 2
+      "broken": 16
     },
     "tech": {
       "cms": "WordPress 5.0.31",
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "6813ms"
+        "ev": "5978ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -222,16 +222,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "31/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "16770.144750000007ms"
+        "ev": "17218.737499999996ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.77"
       },
       {
         "id": "perf.weight",
@@ -282,8 +283,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "2/30 crawled link(s) broken (https://dhs.kerala.gov.in/en/advisories/, https://dhs.kerala.gov.in/en/%e0%b4%a1%e0%b5%86%e0%b4%af%e0%b4%bf%e0%b4%b2%e0%b4%bf-%e0%b4%ac%e0%b5%81%e0%b4%b3%e0%b5%8d%e0%b4%b3%e0%b4%b1%e0%b5%8d%e0%b4%b1%e0%b4%bf%e0%b4%a8%e0%b5%8d%e2%80%8d/)"
+        "r": "fail",
+        "ev": "16/30 crawled link(s) broken (https://dhs.kerala.gov.in/en/%e0%b4%9c%e0%b4%be%e0%b4%97%e0%b5%8d%e0%b4%b0%e0%b4%a4-%e0%b4%a8%e0%b4%bf%e0%b4%b0%e0%b5%8d%e2%80%8d%e0%b4%a6%e0%b5%87%e0%b4%b6%e0%b4%99%e0%b5%8d%e0%b4%99%e0%b4%b3%e0%b5%8d%e2%80%8d/, https://dhs.kerala.gov.in/en/posters/, https://dhs.kerala.gov.in/en/route-map/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -311,7 +312,8 @@
       },
       {
         "id": "content.console_errors",
-        "r": "pass"
+        "r": "fail",
+        "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/f5321ed3/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -453,12 +455,12 @@
     ]
   },
   "score": {
-    "overall": 47,
+    "overall": 44,
     "security": 46,
     "accessibility": 44,
-    "content": 46,
+    "content": 32,
     "gigw": 12,
-    "performance": 66,
+    "performance": 62,
     "identity": 91
   },
   "status": "poor",
@@ -491,7 +493,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "2/30 crawled link(s) broken (https://dhs.kerala.gov.in/en/advisories/, https://dhs.kerala.gov.in/en/%e0%b4%a1%e0%b5%86%e0%b4%af%e0%b4%bf%e0%b4%b2%e0%b4%bf-%e0%b4%ac%e0%b5%81%e0%b4%b3%e0%b5%8d%e0%b4%b3%e0%b4%b1%e0%b5%8d%e0%b4%b1%e0%b4%bf%e0%b4%a8%e0%b5%8d%e2%80%8d/)"
+      "ev": "16/30 crawled link(s) broken (https://dhs.kerala.gov.in/en/%e0%b4%9c%e0%b4%be%e0%b4%97%e0%b5%8d%e0%b4%b0%e0%b4%a4-%e0%b4%a8%e0%b4%bf%e0%b4%b0%e0%b5%8d%e2%80%8d%e0%b4%a6%e0%b5%87%e0%b4%b6%e0%b4%99%e0%b5%8d%e0%b4%99%e0%b4%b3%e0%b5%8d%e2%80%8d/, https://dhs.kerala.gov.in/en/posters/, https://dhs.kerala.gov.in/en/route-map/, ...)"
     },
     {
       "id": "gigw.contact",
@@ -500,7 +502,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "6813ms"
+      "ev": "5978ms"
     },
     {
       "id": "sec.hsts",
@@ -540,7 +542,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "16770.144750000007ms"
+      "ev": "17218.737499999996ms"
     },
     {
       "id": "perf.weight",
@@ -575,6 +577,11 @@
       "sev": "L"
     },
     {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/f5321ed3/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+    },
+    {
       "id": "gigw.feedback",
       "sev": "L"
     },
@@ -603,6 +610,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.77"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -617,6 +629,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-07",
+      "up": true,
+      "score": 44
+    },
     {
       "d": "2026-11-06",
       "up": true,
@@ -848,5 +865,5 @@
       "score": 45
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

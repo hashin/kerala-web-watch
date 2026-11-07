@@ -38,13 +38,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-06T01:55:02.706Z",
-    "run": "1793930051594",
+    "at": "2026-11-07T01:13:31.552Z",
+    "run": "1794013964893",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 58,
+      "performance": 59,
       "accessibility": 69,
-      "best_practices": 88,
+      "best_practices": 96,
       "seo": 91
     },
     "axe": {
@@ -54,9 +54,9 @@
       "minor": 0
     },
     "crawl": {
-      "pages": 30,
+      "pages": 29,
       "pdfs": 7,
-      "broken": 3
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -123,7 +123,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "24 days left"
+        "ev": "23 days left"
       },
       {
         "id": "sec.tls_version",
@@ -159,8 +159,7 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "fail",
-        "ev": "jquery 2.1.3"
+        "r": "pass"
       },
       {
         "id": "sec.safe_browsing",
@@ -223,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "58/100"
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9027.536ms"
+        "ev": "8409.551ms"
       },
       {
         "id": "perf.cls",
@@ -283,7 +282,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "3/30 crawled link(s) broken (https://cee.kerala.gov.in/pga2026/, https://cee.kerala.gov.in/dnbmbbsonline2026/, https://cee.kerala.gov.in/mdhonline2026/)"
+        "ev": "2/29 crawled link(s) broken (https://cee.kerala.gov.in/pga2026/, https://cee.kerala.gov.in/mdhonline2026/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -312,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "10 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -437,8 +436,8 @@
     ]
   },
   "score": {
-    "overall": 52,
-    "security": 46,
+    "overall": 57,
+    "security": 66,
     "accessibility": 52,
     "content": 38,
     "gigw": 28,
@@ -454,12 +453,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "24 days left"
-    },
-    {
-      "id": "sec.vuln_js",
-      "sev": "H",
-      "ev": "jquery 2.1.3"
+      "ev": "23 days left"
     },
     {
       "id": "a11y.axe_critical",
@@ -479,7 +473,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "3/30 crawled link(s) broken (https://cee.kerala.gov.in/pga2026/, https://cee.kerala.gov.in/dnbmbbsonline2026/, https://cee.kerala.gov.in/mdhonline2026/)"
+      "ev": "2/29 crawled link(s) broken (https://cee.kerala.gov.in/pga2026/, https://cee.kerala.gov.in/mdhonline2026/)"
     },
     {
       "id": "a11y.axe_serious",
@@ -510,7 +504,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9027.536ms"
+      "ev": "8409.551ms"
     },
     {
       "id": "sec.referrer",
@@ -537,7 +531,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "10 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.feedback",
@@ -599,6 +593,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-07",
+      "up": true,
+      "score": 57
+    },
     {
       "d": "2026-11-06",
       "up": true,
@@ -830,5 +829,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

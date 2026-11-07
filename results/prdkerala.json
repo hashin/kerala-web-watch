@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-06T02:01:41.925Z",
-    "run": "1793930432661",
+    "at": "2026-11-07T01:24:14.366Z",
+    "run": "1794014589635",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 10,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 15,
-      "broken": 13
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 8",
@@ -226,12 +226,12 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "23579.707ms"
+        "ev": "20261.114ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.75"
+        "ev": "0.89"
       },
       {
         "id": "perf.weight",
@@ -282,8 +282,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "13/30 crawled link(s) broken (https://prd.kerala.gov.in/index.php/ml/forms, https://prd.kerala.gov.in/index.php/ml/orders, https://prd.kerala.gov.in/index.php/ml/node/329596, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -312,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/_/ytembeds/_/ss/k=ytembeds.base.afZ9fqZNBls.L.X.O/am=AAAAQABgDA/d=1/br=1/rs=AGKMywHeTTarVC0U8CXlL4jYLdsAMLqP-Q/m=root,base' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/player/a5c2aafe/www-player.css' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -532,15 +531,15 @@
     ]
   },
   "score": {
-    "overall": 49,
+    "overall": 52,
     "security": 42,
     "accessibility": 50,
-    "content": 32,
+    "content": 52,
     "gigw": 32,
     "performance": 72,
     "identity": 91
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -566,11 +565,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ML-NILA"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "13/30 crawled link(s) broken (https://prd.kerala.gov.in/index.php/ml/forms, https://prd.kerala.gov.in/index.php/ml/orders, https://prd.kerala.gov.in/index.php/ml/node/329596, ...)"
     },
     {
       "id": "sec.hsts",
@@ -605,7 +599,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "23579.707ms"
+      "ev": "20261.114ms"
     },
     {
       "id": "perf.weight",
@@ -647,7 +641,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/_/ytembeds/_/ss/k=ytembeds.base.afZ9fqZNBls.L.X.O/am=AAAAQABgDA/d=1/br=1/rs=AGKMywHeTTarVC0U8CXlL4jYLdsAMLqP-Q/m=root,base' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/player/a5c2aafe/www-player.css' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -680,7 +674,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.75"
+      "ev": "0.89"
     },
     {
       "id": "perf.images",
@@ -701,6 +695,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-07",
+      "up": true,
+      "score": 52
+    },
     {
       "d": "2026-11-06",
       "up": true,
@@ -932,5 +931,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,23 +35,23 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-06T01:47:24.157Z",
-    "run": "1793929596961",
+    "at": "2026-11-07T01:10:06.334Z",
+    "run": "1794013753605",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 59,
+      "accessibility": 77,
+      "best_practices": 69,
+      "seo": 83
     },
     "axe": {
       "critical": 5,
       "serious": 9,
-      "moderate": 8,
+      "moderate": 9,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
+      "pages": 1,
       "pdfs": 0,
       "broken": 0
     },
@@ -96,7 +96,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4946ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -179,7 +180,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "8 moderate/minor violation(s)"
+        "ev": "9 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -215,20 +216,21 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "77/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "7823.82ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -240,7 +242,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -383,7 +385,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -460,6 +462,11 @@
       "ev": "keralaautomobilesltd.com"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "4946ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -508,8 +515,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "7823.82ms"
     },
     {
       "id": "sec.csp",
@@ -526,7 +534,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "8 moderate/minor violation(s)"
+      "ev": "9 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -578,6 +586,10 @@
       "sev": "L"
     },
     {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
       "id": "id.robots",
       "sev": "L",
       "ev": "Disallow: / for User-agent: *"
@@ -602,6 +614,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-07",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-06",
       "up": false,
@@ -788,5 +805,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

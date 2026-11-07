@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-05T02:18:07.077Z",
-    "run": "1793845041086",
+    "at": "2026-11-07T01:42:27.955Z",
+    "run": "1794015694079",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 57,
+      "performance": 58,
       "accessibility": 89,
       "best_practices": 78,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 2,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "57/100"
+        "ev": "58/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "12087.669000000002ms"
+        "ev": "9472.066499999999ms"
       },
       {
         "id": "perf.cls",
@@ -286,7 +286,8 @@
       },
       {
         "id": "content.broken_pdfs",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 linked PDF(s) 404: https://go.lsgkerala.gov.in/files/cr20230324_34402.pdf"
       },
       {
         "id": "content.broken_images",
@@ -422,7 +423,7 @@
     "screenshot": {
       "desktop": "lsg-gp-athirampuzha.webp",
       "mobile": "lsg-gp-athirampuzha-m.webp",
-      "phash": "ff00fafefcf800ff"
+      "phash": "ff0000ffffffe7e7"
     },
     "outlinks": [
       {
@@ -442,11 +443,11 @@
       },
       {
         "host": "google.com",
-        "count": 8,
+        "count": 9,
         "texts": [
           "സ്റ്റാറ്റസ് റിപ്പോര്‍ട്ട്",
           "ഗുണഭോക്തൃ ലിസ്റ്റ്",
-          "വികസന റിപ്പോര്‍ട്ട്"
+          "ഡാറ്റാ ബാങ്ക്"
         ]
       },
       {
@@ -462,7 +463,7 @@
         "host": "youtube.com",
         "count": 2,
         "texts": [
-          "കെസ്മാർട്ട് സഹായി",
+          "ഐ.കെ.എം. കെ.എസ്.എം.ആർ.ടി യൂട്യൂബ് സഹായം",
           "സേവന സഹായി"
         ]
       },
@@ -570,6 +571,11 @@
       "ev": "12 low-contrast element(s)"
     },
     {
+      "id": "content.broken_pdfs",
+      "sev": "M",
+      "ev": "1 linked PDF(s) 404: https://go.lsgkerala.gov.in/files/cr20230324_34402.pdf"
+    },
+    {
       "id": "gigw.sitemap",
       "sev": "M"
     },
@@ -584,7 +590,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "12087.669000000002ms"
+      "ev": "9472.066499999999ms"
     },
     {
       "id": "perf.weight",
@@ -661,6 +667,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-07",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-06",
       "up": false,
@@ -887,5 +898,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

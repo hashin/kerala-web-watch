@@ -37,28 +37,28 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-06T02:11:03.142Z",
-    "run": "1793931016970",
+    "at": "2026-11-07T01:28:32.066Z",
+    "run": "1794014839061",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 64,
-      "accessibility": 90,
+      "performance": 32,
+      "accessibility": 93,
       "best_practices": 69,
-      "seo": 85
+      "seo": 83
     },
     "axe": {
       "critical": 0,
-      "serious": 5,
-      "moderate": 1,
+      "serious": 34,
+      "moderate": 0,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 1,
-      "broken": 27
+      "pdfs": 20,
+      "broken": 0
     },
     "tech": {
-      "cms": "WordPress 7.1.4",
+      "cms": null,
       "server": "Apache",
       "jquery": "3.7.1"
     },
@@ -97,8 +97,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3396ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -147,11 +146,11 @@
       },
       {
         "id": "sec.xcto",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.referrer",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.server_banner",
@@ -176,12 +175,11 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "5 serious violation(s)"
+        "ev": "34 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
-        "r": "fail",
-        "ev": "1 moderate/minor violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.lang",
@@ -194,12 +192,11 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "4 low-contrast element(s)"
+        "ev": "2 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
-        "r": "fail",
-        "ev": "heading levels skipped"
+        "r": "pass"
       },
       {
         "id": "a11y.labels",
@@ -211,30 +208,33 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "pass"
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "90/100"
+        "ev": "93/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "64/100"
+        "ev": "32/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "4562.986ms"
+        "ev": "17847.266999999996ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1.08"
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4.8MB"
       },
       {
         "id": "perf.viewport",
@@ -246,7 +246,7 @@
       },
       {
         "id": "perf.images",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -268,11 +268,12 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-"
+        "ev": "ml-widget"
       },
       {
         "id": "content.obsolete_tech",
-        "r": "pass"
+        "r": "fail",
+        "ev": "<marquee"
       },
       {
         "id": "content.best_viewed",
@@ -280,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "27/30 crawled link(s) broken (https://keralaenergy.gov.in/?p=737, https://keralaenergy.gov.in/?p=2229, https://keralaenergy.gov.in/?p=2231, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -390,16 +390,17 @@
       },
       {
         "id": "id.robots",
-        "r": "pass"
+        "r": "fail",
+        "ev": "robots.txt returned 403"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "pass"
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
       },
       {
         "id": "id.soft_404",
-        "r": "fail",
-        "ev": "a nonexistent path returned 200"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
@@ -411,8 +412,7 @@
       },
       {
         "id": "id.tech",
-        "r": "pass",
-        "ev": "WordPress 7.1.4"
+        "r": "pass"
       },
       {
         "id": "id.third_party",
@@ -422,7 +422,7 @@
     "screenshot": {
       "desktop": "keralaenergy.webp",
       "mobile": "keralaenergy-m.webp",
-      "phash": "00ffffffffff9f00"
+      "phash": "3fffff00000000ff"
     },
     "outlinks": [
       {
@@ -462,6 +462,18 @@
         ]
       },
       {
+        "host": "kfon.co.in",
+        "count": 1,
+        "texts": [
+          "Click here for register/update end office details"
+        ]
+      },
+      {
+        "host": "google.com",
+        "count": 2,
+        "texts": []
+      },
+      {
         "host": "websiteout.net",
         "count": 1,
         "texts": [
@@ -478,13 +490,13 @@
     ]
   },
   "score": {
-    "overall": 56,
-    "security": 28,
-    "accessibility": 72,
-    "content": 32,
+    "overall": 59,
+    "security": 36,
+    "accessibility": 78,
+    "content": 42,
     "gigw": 48,
-    "performance": 90,
-    "identity": 96
+    "performance": 77,
+    "identity": 92
   },
   "status": "needs-work",
   "issues": [
@@ -505,17 +517,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "27/30 crawled link(s) broken (https://keralaenergy.gov.in/?p=737, https://keralaenergy.gov.in/?p=2229, https://keralaenergy.gov.in/?p=2231, ...)"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3396ms"
+      "ev": "ml-widget"
     },
     {
       "id": "sec.hsts",
@@ -528,12 +530,17 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "5 serious violation(s)"
+      "ev": "34 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "4 low-contrast element(s)"
+      "ev": "2 low-contrast element(s)"
+    },
+    {
+      "id": "content.obsolete_tech",
+      "sev": "M",
+      "ev": "<marquee"
     },
     {
       "id": "gigw.sitemap",
@@ -554,29 +561,21 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "4562.986ms"
+      "ev": "17847.266999999996ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "4.8MB"
     },
     {
       "id": "sec.csp",
       "sev": "L"
     },
     {
-      "id": "sec.xcto",
-      "sev": "L"
-    },
-    {
-      "id": "sec.referrer",
-      "sev": "L"
-    },
-    {
-      "id": "a11y.axe_moderate_minor",
+      "id": "a11y.keyboard",
       "sev": "L",
-      "ev": "1 moderate/minor violation(s)"
-    },
-    {
-      "id": "a11y.headings",
-      "sev": "L",
-      "ev": "heading levels skipped"
+      "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
       "id": "content.meta_desc",
@@ -600,12 +599,31 @@
       "sev": "L"
     },
     {
-      "id": "id.soft_404",
+      "id": "perf.cls",
       "sev": "L",
-      "ev": "a nonexistent path returned 200"
+      "ev": "1.08"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
+      "id": "id.robots",
+      "sev": "L",
+      "ev": "robots.txt returned 403"
+    },
+    {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 404"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-07",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-11-06",
       "up": true,
@@ -842,5 +860,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-06T01:52:34.105Z",
-    "run": "1793929802281",
+    "at": "2026-11-07T01:15:39.182Z",
+    "run": "1794013992368",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 37,
-      "accessibility": 81,
+      "performance": 51,
+      "accessibility": 90,
       "best_practices": 92,
       "seo": 69
     },
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "4223ms"
+        "ev": "3217ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -218,17 +218,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "81/100"
+        "ev": "90/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "37/100"
+        "ev": "51/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "40936.348ms"
+        "ev": "40285.59949999997ms"
       },
       {
         "id": "perf.cls",
@@ -237,7 +237,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "18.5MB"
+        "ev": "19.0MB"
       },
       {
         "id": "perf.viewport",
@@ -245,7 +245,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -479,12 +479,12 @@
     ]
   },
   "score": {
-    "overall": 45,
+    "overall": 46,
     "security": 32,
     "accessibility": 40,
     "content": 34,
     "gigw": 32,
-    "performance": 66,
+    "performance": 76,
     "identity": 100
   },
   "status": "poor",
@@ -526,7 +526,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "4223ms"
+      "ev": "3217ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -562,16 +562,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "40936.348ms"
+      "ev": "40285.59949999997ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "18.5MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "ev": "19.0MB"
     },
     {
       "id": "sec.xcto",
@@ -648,6 +644,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-07",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-11-06",
       "up": true,
@@ -879,5 +880,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

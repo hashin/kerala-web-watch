@@ -35,23 +35,23 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-06T01:45:36.766Z",
-    "run": "1793929442556",
+    "at": "2026-11-07T01:07:35.639Z",
+    "run": "1794013458339",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 49,
+      "accessibility": 83,
+      "best_practices": 92,
+      "seo": 69
     },
     "axe": {
       "critical": 2,
-      "serious": 16,
+      "serious": 17,
       "moderate": 1,
       "minor": 0
     },
     "crawl": {
-      "pages": 23,
+      "pages": 30,
       "pdfs": 0,
       "broken": 0
     },
@@ -95,8 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "6534ms"
+        "r": "fail",
+        "ev": "10339ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -176,7 +176,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "16 serious violation(s)"
+        "ev": "17 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -194,7 +194,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "3 low-contrast element(s)"
+        "ev": "4 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -217,20 +217,21 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "83/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "49/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "20931.730999999996ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -310,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "5 console error(s): Failed to load resource: the server responded with a status of 400 ()"
+        "ev": "3 console error(s): Failed to load resource: the server responded with a status of 400 ()"
       },
       {
         "id": "gigw.contact",
@@ -386,7 +387,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.robots",
@@ -394,8 +395,7 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 500"
+        "r": "pass"
       },
       {
         "id": "id.soft_404",
@@ -421,7 +421,7 @@
     "screenshot": {
       "desktop": "arogyakeralam.webp",
       "mobile": "arogyakeralam-m.webp",
-      "phash": "ffff000000f8fdf4"
+      "phash": "ff1f00f8e080fcff"
     },
     "outlinks": [
       {
@@ -447,18 +447,36 @@
       },
       {
         "host": "youtube.com",
-        "count": 2,
+        "count": 3,
         "texts": [
           "youtube",
-          "View More Videos"
+          "Video Gallery",
+          "Videos"
+        ]
+      },
+      {
+        "host": "dropbox.com",
+        "count": 3,
+        "texts": [
+          "CM minutes",
+          "Government Orders",
+          "Awareness"
         ]
       },
       {
         "host": "kerala.gov.in",
-        "count": 6,
+        "count": 7,
         "texts": [
+          "Daily Bulletin",
           "Government of Kerala",
           "e-Sevanam –"
+        ]
+      },
+      {
+        "host": "cyrixbemp.com",
+        "count": 1,
+        "texts": [
+          "BEMP"
         ]
       },
       {
@@ -495,8 +513,8 @@
     "accessibility": 50,
     "content": 52,
     "gigw": 22,
-    "performance": 81,
-    "identity": 92
+    "performance": 71,
+    "identity": 100
   },
   "status": "needs-work",
   "issues": [
@@ -528,7 +546,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "6534ms"
+      "ev": "10339ms"
     },
     {
       "id": "sec.hsts",
@@ -537,12 +555,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "16 serious violation(s)"
+      "ev": "17 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "3 low-contrast element(s)"
+      "ev": "4 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -563,6 +581,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "20931.730999999996ms"
     },
     {
       "id": "perf.weight",
@@ -603,7 +626,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "5 console error(s): Failed to load resource: the server responded with a status of 400 ()"
+      "ev": "3 console error(s): Failed to load resource: the server responded with a status of 400 ()"
     },
     {
       "id": "gigw.feedback",
@@ -638,20 +661,16 @@
       "sev": "L"
     },
     {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 500"
-    },
-    {
       "id": "gigw.emblem",
       "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-07",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-11-06",
       "up": true,
@@ -888,5 +907,5 @@
       "score": 51
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

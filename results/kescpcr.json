@@ -35,19 +35,19 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-11-06T01:59:43.853Z",
-    "run": "1793930335248",
+    "at": "2026-11-07T01:17:15.601Z",
+    "run": "1794014173055",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
-      "accessibility": 79,
-      "best_practices": 96,
+      "performance": 31,
+      "accessibility": 88,
+      "best_practices": 88,
       "seo": 85
     },
     "axe": {
       "critical": 2,
-      "serious": 13,
-      "moderate": 3,
+      "serious": 27,
+      "moderate": 4,
       "minor": 0
     },
     "crawl": {
@@ -56,7 +56,7 @@
       "broken": 0
     },
     "tech": {
-      "cms": "WordPress 7.1.3",
+      "cms": null,
       "server": "Apache",
       "jquery": null
     },
@@ -174,12 +174,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "13 serious violation(s)"
+        "ev": "27 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "3 moderate/minor violation(s)"
+        "ev": "4 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -193,7 +193,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "12 low-contrast element(s)"
+        "ev": "21 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -211,30 +211,33 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "pass"
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "79/100"
+        "ev": "88/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "31/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "18713.118000000002ms"
+        "ev": "21466.280500000008ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1.04"
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4.4MB"
       },
       {
         "id": "perf.viewport",
@@ -242,7 +245,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -267,7 +270,8 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "pass"
+        "r": "fail",
+        "ev": "ml-IN"
       },
       {
         "id": "content.obsolete_tech",
@@ -340,7 +344,7 @@
       },
       {
         "id": "gigw.disclaimer",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.accessibility_statement",
@@ -372,7 +376,7 @@
       },
       {
         "id": "gigw.emblem",
-        "r": "warn"
+        "r": "pass"
       },
       {
         "id": "id.gov_domain",
@@ -408,8 +412,7 @@
       },
       {
         "id": "id.tech",
-        "r": "pass",
-        "ev": "WordPress 7.1.3"
+        "r": "pass"
       },
       {
         "id": "id.third_party",
@@ -423,39 +426,31 @@
     },
     "outlinks": [
       {
-        "host": "facebook.com",
-        "count": 1,
-        "texts": [
-          "Facebook"
-        ]
-      },
-      {
-        "host": "youtube.com",
-        "count": 1,
-        "texts": [
-          "youtube"
-        ]
-      },
-      {
-        "host": "twitter.com",
-        "count": 1,
-        "texts": [
-          "twitter"
-        ]
-      },
-      {
-        "host": "instagram.com",
-        "count": 1,
-        "texts": [
-          "Instagram"
-        ]
-      },
-      {
         "host": "ux4g.gov.in",
         "count": 1,
         "texts": [
           "Created by"
         ]
+      },
+      {
+        "host": "radionellikka.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "instagram.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "youtube.com",
+        "count": 1,
+        "texts": []
       },
       {
         "host": "cdit.org",
@@ -467,15 +462,15 @@
     ]
   },
   "score": {
-    "overall": 52,
+    "overall": 49,
     "security": 42,
-    "accessibility": 32,
-    "content": 72,
-    "gigw": 32,
-    "performance": 76,
+    "accessibility": 30,
+    "content": 52,
+    "gigw": 36,
+    "performance": 77,
     "identity": 100
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.http_redirect",
@@ -497,13 +492,18 @@
       "ev": "no \"last updated\" date found"
     },
     {
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-IN"
+    },
+    {
       "id": "sec.xfo",
       "sev": "M"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "13 serious violation(s)"
+      "ev": "27 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -513,7 +513,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "12 low-contrast element(s)"
+      "ev": "21 low-contrast element(s)"
     },
     {
       "id": "a11y.labels",
@@ -539,11 +539,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "18713.118000000002ms"
+      "ev": "21466.280500000008ms"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "4.4MB"
     },
     {
       "id": "sec.xcto",
@@ -556,12 +557,17 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "3 moderate/minor violation(s)"
+      "ev": "4 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
       "ev": "heading levels skipped"
+    },
+    {
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
       "id": "content.meta_desc",
@@ -589,10 +595,6 @@
       "sev": "L"
     },
     {
-      "id": "gigw.disclaimer",
-      "sev": "L"
-    },
-    {
       "id": "gigw.help",
       "sev": "L"
     },
@@ -601,15 +603,21 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "1.04"
     },
     {
-      "id": "gigw.emblem",
-      "sev": "I"
+      "id": "perf.images",
+      "sev": "L"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-07",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-11-06",
       "up": true,
@@ -846,5 +854,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

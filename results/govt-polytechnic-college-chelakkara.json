@@ -37,19 +37,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-06T02:05:47.931Z",
-    "run": "1793930676199",
+    "at": "2026-11-07T01:34:38.610Z",
+    "run": "1794015208103",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 66,
       "accessibility": 83,
-      "best_practices": 92,
-      "seo": 85
+      "best_practices": 100,
+      "seo": 92
     },
     "axe": {
-      "critical": 2,
-      "serious": 17,
-      "moderate": 65,
+      "critical": 1,
+      "serious": 18,
+      "moderate": 64,
       "minor": 0
     },
     "crawl": {
@@ -171,17 +171,17 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "2 critical violation(s)"
+        "ev": "1 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "17 serious violation(s)"
+        "ev": "18 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "65 moderate/minor violation(s)"
+        "ev": "64 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -189,8 +189,7 @@
       },
       {
         "id": "a11y.alt",
-        "r": "fail",
-        "ev": "1 image(s) missing alt text"
+        "r": "pass"
       },
       {
         "id": "a11y.contrast",
@@ -226,7 +225,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7190.905ms"
+        "ev": "6948.0265ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +234,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "35.5MB"
+        "ev": "34.9MB"
       },
       {
         "id": "perf.viewport",
@@ -309,8 +308,7 @@
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "2 console error(s): Failed to load resource: the server responded with a status of 403 ()"
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
@@ -421,7 +419,7 @@
     "screenshot": {
       "desktop": "govt-polytechnic-college-chelakkara.webp",
       "mobile": "govt-polytechnic-college-chelakkara-m.webp",
-      "phash": "787e7e7c20027e7e"
+      "phash": "fffee00000400000"
     },
     "outlinks": [
       {
@@ -495,10 +493,10 @@
     ]
   },
   "score": {
-    "overall": 54,
+    "overall": 57,
     "security": 48,
-    "accessibility": 46,
-    "content": 52,
+    "accessibility": 56,
+    "content": 56,
     "gigw": 32,
     "performance": 76,
     "identity": 100
@@ -513,7 +511,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "2 critical violation(s)"
+      "ev": "1 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -536,12 +534,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "17 serious violation(s)"
-    },
-    {
-      "id": "a11y.alt",
-      "sev": "M",
-      "ev": "1 image(s) missing alt text"
+      "ev": "18 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -567,12 +560,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7190.905ms"
+      "ev": "6948.0265ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "35.5MB"
+      "ev": "34.9MB"
     },
     {
       "id": "sec.csp",
@@ -589,16 +582,11 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "65 moderate/minor violation(s)"
+      "ev": "64 moderate/minor violation(s)"
     },
     {
       "id": "content.meta_desc",
       "sev": "L"
-    },
-    {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "2 console error(s): Failed to load resource: the server responded with a status of 403 ()"
     },
     {
       "id": "gigw.terms",
@@ -638,6 +626,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-07",
+      "up": true,
+      "score": 57
+    },
     {
       "d": "2026-11-06",
       "up": true,
@@ -844,5 +837,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

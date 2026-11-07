@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-06T02:15:29.020Z",
-    "run": "1793931286273",
+    "at": "2026-11-07T01:37:06.722Z",
+    "run": "1794015382916",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 34,
+      "performance": 30,
       "accessibility": 86,
       "best_practices": 88,
       "seo": 77
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 26
+      "broken": 0
     },
     "tech": {
       "cms": "WordPress 6.9.10",
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "34/100"
+        "ev": "30/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "24271.422499999993ms"
+        "ev": "24710.585000000006ms"
       },
       {
         "id": "perf.cls",
@@ -279,8 +279,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "26/30 crawled link(s) broken (https://jntbgri.res.in/about-jntbgri/, https://jntbgri.res.in/director-message/, https://jntbgri.res.in/previous-directors/, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -503,10 +502,10 @@
     ]
   },
   "score": {
-    "overall": 53,
+    "overall": 56,
     "security": 48,
     "accessibility": 70,
-    "content": 28,
+    "content": 48,
     "gigw": 12,
     "performance": 71,
     "identity": 100
@@ -527,11 +526,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-element"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "26/30 crawled link(s) broken (https://jntbgri.res.in/about-jntbgri/, https://jntbgri.res.in/director-message/, https://jntbgri.res.in/previous-directors/, ...)"
     },
     {
       "id": "gigw.rti",
@@ -574,7 +568,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "24271.422499999993ms"
+      "ev": "24710.585000000006ms"
     },
     {
       "id": "perf.weight",
@@ -669,6 +663,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-07",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-11-06",
       "up": true,
@@ -900,5 +899,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

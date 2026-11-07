@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-06T01:46:38.297Z",
-    "run": "1793929536769",
+    "at": "2026-11-07T01:05:42.018Z",
+    "run": "1794013455001",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 36,
+      "performance": 47,
       "accessibility": 96,
       "best_practices": 46,
       "seo": 83
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 3
     },
     "tech": {
       "cms": null,
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "36/100"
+        "ev": "47/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "22704.187499999996ms"
+        "ev": "7908.159000000001ms"
       },
       {
         "id": "perf.cls",
@@ -279,7 +279,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3/30 crawled link(s) broken (https://trivandrum.nic.in/en/district-collector-district-magistrate/, https://trivandrum.nic.in/en/tehsil/neyyattinkara/, https://trivandrum.nic.in/en/tehsil/kattakada/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -419,7 +420,7 @@
     "screenshot": {
       "desktop": "d-thiruvananthapuram.webp",
       "mobile": "d-thiruvananthapuram-m.webp",
-      "phash": "ffff403900007fff"
+      "phash": "fffffb000000ffff"
     },
     "outlinks": [
       {
@@ -440,9 +441,9 @@
         "host": "s3waas.gov.in",
         "count": 31,
         "texts": [
+          "05/11/2026-02",
           "05/11/2026-01",
-          "04/11/2026-01",
-          "03/11/2026-02"
+          "04/11/2026-01"
         ]
       },
       {
@@ -490,10 +491,10 @@
     ]
   },
   "score": {
-    "overall": 62,
+    "overall": 60,
     "security": 48,
     "accessibility": 60,
-    "content": 56,
+    "content": 46,
     "gigw": 60,
     "performance": 76,
     "identity": 96
@@ -521,6 +522,11 @@
       "ev": "ml-IN"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "3/30 crawled link(s) broken (https://trivandrum.nic.in/en/district-collector-district-magistrate/, https://trivandrum.nic.in/en/tehsil/neyyattinkara/, https://trivandrum.nic.in/en/tehsil/kattakada/)"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -544,7 +550,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "22704.187499999996ms"
+      "ev": "7908.159000000001ms"
     },
     {
       "id": "perf.weight",
@@ -618,6 +624,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-07",
+      "up": true,
+      "score": 60
+    },
     {
       "d": "2026-11-06",
       "up": true,
@@ -844,5 +855,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
