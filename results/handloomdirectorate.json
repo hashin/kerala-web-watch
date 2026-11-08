@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-07T01:23:30.951Z",
-    "run": "1794014531971",
+    "at": "2026-11-08T01:06:13.059Z",
+    "run": "1794099897125",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 31,
+      "performance": 30,
       "accessibility": 89,
       "best_practices": 73,
       "seo": 62
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3180ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -220,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "31/100"
+        "ev": "30/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "31372.809999999998ms"
+        "ev": "28330.011000000006ms"
       },
       {
         "id": "perf.cls",
@@ -502,6 +503,11 @@
       "ev": "2/30 crawled link(s) broken (https://handsum.kerala.gov.in/, https://dhtschemes.kerala.gov.in/)"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3180ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -543,7 +549,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "31372.809999999998ms"
+      "ev": "28330.011000000006ms"
     },
     {
       "id": "perf.weight",
@@ -624,6 +630,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-08",
+      "up": true,
+      "score": 48
+    },
     {
       "d": "2026-11-07",
       "up": true,
@@ -860,5 +871,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

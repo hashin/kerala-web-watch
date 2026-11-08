@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-07T01:28:15.801Z",
-    "run": "1794014834713",
+    "at": "2026-11-08T01:15:40.265Z",
+    "run": "1794100479245",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 31,
-      "accessibility": 80,
+      "performance": 33,
+      "accessibility": 84,
       "best_practices": 88,
       "seo": 85
     },
@@ -111,7 +111,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
@@ -140,7 +140,7 @@
       },
       {
         "id": "sec.xfo",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.xcto",
@@ -215,17 +215,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "80/100"
+        "ev": "84/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "31/100"
+        "ev": "33/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8384.844000000001ms"
+        "ev": "7639.539000000001ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "112.8MB"
+        "ev": "112.0MB"
       },
       {
         "id": "perf.viewport",
@@ -384,11 +384,11 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "29 days left"
+        "ev": "28 days left"
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.robots",
@@ -454,20 +454,16 @@
     ]
   },
   "score": {
-    "overall": 44,
-    "security": 8,
+    "overall": 52,
+    "security": 38,
     "accessibility": 70,
     "content": 52,
     "gigw": 26,
     "performance": 72,
-    "identity": 52
+    "identity": 56
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.http_redirect",
-      "sev": "H"
-    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -500,14 +496,10 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "29 days left"
+      "ev": "28 days left"
     },
     {
       "id": "sec.hsts",
-      "sev": "M"
-    },
-    {
-      "id": "sec.xfo",
       "sev": "M"
     },
     {
@@ -535,12 +527,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8384.844000000001ms"
+      "ev": "7639.539000000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "112.8MB"
+      "ev": "112.0MB"
     },
     {
       "id": "sec.csp",
@@ -612,10 +604,6 @@
       "sev": "L"
     },
     {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
       "id": "id.soft_404",
       "sev": "L",
       "ev": "a nonexistent path returned 200"
@@ -627,6 +615,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-08",
+      "up": true,
+      "score": 52
+    },
     {
       "d": "2026-11-07",
       "up": true,
@@ -863,5 +856,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

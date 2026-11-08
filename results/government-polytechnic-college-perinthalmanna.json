@@ -35,29 +35,29 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-09T01:44:35.095Z",
-    "run": "1791510260739",
+    "at": "2026-11-08T01:15:22.514Z",
+    "run": "1794100497339",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 73,
-      "accessibility": 87,
-      "best_practices": 96,
-      "seo": 91
+      "performance": 57,
+      "accessibility": 96,
+      "best_practices": 81,
+      "seo": 100
     },
     "axe": {
       "critical": 0,
       "serious": 1,
-      "moderate": 17,
+      "moderate": 1,
       "minor": 0
     },
     "crawl": {
-      "pages": 9,
+      "pages": 20,
       "pdfs": 0,
       "broken": 0
     },
     "tech": {
       "cms": null,
-      "server": "Vercel",
+      "server": "cloudflare",
       "jquery": null
     },
     "checks": [
@@ -107,7 +107,8 @@
       },
       {
         "id": "sec.https",
-        "r": "pass"
+        "r": "fail",
+        "ev": "http://www.gptcperinthalmanna.in"
       },
       {
         "id": "sec.http_redirect",
@@ -127,11 +128,11 @@
       },
       {
         "id": "sec.hsts",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.mixed_content",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.csp",
@@ -155,8 +156,7 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "fail",
-        "ev": "nextjs 14.2.26"
+        "r": "pass"
       },
       {
         "id": "sec.safe_browsing",
@@ -178,7 +178,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "17 moderate/minor violation(s)"
+        "ev": "1 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -190,13 +190,11 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "1 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
-        "r": "fail",
-        "ev": "heading levels skipped"
+        "r": "pass"
       },
       {
         "id": "a11y.labels",
@@ -208,30 +206,32 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "pass"
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "87/100"
+        "ev": "96/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "73/100"
+        "ev": "57/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "fail",
+        "ev": "14244.833999999997ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.43"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4.1MB"
       },
       {
         "id": "perf.viewport",
@@ -247,8 +247,7 @@
       },
       {
         "id": "content.copyright_year",
-        "r": "fail",
-        "ev": "copyright year 2021"
+        "r": "pass"
       },
       {
         "id": "content.last_updated",
@@ -266,7 +265,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-"
+        "ev": "ml-sections"
       },
       {
         "id": "content.obsolete_tech",
@@ -306,8 +305,7 @@
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "3 console error(s): Failed to load resource: the server responded with a status of 500 ()"
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
@@ -371,7 +369,7 @@
       },
       {
         "id": "gigw.emblem",
-        "r": "pass"
+        "r": "warn"
       },
       {
         "id": "id.gov_domain",
@@ -388,13 +386,11 @@
       },
       {
         "id": "id.robots",
-        "r": "fail",
-        "ev": "robots.txt returned 404"
+        "r": "pass"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 404"
+        "r": "pass"
       },
       {
         "id": "id.soft_404",
@@ -402,7 +398,7 @@
       },
       {
         "id": "id.canonical",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.charset_doctype",
@@ -414,20 +410,31 @@
       },
       {
         "id": "id.third_party",
-        "r": "pass"
+        "r": "warn",
+        "ev": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
       }
     ],
     "screenshot": {
       "desktop": "government-polytechnic-college-perinthalmanna.webp",
       "mobile": "government-polytechnic-college-perinthalmanna-m.webp",
-      "phash": "ffff18000010ffdf"
+      "phash": "3fff030303f7ffff"
     },
     "outlinks": [
       {
-        "host": "aicte-india.org",
+        "host": "youtube.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "linkedin.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "aicte.gov.in",
         "count": 1,
         "texts": [
-          "AICTE - All india council for Technical Education"
+          "AICTE - All India Council for Technical Education"
         ]
       },
       {
@@ -438,10 +445,24 @@
         ]
       },
       {
+        "host": "sitttrkerala.ac.in",
+        "count": 1,
+        "texts": [
+          "SITTR - State Institute of Technical Teachers Training & Research"
+        ]
+      },
+      {
+        "host": "dtekerala.gov.in",
+        "count": 1,
+        "texts": [
+          "DTE Kerala - Department of Technical Education Kerala"
+        ]
+      },
+      {
         "host": "polyadmission.org",
         "count": 1,
         "texts": [
-          "Poly Admision - Single window Polytechnic admission portal"
+          "Poly Admission - Single window Polytechnic admission portal"
         ]
       },
       {
@@ -453,21 +474,13 @@
       }
     ]
   },
-  "score": {
-    "overall": 57,
-    "security": 58,
-    "accessibility": 72,
-    "content": 46,
-    "gigw": 12,
-    "performance": 82,
-    "identity": 72
-  },
-  "status": "needs-work",
+  "score": null,
+  "status": "broken",
   "issues": [
     {
-      "id": "sec.vuln_js",
-      "sev": "H",
-      "ev": "nextjs 14.2.26"
+      "id": "sec.https",
+      "sev": "C",
+      "ev": "http://www.gptcperinthalmanna.in"
     },
     {
       "id": "content.last_updated",
@@ -477,7 +490,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-"
+      "ev": "ml-sections"
     },
     {
       "id": "gigw.rti",
@@ -489,6 +502,10 @@
       "ev": "www.gptcperinthalmanna.in"
     },
     {
+      "id": "sec.hsts",
+      "sev": "M"
+    },
+    {
       "id": "sec.xfo",
       "sev": "M"
     },
@@ -496,16 +513,6 @@
       "id": "a11y.axe_serious",
       "sev": "M",
       "ev": "1 serious violation(s)"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "1 low-contrast element(s)"
-    },
-    {
-      "id": "content.copyright_year",
-      "sev": "M",
-      "ev": "copyright year 2021"
     },
     {
       "id": "gigw.sitemap",
@@ -522,6 +529,16 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "14244.833999999997ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "4.1MB"
     },
     {
       "id": "perf.tap_targets",
@@ -542,17 +559,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "17 moderate/minor violation(s)"
+      "ev": "1 moderate/minor violation(s)"
     },
     {
-      "id": "a11y.headings",
+      "id": "a11y.keyboard",
       "sev": "L",
-      "ev": "heading levels skipped"
-    },
-    {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "3 console error(s): Failed to load resource: the server responded with a status of 500 ()"
+      "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
       "id": "gigw.feedback",
@@ -583,30 +595,25 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.43"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
     {
-      "id": "id.robots",
-      "sev": "L",
-      "ev": "robots.txt returned 404"
-    },
-    {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 404"
-    },
-    {
-      "id": "id.canonical",
+      "id": "gigw.emblem",
       "sev": "I"
+    },
+    {
+      "id": "id.third_party",
+      "sev": "I",
+      "ev": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-08",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-07",
       "up": true,
@@ -818,5 +825,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

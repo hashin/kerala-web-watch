@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-04T01:52:23.359Z",
-    "run": "1793757096941",
+    "at": "2026-11-08T01:09:31.721Z",
+    "run": "1794100109430",
     "vantage": "gh-us",
     "lighthouse": null,
     "axe": {
@@ -48,7 +48,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -271,7 +271,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://plan.lsgkerala.gov.in/formulation/Public.aspx)"
       },
       {
         "id": "content.broken_pdfs",
@@ -560,6 +561,11 @@
       "ev": "ml-user"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://plan.lsgkerala.gov.in/formulation/Public.aspx)"
+    },
+    {
       "id": "gigw.rti",
       "sev": "H"
     },
@@ -660,6 +666,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-08",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-07",
       "up": false,
@@ -891,5 +902,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

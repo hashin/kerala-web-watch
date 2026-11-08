@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-07T01:11:48.188Z",
-    "run": "1794013817294",
+    "at": "2026-11-08T00:53:20.730Z",
+    "run": "1794099114399",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 48,
+      "accessibility": 79,
+      "best_practices": 88,
+      "seo": 85
     },
     "axe": {
       "critical": 2,
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "4092ms"
+        "ev": "4186ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -217,20 +217,21 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "79/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "48/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "36025.9375ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -311,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "8 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+        "ev": "7 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
       },
       {
         "id": "gigw.contact",
@@ -464,12 +465,12 @@
     ]
   },
   "score": {
-    "overall": 48,
+    "overall": 47,
     "security": 62,
     "accessibility": 40,
     "content": 32,
     "gigw": 0,
-    "performance": 81,
+    "performance": 71,
     "identity": 100
   },
   "status": "poor",
@@ -510,7 +511,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "4092ms"
+      "ev": "4186ms"
     },
     {
       "id": "sec.hsts",
@@ -546,6 +547,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "36025.9375ms"
     },
     {
       "id": "perf.weight",
@@ -586,7 +592,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "8 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      "ev": "7 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
     },
     {
       "id": "gigw.feedback",
@@ -622,6 +628,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-08",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-11-07",
       "up": true,
@@ -858,5 +869,5 @@
       "score": 48
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

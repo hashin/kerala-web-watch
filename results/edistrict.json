@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-07T01:12:40.342Z",
-    "run": "1794013908190",
+    "at": "2026-11-08T00:55:02.121Z",
+    "run": "1794099242489",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 82,
+      "performance": 79,
       "accessibility": 78,
       "best_practices": 69,
       "seo": 73
@@ -127,7 +127,7 @@
       },
       {
         "id": "sec.hsts",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.mixed_content",
@@ -220,7 +220,7 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "82/100"
+        "ev": "79/100"
       },
       {
         "id": "perf.lcp",
@@ -448,8 +448,8 @@
     ]
   },
   "score": {
-    "overall": 53,
-    "security": 72,
+    "overall": 51,
+    "security": 62,
     "accessibility": 42,
     "content": 26,
     "gigw": 22,
@@ -486,6 +486,10 @@
     {
       "id": "gigw.rti",
       "sev": "H"
+    },
+    {
+      "id": "sec.hsts",
+      "sev": "M"
     },
     {
       "id": "a11y.axe_serious",
@@ -607,6 +611,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-08",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-11-07",
       "up": true,
@@ -843,5 +852,5 @@
       "score": 51
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

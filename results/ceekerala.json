@@ -37,25 +37,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-07T01:13:31.552Z",
-    "run": "1794013964893",
+    "at": "2026-11-08T01:01:46.490Z",
+    "run": "1794099665563",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 59,
-      "accessibility": 69,
+      "performance": 58,
+      "accessibility": 62,
       "best_practices": 96,
       "seo": 91
     },
     "axe": {
-      "critical": 1,
-      "serious": 8,
+      "critical": 2,
+      "serious": 7,
       "moderate": 11,
       "minor": 0
     },
     "crawl": {
-      "pages": 29,
+      "pages": 24,
       "pdfs": 7,
-      "broken": 2
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -122,7 +122,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "23 days left"
+        "ev": "22 days left"
       },
       {
         "id": "sec.tls_version",
@@ -171,12 +171,12 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "1 critical violation(s)"
+        "ev": "2 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "8 serious violation(s)"
+        "ev": "7 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -185,7 +185,8 @@
       },
       {
         "id": "a11y.lang",
-        "r": "pass"
+        "r": "fail",
+        "ev": "<html lang=\"en\"> vs. 120% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -194,7 +195,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "7 low-contrast element(s)"
+        "ev": "6 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -216,17 +217,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "69/100"
+        "ev": "62/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "59/100"
+        "ev": "58/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8409.551ms"
+        "ev": "8124.781999999999ms"
       },
       {
         "id": "perf.cls",
@@ -281,7 +282,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "2/29 crawled link(s) broken (https://cee.kerala.gov.in/pga2026/, https://cee.kerala.gov.in/mdhonline2026/)"
+        "ev": "1/24 crawled link(s) broken (https://cee.kerala.gov.in/mdhonline2026/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -435,9 +436,9 @@
     ]
   },
   "score": {
-    "overall": 57,
+    "overall": 52,
     "security": 66,
-    "accessibility": 52,
+    "accessibility": 32,
     "content": 38,
     "gigw": 28,
     "performance": 86,
@@ -452,12 +453,17 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "23 days left"
+      "ev": "22 days left"
     },
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "1 critical violation(s)"
+      "ev": "2 critical violation(s)"
+    },
+    {
+      "id": "a11y.lang",
+      "sev": "H",
+      "ev": "<html lang=\"en\"> vs. 120% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -472,17 +478,17 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "2/29 crawled link(s) broken (https://cee.kerala.gov.in/pga2026/, https://cee.kerala.gov.in/mdhonline2026/)"
+      "ev": "1/24 crawled link(s) broken (https://cee.kerala.gov.in/mdhonline2026/)"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "8 serious violation(s)"
+      "ev": "7 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "7 low-contrast element(s)"
+      "ev": "6 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -503,7 +509,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8409.551ms"
+      "ev": "8124.781999999999ms"
     },
     {
       "id": "sec.referrer",
@@ -592,6 +598,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-08",
+      "up": true,
+      "score": 52
+    },
     {
       "d": "2026-11-07",
       "up": true,
@@ -828,5 +839,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

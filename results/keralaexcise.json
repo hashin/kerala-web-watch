@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-07T01:24:38.605Z",
-    "run": "1794014649471",
+    "at": "2026-11-08T01:03:34.957Z",
+    "run": "1794099767837",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 54,
+      "performance": 53,
       "accessibility": 88,
       "best_practices": 100,
       "seo": 92
@@ -51,7 +51,7 @@
       "minor": 0
     },
     "crawl": {
-      "pages": 13,
+      "pages": 14,
       "pdfs": 0,
       "broken": 2
     },
@@ -184,7 +184,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 95% Malayalam content"
+        "ev": "<html lang=\"en\"> vs. 93% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "54/100"
+        "ev": "53/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "28657.872ms"
+        "ev": "19966.755ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +233,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "12.5MB"
+        "ev": "13.0MB"
       },
       {
         "id": "perf.viewport",
@@ -280,7 +280,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "2/13 crawled link(s) broken (https://services.keralaexcise.gov.in/, https://fleet.keralaexcise.gov.in/)"
+        "ev": "2/14 crawled link(s) broken (https://services.keralaexcise.gov.in/, https://fleet.keralaexcise.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -424,9 +424,10 @@
     "outlinks": [
       {
         "host": "google.com",
-        "count": 1,
+        "count": 2,
         "texts": [
-          "ഹലോ എക്സൈസ്\n                    \n\n                    \n                    \n                        \n                            More Details"
+          "ഹലോ എക്സൈസ്\n                    \n\n                    \n                    \n                        \n                            More Details",
+          "എക്സ്പിയർ\n                    \n\n                    \n                    \n                        \n                            More Details"
         ]
       },
       {
@@ -534,7 +535,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 95% Malayalam content"
+      "ev": "<html lang=\"en\"> vs. 93% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -549,7 +550,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "2/13 crawled link(s) broken (https://services.keralaexcise.gov.in/, https://fleet.keralaexcise.gov.in/)"
+      "ev": "2/14 crawled link(s) broken (https://services.keralaexcise.gov.in/, https://fleet.keralaexcise.gov.in/)"
     },
     {
       "id": "a11y.axe_serious",
@@ -571,12 +572,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "28657.872ms"
+      "ev": "19966.755ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "12.5MB"
+      "ev": "13.0MB"
     },
     {
       "id": "perf.tap_targets",
@@ -639,6 +640,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-08",
+      "up": true,
+      "score": 60
+    },
     {
       "d": "2026-11-07",
       "up": true,
@@ -870,5 +876,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

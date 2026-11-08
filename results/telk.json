@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-06T01:54:11.592Z",
-    "run": "1793930017632",
+    "at": "2026-11-08T01:01:05.562Z",
+    "run": "1794099626707",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 77,
+      "performance": 82,
       "accessibility": 51,
       "best_practices": 69,
       "seo": 75
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 22,
       "pdfs": 3,
-      "broken": 2
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4825ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -221,7 +222,7 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "77/100"
+        "ev": "82/100"
       },
       {
         "id": "perf.lcp",
@@ -281,7 +282,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "2/22 crawled link(s) broken (http://mail.telk.com/, https://www.telk.com/Userfiles/Supplier/VendorCapabilityReport.doc)"
+        "ev": "1/22 crawled link(s) broken (https://www.telk.com/Userfiles/Supplier/VendorCapabilityReport.doc)"
       },
       {
         "id": "content.broken_pdfs",
@@ -483,7 +484,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "2/22 crawled link(s) broken (http://mail.telk.com/, https://www.telk.com/Userfiles/Supplier/VendorCapabilityReport.doc)"
+      "ev": "1/22 crawled link(s) broken (https://www.telk.com/Userfiles/Supplier/VendorCapabilityReport.doc)"
     },
     {
       "id": "gigw.contact",
@@ -497,6 +498,11 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "www.telk.com"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "4825ms"
     },
     {
       "id": "sec.hsts",
@@ -622,6 +628,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-08",
+      "up": true,
+      "score": 40
+    },
     {
       "d": "2026-11-07",
       "up": true,
@@ -818,5 +829,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

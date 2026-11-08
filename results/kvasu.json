@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-05T01:57:05.831Z",
-    "run": "1793843759052",
+    "at": "2026-11-08T01:06:02.834Z",
+    "run": "1794099890182",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 27,
@@ -97,7 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3112ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -121,7 +122,8 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "warn",
+        "ev": "29 days left"
       },
       {
         "id": "sec.tls_version",
@@ -228,7 +230,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "46106.565ms"
+        "ev": "46882.86ms"
       },
       {
         "id": "perf.cls",
@@ -463,16 +465,21 @@
     ]
   },
   "score": {
-    "overall": 51,
-    "security": 52,
+    "overall": 48,
+    "security": 42,
     "accessibility": 42,
     "content": 42,
     "gigw": 26,
     "performance": 76,
     "identity": 96
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
+    {
+      "id": "sec.cert_expiry",
+      "sev": "H",
+      "ev": "29 days left"
+    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -497,6 +504,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3112ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -541,7 +553,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "46106.565ms"
+      "ev": "46882.86ms"
     },
     {
       "id": "perf.weight",
@@ -617,6 +629,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-08",
+      "up": true,
+      "score": 48
+    },
     {
       "d": "2026-11-07",
       "up": true,
@@ -848,5 +865,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

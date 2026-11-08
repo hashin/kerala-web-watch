@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-07T01:08:23.315Z",
-    "run": "1794013515985",
+    "at": "2026-11-08T00:56:24.309Z",
+    "run": "1794099112706",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 31,
+      "performance": 29,
       "accessibility": 81,
       "best_practices": 73,
       "seo": 62
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 3,
-      "broken": 16
+      "broken": 0
     },
     "tech": {
       "cms": "WordPress 5.0.31",
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "5978ms"
+        "ev": "6028ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "31/100"
+        "ev": "29/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "17218.737499999996ms"
+        "ev": "17228.849ms"
       },
       {
         "id": "perf.cls",
@@ -283,8 +283,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "16/30 crawled link(s) broken (https://dhs.kerala.gov.in/en/%e0%b4%9c%e0%b4%be%e0%b4%97%e0%b5%8d%e0%b4%b0%e0%b4%a4-%e0%b4%a8%e0%b4%bf%e0%b4%b0%e0%b5%8d%e2%80%8d%e0%b4%a6%e0%b5%87%e0%b4%b6%e0%b4%99%e0%b5%8d%e0%b4%99%e0%b4%b3%e0%b5%8d%e2%80%8d/, https://dhs.kerala.gov.in/en/posters/, https://dhs.kerala.gov.in/en/route-map/, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -313,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/f5321ed3/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "2 console error(s): Access to fetch at 'https://www.youtube.com/s/player/a5c2aafe/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -455,10 +454,10 @@
     ]
   },
   "score": {
-    "overall": 44,
+    "overall": 47,
     "security": 46,
     "accessibility": 44,
-    "content": 32,
+    "content": 52,
     "gigw": 12,
     "performance": 62,
     "identity": 91
@@ -491,18 +490,13 @@
       "ev": "ml-IN"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "16/30 crawled link(s) broken (https://dhs.kerala.gov.in/en/%e0%b4%9c%e0%b4%be%e0%b4%97%e0%b5%8d%e0%b4%b0%e0%b4%a4-%e0%b4%a8%e0%b4%bf%e0%b4%b0%e0%b5%8d%e2%80%8d%e0%b4%a6%e0%b5%87%e0%b4%b6%e0%b4%99%e0%b5%8d%e0%b4%99%e0%b4%b3%e0%b5%8d%e2%80%8d/, https://dhs.kerala.gov.in/en/posters/, https://dhs.kerala.gov.in/en/route-map/, ...)"
-    },
-    {
       "id": "gigw.contact",
       "sev": "H"
     },
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "5978ms"
+      "ev": "6028ms"
     },
     {
       "id": "sec.hsts",
@@ -542,7 +536,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "17218.737499999996ms"
+      "ev": "17228.849ms"
     },
     {
       "id": "perf.weight",
@@ -579,7 +573,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/f5321ed3/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "2 console error(s): Access to fetch at 'https://www.youtube.com/s/player/a5c2aafe/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -629,6 +623,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-08",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-11-07",
       "up": true,
@@ -865,5 +864,5 @@
       "score": 45
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

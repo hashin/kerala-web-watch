@@ -35,13 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-07T01:15:39.182Z",
-    "run": "1794013992368",
+    "at": "2026-11-08T01:00:12.604Z",
+    "run": "1794099461599",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 51,
-      "accessibility": 90,
-      "best_practices": 92,
+      "performance": 30,
+      "accessibility": 81,
+      "best_practices": 73,
       "seo": 69
     },
     "axe": {
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "3217ms"
+        "ev": "4056ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -133,7 +133,7 @@
       {
         "id": "sec.mixed_content",
         "r": "fail",
-        "ev": "href=\"http://www.planspace.kerala.gov.in/\""
+        "ev": "href=\"http://spb.kerala.gov.in\""
       },
       {
         "id": "sec.csp",
@@ -218,17 +218,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "90/100"
+        "ev": "81/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "51/100"
+        "ev": "30/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "40285.59949999997ms"
+        "ev": "48239.698000000004ms"
       },
       {
         "id": "perf.cls",
@@ -245,7 +245,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -479,12 +479,12 @@
     ]
   },
   "score": {
-    "overall": 46,
+    "overall": 45,
     "security": 32,
     "accessibility": 40,
     "content": 34,
     "gigw": 32,
-    "performance": 76,
+    "performance": 66,
     "identity": 100
   },
   "status": "poor",
@@ -496,7 +496,7 @@
     {
       "id": "sec.mixed_content",
       "sev": "H",
-      "ev": "href=\"http://www.planspace.kerala.gov.in/\""
+      "ev": "href=\"http://spb.kerala.gov.in\""
     },
     {
       "id": "sec.vuln_js",
@@ -526,7 +526,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "3217ms"
+      "ev": "4056ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -562,12 +562,16 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "40285.59949999997ms"
+      "ev": "48239.698000000004ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
       "ev": "19.0MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.xcto",
@@ -644,6 +648,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-08",
+      "up": true,
+      "score": 45
+    },
     {
       "d": "2026-11-07",
       "up": true,
@@ -880,5 +889,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

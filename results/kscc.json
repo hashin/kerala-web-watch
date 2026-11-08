@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-07T01:38:50.733Z",
-    "run": "1794015482571",
+    "at": "2026-11-08T01:22:25.644Z",
+    "run": "1794100899688",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 8,
+      "performance": 13,
       "accessibility": 90,
       "best_practices": 77,
-      "seo": 85
+      "seo": 92
     },
     "axe": {
       "critical": 3,
@@ -219,17 +219,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "8/100"
+        "ev": "13/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7271.137400000001ms"
+        "ev": "6073.453ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.51"
+        "ev": "0.56"
       },
       {
         "id": "perf.weight",
@@ -381,7 +381,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "22 days left"
+        "ev": "21 days left"
       },
       {
         "id": "id.www_consistency",
@@ -463,7 +463,7 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "22 days left"
+      "ev": "21 days left"
     },
     {
       "id": "sec.hsts",
@@ -501,7 +501,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7271.137400000001ms"
+      "ev": "6073.453ms"
     },
     {
       "id": "sec.csp",
@@ -569,7 +569,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.51"
+      "ev": "0.56"
     },
     {
       "id": "perf.images",
@@ -577,6 +577,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-08",
+      "up": true,
+      "score": 52
+    },
     {
       "d": "2026-11-07",
       "up": true,
@@ -813,5 +818,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

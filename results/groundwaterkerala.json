@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-07T01:30:23.249Z",
-    "run": "1794014980233",
+    "at": "2026-11-08T01:19:02.161Z",
+    "run": "1794100667062",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 32,
+      "accessibility": 88,
+      "best_practices": 69,
+      "seo": 62
+    },
     "axe": {
       "critical": 0,
       "serious": 12,
@@ -208,24 +213,28 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "88/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "32/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "16266.274250000006ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.81"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "3.2MB"
+        "ev": "6.0MB"
       },
       {
         "id": "perf.viewport",
@@ -233,11 +242,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -300,7 +309,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "3 console error(s): Failed to load resource: net::ERR_CERT_COMMON_NAME_INVALID"
+        "ev": "5 console error(s): Failed to load resource: the server responded with a status of 400 ()"
       },
       {
         "id": "gigw.contact",
@@ -463,12 +472,12 @@
     ]
   },
   "score": {
-    "overall": 63,
+    "overall": 61,
     "security": 62,
     "accessibility": 70,
     "content": 52,
     "gigw": 18,
-    "performance": 95,
+    "performance": 77,
     "identity": 100
   },
   "status": "needs-work",
@@ -523,9 +532,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "16266.274250000006ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "3.2MB"
+      "ev": "6.0MB"
     },
     {
       "id": "sec.xcto",
@@ -557,7 +571,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "3 console error(s): Failed to load resource: net::ERR_CERT_COMMON_NAME_INVALID"
+      "ev": "5 console error(s): Failed to load resource: the server responded with a status of 400 ()"
     },
     {
       "id": "gigw.feedback",
@@ -592,11 +606,25 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.81"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "gigw.emblem",
       "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-08",
+      "up": true,
+      "score": 61
+    },
     {
       "d": "2026-11-07",
       "up": true,
@@ -828,5 +856,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
