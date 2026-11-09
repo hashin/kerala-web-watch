@@ -35,13 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-08T01:11:46.324Z",
-    "run": "1794100190523",
+    "at": "2026-11-09T01:23:08.243Z",
+    "run": "1794187258486",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 35,
+      "performance": 31,
       "accessibility": 84,
-      "best_practices": 88,
+      "best_practices": 92,
       "seo": 92
     },
     "axe": {
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3420ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -219,22 +220,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "35/100"
+        "ev": "31/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "41396.285999999986ms"
+        "ev": "42564.30599999988ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.45"
+        "ev": "0.92"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "54.5MB"
+        "ev": "57.5MB"
       },
       {
         "id": "perf.viewport",
@@ -489,6 +490,11 @@
       "ev": "pravasikerala.org"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3420ms"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
       "ev": "24 serious violation(s)"
@@ -514,12 +520,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "41396.285999999986ms"
+      "ev": "42564.30599999988ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "54.5MB"
+      "ev": "57.5MB"
     },
     {
       "id": "sec.csp",
@@ -562,7 +568,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.45"
+      "ev": "0.92"
     },
     {
       "id": "perf.images",
@@ -588,6 +594,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-09",
+      "up": true,
+      "score": 68
+    },
     {
       "d": "2026-11-08",
       "up": true,
@@ -829,5 +840,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

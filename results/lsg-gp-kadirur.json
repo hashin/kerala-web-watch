@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-21T00:35:17.701Z",
-    "run": "1792542870068",
+    "at": "2026-11-09T01:44:45.723Z",
+    "run": "1794188633970",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 60,
+      "performance": 59,
       "accessibility": 86,
       "best_practices": 78,
       "seo": 92
     },
     "axe": {
       "critical": 1,
-      "serious": 15,
+      "serious": 16,
       "moderate": 28,
       "minor": 1
     },
     "crawl": {
       "pages": 30,
       "pdfs": 1,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -175,7 +175,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "15 serious violation(s)"
+        "ev": "16 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -194,7 +194,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "7 low-contrast element(s)"
+        "ev": "8 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "60/100"
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10615.484500000002ms"
+        "ev": "10722.821499999998ms"
       },
       {
         "id": "perf.cls",
@@ -286,7 +286,8 @@
       },
       {
         "id": "content.broken_pdfs",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 linked PDF(s) 404: https://go.lsgkerala.gov.in/files/gz20191108_24872.pdf"
       },
       {
         "id": "content.broken_images",
@@ -422,7 +423,7 @@
     "screenshot": {
       "desktop": "lsg-gp-kadirur.webp",
       "mobile": "lsg-gp-kadirur-m.webp",
-      "phash": "ff1c00107000ffff"
+      "phash": "ff3f0c10700000ff"
     },
     "outlinks": [
       {
@@ -564,7 +565,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "15 serious violation(s)"
+      "ev": "16 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -574,7 +575,12 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "7 low-contrast element(s)"
+      "ev": "8 low-contrast element(s)"
+    },
+    {
+      "id": "content.broken_pdfs",
+      "sev": "M",
+      "ev": "1 linked PDF(s) 404: https://go.lsgkerala.gov.in/files/gz20191108_24872.pdf"
     },
     {
       "id": "gigw.sitemap",
@@ -591,7 +597,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10615.484500000002ms"
+      "ev": "10722.821499999998ms"
     },
     {
       "id": "perf.weight",
@@ -668,6 +674,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-09",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-08",
       "up": false,
@@ -904,5 +915,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

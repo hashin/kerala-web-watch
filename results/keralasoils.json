@@ -29,15 +29,10 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-11-08T01:16:52.768Z",
-    "run": "1794100553111",
+    "at": "2026-11-09T01:35:07.334Z",
+    "run": "1794188062178",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 50,
-      "accessibility": 83,
-      "best_practices": 88,
-      "seo": 92
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 0,
       "serious": 10,
@@ -51,26 +46,25 @@
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "Apache",
       "jquery": null
     },
     "checks": [
       {
         "id": "avail.dns",
-        "r": "fail",
-        "ev": "keralasoils.gov.in did not resolve"
+        "r": "pass"
       },
       {
         "id": "avail.connect",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.status",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -90,7 +84,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -102,23 +96,23 @@
       },
       {
         "id": "sec.https",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.hsts",
@@ -126,7 +120,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "fail",
+        "ev": "href=\"http://www.sametikerala.com/\""
       },
       {
         "id": "sec.csp",
@@ -206,22 +201,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "83/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "50/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "9918.205999999995ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -234,11 +226,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -378,19 +370,20 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "id.robots",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "na"
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
       },
       {
         "id": "id.soft_404",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
@@ -469,13 +462,21 @@
       }
     ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 69,
+    "security": 62,
+    "accessibility": 74,
+    "content": 58,
+    "gigw": 52,
+    "performance": 95,
+    "identity": 92
+  },
+  "status": "needs-work",
   "issues": [
     {
-      "id": "avail.dns",
-      "sev": "C",
-      "ev": "keralasoils.gov.in did not resolve"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://www.sametikerala.com/\""
     },
     {
       "id": "content.legacy_font",
@@ -508,11 +509,6 @@
     {
       "id": "gigw.ownership",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "9918.205999999995ms"
     },
     {
       "id": "perf.weight",
@@ -580,8 +576,13 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
+      "id": "id.www_consistency",
       "sev": "L"
+    },
+    {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 404"
     },
     {
       "id": "gigw.emblem",
@@ -589,6 +590,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-09",
+      "up": true,
+      "score": 69
+    },
     {
       "d": "2026-11-08",
       "up": false,
@@ -825,5 +831,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

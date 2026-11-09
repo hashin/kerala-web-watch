@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-08T01:10:58.583Z",
-    "run": "1794100216463",
+    "at": "2026-11-09T01:29:03.047Z",
+    "run": "1794187684597",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 22,
+      "performance": 39,
       "accessibility": 37,
       "best_practices": 77,
       "seo": 67
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -219,17 +219,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "22/100"
+        "ev": "39/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "24762.866ms"
+        "ev": "11946.368999999999ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.53"
+        "ev": "0.65"
       },
       {
         "id": "perf.weight",
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://www.oushadhi.org/blog/oushadhi-largest-producer-of-ayurvedic-medicines)"
       },
       {
         "id": "content.broken_pdfs",
@@ -454,10 +455,10 @@
     ]
   },
   "score": {
-    "overall": 45,
+    "overall": 44,
     "security": 48,
     "accessibility": 46,
-    "content": 38,
+    "content": 28,
     "gigw": 18,
     "performance": 62,
     "identity": 72
@@ -483,6 +484,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://www.oushadhi.org/blog/oushadhi-largest-producer-of-ayurvedic-medicines)"
     },
     {
       "id": "id.gov_domain",
@@ -540,7 +546,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "24762.866ms"
+      "ev": "11946.368999999999ms"
     },
     {
       "id": "perf.weight",
@@ -617,7 +623,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.53"
+      "ev": "0.65"
     },
     {
       "id": "perf.images",
@@ -647,6 +653,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-09",
+      "up": true,
+      "score": 44
+    },
     {
       "d": "2026-11-08",
       "up": true,
@@ -888,5 +899,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-02T01:05:00.181Z",
-    "run": "1793581449916",
+    "at": "2026-11-09T01:13:37.442Z",
+    "run": "1794186776590",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 62,
+      "performance": 57,
       "accessibility": 82,
       "best_practices": 96,
       "seo": 82
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "62/100"
+        "ev": "57/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "17458.051499999998ms"
+        "ev": "11245.884500000004ms"
       },
       {
         "id": "perf.cls",
@@ -387,7 +387,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -452,7 +452,7 @@
     "content": 34,
     "gigw": 18,
     "performance": 81,
-    "identity": 72
+    "identity": 68
   },
   "status": "needs-work",
   "issues": [
@@ -522,7 +522,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "17458.051499999998ms"
+      "ev": "11245.884500000004ms"
     },
     {
       "id": "perf.weight",
@@ -611,6 +611,10 @@
       "sev": "L"
     },
     {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
       "id": "id.robots",
       "sev": "L",
       "ev": "robots.txt returned 404"
@@ -630,6 +634,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-09",
+      "up": true,
+      "score": 50
+    },
     {
       "d": "2026-11-08",
       "up": true,
@@ -826,5 +835,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

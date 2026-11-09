@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-08T01:20:06.304Z",
-    "run": "1794100750790",
+    "at": "2026-11-09T01:34:28.703Z",
+    "run": "1794188023987",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 47,
-      "accessibility": 82,
-      "best_practices": 73,
+      "performance": 31,
+      "accessibility": 94,
+      "best_practices": 69,
       "seo": 85
     },
     "axe": {
       "critical": 3,
-      "serious": 2,
+      "serious": 3,
       "moderate": 4,
       "minor": 0
     },
@@ -174,7 +174,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "2 serious violation(s)"
+        "ev": "3 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -193,7 +193,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "1 low-contrast element(s)"
+        "ev": "2 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -217,21 +217,22 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "82/100"
+        "ev": "94/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "47/100"
+        "ev": "31/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "33598.510500000004ms"
+        "ev": "19173.604999999996ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.89"
       },
       {
         "id": "perf.weight",
@@ -244,7 +245,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -453,7 +454,7 @@
     "accessibility": 30,
     "content": 52,
     "gigw": 32,
-    "performance": 66,
+    "performance": 72,
     "identity": 100
   },
   "status": "poor",
@@ -489,7 +490,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "2 serious violation(s)"
+      "ev": "3 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -499,7 +500,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "1 low-contrast element(s)"
+      "ev": "2 low-contrast element(s)"
     },
     {
       "id": "a11y.labels",
@@ -525,16 +526,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "33598.510500000004ms"
+      "ev": "19173.604999999996ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
       "ev": "10.7MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -601,6 +598,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.89"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -610,6 +612,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-09",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-11-08",
       "up": true,
@@ -846,5 +853,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

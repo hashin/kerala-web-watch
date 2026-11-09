@@ -37,14 +37,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-08T01:06:02.834Z",
-    "run": "1794099890182",
+    "at": "2026-11-09T01:26:35.021Z",
+    "run": "1794187369373",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 27,
-      "accessibility": 77,
-      "best_practices": 96,
-      "seo": 75
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
     },
     "axe": {
       "critical": 11,
@@ -54,12 +54,12 @@
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 3,
+      "pdfs": 4,
       "broken": 0
     },
     "tech": {
       "cms": null,
-      "server": "Apache",
+      "server": null,
       "jquery": null
     },
     "checks": [
@@ -69,15 +69,16 @@
       },
       {
         "id": "avail.connect",
-        "r": "pass"
+        "r": "fail",
+        "ev": "timeout"
       },
       {
         "id": "avail.status",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.parked",
@@ -97,8 +98,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3112ms"
+        "r": "na"
       },
       {
         "id": "avail.geo_blocked",
@@ -110,7 +110,7 @@
       },
       {
         "id": "sec.https",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.http_redirect",
@@ -122,8 +122,7 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "29 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -135,8 +134,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://103.10.168.76/KSSSPLVE\""
+        "r": "na"
       },
       {
         "id": "sec.csp",
@@ -220,21 +218,20 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "77/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "27/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "46882.86ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -247,7 +244,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -390,7 +387,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.robots",
@@ -398,12 +395,11 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.soft_404",
-        "r": "fail",
-        "ev": "a nonexistent path returned 200"
+        "r": "na"
       },
       {
         "id": "id.canonical",
@@ -464,26 +460,13 @@
       }
     ]
   },
-  "score": {
-    "overall": 48,
-    "security": 42,
-    "accessibility": 42,
-    "content": 42,
-    "gigw": 26,
-    "performance": 76,
-    "identity": 96
-  },
-  "status": "poor",
+  "score": null,
+  "status": "down",
   "issues": [
     {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "29 days left"
-    },
-    {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://103.10.168.76/KSSSPLVE\""
+      "id": "avail.connect",
+      "sev": "C",
+      "ev": "timeout"
     },
     {
       "id": "sec.vuln_js",
@@ -504,11 +487,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3112ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -551,14 +529,13 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "46882.86ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "9.0MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -615,11 +592,6 @@
       "sev": "L"
     },
     {
-      "id": "id.soft_404",
-      "sev": "L",
-      "ev": "a nonexistent path returned 200"
-    },
-    {
       "id": "gigw.emblem",
       "sev": "I"
     },
@@ -629,6 +601,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-09",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-08",
       "up": true,
@@ -865,5 +842,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

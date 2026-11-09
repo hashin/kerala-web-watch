@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-08T00:59:03.433Z",
-    "run": "1794099531197",
+    "at": "2026-11-09T01:14:29.403Z",
+    "run": "1794186815270",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 100,
@@ -51,9 +51,9 @@
       "minor": 0
     },
     "crawl": {
-      "pages": 3,
+      "pages": 6,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -132,7 +132,7 @@
       {
         "id": "sec.mixed_content",
         "r": "fail",
-        "ev": "href=\"http://14.139.185.148/kms/\""
+        "ev": "href=\"http://www3.kuhs.ac.in/faculty\""
       },
       {
         "id": "sec.csp",
@@ -277,7 +277,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/6 crawled link(s) broken (https://kuhs.ac.in/kms)"
       },
       {
         "id": "content.broken_pdfs",
@@ -422,10 +423,10 @@
     "outlinks": []
   },
   "score": {
-    "overall": 54,
+    "overall": 53,
     "security": 58,
     "accessibility": 42,
-    "content": 72,
+    "content": 62,
     "gigw": 0,
     "performance": 96,
     "identity": 88
@@ -435,7 +436,7 @@
     {
       "id": "sec.mixed_content",
       "sev": "H",
-      "ev": "href=\"http://14.139.185.148/kms/\""
+      "ev": "href=\"http://www3.kuhs.ac.in/faculty\""
     },
     {
       "id": "a11y.axe_critical",
@@ -446,6 +447,11 @@
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/6 crawled link(s) broken (https://kuhs.ac.in/kms)"
     },
     {
       "id": "gigw.contact",
@@ -584,6 +590,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-09",
+      "up": true,
+      "score": 53
+    },
     {
       "d": "2026-11-08",
       "up": true,
@@ -830,5 +841,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-08T01:07:23.387Z",
-    "run": "1794099978541",
+    "at": "2026-11-09T01:19:16.298Z",
+    "run": "1794187099231",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 35,
+      "performance": 42,
       "accessibility": 47,
       "best_practices": 50,
       "seo": 85
@@ -158,7 +158,7 @@
       {
         "id": "sec.vuln_js",
         "r": "fail",
-        "ev": "jquery 1.11.0, jquery-migrate 1.2.1, bootstrap 4.0.0, jquery-ui 1.10.4, jquery-ui 1.10.4, jquery-ui 1.10.4, jquery-ui 1.10.4, jquery-ui 1.10.4"
+        "ev": "jquery 1.11.0, jquery-migrate 1.2.1, bootstrap 4.0.0, jquery-ui 1.10.4, jquery-ui 1.10.4, jquery-ui 1.10.4"
       },
       {
         "id": "sec.safe_browsing",
@@ -223,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "35/100"
+        "ev": "42/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "57228.20199999999ms"
+        "ev": "59563.298999999985ms"
       },
       {
         "id": "perf.cls",
@@ -313,7 +313,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "13 console error(s): Mixed Content: The page at 'https://kinfra.org/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=PT+Sans&ver=3.9.6'. This request has been blocked; the content must be served over HTTPS."
+        "ev": "17 console error(s): Mixed Content: The page at 'https://kinfra.org/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=PT+Sans&ver=3.9.6'. This request has been blocked; the content must be served over HTTPS."
       },
       {
         "id": "gigw.contact",
@@ -499,7 +499,7 @@
     {
       "id": "sec.vuln_js",
       "sev": "H",
-      "ev": "jquery 1.11.0, jquery-migrate 1.2.1, bootstrap 4.0.0, jquery-ui 1.10.4, jquery-ui 1.10.4, jquery-ui 1.10.4, jquery-ui 1.10.4, jquery-ui 1.10.4"
+      "ev": "jquery 1.11.0, jquery-migrate 1.2.1, bootstrap 4.0.0, jquery-ui 1.10.4, jquery-ui 1.10.4, jquery-ui 1.10.4"
     },
     {
       "id": "a11y.axe_critical",
@@ -577,7 +577,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "57228.20199999999ms"
+      "ev": "59563.298999999985ms"
     },
     {
       "id": "perf.weight",
@@ -619,7 +619,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "13 console error(s): Mixed Content: The page at 'https://kinfra.org/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=PT+Sans&ver=3.9.6'. This request has been blocked; the content must be served over HTTPS."
+      "ev": "17 console error(s): Mixed Content: The page at 'https://kinfra.org/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=PT+Sans&ver=3.9.6'. This request has been blocked; the content must be served over HTTPS."
     },
     {
       "id": "gigw.feedback",
@@ -664,6 +664,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-09",
+      "up": true,
+      "score": 39
+    },
     {
       "d": "2026-11-08",
       "up": true,
@@ -905,5 +910,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

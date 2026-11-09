@@ -35,23 +35,23 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-06T02:08:02.630Z",
-    "run": "1793930861181",
+    "at": "2026-11-09T01:25:35.606Z",
+    "run": "1794187414691",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 60,
-      "accessibility": 82,
-      "best_practices": 100,
-      "seo": 75
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
     },
     "axe": {
       "critical": 0,
-      "serious": 0,
-      "moderate": 1,
+      "serious": 6,
+      "moderate": 5,
       "minor": 0
     },
     "crawl": {
-      "pages": 15,
+      "pages": 0,
       "pdfs": 0,
       "broken": 0
     },
@@ -71,7 +71,8 @@
       },
       {
         "id": "avail.status",
-        "r": "pass"
+        "r": "fail",
+        "ev": "final response was 522"
       },
       {
         "id": "avail.redirect_offsite",
@@ -95,7 +96,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "fail",
+        "ev": "19364ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -139,7 +141,7 @@
       },
       {
         "id": "sec.xfo",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.xcto",
@@ -147,7 +149,7 @@
       },
       {
         "id": "sec.referrer",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.server_banner",
@@ -171,12 +173,13 @@
       },
       {
         "id": "a11y.axe_serious",
-        "r": "pass"
+        "r": "fail",
+        "ev": "6 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "1 moderate/minor violation(s)"
+        "ev": "5 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -188,7 +191,8 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "3 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -210,21 +214,20 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "82/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "60/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.90"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -244,8 +247,7 @@
       },
       {
         "id": "content.copyright_year",
-        "r": "fail",
-        "ev": "copyright year 2024"
+        "r": "na"
       },
       {
         "id": "content.last_updated",
@@ -299,11 +301,12 @@
       },
       {
         "id": "content.favicon",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.console_errors",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 522 ()"
       },
       {
         "id": "gigw.contact",
@@ -315,11 +318,11 @@
       },
       {
         "id": "gigw.sitemap",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.privacy",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.terms",
@@ -355,7 +358,7 @@
       },
       {
         "id": "gigw.search",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.ownership",
@@ -379,7 +382,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "id.robots",
@@ -387,12 +390,12 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "pass"
+        "r": "fail",
+        "ev": "sitemap.xml returned 522"
       },
       {
         "id": "id.soft_404",
-        "r": "fail",
-        "ev": "a nonexistent path returned 200"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
@@ -414,43 +417,27 @@
     "screenshot": {
       "desktop": "government-engineering-college-thrissur.webp",
       "mobile": "government-engineering-college-thrissur-m.webp",
-      "phash": "ffffe7e7e7e7ffff"
+      "phash": "ffff00000097b7f3"
     },
     "outlinks": [
       {
-        "host": "google.com",
-        "count": 1,
+        "host": "cloudflare.com",
+        "count": 2,
         "texts": [
-          "Ramavarmapuram, Thrissur, Kerala"
-        ]
-      },
-      {
-        "host": "facebook.com",
-        "count": 1,
-        "texts": [
-          "Facebook"
-        ]
-      },
-      {
-        "host": "youtube.com",
-        "count": 1,
-        "texts": [
-          "YouTube"
+          "cloudflare.com",
+          "Additional troubleshooting information here."
         ]
       }
     ]
   },
-  "score": {
-    "overall": 60,
-    "security": 48,
-    "accessibility": 92,
-    "content": 46,
-    "gigw": 2,
-    "performance": 82,
-    "identity": 92
-  },
+  "score": null,
   "status": "down",
   "issues": [
+    {
+      "id": "avail.status",
+      "sev": "C",
+      "ev": "final response was 522"
+    },
     {
       "id": "sec.http_redirect",
       "sev": "H"
@@ -474,17 +461,31 @@
       "sev": "H"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "19364ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
-      "id": "sec.xfo",
+      "id": "a11y.axe_serious",
+      "sev": "M",
+      "ev": "6 serious violation(s)"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "3 low-contrast element(s)"
+    },
+    {
+      "id": "gigw.sitemap",
       "sev": "M"
     },
     {
-      "id": "content.copyright_year",
-      "sev": "M",
-      "ev": "copyright year 2024"
+      "id": "gigw.privacy",
+      "sev": "M"
     },
     {
       "id": "gigw.accessibility_statement",
@@ -511,13 +512,9 @@
       "sev": "L"
     },
     {
-      "id": "sec.referrer",
-      "sev": "L"
-    },
-    {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "1 moderate/minor violation(s)"
+      "ev": "5 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -527,6 +524,15 @@
     {
       "id": "content.meta_desc",
       "sev": "L"
+    },
+    {
+      "id": "content.favicon",
+      "sev": "L"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 522 ()"
     },
     {
       "id": "gigw.feedback",
@@ -557,22 +563,17 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.90"
+      "id": "gigw.search",
+      "sev": "L"
     },
     {
       "id": "perf.images",
       "sev": "L"
     },
     {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
-      "id": "id.soft_404",
+      "id": "id.sitemap_xml",
       "sev": "L",
-      "ev": "a nonexistent path returned 200"
+      "ev": "sitemap.xml returned 522"
     },
     {
       "id": "gigw.emblem",
@@ -584,6 +585,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-09",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-08",
       "up": false,
@@ -800,5 +806,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

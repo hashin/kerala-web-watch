@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-08T01:01:07.358Z",
-    "run": "1794099622039",
+    "at": "2026-11-09T01:20:48.589Z",
+    "run": "1794187202184",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 48,
@@ -46,7 +46,7 @@
     },
     "axe": {
       "critical": 6,
-      "serious": 2,
+      "serious": 3,
       "moderate": 23,
       "minor": 0
     },
@@ -174,7 +174,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "2 serious violation(s)"
+        "ev": "3 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -191,7 +191,8 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -224,7 +225,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "12878.568499999998ms"
+        "ev": "13406.691749999996ms"
       },
       {
         "id": "perf.cls",
@@ -460,9 +461,9 @@
     ]
   },
   "score": {
-    "overall": 66,
+    "overall": 63,
     "security": 80,
-    "accessibility": 60,
+    "accessibility": 50,
     "content": 56,
     "gigw": 32,
     "performance": 76,
@@ -493,7 +494,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "2 serious violation(s)"
+      "ev": "3 serious violation(s)"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "1 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -514,7 +520,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "12878.568499999998ms"
+      "ev": "13406.691749999996ms"
     },
     {
       "id": "perf.tap_targets",
@@ -583,6 +589,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-09",
+      "up": true,
+      "score": 63
+    },
     {
       "d": "2026-11-08",
       "up": true,
@@ -824,5 +835,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

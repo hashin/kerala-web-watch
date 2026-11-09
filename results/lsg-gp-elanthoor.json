@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-21T00:33:53.607Z",
-    "run": "1792542793378",
+    "at": "2026-11-09T01:32:31.768Z",
+    "run": "1794187897010",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 61,
+      "performance": 60,
       "accessibility": 85,
       "best_practices": 78,
       "seo": 92
     },
     "axe": {
       "critical": 1,
-      "serious": 14,
+      "serious": 15,
       "moderate": 29,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -175,7 +175,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "14 serious violation(s)"
+        "ev": "15 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -194,7 +194,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "9 low-contrast element(s)"
+        "ev": "10 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "61/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10443.72ms"
+        "ev": "10722.569500000001ms"
       },
       {
         "id": "perf.cls",
@@ -282,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://lsgkerala.gov.in/ml/act-rule)"
       },
       {
         "id": "content.broken_pdfs",
@@ -527,6 +528,11 @@
       "ev": "ml-user"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://lsgkerala.gov.in/ml/act-rule)"
+    },
+    {
       "id": "gigw.rti",
       "sev": "H"
     },
@@ -537,7 +543,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "14 serious violation(s)"
+      "ev": "15 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -547,7 +553,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "9 low-contrast element(s)"
+      "ev": "10 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -564,7 +570,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10443.72ms"
+      "ev": "10722.569500000001ms"
     },
     {
       "id": "perf.weight",
@@ -641,6 +647,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-09",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-08",
       "up": false,
@@ -877,5 +888,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

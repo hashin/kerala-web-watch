@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-08T01:02:07.460Z",
-    "run": "1794099612608",
+    "at": "2026-11-09T01:17:44.941Z",
+    "run": "1794186997603",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 45,
+      "performance": 51,
       "accessibility": 84,
       "best_practices": 73,
       "seo": 77
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "45/100"
+        "ev": "51/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "42841.674ms"
+        "ev": "42472.1305ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +233,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "16.9MB"
+        "ev": "17.0MB"
       },
       {
         "id": "perf.viewport",
@@ -308,7 +308,8 @@
       },
       {
         "id": "content.console_errors",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
       },
       {
         "id": "gigw.contact",
@@ -772,7 +773,7 @@
     "overall": 53,
     "security": 24,
     "accessibility": 82,
-    "content": 46,
+    "content": 42,
     "gigw": 28,
     "performance": 76,
     "identity": 80
@@ -841,12 +842,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "42841.674ms"
+      "ev": "42472.1305ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "16.9MB"
+      "ev": "17.0MB"
     },
     {
       "id": "sec.csp",
@@ -878,6 +879,11 @@
     {
       "id": "content.meta_desc",
       "sev": "L"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "1 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
     },
     {
       "id": "gigw.feedback",
@@ -917,6 +923,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-09",
+      "up": true,
+      "score": 53
+    },
     {
       "d": "2026-11-08",
       "up": true,
@@ -1133,5 +1144,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
