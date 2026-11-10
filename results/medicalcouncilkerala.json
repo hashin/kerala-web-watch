@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-09T01:23:45.437Z",
-    "run": "1794187359492",
+    "at": "2026-11-10T04:03:14.331Z",
+    "run": "1794283338936",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 33,
+      "performance": 35,
       "accessibility": 86,
       "best_practices": 96,
       "seo": 62
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 1,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -220,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "33/100"
+        "ev": "35/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "14118.99ms"
+        "ev": "13492.107000000004ms"
       },
       {
         "id": "perf.cls",
@@ -234,8 +234,7 @@
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "3.0MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
@@ -268,8 +267,7 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "fail",
-        "ev": "ml-box"
+        "r": "pass"
       },
       {
         "id": "content.obsolete_tech",
@@ -281,8 +279,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://www.automation.medicalcouncil.kerala.gov.in/registration/practioner.xhtml)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -481,12 +478,12 @@
     ]
   },
   "score": {
-    "overall": 55,
+    "overall": 60,
     "security": 62,
     "accessibility": 50,
-    "content": 38,
+    "content": 68,
     "gigw": 22,
-    "performance": 77,
+    "performance": 82,
     "identity": 100
   },
   "status": "needs-work",
@@ -505,16 +502,6 @@
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
-    },
-    {
-      "id": "content.legacy_font",
-      "sev": "H",
-      "ev": "ml-box"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://www.automation.medicalcouncil.kerala.gov.in/registration/practioner.xhtml)"
     },
     {
       "id": "sec.hsts",
@@ -553,12 +540,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "14118.99ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "3.0MB"
+      "ev": "13492.107000000004ms"
     },
     {
       "id": "sec.xcto",
@@ -643,7 +625,7 @@
     {
       "d": "2026-11-10",
       "up": true,
-      "score": 55
+      "score": 60
     },
     {
       "d": "2026-11-09",
@@ -896,5 +878,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

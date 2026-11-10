@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-09T01:15:46.053Z",
-    "run": "1794186838669",
+    "at": "2026-11-10T03:50:35.956Z",
+    "run": "1794282548915",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 39,
+      "performance": 40,
       "accessibility": 69,
       "best_practices": 88,
       "seo": 83
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 5
+      "broken": 4
     },
     "tech": {
       "cms": null,
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "3579ms"
+        "ev": "3454ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -120,8 +120,7 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "19 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -222,22 +221,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "39/100"
+        "ev": "40/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7263.034999999999ms"
+        "ev": "9425.663999999997ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.34"
+        "ev": "0.32"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "5.1MB"
+        "ev": "5.2MB"
       },
       {
         "id": "perf.viewport",
@@ -283,8 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "5/30 crawled link(s) broken (https://kudumbashree.org/, https://www.kudumbashree.org/pages/208, http://kudumbashree.org/pages/541, ...)"
+        "r": "warn",
+        "ev": "4/30 crawled link(s) broken (https://kudumbashree.org/, http://kudumbashree.org/pages/541, http://kudumbashree.org/pages/683, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -387,7 +386,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "55 days left"
+        "ev": "54 days left"
       },
       {
         "id": "id.www_consistency",
@@ -399,7 +398,7 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.soft_404",
@@ -501,21 +500,16 @@
     ]
   },
   "score": {
-    "overall": 41,
-    "security": 18,
+    "overall": 45,
+    "security": 28,
     "accessibility": 52,
-    "content": 36,
+    "content": 46,
     "gigw": 36,
     "performance": 67,
     "identity": 56
   },
   "status": "poor",
   "issues": [
-    {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "19 days left"
-    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -544,7 +538,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "5/30 crawled link(s) broken (https://kudumbashree.org/, https://www.kudumbashree.org/pages/208, http://kudumbashree.org/pages/541, ...)"
+      "ev": "4/30 crawled link(s) broken (https://kudumbashree.org/, http://kudumbashree.org/pages/541, http://kudumbashree.org/pages/683, ...)"
     },
     {
       "id": "id.gov_domain",
@@ -554,12 +548,12 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "55 days left"
+      "ev": "54 days left"
     },
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "3579ms"
+      "ev": "3454ms"
     },
     {
       "id": "sec.hsts",
@@ -598,12 +592,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7263.034999999999ms"
+      "ev": "9425.663999999997ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "5.1MB"
+      "ev": "5.2MB"
     },
     {
       "id": "perf.tap_targets",
@@ -663,7 +657,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.34"
+      "ev": "0.32"
     },
     {
       "id": "perf.images",
@@ -692,7 +686,7 @@
     {
       "d": "2026-11-10",
       "up": true,
-      "score": 41
+      "score": 45
     },
     {
       "d": "2026-11-09",
@@ -940,5 +934,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

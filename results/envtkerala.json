@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-09T01:23:46.974Z",
-    "run": "1794187055515",
+    "at": "2026-11-10T03:57:33.700Z",
+    "run": "1794282811650",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 59,
+      "performance": 60,
       "accessibility": 87,
       "best_practices": 96,
       "seo": 77
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 7,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "WordPress 6.5.14",
@@ -98,7 +98,7 @@
       {
         "id": "avail.ttfb",
         "r": "fail",
-        "ev": "15329ms"
+        "ev": "10346ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "59/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8136.652ms"
+        "ev": "8887.032000000001ms"
       },
       {
         "id": "perf.cls",
@@ -285,7 +285,8 @@
       },
       {
         "id": "content.broken_pdfs",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 linked PDF(s) 404: https://climatechange.envt.kerala.gov.in/wp-content/uploads/2026/06/Carbon-Neutral-Kerala-by-2050-Report.pdf"
       },
       {
         "id": "content.broken_images",
@@ -385,7 +386,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.robots",
@@ -470,10 +471,10 @@
     ]
   },
   "score": {
-    "overall": 56,
+    "overall": 54,
     "security": 38,
     "accessibility": 72,
-    "content": 52,
+    "content": 42,
     "gigw": 22,
     "performance": 71,
     "identity": 100
@@ -502,7 +503,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "15329ms"
+      "ev": "10346ms"
     },
     {
       "id": "sec.hsts",
@@ -517,6 +518,11 @@
       "id": "a11y.contrast",
       "sev": "M",
       "ev": "35 low-contrast element(s)"
+    },
+    {
+      "id": "content.broken_pdfs",
+      "sev": "M",
+      "ev": "1 linked PDF(s) 404: https://climatechange.envt.kerala.gov.in/wp-content/uploads/2026/06/Carbon-Neutral-Kerala-by-2050-Report.pdf"
     },
     {
       "id": "gigw.sitemap",
@@ -541,7 +547,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8136.652ms"
+      "ev": "8887.032000000001ms"
     },
     {
       "id": "perf.weight",
@@ -619,7 +625,7 @@
     {
       "d": "2026-11-10",
       "up": true,
-      "score": 56
+      "score": 54
     },
     {
       "d": "2026-11-09",
@@ -872,5 +878,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,28 +35,23 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-17T23:41:32.101Z",
-    "run": "1792280440846",
+    "at": "2026-11-10T04:02:18.934Z",
+    "run": "1794283297644",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 60,
-      "accessibility": 78,
-      "best_practices": 69,
-      "seo": 92
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 1,
-      "serious": 7,
-      "moderate": 14,
+      "serious": 16,
+      "moderate": 27,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
-      "cms": "Drupal 8",
+      "cms": "Drupal 11",
       "server": "nginx",
       "jquery": null
     },
@@ -107,7 +102,8 @@
       },
       {
         "id": "sec.https",
-        "r": "pass"
+        "r": "fail",
+        "ev": "http://kasaragoddp.lsgkerala.gov.in"
       },
       {
         "id": "sec.http_redirect",
@@ -131,8 +127,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://kasaragoddp.lsgkerala.gov.in/\""
+        "r": "na"
       },
       {
         "id": "sec.csp",
@@ -152,13 +147,12 @@
       },
       {
         "id": "sec.server_banner",
-        "r": "fail",
-        "ev": "PHP/7.0.33"
+        "r": "pass"
       },
       {
         "id": "sec.vuln_js",
         "r": "fail",
-        "ev": "jquery 3.4.1, bootstrap 3.2.0"
+        "ev": "swiper 11.2.10"
       },
       {
         "id": "sec.safe_browsing",
@@ -176,12 +170,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "7 serious violation(s)"
+        "ev": "16 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "14 moderate/minor violation(s)"
+        "ev": "27 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -189,16 +183,18 @@
       },
       {
         "id": "a11y.alt",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "1 low-contrast element(s)"
+        "ev": "10 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
-        "r": "pass"
+        "r": "fail",
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -215,26 +211,24 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "78/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "60/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "16565.6885ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "fail",
+        "ev": "8.7MB"
       },
       {
         "id": "perf.viewport",
@@ -242,11 +236,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -255,7 +249,7 @@
       {
         "id": "content.last_updated",
         "r": "fail",
-        "ev": "last updated 2020-01-22"
+        "ev": "no \"last updated\" date found"
       },
       {
         "id": "content.stale_news",
@@ -268,7 +262,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-"
+        "ev": "ml-user"
       },
       {
         "id": "content.obsolete_tech",
@@ -280,7 +274,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://kasaragoddp.web.lsgkerala.gov.in/ml/page/kaasagaeada-jailalaa-panacaayatata-jaaivavaaivaidhaya-avaadaukakaka-naamanaidadaesam)"
       },
       {
         "id": "content.broken_pdfs",
@@ -308,8 +303,7 @@
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "6 console error(s): e.indexOf is not a function"
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
@@ -325,7 +319,7 @@
       },
       {
         "id": "gigw.privacy",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.terms",
@@ -345,7 +339,7 @@
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.screen_reader",
@@ -353,23 +347,23 @@
       },
       {
         "id": "gigw.help",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.rti",
-        "r": "pass"
-      },
-      {
-        "id": "gigw.search",
         "r": "fail"
       },
       {
-        "id": "gigw.ownership",
+        "id": "gigw.search",
         "r": "pass"
       },
       {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
         "id": "gigw.last_updated",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.emblem",
@@ -389,8 +383,7 @@
       },
       {
         "id": "id.robots",
-        "r": "fail",
-        "ev": "robots.txt returned 404"
+        "r": "pass"
       },
       {
         "id": "id.sitemap_xml",
@@ -403,7 +396,7 @@
       },
       {
         "id": "id.canonical",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.charset_doctype",
@@ -411,8 +404,8 @@
       },
       {
         "id": "id.tech",
-        "r": "warn",
-        "ev": "Drupal 8 (unsupported major version)"
+        "r": "pass",
+        "ev": "Drupal 11"
       },
       {
         "id": "id.third_party",
@@ -422,55 +415,111 @@
     "screenshot": {
       "desktop": "lsg-dp-kasaragod.webp",
       "mobile": "lsg-dp-kasaragod-m.webp",
-      "phash": "ff001c000000fff7"
+      "phash": "ff00f8f2f0f0e0ff"
     },
     "outlinks": [
       {
-        "host": "kerala.gov.in",
-        "count": 3,
+        "host": "goo.gl",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "instagram.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "youtube.com",
+        "count": 2,
         "texts": [
-          "കേരള സര്‍ക്കാര്‍",
-          "ഇ ടെണ്ടറുകള്‍",
-          "അക്ഷയ"
+          "കെസ്മാർട്ട് സഹായി",
+          "സേവന സഹായി"
         ]
       },
       {
-        "host": "ikm.in",
+        "host": "legislative.gov.in",
         "count": 1,
         "texts": [
-          "നിയമങ്ങളും ചട്ടങ്ങളും"
+          "ഭരണ ഘടന"
         ]
+      },
+      {
+        "host": "kila.ac.in",
+        "count": 1,
+        "texts": [
+          "പഞ്ചായത്ത് രാജ് ആക്ട്"
+        ]
+      },
+      {
+        "host": "india.gov.in",
+        "count": 2,
+        "texts": [
+          "കേന്ദ്ര സർക്കാർ സേവനങ്ങൾ"
+        ]
+      },
+      {
+        "host": "kerala.gov.in",
+        "count": 7,
+        "texts": [
+          "സംസ്ഥാന സർക്കാർ സേവനങ്ങൾ",
+          "ഗവർണർ",
+          "മുഖ്യമന്ത്രി"
+        ]
+      },
+      {
+        "host": "niyamasabha.org",
+        "count": 1,
+        "texts": [
+          "നിയമസഭാംഗങ്ങൾ"
+        ]
+      },
+      {
+        "host": "google.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "apple.com",
+        "count": 1,
+        "texts": []
       },
       {
         "host": "ikm.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "whatsapp.com",
+        "count": 2,
+        "texts": []
+      },
+      {
+        "host": "kudumbashree.org",
         "count": 2,
         "texts": [
-          "ഇന്‍ഫര്‍മേഷന്‍ കേരള മിഷന്‍",
-          "Information Kerala Mission"
+          "കുടുംബശ്രീ",
+          "ഹരിതകര്‍മ്മസേന"
         ]
       }
     ]
   },
-  "score": {
-    "overall": 53,
-    "security": 38,
-    "accessibility": 54,
-    "content": 52,
-    "gigw": 38,
-    "performance": 76,
-    "identity": 87
-  },
-  "status": "needs-work",
+  "score": null,
+  "status": "broken",
   "issues": [
     {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://kasaragoddp.lsgkerala.gov.in/\""
+      "id": "sec.https",
+      "sev": "C",
+      "ev": "http://kasaragoddp.lsgkerala.gov.in"
     },
     {
       "id": "sec.vuln_js",
       "sev": "H",
-      "ev": "jquery 3.4.1, bootstrap 3.2.0"
+      "ev": "swiper 11.2.10"
     },
     {
       "id": "a11y.axe_critical",
@@ -480,12 +529,21 @@
     {
       "id": "content.last_updated",
       "sev": "H",
-      "ev": "last updated 2020-01-22"
+      "ev": "no \"last updated\" date found"
     },
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-"
+      "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://kasaragoddp.web.lsgkerala.gov.in/ml/page/kaasagaeada-jailalaa-panacaayatata-jaaivavaaivaidhaya-avaadaukakaka-naamanaidadaesam)"
+    },
+    {
+      "id": "gigw.rti",
+      "sev": "H"
     },
     {
       "id": "sec.hsts",
@@ -494,38 +552,34 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "7 serious violation(s)"
+      "ev": "16 serious violation(s)"
+    },
+    {
+      "id": "a11y.alt",
+      "sev": "M",
+      "ev": "1 image(s) missing alt text"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "1 low-contrast element(s)"
+      "ev": "10 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
       "sev": "M"
     },
     {
-      "id": "gigw.privacy",
+      "id": "gigw.ownership",
       "sev": "M"
     },
     {
-      "id": "gigw.accessibility_statement",
+      "id": "gigw.last_updated",
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
+      "id": "perf.weight",
       "sev": "M",
-      "ev": "16565.6885ms"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
-    },
-    {
-      "id": "id.tech",
-      "sev": "M",
-      "ev": "Drupal 8 (unsupported major version)"
+      "ev": "8.7MB"
     },
     {
       "id": "sec.csp",
@@ -536,14 +590,14 @@
       "sev": "L"
     },
     {
-      "id": "sec.server_banner",
-      "sev": "L",
-      "ev": "PHP/7.0.33"
-    },
-    {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "14 moderate/minor violation(s)"
+      "ev": "27 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
     },
     {
       "id": "a11y.keyboard",
@@ -553,11 +607,6 @@
     {
       "id": "content.meta_desc",
       "sev": "L"
-    },
-    {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "6 console error(s): e.indexOf is not a function"
     },
     {
       "id": "gigw.feedback",
@@ -584,33 +633,20 @@
       "sev": "L"
     },
     {
-      "id": "gigw.help",
-      "sev": "L"
-    },
-    {
-      "id": "gigw.search",
-      "sev": "L"
-    },
-    {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
-      "id": "id.robots",
-      "sev": "L",
-      "ev": "robots.txt returned 404"
-    },
-    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
+    },
+    {
+      "id": "id.canonical",
+      "sev": "I"
     }
   ],
   "history": [
     {
       "d": "2026-11-10",
-      "up": true,
-      "score": 53
+      "up": false,
+      "score": null
     },
     {
       "d": "2026-11-09",
@@ -853,5 +889,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

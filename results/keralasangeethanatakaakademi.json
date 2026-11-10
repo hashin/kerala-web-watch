@@ -35,19 +35,24 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-08T01:19:10.789Z",
-    "run": "1794100694181",
+    "at": "2026-11-10T04:16:39.859Z",
+    "run": "1794284146232",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 35,
+      "accessibility": 89,
+      "best_practices": 78,
+      "seo": 69
+    },
     "axe": {
-      "critical": 14,
+      "critical": 15,
       "serious": 1,
       "moderate": 70,
       "minor": 0
     },
     "crawl": {
       "pages": 22,
-      "pdfs": 15,
+      "pdfs": 16,
       "broken": 0
     },
     "tech": {
@@ -87,7 +92,7 @@
       {
         "id": "avail.under_construction",
         "r": "warn",
-        "ev": "\"coming soon\" alongside 3029 other characters"
+        "ev": "\"coming soon\" alongside 3097 other characters"
       },
       {
         "id": "avail.ttfb",
@@ -165,7 +170,7 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "14 critical violation(s)"
+        "ev": "15 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
@@ -184,7 +189,7 @@
       {
         "id": "a11y.alt",
         "r": "fail",
-        "ev": "14 image(s) missing alt text"
+        "ev": "15 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
@@ -210,24 +215,28 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "89/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "35/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "9923.679999999998ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.52"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "6.6MB"
+        "ev": "6.5MB"
       },
       {
         "id": "perf.viewport",
@@ -235,11 +244,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -376,7 +385,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "13 days left"
+        "ev": "11 days left"
       },
       {
         "id": "id.www_consistency",
@@ -460,12 +469,12 @@
     {
       "id": "avail.under_construction",
       "sev": "H",
-      "ev": "\"coming soon\" alongside 3029 other characters"
+      "ev": "\"coming soon\" alongside 3097 other characters"
     },
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "14 critical violation(s)"
+      "ev": "15 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -485,7 +494,7 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "13 days left"
+      "ev": "11 days left"
     },
     {
       "id": "sec.hsts",
@@ -503,7 +512,7 @@
     {
       "id": "a11y.alt",
       "sev": "M",
-      "ev": "14 image(s) missing alt text"
+      "ev": "15 image(s) missing alt text"
     },
     {
       "id": "a11y.contrast",
@@ -531,9 +540,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "9923.679999999998ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "6.6MB"
+      "ev": "6.5MB"
     },
     {
       "id": "sec.csp",
@@ -592,6 +606,15 @@
     },
     {
       "id": "gigw.help",
+      "sev": "L"
+    },
+    {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.52"
+    },
+    {
+      "id": "perf.images",
       "sev": "L"
     }
   ],
@@ -842,5 +865,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

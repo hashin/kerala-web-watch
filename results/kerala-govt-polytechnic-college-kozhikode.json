@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-09T01:33:45.743Z",
-    "run": "1794187980274",
+    "at": "2026-11-10T04:13:23.016Z",
+    "run": "1794283959781",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 57,
+      "accessibility": 76,
+      "best_practices": 70,
+      "seo": 92
+    },
     "axe": {
       "critical": 2,
       "serious": 45,
@@ -210,19 +215,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "76/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "57/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "29623.632999999998ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -235,11 +243,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -302,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "9 console error(s): Cannot read properties of null (reading 'addEventListener')"
+        "ev": "8 console error(s): Cannot read properties of null (reading 'addEventListener')"
       },
       {
         "id": "gigw.contact",
@@ -467,7 +475,7 @@
     ]
   },
   "score": null,
-  "status": "down",
+  "status": "broken",
   "issues": [
     {
       "id": "sec.https",
@@ -538,6 +546,11 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "29623.632999999998ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "8.3MB"
@@ -572,7 +585,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "9 console error(s): Cannot read properties of null (reading 'addEventListener')"
+      "ev": "8 console error(s): Cannot read properties of null (reading 'addEventListener')"
     },
     {
       "id": "gigw.copyright_policy",
@@ -596,6 +609,10 @@
     },
     {
       "id": "gigw.search",
+      "sev": "L"
+    },
+    {
+      "id": "perf.images",
       "sev": "L"
     },
     {
@@ -844,5 +861,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

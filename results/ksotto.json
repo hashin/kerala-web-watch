@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-09T01:26:04.721Z",
-    "run": "1794187469812",
+    "at": "2026-11-10T03:59:50.942Z",
+    "run": "1794283078506",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 32,
+      "performance": 31,
       "accessibility": 78,
       "best_practices": 88,
       "seo": 62
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "5626ms"
+        "ev": "5662ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -222,17 +222,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "32/100"
+        "ev": "31/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10736.028999999999ms"
+        "ev": "16341.8625ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.70"
+        "ev": "1.07"
       },
       {
         "id": "perf.weight",
@@ -271,7 +271,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-transform"
+        "ev": "ml-user"
       },
       {
         "id": "content.obsolete_tech",
@@ -284,7 +284,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://www.portal.ksotto.kerala.gov.in/)"
+        "ev": "2/30 crawled link(s) broken (https://www.portal.ksotto.kerala.gov.in/, https://ksotto.kerala.gov.in/#)"
       },
       {
         "id": "content.broken_pdfs",
@@ -504,17 +504,17 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-transform"
+      "ev": "ml-user"
     },
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://www.portal.ksotto.kerala.gov.in/)"
+      "ev": "2/30 crawled link(s) broken (https://www.portal.ksotto.kerala.gov.in/, https://ksotto.kerala.gov.in/#)"
     },
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "5626ms"
+      "ev": "5662ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -554,7 +554,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10736.028999999999ms"
+      "ev": "16341.8625ms"
     },
     {
       "id": "perf.weight",
@@ -624,7 +624,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.70"
+      "ev": "1.07"
     },
     {
       "id": "perf.images",
@@ -892,5 +892,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

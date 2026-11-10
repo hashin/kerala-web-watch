@@ -35,23 +35,23 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-08T01:07:17.579Z",
-    "run": "1794099973061",
+    "at": "2026-11-10T04:02:09.368Z",
+    "run": "1794283319553",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 36,
-      "accessibility": 80,
-      "best_practices": 88,
-      "seo": 85
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
     },
     "axe": {
-      "critical": 2,
-      "serious": 27,
+      "critical": 0,
+      "serious": 1,
       "moderate": 4,
       "minor": 0
     },
     "crawl": {
-      "pages": 30,
+      "pages": 0,
       "pdfs": 0,
       "broken": 0
     },
@@ -71,7 +71,8 @@
       },
       {
         "id": "avail.status",
-        "r": "pass"
+        "r": "fail",
+        "ev": "final response was 403"
       },
       {
         "id": "avail.redirect_offsite",
@@ -127,16 +128,15 @@
       },
       {
         "id": "sec.hsts",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://www.cdit.org\""
+        "r": "pass"
       },
       {
         "id": "sec.csp",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xfo",
@@ -168,13 +168,12 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "fail",
-        "ev": "2 critical violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "27 serious violation(s)"
+        "ev": "1 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -187,23 +186,19 @@
       },
       {
         "id": "a11y.alt",
-        "r": "fail",
-        "ev": "1 image(s) missing alt text"
+        "r": "pass"
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "21 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
-        "r": "fail",
-        "ev": "heading levels skipped"
+        "r": "pass"
       },
       {
         "id": "a11y.labels",
-        "r": "fail",
-        "ev": "1 form control(s) without a label"
+        "r": "pass"
       },
       {
         "id": "a11y.skip_link",
@@ -211,37 +206,33 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "warn",
-        "ev": "tabindex=\"-1\" alongside outline:none"
+        "r": "pass"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "80/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "36/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "18267.815000000002ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.40"
+        "r": "na"
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "4.4MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.tap_targets",
@@ -253,7 +244,7 @@
       },
       {
         "id": "content.copyright_year",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "content.last_updated",
@@ -270,8 +261,7 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "fail",
-        "ev": "ml-IN"
+        "r": "pass"
       },
       {
         "id": "content.obsolete_tech",
@@ -307,16 +297,16 @@
       },
       {
         "id": "content.favicon",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "5 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 403 ()"
       },
       {
         "id": "gigw.contact",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.feedback",
@@ -344,15 +334,15 @@
       },
       {
         "id": "gigw.disclaimer",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.screen_reader",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.help",
@@ -360,7 +350,7 @@
       },
       {
         "id": "gigw.rti",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.search",
@@ -376,7 +366,7 @@
       },
       {
         "id": "gigw.emblem",
-        "r": "pass"
+        "r": "warn"
       },
       {
         "id": "id.gov_domain",
@@ -388,15 +378,17 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.robots",
-        "r": "pass"
+        "r": "fail",
+        "ev": "robots.txt returned 403"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "pass"
+        "r": "fail",
+        "ev": "sitemap.xml returned 403"
       },
       {
         "id": "id.soft_404",
@@ -404,11 +396,12 @@
       },
       {
         "id": "id.canonical",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.charset_doctype",
-        "r": "pass"
+        "r": "fail",
+        "ev": "missing UTF-8 charset, HTML5 doctype"
       },
       {
         "id": "id.tech",
@@ -422,69 +415,21 @@
     "screenshot": {
       "desktop": "kescpcr.webp",
       "mobile": "kescpcr-m.webp",
-      "phash": "00ff7f7f7f7f0900"
+      "phash": "0707ffffffffffff"
     },
-    "outlinks": [
-      {
-        "host": "ux4g.gov.in",
-        "count": 1,
-        "texts": [
-          "Created by"
-        ]
-      },
-      {
-        "host": "radionellikka.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "facebook.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "instagram.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "youtube.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "cdit.org",
-        "count": 1,
-        "texts": [
-          "CDIT"
-        ]
-      }
-    ]
+    "outlinks": []
   },
-  "score": {
-    "overall": 48,
-    "security": 42,
-    "accessibility": 30,
-    "content": 52,
-    "gigw": 36,
-    "performance": 67,
-    "identity": 100
-  },
+  "score": null,
   "status": "down",
   "issues": [
     {
+      "id": "avail.status",
+      "sev": "C",
+      "ev": "final response was 403"
+    },
+    {
       "id": "sec.http_redirect",
       "sev": "H"
-    },
-    {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://www.cdit.org\""
-    },
-    {
-      "id": "a11y.axe_critical",
-      "sev": "H",
-      "ev": "2 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -492,9 +437,20 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "content.legacy_font",
-      "sev": "H",
-      "ev": "ml-IN"
+      "id": "gigw.contact",
+      "sev": "H"
+    },
+    {
+      "id": "gigw.rti",
+      "sev": "H"
+    },
+    {
+      "id": "perf.viewport",
+      "sev": "H"
+    },
+    {
+      "id": "sec.hsts",
+      "sev": "M"
     },
     {
       "id": "sec.xfo",
@@ -503,22 +459,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "27 serious violation(s)"
-    },
-    {
-      "id": "a11y.alt",
-      "sev": "M",
-      "ev": "1 image(s) missing alt text"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "21 low-contrast element(s)"
-    },
-    {
-      "id": "a11y.labels",
-      "sev": "M",
-      "ev": "1 form control(s) without a label"
+      "ev": "1 serious violation(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -526,6 +467,10 @@
     },
     {
       "id": "gigw.privacy",
+      "sev": "M"
+    },
+    {
+      "id": "gigw.accessibility_statement",
       "sev": "M"
     },
     {
@@ -537,18 +482,12 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "18267.815000000002ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "4.4MB"
-    },
-    {
       "id": "perf.tap_targets",
       "sev": "M"
+    },
+    {
+      "id": "sec.csp",
+      "sev": "L"
     },
     {
       "id": "sec.xcto",
@@ -564,23 +503,17 @@
       "ev": "4 moderate/minor violation(s)"
     },
     {
-      "id": "a11y.headings",
-      "sev": "L",
-      "ev": "heading levels skipped"
-    },
-    {
-      "id": "a11y.keyboard",
-      "sev": "L",
-      "ev": "tabindex=\"-1\" alongside outline:none"
-    },
-    {
       "id": "content.meta_desc",
+      "sev": "L"
+    },
+    {
+      "id": "content.favicon",
       "sev": "L"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "5 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 403 ()"
     },
     {
       "id": "gigw.feedback",
@@ -599,6 +532,14 @@
       "sev": "L"
     },
     {
+      "id": "gigw.disclaimer",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.screen_reader",
+      "sev": "L"
+    },
+    {
       "id": "gigw.help",
       "sev": "L"
     },
@@ -607,20 +548,42 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.40"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
+    },
+    {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
+      "id": "id.robots",
+      "sev": "L",
+      "ev": "robots.txt returned 403"
+    },
+    {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 403"
+    },
+    {
+      "id": "id.charset_doctype",
+      "sev": "L",
+      "ev": "missing UTF-8 charset, HTML5 doctype"
+    },
+    {
+      "id": "gigw.emblem",
+      "sev": "I"
+    },
+    {
+      "id": "id.canonical",
+      "sev": "I"
     }
   ],
   "history": [
     {
       "d": "2026-11-10",
       "up": false,
-      "score": 48
+      "score": null
     },
     {
       "d": "2026-11-09",
@@ -873,5 +836,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

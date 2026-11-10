@@ -37,17 +37,17 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-09T01:17:57.337Z",
-    "run": "1794187035210",
+    "at": "2026-11-10T03:53:31.648Z",
+    "run": "1794282769364",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 58,
-      "accessibility": 62,
-      "best_practices": 96,
+      "accessibility": 67,
+      "best_practices": 88,
       "seo": 91
     },
     "axe": {
-      "critical": 2,
+      "critical": 1,
       "serious": 7,
       "moderate": 11,
       "minor": 0
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 24,
       "pdfs": 7,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -122,7 +122,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "21 days left"
+        "ev": "20 days left"
       },
       {
         "id": "sec.tls_version",
@@ -158,7 +158,8 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "pass"
+        "r": "fail",
+        "ev": "jquery 2.1.3"
       },
       {
         "id": "sec.safe_browsing",
@@ -171,7 +172,7 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "2 critical violation(s)"
+        "ev": "1 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
@@ -185,8 +186,7 @@
       },
       {
         "id": "a11y.lang",
-        "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 120% Malayalam content"
+        "r": "pass"
       },
       {
         "id": "a11y.alt",
@@ -217,7 +217,7 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "62/100"
+        "ev": "67/100"
       },
       {
         "id": "perf.lighthouse",
@@ -227,7 +227,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9117.484999999999ms"
+        "ev": "8829.856ms"
       },
       {
         "id": "perf.cls",
@@ -281,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/24 crawled link(s) broken (https://cee.kerala.gov.in/mdhonline2026/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -311,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "10 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -436,10 +435,10 @@
     ]
   },
   "score": {
-    "overall": 52,
-    "security": 66,
-    "accessibility": 32,
-    "content": 38,
+    "overall": 53,
+    "security": 46,
+    "accessibility": 52,
+    "content": 48,
     "gigw": 28,
     "performance": 86,
     "identity": 88
@@ -453,17 +452,17 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "21 days left"
+      "ev": "20 days left"
+    },
+    {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "jquery 2.1.3"
     },
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "2 critical violation(s)"
-    },
-    {
-      "id": "a11y.lang",
-      "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 120% Malayalam content"
+      "ev": "1 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -474,11 +473,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/24 crawled link(s) broken (https://cee.kerala.gov.in/mdhonline2026/)"
     },
     {
       "id": "a11y.axe_serious",
@@ -509,7 +503,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9117.484999999999ms"
+      "ev": "8829.856ms"
     },
     {
       "id": "sec.referrer",
@@ -536,7 +530,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "10 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.feedback",
@@ -601,7 +595,7 @@
     {
       "d": "2026-11-10",
       "up": true,
-      "score": 52
+      "score": 53
     },
     {
       "d": "2026-11-09",
@@ -849,5 +843,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

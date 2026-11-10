@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-09T01:10:42.696Z",
-    "run": "1794186620389",
+    "at": "2026-11-10T03:48:44.891Z",
+    "run": "1794282486757",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 74,
       "accessibility": 77,
       "best_practices": 69,
       "seo": 83
@@ -47,11 +47,11 @@
     "axe": {
       "critical": 5,
       "serious": 9,
-      "moderate": 9,
+      "moderate": 8,
       "minor": 0
     },
     "crawl": {
-      "pages": 1,
+      "pages": 0,
       "pdfs": 0,
       "broken": 0
     },
@@ -88,7 +88,7 @@
       {
         "id": "avail.blank",
         "r": "fail",
-        "ev": "44 visible characters"
+        "ev": "0 visible characters"
       },
       {
         "id": "avail.under_construction",
@@ -179,7 +179,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "9 moderate/minor violation(s)"
+        "ev": "8 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -220,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "74/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8557.369999999999ms"
+        "ev": "4876.318ms"
       },
       {
         "id": "perf.cls",
@@ -398,8 +398,7 @@
       },
       {
         "id": "id.soft_404",
-        "r": "fail",
-        "ev": "a nonexistent path returned 200"
+        "r": "na"
       },
       {
         "id": "id.canonical",
@@ -432,7 +431,7 @@
     {
       "id": "avail.blank",
       "sev": "C",
-      "ev": "44 visible characters"
+      "ev": "0 visible characters"
     },
     {
       "id": "sec.http_redirect",
@@ -512,7 +511,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8557.369999999999ms"
+      "ev": "4876.318ms"
     },
     {
       "id": "sec.csp",
@@ -529,7 +528,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "9 moderate/minor violation(s)"
+      "ev": "8 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -593,11 +592,6 @@
       "id": "id.robots",
       "sev": "L",
       "ev": "Disallow: / for User-agent: *"
-    },
-    {
-      "id": "id.soft_404",
-      "sev": "L",
-      "ev": "a nonexistent path returned 200"
     },
     {
       "id": "id.charset_doctype",
@@ -820,5 +814,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

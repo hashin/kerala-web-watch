@@ -38,11 +38,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-08T01:13:02.554Z",
-    "run": "1794100341807",
+    "at": "2026-11-10T04:06:51.789Z",
+    "run": "1794283567104",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 27,
+      "performance": 26,
       "accessibility": 55,
       "best_practices": 54,
       "seo": 82
@@ -60,7 +60,7 @@
     },
     "tech": {
       "cms": null,
-      "server": "Apache",
+      "server": "Apache/2.4.27 (Unix) OpenSSL/1.0.2k-fips mod_jk/1.2.44",
       "jquery": "1.9.1"
     },
     "checks": [
@@ -155,8 +155,7 @@
       },
       {
         "id": "sec.server_banner",
-        "r": "fail",
-        "ev": "Apache/2.4.27 (Unix) OpenSSL/1.0.2k-fips mod_jk/1.2.44"
+        "r": "pass"
       },
       {
         "id": "sec.vuln_js",
@@ -225,12 +224,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "27/100"
+        "ev": "26/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9365.8925ms"
+        "ev": "19667.712000000003ms"
       },
       {
         "id": "perf.cls",
@@ -323,7 +322,7 @@
       },
       {
         "id": "gigw.feedback",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.sitemap",
@@ -432,6 +431,13 @@
     },
     "outlinks": [
       {
+        "host": "forms.gle",
+        "count": 1,
+        "texts": [
+          "Participate in NeSDA 2025 – Take the Survey"
+        ]
+      },
+      {
         "host": "informer.com",
         "count": 1,
         "texts": [
@@ -491,11 +497,11 @@
     ]
   },
   "score": {
-    "overall": 47,
-    "security": 52,
+    "overall": 49,
+    "security": 56,
     "accessibility": 42,
     "content": 32,
-    "gigw": 16,
+    "gigw": 20,
     "performance": 76,
     "identity": 88
   },
@@ -574,7 +580,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9365.8925ms"
+      "ev": "19667.712000000003ms"
     },
     {
       "id": "perf.tap_targets",
@@ -583,11 +589,6 @@
     {
       "id": "sec.referrer",
       "sev": "L"
-    },
-    {
-      "id": "sec.server_banner",
-      "sev": "L",
-      "ev": "Apache/2.4.27 (Unix) OpenSSL/1.0.2k-fips mod_jk/1.2.44"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -607,10 +608,6 @@
       "id": "content.console_errors",
       "sev": "L",
       "ev": "10 console error(s): The Content-Security-Policy directive name ''unsafe-inline'' contains one or more invalid characters. Only ASCII alphanumeric characters or dashes '-' are allowed in directive names."
-    },
-    {
-      "id": "gigw.feedback",
-      "sev": "L"
     },
     {
       "id": "gigw.terms",
@@ -664,7 +661,7 @@
     {
       "d": "2026-11-10",
       "up": true,
-      "score": 47
+      "score": 49
     },
     {
       "d": "2026-11-09",
@@ -907,5 +904,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

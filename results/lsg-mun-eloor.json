@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-03T03:20:49.618Z",
-    "run": "1793676009066",
+    "at": "2026-11-10T04:04:55.592Z",
+    "run": "1794283450681",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 59,
+      "performance": 61,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 92
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "59/100"
+        "ev": "61/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "29899.758499999985ms"
+        "ev": "24368.400499999992ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "20.1MB"
+        "ev": "19.0MB"
       },
       {
         "id": "perf.viewport",
@@ -281,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://eloormunicipality.lsgkerala.gov.in/ml/.well-known/traffic-advice)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -537,10 +536,10 @@
     ]
   },
   "score": {
-    "overall": 67,
+    "overall": 68,
     "security": 76,
     "accessibility": 70,
-    "content": 46,
+    "content": 56,
     "gigw": 40,
     "performance": 76,
     "identity": 96
@@ -561,11 +560,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://eloormunicipality.lsgkerala.gov.in/ml/.well-known/traffic-advice)"
     },
     {
       "id": "a11y.axe_serious",
@@ -596,12 +590,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "29899.758499999985ms"
+      "ev": "24368.400499999992ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "20.1MB"
+      "ev": "19.0MB"
     },
     {
       "id": "sec.csp",
@@ -660,7 +654,7 @@
     {
       "d": "2026-11-10",
       "up": true,
-      "score": 67
+      "score": 68
     },
     {
       "d": "2026-11-09",
@@ -903,5 +897,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

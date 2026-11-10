@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-07T01:07:32.542Z",
-    "run": "1794013519643",
+    "at": "2026-11-10T03:47:56.706Z",
+    "run": "1794282328303",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 46,
+      "performance": 47,
       "accessibility": 76,
       "best_practices": 100,
       "seo": 77
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 9,
-      "broken": 3
+      "broken": 4
     },
     "tech": {
       "cms": "WordPress 5.0.3",
@@ -184,7 +184,8 @@
       },
       {
         "id": "a11y.lang",
-        "r": "pass"
+        "r": "fail",
+        "ev": "<html lang=\"en-US\"> vs. 37% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -221,17 +222,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "46/100"
+        "ev": "47/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8809.280999999999ms"
+        "ev": "8315.507500000002ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.26"
+        "ev": "0.27"
       },
       {
         "id": "perf.weight",
@@ -260,7 +261,7 @@
       },
       {
         "id": "content.stale_news",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "content.placeholder",
@@ -282,7 +283,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "3/30 crawled link(s) broken (http://archive.education.kerala.gov.in/, https://edumission.kerala.gov.in/, https://samanwaya.kite.kerala.gov.in/index.php/auth/login)"
+        "ev": "4/30 crawled link(s) broken (http://archive.education.kerala.gov.in/, https://sametham.kite.kerala.gov.in/, https://edumission.kerala.gov.in/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -477,9 +478,9 @@
     ]
   },
   "score": {
-    "overall": 48,
+    "overall": 43,
     "security": 38,
-    "accessibility": 42,
+    "accessibility": 22,
     "content": 46,
     "gigw": 30,
     "performance": 82,
@@ -503,6 +504,11 @@
       "ev": "2 critical violation(s)"
     },
     {
+      "id": "a11y.lang",
+      "sev": "H",
+      "ev": "<html lang=\"en-US\"> vs. 37% Malayalam content"
+    },
+    {
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
@@ -515,7 +521,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "3/30 crawled link(s) broken (http://archive.education.kerala.gov.in/, https://edumission.kerala.gov.in/, https://samanwaya.kite.kerala.gov.in/index.php/auth/login)"
+      "ev": "4/30 crawled link(s) broken (http://archive.education.kerala.gov.in/, https://sametham.kite.kerala.gov.in/, https://edumission.kerala.gov.in/, ...)"
     },
     {
       "id": "sec.hsts",
@@ -559,7 +565,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8809.280999999999ms"
+      "ev": "8315.507500000002ms"
     },
     {
       "id": "id.tech",
@@ -615,7 +621,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.26"
+      "ev": "0.27"
     },
     {
       "id": "perf.images",
@@ -635,7 +641,7 @@
     {
       "d": "2026-11-10",
       "up": true,
-      "score": 48
+      "score": 43
     },
     {
       "d": "2026-11-09",
@@ -878,5 +884,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
