@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-06T02:02:54.960Z",
-    "run": "1793930520624",
+    "at": "2026-11-11T01:51:41.836Z",
+    "run": "1794361845868",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 60,
+      "performance": 61,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 85
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 8,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "60/100"
+        "ev": "61/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "31515.674500000012ms"
+        "ev": "23563.07050000001ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "10.9MB"
+        "ev": "19.1MB"
       },
       {
         "id": "perf.viewport",
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://irinjalakudamunicipality.lsgkerala.gov.in/ml/en/en/members)"
       },
       {
         "id": "content.broken_pdfs",
@@ -490,7 +491,7 @@
         "host": "youtube.com",
         "count": 2,
         "texts": [
-          "Massages",
+          "Navathi Inauguration",
           "K Smart Support"
         ]
       },
@@ -564,10 +565,10 @@
     ]
   },
   "score": {
-    "overall": 65,
+    "overall": 63,
     "security": 76,
     "accessibility": 70,
-    "content": 56,
+    "content": 46,
     "gigw": 16,
     "performance": 76,
     "identity": 96
@@ -588,6 +589,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://irinjalakudamunicipality.lsgkerala.gov.in/ml/en/en/members)"
     },
     {
       "id": "gigw.rti",
@@ -622,12 +628,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "31515.674500000012ms"
+      "ev": "23563.07050000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "10.9MB"
+      "ev": "19.1MB"
     },
     {
       "id": "sec.csp",
@@ -687,6 +693,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-11",
+      "up": true,
+      "score": 63
+    },
     {
       "d": "2026-11-10",
       "up": true,
@@ -933,5 +944,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

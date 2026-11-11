@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-10T03:57:33.700Z",
-    "run": "1794282811650",
+    "at": "2026-11-11T01:47:30.996Z",
+    "run": "1794360856210",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 60,
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 7,
-      "broken": 1
+      "broken": 31
     },
     "tech": {
       "cms": "WordPress 6.5.14",
@@ -98,7 +98,7 @@
       {
         "id": "avail.ttfb",
         "r": "fail",
-        "ev": "10346ms"
+        "ev": "18946ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -226,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8887.032000000001ms"
+        "ev": "8308.775000000001ms"
       },
       {
         "id": "perf.cls",
@@ -281,12 +281,13 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "30/30 crawled link(s) broken (https://envt.kerala.gov.in/#main, https://envt.kerala.gov.in/#, https://envt.kerala.gov.in/, ...)"
       },
       {
         "id": "content.broken_pdfs",
         "r": "fail",
-        "ev": "1 linked PDF(s) 404: https://climatechange.envt.kerala.gov.in/wp-content/uploads/2026/06/Carbon-Neutral-Kerala-by-2050-Report.pdf"
+        "ev": "1 linked PDF(s) 404: https://envt.kerala.gov.in/wp-content/uploads/2026/05/List-of-Environmental-Awards.pdf"
       },
       {
         "id": "content.broken_images",
@@ -386,7 +387,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.robots",
@@ -471,10 +472,10 @@
     ]
   },
   "score": {
-    "overall": 54,
+    "overall": 51,
     "security": 38,
     "accessibility": 72,
-    "content": 42,
+    "content": 22,
     "gigw": 22,
     "performance": 71,
     "identity": 100
@@ -501,9 +502,14 @@
       "ev": "ML-NILA"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "30/30 crawled link(s) broken (https://envt.kerala.gov.in/#main, https://envt.kerala.gov.in/#, https://envt.kerala.gov.in/, ...)"
+    },
+    {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "10346ms"
+      "ev": "18946ms"
     },
     {
       "id": "sec.hsts",
@@ -522,7 +528,7 @@
     {
       "id": "content.broken_pdfs",
       "sev": "M",
-      "ev": "1 linked PDF(s) 404: https://climatechange.envt.kerala.gov.in/wp-content/uploads/2026/06/Carbon-Neutral-Kerala-by-2050-Report.pdf"
+      "ev": "1 linked PDF(s) 404: https://envt.kerala.gov.in/wp-content/uploads/2026/05/List-of-Environmental-Awards.pdf"
     },
     {
       "id": "gigw.sitemap",
@@ -547,7 +553,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8887.032000000001ms"
+      "ev": "8308.775000000001ms"
     },
     {
       "id": "perf.weight",
@@ -622,6 +628,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-11",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-11-10",
       "up": true,
@@ -878,5 +889,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,23 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-10T04:16:23.261Z",
-    "run": "1794284140852",
+    "at": "2026-11-11T01:51:34.091Z",
+    "run": "1794361763116",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 65,
-      "accessibility": 63,
-      "best_practices": 74,
-      "seo": 83
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 3,
-      "serious": 18,
-      "moderate": 51,
+      "serious": 10,
+      "moderate": 18,
       "minor": 0
     },
     "crawl": {
-      "pages": 30,
+      "pages": 5,
       "pdfs": 0,
       "broken": 0
     },
@@ -95,7 +90,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "fail",
+        "ev": "18447ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -174,12 +170,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "18 serious violation(s)"
+        "ev": "10 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "51 moderate/minor violation(s)"
+        "ev": "18 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -193,7 +189,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "8 low-contrast element(s)"
+        "ev": "7 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -215,27 +211,23 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "63/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "65/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "16367.039999999997ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
-        "r": "fail",
-        "ev": "56.4MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
@@ -243,11 +235,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -296,7 +288,8 @@
       },
       {
         "id": "content.title",
-        "r": "pass"
+        "r": "fail",
+        "ev": "missing <title>"
       },
       {
         "id": "content.meta_desc",
@@ -309,11 +302,11 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "4 console error(s): Refused to apply style from 'http://www.kamcoindia.com/assets/css/bootstrap.min.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+        "ev": "6 console error(s): Refused to apply style from 'http://www.kamcoindia.com/assets/css/bootstrap.min.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       },
       {
         "id": "gigw.contact",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.feedback",
@@ -357,7 +350,7 @@
       },
       {
         "id": "gigw.rti",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.search",
@@ -426,21 +419,6 @@
     },
     "outlinks": [
       {
-        "host": "facebook.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "instagram.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "youtube.com",
-        "count": 1,
-        "texts": []
-      },
-      {
         "host": "wa.me",
         "count": 1,
         "texts": []
@@ -466,14 +444,27 @@
       "ev": "no \"last updated\" date found"
     },
     {
+      "id": "gigw.contact",
+      "sev": "H"
+    },
+    {
+      "id": "gigw.rti",
+      "sev": "H"
+    },
+    {
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "www.kamcoindia.com"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "18447ms"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "18 serious violation(s)"
+      "ev": "10 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -483,12 +474,17 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "8 low-contrast element(s)"
+      "ev": "7 low-contrast element(s)"
     },
     {
       "id": "a11y.labels",
       "sev": "M",
       "ev": "1 form control(s) without a label"
+    },
+    {
+      "id": "content.title",
+      "sev": "M",
+      "ev": "missing <title>"
     },
     {
       "id": "gigw.accessibility_statement",
@@ -503,27 +499,13 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "16367.039999999997ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "56.4MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
-    },
-    {
       "id": "sec.csp",
       "sev": "L"
     },
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "51 moderate/minor violation(s)"
+      "ev": "18 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -541,7 +523,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "4 console error(s): Refused to apply style from 'http://www.kamcoindia.com/assets/css/bootstrap.min.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+      "ev": "6 console error(s): Refused to apply style from 'http://www.kamcoindia.com/assets/css/bootstrap.min.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
     },
     {
       "id": "gigw.feedback",
@@ -572,10 +554,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -599,6 +577,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-11",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-10",
       "up": false,
@@ -850,5 +833,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

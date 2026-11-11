@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-25T23:50:09.735Z",
-    "run": "1792972199020",
+    "at": "2026-11-11T01:43:56.597Z",
+    "run": "1794361427703",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
+      "performance": 67,
       "accessibility": 97,
       "best_practices": 81,
       "seo": 58
@@ -120,8 +120,7 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "22 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -216,12 +215,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "67/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6417.475999999999ms"
+        "ev": "5428.342999999999ms"
       },
       {
         "id": "perf.cls",
@@ -375,7 +374,8 @@
       },
       {
         "id": "id.domain_expiry",
-        "r": "pass"
+        "r": "fail",
+        "ev": "55 days left"
       },
       {
         "id": "id.www_consistency",
@@ -410,7 +410,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-S4HMJ5EXYY&amp;cx=c&amp;gtm=4e6al1, https://www.googletagmanager.com/gtag/js?id=UA-26575989-44"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-S4HMJ5EXYY&amp;cx=c&amp;gtm=4e6b91h1, https://www.googletagmanager.com/gtag/js?id=UA-26575989-44"
       }
     ],
     "screenshot": {
@@ -439,11 +439,6 @@
       "ev": "http://www.gptcherthala.org"
     },
     {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "22 days left"
-    },
-    {
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
@@ -460,6 +455,11 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "www.gptcherthala.org"
+    },
+    {
+      "id": "id.domain_expiry",
+      "sev": "H",
+      "ev": "55 days left"
     },
     {
       "id": "sec.hsts",
@@ -492,7 +492,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6417.475999999999ms"
+      "ev": "5428.342999999999ms"
     },
     {
       "id": "sec.csp",
@@ -576,10 +576,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-S4HMJ5EXYY&amp;cx=c&amp;gtm=4e6al1, https://www.googletagmanager.com/gtag/js?id=UA-26575989-44"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-S4HMJ5EXYY&amp;cx=c&amp;gtm=4e6b91h1, https://www.googletagmanager.com/gtag/js?id=UA-26575989-44"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-11",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-10",
       "up": false,
@@ -806,5 +811,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

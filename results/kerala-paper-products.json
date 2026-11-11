@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-08T00:55:39.509Z",
-    "run": "1794099300286",
+    "at": "2026-11-11T01:29:37.783Z",
+    "run": "1794360539428",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 60,
@@ -46,8 +46,8 @@
     },
     "axe": {
       "critical": 0,
-      "serious": 78,
-      "moderate": 45,
+      "serious": 56,
+      "moderate": 34,
       "minor": 5
     },
     "crawl": {
@@ -92,7 +92,7 @@
       {
         "id": "avail.under_construction",
         "r": "warn",
-        "ev": "\"coming soon\" alongside 3095 other characters"
+        "ev": "\"coming soon\" alongside 2405 other characters"
       },
       {
         "id": "avail.ttfb",
@@ -174,12 +174,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "78 serious violation(s)"
+        "ev": "56 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "50 moderate/minor violation(s)"
+        "ev": "39 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -192,7 +192,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "71 low-contrast element(s)"
+        "ev": "49 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -225,7 +225,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7347.0815ms"
+        "ev": "7184.894ms"
       },
       {
         "id": "perf.cls",
@@ -382,7 +382,8 @@
       },
       {
         "id": "id.domain_expiry",
-        "r": "pass"
+        "r": "fail",
+        "ev": "58 days left"
       },
       {
         "id": "id.www_consistency",
@@ -440,20 +441,20 @@
     ]
   },
   "score": {
-    "overall": 47,
+    "overall": 45,
     "security": 28,
     "accessibility": 70,
     "content": 32,
     "gigw": 18,
     "performance": 86,
-    "identity": 68
+    "identity": 48
   },
   "status": "poor",
   "issues": [
     {
       "id": "avail.under_construction",
       "sev": "H",
-      "ev": "\"coming soon\" alongside 3095 other characters"
+      "ev": "\"coming soon\" alongside 2405 other characters"
     },
     {
       "id": "sec.http_redirect",
@@ -480,6 +481,11 @@
       "ev": "keralapaper.in"
     },
     {
+      "id": "id.domain_expiry",
+      "sev": "H",
+      "ev": "58 days left"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -490,12 +496,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "78 serious violation(s)"
+      "ev": "56 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "71 low-contrast element(s)"
+      "ev": "49 low-contrast element(s)"
     },
     {
       "id": "content.copyright_year",
@@ -530,7 +536,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7347.0815ms"
+      "ev": "7184.894ms"
     },
     {
       "id": "sec.csp",
@@ -547,7 +553,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "50 moderate/minor violation(s)"
+      "ev": "39 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -627,6 +633,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-11",
+      "up": true,
+      "score": 45
+    },
     {
       "d": "2026-11-10",
       "up": true,
@@ -833,5 +844,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

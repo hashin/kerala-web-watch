@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-10T04:21:12.802Z",
-    "run": "1794284417686",
+    "at": "2026-11-11T01:56:53.654Z",
+    "run": "1794362171851",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 60,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -227,7 +227,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10142.063000000002ms"
+        "ev": "8500.349ms"
       },
       {
         "id": "perf.cls",
@@ -282,8 +282,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://lsgkerala.gov.in/ml/act-rule)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -543,11 +542,6 @@
       "ev": "ml-user"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://lsgkerala.gov.in/ml/act-rule)"
-    },
-    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -581,7 +575,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10142.063000000002ms"
+      "ev": "8500.349ms"
     },
     {
       "id": "perf.weight",
@@ -658,6 +652,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-11",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-10",
       "up": false,
@@ -914,5 +913,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

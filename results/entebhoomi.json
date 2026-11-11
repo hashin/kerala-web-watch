@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-10T03:52:28.972Z",
-    "run": "1794282659905",
+    "at": "2026-11-11T01:27:18.252Z",
+    "run": "1794360343477",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 57,
+      "performance": 58,
       "accessibility": 70,
       "best_practices": 88,
       "seo": 77
@@ -49,13 +49,13 @@
     "axe": {
       "critical": 20,
       "serious": 16,
-      "moderate": 71,
+      "moderate": 70,
       "minor": 0
     },
     "crawl": {
       "pages": 28,
       "pdfs": 6,
-      "broken": 1
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -122,7 +122,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "17 days left"
+        "ev": "16 days left"
       },
       {
         "id": "sec.tls_version",
@@ -181,7 +181,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "71 moderate/minor violation(s)"
+        "ev": "70 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -224,12 +224,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "57/100"
+        "ev": "58/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6985.756ms"
+        "ev": "6784.051ms"
       },
       {
         "id": "perf.cls",
@@ -284,7 +284,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/28 crawled link(s) broken (https://services.kerala.gov.in/)"
+        "ev": "2/28 crawled link(s) broken (https://services.kerala.gov.in/, https://edistrict.kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -500,7 +500,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "17 days left"
+      "ev": "16 days left"
     },
     {
       "id": "a11y.axe_critical",
@@ -525,7 +525,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/28 crawled link(s) broken (https://services.kerala.gov.in/)"
+      "ev": "2/28 crawled link(s) broken (https://services.kerala.gov.in/, https://edistrict.kerala.gov.in/)"
     },
     {
       "id": "gigw.contact",
@@ -569,7 +569,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6985.756ms"
+      "ev": "6784.051ms"
     },
     {
       "id": "perf.tap_targets",
@@ -578,7 +578,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "71 moderate/minor violation(s)"
+      "ev": "70 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -638,6 +638,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-11",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-11-10",
       "up": true,
@@ -889,5 +894,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

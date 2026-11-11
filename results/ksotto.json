@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-10T03:59:50.942Z",
-    "run": "1794283078506",
+    "at": "2026-11-11T01:42:52.892Z",
+    "run": "1794361309521",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 31,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 2
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "5662ms"
+        "ev": "3035ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -227,7 +227,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "16341.8625ms"
+        "ev": "9354.2415ms"
       },
       {
         "id": "perf.cls",
@@ -236,8 +236,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "fail",
-        "ev": "13.4MB"
+        "r": "warn",
+        "ev": "7.2MB"
       },
       {
         "id": "perf.viewport",
@@ -271,7 +271,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-user"
+        "ev": "ml-transform"
       },
       {
         "id": "content.obsolete_tech",
@@ -284,7 +284,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "2/30 crawled link(s) broken (https://www.portal.ksotto.kerala.gov.in/, https://ksotto.kerala.gov.in/#)"
+        "ev": "1/30 crawled link(s) broken (https://www.portal.ksotto.kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -313,7 +313,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "4 console error(s): Framing 'https://www.facebook.com/' violates the following Content Security Policy directive: \"frame-src 'self' https://www.google.com https://maps.google.com https://*.google.com https://www.youtube.com https://www.youtube-nocookie.com\". The request has been blocked.\n"
+        "ev": "2 console error(s): Framing 'https://www.facebook.com/' violates the following Content Security Policy directive: \"frame-src 'self' https://www.google.com https://maps.google.com https://*.google.com https://www.youtube.com https://www.youtube-nocookie.com\". The request has been blocked.\n"
       },
       {
         "id": "gigw.contact",
@@ -481,7 +481,7 @@
     "accessibility": 40,
     "content": 42,
     "gigw": 22,
-    "performance": 72,
+    "performance": 77,
     "identity": 100
   },
   "status": "needs-work",
@@ -504,17 +504,17 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-user"
+      "ev": "ml-transform"
     },
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "2/30 crawled link(s) broken (https://www.portal.ksotto.kerala.gov.in/, https://ksotto.kerala.gov.in/#)"
+      "ev": "1/30 crawled link(s) broken (https://www.portal.ksotto.kerala.gov.in/)"
     },
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "5662ms"
+      "ev": "3035ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -554,12 +554,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "16341.8625ms"
+      "ev": "9354.2415ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "13.4MB"
+      "ev": "7.2MB"
     },
     {
       "id": "sec.xcto",
@@ -591,7 +591,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "4 console error(s): Framing 'https://www.facebook.com/' violates the following Content Security Policy directive: \"frame-src 'self' https://www.google.com https://maps.google.com https://*.google.com https://www.youtube.com https://www.youtube-nocookie.com\". The request has been blocked.\n"
+      "ev": "2 console error(s): Framing 'https://www.facebook.com/' violates the following Content Security Policy directive: \"frame-src 'self' https://www.google.com https://maps.google.com https://*.google.com https://www.youtube.com https://www.youtube-nocookie.com\". The request has been blocked.\n"
     },
     {
       "id": "gigw.feedback",
@@ -636,6 +636,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-11",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-11-10",
       "up": true,
@@ -892,5 +897,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

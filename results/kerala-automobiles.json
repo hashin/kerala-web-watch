@@ -29,14 +29,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-10T03:48:44.891Z",
-    "run": "1794282486757",
+    "at": "2026-11-11T01:26:33.529Z",
+    "run": "1794360354066",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 74,
-      "accessibility": 77,
-      "best_practices": 69,
-      "seo": 83
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
     },
     "axe": {
       "critical": 5,
@@ -209,21 +209,20 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "77/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "74/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "4876.318ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -235,7 +234,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -392,7 +391,8 @@
       },
       {
         "id": "id.soft_404",
-        "r": "na"
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
       },
       {
         "id": "id.canonical",
@@ -503,9 +503,8 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "4876.318ms"
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -588,6 +587,11 @@
       "ev": "Disallow: / for User-agent: *"
     },
     {
+      "id": "id.soft_404",
+      "sev": "L",
+      "ev": "a nonexistent path returned 200"
+    },
+    {
       "id": "id.charset_doctype",
       "sev": "L",
       "ev": "missing UTF-8 charset, HTML5 doctype"
@@ -602,6 +606,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-11",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-10",
       "up": false,
@@ -808,5 +817,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

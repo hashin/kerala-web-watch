@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-10T04:17:58.626Z",
-    "run": "1794284195394",
+    "at": "2026-11-11T01:55:01.632Z",
+    "run": "1794362049591",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 38,
@@ -227,12 +227,12 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "21728.569499999998ms"
+        "ev": "23415.315500000004ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.36"
+        "ev": "0.34"
       },
       {
         "id": "perf.weight",
@@ -312,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "7 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+        "ev": "7 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
       },
       {
         "id": "gigw.contact",
@@ -538,7 +538,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "21728.569499999998ms"
+      "ev": "23415.315500000004ms"
     },
     {
       "id": "perf.weight",
@@ -584,7 +584,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "7 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      "ev": "7 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
     },
     {
       "id": "gigw.feedback",
@@ -613,7 +613,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.36"
+      "ev": "0.34"
     },
     {
       "id": "perf.images",
@@ -621,6 +621,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-11",
+      "up": true,
+      "score": 52
+    },
     {
       "d": "2026-11-10",
       "up": true,
@@ -872,5 +877,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

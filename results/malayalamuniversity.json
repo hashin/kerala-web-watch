@@ -35,23 +35,23 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-10T04:02:26.979Z",
-    "run": "1794283302431",
+    "at": "2026-11-11T01:43:47.778Z",
+    "run": "1794361413682",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 40,
-      "accessibility": 77,
-      "best_practices": 73,
-      "seo": 100
+      "performance": 56,
+      "accessibility": 90,
+      "best_practices": 100,
+      "seo": 83
     },
     "axe": {
       "critical": 0,
-      "serious": 20,
-      "moderate": 24,
-      "minor": 23
+      "serious": 1,
+      "moderate": 1,
+      "minor": 0
     },
     "crawl": {
-      "pages": 30,
+      "pages": 4,
       "pdfs": 0,
       "broken": 0
     },
@@ -131,16 +131,15 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://malayalamuniversity.edu.in/ml/\""
+        "r": "pass"
       },
       {
         "id": "sec.csp",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xfo",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xcto",
@@ -157,8 +156,7 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "fail",
-        "ev": "jquery 2.2.4, bootstrap 3.3.7"
+        "r": "pass"
       },
       {
         "id": "sec.safe_browsing",
@@ -175,12 +173,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "20 serious violation(s)"
+        "ev": "1 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "47 moderate/minor violation(s)"
+        "ev": "1 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -193,12 +191,11 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "19 low-contrast element(s)"
+        "ev": "1 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
-        "r": "fail",
-        "ev": "heading levels skipped"
+        "r": "pass"
       },
       {
         "id": "a11y.labels",
@@ -210,33 +207,30 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "warn",
-        "ev": "tabindex=\"-1\" alongside outline:none"
+        "r": "pass"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "77/100"
+        "ev": "90/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "40/100"
+        "ev": "56/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "13652.165ms"
+        "ev": "6381.713999999999ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.36"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "3.4MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
@@ -244,7 +238,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -252,7 +246,7 @@
       },
       {
         "id": "content.copyright_year",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "content.last_updated",
@@ -269,8 +263,7 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "fail",
-        "ev": "ml-IN"
+        "r": "pass"
       },
       {
         "id": "content.obsolete_tech",
@@ -290,8 +283,7 @@
       },
       {
         "id": "content.broken_images",
-        "r": "fail",
-        "ev": "1 broken image(s)"
+        "r": "pass"
       },
       {
         "id": "content.malayalam",
@@ -303,7 +295,7 @@
       },
       {
         "id": "content.meta_desc",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.favicon",
@@ -311,12 +303,11 @@
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "5 console error(s): Mixed Content: The page at 'https://malayalamuniversity.edu.in/ml/' was loaded over HTTPS, but requested an insecure script 'http://maps.google.com/maps/api/js?key=AIzaSyAxhaNqPU0sF0Orqchz7Ek6S42QQ2JlaYo'. This request has been blocked; the content must be served over HTTPS."
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.feedback",
@@ -360,7 +351,7 @@
       },
       {
         "id": "gigw.rti",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.search",
@@ -400,7 +391,8 @@
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
       },
       {
         "id": "id.canonical",
@@ -416,179 +408,83 @@
       },
       {
         "id": "id.third_party",
-        "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-8FQD430GF9&amp;cx=c&amp;gtm=4e6b90h2, https://www.googletagmanager.com/gtag/js?id=UA-108303959-1"
+        "r": "pass"
       }
     ],
     "screenshot": {
-      "desktop": "2026-09-22.webp",
-      "mobile": "2026-09-22-m.webp",
-      "phash": "ff81000000ffffff"
+      "desktop": "malayalamuniversity.webp",
+      "mobile": "malayalamuniversity-m.webp",
+      "phash": "3f3f7f7f21000000"
     },
     "outlinks": [
       {
-        "host": "temu.ac.in",
-        "count": 3,
-        "texts": [
-          "എൽ.എം.എസ്",
-          "എല്‍. എം. എസ്",
-          "സർവകലാശാല ഭരണനിഘണ്ടു"
-        ]
-      },
-      {
-        "host": "inflibnet.ac.in",
-        "count": 3,
-        "texts": [
-          "ശോധ് ഗംഗ",
-          "ശോധ് ഗംഗോത്രി",
-          "ഇ -പി ജി പഥശാല"
-        ]
-      },
-      {
-        "host": "abc.gov.in",
-        "count": 1,
-        "texts": [
-          "അക്കാദമിക് ബാങ്ക് ഓഫ് ക്രെഡിറ്റ്സ്"
-        ]
-      },
-      {
-        "host": "digilocker.gov.in",
-        "count": 1,
-        "texts": [
-          "ഡിജിലോക്കർ നാഡ് പോർട്ടൽ"
-        ]
-      },
-      {
-        "host": "scholarships.gov.in",
-        "count": 1,
-        "texts": [
-          "നാഷണൽ സ്കോളർഷിപ്പ് പോർട്ടൽ"
-        ]
-      },
-      {
-        "host": "samarth.ac.in",
-        "count": 2,
-        "texts": [
-          "സമർത്",
-          "സമർത് പോർട്ടൽ"
-        ]
-      },
-      {
-        "host": "ugc.ac.in",
-        "count": 2,
-        "texts": [
-          "ഉത്‌സാഹ്",
-          "ഇ-സാമാധാൻ"
-        ]
-      },
-      {
-        "host": "keralabattlescovid.in",
-        "count": 1,
-        "texts": [
-          "കേരള ബാറ്റിൽസ് കോവിഡ്"
-        ]
-      },
-      {
-        "host": "kerala.gov.in",
-        "count": 2,
-        "texts": [
-          "ഉന്നത വിദ്യാഭ്യാസ വകുപ്പ്",
-          "കേരള സർക്കാർ - മുഖ്യമന്ത്രിയുടെ പൊതുജന പരാതി പരിഹാര സംവിധാനം | ദുരിതാശ്വാസ നിധി"
-        ]
-      },
-      {
-        "host": "youtube.com",
-        "count": 1,
-        "texts": [
-          "അക്ഷരം യൂട്യൂബ് ചാനൽ"
-        ]
-      },
-      {
-        "host": "aiu.ac.in",
-        "count": 1,
-        "texts": [
-          "ആസോസിയേഷൻ ഓഫ് ഇന്ത്യൻ യൂണിവേഴ്സിറ്റിസ്"
-        ]
-      },
-      {
-        "host": "swayam.gov.in",
-        "count": 1,
-        "texts": [
-          "സ്വയം മൂക് കോഴ്‌സ്"
-        ]
-      },
-      {
-        "host": "swayamprabha.gov.in",
+        "host": "facebook.com",
         "count": 1,
         "texts": []
       },
       {
-        "host": "ugc.gov.in",
+        "host": "instagram.com",
         "count": 1,
-        "texts": [
-          "യു.ജി.സി"
-        ]
+        "texts": []
       },
       {
-        "host": "onlinesbi.sbi",
+        "host": "threads.net",
         "count": 1,
-        "texts": [
-          "സർവകലാശാലയുടെ ഫീസുകൾ അടയ്ക്കുന്നതിനു വേണ്ടിയുള്ള ലിങ്ക്"
-        ]
+        "texts": []
       },
       {
-        "host": "sprdh.com",
+        "host": "x.com",
         "count": 1,
-        "texts": [
-          "SPRDH"
-        ]
+        "texts": []
+      },
+      {
+        "host": "youtube.com",
+        "count": 1,
+        "texts": []
       }
     ]
   },
   "score": {
-    "overall": 55,
-    "security": 38,
-    "accessibility": 70,
-    "content": 52,
-    "gigw": 18,
-    "performance": 77,
-    "identity": 100
+    "overall": 64,
+    "security": 64,
+    "accessibility": 76,
+    "content": 76,
+    "gigw": 0,
+    "performance": 76,
+    "identity": 96
   },
   "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://malayalamuniversity.edu.in/ml/\""
-    },
-    {
-      "id": "sec.vuln_js",
-      "sev": "H",
-      "ev": "jquery 2.2.4, bootstrap 3.3.7"
-    },
     {
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "content.legacy_font",
-      "sev": "H",
-      "ev": "ml-IN"
+      "id": "gigw.contact",
+      "sev": "H"
+    },
+    {
+      "id": "gigw.rti",
+      "sev": "H"
     },
     {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
+      "id": "sec.xfo",
+      "sev": "M"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "20 serious violation(s)"
+      "ev": "1 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "19 low-contrast element(s)"
+      "ev": "1 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -613,12 +509,15 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "13652.165ms"
+      "ev": "6381.713999999999ms"
     },
     {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "3.4MB"
+      "id": "perf.tap_targets",
+      "sev": "M"
+    },
+    {
+      "id": "sec.csp",
+      "sev": "L"
     },
     {
       "id": "sec.xcto",
@@ -636,27 +535,11 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "47 moderate/minor violation(s)"
+      "ev": "1 moderate/minor violation(s)"
     },
     {
-      "id": "a11y.headings",
-      "sev": "L",
-      "ev": "heading levels skipped"
-    },
-    {
-      "id": "a11y.keyboard",
-      "sev": "L",
-      "ev": "tabindex=\"-1\" alongside outline:none"
-    },
-    {
-      "id": "content.broken_images",
-      "sev": "L",
-      "ev": "1 broken image(s)"
-    },
-    {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "5 console error(s): Mixed Content: The page at 'https://malayalamuniversity.edu.in/ml/' was loaded over HTTPS, but requested an insecure script 'http://maps.google.com/maps/api/js?key=AIzaSyAxhaNqPU0sF0Orqchz7Ek6S42QQ2JlaYo'. This request has been blocked; the content must be served over HTTPS."
+      "id": "content.meta_desc",
+      "sev": "L"
     },
     {
       "id": "gigw.feedback",
@@ -691,13 +574,13 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.36"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
+    },
+    {
+      "id": "id.soft_404",
+      "sev": "L",
+      "ev": "a nonexistent path returned 200"
     },
     {
       "id": "gigw.emblem",
@@ -706,14 +589,14 @@
     {
       "id": "id.canonical",
       "sev": "I"
-    },
-    {
-      "id": "id.third_party",
-      "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-8FQD430GF9&amp;cx=c&amp;gtm=4e6b90h2, https://www.googletagmanager.com/gtag/js?id=UA-108303959-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-11",
+      "up": true,
+      "score": 64
+    },
     {
       "d": "2026-11-10",
       "up": true,
@@ -965,5 +848,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
