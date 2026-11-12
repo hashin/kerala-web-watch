@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-06T01:45:49.089Z",
-    "run": "1793929496682",
+    "at": "2026-11-12T02:26:42.577Z",
+    "run": "1794450343436",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 48,
+      "performance": 54,
       "accessibility": 84,
       "best_practices": 69,
       "seo": 83
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "48/100"
+        "ev": "54/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "24768.3605ms"
+        "ev": "22801.475250000003ms"
       },
       {
         "id": "perf.cls",
@@ -279,7 +279,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://malappuram.nic.in/en/#SkipContent)"
       },
       {
         "id": "content.broken_pdfs",
@@ -451,11 +452,11 @@
       },
       {
         "host": "s3waas.gov.in",
-        "count": 5,
+        "count": 6,
         "texts": [
+          "PDF\n                    \n\n                    \n                        RTA Agenda\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
           "PDF\n                    \n\n                    \n                        Land Acquisition – Malappuram District – Nediyiruppu Village, Kondotty Taluk – Construction of Perimeter Road and Watch Tower for RESA – Final Report of the Social Impact Assessment Study\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
-          "PDF\n                    \n\n                    \n                        Land Acquisition – Rehabilitation package under the Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement (LARR) Act, 2013, in connection with the acquisition of land for the construction of the approach roa\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
-          "PDF\n                    \n\n                    \n                        General Transfer 2026 – Village Field Assistant & Office Attendant\n                        Download Document\n                    \n\n                    Opens downloadable PDF document"
+          "PDF\n                    \n\n                    \n                        Land Acquisition – Rehabilitation package under the Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement (LARR) Act, 2013, in connection with the acquisition of land for the construction of the approach roa\n                        Download Document\n                    \n\n                    Opens downloadable PDF document"
         ]
       },
       {
@@ -501,10 +502,10 @@
     ]
   },
   "score": {
-    "overall": 62,
+    "overall": 60,
     "security": 48,
     "accessibility": 60,
-    "content": 52,
+    "content": 42,
     "gigw": 60,
     "performance": 81,
     "identity": 96
@@ -532,6 +533,11 @@
       "ev": "ml-IN"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://malappuram.nic.in/en/#SkipContent)"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -555,7 +561,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "24768.3605ms"
+      "ev": "22801.475250000003ms"
     },
     {
       "id": "perf.weight",
@@ -634,6 +640,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-12",
+      "up": true,
+      "score": 60
+    },
     {
       "d": "2026-11-11",
       "up": true,
@@ -885,5 +896,5 @@
       "score": 60
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

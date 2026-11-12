@@ -35,13 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-11T01:28:48.554Z",
-    "run": "1794360393530",
+    "at": "2026-11-12T02:32:17.256Z",
+    "run": "1794450601357",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 50,
-      "accessibility": 94,
-      "best_practices": 96,
+      "performance": 52,
+      "accessibility": 92,
+      "best_practices": 92,
       "seo": 92
     },
     "axe": {
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 5
     },
     "tech": {
       "cms": null,
@@ -184,7 +184,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 92% Malayalam content"
+        "ev": "<html lang=\"en\"> vs. 93% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -215,17 +215,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "94/100"
+        "ev": "92/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "50/100"
+        "ev": "52/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "36420.335999999996ms"
+        "ev": "40750.26325ms"
       },
       {
         "id": "perf.cls",
@@ -234,7 +234,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "17.4MB"
+        "ev": "9.7MB"
       },
       {
         "id": "perf.viewport",
@@ -280,8 +280,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://keralapolice.gov.in/page/union-home-ministers-medal-winners)"
+        "r": "fail",
+        "ev": "5/30 crawled link(s) broken (https://keralapolice.gov.in/login, https://keralapolice.gov.in/#, https://keralapolice.gov.in/page/history-of-kerala-police, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -310,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "22 console error(s): Failed to load resource: the server responded with a status of 400 ()"
+        "ev": "20 console error(s): Failed to load resource: the server responded with a status of 400 ()"
       },
       {
         "id": "gigw.contact",
@@ -416,13 +416,13 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K&amp;cx=c&amp;gtm=4e6b91, https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6b91, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K&amp;cx=c&amp;gtm=4e6ba1, https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6ba1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
       }
     ],
     "screenshot": {
       "desktop": "keralapolice.webp",
       "mobile": "keralapolice-m.webp",
-      "phash": "3fff89003fff103f"
+      "phash": "ffff2c300080b03f"
     },
     "outlinks": [
       {
@@ -581,10 +581,10 @@
     ]
   },
   "score": {
-    "overall": 55,
+    "overall": 53,
     "security": 50,
     "accessibility": 60,
-    "content": 46,
+    "content": 36,
     "gigw": 26,
     "performance": 66,
     "identity": 96
@@ -604,7 +604,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 92% Malayalam content"
+      "ev": "<html lang=\"en\"> vs. 93% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -619,7 +619,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://keralapolice.gov.in/page/union-home-ministers-medal-winners)"
+      "ev": "5/30 crawled link(s) broken (https://keralapolice.gov.in/login, https://keralapolice.gov.in/#, https://keralapolice.gov.in/page/history-of-kerala-police, ...)"
     },
     {
       "id": "gigw.contact",
@@ -649,12 +649,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "36420.335999999996ms"
+      "ev": "40750.26325ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "17.4MB"
+      "ev": "9.7MB"
     },
     {
       "id": "perf.tap_targets",
@@ -678,7 +678,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "22 console error(s): Failed to load resource: the server responded with a status of 400 ()"
+      "ev": "20 console error(s): Failed to load resource: the server responded with a status of 400 ()"
     },
     {
       "id": "gigw.terms",
@@ -720,10 +720,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K&amp;cx=c&amp;gtm=4e6b91, https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6b91, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K&amp;cx=c&amp;gtm=4e6ba1, https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6ba1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-12",
+      "up": true,
+      "score": 53
+    },
     {
       "d": "2026-11-11",
       "up": true,
@@ -985,5 +990,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

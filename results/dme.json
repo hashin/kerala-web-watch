@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-11T01:26:39.692Z",
-    "run": "1794360307745",
+    "at": "2026-11-12T02:27:11.131Z",
+    "run": "1794450353803",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 40,
+      "performance": 41,
       "accessibility": 77,
       "best_practices": 73,
       "seo": 54
     },
     "axe": {
       "critical": 3,
-      "serious": 27,
+      "serious": 28,
       "moderate": 6,
       "minor": 0
     },
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3077ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -174,7 +175,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "27 serious violation(s)"
+        "ev": "28 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -193,7 +194,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "16 low-contrast element(s)"
+        "ev": "17 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -222,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "40/100"
+        "ev": "41/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "97727.13799999999ms"
+        "ev": "98317.701ms"
       },
       {
         "id": "perf.cls",
@@ -237,7 +238,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "18.5MB"
+        "ev": "18.3MB"
       },
       {
         "id": "perf.viewport",
@@ -487,9 +488,14 @@
       "ev": "ml-IN"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3077ms"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "27 serious violation(s)"
+      "ev": "28 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -499,7 +505,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "16 low-contrast element(s)"
+      "ev": "17 low-contrast element(s)"
     },
     {
       "id": "a11y.labels",
@@ -525,12 +531,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "97727.13799999999ms"
+      "ev": "98317.701ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "18.5MB"
+      "ev": "18.3MB"
     },
     {
       "id": "perf.tap_targets",
@@ -603,6 +609,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-12",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-11-11",
       "up": true,
@@ -859,5 +870,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

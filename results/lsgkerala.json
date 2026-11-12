@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-11T01:35:13.178Z",
-    "run": "1794360794052",
+    "at": "2026-11-12T02:32:55.486Z",
+    "run": "1794450713958",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 64,
+      "performance": 66,
       "accessibility": 77,
       "best_practices": 92,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 1,
-      "broken": 2
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 8",
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "5486ms"
+        "ev": "5409ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "64/100"
+        "ev": "66/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "12453.1375ms"
+        "ev": "12107.227000000004ms"
       },
       {
         "id": "perf.cls",
@@ -282,8 +282,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "2/30 crawled link(s) broken (https://lsgkerala.gov.in/#main-content, https://lsgkerala.gov.in/ml/lsgd/department)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -396,7 +395,8 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "na"
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
       },
       {
         "id": "id.soft_404",
@@ -418,7 +418,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-Q595STPSXP&amp;cx=c&amp;gtm=4e6b91, https://www.googletagmanager.com/gtag/js?id=UA-12419584-1"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-Q595STPSXP&amp;cx=c&amp;gtm=4e6ba1, https://www.googletagmanager.com/gtag/js?id=UA-12419584-1"
       }
     ],
     "screenshot": {
@@ -482,13 +482,13 @@
     ]
   },
   "score": {
-    "overall": 53,
+    "overall": 54,
     "security": 56,
     "accessibility": 50,
-    "content": 32,
+    "content": 42,
     "gigw": 22,
     "performance": 86,
-    "identity": 95
+    "identity": 91
   },
   "status": "needs-work",
   "issues": [
@@ -518,14 +518,9 @@
       "ev": "ml-lsgd"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "2/30 crawled link(s) broken (https://lsgkerala.gov.in/#main-content, https://lsgkerala.gov.in/ml/lsgd/department)"
-    },
-    {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "5486ms"
+      "ev": "5409ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -565,7 +560,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "12453.1375ms"
+      "ev": "12107.227000000004ms"
     },
     {
       "id": "id.tech",
@@ -633,16 +628,26 @@
       "sev": "L"
     },
     {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 404"
+    },
+    {
       "id": "gigw.emblem",
       "sev": "I"
     },
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-Q595STPSXP&amp;cx=c&amp;gtm=4e6b91, https://www.googletagmanager.com/gtag/js?id=UA-12419584-1"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-Q595STPSXP&amp;cx=c&amp;gtm=4e6ba1, https://www.googletagmanager.com/gtag/js?id=UA-12419584-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-12",
+      "up": true,
+      "score": 54
+    },
     {
       "d": "2026-11-11",
       "up": true,
@@ -904,5 +909,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

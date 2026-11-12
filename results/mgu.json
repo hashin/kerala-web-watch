@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-11T01:32:27.588Z",
-    "run": "1794360676630",
+    "at": "2026-11-12T02:33:18.380Z",
+    "run": "1794450725300",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 66,
+      "performance": 75,
       "accessibility": 100,
       "best_practices": 92,
       "seo": 92
@@ -52,8 +52,8 @@
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 6,
-      "broken": 1
+      "pdfs": 7,
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "66/100"
+        "ev": "75/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "5533.491ms"
+        "ev": "4405.886ms"
       },
       {
         "id": "perf.cls",
@@ -282,8 +282,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://iqac.mgu.ac.in/ssr/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -418,7 +417,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-WJMEB38L75&amp;cx=c&amp;gtm=4e6b91, https://www.googletagmanager.com/gtag/js?id=UA-108617030-1"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-WJMEB38L75&amp;cx=c&amp;gtm=4e6ba1, https://www.googletagmanager.com/gtag/js?id=UA-108617030-1"
       }
     ],
     "screenshot": {
@@ -500,10 +499,10 @@
     ]
   },
   "score": {
-    "overall": 50,
+    "overall": 51,
     "security": 32,
     "accessibility": 52,
-    "content": 28,
+    "content": 38,
     "gigw": 46,
     "performance": 76,
     "identity": 100
@@ -540,11 +539,6 @@
       "ev": "ml-"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://iqac.mgu.ac.in/ssr/)"
-    },
-    {
       "id": "a11y.axe_serious",
       "sev": "M",
       "ev": "18 serious violation(s)"
@@ -574,7 +568,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "5533.491ms"
+      "ev": "4405.886ms"
     },
     {
       "id": "perf.weight",
@@ -649,10 +643,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-WJMEB38L75&amp;cx=c&amp;gtm=4e6b91, https://www.googletagmanager.com/gtag/js?id=UA-108617030-1"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-WJMEB38L75&amp;cx=c&amp;gtm=4e6ba1, https://www.googletagmanager.com/gtag/js?id=UA-108617030-1"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-12",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-11-11",
       "up": true,
@@ -904,5 +903,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

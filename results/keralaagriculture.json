@@ -29,8 +29,8 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-10-16T23:55:57.764Z",
-    "run": "1792194942340",
+    "at": "2026-11-12T02:31:56.663Z",
+    "run": "1794450700484",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 98,
@@ -90,7 +90,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3560ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -439,6 +440,11 @@
       "sev": "H"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3560ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -558,6 +564,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-12",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-11",
       "up": false,
@@ -809,5 +820,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

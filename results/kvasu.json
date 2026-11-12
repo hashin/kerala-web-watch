@@ -37,14 +37,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-09T01:26:35.021Z",
-    "run": "1794187369373",
+    "at": "2026-11-12T02:41:37.709Z",
+    "run": "1794451229910",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 25,
+      "accessibility": 77,
+      "best_practices": 96,
+      "seo": 75
     },
     "axe": {
       "critical": 11,
@@ -54,12 +54,12 @@
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 4,
+      "pdfs": 3,
       "broken": 0
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "Apache",
       "jquery": null
     },
     "checks": [
@@ -69,16 +69,15 @@
       },
       {
         "id": "avail.connect",
-        "r": "fail",
-        "ev": "timeout"
+        "r": "pass"
       },
       {
         "id": "avail.status",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -98,7 +97,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -110,7 +109,7 @@
       },
       {
         "id": "sec.https",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
@@ -134,7 +133,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "fail",
+        "ev": "href=\"http://103.10.168.76/KSSSPLVE\""
       },
       {
         "id": "sec.csp",
@@ -218,20 +218,21 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "77/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "25/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "46860.162ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -244,7 +245,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -387,7 +388,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.robots",
@@ -395,11 +396,12 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.soft_404",
-        "r": "na"
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
       },
       {
         "id": "id.canonical",
@@ -460,13 +462,21 @@
       }
     ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 51,
+    "security": 52,
+    "accessibility": 42,
+    "content": 42,
+    "gigw": 26,
+    "performance": 76,
+    "identity": 96
+  },
+  "status": "needs-work",
   "issues": [
     {
-      "id": "avail.connect",
-      "sev": "C",
-      "ev": "timeout"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://103.10.168.76/KSSSPLVE\""
     },
     {
       "id": "sec.vuln_js",
@@ -529,13 +539,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "46860.162ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "9.0MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -592,6 +603,11 @@
       "sev": "L"
     },
     {
+      "id": "id.soft_404",
+      "sev": "L",
+      "ev": "a nonexistent path returned 200"
+    },
+    {
       "id": "gigw.emblem",
       "sev": "I"
     },
@@ -601,6 +617,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-12",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-11-11",
       "up": false,
@@ -852,5 +873,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

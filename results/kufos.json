@@ -29,11 +29,11 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-11-11T01:40:51.034Z",
-    "run": "1794361014907",
+    "at": "2026-11-12T02:41:26.037Z",
+    "run": "1794451051650",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 51,
+      "performance": 54,
       "accessibility": 87,
       "best_practices": 100,
       "seo": 85
@@ -89,8 +89,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "7801ms"
+        "r": "fail",
+        "ev": "8346ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -106,19 +106,19 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.hsts",
@@ -215,12 +215,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "51/100"
+        "ev": "54/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "35577.562000000005ms"
+        "ev": "35088.91200000002ms"
       },
       {
         "id": "perf.cls",
@@ -304,7 +304,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "2 console error(s): Access to XMLHttpRequest at 'https://fonts.googleapis.com/css2?family%3DMarcellus%26family%3DRufina%3Awght%40400%3B700%26family%3DCrimson%2BPro%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%26family%3DJost%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%26family%3DOutfit%3Awght%40300%3B400%3B500%3B600%3B700%3B800%26display%3Dswap&ver=1794361048' from origin 'https://kufos.ac.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "2 console error(s): Access to XMLHttpRequest at 'https://fonts.googleapis.com/css2?family%3DMarcellus%26family%3DRufina%3Awght%40400%3B700%26family%3DCrimson%2BPro%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%26family%3DJost%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%26family%3DOutfit%3Awght%40300%3B400%3B500%3B600%3B700%3B800%26display%3Dswap&ver=1794451070' from origin 'https://kufos.ac.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -528,20 +528,16 @@
     ]
   },
   "score": {
-    "overall": 46,
-    "security": 4,
+    "overall": 51,
+    "security": 24,
     "accessibility": 64,
     "content": 52,
     "gigw": 22,
     "performance": 76,
     "identity": 100
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.http_redirect",
-      "sev": "H"
-    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -570,7 +566,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "7801ms"
+      "ev": "8346ms"
     },
     {
       "id": "sec.hsts",
@@ -608,7 +604,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "35577.562000000005ms"
+      "ev": "35088.91200000002ms"
     },
     {
       "id": "perf.weight",
@@ -649,7 +645,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "2 console error(s): Access to XMLHttpRequest at 'https://fonts.googleapis.com/css2?family%3DMarcellus%26family%3DRufina%3Awght%40400%3B700%26family%3DCrimson%2BPro%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%26family%3DJost%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%26family%3DOutfit%3Awght%40300%3B400%3B500%3B600%3B700%3B800%26display%3Dswap&ver=1794361048' from origin 'https://kufos.ac.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "2 console error(s): Access to XMLHttpRequest at 'https://fonts.googleapis.com/css2?family%3DMarcellus%26family%3DRufina%3Awght%40400%3B700%26family%3DCrimson%2BPro%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%26family%3DJost%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%26family%3DOutfit%3Awght%40300%3B400%3B500%3B600%3B700%3B800%26display%3Dswap&ver=1794451070' from origin 'https://kufos.ac.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -689,6 +685,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-12",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-11-11",
       "up": true,
@@ -940,5 +941,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

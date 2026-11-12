@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-06T01:45:02.236Z",
-    "run": "1793929448053",
+    "at": "2026-11-12T02:25:43.426Z",
+    "run": "1794450277071",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 52,
+      "performance": 53,
       "accessibility": 96,
       "best_practices": 69,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -120,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "23 days left"
+        "ev": "17 days left"
       },
       {
         "id": "sec.tls_version",
@@ -220,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "52/100"
+        "ev": "53/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "35678.79800000002ms"
+        "ev": "35580.19249999998ms"
       },
       {
         "id": "perf.cls",
@@ -280,7 +280,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://alappuzha.nic.in/en)"
       },
       {
         "id": "content.broken_pdfs",
@@ -502,10 +503,10 @@
     ]
   },
   "score": {
-    "overall": 59,
+    "overall": 58,
     "security": 38,
     "accessibility": 60,
-    "content": 56,
+    "content": 46,
     "gigw": 60,
     "performance": 76,
     "identity": 96
@@ -515,7 +516,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "23 days left"
+      "ev": "17 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -536,6 +537,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://alappuzha.nic.in/en)"
     },
     {
       "id": "sec.hsts",
@@ -561,7 +567,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "35678.79800000002ms"
+      "ev": "35580.19249999998ms"
     },
     {
       "id": "perf.weight",
@@ -636,6 +642,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-12",
+      "up": true,
+      "score": 58
+    },
     {
       "d": "2026-11-11",
       "up": true,
@@ -892,5 +903,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

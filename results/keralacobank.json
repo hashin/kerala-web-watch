@@ -37,20 +37,20 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-10T04:00:21.310Z",
-    "run": "1794283164666",
+    "at": "2026-11-12T02:36:54.923Z",
+    "run": "1794450939345",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 31,
+      "performance": 37,
       "accessibility": 62,
       "best_practices": 92,
       "seo": 92
     },
     "axe": {
       "critical": 9,
-      "serious": 86,
+      "serious": 94,
       "moderate": 1,
-      "minor": 85
+      "minor": 90
     },
     "crawl": {
       "pages": 30,
@@ -77,7 +77,8 @@
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "pass"
+        "r": "fail",
+        "ev": "now resolves to colatv.tires"
       },
       {
         "id": "avail.parked",
@@ -176,12 +177,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "86 serious violation(s)"
+        "ev": "94 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "86 moderate/minor violation(s)"
+        "ev": "91 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -221,22 +222,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "31/100"
+        "ev": "37/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "17791.34744ms"
+        "ev": "32471.299340000005ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "1.08"
+        "ev": "1.02"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "9.5MB"
+        "ev": "9.4MB"
       },
       {
         "id": "perf.viewport",
@@ -311,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "32 console error(s): Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+        "ev": "42 console error(s): Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
       },
       {
         "id": "gigw.contact",
@@ -375,7 +376,7 @@
       },
       {
         "id": "gigw.emblem",
-        "r": "pass"
+        "r": "warn"
       },
       {
         "id": "id.gov_domain",
@@ -419,7 +420,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-SEW3VVY9T5&amp;cx=c&amp;gtm=4e6b61, https://www.googletagmanager.com/gtag/js?id=G-V8GXMSME5N, https://www.googletagmanager.com/gtag/js?id=G-SEW3VVY9T5"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-V8GXMSME5N&amp;cx=c&amp;gtm=4e6ba1, https://www.googletagmanager.com/gtag/js?id=G-V8GXMSME5N, https://www.googletagmanager.com/gtag/js?id=G-SEW3VVY9T5"
       }
     ],
     "screenshot": {
@@ -503,17 +504,14 @@
       }
     ]
   },
-  "score": {
-    "overall": 40,
-    "security": 28,
-    "accessibility": 46,
-    "content": 52,
-    "gigw": 0,
-    "performance": 62,
-    "identity": 76
-  },
-  "status": "poor",
+  "score": null,
+  "status": "hijacked",
   "issues": [
+    {
+      "id": "avail.redirect_offsite",
+      "sev": "C",
+      "ev": "now resolves to colatv.tires"
+    },
     {
       "id": "sec.injected_links",
       "sev": "C",
@@ -558,7 +556,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "86 serious violation(s)"
+      "ev": "94 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -593,12 +591,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "17791.34744ms"
+      "ev": "32471.299340000005ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "9.5MB"
+      "ev": "9.4MB"
     },
     {
       "id": "perf.tap_targets",
@@ -619,7 +617,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "86 moderate/minor violation(s)"
+      "ev": "91 moderate/minor violation(s)"
     },
     {
       "id": "content.favicon",
@@ -628,7 +626,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "32 console error(s): Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+      "ev": "42 console error(s): Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
     },
     {
       "id": "gigw.feedback",
@@ -665,7 +663,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "1.08"
+      "ev": "1.02"
     },
     {
       "id": "perf.images",
@@ -677,12 +675,21 @@
       "ev": "a nonexistent path returned 200"
     },
     {
+      "id": "gigw.emblem",
+      "sev": "I"
+    },
+    {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-SEW3VVY9T5&amp;cx=c&amp;gtm=4e6b61, https://www.googletagmanager.com/gtag/js?id=G-V8GXMSME5N, https://www.googletagmanager.com/gtag/js?id=G-SEW3VVY9T5"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-V8GXMSME5N&amp;cx=c&amp;gtm=4e6ba1, https://www.googletagmanager.com/gtag/js?id=G-V8GXMSME5N, https://www.googletagmanager.com/gtag/js?id=G-SEW3VVY9T5"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-12",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-11",
       "up": true,
@@ -934,5 +941,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

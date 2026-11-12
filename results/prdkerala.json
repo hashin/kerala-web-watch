@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-11T01:54:47.521Z",
-    "run": "1794362022307",
+    "at": "2026-11-12T02:45:24.844Z",
+    "run": "1794451461708",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 47,
+      "performance": 8,
       "accessibility": 80,
       "best_practices": 92,
       "seo": 85
     },
     "axe": {
-      "critical": 12,
-      "serious": 25,
+      "critical": 11,
+      "serious": 24,
       "moderate": 2,
       "minor": 1
     },
@@ -170,12 +170,12 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "12 critical violation(s)"
+        "ev": "11 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "25 serious violation(s)"
+        "ev": "24 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -193,7 +193,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "5 low-contrast element(s)"
+        "ev": "4 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -221,16 +221,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "47/100"
+        "ev": "8/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "17768.454999999998ms"
+        "ev": "22863.698999999993ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.89"
       },
       {
         "id": "perf.weight",
@@ -311,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "26 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
+        "ev": "25 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -531,12 +532,12 @@
     ]
   },
   "score": {
-    "overall": 52,
+    "overall": 51,
     "security": 42,
     "accessibility": 50,
     "content": 48,
     "gigw": 32,
-    "performance": 76,
+    "performance": 72,
     "identity": 91
   },
   "status": "needs-work",
@@ -554,7 +555,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "12 critical violation(s)"
+      "ev": "11 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -573,12 +574,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "25 serious violation(s)"
+      "ev": "24 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "5 low-contrast element(s)"
+      "ev": "4 low-contrast element(s)"
     },
     {
       "id": "gigw.privacy",
@@ -599,7 +600,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "17768.454999999998ms"
+      "ev": "22863.698999999993ms"
     },
     {
       "id": "perf.weight",
@@ -646,7 +647,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "26 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
+      "ev": "25 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.feedback",
@@ -677,6 +678,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.89"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -695,6 +701,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-12",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-11-11",
       "up": true,
@@ -951,5 +962,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

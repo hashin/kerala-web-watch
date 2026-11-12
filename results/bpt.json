@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-11T01:38:17.528Z",
-    "run": "1794361033075",
+    "at": "2026-11-12T02:36:57.084Z",
+    "run": "1794450881660",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 57,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 25,
       "pdfs": 1,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "WordPress 7.1.4",
@@ -224,7 +224,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "37586.020499999984ms"
+        "ev": "38190.712499999965ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +233,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "17.2MB"
+        "ev": "16.9MB"
       },
       {
         "id": "perf.viewport",
@@ -280,7 +280,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/25 crawled link(s) broken (https://www.bptkerala.in/photo-gallery)"
       },
       {
         "id": "content.broken_pdfs",
@@ -769,10 +770,10 @@
     ]
   },
   "score": {
-    "overall": 53,
+    "overall": 52,
     "security": 24,
     "accessibility": 82,
-    "content": 46,
+    "content": 36,
     "gigw": 28,
     "performance": 76,
     "identity": 80
@@ -798,6 +799,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/25 crawled link(s) broken (https://www.bptkerala.in/photo-gallery)"
     },
     {
       "id": "id.gov_domain",
@@ -841,12 +847,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "37586.020499999984ms"
+      "ev": "38190.712499999965ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "17.2MB"
+      "ev": "16.9MB"
     },
     {
       "id": "sec.csp",
@@ -917,6 +923,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-12",
+      "up": true,
+      "score": 52
+    },
     {
       "d": "2026-11-11",
       "up": true,
@@ -1148,5 +1159,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

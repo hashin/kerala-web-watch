@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-11T01:31:15.570Z",
-    "run": "1794360614329",
+    "at": "2026-11-12T02:33:02.519Z",
+    "run": "1794450715365",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 36,
+      "performance": 43,
       "accessibility": 90,
       "best_practices": 100,
       "seo": 92
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 2,
-      "broken": 2
+      "broken": 1
     },
     "tech": {
       "cms": "WordPress 7.1.4",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "36/100"
+        "ev": "43/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "17597.302500000005ms"
+        "ev": "19294.531999999996ms"
       },
       {
         "id": "perf.cls",
@@ -281,7 +281,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "2/30 crawled link(s) broken (https://eoffice.kerala.gov.in/eFileCIKWA/, https://itmission.kerala.gov.in/)"
+        "ev": "1/30 crawled link(s) broken (https://itmission.kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -500,7 +500,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "2/30 crawled link(s) broken (https://eoffice.kerala.gov.in/eFileCIKWA/, https://itmission.kerala.gov.in/)"
+      "ev": "1/30 crawled link(s) broken (https://itmission.kerala.gov.in/)"
     },
     {
       "id": "gigw.rti",
@@ -526,7 +526,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "17597.302500000005ms"
+      "ev": "19294.531999999996ms"
     },
     {
       "id": "perf.weight",
@@ -604,6 +604,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-12",
+      "up": true,
+      "score": 62
+    },
     {
       "d": "2026-11-11",
       "up": true,
@@ -860,5 +865,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-11T01:30:40.318Z",
-    "run": "1794360583100",
+    "at": "2026-11-12T02:33:51.606Z",
+    "run": "1794450813578",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 100,
@@ -46,14 +46,14 @@
     },
     "axe": {
       "critical": 1,
-      "serious": 2,
+      "serious": 1,
       "moderate": 3,
       "minor": 0
     },
     "crawl": {
       "pages": 10,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -174,7 +174,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "2 serious violation(s)"
+        "ev": "1 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -193,7 +193,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "2 low-contrast element(s)"
+        "ev": "1 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -277,8 +277,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/10 crawled link(s) broken (https://kuhs.ac.in/kms/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -418,15 +417,15 @@
     "screenshot": {
       "desktop": "kuhs.webp",
       "mobile": "kuhs-m.webp",
-      "phash": "ffffc3c3c3c3c3ff"
+      "phash": "ffffff8181818181"
     },
     "outlinks": []
   },
   "score": {
-    "overall": 53,
+    "overall": 54,
     "security": 58,
     "accessibility": 42,
-    "content": 62,
+    "content": 72,
     "gigw": 0,
     "performance": 96,
     "identity": 88
@@ -449,11 +448,6 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/10 crawled link(s) broken (https://kuhs.ac.in/kms/)"
-    },
-    {
       "id": "gigw.contact",
       "sev": "H"
     },
@@ -468,7 +462,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "2 serious violation(s)"
+      "ev": "1 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -478,7 +472,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "2 low-contrast element(s)"
+      "ev": "1 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -590,6 +584,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-12",
+      "up": true,
+      "score": 54
+    },
     {
       "d": "2026-11-11",
       "up": true,
@@ -851,5 +850,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
