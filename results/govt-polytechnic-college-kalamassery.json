@@ -37,12 +37,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-10T04:09:32.503Z",
-    "run": "1794283734986",
+    "at": "2026-11-13T02:24:53.314Z",
+    "run": "1794536655901",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 83,
-      "accessibility": 77,
+      "performance": 58,
+      "accessibility": 72,
       "best_practices": 96,
       "seo": 91
     },
@@ -219,21 +219,22 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "77/100"
+        "ev": "72/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "83/100"
+        "ev": "58/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "4092.602ms"
+        "ev": "10690.068ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.26"
       },
       {
         "id": "perf.weight",
@@ -272,7 +273,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-"
+        "ev": "ml-user"
       },
       {
         "id": "content.obsolete_tech",
@@ -496,7 +497,7 @@
     "accessibility": 40,
     "content": 60,
     "gigw": 0,
-    "performance": 66,
+    "performance": 62,
     "identity": 88
   },
   "status": "poor",
@@ -519,7 +520,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-"
+      "ev": "ml-user"
     },
     {
       "id": "gigw.rti",
@@ -571,7 +572,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "4092.602ms"
+      "ev": "10690.068ms"
     },
     {
       "id": "perf.weight",
@@ -643,6 +644,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.26"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -670,6 +676,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-13",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-11-12",
       "up": true,
@@ -906,5 +917,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

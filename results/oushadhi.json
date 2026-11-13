@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-12T02:45:56.936Z",
-    "run": "1794451461379",
+    "at": "2026-11-13T02:20:52.789Z",
+    "run": "1794536394103",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 43,
+      "performance": 46,
       "accessibility": 37,
       "best_practices": 77,
       "seo": 67
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 2
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -219,17 +219,16 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "43/100"
+        "ev": "46/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "19636.135499999997ms"
+        "ev": "30622.999250000008ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.45"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -281,8 +280,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "2/30 crawled link(s) broken (https://www.oushadhi.org/, https://www.oushadhi.org/login)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -455,12 +453,12 @@
     ]
   },
   "score": {
-    "overall": 44,
+    "overall": 46,
     "security": 48,
     "accessibility": 46,
-    "content": 28,
+    "content": 38,
     "gigw": 18,
-    "performance": 62,
+    "performance": 66,
     "identity": 72
   },
   "status": "poor",
@@ -484,11 +482,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "2/30 crawled link(s) broken (https://www.oushadhi.org/, https://www.oushadhi.org/login)"
     },
     {
       "id": "id.gov_domain",
@@ -546,7 +539,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "19636.135499999997ms"
+      "ev": "30622.999250000008ms"
     },
     {
       "id": "perf.weight",
@@ -621,11 +614,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.45"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -653,6 +641,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-13",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-11-12",
       "up": true,
@@ -914,5 +907,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

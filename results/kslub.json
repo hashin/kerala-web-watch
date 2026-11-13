@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-01T01:01:40.425Z",
-    "run": "1793494768803",
+    "at": "2026-11-13T02:30:49.568Z",
+    "run": "1794537000634",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 32,
+      "performance": 33,
       "accessibility": 82,
       "best_practices": 73,
       "seo": 85
@@ -53,11 +53,11 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "Apache",
       "jquery": null
     },
     "checks": [
@@ -67,16 +67,15 @@
       },
       {
         "id": "avail.connect",
-        "r": "fail",
-        "ev": "timeout"
+        "r": "pass"
       },
       {
         "id": "avail.status",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -96,7 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -108,11 +107,11 @@
       },
       {
         "id": "sec.https",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
@@ -132,7 +131,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "fail",
+        "ev": "href=\"http://gmpg.org/xfn/11\""
       },
       {
         "id": "sec.csp",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "32/100"
+        "ev": "33/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "14597.473500000004ms"
+        "ev": "13456.321000000004ms"
       },
       {
         "id": "perf.cls",
@@ -236,7 +236,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "5.7MB"
+        "ev": "5.8MB"
       },
       {
         "id": "perf.viewport",
@@ -282,8 +282,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://kslub.kerala.gov.in/#)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -312,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "1 console error(s): Creating a worker from 'blob:https://kslub.kerala.gov.in/78c1c850-3cbf-4f65-9323-b53f0f2be966' violates the following Content Security Policy directive: \"child-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com https://www.youtube-nocookie.com\". Note that 'worker-src' was not explicitly set, so 'child-src' is used as a fallback. The action has been blocked."
+        "ev": "1 console error(s): Creating a worker from 'blob:https://kslub.kerala.gov.in/eb7a5f42-d2e2-4c2b-b41a-c40f22ae7390' violates the following Content Security Policy directive: \"child-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com https://www.youtube-nocookie.com\". Note that 'worker-src' was not explicitly set, so 'child-src' is used as a fallback. The action has been blocked."
       },
       {
         "id": "gigw.contact",
@@ -464,17 +463,21 @@
       }
     ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 58,
+    "security": 80,
+    "accessibility": 40,
+    "content": 48,
+    "gigw": 18,
+    "performance": 77,
+    "identity": 100
+  },
+  "status": "needs-work",
   "issues": [
     {
-      "id": "avail.connect",
-      "sev": "C",
-      "ev": "timeout"
-    },
-    {
-      "id": "sec.http_redirect",
-      "sev": "H"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://gmpg.org/xfn/11\""
     },
     {
       "id": "a11y.axe_critical",
@@ -490,11 +493,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://kslub.kerala.gov.in/#)"
     },
     {
       "id": "a11y.axe_serious",
@@ -534,12 +532,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "14597.473500000004ms"
+      "ev": "13456.321000000004ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "5.7MB"
+      "ev": "5.8MB"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -567,7 +565,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "1 console error(s): Creating a worker from 'blob:https://kslub.kerala.gov.in/78c1c850-3cbf-4f65-9323-b53f0f2be966' violates the following Content Security Policy directive: \"child-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com https://www.youtube-nocookie.com\". Note that 'worker-src' was not explicitly set, so 'child-src' is used as a fallback. The action has been blocked."
+      "ev": "1 console error(s): Creating a worker from 'blob:https://kslub.kerala.gov.in/eb7a5f42-d2e2-4c2b-b41a-c40f22ae7390' violates the following Content Security Policy directive: \"child-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com https://www.youtube-nocookie.com\". Note that 'worker-src' was not explicitly set, so 'child-src' is used as a fallback. The action has been blocked."
     },
     {
       "id": "gigw.feedback",
@@ -616,6 +614,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-13",
+      "up": true,
+      "score": 58
+    },
     {
       "d": "2026-11-12",
       "up": false,
@@ -872,5 +875,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

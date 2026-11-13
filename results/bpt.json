@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-12T02:36:57.084Z",
-    "run": "1794450881660",
+    "at": "2026-11-13T02:14:53.442Z",
+    "run": "1794536028286",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 57,
+      "performance": 55,
       "accessibility": 84,
       "best_practices": 73,
       "seo": 77
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 25,
       "pdfs": 1,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "WordPress 7.1.4",
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "57/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "38190.712499999965ms"
+        "ev": "38040.68150000003ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +233,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "16.9MB"
+        "ev": "17.0MB"
       },
       {
         "id": "perf.viewport",
@@ -280,8 +280,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/25 crawled link(s) broken (https://www.bptkerala.in/photo-gallery)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -770,10 +769,10 @@
     ]
   },
   "score": {
-    "overall": 52,
+    "overall": 53,
     "security": 24,
     "accessibility": 82,
-    "content": 36,
+    "content": 46,
     "gigw": 28,
     "performance": 76,
     "identity": 80
@@ -799,11 +798,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/25 crawled link(s) broken (https://www.bptkerala.in/photo-gallery)"
     },
     {
       "id": "id.gov_domain",
@@ -847,12 +841,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "38190.712499999965ms"
+      "ev": "38040.68150000003ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "16.9MB"
+      "ev": "17.0MB"
     },
     {
       "id": "sec.csp",
@@ -923,6 +917,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-13",
+      "up": true,
+      "score": 53
+    },
     {
       "d": "2026-11-12",
       "up": true,
@@ -1159,5 +1158,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

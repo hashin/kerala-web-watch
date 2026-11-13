@@ -35,30 +35,30 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-12T02:33:51.606Z",
-    "run": "1794450813578",
+    "at": "2026-11-13T02:14:17.815Z",
+    "run": "1794535965330",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 100,
-      "accessibility": 74,
-      "best_practices": 92,
-      "seo": 82
+      "performance": 43,
+      "accessibility": 75,
+      "best_practices": 69,
+      "seo": 83
     },
     "axe": {
-      "critical": 1,
-      "serious": 1,
-      "moderate": 3,
-      "minor": 0
+      "critical": 60,
+      "serious": 50,
+      "moderate": 59,
+      "minor": 93
     },
     "crawl": {
-      "pages": 10,
-      "pdfs": 0,
-      "broken": 0
+      "pages": 30,
+      "pdfs": 2,
+      "broken": 1
     },
     "tech": {
       "cms": null,
       "server": "nginx",
-      "jquery": null
+      "jquery": "2.1.4"
     },
     "checks": [
       {
@@ -132,7 +132,7 @@
       {
         "id": "sec.mixed_content",
         "r": "fail",
-        "ev": "href=\"http://www3.kuhs.ac.in/faculty\""
+        "ev": "href='http://112.133.253.68/kuhs-2025/kuhs/'"
       },
       {
         "id": "sec.csp",
@@ -152,11 +152,13 @@
       },
       {
         "id": "sec.server_banner",
-        "r": "pass"
+        "r": "fail",
+        "ev": "PHP/5.6.40"
       },
       {
         "id": "sec.vuln_js",
-        "r": "pass"
+        "r": "fail",
+        "ev": "jquery 1.12.4, bootstrap 3.3.7, jquery 2.1.4, bootstrap 3.3.4, bootstrap 3.1.0"
       },
       {
         "id": "sec.safe_browsing",
@@ -169,17 +171,17 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "1 critical violation(s)"
+        "ev": "60 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "1 serious violation(s)"
+        "ev": "50 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "3 moderate/minor violation(s)"
+        "ev": "152 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -188,17 +190,17 @@
       {
         "id": "a11y.alt",
         "r": "fail",
-        "ev": "1 image(s) missing alt text"
+        "ev": "60 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "1 low-contrast element(s)"
+        "ev": "19 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
         "r": "fail",
-        "ev": "no <h1>"
+        "ev": "no <h1>, heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -210,21 +212,23 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "pass"
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "74/100"
+        "ev": "75/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "100/100"
+        "ev": "43/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "fail",
+        "ev": "18564.282000000007ms"
       },
       {
         "id": "perf.cls",
@@ -232,7 +236,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "warn",
+        "ev": "8.0MB"
       },
       {
         "id": "perf.viewport",
@@ -248,7 +253,7 @@
       },
       {
         "id": "content.copyright_year",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "content.last_updated",
@@ -265,11 +270,13 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "pass"
+        "r": "fail",
+        "ev": "ml-IN"
       },
       {
         "id": "content.obsolete_tech",
-        "r": "pass"
+        "r": "fail",
+        "ev": "<marquee"
       },
       {
         "id": "content.best_viewed",
@@ -277,7 +284,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (http://www3.kuhs.ac.in/university/api/college_course_details.php)"
       },
       {
         "id": "content.broken_pdfs",
@@ -285,7 +293,8 @@
       },
       {
         "id": "content.broken_images",
-        "r": "pass"
+        "r": "fail",
+        "ev": "3 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -297,23 +306,24 @@
       },
       {
         "id": "content.meta_desc",
-        "r": "fail"
-      },
-      {
-        "id": "content.favicon",
-        "r": "fail"
-      },
-      {
-        "id": "content.console_errors",
         "r": "pass"
       },
       {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "22 console error(s): Failed to load resource: net::ERR_HTTP2_PING_FAILED"
+      },
+      {
         "id": "gigw.contact",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.feedback",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.sitemap",
@@ -325,7 +335,7 @@
       },
       {
         "id": "gigw.terms",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.copyright_policy",
@@ -353,11 +363,11 @@
       },
       {
         "id": "gigw.rti",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.search",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.ownership",
@@ -385,8 +395,7 @@
       },
       {
         "id": "id.robots",
-        "r": "fail",
-        "ev": "robots.txt returned 404"
+        "r": "pass"
       },
       {
         "id": "id.sitemap_xml",
@@ -417,30 +426,56 @@
     "screenshot": {
       "desktop": "kuhs.webp",
       "mobile": "kuhs-m.webp",
-      "phash": "ffffff8181818181"
+      "phash": "ff2000ffffff0000"
     },
-    "outlinks": []
+    "outlinks": [
+      {
+        "host": "youtube.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "google.com",
+        "count": 3,
+        "texts": [
+          "നിബന്ധനകൾ",
+          "ഒരു മാപ്പ് പിശക് റിപ്പോർട്ട് ചെയ്യുക"
+        ]
+      },
+      {
+        "host": "g.co",
+        "count": 1,
+        "texts": [
+          "ഈ വെബ്സൈറ്റ് നിങ്ങൾക്ക് സ്വന്തമാണോ?"
+        ]
+      }
+    ]
   },
   "score": {
-    "overall": 54,
-    "security": 58,
-    "accessibility": 42,
-    "content": 72,
-    "gigw": 0,
-    "performance": 96,
-    "identity": 88
+    "overall": 45,
+    "security": 34,
+    "accessibility": 40,
+    "content": 32,
+    "gigw": 30,
+    "performance": 81,
+    "identity": 92
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.mixed_content",
       "sev": "H",
-      "ev": "href=\"http://www3.kuhs.ac.in/faculty\""
+      "ev": "href='http://112.133.253.68/kuhs-2025/kuhs/'"
+    },
+    {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "jquery 1.12.4, bootstrap 3.3.7, jquery 2.1.4, bootstrap 3.3.4, bootstrap 3.1.0"
     },
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "1 critical violation(s)"
+      "ev": "60 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -448,12 +483,14 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "gigw.contact",
-      "sev": "H"
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-IN"
     },
     {
-      "id": "gigw.rti",
-      "sev": "H"
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (http://www3.kuhs.ac.in/university/api/college_course_details.php)"
     },
     {
       "id": "sec.xfo",
@@ -462,17 +499,22 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "1 serious violation(s)"
+      "ev": "50 serious violation(s)"
     },
     {
       "id": "a11y.alt",
       "sev": "M",
-      "ev": "1 image(s) missing alt text"
+      "ev": "60 image(s) missing alt text"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "1 low-contrast element(s)"
+      "ev": "19 low-contrast element(s)"
+    },
+    {
+      "id": "content.obsolete_tech",
+      "sev": "M",
+      "ev": "<marquee"
     },
     {
       "id": "gigw.sitemap",
@@ -495,6 +537,16 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "18564.282000000007ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "8.0MB"
+    },
+    {
       "id": "sec.csp",
       "sev": "L"
     },
@@ -507,30 +559,34 @@
       "sev": "L"
     },
     {
+      "id": "sec.server_banner",
+      "sev": "L",
+      "ev": "PHP/5.6.40"
+    },
+    {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "3 moderate/minor violation(s)"
+      "ev": "152 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "no <h1>"
+      "ev": "no <h1>, heading levels skipped"
     },
     {
-      "id": "content.meta_desc",
-      "sev": "L"
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
-      "id": "content.favicon",
-      "sev": "L"
+      "id": "content.broken_images",
+      "sev": "L",
+      "ev": "3 broken image(s)"
     },
     {
-      "id": "gigw.feedback",
-      "sev": "L"
-    },
-    {
-      "id": "gigw.terms",
-      "sev": "L"
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "22 console error(s): Failed to load resource: net::ERR_HTTP2_PING_FAILED"
     },
     {
       "id": "gigw.copyright_policy",
@@ -553,21 +609,12 @@
       "sev": "L"
     },
     {
-      "id": "gigw.search",
-      "sev": "L"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
     {
       "id": "id.www_consistency",
       "sev": "L"
-    },
-    {
-      "id": "id.robots",
-      "sev": "L",
-      "ev": "robots.txt returned 404"
     },
     {
       "id": "id.sitemap_xml",
@@ -584,6 +631,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-13",
+      "up": true,
+      "score": 45
+    },
     {
       "d": "2026-11-12",
       "up": true,
@@ -850,5 +902,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

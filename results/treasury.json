@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-12T02:34:04.312Z",
-    "run": "1794450775487",
+    "at": "2026-11-13T02:16:00.034Z",
+    "run": "1794536085940",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 62,
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 14,
-      "broken": 7
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -230,7 +230,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6516.245999999999ms"
+        "ev": "7567.022999999999ms"
       },
       {
         "id": "perf.cls",
@@ -239,7 +239,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "3.2MB"
+        "ev": "3.4MB"
       },
       {
         "id": "perf.viewport",
@@ -286,8 +286,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "7/30 crawled link(s) broken (https://www.bims.treasury.kerala.gov.in/, https://www.bams.treasury.kerala.gov.in/, https://www.pension.treasury.kerala.gov.in/, ...)"
+        "r": "warn",
+        "ev": "2/30 crawled link(s) broken (http://sics.kerala.gov.in/emli/main/frame.html, https://portal.treasury.kerala.gov.in/latestnews/MjM=)"
       },
       {
         "id": "content.broken_pdfs",
@@ -456,10 +456,10 @@
     ]
   },
   "score": {
-    "overall": 41,
+    "overall": 43,
     "security": 42,
     "accessibility": 20,
-    "content": 26,
+    "content": 36,
     "gigw": 38,
     "performance": 71,
     "identity": 92
@@ -499,7 +499,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "7/30 crawled link(s) broken (https://www.bims.treasury.kerala.gov.in/, https://www.bams.treasury.kerala.gov.in/, https://www.pension.treasury.kerala.gov.in/, ...)"
+      "ev": "2/30 crawled link(s) broken (http://sics.kerala.gov.in/emli/main/frame.html, https://portal.treasury.kerala.gov.in/latestnews/MjM=)"
     },
     {
       "id": "sec.xfo",
@@ -540,12 +540,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6516.245999999999ms"
+      "ev": "7567.022999999999ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "3.2MB"
+      "ev": "3.4MB"
     },
     {
       "id": "perf.tap_targets",
@@ -631,6 +631,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-13",
+      "up": true,
+      "score": 43
+    },
     {
       "d": "2026-11-12",
       "up": true,
@@ -892,5 +897,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

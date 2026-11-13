@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-12T02:29:58.797Z",
-    "run": "1794450564368",
+    "at": "2026-11-13T02:11:21.477Z",
+    "run": "1794535848621",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 92,
+      "accessibility": 100,
+      "best_practices": 100,
+      "seo": 100
+    },
     "axe": {
       "critical": 0,
       "serious": 0,
@@ -203,19 +208,21 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "100/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "92/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -227,11 +234,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "content.copyright_year",
@@ -461,6 +468,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-13",
+      "up": true,
+      "score": 89
+    },
     {
       "d": "2026-11-12",
       "up": true,
@@ -707,5 +719,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

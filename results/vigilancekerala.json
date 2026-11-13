@@ -35,24 +35,24 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-12T02:47:32.303Z",
-    "run": "1794451579381",
+    "at": "2026-11-13T02:29:14.056Z",
+    "run": "1794536875477",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 52,
+      "performance": 56,
       "accessibility": 100,
       "best_practices": 73,
       "seo": 100
     },
     "axe": {
       "critical": 0,
-      "serious": 5,
+      "serious": 2,
       "moderate": 2,
-      "minor": 8
+      "minor": 0
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 8,
+      "pdfs": 3,
       "broken": 0
     },
     "tech": {
@@ -172,12 +172,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "5 serious violation(s)"
+        "ev": "2 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "10 moderate/minor violation(s)"
+        "ev": "2 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -205,8 +205,7 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "warn",
-        "ev": "tabindex=\"-1\" alongside outline:none"
+        "r": "pass"
       },
       {
         "id": "a11y.lighthouse",
@@ -216,12 +215,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "52/100"
+        "ev": "56/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6561.701000000001ms"
+        "ev": "5406.390000000001ms"
       },
       {
         "id": "perf.cls",
@@ -230,7 +229,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "12.4MB"
+        "ev": "11.9MB"
       },
       {
         "id": "perf.viewport",
@@ -410,7 +409,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-CMG1G06L24&amp;cx=c&amp;gtm=4e6bb0h2, https://www.googletagmanager.com/gtm.js?id=GTM-PFLTDP3B"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-CMG1G06L24&amp;cx=c&amp;gtm=4e6bb1, https://www.googletagmanager.com/gtm.js?id=GTM-PFLTDP3B"
       }
     ],
     "screenshot": {
@@ -486,9 +485,9 @@
     ]
   },
   "score": {
-    "overall": 69,
+    "overall": 70,
     "security": 80,
-    "accessibility": 84,
+    "accessibility": 86,
     "content": 72,
     "gigw": 0,
     "performance": 76,
@@ -512,7 +511,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "5 serious violation(s)"
+      "ev": "2 serious violation(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -537,22 +536,17 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6561.701000000001ms"
+      "ev": "5406.390000000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "12.4MB"
+      "ev": "11.9MB"
     },
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "10 moderate/minor violation(s)"
-    },
-    {
-      "id": "a11y.keyboard",
-      "sev": "L",
-      "ev": "tabindex=\"-1\" alongside outline:none"
+      "ev": "2 moderate/minor violation(s)"
     },
     {
       "id": "content.broken_images",
@@ -603,10 +597,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-CMG1G06L24&amp;cx=c&amp;gtm=4e6bb0h2, https://www.googletagmanager.com/gtm.js?id=GTM-PFLTDP3B"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-CMG1G06L24&amp;cx=c&amp;gtm=4e6bb1, https://www.googletagmanager.com/gtm.js?id=GTM-PFLTDP3B"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-13",
+      "up": true,
+      "score": 70
+    },
     {
       "d": "2026-11-12",
       "up": true,
@@ -863,5 +862,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

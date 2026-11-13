@@ -29,13 +29,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-12T02:32:17.256Z",
-    "run": "1794450601357",
+    "at": "2026-11-13T02:08:49.077Z",
+    "run": "1794535647844",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 52,
-      "accessibility": 92,
-      "best_practices": 92,
+      "performance": 49,
+      "accessibility": 97,
+      "best_practices": 100,
       "seo": 92
     },
     "axe": {
@@ -47,7 +47,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 5
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -209,17 +209,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "92/100"
+        "ev": "97/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "52/100"
+        "ev": "49/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "40750.26325ms"
+        "ev": "27485.615500000007ms"
       },
       {
         "id": "perf.cls",
@@ -236,7 +236,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -274,8 +274,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "5/30 crawled link(s) broken (https://keralapolice.gov.in/login, https://keralapolice.gov.in/#, https://keralapolice.gov.in/page/history-of-kerala-police, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -410,7 +409,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K&amp;cx=c&amp;gtm=4e6ba1, https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6ba1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K&amp;cx=c&amp;gtm=4e6bb1h1, https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6bb1h1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
       }
     ],
     "screenshot": {
@@ -575,12 +574,12 @@
     ]
   },
   "score": {
-    "overall": 53,
+    "overall": 57,
     "security": 50,
     "accessibility": 60,
-    "content": 36,
+    "content": 56,
     "gigw": 26,
-    "performance": 66,
+    "performance": 76,
     "identity": 96
   },
   "status": "needs-work",
@@ -611,11 +610,6 @@
       "ev": "ml-"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "5/30 crawled link(s) broken (https://keralapolice.gov.in/login, https://keralapolice.gov.in/#, https://keralapolice.gov.in/page/history-of-kerala-police, ...)"
-    },
-    {
       "id": "gigw.contact",
       "sev": "H"
     },
@@ -643,16 +637,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "40750.26325ms"
+      "ev": "27485.615500000007ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
       "ev": "9.7MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -714,10 +704,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K&amp;cx=c&amp;gtm=4e6ba1, https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6ba1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K&amp;cx=c&amp;gtm=4e6bb1h1, https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6bb1h1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-13",
+      "up": true,
+      "score": 57
+    },
     {
       "d": "2026-11-12",
       "up": true,
@@ -984,5 +979,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

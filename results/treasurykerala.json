@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-12T02:44:25.148Z",
-    "run": "1794451397329",
+    "at": "2026-11-13T02:22:28.977Z",
+    "run": "1794536476321",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 66,
+      "performance": 68,
       "accessibility": 48,
       "best_practices": 88,
       "seo": 82
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 14,
-      "broken": 7
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -223,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "66/100"
+        "ev": "68/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "4959.495ms"
+        "ev": "4857.357000000001ms"
       },
       {
         "id": "perf.cls",
@@ -237,7 +237,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "3.4MB"
+        "ev": "3.2MB"
       },
       {
         "id": "perf.viewport",
@@ -284,8 +284,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "7/30 crawled link(s) broken (https://www.bims.treasury.kerala.gov.in/, https://www.bams.treasury.kerala.gov.in/, https://www.pension.treasury.kerala.gov.in/, ...)"
+        "r": "warn",
+        "ev": "2/30 crawled link(s) broken (http://sics.kerala.gov.in/emli/main/frame.html, https://portal.treasury.kerala.gov.in/latestnews/MjM=)"
       },
       {
         "id": "content.broken_pdfs",
@@ -454,10 +454,10 @@
     ]
   },
   "score": {
-    "overall": 41,
+    "overall": 43,
     "security": 42,
     "accessibility": 20,
-    "content": 26,
+    "content": 36,
     "gigw": 38,
     "performance": 71,
     "identity": 92
@@ -497,7 +497,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "7/30 crawled link(s) broken (https://www.bims.treasury.kerala.gov.in/, https://www.bams.treasury.kerala.gov.in/, https://www.pension.treasury.kerala.gov.in/, ...)"
+      "ev": "2/30 crawled link(s) broken (http://sics.kerala.gov.in/emli/main/frame.html, https://portal.treasury.kerala.gov.in/latestnews/MjM=)"
     },
     {
       "id": "sec.xfo",
@@ -538,12 +538,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "4959.495ms"
+      "ev": "4857.357000000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "3.4MB"
+      "ev": "3.2MB"
     },
     {
       "id": "perf.tap_targets",
@@ -629,6 +629,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-13",
+      "up": true,
+      "score": 43
+    },
     {
       "d": "2026-11-12",
       "up": true,
@@ -890,5 +895,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

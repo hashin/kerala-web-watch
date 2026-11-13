@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-12T02:35:01.032Z",
-    "run": "1794450844313",
+    "at": "2026-11-13T02:14:37.836Z",
+    "run": "1794536011611",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 44,
+      "performance": 46,
       "accessibility": 77,
       "best_practices": 92,
       "seo": 92
     },
     "axe": {
       "critical": 6,
-      "serious": 3,
+      "serious": 2,
       "moderate": 22,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 5,
-      "broken": 0
+      "pdfs": 4,
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -174,7 +174,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "3 serious violation(s)"
+        "ev": "2 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -191,8 +191,7 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "1 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
@@ -220,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "44/100"
+        "ev": "46/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "13839.08575ms"
+        "ev": "13040.48425ms"
       },
       {
         "id": "perf.cls",
@@ -279,7 +278,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://sutharyam.ceo.kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -426,7 +426,7 @@
         "host": "eci.gov.in",
         "count": 10,
         "texts": [
-          "NewSupplement-4 2026",
+          "NewSSR 2027 - DRAFT VOTERS LIST PUBLISHED",
           "Read more",
           "Overseas Voters\n                            Single window for NRI voters\n                            Read more"
         ]
@@ -461,10 +461,10 @@
     ]
   },
   "score": {
-    "overall": 63,
+    "overall": 64,
     "security": 80,
-    "accessibility": 50,
-    "content": 56,
+    "accessibility": 60,
+    "content": 46,
     "gigw": 32,
     "performance": 76,
     "identity": 100
@@ -492,14 +492,14 @@
       "ev": "ml-user"
     },
     {
-      "id": "a11y.axe_serious",
-      "sev": "M",
-      "ev": "3 serious violation(s)"
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://sutharyam.ceo.kerala.gov.in/)"
     },
     {
-      "id": "a11y.contrast",
+      "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "1 low-contrast element(s)"
+      "ev": "2 serious violation(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -520,7 +520,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "13839.08575ms"
+      "ev": "13040.48425ms"
     },
     {
       "id": "perf.tap_targets",
@@ -589,6 +589,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-13",
+      "up": true,
+      "score": 64
+    },
     {
       "d": "2026-11-12",
       "up": true,
@@ -850,5 +855,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

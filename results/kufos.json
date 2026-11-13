@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-12T02:41:26.037Z",
-    "run": "1794451051650",
+    "at": "2026-11-13T02:22:20.124Z",
+    "run": "1794536323979",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 54,
+      "performance": 47,
       "accessibility": 87,
       "best_practices": 100,
       "seo": 85
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "WordPress 7.1.4",
@@ -95,8 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "fail",
-        "ev": "8346ms"
+        "r": "warn",
+        "ev": "5792ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "54/100"
+        "ev": "47/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "35088.91200000002ms"
+        "ev": "33661.88200000002ms"
       },
       {
         "id": "perf.cls",
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://kufos.ac.in/mission-and-vision/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -310,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "2 console error(s): Access to XMLHttpRequest at 'https://fonts.googleapis.com/css2?family%3DMarcellus%26family%3DRufina%3Awght%40400%3B700%26family%3DCrimson%2BPro%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%26family%3DJost%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%26family%3DOutfit%3Awght%40300%3B400%3B500%3B600%3B700%3B800%26display%3Dswap&ver=1794451070' from origin 'https://kufos.ac.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "2 console error(s): Access to XMLHttpRequest at 'https://fonts.googleapis.com/css2?family%3DMarcellus%26family%3DRufina%3Awght%40400%3B700%26family%3DCrimson%2BPro%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%26family%3DJost%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%26family%3DOutfit%3Awght%40300%3B400%3B500%3B600%3B700%3B800%26display%3Dswap&ver=1794536341' from origin 'https://kufos.ac.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -534,15 +535,15 @@
     ]
   },
   "score": {
-    "overall": 51,
+    "overall": 49,
     "security": 24,
     "accessibility": 64,
-    "content": 52,
+    "content": 42,
     "gigw": 22,
     "performance": 76,
     "identity": 100
   },
-  "status": "down",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -570,9 +571,14 @@
       "ev": "ml-"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://kufos.ac.in/mission-and-vision/)"
+    },
+    {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "8346ms"
+      "ev": "5792ms"
     },
     {
       "id": "sec.hsts",
@@ -610,7 +616,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "35088.91200000002ms"
+      "ev": "33661.88200000002ms"
     },
     {
       "id": "perf.weight",
@@ -651,7 +657,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "2 console error(s): Access to XMLHttpRequest at 'https://fonts.googleapis.com/css2?family%3DMarcellus%26family%3DRufina%3Awght%40400%3B700%26family%3DCrimson%2BPro%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%26family%3DJost%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%26family%3DOutfit%3Awght%40300%3B400%3B500%3B600%3B700%3B800%26display%3Dswap&ver=1794451070' from origin 'https://kufos.ac.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "2 console error(s): Access to XMLHttpRequest at 'https://fonts.googleapis.com/css2?family%3DMarcellus%26family%3DRufina%3Awght%40400%3B700%26family%3DCrimson%2BPro%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%26family%3DJost%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%26family%3DOutfit%3Awght%40300%3B400%3B500%3B600%3B700%3B800%26display%3Dswap&ver=1794536341' from origin 'https://kufos.ac.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -691,6 +697,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-13",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-11-12",
       "up": false,
@@ -947,5 +958,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -29,8 +29,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-12T02:28:52.793Z",
-    "run": "1794450431132",
+    "at": "2026-11-13T02:06:19.512Z",
+    "run": "1794535470484",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 55,
@@ -47,7 +47,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "WordPress 6.6.2",
@@ -222,7 +222,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "35758.43050000002ms"
+        "ev": "35676.15475ms"
       },
       {
         "id": "perf.cls",
@@ -277,8 +277,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://forest.kerala.gov.in/#content)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -501,10 +500,10 @@
     ]
   },
   "score": {
-    "overall": 51,
+    "overall": 52,
     "security": 46,
     "accessibility": 30,
-    "content": 38,
+    "content": 48,
     "gigw": 58,
     "performance": 71,
     "identity": 100
@@ -535,11 +534,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://forest.kerala.gov.in/#content)"
     },
     {
       "id": "sec.hsts",
@@ -580,7 +574,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "35758.43050000002ms"
+      "ev": "35676.15475ms"
     },
     {
       "id": "perf.weight",
@@ -641,6 +635,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-13",
+      "up": true,
+      "score": 52
+    },
     {
       "d": "2026-11-12",
       "up": true,
@@ -897,5 +896,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

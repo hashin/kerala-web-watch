@@ -37,13 +37,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-12T02:31:22.645Z",
-    "run": "1794450598798",
+    "at": "2026-11-13T02:12:45.328Z",
+    "run": "1794535881478",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 26,
+      "performance": 24,
       "accessibility": 60,
-      "best_practices": 65,
+      "best_practices": 88,
       "seo": 85
     },
     "axe": {
@@ -224,17 +224,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "26/100"
+        "ev": "24/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "15770.500500000004ms"
+        "ev": "18767.642999999996ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.57"
+        "ev": "0.78"
       },
       {
         "id": "perf.weight",
@@ -316,7 +316,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "6 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
+        "ev": "4 console error(s): Failed to load resource: the server responded with a status of 400 ()"
       },
       {
         "id": "gigw.contact",
@@ -422,7 +422,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-32MQLJGSM2&amp;cx=c&amp;gtm=4e6ba1, https://www.googletagmanager.com/gtag/js?id=UA-103783083-2"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-32MQLJGSM2&amp;cx=c&amp;gtm=4e6bc0h2, https://www.googletagmanager.com/gtag/js?id=UA-103783083-2"
       }
     ],
     "screenshot": {
@@ -651,7 +651,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "15770.500500000004ms"
+      "ev": "18767.642999999996ms"
     },
     {
       "id": "perf.weight",
@@ -687,7 +687,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "6 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
+      "ev": "4 console error(s): Failed to load resource: the server responded with a status of 400 ()"
     },
     {
       "id": "gigw.copyright_policy",
@@ -704,7 +704,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.57"
+      "ev": "0.78"
     },
     {
       "id": "perf.images",
@@ -722,10 +722,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-32MQLJGSM2&amp;cx=c&amp;gtm=4e6ba1, https://www.googletagmanager.com/gtag/js?id=UA-103783083-2"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-32MQLJGSM2&amp;cx=c&amp;gtm=4e6bc0h2, https://www.googletagmanager.com/gtag/js?id=UA-103783083-2"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-13",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-11-12",
       "up": true,
@@ -992,5 +997,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

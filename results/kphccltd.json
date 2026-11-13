@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-12T02:54:32.390Z",
-    "run": "1794452013174",
+    "at": "2026-11-13T02:30:00.633Z",
+    "run": "1794536944468",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 51,
+      "performance": 48,
       "accessibility": 84,
       "best_practices": 92,
       "seo": 75
@@ -48,7 +48,7 @@
       "critical": 0,
       "serious": 4,
       "moderate": 19,
-      "minor": 9
+      "minor": 10
     },
     "crawl": {
       "pages": 30,
@@ -179,7 +179,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "28 moderate/minor violation(s)"
+        "ev": "29 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -197,7 +197,7 @@
       {
         "id": "a11y.headings",
         "r": "fail",
-        "ev": "no <h1>"
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -220,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "51/100"
+        "ev": "48/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "25204.219499999985ms"
+        "ev": "24407.265999999996ms"
       },
       {
         "id": "perf.cls",
@@ -561,7 +561,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "25204.219499999985ms"
+      "ev": "24407.265999999996ms"
     },
     {
       "id": "perf.weight",
@@ -575,12 +575,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "28 moderate/minor violation(s)"
+      "ev": "29 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "no <h1>"
+      "ev": "heading levels skipped"
     },
     {
       "id": "a11y.keyboard",
@@ -630,6 +630,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-13",
+      "up": true,
+      "score": 63
+    },
     {
       "d": "2026-11-12",
       "up": true,
@@ -891,5 +896,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
