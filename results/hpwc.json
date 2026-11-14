@@ -37,14 +37,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-13T02:27:33.391Z",
-    "run": "1794536702208",
+    "at": "2026-11-14T02:06:32.599Z",
+    "run": "1794621827028",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 45,
+      "accessibility": 86,
+      "best_practices": 73,
+      "seo": 85
     },
     "axe": {
       "critical": 2,
@@ -98,7 +98,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "5142ms"
+        "ev": "4719ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -135,7 +135,7 @@
       {
         "id": "sec.mixed_content",
         "r": "fail",
-        "ev": "href=\"http://hpwc.kerala.gov.in/storage/elementor/google-fonts/css/roboto.css?rnd=96631\""
+        "ev": "href=\"http://hpwc.kerala.gov.in/storage/elementor/google-fonts/css/roboto.css?rnd=61681\""
       },
       {
         "id": "sec.csp",
@@ -221,20 +221,21 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "86/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "45/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "29986.987999999983ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -473,12 +474,12 @@
     ]
   },
   "score": {
-    "overall": 52,
+    "overall": 51,
     "security": 52,
     "accessibility": 20,
     "content": 48,
     "gigw": 62,
-    "performance": 76,
+    "performance": 66,
     "identity": 100
   },
   "status": "needs-work",
@@ -486,7 +487,7 @@
     {
       "id": "sec.mixed_content",
       "sev": "H",
-      "ev": "href=\"http://hpwc.kerala.gov.in/storage/elementor/google-fonts/css/roboto.css?rnd=96631\""
+      "ev": "href=\"http://hpwc.kerala.gov.in/storage/elementor/google-fonts/css/roboto.css?rnd=61681\""
     },
     {
       "id": "sec.vuln_js",
@@ -516,7 +517,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "5142ms"
+      "ev": "4719ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -544,6 +545,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "29986.987999999983ms"
     },
     {
       "id": "perf.weight",
@@ -605,6 +611,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-14",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-11-13",
       "up": true,
@@ -871,5 +882,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

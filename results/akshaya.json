@@ -35,65 +35,448 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-13T02:02:56.284Z",
-    "run": "1794535352452",
+    "at": "2026-11-14T01:38:17.131Z",
+    "run": "1794620246673",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 11,
+      "accessibility": 87,
+      "best_practices": 92,
+      "seo": 75
+    },
     "axe": {
-      "critical": 0,
-      "serious": 0,
-      "moderate": 0,
+      "critical": 4,
+      "serious": 20,
+      "moderate": 4,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
+      "pages": 13,
       "pdfs": 0,
       "broken": 0
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "Apache",
       "jquery": null
     },
-    "checks": [],
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "pass"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "fail"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "pass"
+      },
+      {
+        "id": "sec.csp",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "fail"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "fail"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "pass"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "pass"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "fail",
+        "ev": "4 critical violation(s)"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "20 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "4 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "fail",
+        "ev": "2 low-contrast element(s)"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "no <h1>, heading levels skipped"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "87/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "11/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "23315.544499999996ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "fail",
+        "ev": "0.46"
+      },
+      {
+        "id": "perf.weight",
+        "r": "fail",
+        "ev": "16.7MB"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "pass"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "pass"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-detected"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "pass"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "na"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "pass"
+      },
+      {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.contact",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.help",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.search",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "warn"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "pass"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "na"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "na"
+      },
+      {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "pass"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
+      },
+      {
+        "id": "id.canonical",
+        "r": "fail"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "pass"
+      }
+    ],
     "screenshot": {
-      "desktop": "2026-09-21.webp",
-      "mobile": "2026-09-21-m.webp",
-      "phash": "fffd000819011901"
+      "desktop": "akshaya.webp",
+      "mobile": "akshaya-m.webp",
+      "phash": "ff0101001919fdff"
     },
-    "outlinks": [],
-    "error": "page.goto: net::ERR_CERT_DATE_INVALID at https://akshaya.kerala.gov.in/\nCall log:\n  - navigating to \"https://akshaya.kerala.gov.in/\", waiting until \"load\"\n"
+    "outlinks": [
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "twitter.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "linkedin.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "whatsapp.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "instagram.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "goo.gl",
+        "count": 1,
+        "texts": [
+          "Akshaya State Project Office Saankethika, IInd Floor, Vrindavan Gardens, Pottakkuzhi, Pattom.P.O, Thiruvananthapuram, Kerala 695004"
+        ]
+      },
+      {
+        "host": "ux4g.gov.in",
+        "count": 1,
+        "texts": [
+          "Contact UX4G"
+        ]
+      }
+    ]
   },
   "score": {
-    "overall": 44,
-    "security": 14,
-    "accessibility": 50,
-    "content": 56,
-    "gigw": 26,
-    "performance": 62,
+    "overall": 59,
+    "security": 68,
+    "accessibility": 52,
+    "content": 60,
+    "gigw": 24,
+    "performance": 72,
     "identity": 96
   },
-  "status": "broken",
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "0 days left"
-    },
-    {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://itmission.kerala.gov.in/\""
-    },
-    {
-      "id": "sec.vuln_js",
-      "sev": "H",
-      "ev": "jquery 2.2.0, jquery-ui 1.11.4, jquery-ui-dialog 1.11.4, bootstrap 3.3.6, jquery-validation 1.14.0, moment.js 2.11.0, select2 4.0.3"
-    },
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "1 critical violation(s)"
+      "ev": "4 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -103,21 +486,29 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-"
+      "ev": "ml-detected"
+    },
+    {
+      "id": "gigw.rti",
+      "sev": "H"
     },
     {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
+      "id": "sec.xfo",
+      "sev": "M"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "31 serious violation(s)"
+      "ev": "20 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "21 low-contrast element(s)"
+      "ev": "2 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -125,10 +516,6 @@
     },
     {
       "id": "gigw.privacy",
-      "sev": "M"
-    },
-    {
-      "id": "gigw.accessibility_statement",
       "sev": "M"
     },
     {
@@ -142,16 +529,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "34869.20749999998ms"
+      "ev": "23315.544499999996ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "11.0MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "ev": "16.7MB"
     },
     {
       "id": "sec.csp",
@@ -166,29 +549,14 @@
       "sev": "L"
     },
     {
-      "id": "sec.server_banner",
-      "sev": "L",
-      "ev": "Apache/2.4.6 (CentOS) OpenSSL/1.0.1e-fips"
-    },
-    {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "28 moderate/minor violation(s)"
+      "ev": "4 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "heading levels skipped"
-    },
-    {
-      "id": "a11y.keyboard",
-      "sev": "L",
-      "ev": "tabindex=\"-1\" alongside outline:none"
-    },
-    {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "13 console error(s): Mixed Content: The page at 'https://akshaya.kerala.gov.in/' was loaded over HTTPS, but requested an insecure frame 'http://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/akshayacsckerala/&width&height=258&colorscheme=light&show_faces=true&header=false&stream=false&show_border=false&appId=133982306765662'. This request has been blocked; the content must be served over HTTPS."
+      "ev": "no <h1>, heading levels skipped"
     },
     {
       "id": "gigw.terms",
@@ -207,26 +575,18 @@
       "sev": "L"
     },
     {
-      "id": "gigw.screen_reader",
-      "sev": "L"
-    },
-    {
-      "id": "gigw.search",
-      "sev": "L"
-    },
-    {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.30"
+      "ev": "0.46"
     },
     {
       "id": "perf.images",
       "sev": "L"
     },
     {
-      "id": "id.sitemap_xml",
+      "id": "id.soft_404",
       "sev": "L",
-      "ev": "sitemap.xml returned 404"
+      "ev": "a nonexistent path returned 200"
     },
     {
       "id": "gigw.emblem",
@@ -238,6 +598,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-14",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-11-13",
       "up": false,
@@ -499,5 +864,5 @@
       "score": 49
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

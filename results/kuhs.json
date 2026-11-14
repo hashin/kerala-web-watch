@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-13T02:14:17.815Z",
-    "run": "1794535965330",
+    "at": "2026-11-14T01:46:56.325Z",
+    "run": "1794620763137",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 43,
+      "performance": 45,
       "accessibility": 75,
       "best_practices": 69,
-      "seo": 83
+      "seo": 75
     },
     "axe": {
       "critical": 60,
       "serious": 50,
-      "moderate": 59,
+      "moderate": 51,
       "minor": 93
     },
     "crawl": {
       "pages": 30,
       "pdfs": 2,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -181,7 +181,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "152 moderate/minor violation(s)"
+        "ev": "144 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -200,7 +200,7 @@
       {
         "id": "a11y.headings",
         "r": "fail",
-        "ev": "no <h1>, heading levels skipped"
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -223,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "43/100"
+        "ev": "45/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "18564.282000000007ms"
+        "ev": "19767.053999999996ms"
       },
       {
         "id": "perf.cls",
@@ -236,8 +236,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "8.0MB"
+        "r": "fail",
+        "ev": "8.3MB"
       },
       {
         "id": "perf.viewport",
@@ -284,8 +284,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (http://www3.kuhs.ac.in/university/api/college_course_details.php)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -315,7 +314,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "22 console error(s): Failed to load resource: net::ERR_HTTP2_PING_FAILED"
+        "ev": "21 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
@@ -426,7 +425,7 @@
     "screenshot": {
       "desktop": "kuhs.webp",
       "mobile": "kuhs-m.webp",
-      "phash": "ff2000ffffff0000"
+      "phash": "ff7e74f1f18d0000"
     },
     "outlinks": [
       {
@@ -452,12 +451,12 @@
     ]
   },
   "score": {
-    "overall": 45,
+    "overall": 46,
     "security": 34,
     "accessibility": 40,
-    "content": 32,
+    "content": 42,
     "gigw": 30,
-    "performance": 81,
+    "performance": 76,
     "identity": 92
   },
   "status": "poor",
@@ -486,11 +485,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (http://www3.kuhs.ac.in/university/api/college_course_details.php)"
     },
     {
       "id": "sec.xfo",
@@ -539,12 +533,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "18564.282000000007ms"
+      "ev": "19767.053999999996ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "8.0MB"
+      "ev": "8.3MB"
     },
     {
       "id": "sec.csp",
@@ -566,12 +560,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "152 moderate/minor violation(s)"
+      "ev": "144 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "no <h1>, heading levels skipped"
+      "ev": "heading levels skipped"
     },
     {
       "id": "a11y.keyboard",
@@ -586,7 +580,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "22 console error(s): Failed to load resource: net::ERR_HTTP2_PING_FAILED"
+      "ev": "21 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.copyright_policy",
@@ -631,6 +625,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-14",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-11-13",
       "up": true,
@@ -902,5 +901,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

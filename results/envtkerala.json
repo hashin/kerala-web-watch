@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-13T02:17:49.882Z",
-    "run": "1794535958404",
+    "at": "2026-11-14T02:02:33.924Z",
+    "run": "1794620986763",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 58,
+      "performance": 59,
       "accessibility": 87,
       "best_practices": 96,
       "seo": 77
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 7,
-      "broken": 2
+      "broken": 35
     },
     "tech": {
       "cms": "WordPress 6.5.14",
@@ -98,7 +98,7 @@
       {
         "id": "avail.ttfb",
         "r": "fail",
-        "ev": "16106ms"
+        "ev": "13839ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "58/100"
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9368.718ms"
+        "ev": "9821.303500000002ms"
       },
       {
         "id": "perf.cls",
@@ -281,12 +281,13 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "2/30 crawled link(s) broken (https://envt.kerala.gov.in/#main, https://envt.kerala.gov.in/#)"
+        "r": "fail",
+        "ev": "30/30 crawled link(s) broken (https://envt.kerala.gov.in/#main, https://envt.kerala.gov.in/#, https://envt.kerala.gov.in/, ...)"
       },
       {
         "id": "content.broken_pdfs",
-        "r": "pass"
+        "r": "fail",
+        "ev": "5 linked PDF(s) 404: https://envt.kerala.gov.in/wp-content/uploads/2026/05/List-of-Environmental-Awards.pdf, https://envt.kerala.gov.in/wp-content/uploads/2019/05/Kerala-State-Environment-Policy-2009-english.pdf, https://envt.kerala.gov.in/wp-content/uploads/2019/05/Kerala-State-Environment-Policy-2009-malayalam.pdf, https://envt.kerala.gov.in/wp-content/uploads/2019/05/National-Action-Plan-on-Climate-Change.pdf, https://envt.kerala.gov.in/wp-content/uploads/2019/05/National-Environment-Policy-2006.pdf"
       },
       {
         "id": "content.broken_images",
@@ -471,10 +472,10 @@
     ]
   },
   "score": {
-    "overall": 54,
+    "overall": 51,
     "security": 38,
     "accessibility": 72,
-    "content": 42,
+    "content": 22,
     "gigw": 22,
     "performance": 71,
     "identity": 100
@@ -503,12 +504,12 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "2/30 crawled link(s) broken (https://envt.kerala.gov.in/#main, https://envt.kerala.gov.in/#)"
+      "ev": "30/30 crawled link(s) broken (https://envt.kerala.gov.in/#main, https://envt.kerala.gov.in/#, https://envt.kerala.gov.in/, ...)"
     },
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "16106ms"
+      "ev": "13839ms"
     },
     {
       "id": "sec.hsts",
@@ -523,6 +524,11 @@
       "id": "a11y.contrast",
       "sev": "M",
       "ev": "35 low-contrast element(s)"
+    },
+    {
+      "id": "content.broken_pdfs",
+      "sev": "M",
+      "ev": "5 linked PDF(s) 404: https://envt.kerala.gov.in/wp-content/uploads/2026/05/List-of-Environmental-Awards.pdf, https://envt.kerala.gov.in/wp-content/uploads/2019/05/Kerala-State-Environment-Policy-2009-english.pdf, https://envt.kerala.gov.in/wp-content/uploads/2019/05/Kerala-State-Environment-Policy-2009-malayalam.pdf, https://envt.kerala.gov.in/wp-content/uploads/2019/05/National-Action-Plan-on-Climate-Change.pdf, https://envt.kerala.gov.in/wp-content/uploads/2019/05/National-Environment-Policy-2006.pdf"
     },
     {
       "id": "gigw.sitemap",
@@ -547,7 +553,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9368.718ms"
+      "ev": "9821.303500000002ms"
     },
     {
       "id": "perf.weight",
@@ -622,6 +628,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-14",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-11-13",
       "up": true,
@@ -893,5 +904,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

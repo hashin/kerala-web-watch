@@ -35,13 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-13T02:08:49.077Z",
-    "run": "1794535647844",
+    "at": "2026-11-14T01:43:51.753Z",
+    "run": "1794620539460",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 49,
-      "accessibility": 97,
-      "best_practices": 100,
+      "performance": 39,
+      "accessibility": 92,
+      "best_practices": 88,
       "seo": 92
     },
     "axe": {
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -215,17 +215,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "97/100"
+        "ev": "92/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "49/100"
+        "ev": "39/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "27485.615500000007ms"
+        "ev": "34350.5865ms"
       },
       {
         "id": "perf.cls",
@@ -242,7 +242,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.images",
@@ -280,7 +280,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "2/30 crawled link(s) broken (https://keralapolice.gov.in/, https://keralapolice.gov.in/page/kerala-police-welfare-bureau)"
       },
       {
         "id": "content.broken_pdfs",
@@ -415,13 +416,13 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K&amp;cx=c&amp;gtm=4e6bb1h1, https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6bb1h1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K&amp;cx=c&amp;gtm=4e6bb1, https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6bb1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
       }
     ],
     "screenshot": {
       "desktop": "keralapolice.webp",
       "mobile": "keralapolice-m.webp",
-      "phash": "ffff2c300080b03f"
+      "phash": "fffffd8000f48017"
     },
     "outlinks": [
       {
@@ -580,12 +581,12 @@
     ]
   },
   "score": {
-    "overall": 57,
+    "overall": 55,
     "security": 50,
     "accessibility": 60,
-    "content": 56,
+    "content": 46,
     "gigw": 26,
-    "performance": 76,
+    "performance": 66,
     "identity": 96
   },
   "status": "needs-work",
@@ -616,6 +617,11 @@
       "ev": "ml-"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "2/30 crawled link(s) broken (https://keralapolice.gov.in/, https://keralapolice.gov.in/page/kerala-police-welfare-bureau)"
+    },
+    {
       "id": "gigw.contact",
       "sev": "H"
     },
@@ -643,12 +649,16 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "27485.615500000007ms"
+      "ev": "34350.5865ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
       "ev": "9.7MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -710,10 +720,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K&amp;cx=c&amp;gtm=4e6bb1h1, https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6bb1h1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K&amp;cx=c&amp;gtm=4e6bb1, https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6bb1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-14",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-11-13",
       "up": true,
@@ -985,5 +1000,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

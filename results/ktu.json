@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-13T02:10:03.154Z",
-    "run": "1794535744321",
+    "at": "2026-11-14T01:44:43.964Z",
+    "run": "1794620633221",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 47,
@@ -53,30 +53,29 @@
     "crawl": {
       "pages": 15,
       "pdfs": 0,
-      "broken": 1
+      "broken": 3
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "nginx/1.4.6 (Ubuntu)",
       "jquery": null
     },
     "checks": [
       {
         "id": "avail.dns",
-        "r": "fail",
-        "ev": "ktu.edu.in did not resolve"
+        "r": "pass"
       },
       {
         "id": "avail.connect",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.status",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -96,7 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -108,23 +107,23 @@
       },
       {
         "id": "sec.https",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "sec.cert_valid",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.hsts",
@@ -132,7 +131,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.csp",
@@ -228,7 +227,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "19124.084999999992ms"
+        "ev": "19351.133ms"
       },
       {
         "id": "perf.cls",
@@ -237,7 +236,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "9.6MB"
+        "ev": "9.5MB"
       },
       {
         "id": "perf.viewport",
@@ -283,8 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/15 crawled link(s) broken (https://app.ktu.edu.in/login.htm)"
+        "r": "fail",
+        "ev": "3/15 crawled link(s) broken (https://schools.ktu.edu.in/, https://app.ktu.edu.in/login.htm, https://application.ktu.edu.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -313,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "20 console error(s): Connecting to 'data:,' violates the following Content Security Policy directive: \"connect-src 'self' https://hagen.challenges.cloudflare.com https://brunhild.challenges.cloudflare.com https://*.alg13.dnstest.challenges.cloudflare.com https://*.mldsa44.dnstest.challenges.cloudflare.com https://dnstest.dev https://ca2.cloudflarecaptcha.com https://ca1.cloudflarecaptcha.com\". The action has been blocked."
+        "ev": "22 console error(s): %c%d font-size:0;color:transparent NaN"
       },
       {
         "id": "gigw.contact",
@@ -424,7 +423,7 @@
     "screenshot": {
       "desktop": "ktu.webp",
       "mobile": "ktu-m.webp",
-      "phash": "00ff3e08fe7e1f00"
+      "phash": "00ff48fec000fe00"
     },
     "outlinks": [
       {
@@ -461,13 +460,20 @@
       }
     ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 35,
+    "security": 24,
+    "accessibility": 22,
+    "content": 46,
+    "gigw": 0,
+    "performance": 66,
+    "identity": 96
+  },
+  "status": "poor",
   "issues": [
     {
-      "id": "avail.dns",
-      "sev": "C",
-      "ev": "ktu.edu.in did not resolve"
+      "id": "sec.http_redirect",
+      "sev": "H"
     },
     {
       "id": "sec.vuln_js",
@@ -492,7 +498,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/15 crawled link(s) broken (https://app.ktu.edu.in/login.htm)"
+      "ev": "3/15 crawled link(s) broken (https://schools.ktu.edu.in/, https://app.ktu.edu.in/login.htm, https://application.ktu.edu.in/)"
     },
     {
       "id": "gigw.contact",
@@ -553,12 +559,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "19124.084999999992ms"
+      "ev": "19351.133ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "9.6MB"
+      "ev": "9.5MB"
     },
     {
       "id": "perf.tap_targets",
@@ -594,7 +600,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "20 console error(s): Connecting to 'data:,' violates the following Content Security Policy directive: \"connect-src 'self' https://hagen.challenges.cloudflare.com https://brunhild.challenges.cloudflare.com https://*.alg13.dnstest.challenges.cloudflare.com https://*.mldsa44.dnstest.challenges.cloudflare.com https://dnstest.dev https://ca2.cloudflarecaptcha.com https://ca1.cloudflarecaptcha.com\". The action has been blocked."
+      "ev": "22 console error(s): %c%d font-size:0;color:transparent NaN"
     },
     {
       "id": "gigw.feedback",
@@ -647,6 +653,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-14",
+      "up": true,
+      "score": 35
+    },
     {
       "d": "2026-11-13",
       "up": false,
@@ -908,5 +919,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

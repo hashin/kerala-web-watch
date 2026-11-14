@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-12T02:25:43.426Z",
-    "run": "1794450277071",
+    "at": "2026-11-14T01:40:23.584Z",
+    "run": "1794620312147",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 53,
+      "performance": 46,
       "accessibility": 96,
       "best_practices": 69,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -120,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "17 days left"
+        "ev": "15 days left"
       },
       {
         "id": "sec.tls_version",
@@ -220,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "53/100"
+        "ev": "46/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "35580.19249999998ms"
+        "ev": "28675.282ms"
       },
       {
         "id": "perf.cls",
@@ -234,7 +234,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "12.7MB"
+        "ev": "23.7MB"
       },
       {
         "id": "perf.viewport",
@@ -280,8 +280,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://alappuzha.nic.in/en)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -310,7 +309,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "6 console error(s): Refused to apply style from 'https://alappuzha.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+        "ev": "19 console error(s): Refused to apply style from 'https://alappuzha.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       },
       {
         "id": "gigw.contact",
@@ -503,10 +502,10 @@
     ]
   },
   "score": {
-    "overall": 58,
+    "overall": 59,
     "security": 38,
     "accessibility": 60,
-    "content": 46,
+    "content": 56,
     "gigw": 60,
     "performance": 76,
     "identity": 96
@@ -516,7 +515,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "17 days left"
+      "ev": "15 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -537,11 +536,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://alappuzha.nic.in/en)"
     },
     {
       "id": "sec.hsts",
@@ -567,12 +561,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "35580.19249999998ms"
+      "ev": "28675.282ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "12.7MB"
+      "ev": "23.7MB"
     },
     {
       "id": "sec.csp",
@@ -604,7 +598,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "6 console error(s): Refused to apply style from 'https://alappuzha.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+      "ev": "19 console error(s): Refused to apply style from 'https://alappuzha.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
     },
     {
       "id": "gigw.terms",
@@ -642,6 +636,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-14",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-11-13",
       "up": true,
@@ -908,5 +907,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

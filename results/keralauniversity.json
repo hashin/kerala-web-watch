@@ -37,12 +37,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-12T02:33:33.577Z",
-    "run": "1794450737257",
+    "at": "2026-11-14T01:45:04.838Z",
+    "run": "1794620631755",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 54,
-      "accessibility": 78,
+      "performance": 50,
+      "accessibility": 82,
       "best_practices": 85,
       "seo": 82
     },
@@ -54,7 +54,7 @@
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 18,
+      "pdfs": 19,
       "broken": 0
     },
     "tech": {
@@ -188,7 +188,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 52% Malayalam content"
+        "ev": "<html lang=\"en\"> vs. 57% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -220,17 +220,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "78/100"
+        "ev": "82/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "54/100"
+        "ev": "50/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "24505.523999999998ms"
+        "ev": "18312.934ms"
       },
       {
         "id": "perf.cls",
@@ -246,7 +246,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -560,12 +560,12 @@
     ]
   },
   "score": {
-    "overall": 36,
+    "overall": 37,
     "security": 14,
     "accessibility": 22,
     "content": 28,
     "gigw": 40,
-    "performance": 76,
+    "performance": 86,
     "identity": 88
   },
   "status": "poor",
@@ -592,7 +592,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 52% Malayalam content"
+      "ev": "<html lang=\"en\"> vs. 57% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -652,11 +652,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "24505.523999999998ms"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "ev": "18312.934ms"
     },
     {
       "id": "sec.csp",
@@ -746,6 +742,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-14",
+      "up": true,
+      "score": 37
+    },
     {
       "d": "2026-11-13",
       "up": true,
@@ -1007,5 +1008,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

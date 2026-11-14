@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-13T02:27:36.087Z",
-    "run": "1794536803525",
+    "at": "2026-11-14T02:04:05.427Z",
+    "run": "1794621792015",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 38,
+      "accessibility": 76,
+      "best_practices": 69,
+      "seo": 85
+    },
     "axe": {
       "critical": 2,
       "serious": 11,
@@ -211,19 +216,23 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "76/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "38/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "26007.817000000003ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.36"
       },
       {
         "id": "perf.weight",
@@ -236,11 +245,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -303,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "7 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+        "ev": "7 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
       },
       {
         "id": "gigw.contact",
@@ -457,12 +466,12 @@
     ]
   },
   "score": {
-    "overall": 55,
+    "overall": 52,
     "security": 62,
     "accessibility": 30,
     "content": 68,
     "gigw": 16,
-    "performance": 95,
+    "performance": 67,
     "identity": 100
   },
   "status": "needs-work",
@@ -527,9 +536,18 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "26007.817000000003ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "7.2MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.xcto",
@@ -566,7 +584,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "7 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      "ev": "7 console error(s): Failed to load resource: net::ERR_CONNECTION_REFUSED"
     },
     {
       "id": "gigw.feedback",
@@ -591,9 +609,23 @@
     {
       "id": "gigw.help",
       "sev": "L"
+    },
+    {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.36"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-14",
+      "up": true,
+      "score": 52
+    },
     {
       "d": "2026-11-13",
       "up": true,
@@ -860,5 +892,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

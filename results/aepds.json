@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-13T02:03:31.747Z",
-    "run": "1794535353340",
+    "at": "2026-11-14T01:38:32.145Z",
+    "run": "1794620248255",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 56,
       "accessibility": 56,
       "best_practices": 42,
       "seo": 73
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 1,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "56/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10812.535ms"
+        "ev": "11631.530999999999ms"
       },
       {
         "id": "perf.cls",
@@ -282,8 +282,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://epos.kerala.gov.in/version_abstract)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -459,10 +458,10 @@
     ]
   },
   "score": {
-    "overall": 47,
+    "overall": 49,
     "security": 36,
     "accessibility": 52,
-    "content": 42,
+    "content": 52,
     "gigw": 26,
     "performance": 61,
     "identity": 88
@@ -492,11 +491,6 @@
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://epos.kerala.gov.in/version_abstract)"
     },
     {
       "id": "perf.viewport",
@@ -545,7 +539,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10812.535ms"
+      "ev": "11631.530999999999ms"
     },
     {
       "id": "perf.weight",
@@ -634,6 +628,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-14",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-11-13",
       "up": true,
@@ -900,5 +899,5 @@
       "score": 49
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

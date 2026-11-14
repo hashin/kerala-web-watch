@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-13T02:20:13.979Z",
-    "run": "1794536311127",
+    "at": "2026-11-14T01:58:12.400Z",
+    "run": "1794621377624",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 30,
+      "performance": 52,
       "accessibility": 77,
       "best_practices": 96,
       "seo": 83
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -219,22 +219,21 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "30/100"
+        "ev": "52/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "49137.35175000001ms"
+        "ev": "50343.42849999999ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.69"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "2476.9MB"
+        "ev": "2644.8MB"
       },
       {
         "id": "perf.viewport",
@@ -281,7 +280,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://etenders.kerala.gov.in/nicgep/app)"
       },
       {
         "id": "content.broken_pdfs",
@@ -454,12 +454,12 @@
     ]
   },
   "score": {
-    "overall": 78,
+    "overall": 77,
     "security": 96,
     "accessibility": 72,
-    "content": 56,
+    "content": 46,
     "gigw": 76,
-    "performance": 72,
+    "performance": 76,
     "identity": 92
   },
   "status": "needs-work",
@@ -468,6 +468,11 @@
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://etenders.kerala.gov.in/nicgep/app)"
     },
     {
       "id": "a11y.axe_serious",
@@ -500,12 +505,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "49137.35175000001ms"
+      "ev": "50343.42849999999ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "2476.9MB"
+      "ev": "2644.8MB"
     },
     {
       "id": "sec.csp",
@@ -528,11 +533,6 @@
     {
       "id": "gigw.feedback",
       "sev": "L"
-    },
-    {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.69"
     },
     {
       "id": "perf.images",
@@ -558,6 +558,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-14",
+      "up": true,
+      "score": 77
+    },
     {
       "d": "2026-11-13",
       "up": true,
@@ -824,5 +829,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

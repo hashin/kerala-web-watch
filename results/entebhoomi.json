@@ -37,15 +37,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-13T02:05:34.872Z",
-    "run": "1794535431411",
+    "at": "2026-11-14T01:42:07.610Z",
+    "run": "1794620432919",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 58,
-      "accessibility": 70,
-      "best_practices": 88,
-      "seo": 77
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 20,
       "serious": 16,
@@ -122,7 +117,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "14 days left"
+        "ev": "13 days left"
       },
       {
         "id": "sec.tls_version",
@@ -218,22 +213,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "70/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "58/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "6652.989ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -245,11 +237,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -483,12 +475,12 @@
     ]
   },
   "score": {
-    "overall": 46,
+    "overall": 48,
     "security": 70,
     "accessibility": 20,
     "content": 42,
     "gigw": 0,
-    "performance": 76,
+    "performance": 100,
     "identity": 96
   },
   "status": "poor",
@@ -500,7 +492,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "14 days left"
+      "ev": "13 days left"
     },
     {
       "id": "a11y.axe_critical",
@@ -567,15 +559,6 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "6652.989ms"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
-    },
-    {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
       "ev": "70 moderate/minor violation(s)"
@@ -624,10 +607,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.soft_404",
       "sev": "L",
       "ev": "a nonexistent path returned 200"
@@ -638,6 +617,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-14",
+      "up": true,
+      "score": 48
+    },
     {
       "d": "2026-11-13",
       "up": true,
@@ -904,5 +888,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

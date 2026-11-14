@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-28T00:42:14.994Z",
-    "run": "1793148086113",
+    "at": "2026-11-14T01:39:30.649Z",
+    "run": "1794620302932",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
-      "accessibility": 96,
-      "best_practices": 69,
-      "seo": 92
+      "performance": 61,
+      "accessibility": 93,
+      "best_practices": 73,
+      "seo": 73
     },
     "axe": {
-      "critical": 17,
-      "serious": 0,
-      "moderate": 2,
-      "minor": 12
+      "critical": 8,
+      "serious": 3,
+      "moderate": 1,
+      "minor": 6
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -169,16 +169,17 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "17 critical violation(s)"
+        "ev": "8 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
-        "r": "pass"
+        "r": "fail",
+        "ev": "3 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "14 moderate/minor violation(s)"
+        "ev": "7 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -195,7 +196,7 @@
       {
         "id": "a11y.headings",
         "r": "fail",
-        "ev": "heading levels skipped"
+        "ev": "no <h1>"
       },
       {
         "id": "a11y.labels",
@@ -214,17 +215,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "96/100"
+        "ev": "93/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "61/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9323.460000000001ms"
+        "ev": "6138.748ms"
       },
       {
         "id": "perf.cls",
@@ -232,8 +233,7 @@
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "5.1MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
@@ -258,7 +258,7 @@
       },
       {
         "id": "content.stale_news",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "content.placeholder",
@@ -279,7 +279,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://pathanamthitta.nic.in/en)"
       },
       {
         "id": "content.broken_pdfs",
@@ -299,7 +300,7 @@
       },
       {
         "id": "content.meta_desc",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.favicon",
@@ -308,7 +309,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "6 console error(s): Refused to apply style from 'https://pathanamthitta.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+        "ev": "5 console error(s): Refused to apply style from 'https://pathanamthitta.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       },
       {
         "id": "gigw.contact",
@@ -401,7 +402,7 @@
       },
       {
         "id": "id.canonical",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.charset_doctype",
@@ -418,18 +419,16 @@
       }
     ],
     "screenshot": {
-      "desktop": "2026-09-21.webp",
-      "mobile": "2026-09-21-m.webp",
-      "phash": "ffff00000000ffff"
+      "desktop": "d-pathanamthitta.webp",
+      "mobile": "d-pathanamthitta-m.webp",
+      "phash": "ff7f0000ff3f3f3f"
     },
     "outlinks": [
       {
         "host": "kerala.gov.in",
-        "count": 7,
+        "count": 1,
         "texts": [
-          "കേരള സർക്കാർ",
-          "E-Office",
-          "E-District"
+          "കേരളം സർക്കാർ"
         ]
       },
       {
@@ -438,35 +437,19 @@
         "texts": []
       },
       {
-        "host": "keralacm.gov.in",
-        "count": 1,
-        "texts": [
-          "Profile"
-        ]
-      },
-      {
-        "host": "s3waas.gov.in",
+        "host": "facebook.com",
         "count": 4,
         "texts": [
-          "Industrial Profile",
-          "District Profile",
-          "Census Report"
+          "Facebook",
+          "Share on Facebook"
         ]
       },
       {
-        "host": "civilsupplieskerala.gov.in",
-        "count": 1,
+        "host": "x.com",
+        "count": 4,
         "texts": [
-          "Civil Supplies Department"
-        ]
-      },
-      {
-        "host": "youtube.com",
-        "count": 5,
-        "texts": [
-          "Konni elephant training centre",
-          "Gavi tourism video",
-          "Chuttippara Pathanamthitta"
+          "X",
+          "Share on X (Formaly Twitter)"
         ]
       },
       {
@@ -482,16 +465,21 @@
         "texts": [
           "Ministry of Electronics & Information Technology"
         ]
+      },
+      {
+        "host": "s3waas.gov.in",
+        "count": 1,
+        "texts": []
       }
     ]
   },
   "score": {
-    "overall": 63,
+    "overall": 59,
     "security": 48,
-    "accessibility": 60,
-    "content": 56,
+    "accessibility": 50,
+    "content": 42,
     "gigw": 64,
-    "performance": 81,
+    "performance": 86,
     "identity": 96
   },
   "status": "needs-work",
@@ -504,7 +492,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "17 critical violation(s)"
+      "ev": "8 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -517,12 +505,22 @@
       "ev": "ml-IN"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://pathanamthitta.nic.in/en)"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
       "id": "sec.xfo",
       "sev": "M"
+    },
+    {
+      "id": "a11y.axe_serious",
+      "sev": "M",
+      "ev": "3 serious violation(s)"
     },
     {
       "id": "a11y.labels",
@@ -540,12 +538,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9323.460000000001ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "5.1MB"
+      "ev": "6138.748ms"
     },
     {
       "id": "sec.csp",
@@ -562,12 +555,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "14 moderate/minor violation(s)"
+      "ev": "7 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "heading levels skipped"
+      "ev": "no <h1>"
     },
     {
       "id": "a11y.keyboard",
@@ -575,9 +568,13 @@
       "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
+      "id": "content.meta_desc",
+      "sev": "L"
+    },
+    {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "6 console error(s): Refused to apply style from 'https://pathanamthitta.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+      "ev": "5 console error(s): Refused to apply style from 'https://pathanamthitta.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
     },
     {
       "id": "gigw.terms",
@@ -605,12 +602,21 @@
       "ev": "sitemap.xml returned 404"
     },
     {
+      "id": "id.canonical",
+      "sev": "I"
+    },
+    {
       "id": "id.third_party",
       "sev": "I",
       "ev": "https://www.googletagmanager.com/gtag/js?id=11852876437"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-14",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-11-13",
       "up": true,
@@ -872,5 +878,5 @@
       "score": 58
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

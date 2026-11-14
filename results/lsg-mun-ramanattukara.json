@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T23:51:42.791Z",
-    "run": "1792885841605",
+    "at": "2026-11-14T01:54:16.041Z",
+    "run": "1794621201086",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 60,
+      "performance": 62,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 92
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 2
     },
     "tech": {
       "cms": "Drupal 11",
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "60/100"
+        "ev": "62/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11494.953500000001ms"
+        "ev": "25836.076000000005ms"
       },
       {
         "id": "perf.cls",
@@ -236,7 +236,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "4.9MB"
+        "ev": "6.5MB"
       },
       {
         "id": "perf.viewport",
@@ -283,7 +283,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://ramanattukaramunicipality.lsgkerala.gov.in/en/members)"
+        "ev": "2/30 crawled link(s) broken (https://lsgkerala.gov.in/en/lbelection/electdistrict/2020/3, https://welfarepension.lsgkerala.gov.in/index.aspx)"
       },
       {
         "id": "content.broken_pdfs",
@@ -563,7 +563,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://ramanattukaramunicipality.lsgkerala.gov.in/en/members)"
+      "ev": "2/30 crawled link(s) broken (https://lsgkerala.gov.in/en/lbelection/electdistrict/2020/3, https://welfarepension.lsgkerala.gov.in/index.aspx)"
     },
     {
       "id": "gigw.rti",
@@ -598,12 +598,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11494.953500000001ms"
+      "ev": "25836.076000000005ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "4.9MB"
+      "ev": "6.5MB"
     },
     {
       "id": "sec.csp",
@@ -663,6 +663,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-14",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-11-13",
       "up": true,
@@ -934,5 +939,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

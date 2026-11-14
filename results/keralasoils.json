@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-12T02:50:45.512Z",
-    "run": "1794451785042",
+    "at": "2026-11-14T02:16:23.632Z",
+    "run": "1794622510702",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
+      "performance": 59,
       "accessibility": 83,
       "best_practices": 88,
       "seo": 92
     },
     "axe": {
       "critical": 0,
-      "serious": 10,
+      "serious": 11,
       "moderate": 27,
       "minor": 4
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -173,7 +173,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "10 serious violation(s)"
+        "ev": "11 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -218,12 +218,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9222.360000000002ms"
+        "ev": "6052.0485ms"
       },
       {
         "id": "perf.cls",
@@ -232,7 +232,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "3.7MB"
+        "ev": "3.8MB"
       },
       {
         "id": "perf.viewport",
@@ -278,7 +278,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://www.keralasoils.gov.in/ml/node/183)"
       },
       {
         "id": "content.broken_pdfs",
@@ -384,7 +385,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -477,13 +478,13 @@
     ]
   },
   "score": {
-    "overall": 68,
+    "overall": 66,
     "security": 62,
     "accessibility": 74,
-    "content": 58,
+    "content": 48,
     "gigw": 52,
     "performance": 81,
-    "identity": 96
+    "identity": 92
   },
   "status": "needs-work",
   "issues": [
@@ -498,13 +499,18 @@
       "ev": "ml-icon"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://www.keralasoils.gov.in/ml/node/183)"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "10 serious violation(s)"
+      "ev": "11 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -527,12 +533,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9222.360000000002ms"
+      "ev": "6052.0485ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "3.7MB"
+      "ev": "3.8MB"
     },
     {
       "id": "sec.csp",
@@ -599,6 +605,10 @@
       "sev": "L"
     },
     {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
@@ -609,6 +619,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-14",
+      "up": true,
+      "score": 66
+    },
     {
       "d": "2026-11-13",
       "up": true,
@@ -870,5 +885,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

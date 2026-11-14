@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-13T02:23:39.611Z",
-    "run": "1794536565678",
+    "at": "2026-11-14T01:59:14.701Z",
+    "run": "1794621492404",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 40,
+      "performance": 37,
       "accessibility": 88,
       "best_practices": 92,
-      "seo": 58
+      "seo": 54
     },
     "axe": {
       "critical": 10,
@@ -220,17 +220,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "40/100"
+        "ev": "37/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "5480.6835ms"
+        "ev": "6236.2080000000005ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.81"
+        "ev": "1.67"
       },
       {
         "id": "perf.weight",
@@ -310,7 +310,8 @@
       },
       {
         "id": "content.console_errors",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 console error(s): Cannot read properties of undefined (reading 'split')"
       },
       {
         "id": "gigw.contact",
@@ -439,7 +440,7 @@
     "overall": 46,
     "security": 42,
     "accessibility": 44,
-    "content": 46,
+    "content": 42,
     "gigw": 6,
     "performance": 77,
     "identity": 92
@@ -521,7 +522,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "5480.6835ms"
+      "ev": "6236.2080000000005ms"
     },
     {
       "id": "perf.weight",
@@ -551,6 +552,11 @@
       "sev": "L"
     },
     {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "1 console error(s): Cannot read properties of undefined (reading 'split')"
+    },
+    {
       "id": "gigw.terms",
       "sev": "L"
     },
@@ -577,7 +583,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.81"
+      "ev": "1.67"
     },
     {
       "id": "perf.images",
@@ -599,6 +605,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-14",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-11-13",
       "up": true,
@@ -870,5 +881,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
