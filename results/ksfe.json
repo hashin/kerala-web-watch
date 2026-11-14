@@ -2,18 +2,15 @@
   "id": "ksfe",
   "url": "https://www.ksfe.com",
   "light": {
-    "at": "2026-11-13T23:11:41.873Z",
-    "status_class": "ok",
+    "at": "2026-11-14T04:28:07.033Z",
+    "status_class": "http_403",
     "dns": true,
-    "status": 200,
-    "final_url": "https://ksfe.com/",
-    "redirects": [
-      "https://www.ksfe.com -> http://ksfe.com/",
-      "http://ksfe.com/ -> https://ksfe.com/"
-    ],
-    "ttfb_ms": 927,
-    "title": null,
-    "byte_size": 91957,
+    "status": 403,
+    "final_url": "https://www.ksfe.com",
+    "redirects": [],
+    "ttfb_ms": 1035,
+    "title": "403 Forbidden",
+    "byte_size": 118,
     "tls": {
       "valid": true,
       "protocol": "TLSv1.3",
@@ -27,15 +24,15 @@
       "xfo": true,
       "xcto": true,
       "referrer": false,
-      "server": "nginx"
+      "server": "awselb/2.0"
     },
-    "content_hash": "494cd76377f7d8f3e89060e8456893514e1410c051664112e563e5e3a8b713bb",
-    "http_redirects_to_https": true,
+    "content_hash": "922d13df28f67c2eaf5aeaa49a684ef33a2bdb6e1bee77120e7072ed82de3980",
+    "http_redirects_to_https": false,
     "geo_block_suspect": false,
     "domain": "ksfe.com",
     "final_domain": "ksfe.com",
     "vantage": "gh-us",
-    "suspect": false
+    "suspect": true
   },
   "deep": {
     "at": "2026-11-14T01:43:12.444Z",
@@ -861,5 +858,5 @@
       "score": null
     }
   ],
-  "deep_bump": false
+  "deep_bump": true
 }
