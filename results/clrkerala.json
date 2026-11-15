@@ -29,14 +29,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-25T23:35:52.588Z",
-    "run": "1792971227058",
+    "at": "2026-11-15T01:25:54.473Z",
+    "run": "1794705837242",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 31,
       "accessibility": 82,
       "best_practices": 88,
-      "seo": 91
+      "seo": 92
     },
     "axe": {
       "critical": 3,
@@ -114,7 +114,8 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "warn",
+        "ev": "28 days left"
       },
       {
         "id": "sec.tls_version",
@@ -220,7 +221,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "21988.82100000001ms"
+        "ev": "21694.114000000005ms"
       },
       {
         "id": "perf.cls",
@@ -230,7 +231,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "96.8MB"
+        "ev": "96.7MB"
       },
       {
         "id": "perf.viewport",
@@ -418,7 +419,7 @@
     "screenshot": {
       "desktop": "clrkerala.webp",
       "mobile": "clrkerala-m.webp",
-      "phash": "bff960e0f8f0f0e0"
+      "phash": "077f3fbe06326060"
     },
     "outlinks": [
       {
@@ -437,6 +438,11 @@
       "id": "avail.status",
       "sev": "C",
       "ev": "final response was 503"
+    },
+    {
+      "id": "sec.cert_expiry",
+      "sev": "H",
+      "ev": "28 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -488,12 +494,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "21988.82100000001ms"
+      "ev": "21694.114000000005ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "96.8MB"
+      "ev": "96.7MB"
     },
     {
       "id": "sec.csp",
@@ -564,6 +570,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-15",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-14",
       "up": false,
@@ -835,5 +846,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-14T01:44:43.964Z",
-    "run": "1794620633221",
+    "at": "2026-11-15T01:21:35.689Z",
+    "run": "1794705663368",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 47,
+      "performance": 48,
       "accessibility": 76,
       "best_practices": 96,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 15,
       "pdfs": 0,
-      "broken": 3
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "47/100"
+        "ev": "48/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "19351.133ms"
+        "ev": "19733.141499999994ms"
       },
       {
         "id": "perf.cls",
@@ -282,8 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "3/15 crawled link(s) broken (https://schools.ktu.edu.in/, https://app.ktu.edu.in/login.htm, https://application.ktu.edu.in/)"
+        "r": "warn",
+        "ev": "2/15 crawled link(s) broken (https://app.ktu.edu.in/login.htm, https://application.ktu.edu.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -388,7 +388,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -461,13 +461,13 @@
     ]
   },
   "score": {
-    "overall": 35,
+    "overall": 36,
     "security": 24,
     "accessibility": 22,
-    "content": 46,
+    "content": 56,
     "gigw": 0,
     "performance": 66,
-    "identity": 96
+    "identity": 92
   },
   "status": "poor",
   "issues": [
@@ -498,7 +498,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "3/15 crawled link(s) broken (https://schools.ktu.edu.in/, https://app.ktu.edu.in/login.htm, https://application.ktu.edu.in/)"
+      "ev": "2/15 crawled link(s) broken (https://app.ktu.edu.in/login.htm, https://application.ktu.edu.in/)"
     },
     {
       "id": "gigw.contact",
@@ -559,7 +559,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "19351.133ms"
+      "ev": "19733.141499999994ms"
     },
     {
       "id": "perf.weight",
@@ -639,6 +639,10 @@
       "sev": "L"
     },
     {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
       "id": "id.soft_404",
       "sev": "L",
       "ev": "a nonexistent path returned 200"
@@ -653,6 +657,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-15",
+      "up": true,
+      "score": 36
+    },
     {
       "d": "2026-11-14",
       "up": true,
@@ -919,5 +928,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

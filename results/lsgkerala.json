@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-14T01:47:25.332Z",
-    "run": "1794620786714",
+    "at": "2026-11-15T01:18:45.944Z",
+    "run": "1794705474631",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 58,
+      "performance": 56,
       "accessibility": 77,
       "best_practices": 92,
       "seo": 92
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "5375ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -222,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "58/100"
+        "ev": "56/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "13929.086500000003ms"
+        "ev": "13873.674000000003ms"
       },
       {
         "id": "perf.cls",
@@ -311,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "3 console error(s): e.indexOf is not a function"
+        "ev": "5 console error(s): e.indexOf is not a function"
       },
       {
         "id": "gigw.contact",
@@ -518,11 +517,6 @@
       "ev": "ml-lsgd"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "5375ms"
-    },
-    {
       "id": "a11y.axe_serious",
       "sev": "M",
       "ev": "48 serious violation(s)"
@@ -560,7 +554,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "13929.086500000003ms"
+      "ev": "13873.674000000003ms"
     },
     {
       "id": "id.tech",
@@ -593,7 +587,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "3 console error(s): e.indexOf is not a function"
+      "ev": "5 console error(s): e.indexOf is not a function"
     },
     {
       "id": "gigw.feedback",
@@ -643,6 +637,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-15",
+      "up": true,
+      "score": 54
+    },
     {
       "d": "2026-11-14",
       "up": true,
@@ -919,5 +918,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

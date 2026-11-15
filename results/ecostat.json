@@ -35,18 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-14T01:48:35.956Z",
-    "run": "1794620870098",
+    "at": "2026-11-15T01:24:46.591Z",
+    "run": "1794705831159",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 43,
-      "accessibility": 70,
-      "best_practices": 96,
-      "seo": 92
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 28,
-      "serious": 61,
+      "serious": 63,
       "moderate": 39,
       "minor": 0
     },
@@ -120,7 +115,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "fail",
-        "ev": "1 days left"
+        "ev": "0 days left"
       },
       {
         "id": "sec.tls_version",
@@ -175,7 +170,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "61 serious violation(s)"
+        "ev": "63 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -195,7 +190,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "18 low-contrast element(s)"
+        "ev": "20 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -217,22 +212,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "70/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "43/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "13615.343ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -245,11 +237,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -490,12 +482,12 @@
     ]
   },
   "score": {
-    "overall": 45,
+    "overall": 47,
     "security": 46,
     "accessibility": 20,
     "content": 56,
     "gigw": 22,
-    "performance": 71,
+    "performance": 95,
     "identity": 96
   },
   "status": "poor",
@@ -503,7 +495,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "1 days left"
+      "ev": "0 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -541,7 +533,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "61 serious violation(s)"
+      "ev": "63 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -551,7 +543,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "18 low-contrast element(s)"
+      "ev": "20 low-contrast element(s)"
     },
     {
       "id": "gigw.accessibility_statement",
@@ -566,18 +558,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "13615.343ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "5.3MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
     },
     {
       "id": "sec.csp",
@@ -632,10 +615,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -650,6 +629,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-15",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-11-14",
       "up": true,
@@ -921,5 +905,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

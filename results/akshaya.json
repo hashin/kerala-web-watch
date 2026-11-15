@@ -35,23 +35,23 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-14T01:38:17.131Z",
-    "run": "1794620246673",
+    "at": "2026-11-15T01:13:21.411Z",
+    "run": "1794705156177",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 11,
+      "performance": 21,
       "accessibility": 87,
       "best_practices": 92,
       "seo": 75
     },
     "axe": {
       "critical": 4,
-      "serious": 20,
-      "moderate": 4,
+      "serious": 22,
+      "moderate": 5,
       "minor": 0
     },
     "crawl": {
-      "pages": 13,
+      "pages": 30,
       "pdfs": 0,
       "broken": 0
     },
@@ -131,7 +131,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "pass"
+        "r": "fail",
+        "ev": "href=\"http://www.instagram.com\""
       },
       {
         "id": "sec.csp",
@@ -173,12 +174,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "20 serious violation(s)"
+        "ev": "22 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "4 moderate/minor violation(s)"
+        "ev": "5 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -191,7 +192,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "2 low-contrast element(s)"
+        "ev": "4 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -218,22 +219,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "11/100"
+        "ev": "21/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "23315.544499999996ms"
+        "ev": "21741.295999999995ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.46"
+        "ev": "0.56"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "16.7MB"
+        "ev": "13.6MB"
       },
       {
         "id": "perf.viewport",
@@ -418,12 +419,17 @@
     "screenshot": {
       "desktop": "akshaya.webp",
       "mobile": "akshaya-m.webp",
-      "phash": "ff0101001919fdff"
+      "phash": "79ffb89890f07cff"
     },
     "outlinks": [
       {
         "host": "facebook.com",
-        "count": 1,
+        "count": 2,
+        "texts": []
+      },
+      {
+        "host": "instagram.com",
+        "count": 2,
         "texts": []
       },
       {
@@ -442,15 +448,10 @@
         "texts": []
       },
       {
-        "host": "instagram.com",
-        "count": 1,
-        "texts": []
-      },
-      {
         "host": "goo.gl",
         "count": 1,
         "texts": [
-          "Akshaya State Project Office Saankethika, IInd Floor, Vrindavan Gardens, Pottakkuzhi, Pattom.P.O, Thiruvananthapuram, Kerala 695004"
+          "Akshaya State Project Office\r\nSaankethika, IInd Floor,\r\nVrindavan Gardens,\r\nPottakkuzhi, Pattom.P.O,\r\nThiruvananthapuram, Kerala 695004"
         ]
       },
       {
@@ -463,8 +464,8 @@
     ]
   },
   "score": {
-    "overall": 59,
-    "security": 68,
+    "overall": 54,
+    "security": 48,
     "accessibility": 52,
     "content": 60,
     "gigw": 24,
@@ -473,6 +474,11 @@
   },
   "status": "needs-work",
   "issues": [
+    {
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://www.instagram.com\""
+    },
     {
       "id": "a11y.axe_critical",
       "sev": "H",
@@ -503,12 +509,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "20 serious violation(s)"
+      "ev": "22 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "2 low-contrast element(s)"
+      "ev": "4 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -529,12 +535,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "23315.544499999996ms"
+      "ev": "21741.295999999995ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "16.7MB"
+      "ev": "13.6MB"
     },
     {
       "id": "sec.csp",
@@ -551,7 +557,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "4 moderate/minor violation(s)"
+      "ev": "5 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -577,7 +583,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.46"
+      "ev": "0.56"
     },
     {
       "id": "perf.images",
@@ -598,6 +604,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-15",
+      "up": true,
+      "score": 54
+    },
     {
       "d": "2026-11-14",
       "up": true,
@@ -864,5 +875,5 @@
       "score": 49
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

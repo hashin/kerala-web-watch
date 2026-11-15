@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-14T02:07:34.343Z",
-    "run": "1794621992601",
+    "at": "2026-11-15T01:41:09.614Z",
+    "run": "1794706820234",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 44,
+      "performance": 57,
       "accessibility": 76,
       "best_practices": 70,
       "seo": 92
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "6287ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -221,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "44/100"
+        "ev": "57/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "32389.28399999999ms"
+        "ev": "34643.97300000001ms"
       },
       {
         "id": "perf.cls",
@@ -310,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "9 console error(s): Cannot read properties of null (reading 'addEventListener')"
+        "ev": "8 console error(s): Cannot read properties of null (reading 'addEventListener')"
       },
       {
         "id": "gigw.contact",
@@ -512,6 +513,11 @@
       "ev": "www.kgptc.in"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "6287ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -548,7 +554,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "32389.28399999999ms"
+      "ev": "34643.97300000001ms"
     },
     {
       "id": "perf.weight",
@@ -585,7 +591,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "9 console error(s): Cannot read properties of null (reading 'addEventListener')"
+      "ev": "8 console error(s): Cannot read properties of null (reading 'addEventListener')"
     },
     {
       "id": "gigw.copyright_policy",
@@ -630,6 +636,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-15",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-14",
       "up": false,
@@ -881,5 +892,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

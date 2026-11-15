@@ -37,15 +37,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-11T01:41:50.652Z",
-    "run": "1794361266749",
+    "at": "2026-11-15T01:27:31.017Z",
+    "run": "1794706009064",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 61,
-      "accessibility": 82,
-      "best_practices": 100,
-      "seo": 85
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 0,
       "serious": 6,
@@ -215,22 +210,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "82/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "61/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "35216.13800000001ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -243,11 +235,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -545,12 +537,12 @@
     ]
   },
   "score": {
-    "overall": 65,
+    "overall": 67,
     "security": 76,
     "accessibility": 70,
     "content": 56,
     "gigw": 20,
-    "performance": 76,
+    "performance": 90,
     "identity": 96
   },
   "status": "needs-work",
@@ -601,11 +593,6 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "35216.13800000001ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "13.4MB"
@@ -654,16 +641,17 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-15",
+      "up": true,
+      "score": 67
+    },
     {
       "d": "2026-11-14",
       "up": true,
@@ -930,5 +918,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

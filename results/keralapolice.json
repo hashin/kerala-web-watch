@@ -35,13 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-14T01:43:51.753Z",
-    "run": "1794620539460",
+    "at": "2026-11-15T01:17:46.122Z",
+    "run": "1794705314883",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 39,
+      "performance": 38,
       "accessibility": 92,
-      "best_practices": 88,
+      "best_practices": 96,
       "seo": 92
     },
     "axe": {
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 2
+      "broken": 5
     },
     "tech": {
       "cms": null,
@@ -220,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "39/100"
+        "ev": "38/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "34350.5865ms"
+        "ev": "35497.948500000006ms"
       },
       {
         "id": "perf.cls",
@@ -280,8 +280,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "2/30 crawled link(s) broken (https://keralapolice.gov.in/, https://keralapolice.gov.in/page/kerala-police-welfare-bureau)"
+        "r": "fail",
+        "ev": "5/30 crawled link(s) broken (https://keralapolice.gov.in/, https://keralapolice.gov.in/login, https://keralapolice.gov.in/#, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -310,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "20 console error(s): Failed to load resource: the server responded with a status of 400 ()"
+        "ev": "21 console error(s): Loading the image 'https://www.googletagmanager.com/td?id=G-FXT3GHQP8K&v=3&t=t&pid=1538574576&gtm=45je6bb1v885427936za200zb9103792061zd9103792061xf1&seq=1&exp=100940090~115938465~115938468~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121246026~121246034&dl=keralapolice.gov.in%2F&tdp=G-FXT3GHQP8K;85427936;0;2;0&frm=0&rtg=103792061&slo=9&hlo=4&lst=1&pcid=103792061&bt=0&ct=3&z=0' violates the following Content Security Policy directive: \"img-src 'self' data:\". The action has been blocked."
       },
       {
         "id": "gigw.contact",
@@ -422,7 +422,7 @@
     "screenshot": {
       "desktop": "keralapolice.webp",
       "mobile": "keralapolice-m.webp",
-      "phash": "fffffd8000f48017"
+      "phash": "ffff2c300080b03f"
     },
     "outlinks": [
       {
@@ -581,10 +581,10 @@
     ]
   },
   "score": {
-    "overall": 55,
+    "overall": 53,
     "security": 50,
     "accessibility": 60,
-    "content": 46,
+    "content": 36,
     "gigw": 26,
     "performance": 66,
     "identity": 96
@@ -619,7 +619,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "2/30 crawled link(s) broken (https://keralapolice.gov.in/, https://keralapolice.gov.in/page/kerala-police-welfare-bureau)"
+      "ev": "5/30 crawled link(s) broken (https://keralapolice.gov.in/, https://keralapolice.gov.in/login, https://keralapolice.gov.in/#, ...)"
     },
     {
       "id": "gigw.contact",
@@ -649,7 +649,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "34350.5865ms"
+      "ev": "35497.948500000006ms"
     },
     {
       "id": "perf.weight",
@@ -678,7 +678,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "20 console error(s): Failed to load resource: the server responded with a status of 400 ()"
+      "ev": "21 console error(s): Loading the image 'https://www.googletagmanager.com/td?id=G-FXT3GHQP8K&v=3&t=t&pid=1538574576&gtm=45je6bb1v885427936za200zb9103792061zd9103792061xf1&seq=1&exp=100940090~115938465~115938468~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121246026~121246034&dl=keralapolice.gov.in%2F&tdp=G-FXT3GHQP8K;85427936;0;2;0&frm=0&rtg=103792061&slo=9&hlo=4&lst=1&pcid=103792061&bt=0&ct=3&z=0' violates the following Content Security Policy directive: \"img-src 'self' data:\". The action has been blocked."
     },
     {
       "id": "gigw.terms",
@@ -724,6 +724,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-15",
+      "up": true,
+      "score": 53
+    },
     {
       "d": "2026-11-14",
       "up": true,
@@ -1000,5 +1005,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

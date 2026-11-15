@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-14T01:58:12.400Z",
-    "run": "1794621377624",
+    "at": "2026-11-15T01:33:39.656Z",
+    "run": "1794706317466",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 52,
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -97,7 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4416ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -224,7 +225,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "50343.42849999999ms"
+        "ev": "49995.8325ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +234,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "2644.8MB"
+        "ev": "2767.0MB"
       },
       {
         "id": "perf.viewport",
@@ -280,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://etenders.kerala.gov.in/nicgep/app)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -454,10 +454,10 @@
     ]
   },
   "score": {
-    "overall": 77,
+    "overall": 79,
     "security": 96,
     "accessibility": 72,
-    "content": 46,
+    "content": 56,
     "gigw": 76,
     "performance": 76,
     "identity": 92
@@ -470,9 +470,9 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://etenders.kerala.gov.in/nicgep/app)"
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "4416ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -505,12 +505,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "50343.42849999999ms"
+      "ev": "49995.8325ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "2644.8MB"
+      "ev": "2767.0MB"
     },
     {
       "id": "sec.csp",
@@ -558,6 +558,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-15",
+      "up": true,
+      "score": 79
+    },
     {
       "d": "2026-11-14",
       "up": true,
@@ -829,5 +834,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

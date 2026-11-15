@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-14T02:03:53.014Z",
-    "run": "1794621753926",
+    "at": "2026-11-15T01:28:21.090Z",
+    "run": "1794706037002",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 91,
+      "performance": 88,
       "accessibility": 86,
       "best_practices": 96,
       "seo": 92
     },
     "axe": {
       "critical": 1,
-      "serious": 10,
+      "serious": 11,
       "moderate": 8,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 9,
-      "broken": 10
+      "broken": 8
     },
     "tech": {
       "cms": "Drupal 10",
@@ -174,7 +174,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "10 serious violation(s)"
+        "ev": "11 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -192,7 +192,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "1 low-contrast element(s)"
+        "ev": "2 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -220,7 +220,7 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "91/100"
+        "ev": "88/100"
       },
       {
         "id": "perf.lcp",
@@ -280,7 +280,7 @@
       {
         "id": "content.broken_links",
         "r": "fail",
-        "ev": "10/30 crawled link(s) broken (http://cprcs.kerala.gov.in/, https://eoffice.kerala.gov.in/eFileCIIIT/filesearch.action, https://www.planspace.kerala.gov.in/, ...)"
+        "ev": "8/30 crawled link(s) broken (http://cprcs.kerala.gov.in/, https://eoffice.kerala.gov.in/eFileCIIIT/filesearch.action, https://www.planspace.kerala.gov.in/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -498,7 +498,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "10/30 crawled link(s) broken (http://cprcs.kerala.gov.in/, https://eoffice.kerala.gov.in/eFileCIIIT/filesearch.action, https://www.planspace.kerala.gov.in/, ...)"
+      "ev": "8/30 crawled link(s) broken (http://cprcs.kerala.gov.in/, https://eoffice.kerala.gov.in/eFileCIIIT/filesearch.action, https://www.planspace.kerala.gov.in/, ...)"
     },
     {
       "id": "sec.hsts",
@@ -507,12 +507,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "10 serious violation(s)"
+      "ev": "11 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "1 low-contrast element(s)"
+      "ev": "2 low-contrast element(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -580,6 +580,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-15",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-11-14",
       "up": true,
@@ -856,5 +861,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-14T02:07:50.391Z",
-    "run": "1794622020343",
+    "at": "2026-11-15T01:37:40.108Z",
+    "run": "1794706614366",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 64,
+      "performance": 63,
       "accessibility": 78,
       "best_practices": 96,
       "seo": 69
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3030ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -222,7 +221,7 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "64/100"
+        "ev": "63/100"
       },
       {
         "id": "perf.lcp",
@@ -231,7 +230,7 @@
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.39"
+        "ev": "0.70"
       },
       {
         "id": "perf.weight",
@@ -384,7 +383,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "38 days left"
+        "ev": "37 days left"
       },
       {
         "id": "id.www_consistency",
@@ -512,12 +511,7 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "38 days left"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3030ms"
+      "ev": "37 days left"
     },
     {
       "id": "sec.hsts",
@@ -625,7 +619,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.39"
+      "ev": "0.70"
     },
     {
       "id": "perf.images",
@@ -637,6 +631,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-15",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-11-14",
       "up": true,
@@ -913,5 +912,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

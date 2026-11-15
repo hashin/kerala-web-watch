@@ -37,19 +37,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-14T01:46:14.856Z",
-    "run": "1794620692501",
+    "at": "2026-11-15T01:17:30.706Z",
+    "run": "1794705367694",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 27,
+      "performance": 20,
       "accessibility": 60,
       "best_practices": 88,
       "seo": 85
     },
     "axe": {
       "critical": 1,
-      "serious": 20,
-      "moderate": 18,
+      "serious": 21,
+      "moderate": 59,
       "minor": 0
     },
     "crawl": {
@@ -177,12 +177,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "20 serious violation(s)"
+        "ev": "21 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "18 moderate/minor violation(s)"
+        "ev": "59 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -224,12 +224,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "27/100"
+        "ev": "20/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "17386.897ms"
+        "ev": "20247.388500000005ms"
       },
       {
         "id": "perf.cls",
@@ -239,7 +239,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "4.2MB"
+        "ev": "5.2MB"
       },
       {
         "id": "perf.viewport",
@@ -316,7 +316,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "4 console error(s): Failed to load resource: the server responded with a status of 400 ()"
+        "ev": "3 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
@@ -619,7 +619,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "20 serious violation(s)"
+      "ev": "21 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -651,12 +651,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "17386.897ms"
+      "ev": "20247.388500000005ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "4.2MB"
+      "ev": "5.2MB"
     },
     {
       "id": "perf.tap_targets",
@@ -673,7 +673,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "18 moderate/minor violation(s)"
+      "ev": "59 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -687,7 +687,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "4 console error(s): Failed to load resource: the server responded with a status of 400 ()"
+      "ev": "3 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.copyright_policy",
@@ -726,6 +726,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-15",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-11-14",
       "up": true,
@@ -1002,5 +1007,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

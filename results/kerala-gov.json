@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-14T01:42:46.646Z",
-    "run": "1794620472333",
+    "at": "2026-11-15T01:19:44.865Z",
+    "run": "1794705464123",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 45,
+      "performance": 56,
       "accessibility": 75,
       "best_practices": 92,
       "seo": 73
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 7,
-      "broken": 4
+      "broken": 5
     },
     "tech": {
       "cms": null,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4164ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -219,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "45/100"
+        "ev": "56/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "17855.99ms"
+        "ev": "15433.757ms"
       },
       {
         "id": "perf.cls",
@@ -279,7 +280,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://kerala.gov.in/subdetail/MTE2NjIyMjAzLjI4/MjA0ODc2ODQuMzY=)"
       },
       {
         "id": "content.broken_pdfs",
@@ -515,10 +517,10 @@
     ]
   },
   "score": {
-    "overall": 61,
+    "overall": 59,
     "security": 80,
     "accessibility": 60,
-    "content": 32,
+    "content": 22,
     "gigw": 34,
     "performance": 66,
     "identity": 92
@@ -546,8 +548,18 @@
       "ev": "ML-NILA"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://kerala.gov.in/subdetail/MTE2NjIyMjAzLjI4/MjA0ODc2ODQuMzY=)"
+    },
+    {
       "id": "gigw.rti",
       "sev": "H"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "4164ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -579,7 +591,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "17855.99ms"
+      "ev": "15433.757ms"
     },
     {
       "id": "perf.weight",
@@ -654,6 +666,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-15",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-11-14",
       "up": true,
@@ -925,5 +942,5 @@
       "score": 61
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
