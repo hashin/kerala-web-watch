@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-16T00:08:37.619Z",
-    "run": "1792109259415",
+    "at": "2026-11-16T01:31:45.752Z",
+    "run": "1794792663733",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 64,
+      "performance": 60,
       "accessibility": 83,
       "best_practices": 73,
       "seo": 92
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 2
     },
     "tech": {
       "cms": "Drupal 8",
@@ -117,15 +117,15 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.hsts",
@@ -223,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "64/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "25313.3595ms"
+        "ev": "17272.336ms"
       },
       {
         "id": "perf.cls",
@@ -283,7 +283,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "2/30 crawled link(s) broken (https://lsgkerala.gov.in/ml/lbelection/electdmemberdet/2020/163, https://lsgkerala.gov.in/ml/lbelection/standcommitee/2020/163)"
       },
       {
         "id": "content.broken_pdfs",
@@ -455,10 +456,10 @@
     ]
   },
   "score": {
-    "overall": 52,
+    "overall": 50,
     "security": 38,
     "accessibility": 54,
-    "content": 52,
+    "content": 42,
     "gigw": 28,
     "performance": 81,
     "identity": 87
@@ -489,6 +490,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "2/30 crawled link(s) broken (https://lsgkerala.gov.in/ml/lbelection/electdmemberdet/2020/163, https://lsgkerala.gov.in/ml/lbelection/standcommitee/2020/163)"
     },
     {
       "id": "sec.hsts",
@@ -523,7 +529,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "25313.3595ms"
+      "ev": "17272.336ms"
     },
     {
       "id": "perf.weight",
@@ -615,6 +621,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-16",
+      "up": true,
+      "score": 50
+    },
     {
       "d": "2026-11-15",
       "up": true,
@@ -886,5 +897,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

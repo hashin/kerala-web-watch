@@ -35,24 +35,24 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-15T01:27:12.296Z",
-    "run": "1794705990433",
+    "at": "2026-11-16T01:35:56.773Z",
+    "run": "1794792917820",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 50,
+      "performance": 59,
       "accessibility": 94,
-      "best_practices": 35,
+      "best_practices": 54,
       "seo": 83
     },
     "axe": {
       "critical": 0,
-      "serious": 4,
+      "serious": 28,
       "moderate": 1,
       "minor": 0
     },
     "crawl": {
       "pages": 1,
-      "pdfs": 20,
+      "pdfs": 8,
       "broken": 1
     },
     "tech": {
@@ -112,7 +112,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
@@ -128,16 +128,15 @@
       },
       {
         "id": "sec.hsts",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "src=\"http://storage.googleapis.com/ai-studio-bucket-566929620660-us-west1/services/new-nuals-kochi-portal/img/Nuals.mp4\""
+        "r": "pass"
       },
       {
         "id": "sec.csp",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.xfo",
@@ -174,7 +173,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "4 serious violation(s)"
+        "ev": "28 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -192,7 +191,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "4 low-contrast element(s)"
+        "ev": "28 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -219,12 +218,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "50/100"
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "4389.7005ms"
+        "ev": "4622.93ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +232,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "28.6MB"
+        "ev": "29.6MB"
       },
       {
         "id": "perf.viewport",
@@ -309,7 +308,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "5 console error(s): Refused to apply style from 'https://www.nuals.ac.in/index.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+        "ev": "4 console error(s): Refused to apply style from 'https://www.nuals.ac.in/index.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       },
       {
         "id": "gigw.contact",
@@ -442,15 +441,6 @@
       "ev": "final response was 403"
     },
     {
-      "id": "sec.http_redirect",
-      "sev": "H"
-    },
-    {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "src=\"http://storage.googleapis.com/ai-studio-bucket-566929620660-us-west1/services/new-nuals-kochi-portal/img/Nuals.mp4\""
-    },
-    {
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
@@ -466,18 +456,14 @@
       "ev": "1/1 crawled link(s) broken (https://www.nuals.ac.in/#)"
     },
     {
-      "id": "sec.hsts",
-      "sev": "M"
-    },
-    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "4 serious violation(s)"
+      "ev": "28 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "4 low-contrast element(s)"
+      "ev": "28 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -494,16 +480,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "4389.7005ms"
+      "ev": "4622.93ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "28.6MB"
-    },
-    {
-      "id": "sec.csp",
-      "sev": "L"
+      "ev": "29.6MB"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -522,7 +504,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "5 console error(s): Refused to apply style from 'https://www.nuals.ac.in/index.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+      "ev": "4 console error(s): Refused to apply style from 'https://www.nuals.ac.in/index.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
     },
     {
       "id": "gigw.feedback",
@@ -580,6 +562,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-16",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-15",
       "up": false,
@@ -851,5 +838,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

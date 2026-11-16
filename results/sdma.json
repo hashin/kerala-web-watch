@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-15T01:22:49.983Z",
-    "run": "1794705695690",
+    "at": "2026-11-16T01:26:35.851Z",
+    "run": "1794792341453",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 55,
@@ -47,8 +47,8 @@
       "seo": 77
     },
     "axe": {
-      "critical": 1,
-      "serious": 24,
+      "critical": 2,
+      "serious": 52,
       "moderate": 2,
       "minor": 0
     },
@@ -171,12 +171,12 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "1 critical violation(s)"
+        "ev": "2 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "24 serious violation(s)"
+        "ev": "52 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -194,7 +194,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "13 low-contrast element(s)"
+        "ev": "28 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -226,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "12132.347ms"
+        "ev": "11340.868999999997ms"
       },
       {
         "id": "perf.cls",
@@ -234,8 +234,7 @@
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "4.8MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
@@ -311,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "56 console error(s): Unrecognized Content-Security-Policy directive 'base-url'."
+        "ev": "41 console error(s): Unrecognized Content-Security-Policy directive 'base-url'."
       },
       {
         "id": "gigw.contact",
@@ -417,7 +416,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://connect.facebook.net/en_US/all.js?hash=8e5804bf2d7bbee94151944d7b1595c4, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
+        "ev": "https://connect.facebook.net/en_US/all.js?hash=83559134a5f7722f7fb6c102518d84c2, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
       }
     ],
     "screenshot": {
@@ -465,12 +464,12 @@
     ]
   },
   "score": {
-    "overall": 63,
+    "overall": 64,
     "security": 80,
     "accessibility": 54,
     "content": 46,
     "gigw": 32,
-    "performance": 81,
+    "performance": 86,
     "identity": 100
   },
   "status": "needs-work",
@@ -483,7 +482,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "1 critical violation(s)"
+      "ev": "2 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -498,12 +497,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "24 serious violation(s)"
+      "ev": "52 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "13 low-contrast element(s)"
+      "ev": "28 low-contrast element(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -529,12 +528,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "12132.347ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "4.8MB"
+      "ev": "11340.868999999997ms"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -549,7 +543,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "56 console error(s): Unrecognized Content-Security-Policy directive 'base-url'."
+      "ev": "41 console error(s): Unrecognized Content-Security-Policy directive 'base-url'."
     },
     {
       "id": "gigw.feedback",
@@ -590,10 +584,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://connect.facebook.net/en_US/all.js?hash=8e5804bf2d7bbee94151944d7b1595c4, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
+      "ev": "https://connect.facebook.net/en_US/all.js?hash=83559134a5f7722f7fb6c102518d84c2, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-16",
+      "up": true,
+      "score": 64
+    },
     {
       "d": "2026-11-15",
       "up": true,
@@ -870,5 +869,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

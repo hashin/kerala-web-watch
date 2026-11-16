@@ -29,13 +29,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-15T01:31:08.447Z",
-    "run": "1794706198650",
+    "at": "2026-11-16T01:41:10.008Z",
+    "run": "1794793202074",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 21,
+      "accessibility": 77,
+      "best_practices": 92,
+      "seo": 85
+    },
     "axe": {
       "critical": 11,
-      "serious": 25,
+      "serious": 24,
       "moderate": 2,
       "minor": 1
     },
@@ -164,7 +169,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "25 serious violation(s)"
+        "ev": "24 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -204,19 +209,23 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "77/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "21/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "23495.957999999995ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.65"
       },
       {
         "id": "perf.weight",
@@ -229,11 +238,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -517,12 +526,12 @@
     ]
   },
   "score": {
-    "overall": 53,
+    "overall": 51,
     "security": 42,
     "accessibility": 50,
     "content": 48,
     "gigw": 32,
-    "performance": 90,
+    "performance": 72,
     "identity": 91
   },
   "status": "needs-work",
@@ -559,7 +568,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "25 serious violation(s)"
+      "ev": "24 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -581,6 +590,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "23495.957999999995ms"
     },
     {
       "id": "perf.weight",
@@ -658,6 +672,15 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.65"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -672,6 +695,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-16",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-11-15",
       "up": true,
@@ -948,5 +976,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

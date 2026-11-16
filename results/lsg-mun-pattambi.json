@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-28T00:58:56.904Z",
-    "run": "1793149085130",
+    "at": "2026-11-16T01:31:13.933Z",
+    "run": "1794792630628",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 57,
+      "performance": 58,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 85
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "57/100"
+        "ev": "58/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "31919.082000000024ms"
+        "ev": "51877.44199999998ms"
       },
       {
         "id": "perf.cls",
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://lsgkerala.gov.in/en/lbelection/electdistrict/2020/3)"
       },
       {
         "id": "content.broken_pdfs",
@@ -556,10 +557,10 @@
     ]
   },
   "score": {
-    "overall": 68,
+    "overall": 66,
     "security": 76,
     "accessibility": 70,
-    "content": 56,
+    "content": 46,
     "gigw": 36,
     "performance": 76,
     "identity": 96
@@ -580,6 +581,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://lsgkerala.gov.in/en/lbelection/electdistrict/2020/3)"
     },
     {
       "id": "a11y.axe_serious",
@@ -610,7 +616,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "31919.082000000024ms"
+      "ev": "51877.44199999998ms"
     },
     {
       "id": "perf.weight",
@@ -675,6 +681,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-16",
+      "up": true,
+      "score": 66
+    },
     {
       "d": "2026-11-15",
       "up": true,
@@ -946,5 +957,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

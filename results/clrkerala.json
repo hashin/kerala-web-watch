@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-15T01:25:54.473Z",
-    "run": "1794705837242",
+    "at": "2026-11-16T01:25:54.247Z",
+    "run": "1794792265103",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 31,
+      "performance": 55,
       "accessibility": 82,
       "best_practices": 88,
       "seo": 92
@@ -121,7 +121,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "28 days left"
+        "ev": "27 days left"
       },
       {
         "id": "sec.tls_version",
@@ -129,7 +129,7 @@
       },
       {
         "id": "sec.hsts",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.mixed_content",
@@ -146,11 +146,11 @@
       },
       {
         "id": "sec.xcto",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.referrer",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.server_banner",
@@ -222,22 +222,21 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "31/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "21694.114000000005ms"
+        "ev": "8900.364000000001ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.91"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "96.7MB"
+        "ev": "48.5MB"
       },
       {
         "id": "perf.viewport",
@@ -292,7 +291,7 @@
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "2 broken image(s)"
+        "ev": "1 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -313,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "55 console error(s): Failed to load resource: the server responded with a status of 503 (Service Temporarily Unavailable)"
+        "ev": "37 console error(s): Failed to load resource: the server responded with a status of 503 (Service Temporarily Unavailable)"
       },
       {
         "id": "gigw.contact",
@@ -425,7 +424,7 @@
     "screenshot": {
       "desktop": "clrkerala.webp",
       "mobile": "clrkerala-m.webp",
-      "phash": "077f3fbe06326060"
+      "phash": "ffffce4c04040602"
     },
     "outlinks": [
       {
@@ -448,7 +447,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "28 days left"
+      "ev": "27 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -469,6 +468,10 @@
       "id": "content.broken_links",
       "sev": "H",
       "ev": "28/30 crawled link(s) broken (https://clr.kerala.gov.in/eng, https://clr.kerala.gov.in/, https://clr.kerala.gov.in/index.php, ...)"
+    },
+    {
+      "id": "sec.hsts",
+      "sev": "M"
     },
     {
       "id": "sec.xfo",
@@ -500,15 +503,23 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "21694.114000000005ms"
+      "ev": "8900.364000000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "96.7MB"
+      "ev": "48.5MB"
     },
     {
       "id": "sec.csp",
+      "sev": "L"
+    },
+    {
+      "id": "sec.xcto",
+      "sev": "L"
+    },
+    {
+      "id": "sec.referrer",
       "sev": "L"
     },
     {
@@ -524,12 +535,12 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "2 broken image(s)"
+      "ev": "1 broken image(s)"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "55 console error(s): Failed to load resource: the server responded with a status of 503 (Service Temporarily Unavailable)"
+      "ev": "37 console error(s): Failed to load resource: the server responded with a status of 503 (Service Temporarily Unavailable)"
     },
     {
       "id": "gigw.feedback",
@@ -556,11 +567,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.91"
-    },
-    {
       "id": "id.robots",
       "sev": "L",
       "ev": "robots.txt returned 503"
@@ -576,6 +582,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-16",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-15",
       "up": false,
@@ -852,5 +863,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,10 +37,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-15T01:16:17.858Z",
-    "run": "1794705267085",
+    "at": "2026-11-16T01:21:51.449Z",
+    "run": "1794792017267",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 58,
+      "accessibility": 70,
+      "best_practices": 88,
+      "seo": 77
+    },
     "axe": {
       "critical": 20,
       "serious": 16,
@@ -50,7 +55,7 @@
     "crawl": {
       "pages": 28,
       "pdfs": 6,
-      "broken": 3
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -117,7 +122,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "12 days left"
+        "ev": "11 days left"
       },
       {
         "id": "sec.tls_version",
@@ -213,19 +218,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "70/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "58/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "6614.772ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -237,11 +245,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -276,7 +284,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "3/28 crawled link(s) broken (https://survey.entebhoomi.kerala.gov.in/portal/home/?lang=ml, https://survey.entebhoomi.kerala.gov.in/portal/purchase/, https://services.kerala.gov.in/)"
+        "ev": "1/28 crawled link(s) broken (https://services.kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -475,12 +483,12 @@
     ]
   },
   "score": {
-    "overall": 48,
+    "overall": 46,
     "security": 70,
     "accessibility": 20,
     "content": 42,
     "gigw": 0,
-    "performance": 100,
+    "performance": 76,
     "identity": 96
   },
   "status": "poor",
@@ -492,7 +500,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "12 days left"
+      "ev": "11 days left"
     },
     {
       "id": "a11y.axe_critical",
@@ -517,7 +525,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "3/28 crawled link(s) broken (https://survey.entebhoomi.kerala.gov.in/portal/home/?lang=ml, https://survey.entebhoomi.kerala.gov.in/portal/purchase/, https://services.kerala.gov.in/)"
+      "ev": "1/28 crawled link(s) broken (https://services.kerala.gov.in/)"
     },
     {
       "id": "gigw.contact",
@@ -556,6 +564,15 @@
     },
     {
       "id": "gigw.last_updated",
+      "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "6614.772ms"
+    },
+    {
+      "id": "perf.tap_targets",
       "sev": "M"
     },
     {
@@ -607,6 +624,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.soft_404",
       "sev": "L",
       "ev": "a nonexistent path returned 200"
@@ -617,6 +638,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-16",
+      "up": true,
+      "score": 46
+    },
     {
       "d": "2026-11-15",
       "up": true,
@@ -893,5 +919,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

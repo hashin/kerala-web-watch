@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-15T01:24:30.084Z",
-    "run": "1794705806386",
+    "at": "2026-11-16T01:31:03.731Z",
+    "run": "1794792599462",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 31,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4731ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -226,12 +227,12 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9749.891000000001ms"
+        "ev": "10902.903999999999ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "1.10"
+        "ev": "1.07"
       },
       {
         "id": "perf.weight",
@@ -511,6 +512,11 @@
       "ev": "1/30 crawled link(s) broken (https://www.portal.ksotto.kerala.gov.in/)"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "4731ms"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
       "ev": "32 serious violation(s)"
@@ -548,7 +554,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9749.891000000001ms"
+      "ev": "10902.903999999999ms"
     },
     {
       "id": "perf.weight",
@@ -618,7 +624,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "1.10"
+      "ev": "1.07"
     },
     {
       "id": "perf.images",
@@ -630,6 +636,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-16",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-11-15",
       "up": true,
@@ -911,5 +922,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

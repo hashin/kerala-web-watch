@@ -35,15 +35,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-15T01:17:46.122Z",
-    "run": "1794705314883",
+    "at": "2026-11-16T01:22:22.325Z",
+    "run": "1794792067240",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 38,
-      "accessibility": 92,
-      "best_practices": 96,
-      "seo": 92
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 0,
       "serious": 11,
@@ -53,7 +48,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 5
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -214,22 +209,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "92/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "38/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "35497.948500000006ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -242,11 +234,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -280,8 +272,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "5/30 crawled link(s) broken (https://keralapolice.gov.in/, https://keralapolice.gov.in/login, https://keralapolice.gov.in/#, ...)"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://keralapolice.gov.in/sitemap)"
       },
       {
         "id": "content.broken_pdfs",
@@ -310,7 +302,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "21 console error(s): Loading the image 'https://www.googletagmanager.com/td?id=G-FXT3GHQP8K&v=3&t=t&pid=1538574576&gtm=45je6bb1v885427936za200zb9103792061zd9103792061xf1&seq=1&exp=100940090~115938465~115938468~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121246026~121246034&dl=keralapolice.gov.in%2F&tdp=G-FXT3GHQP8K;85427936;0;2;0&frm=0&rtg=103792061&slo=9&hlo=4&lst=1&pcid=103792061&bt=0&ct=3&z=0' violates the following Content Security Policy directive: \"img-src 'self' data:\". The action has been blocked."
+        "ev": "20 console error(s): Failed to load resource: the server responded with a status of 400 ()"
       },
       {
         "id": "gigw.contact",
@@ -422,7 +414,7 @@
     "screenshot": {
       "desktop": "keralapolice.webp",
       "mobile": "keralapolice-m.webp",
-      "phash": "ffff2c300080b03f"
+      "phash": "fffffd8000f48017"
     },
     "outlinks": [
       {
@@ -581,12 +573,12 @@
     ]
   },
   "score": {
-    "overall": 53,
+    "overall": 57,
     "security": 50,
     "accessibility": 60,
-    "content": 36,
+    "content": 46,
     "gigw": 26,
-    "performance": 66,
+    "performance": 90,
     "identity": 96
   },
   "status": "needs-work",
@@ -619,7 +611,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "5/30 crawled link(s) broken (https://keralapolice.gov.in/, https://keralapolice.gov.in/login, https://keralapolice.gov.in/#, ...)"
+      "ev": "1/30 crawled link(s) broken (https://keralapolice.gov.in/sitemap)"
     },
     {
       "id": "gigw.contact",
@@ -647,18 +639,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "35497.948500000006ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "9.7MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -678,7 +661,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "21 console error(s): Loading the image 'https://www.googletagmanager.com/td?id=G-FXT3GHQP8K&v=3&t=t&pid=1538574576&gtm=45je6bb1v885427936za200zb9103792061zd9103792061xf1&seq=1&exp=100940090~115938465~115938468~118897920~118897930~120213116~120385423~120412528~120420416~120469145~120469153~121246026~121246034&dl=keralapolice.gov.in%2F&tdp=G-FXT3GHQP8K;85427936;0;2;0&frm=0&rtg=103792061&slo=9&hlo=4&lst=1&pcid=103792061&bt=0&ct=3&z=0' violates the following Content Security Policy directive: \"img-src 'self' data:\". The action has been blocked."
+      "ev": "20 console error(s): Failed to load resource: the server responded with a status of 400 ()"
     },
     {
       "id": "gigw.terms",
@@ -705,10 +688,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
@@ -724,6 +703,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-16",
+      "up": true,
+      "score": 57
+    },
     {
       "d": "2026-11-15",
       "up": true,
@@ -1005,5 +989,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
