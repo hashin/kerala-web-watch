@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-16T01:41:07.475Z",
-    "run": "1794793256683",
+    "at": "2026-11-17T04:29:51.493Z",
+    "run": "1794889770679",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 65,
-      "accessibility": 92,
-      "best_practices": 77,
-      "seo": 82
+      "performance": 82,
+      "accessibility": 81,
+      "best_practices": 81,
+      "seo": 75
     },
     "axe": {
       "critical": 0,
-      "serious": 3,
-      "moderate": 3,
-      "minor": 1
+      "serious": 20,
+      "moderate": 37,
+      "minor": 0
     },
     "crawl": {
-      "pages": 2,
+      "pages": 15,
       "pdfs": 0,
-      "broken": 2
+      "broken": 9
     },
     "tech": {
       "cms": "WordPress 7.1.4",
@@ -174,12 +174,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "3 serious violation(s)"
+        "ev": "20 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "4 moderate/minor violation(s)"
+        "ev": "37 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -192,7 +192,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "3 low-contrast element(s)"
+        "ev": "8 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -213,17 +213,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "92/100"
+        "ev": "81/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "65/100"
+        "ev": "82/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "5846.719999999999ms"
+        "ev": "4365.234000000001ms"
       },
       {
         "id": "perf.cls",
@@ -243,7 +243,7 @@
       },
       {
         "id": "perf.images",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -277,7 +277,7 @@
       {
         "id": "content.broken_links",
         "r": "fail",
-        "ev": "2/2 crawled link(s) broken (https://gptckottayam.in/#content, https://gptckottayam.in/)"
+        "ev": "9/15 crawled link(s) broken (https://gptckottayam.in/#content, https://gptckottayam.in/, https://gptckottayam.in/hockey-asian-games-gold-2026/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -301,7 +301,7 @@
       },
       {
         "id": "content.favicon",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.console_errors",
@@ -419,7 +419,7 @@
     "screenshot": {
       "desktop": "govt-polytechnic-college-kottayam.webp",
       "mobile": "govt-polytechnic-college-kottayam-m.webp",
-      "phash": "3f3f9f00ffffffff"
+      "phash": "ff81000001ffffff"
     },
     "outlinks": [
       {
@@ -454,7 +454,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "2/2 crawled link(s) broken (https://gptckottayam.in/#content, https://gptckottayam.in/)"
+      "ev": "9/15 crawled link(s) broken (https://gptckottayam.in/#content, https://gptckottayam.in/, https://gptckottayam.in/hockey-asian-games-gold-2026/, ...)"
     },
     {
       "id": "gigw.contact",
@@ -480,12 +480,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "3 serious violation(s)"
+      "ev": "20 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "3 low-contrast element(s)"
+      "ev": "8 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -510,7 +510,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "5846.719999999999ms"
+      "ev": "4365.234000000001ms"
     },
     {
       "id": "sec.xcto",
@@ -528,14 +528,10 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "4 moderate/minor violation(s)"
+      "ev": "37 moderate/minor violation(s)"
     },
     {
       "id": "content.meta_desc",
-      "sev": "L"
-    },
-    {
-      "id": "content.favicon",
       "sev": "L"
     },
     {
@@ -568,6 +564,10 @@
     },
     {
       "id": "gigw.search",
+      "sev": "L"
+    },
+    {
+      "id": "perf.images",
       "sev": "L"
     },
     {
@@ -865,5 +865,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

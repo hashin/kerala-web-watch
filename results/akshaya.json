@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-15T01:13:21.411Z",
-    "run": "1794705156177",
+    "at": "2026-11-17T04:07:09.258Z",
+    "run": "1794888383144",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 21,
+      "performance": 19,
       "accessibility": 87,
       "best_practices": 92,
       "seo": 75
     },
     "axe": {
       "critical": 4,
-      "serious": 22,
+      "serious": 20,
       "moderate": 5,
       "minor": 0
     },
@@ -131,8 +131,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://www.instagram.com\""
+        "r": "pass"
       },
       {
         "id": "sec.csp",
@@ -174,7 +173,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "22 serious violation(s)"
+        "ev": "20 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -192,7 +191,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "4 low-contrast element(s)"
+        "ev": "2 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -219,22 +218,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "21/100"
+        "ev": "19/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "21741.295999999995ms"
+        "ev": "27844.266000000003ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.56"
+        "ev": "0.70"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "13.6MB"
+        "ev": "10.1MB"
       },
       {
         "id": "perf.viewport",
@@ -464,8 +463,8 @@
     ]
   },
   "score": {
-    "overall": 54,
-    "security": 48,
+    "overall": 59,
+    "security": 68,
     "accessibility": 52,
     "content": 60,
     "gigw": 24,
@@ -474,11 +473,6 @@
   },
   "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://www.instagram.com\""
-    },
     {
       "id": "a11y.axe_critical",
       "sev": "H",
@@ -509,12 +503,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "22 serious violation(s)"
+      "ev": "20 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "4 low-contrast element(s)"
+      "ev": "2 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -535,12 +529,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "21741.295999999995ms"
+      "ev": "27844.266000000003ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "13.6MB"
+      "ev": "10.1MB"
     },
     {
       "id": "sec.csp",
@@ -583,7 +577,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.56"
+      "ev": "0.70"
     },
     {
       "id": "perf.images",
@@ -607,7 +601,7 @@
     {
       "d": "2026-11-17",
       "up": true,
-      "score": 54
+      "score": 59
     },
     {
       "d": "2026-11-16",
@@ -885,5 +879,5 @@
       "score": 49
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

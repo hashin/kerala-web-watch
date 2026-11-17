@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-15T01:14:26.672Z",
-    "run": "1794705224939",
+    "at": "2026-11-17T04:09:47.756Z",
+    "run": "1794888546721",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 61,
@@ -119,8 +119,7 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "fail",
-        "ev": "1 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -186,7 +185,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 55% Malayalam content"
+        "ev": "<html lang=\"en\"> vs. 53% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -228,7 +227,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "20542.423000000003ms"
+        "ev": "19946.25ms"
       },
       {
         "id": "perf.cls",
@@ -466,21 +465,16 @@
     ]
   },
   "score": {
-    "overall": 47,
-    "security": 40,
+    "overall": 52,
+    "security": 60,
     "accessibility": 22,
     "content": 62,
     "gigw": 36,
     "performance": 71,
     "identity": 96
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "1 days left"
-    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -499,7 +493,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 55% Malayalam content"
+      "ev": "<html lang=\"en\"> vs. 53% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -545,7 +539,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "20542.423000000003ms"
+      "ev": "19946.25ms"
     },
     {
       "id": "perf.weight",
@@ -617,7 +611,7 @@
     {
       "d": "2026-11-17",
       "up": true,
-      "score": 47
+      "score": 52
     },
     {
       "d": "2026-11-16",
@@ -895,5 +889,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

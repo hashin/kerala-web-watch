@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-16T01:36:51.496Z",
-    "run": "1794792951317",
+    "at": "2026-11-17T04:22:36.156Z",
+    "run": "1794889300987",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 36,
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3117ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -226,7 +225,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "15617.183ms"
+        "ev": "12895.915999999994ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +234,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3.0MB"
       },
       {
         "id": "perf.viewport",
@@ -268,7 +268,8 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "pass"
+        "r": "fail",
+        "ev": "ml-box"
       },
       {
         "id": "content.obsolete_tech",
@@ -479,12 +480,12 @@
     ]
   },
   "score": {
-    "overall": 60,
+    "overall": 56,
     "security": 62,
     "accessibility": 50,
-    "content": 68,
+    "content": 48,
     "gigw": 22,
-    "performance": 82,
+    "performance": 77,
     "identity": 100
   },
   "status": "needs-work",
@@ -505,9 +506,9 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3117ms"
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-box"
     },
     {
       "id": "sec.hsts",
@@ -546,7 +547,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "15617.183ms"
+      "ev": "12895.915999999994ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "3.0MB"
     },
     {
       "id": "sec.xcto",
@@ -631,7 +637,7 @@
     {
       "d": "2026-11-17",
       "up": true,
-      "score": 60
+      "score": 56
     },
     {
       "d": "2026-11-16",
@@ -919,5 +925,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

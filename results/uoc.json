@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-16T01:24:25.101Z",
-    "run": "1794792192453",
+    "at": "2026-11-17T04:20:08.170Z",
+    "run": "1794889137550",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 31,
-      "accessibility": 74,
+      "performance": 32,
+      "accessibility": 62,
       "best_practices": 88,
       "seo": 92
     },
     "axe": {
-      "critical": 12,
-      "serious": 27,
+      "critical": 11,
+      "serious": 26,
       "moderate": 65,
       "minor": 1
     },
     "crawl": {
       "pages": 30,
       "pdfs": 20,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -171,12 +171,12 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "12 critical violation(s)"
+        "ev": "11 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "27 serious violation(s)"
+        "ev": "26 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -190,7 +190,7 @@
       {
         "id": "a11y.alt",
         "r": "fail",
-        "ev": "11 image(s) missing alt text"
+        "ev": "10 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
@@ -212,33 +212,32 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "warn",
-        "ev": "tabindex=\"-1\" alongside outline:none"
+        "r": "pass"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "74/100"
+        "ev": "62/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "31/100"
+        "ev": "32/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "17568.961ms"
+        "ev": "16608.577ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.78"
+        "ev": "0.83"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "5.9MB"
+        "ev": "5.6MB"
       },
       {
         "id": "perf.viewport",
@@ -284,8 +283,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://cdoe.uoc.ac.in/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -426,7 +424,7 @@
     "screenshot": {
       "desktop": "uoc.webp",
       "mobile": "uoc-m.webp",
-      "phash": "007e7e7e7e464200"
+      "phash": "00003c0808ffffff"
     },
     "outlinks": [
       {
@@ -481,10 +479,10 @@
     ]
   },
   "score": {
-    "overall": 43,
+    "overall": 45,
     "security": 24,
-    "accessibility": 40,
-    "content": 56,
+    "accessibility": 42,
+    "content": 66,
     "gigw": 22,
     "performance": 67,
     "identity": 88
@@ -504,17 +502,12 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "12 critical violation(s)"
+      "ev": "11 critical violation(s)"
     },
     {
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://cdoe.uoc.ac.in/)"
     },
     {
       "id": "sec.hsts",
@@ -527,12 +520,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "27 serious violation(s)"
+      "ev": "26 serious violation(s)"
     },
     {
       "id": "a11y.alt",
       "sev": "M",
-      "ev": "11 image(s) missing alt text"
+      "ev": "10 image(s) missing alt text"
     },
     {
       "id": "a11y.labels",
@@ -567,12 +560,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "17568.961ms"
+      "ev": "16608.577ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "5.9MB"
+      "ev": "5.6MB"
     },
     {
       "id": "perf.tap_targets",
@@ -604,11 +597,6 @@
       "id": "a11y.headings",
       "sev": "L",
       "ev": "heading levels skipped"
-    },
-    {
-      "id": "a11y.keyboard",
-      "sev": "L",
-      "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
       "id": "content.console_errors",
@@ -646,7 +634,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.78"
+      "ev": "0.83"
     },
     {
       "id": "perf.images",
@@ -679,7 +667,7 @@
     {
       "d": "2026-11-17",
       "up": true,
-      "score": 43
+      "score": 45
     },
     {
       "d": "2026-11-16",
@@ -957,5 +945,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

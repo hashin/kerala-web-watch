@@ -35,15 +35,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-16T01:35:56.273Z",
-    "run": "1794792921499",
+    "at": "2026-11-17T04:25:17.560Z",
+    "run": "1794889485023",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 49,
-      "accessibility": 95,
-      "best_practices": 92,
-      "seo": 92
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 2,
       "serious": 13,
@@ -120,7 +115,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "14 days left"
+        "ev": "13 days left"
       },
       {
         "id": "sec.tls_version",
@@ -216,22 +211,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "95/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "49/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "7877.853ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -243,11 +235,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -449,12 +441,12 @@
     ]
   },
   "score": {
-    "overall": 55,
+    "overall": 56,
     "security": 60,
     "accessibility": 40,
     "content": 50,
     "gigw": 28,
-    "performance": 86,
+    "performance": 100,
     "identity": 92
   },
   "status": "needs-work",
@@ -462,7 +454,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "14 days left"
+      "ev": "13 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -525,11 +517,6 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "7877.853ms"
-    },
-    {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
       "ev": "3 moderate/minor violation(s)"
@@ -577,10 +564,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -602,7 +585,7 @@
     {
       "d": "2026-11-17",
       "up": true,
-      "score": 55
+      "score": 56
     },
     {
       "d": "2026-11-16",
@@ -885,5 +868,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

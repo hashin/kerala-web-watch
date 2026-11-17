@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-15T01:28:32.132Z",
-    "run": "1794705943436",
+    "at": "2026-11-17T04:23:35.839Z",
+    "run": "1794889195312",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 49,
+      "performance": 32,
       "accessibility": 87,
       "best_practices": 100,
       "seo": 85
@@ -57,25 +57,26 @@
     },
     "tech": {
       "cms": "WordPress 7.1.4",
-      "server": "Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30",
+      "server": null,
       "jquery": null
     },
     "checks": [
       {
         "id": "avail.dns",
-        "r": "pass"
+        "r": "fail",
+        "ev": "kufos.ac.in did not resolve"
       },
       {
         "id": "avail.connect",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.status",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.parked",
@@ -95,8 +96,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "5045ms"
+        "r": "na"
       },
       {
         "id": "avail.geo_blocked",
@@ -108,23 +108,23 @@
       },
       {
         "id": "sec.https",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.http_redirect",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.cert_valid",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.tls_version",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.hsts",
@@ -132,8 +132,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://admission.kufos.ac.in/\""
+        "r": "na"
       },
       {
         "id": "sec.csp",
@@ -221,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "49/100"
+        "ev": "32/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "33444.834ms"
+        "ev": "40640.16ms"
       },
       {
         "id": "perf.cls",
@@ -310,7 +309,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "2 console error(s): Access to XMLHttpRequest at 'https://fonts.googleapis.com/css2?family%3DMarcellus%26family%3DRufina%3Awght%40400%3B700%26family%3DCrimson%2BPro%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%26family%3DJost%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%26family%3DOutfit%3Awght%40300%3B400%3B500%3B600%3B700%3B800%26display%3Dswap&ver=1794705953' from origin 'https://kufos.ac.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "2 console error(s): Access to XMLHttpRequest at 'https://fonts.googleapis.com/css2?family%3DMarcellus%26family%3DRufina%3Awght%40400%3B700%26family%3DCrimson%2BPro%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%26family%3DJost%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%26family%3DOutfit%3Awght%40300%3B400%3B500%3B600%3B700%3B800%26display%3Dswap&ver=1794889206' from origin 'https://kufos.ac.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -533,21 +532,13 @@
       }
     ]
   },
-  "score": {
-    "overall": 51,
-    "security": 24,
-    "accessibility": 64,
-    "content": 52,
-    "gigw": 22,
-    "performance": 76,
-    "identity": 100
-  },
-  "status": "needs-work",
+  "score": null,
+  "status": "down",
   "issues": [
     {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://admission.kufos.ac.in/\""
+      "id": "avail.dns",
+      "sev": "C",
+      "ev": "kufos.ac.in did not resolve"
     },
     {
       "id": "sec.vuln_js",
@@ -568,11 +559,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "5045ms"
     },
     {
       "id": "sec.hsts",
@@ -610,7 +596,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "33444.834ms"
+      "ev": "40640.16ms"
     },
     {
       "id": "perf.weight",
@@ -651,7 +637,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "2 console error(s): Access to XMLHttpRequest at 'https://fonts.googleapis.com/css2?family%3DMarcellus%26family%3DRufina%3Awght%40400%3B700%26family%3DCrimson%2BPro%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%26family%3DJost%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%26family%3DOutfit%3Awght%40300%3B400%3B500%3B600%3B700%3B800%26display%3Dswap&ver=1794705953' from origin 'https://kufos.ac.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "2 console error(s): Access to XMLHttpRequest at 'https://fonts.googleapis.com/css2?family%3DMarcellus%26family%3DRufina%3Awght%40400%3B700%26family%3DCrimson%2BPro%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%26family%3DJost%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%26family%3DOutfit%3Awght%40300%3B400%3B500%3B600%3B700%3B800%26display%3Dswap&ver=1794889206' from origin 'https://kufos.ac.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -693,8 +679,8 @@
   "history": [
     {
       "d": "2026-11-17",
-      "up": true,
-      "score": 51
+      "up": false,
+      "score": null
     },
     {
       "d": "2026-11-16",
@@ -972,5 +958,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

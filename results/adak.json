@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-16T01:37:38.151Z",
-    "run": "1794792969046",
+    "at": "2026-11-17T04:27:55.674Z",
+    "run": "1794889581288",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 28,
       "accessibility": 77,
       "best_practices": 96,
       "seo": 83
@@ -219,21 +219,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "28/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "53527.596500000014ms"
+        "ev": "48433.16500000002ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.69"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "2241.2MB"
+        "ev": "3091.6MB"
       },
       {
         "id": "perf.viewport",
@@ -420,7 +421,7 @@
     "screenshot": {
       "desktop": "adak.webp",
       "mobile": "adak-m.webp",
-      "phash": "180000fffffeffed"
+      "phash": "000000fffefcf8f2"
     },
     "outlinks": [
       {
@@ -453,12 +454,12 @@
     ]
   },
   "score": {
-    "overall": 79,
+    "overall": 78,
     "security": 96,
     "accessibility": 72,
     "content": 56,
     "gigw": 76,
-    "performance": 76,
+    "performance": 72,
     "identity": 92
   },
   "status": "needs-work",
@@ -499,12 +500,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "53527.596500000014ms"
+      "ev": "48433.16500000002ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "2241.2MB"
+      "ev": "3091.6MB"
     },
     {
       "id": "sec.csp",
@@ -527,6 +528,11 @@
     {
       "id": "gigw.feedback",
       "sev": "L"
+    },
+    {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.69"
     },
     {
       "id": "perf.images",
@@ -555,7 +561,7 @@
     {
       "d": "2026-11-17",
       "up": true,
-      "score": 79
+      "score": 78
     },
     {
       "d": "2026-11-16",
@@ -838,5 +844,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

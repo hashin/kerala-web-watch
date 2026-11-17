@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-16T01:23:53.301Z",
-    "run": "1794792191329",
+    "at": "2026-11-17T04:10:33.556Z",
+    "run": "1794888587757",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 64,
+      "performance": 38,
       "accessibility": 75,
       "best_practices": 88,
       "seo": 69
     },
     "axe": {
       "critical": 6,
-      "serious": 25,
+      "serious": 26,
       "moderate": 17,
       "minor": 0
     },
@@ -174,7 +174,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "25 serious violation(s)"
+        "ev": "26 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -221,21 +221,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "64/100"
+        "ev": "38/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "47416.08600000001ms"
+        "ev": "45048.33849999997ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.53"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "14.2MB"
+        "ev": "14.4MB"
       },
       {
         "id": "perf.viewport",
@@ -450,7 +451,7 @@
     "accessibility": 40,
     "content": 42,
     "gigw": 36,
-    "performance": 66,
+    "performance": 62,
     "identity": 80
   },
   "status": "poor",
@@ -491,7 +492,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "25 serious violation(s)"
+      "ev": "26 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -527,12 +528,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "47416.08600000001ms"
+      "ev": "45048.33849999997ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "14.2MB"
+      "ev": "14.4MB"
     },
     {
       "id": "perf.tap_targets",
@@ -597,6 +598,11 @@
     {
       "id": "gigw.help",
       "sev": "L"
+    },
+    {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.53"
     },
     {
       "id": "perf.images",
@@ -864,5 +870,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -29,11 +29,11 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-11-14T01:41:34.123Z",
-    "run": "1794620261568",
+    "at": "2026-11-17T04:11:50.976Z",
+    "run": "1794888462729",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 53,
+      "performance": 36,
       "accessibility": 81,
       "best_practices": 73,
       "seo": 62
@@ -89,8 +89,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "5644ms"
+        "r": "fail",
+        "ev": "8113ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -216,16 +216,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "53/100"
+        "ev": "36/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "17120.0715ms"
+        "ev": "18017.3ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.38"
       },
       {
         "id": "perf.weight",
@@ -304,8 +305,7 @@
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/fad7e4e9/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
@@ -450,9 +450,9 @@
     "overall": 48,
     "security": 46,
     "accessibility": 44,
-    "content": 52,
+    "content": 56,
     "gigw": 12,
-    "performance": 66,
+    "performance": 62,
     "identity": 91
   },
   "status": "poor",
@@ -489,7 +489,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "5644ms"
+      "ev": "8113ms"
     },
     {
       "id": "sec.hsts",
@@ -529,7 +529,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "17120.0715ms"
+      "ev": "18017.3ms"
     },
     {
       "id": "perf.weight",
@@ -564,11 +564,6 @@
       "sev": "L"
     },
     {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/fad7e4e9/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
-    },
-    {
       "id": "gigw.feedback",
       "sev": "L"
     },
@@ -595,6 +590,11 @@
     {
       "id": "gigw.help",
       "sev": "L"
+    },
+    {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.38"
     },
     {
       "id": "perf.images",
@@ -897,5 +897,5 @@
       "score": 45
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

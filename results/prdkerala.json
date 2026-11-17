@@ -35,24 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-16T01:41:10.008Z",
-    "run": "1794793202074",
+    "at": "2026-11-17T04:25:28.290Z",
+    "run": "1794889469449",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 21,
-      "accessibility": 77,
-      "best_practices": 92,
-      "seo": 85
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 11,
-      "serious": 24,
+      "serious": 25,
       "moderate": 2,
       "minor": 1
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 15,
+      "pdfs": 10,
       "broken": 0
     },
     "tech": {
@@ -175,7 +170,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "24 serious violation(s)"
+        "ev": "25 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -215,23 +210,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "77/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "21/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "23495.957999999995ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.65"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -244,11 +235,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -312,7 +303,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "25 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "26 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
       },
       {
         "id": "gigw.contact",
@@ -473,6 +464,13 @@
         ]
       },
       {
+        "host": "digilocker.gov.in",
+        "count": 1,
+        "texts": [
+          "results.digilocker.gov.in"
+        ]
+      },
+      {
         "host": "keralanews.gov.in",
         "count": 2,
         "texts": []
@@ -532,12 +530,12 @@
     ]
   },
   "score": {
-    "overall": 51,
+    "overall": 53,
     "security": 42,
     "accessibility": 50,
     "content": 48,
     "gigw": 32,
-    "performance": 72,
+    "performance": 90,
     "identity": 91
   },
   "status": "needs-work",
@@ -574,7 +572,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "24 serious violation(s)"
+      "ev": "25 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -596,11 +594,6 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "23495.957999999995ms"
     },
     {
       "id": "perf.weight",
@@ -647,7 +640,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "25 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "26 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
     },
     {
       "id": "gigw.feedback",
@@ -678,15 +671,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.65"
-    },
-    {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -704,7 +688,7 @@
     {
       "d": "2026-11-17",
       "up": true,
-      "score": 51
+      "score": 53
     },
     {
       "d": "2026-11-16",
@@ -987,5 +971,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

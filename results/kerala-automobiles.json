@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-16T01:22:25.791Z",
-    "run": "1794792111451",
+    "at": "2026-11-17T04:10:16.161Z",
+    "run": "1794888590310",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 71,
+      "performance": 57,
       "accessibility": 77,
       "best_practices": 69,
       "seo": 83
@@ -51,7 +51,7 @@
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
+      "pages": 1,
       "pdfs": 0,
       "broken": 0
     },
@@ -88,7 +88,7 @@
       {
         "id": "avail.blank",
         "r": "fail",
-        "ev": "0 visible characters"
+        "ev": "44 visible characters"
       },
       {
         "id": "avail.under_construction",
@@ -96,7 +96,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "5469ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -220,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "71/100"
+        "ev": "57/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "5079.159ms"
+        "ev": "7928.728000000001ms"
       },
       {
         "id": "perf.cls",
@@ -307,7 +308,8 @@
       },
       {
         "id": "content.console_errors",
-        "r": "pass"
+        "r": "fail",
+        "ev": "2 console error(s): Access to fetch at 'https://cdn.consentmanager.net/delivery/js/cmp_en.min.js' from origin 'https://keralaautomobilesltd.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -393,7 +395,7 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.soft_404",
@@ -431,7 +433,7 @@
     {
       "id": "avail.blank",
       "sev": "C",
-      "ev": "0 visible characters"
+      "ev": "44 visible characters"
     },
     {
       "id": "sec.http_redirect",
@@ -459,6 +461,11 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "keralaautomobilesltd.com"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "5469ms"
     },
     {
       "id": "sec.hsts",
@@ -511,7 +518,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "5079.159ms"
+      "ev": "7928.728000000001ms"
     },
     {
       "id": "sec.csp",
@@ -542,6 +549,11 @@
     {
       "id": "content.favicon",
       "sev": "L"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "2 console error(s): Access to fetch at 'https://cdn.consentmanager.net/delivery/js/cmp_en.min.js' from origin 'https://keralaautomobilesltd.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -849,5 +861,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

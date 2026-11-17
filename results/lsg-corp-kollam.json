@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-14T02:07:00.279Z",
-    "run": "1794621959953",
+    "at": "2026-11-17T04:20:00.479Z",
+    "run": "1794889132922",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 55,
+      "accessibility": 82,
+      "best_practices": 81,
+      "seo": 85
+    },
     "axe": {
       "critical": 0,
       "serious": 5,
@@ -48,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 2
     },
     "tech": {
       "cms": "Drupal 11",
@@ -208,19 +213,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "82/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "34569.397500000036ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -233,11 +241,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -272,7 +280,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://lsgkerala.gov.in/en/lbelection/electdistrict/2020/3)"
+        "ev": "2/30 crawled link(s) broken (https://lsgkerala.gov.in/en/lbelection/electdistrict/2020/3, https://plan.lsgkerala.gov.in/formulation/Public.aspx)"
       },
       {
         "id": "content.broken_pdfs",
@@ -563,7 +571,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://lsgkerala.gov.in/en/lbelection/electdistrict/2020/3)"
+      "ev": "2/30 crawled link(s) broken (https://lsgkerala.gov.in/en/lbelection/electdistrict/2020/3, https://plan.lsgkerala.gov.in/formulation/Public.aspx)"
     },
     {
       "id": "gigw.rti",
@@ -602,6 +610,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "34569.397500000036ms"
     },
     {
       "id": "perf.weight",
@@ -657,6 +670,10 @@
     },
     {
       "id": "gigw.screen_reader",
+      "sev": "L"
+    },
+    {
+      "id": "perf.images",
       "sev": "L"
     },
     {
@@ -947,5 +964,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

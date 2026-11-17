@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-10T04:09:56.237Z",
-    "run": "1794283743819",
+    "at": "2026-11-17T04:33:55.860Z",
+    "run": "1794889967785",
     "vantage": "gh-us",
     "lighthouse": null,
     "axe": {
@@ -48,7 +48,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 3,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -227,7 +227,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "22.0MB"
+        "ev": "43.8MB"
       },
       {
         "id": "perf.viewport",
@@ -278,8 +278,7 @@
       },
       {
         "id": "content.broken_pdfs",
-        "r": "fail",
-        "ev": "1 linked PDF(s) 404: https://kase.in/assets/admin/newsimages/attach/nattach_1889542170.pdf"
+        "r": "pass"
       },
       {
         "id": "content.broken_images",
@@ -304,7 +303,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "23 console error(s): Failed to load resource: net::ERR_CERT_COMMON_NAME_INVALID"
+        "ev": "30 console error(s): Cannot read properties of null (reading 'addEventListener')"
       },
       {
         "id": "gigw.contact",
@@ -449,10 +448,8 @@
       },
       {
         "host": "google.com",
-        "count": 2,
-        "texts": [
-          "Click Here"
-        ]
+        "count": 1,
+        "texts": []
       },
       {
         "host": "kerala.gov.in",
@@ -486,10 +483,10 @@
     ]
   },
   "score": {
-    "overall": 36,
+    "overall": 38,
     "security": 4,
     "accessibility": 52,
-    "content": 32,
+    "content": 42,
     "gigw": 12,
     "performance": 90,
     "identity": 68
@@ -558,11 +555,6 @@
       "ev": "<marquee"
     },
     {
-      "id": "content.broken_pdfs",
-      "sev": "M",
-      "ev": "1 linked PDF(s) 404: https://kase.in/assets/admin/newsimages/attach/nattach_1889542170.pdf"
-    },
-    {
       "id": "gigw.privacy",
       "sev": "M"
     },
@@ -581,7 +573,7 @@
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "22.0MB"
+      "ev": "43.8MB"
     },
     {
       "id": "sec.csp",
@@ -617,7 +609,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "23 console error(s): Failed to load resource: net::ERR_CERT_COMMON_NAME_INVALID"
+      "ev": "30 console error(s): Cannot read properties of null (reading 'addEventListener')"
     },
     {
       "id": "gigw.feedback",
@@ -674,7 +666,7 @@
     {
       "d": "2026-11-17",
       "up": true,
-      "score": 36
+      "score": 38
     },
     {
       "d": "2026-11-16",
@@ -952,5 +944,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
