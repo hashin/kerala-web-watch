@@ -2,23 +2,20 @@
   "id": "ksfe",
   "url": "https://www.ksfe.com",
   "light": {
-    "at": "2026-11-17T01:28:58.777Z",
-    "status_class": "ok",
+    "at": "2026-11-17T15:25:17.039Z",
+    "status_class": "http_403",
     "dns": true,
-    "status": 200,
-    "final_url": "https://ksfe.com/",
-    "redirects": [
-      "https://www.ksfe.com -> http://ksfe.com/",
-      "http://ksfe.com/ -> https://ksfe.com/"
-    ],
-    "ttfb_ms": 981,
-    "title": null,
-    "byte_size": 91958,
+    "status": 403,
+    "final_url": "https://www.ksfe.com",
+    "redirects": [],
+    "ttfb_ms": 1042,
+    "title": "403 Forbidden",
+    "byte_size": 118,
     "tls": {
       "valid": true,
       "protocol": "TLSv1.3",
       "expires": "May 28 00:21:05 2027 GMT",
-      "days_left": 192,
+      "days_left": 191,
       "issuer": "Amazon"
     },
     "headers": {
@@ -27,15 +24,15 @@
       "xfo": true,
       "xcto": true,
       "referrer": false,
-      "server": "nginx"
+      "server": "awselb/2.0"
     },
-    "content_hash": "461e4261ca3509d4ffb2e060fe916e1a06f2f47b71e683d3586563f9afb6d5c4",
-    "http_redirects_to_https": true,
+    "content_hash": "922d13df28f67c2eaf5aeaa49a684ef33a2bdb6e1bee77120e7072ed82de3980",
+    "http_redirects_to_https": false,
     "geo_block_suspect": false,
     "domain": "ksfe.com",
     "final_domain": "ksfe.com",
     "vantage": "gh-us",
-    "suspect": false
+    "suspect": true
   },
   "deep": {
     "at": "2026-11-17T04:14:06.938Z",
@@ -876,5 +873,5 @@
       "score": null
     }
   ],
-  "deep_bump": false
+  "deep_bump": true
 }
