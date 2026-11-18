@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-17T04:26:12.743Z",
-    "run": "1794889480148",
+    "at": "2026-11-18T03:25:44.296Z",
+    "run": "1794972280129",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 32,
+      "performance": 33,
       "accessibility": 78,
       "best_practices": 88,
       "seo": 62
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3406ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -222,22 +221,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "32/100"
+        "ev": "33/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "12337.175999999998ms"
+        "ev": "10852.480999999998ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.70"
+        "ev": "0.69"
       },
       {
         "id": "perf.weight",
-        "r": "fail",
-        "ev": "13.4MB"
+        "r": "warn",
+        "ev": "7.2MB"
       },
       {
         "id": "perf.viewport",
@@ -313,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "4 console error(s): Framing 'https://www.facebook.com/' violates the following Content Security Policy directive: \"frame-src 'self' https://www.google.com https://maps.google.com https://*.google.com https://www.youtube.com https://www.youtube-nocookie.com\". The request has been blocked.\n"
+        "ev": "2 console error(s): Framing 'https://www.facebook.com/' violates the following Content Security Policy directive: \"frame-src 'self' https://www.google.com https://maps.google.com https://*.google.com https://www.youtube.com https://www.youtube-nocookie.com\". The request has been blocked.\n"
       },
       {
         "id": "gigw.contact",
@@ -481,7 +480,7 @@
     "accessibility": 40,
     "content": 42,
     "gigw": 22,
-    "performance": 72,
+    "performance": 77,
     "identity": 100
   },
   "status": "needs-work",
@@ -510,11 +509,6 @@
       "id": "content.broken_links",
       "sev": "H",
       "ev": "1/30 crawled link(s) broken (https://www.portal.ksotto.kerala.gov.in/)"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3406ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -554,12 +548,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "12337.175999999998ms"
+      "ev": "10852.480999999998ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "13.4MB"
+      "ev": "7.2MB"
     },
     {
       "id": "sec.xcto",
@@ -591,7 +585,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "4 console error(s): Framing 'https://www.facebook.com/' violates the following Content Security Policy directive: \"frame-src 'self' https://www.google.com https://maps.google.com https://*.google.com https://www.youtube.com https://www.youtube-nocookie.com\". The request has been blocked.\n"
+      "ev": "2 console error(s): Framing 'https://www.facebook.com/' violates the following Content Security Policy directive: \"frame-src 'self' https://www.google.com https://maps.google.com https://*.google.com https://www.youtube.com https://www.youtube-nocookie.com\". The request has been blocked.\n"
     },
     {
       "id": "gigw.feedback",
@@ -624,7 +618,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.70"
+      "ev": "0.69"
     },
     {
       "id": "perf.images",
@@ -932,5 +926,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

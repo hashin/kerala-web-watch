@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-17T04:07:42.727Z",
-    "run": "1794888376104",
+    "at": "2026-11-18T03:05:13.809Z",
+    "run": "1794971054419",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 0,
@@ -51,12 +51,12 @@
       "minor": 0
     },
     "crawl": {
-      "pages": 21,
+      "pages": 22,
       "pdfs": 0,
-      "broken": 6
+      "broken": 7
     },
     "tech": {
-      "cms": "Drupal 11",
+      "cms": null,
       "server": "Apache",
       "jquery": null
     },
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "4539ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -282,7 +281,7 @@
       {
         "id": "content.broken_links",
         "r": "fail",
-        "ev": "6/21 crawled link(s) broken (https://keralacm.gov.in/6684, https://keralacm.gov.in/6700, https://keralacm.gov.in/6702, ...)"
+        "ev": "7/22 crawled link(s) broken (https://keralacm.gov.in/8455/, https://keralacm.gov.in/6684, https://keralacm.gov.in/6700, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -311,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "8 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+        "ev": "7 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
       },
       {
         "id": "gigw.contact",
@@ -411,8 +410,7 @@
       },
       {
         "id": "id.tech",
-        "r": "pass",
-        "ev": "Drupal 11"
+        "r": "pass"
       },
       {
         "id": "id.third_party",
@@ -497,7 +495,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "6/21 crawled link(s) broken (https://keralacm.gov.in/6684, https://keralacm.gov.in/6700, https://keralacm.gov.in/6702, ...)"
+      "ev": "7/22 crawled link(s) broken (https://keralacm.gov.in/8455/, https://keralacm.gov.in/6684, https://keralacm.gov.in/6700, ...)"
     },
     {
       "id": "gigw.contact",
@@ -506,11 +504,6 @@
     {
       "id": "gigw.rti",
       "sev": "H"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "4539ms"
     },
     {
       "id": "sec.hsts",
@@ -586,7 +579,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "8 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      "ev": "7 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
     },
     {
       "id": "gigw.feedback",
@@ -913,5 +906,5 @@
       "score": 48
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

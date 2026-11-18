@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-17T04:39:12.495Z",
-    "run": "1794890315971",
+    "at": "2026-11-18T03:43:53.177Z",
+    "run": "1794973396663",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 89,
+      "performance": 90,
       "accessibility": 63,
       "best_practices": 96,
       "seo": 82
@@ -111,7 +111,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.cert_valid",
@@ -219,7 +219,7 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "89/100"
+        "ev": "90/100"
       },
       {
         "id": "perf.lcp",
@@ -384,7 +384,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "id.robots",
@@ -449,16 +449,20 @@
     ]
   },
   "score": {
-    "overall": 50,
-    "security": 32,
+    "overall": 46,
+    "security": 12,
     "accessibility": 72,
     "content": 40,
     "gigw": 18,
     "performance": 86,
-    "identity": 68
+    "identity": 72
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
+    {
+      "id": "sec.http_redirect",
+      "sev": "H"
+    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -591,10 +595,6 @@
       "sev": "L"
     },
     {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
       "id": "id.robots",
       "sev": "L",
       "ev": "robots.txt returned 404"
@@ -617,7 +617,7 @@
     {
       "d": "2026-11-18",
       "up": true,
-      "score": 50
+      "score": 46
     },
     {
       "d": "2026-11-17",
@@ -900,5 +900,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

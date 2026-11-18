@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-17T04:09:10.105Z",
-    "run": "1794888494057",
+    "at": "2026-11-18T03:06:36.157Z",
+    "run": "1794971133455",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 51,
+      "accessibility": 75,
+      "best_practices": 92,
+      "seo": 73
+    },
     "axe": {
       "critical": 37,
       "serious": 34,
@@ -179,7 +184,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"\"> vs. 86% Malayalam content"
+        "ev": "<html lang=\"\"> vs. 88% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -210,19 +215,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "75/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "51/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "11165.707000000002ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -235,11 +243,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -461,12 +469,12 @@
     ]
   },
   "score": {
-    "overall": 45,
+    "overall": 43,
     "security": 66,
     "accessibility": 22,
     "content": 28,
     "gigw": 0,
-    "performance": 95,
+    "performance": 81,
     "identity": 88
   },
   "status": "poor",
@@ -484,7 +492,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"\"> vs. 86% Malayalam content"
+      "ev": "<html lang=\"\"> vs. 88% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -550,6 +558,11 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "11165.707000000002ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "3.8MB"
@@ -610,6 +623,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -636,7 +653,7 @@
     {
       "d": "2026-11-18",
       "up": true,
-      "score": 45
+      "score": 43
     },
     {
       "d": "2026-11-17",
@@ -919,5 +936,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-10T03:46:11.231Z",
-    "run": "1794282312806",
+    "at": "2026-11-18T03:11:00.143Z",
+    "run": "1794971414837",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 79,
+      "accessibility": 83,
+      "best_practices": 73,
+      "seo": 90
     },
     "axe": {
       "critical": 0,
@@ -185,7 +185,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en-US\"> vs. 100% Malayalam content"
+        "ev": "<html lang=\"en-US\"> vs. 102% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -216,20 +216,21 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "83/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "79/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "4032.429500000001ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -241,11 +242,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.copyright_year",
@@ -416,7 +417,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-BNB7HHKSYL&amp;cx=c&amp;gtm=4e6b61, https://www.googletagmanager.com/gtag/js?id=UA-130113507-1"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-BNB7HHKSYL&amp;cx=c&amp;gtm=4e6bg2, https://www.googletagmanager.com/gtag/js?id=UA-130113507-1"
       }
     ],
     "screenshot": {
@@ -440,7 +441,7 @@
     "accessibility": 52,
     "content": 28,
     "gigw": 2,
-    "performance": 86,
+    "performance": 90,
     "identity": 92
   },
   "status": "poor",
@@ -458,7 +459,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en-US\"> vs. 100% Malayalam content"
+      "ev": "<html lang=\"en-US\"> vs. 102% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -514,8 +515,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "4032.429500000001ms"
     },
     {
       "id": "sec.csp",
@@ -586,10 +588,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.robots",
       "sev": "L",
       "ev": "robots.txt returned 404"
@@ -610,7 +608,7 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-BNB7HHKSYL&amp;cx=c&amp;gtm=4e6b61, https://www.googletagmanager.com/gtag/js?id=UA-130113507-1"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-BNB7HHKSYL&amp;cx=c&amp;gtm=4e6bg2, https://www.googletagmanager.com/gtag/js?id=UA-130113507-1"
     }
   ],
   "history": [
@@ -900,5 +898,5 @@
       "score": 45
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

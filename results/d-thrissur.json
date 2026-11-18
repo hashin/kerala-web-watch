@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-31T01:00:20.126Z",
-    "run": "1793408350914",
+    "at": "2026-11-18T03:09:05.774Z",
+    "run": "1794971211730",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 53,
+      "performance": 43,
       "accessibility": 84,
       "best_practices": 69,
       "seo": 83
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 4
     },
     "tech": {
       "cms": null,
@@ -119,7 +119,8 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "warn",
+        "ev": "28 days left"
       },
       {
         "id": "sec.tls_version",
@@ -219,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "53/100"
+        "ev": "43/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "34063.617000000006ms"
+        "ev": "60342.5125ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +234,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "9.3MB"
+        "ev": "17.4MB"
       },
       {
         "id": "perf.viewport",
@@ -280,7 +281,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://thrissur.nic.in/en/registration/)"
+        "ev": "4/30 crawled link(s) broken (https://thrissur.nic.in/en/#SkipContent, https://thrissur.nic.in/, https://thrissur.nic.in/en/major-institutions/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -309,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "6 console error(s): Refused to apply style from 'https://thrissur.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+        "ev": "13 console error(s): Refused to apply style from 'https://thrissur.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       },
       {
         "id": "gigw.contact",
@@ -471,8 +472,8 @@
     ]
   },
   "score": {
-    "overall": 60,
-    "security": 48,
+    "overall": 57,
+    "security": 38,
     "accessibility": 60,
     "content": 42,
     "gigw": 60,
@@ -481,6 +482,11 @@
   },
   "status": "needs-work",
   "issues": [
+    {
+      "id": "sec.cert_expiry",
+      "sev": "H",
+      "ev": "28 days left"
+    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -504,7 +510,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://thrissur.nic.in/en/registration/)"
+      "ev": "4/30 crawled link(s) broken (https://thrissur.nic.in/en/#SkipContent, https://thrissur.nic.in/, https://thrissur.nic.in/en/major-institutions/, ...)"
     },
     {
       "id": "sec.hsts",
@@ -530,12 +536,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "34063.617000000006ms"
+      "ev": "60342.5125ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "9.3MB"
+      "ev": "17.4MB"
     },
     {
       "id": "sec.csp",
@@ -571,7 +577,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "6 console error(s): Refused to apply style from 'https://thrissur.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+      "ev": "13 console error(s): Refused to apply style from 'https://thrissur.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
     },
     {
       "id": "gigw.terms",
@@ -612,7 +618,7 @@
     {
       "d": "2026-11-18",
       "up": true,
-      "score": 60
+      "score": 57
     },
     {
       "d": "2026-11-17",
@@ -895,5 +901,5 @@
       "score": 63
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

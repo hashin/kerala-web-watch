@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-17T04:33:49.428Z",
-    "run": "1794889980842",
+    "at": "2026-11-18T03:33:42.489Z",
+    "run": "1794972775090",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 66,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3011ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -383,7 +384,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "35 days left"
+        "ev": "34 days left"
       },
       {
         "id": "id.www_consistency",
@@ -511,7 +512,12 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "35 days left"
+      "ev": "34 days left"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3011ms"
     },
     {
       "id": "sec.hsts",
@@ -927,5 +933,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,25 +37,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-17T04:18:57.549Z",
-    "run": "1794889029083",
+    "at": "2026-11-18T03:25:45.119Z",
+    "run": "1794972286477",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
+      "performance": 57,
       "accessibility": 74,
       "best_practices": 88,
       "seo": 83
     },
     "axe": {
       "critical": 0,
-      "serious": 20,
-      "moderate": 24,
+      "serious": 22,
+      "moderate": 25,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 1,
-      "broken": 2
+      "pdfs": 2,
+      "broken": 3
     },
     "tech": {
       "cms": null,
@@ -97,8 +97,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3172ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -177,12 +176,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "20 serious violation(s)"
+        "ev": "22 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "24 moderate/minor violation(s)"
+        "ev": "25 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -195,7 +194,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "9 low-contrast element(s)"
+        "ev": "10 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -223,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "57/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10534.942000000005ms"
+        "ev": "9824.217499999997ms"
       },
       {
         "id": "perf.cls",
@@ -237,7 +236,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "4.6MB"
+        "ev": "4.5MB"
       },
       {
         "id": "perf.viewport",
@@ -289,7 +288,7 @@
       {
         "id": "content.broken_pdfs",
         "r": "fail",
-        "ev": "1 linked PDF(s) 404: https://www.pwd.kerala.gov.in/IMF_website/NEW/Avenue_split-compressed.pdf"
+        "ev": "2 linked PDF(s) 404: https://www.pwd.kerala.gov.in/IMF_website/NEW/Avenue_split-compressed.pdf, https://www.pwd.kerala.gov.in/documents/NEWS_NOTIFICATIONS/166_1794820354.pdf"
       },
       {
         "id": "content.broken_images",
@@ -298,8 +297,7 @@
       },
       {
         "id": "content.malayalam",
-        "r": "fail",
-        "ev": "Malayalam ratio 0.00, no language toggle found"
+        "r": "pass"
       },
       {
         "id": "content.title",
@@ -495,15 +493,15 @@
     ]
   },
   "score": {
-    "overall": 57,
+    "overall": 58,
     "security": 40,
     "accessibility": 70,
-    "content": 28,
+    "content": 38,
     "gigw": 56,
     "performance": 71,
     "identity": 96
   },
-  "status": "down",
+  "status": "needs-work",
   "issues": [
     {
       "id": "sec.http_redirect",
@@ -530,19 +528,14 @@
       "ev": "1/30 crawled link(s) broken (https://thottariyaampwd.kerala.gov.in/pms/home/project/projects?projectStatusId=2)"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3172ms"
-    },
-    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "20 serious violation(s)"
+      "ev": "22 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "9 low-contrast element(s)"
+      "ev": "10 low-contrast element(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -552,12 +545,7 @@
     {
       "id": "content.broken_pdfs",
       "sev": "M",
-      "ev": "1 linked PDF(s) 404: https://www.pwd.kerala.gov.in/IMF_website/NEW/Avenue_split-compressed.pdf"
-    },
-    {
-      "id": "content.malayalam",
-      "sev": "M",
-      "ev": "Malayalam ratio 0.00, no language toggle found"
+      "ev": "2 linked PDF(s) 404: https://www.pwd.kerala.gov.in/IMF_website/NEW/Avenue_split-compressed.pdf, https://www.pwd.kerala.gov.in/documents/NEWS_NOTIFICATIONS/166_1794820354.pdf"
     },
     {
       "id": "gigw.sitemap",
@@ -570,12 +558,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10534.942000000005ms"
+      "ev": "9824.217499999997ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "4.6MB"
+      "ev": "4.5MB"
     },
     {
       "id": "perf.tap_targets",
@@ -584,7 +572,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "24 moderate/minor violation(s)"
+      "ev": "25 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -651,8 +639,8 @@
   "history": [
     {
       "d": "2026-11-18",
-      "up": false,
-      "score": 57
+      "up": true,
+      "score": 58
     },
     {
       "d": "2026-11-17",
@@ -940,5 +928,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

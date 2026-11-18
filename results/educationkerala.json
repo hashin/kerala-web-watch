@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-17T04:12:34.062Z",
-    "run": "1794888626874",
+    "at": "2026-11-18T03:19:37.706Z",
+    "run": "1794971553172",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 45,
+      "performance": 49,
       "accessibility": 76,
       "best_practices": 100,
       "seo": 77
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 9,
-      "broken": 3
+      "broken": 18
     },
     "tech": {
       "cms": "WordPress 5.0.3",
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "5474ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -186,7 +185,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en-US\"> vs. 37% Malayalam content"
+        "ev": "<html lang=\"en-US\"> vs. 35% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -223,17 +222,16 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "45/100"
+        "ev": "49/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8653.36ms"
+        "ev": "8673.2765ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.27"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -283,8 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "3/30 crawled link(s) broken (http://archive.education.kerala.gov.in/, https://edumission.kerala.gov.in/, https://samanwaya.kite.kerala.gov.in/index.php/auth/login)"
+        "r": "fail",
+        "ev": "18/30 crawled link(s) broken (https://education.kerala.gov.in/vhse-2/, https://education.kerala.gov.in/dhse-2, https://education.kerala.gov.in/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -388,7 +386,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.robots",
@@ -396,12 +394,11 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 404"
+        "r": "na"
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.canonical",
@@ -482,10 +479,10 @@
     "overall": 43,
     "security": 38,
     "accessibility": 22,
-    "content": 46,
+    "content": 36,
     "gigw": 30,
-    "performance": 82,
-    "identity": 87
+    "performance": 86,
+    "identity": 95
   },
   "status": "poor",
   "issues": [
@@ -507,7 +504,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en-US\"> vs. 37% Malayalam content"
+      "ev": "<html lang=\"en-US\"> vs. 35% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -522,12 +519,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "3/30 crawled link(s) broken (http://archive.education.kerala.gov.in/, https://edumission.kerala.gov.in/, https://samanwaya.kite.kerala.gov.in/index.php/auth/login)"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "5474ms"
+      "ev": "18/30 crawled link(s) broken (https://education.kerala.gov.in/vhse-2/, https://education.kerala.gov.in/dhse-2, https://education.kerala.gov.in/, ...)"
     },
     {
       "id": "sec.hsts",
@@ -571,7 +563,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8653.36ms"
+      "ev": "8673.2765ms"
     },
     {
       "id": "id.tech",
@@ -625,22 +617,8 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.27"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
-    },
-    {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 404"
     }
   ],
   "history": [
@@ -930,5 +908,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

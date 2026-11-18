@@ -35,24 +35,24 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-16T01:23:12.452Z",
-    "run": "1794792150950",
+    "at": "2026-11-18T03:10:23.487Z",
+    "run": "1794971351088",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 75,
+      "performance": 65,
       "accessibility": 100,
       "best_practices": 92,
       "seo": 92
     },
     "axe": {
-      "critical": 3,
-      "serious": 12,
-      "moderate": 38,
+      "critical": 8,
+      "serious": 18,
+      "moderate": 57,
       "minor": 0
     },
     "crawl": {
-      "pages": 5,
-      "pdfs": 4,
+      "pages": 30,
+      "pdfs": 8,
       "broken": 0
     },
     "tech": {
@@ -131,7 +131,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "pass"
+        "r": "fail",
+        "ev": "href=\"http://ml.mgu.ac.in/\""
       },
       {
         "id": "sec.csp",
@@ -170,17 +171,17 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "3 critical violation(s)"
+        "ev": "8 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "12 serious violation(s)"
+        "ev": "18 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "38 moderate/minor violation(s)"
+        "ev": "57 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -220,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "75/100"
+        "ev": "65/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "4697.950000000001ms"
+        "ev": "5986.734000000001ms"
       },
       {
         "id": "perf.cls",
@@ -234,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "67.4MB"
+        "ev": "68.3MB"
       },
       {
         "id": "perf.viewport",
@@ -250,7 +251,7 @@
       },
       {
         "id": "content.copyright_year",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "content.last_updated",
@@ -311,11 +312,11 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "3 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+        "ev": "23 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.feedback",
@@ -323,7 +324,7 @@
       },
       {
         "id": "gigw.sitemap",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.privacy",
@@ -331,7 +332,7 @@
       },
       {
         "id": "gigw.terms",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.copyright_policy",
@@ -347,7 +348,7 @@
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.screen_reader",
@@ -359,11 +360,11 @@
       },
       {
         "id": "gigw.rti",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.search",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.ownership",
@@ -403,7 +404,7 @@
       },
       {
         "id": "id.canonical",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.charset_doctype",
@@ -415,7 +416,8 @@
       },
       {
         "id": "id.third_party",
-        "r": "pass"
+        "r": "warn",
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-WJMEB38L75&amp;cx=c&amp;gtm=4e6bg2, https://www.googletagmanager.com/gtag/js?id=UA-108617030-1"
       }
     ],
     "screenshot": {
@@ -423,22 +425,98 @@
       "mobile": "mgu-m.webp",
       "phash": "ff818181818187ff"
     },
-    "outlinks": []
+    "outlinks": [
+      {
+        "host": "ugc.ac.in",
+        "count": 1,
+        "texts": [
+          "e-Samadhaan"
+        ]
+      },
+      {
+        "host": "studyinindia.gov.in",
+        "count": 1,
+        "texts": [
+          "Study in India"
+        ]
+      },
+      {
+        "host": "mguaa.com",
+        "count": 1,
+        "texts": [
+          "Alumni"
+        ]
+      },
+      {
+        "host": "mgugreenlab.com",
+        "count": 1,
+        "texts": [
+          "MGU Green Lab"
+        ]
+      },
+      {
+        "host": "iqacmgu.org",
+        "count": 1,
+        "texts": [
+          "Faculty Portal"
+        ]
+      },
+      {
+        "host": "whatsapp.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "instagram.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "youtube.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "kerala.gov.in",
+        "count": 2,
+        "texts": [
+          "Higher Education Department",
+          "SOAFT"
+        ]
+      },
+      {
+        "host": "digitallocker.gov.in",
+        "count": 1,
+        "texts": [
+          "National Academic Depository"
+        ]
+      }
+    ]
   },
   "score": {
-    "overall": 49,
-    "security": 52,
+    "overall": 51,
+    "security": 32,
     "accessibility": 52,
     "content": 38,
-    "gigw": 0,
+    "gigw": 46,
     "performance": 76,
     "identity": 100
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
     {
       "id": "sec.http_redirect",
       "sev": "H"
+    },
+    {
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://ml.mgu.ac.in/\""
     },
     {
       "id": "sec.vuln_js",
@@ -448,7 +526,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "3 critical violation(s)"
+      "ev": "8 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -461,17 +539,9 @@
       "ev": "ml-"
     },
     {
-      "id": "gigw.contact",
-      "sev": "H"
-    },
-    {
-      "id": "gigw.rti",
-      "sev": "H"
-    },
-    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "12 serious violation(s)"
+      "ev": "18 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -484,15 +554,7 @@
       "ev": "<marquee"
     },
     {
-      "id": "gigw.sitemap",
-      "sev": "M"
-    },
-    {
       "id": "gigw.privacy",
-      "sev": "M"
-    },
-    {
-      "id": "gigw.accessibility_statement",
       "sev": "M"
     },
     {
@@ -506,12 +568,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "4697.950000000001ms"
+      "ev": "5986.734000000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "67.4MB"
+      "ev": "68.3MB"
     },
     {
       "id": "sec.csp",
@@ -525,7 +587,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "38 moderate/minor violation(s)"
+      "ev": "57 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -544,14 +606,10 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "3 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      "ev": "23 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
-      "sev": "L"
-    },
-    {
-      "id": "gigw.terms",
       "sev": "L"
     },
     {
@@ -575,10 +633,6 @@
       "sev": "L"
     },
     {
-      "id": "gigw.search",
-      "sev": "L"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -587,15 +641,16 @@
       "sev": "I"
     },
     {
-      "id": "id.canonical",
-      "sev": "I"
+      "id": "id.third_party",
+      "sev": "I",
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-WJMEB38L75&amp;cx=c&amp;gtm=4e6bg2, https://www.googletagmanager.com/gtag/js?id=UA-108617030-1"
     }
   ],
   "history": [
     {
       "d": "2026-11-18",
       "up": true,
-      "score": 49
+      "score": 51
     },
     {
       "d": "2026-11-17",
@@ -878,5 +933,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -38,15 +38,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-17T04:30:39.745Z",
-    "run": "1794889800502",
+    "at": "2026-11-18T03:27:28.708Z",
+    "run": "1794972415027",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 55,
-      "accessibility": 87,
-      "best_practices": 92,
-      "seo": 91
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 5,
       "serious": 44,
@@ -123,7 +118,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "26 days left"
+        "ev": "25 days left"
       },
       {
         "id": "sec.tls_version",
@@ -217,22 +212,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "87/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "55/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "20455.202ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -245,11 +237,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -430,12 +422,12 @@
     "outlinks": []
   },
   "score": {
-    "overall": 52,
+    "overall": 53,
     "security": 86,
     "accessibility": 32,
     "content": 32,
     "gigw": 2,
-    "performance": 81,
+    "performance": 95,
     "identity": 92
   },
   "status": "needs-work",
@@ -443,7 +435,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "26 days left"
+      "ev": "25 days left"
     },
     {
       "id": "a11y.axe_critical",
@@ -510,11 +502,6 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "20455.202ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "5.1MB"
@@ -570,10 +557,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.robots",
       "sev": "L",
       "ev": "robots.txt returned 404"
@@ -592,7 +575,7 @@
     {
       "d": "2026-11-18",
       "up": true,
-      "score": 52
+      "score": 53
     },
     {
       "d": "2026-11-17",
@@ -880,5 +863,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

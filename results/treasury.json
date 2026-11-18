@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-17T04:20:23.188Z",
-    "run": "1794889151205",
+    "at": "2026-11-18T03:16:55.032Z",
+    "run": "1794971722069",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 60,
+      "performance": 66,
       "accessibility": 48,
       "best_practices": 88,
       "seo": 82
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 14,
-      "broken": 2
+      "broken": 3
     },
     "tech": {
       "cms": null,
@@ -225,12 +225,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "60/100"
+        "ev": "66/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9035.175ms"
+        "ev": "5725.596000000001ms"
       },
       {
         "id": "perf.cls",
@@ -239,7 +239,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "3.4MB"
+        "ev": "3.2MB"
       },
       {
         "id": "perf.viewport",
@@ -287,7 +287,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "2/30 crawled link(s) broken (http://sics.kerala.gov.in/emli/main/frame.html, https://portal.treasury.kerala.gov.in/latestnews/MjM=)"
+        "ev": "3/30 crawled link(s) broken (http://sics.kerala.gov.in/emli/main/frame.html, https://portal.treasury.kerala.gov.in/latestnews/MjM=, https://portal.treasury.kerala.gov.in/view-person/NDE)"
       },
       {
         "id": "content.broken_pdfs",
@@ -499,7 +499,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "2/30 crawled link(s) broken (http://sics.kerala.gov.in/emli/main/frame.html, https://portal.treasury.kerala.gov.in/latestnews/MjM=)"
+      "ev": "3/30 crawled link(s) broken (http://sics.kerala.gov.in/emli/main/frame.html, https://portal.treasury.kerala.gov.in/latestnews/MjM=, https://portal.treasury.kerala.gov.in/view-person/NDE)"
     },
     {
       "id": "sec.xfo",
@@ -540,12 +540,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9035.175ms"
+      "ev": "5725.596000000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "3.4MB"
+      "ev": "3.2MB"
     },
     {
       "id": "perf.tap_targets",
@@ -922,5 +922,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

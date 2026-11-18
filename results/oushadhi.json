@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-17T04:21:25.388Z",
-    "run": "1794889242645",
+    "at": "2026-11-18T03:25:51.572Z",
+    "run": "1794972289102",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 43,
+      "performance": 36,
       "accessibility": 37,
       "best_practices": 77,
       "seo": 67
     },
     "axe": {
       "critical": 11,
-      "serious": 15,
+      "serious": 16,
       "moderate": 12,
       "minor": 4
     },
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -174,7 +174,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "15 serious violation(s)"
+        "ev": "16 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -193,7 +193,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "9 low-contrast element(s)"
+        "ev": "10 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -219,21 +219,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "43/100"
+        "ev": "36/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "27148.756500000003ms"
+        "ev": "28659.138ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.51"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "18.0MB"
+        "ev": "18.4MB"
       },
       {
         "id": "perf.viewport",
@@ -280,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://www.oushadhi.org/register)"
       },
       {
         "id": "content.broken_pdfs",
@@ -453,12 +455,12 @@
     ]
   },
   "score": {
-    "overall": 46,
+    "overall": 44,
     "security": 48,
     "accessibility": 46,
-    "content": 38,
+    "content": 28,
     "gigw": 18,
-    "performance": 66,
+    "performance": 62,
     "identity": 72
   },
   "status": "poor",
@@ -484,6 +486,11 @@
       "ev": "ml-user"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://www.oushadhi.org/register)"
+    },
+    {
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "www.oushadhi.org"
@@ -499,7 +506,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "15 serious violation(s)"
+      "ev": "16 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -509,7 +516,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "9 low-contrast element(s)"
+      "ev": "10 low-contrast element(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -539,12 +546,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "27148.756500000003ms"
+      "ev": "28659.138ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "18.0MB"
+      "ev": "18.4MB"
     },
     {
       "id": "perf.tap_targets",
@@ -614,6 +621,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.51"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -644,7 +656,7 @@
     {
       "d": "2026-11-18",
       "up": true,
-      "score": 46
+      "score": 44
     },
     {
       "d": "2026-11-17",
@@ -932,5 +944,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

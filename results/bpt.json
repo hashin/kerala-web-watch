@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-17T04:16:15.728Z",
-    "run": "1794888907078",
+    "at": "2026-11-18T03:20:20.787Z",
+    "run": "1794971868835",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 44,
+      "performance": 57,
       "accessibility": 84,
       "best_practices": 77,
-      "seo": 77
+      "seo": 69
     },
     "axe": {
       "critical": 0,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 25,
       "pdfs": 1,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "WordPress 7.1.4",
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "44/100"
+        "ev": "57/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "38919.343ms"
+        "ev": "37700.00949999999ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +233,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "17.0MB"
+        "ev": "16.9MB"
       },
       {
         "id": "perf.viewport",
@@ -280,7 +280,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/25 crawled link(s) broken (https://www.bptkerala.in/photo-gallery)"
       },
       {
         "id": "content.broken_pdfs",
@@ -769,10 +770,10 @@
     ]
   },
   "score": {
-    "overall": 53,
+    "overall": 52,
     "security": 24,
     "accessibility": 82,
-    "content": 46,
+    "content": 36,
     "gigw": 28,
     "performance": 76,
     "identity": 80
@@ -798,6 +799,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/25 crawled link(s) broken (https://www.bptkerala.in/photo-gallery)"
     },
     {
       "id": "id.gov_domain",
@@ -841,12 +847,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "38919.343ms"
+      "ev": "37700.00949999999ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "17.0MB"
+      "ev": "16.9MB"
     },
     {
       "id": "sec.csp",
@@ -920,7 +926,7 @@
     {
       "d": "2026-11-18",
       "up": true,
-      "score": 53
+      "score": 52
     },
     {
       "d": "2026-11-17",
@@ -1183,5 +1189,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

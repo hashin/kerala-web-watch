@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-16T01:31:56.751Z",
-    "run": "1794792673934",
+    "at": "2026-11-18T03:25:37.172Z",
+    "run": "1794972278619",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 60,
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 3
     },
     "tech": {
       "cms": "Drupal 11",
@@ -226,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "22084.388000000006ms"
+        "ev": "33462.807500000024ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "10.3MB"
+        "ev": "10.5MB"
       },
       {
         "id": "perf.viewport",
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3/30 crawled link(s) broken (https://ponnanimunicipality.lsgkerala.gov.in/ml/en/updates/paeananaanai-nagarasabha-haraita-kamama-saenayailaekaka-ipapaea-apaekasaikakaa-avasaram, https://tender.lsgkerala.gov.in/pages/displayTender.php, https://welfarepension.lsgkerala.gov.in/Schemes.aspx)"
       },
       {
         "id": "content.broken_pdfs",
@@ -561,10 +562,10 @@
     ]
   },
   "score": {
-    "overall": 68,
+    "overall": 66,
     "security": 76,
     "accessibility": 70,
-    "content": 56,
+    "content": 46,
     "gigw": 36,
     "performance": 76,
     "identity": 96
@@ -585,6 +586,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "3/30 crawled link(s) broken (https://ponnanimunicipality.lsgkerala.gov.in/ml/en/updates/paeananaanai-nagarasabha-haraita-kamama-saenayailaekaka-ipapaea-apaekasaikakaa-avasaram, https://tender.lsgkerala.gov.in/pages/displayTender.php, https://welfarepension.lsgkerala.gov.in/Schemes.aspx)"
     },
     {
       "id": "a11y.axe_serious",
@@ -615,12 +621,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "22084.388000000006ms"
+      "ev": "33462.807500000024ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "10.3MB"
+      "ev": "10.5MB"
     },
     {
       "id": "sec.csp",
@@ -683,7 +689,7 @@
     {
       "d": "2026-11-18",
       "up": true,
-      "score": 68
+      "score": 66
     },
     {
       "d": "2026-11-17",
@@ -966,5 +972,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
