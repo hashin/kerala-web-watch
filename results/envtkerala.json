@@ -35,11 +35,11 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-11-18T03:21:57.842Z",
-    "run": "1794971857846",
+    "at": "2026-11-19T03:03:37.002Z",
+    "run": "1795056907507",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 61,
+      "performance": 58,
       "accessibility": 87,
       "best_practices": 96,
       "seo": 77
@@ -53,10 +53,10 @@
     "crawl": {
       "pages": 30,
       "pdfs": 7,
-      "broken": 0
+      "broken": 10
     },
     "tech": {
-      "cms": "WordPress 6.5.14",
+      "cms": "WordPress 6.5.15",
       "server": "Apache",
       "jquery": null
     },
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "fail",
-        "ev": "13272ms"
+        "ev": "13740ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "61/100"
+        "ev": "58/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11290.546000000004ms"
+        "ev": "10703.205000000002ms"
       },
       {
         "id": "perf.cls",
@@ -279,11 +279,13 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "9/30 crawled link(s) broken (https://envt.kerala.gov.in/1512-2/, https://envt.kerala.gov.in/organisation-structure/, https://envt.kerala.gov.in/facilities/, ...)"
       },
       {
         "id": "content.broken_pdfs",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 linked PDF(s) 404: https://climatechange.envt.kerala.gov.in/wp-content/uploads/2026/06/Carbon-Neutral-Kerala-by-2050-Report.pdf"
       },
       {
         "id": "content.broken_images",
@@ -408,7 +410,7 @@
       {
         "id": "id.tech",
         "r": "pass",
-        "ev": "WordPress 6.5.14"
+        "ev": "WordPress 6.5.15"
       },
       {
         "id": "id.third_party",
@@ -468,10 +470,10 @@
     ]
   },
   "score": {
-    "overall": 56,
+    "overall": 51,
     "security": 38,
     "accessibility": 72,
-    "content": 52,
+    "content": 22,
     "gigw": 22,
     "performance": 71,
     "identity": 100
@@ -498,9 +500,14 @@
       "ev": "ML-NILA"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "9/30 crawled link(s) broken (https://envt.kerala.gov.in/1512-2/, https://envt.kerala.gov.in/organisation-structure/, https://envt.kerala.gov.in/facilities/, ...)"
+    },
+    {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "13272ms"
+      "ev": "13740ms"
     },
     {
       "id": "sec.hsts",
@@ -515,6 +522,11 @@
       "id": "a11y.contrast",
       "sev": "M",
       "ev": "35 low-contrast element(s)"
+    },
+    {
+      "id": "content.broken_pdfs",
+      "sev": "M",
+      "ev": "1 linked PDF(s) 404: https://climatechange.envt.kerala.gov.in/wp-content/uploads/2026/06/Carbon-Neutral-Kerala-by-2050-Report.pdf"
     },
     {
       "id": "gigw.sitemap",
@@ -539,7 +551,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11290.546000000004ms"
+      "ev": "10703.205000000002ms"
     },
     {
       "id": "perf.weight",
@@ -614,6 +626,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-19",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-11-18",
       "up": true,
@@ -910,5 +927,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

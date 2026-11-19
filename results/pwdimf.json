@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-18T03:25:45.119Z",
-    "run": "1794972286477",
+    "at": "2026-11-19T02:53:11.102Z",
+    "run": "1795056730549",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 57,
@@ -48,7 +48,7 @@
     },
     "axe": {
       "critical": 0,
-      "serious": 22,
+      "serious": 23,
       "moderate": 25,
       "minor": 0
     },
@@ -176,7 +176,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "22 serious violation(s)"
+        "ev": "23 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -227,7 +227,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9824.217499999997ms"
+        "ev": "12397.257000000001ms"
       },
       {
         "id": "perf.cls",
@@ -236,7 +236,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "4.5MB"
+        "ev": "4.6MB"
       },
       {
         "id": "perf.viewport",
@@ -297,7 +297,8 @@
       },
       {
         "id": "content.malayalam",
-        "r": "pass"
+        "r": "fail",
+        "ev": "Malayalam ratio 0.00, no language toggle found"
       },
       {
         "id": "content.title",
@@ -493,10 +494,10 @@
     ]
   },
   "score": {
-    "overall": 58,
+    "overall": 57,
     "security": 40,
     "accessibility": 70,
-    "content": 38,
+    "content": 28,
     "gigw": 56,
     "performance": 71,
     "identity": 96
@@ -530,7 +531,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "22 serious violation(s)"
+      "ev": "23 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -548,6 +549,11 @@
       "ev": "2 linked PDF(s) 404: https://www.pwd.kerala.gov.in/IMF_website/NEW/Avenue_split-compressed.pdf, https://www.pwd.kerala.gov.in/documents/NEWS_NOTIFICATIONS/166_1794820354.pdf"
     },
     {
+      "id": "content.malayalam",
+      "sev": "M",
+      "ev": "Malayalam ratio 0.00, no language toggle found"
+    },
+    {
       "id": "gigw.sitemap",
       "sev": "M"
     },
@@ -558,12 +564,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9824.217499999997ms"
+      "ev": "12397.257000000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "4.5MB"
+      "ev": "4.6MB"
     },
     {
       "id": "perf.tap_targets",
@@ -637,6 +643,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-19",
+      "up": true,
+      "score": 57
+    },
     {
       "d": "2026-11-18",
       "up": true,
@@ -928,5 +939,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

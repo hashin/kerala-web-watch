@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-30T01:23:04.903Z",
-    "run": "1793323341341",
+    "at": "2026-11-19T02:53:56.230Z",
+    "run": "1795056790413",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 43,
-      "accessibility": 85,
+      "performance": 55,
+      "accessibility": 89,
       "best_practices": 73,
       "seo": 77
     },
     "axe": {
       "critical": 0,
-      "serious": 17,
+      "serious": 19,
       "moderate": 62,
       "minor": 0
     },
@@ -56,7 +56,7 @@
       "broken": 1
     },
     "tech": {
-      "cms": "WordPress 7.1.4",
+      "cms": "WordPress 7.1.5",
       "server": "Apache",
       "jquery": null
     },
@@ -172,7 +172,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "17 serious violation(s)"
+        "ev": "19 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -190,7 +190,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "13 low-contrast element(s)"
+        "ev": "14 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -213,17 +213,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "85/100"
+        "ev": "89/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "43/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "20418.255999999994ms"
+        "ev": "24195.541000000012ms"
       },
       {
         "id": "perf.cls",
@@ -232,7 +232,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "6.2MB"
+        "ev": "6.3MB"
       },
       {
         "id": "perf.viewport",
@@ -265,7 +265,8 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "pass"
+        "r": "fail",
+        "ev": "ml-"
       },
       {
         "id": "content.obsolete_tech",
@@ -409,7 +410,7 @@
       {
         "id": "id.tech",
         "r": "pass",
-        "ev": "WordPress 7.1.4"
+        "ev": "WordPress 7.1.5"
       },
       {
         "id": "id.third_party",
@@ -462,10 +463,10 @@
     ]
   },
   "score": {
-    "overall": 61,
+    "overall": 58,
     "security": 68,
     "accessibility": 70,
-    "content": 62,
+    "content": 42,
     "gigw": 8,
     "performance": 81,
     "identity": 80
@@ -476,6 +477,11 @@
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-"
     },
     {
       "id": "content.broken_links",
@@ -502,12 +508,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "17 serious violation(s)"
+      "ev": "19 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "13 low-contrast element(s)"
+      "ev": "14 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -528,12 +534,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "20418.255999999994ms"
+      "ev": "24195.541000000012ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "6.2MB"
+      "ev": "6.3MB"
     },
     {
       "id": "sec.csp",
@@ -609,6 +615,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-19",
+      "up": true,
+      "score": 58
+    },
     {
       "d": "2026-11-18",
       "up": true,
@@ -860,5 +871,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

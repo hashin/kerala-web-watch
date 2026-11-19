@@ -35,12 +35,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-18T03:22:53.499Z",
-    "run": "1794972094920",
+    "at": "2026-11-19T03:01:03.618Z",
+    "run": "1795057187196",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 32,
-      "accessibility": 89,
+      "performance": 31,
+      "accessibility": 86,
       "best_practices": 73,
       "seo": 62
     },
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3526ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -215,27 +216,27 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "89/100"
+        "ev": "86/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "32/100"
+        "ev": "31/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11630.395ms"
+        "ev": "27946.049ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.74"
+        "ev": "0.73"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "6.0MB"
+        "ev": "5.9MB"
       },
       {
         "id": "perf.viewport",
@@ -502,6 +503,11 @@
       "ev": "2/30 crawled link(s) broken (https://handsum.kerala.gov.in/, https://dhtschemes.kerala.gov.in/)"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3526ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -543,12 +549,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11630.395ms"
+      "ev": "27946.049ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "6.0MB"
+      "ev": "5.9MB"
     },
     {
       "id": "sec.xcto",
@@ -612,7 +618,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.74"
+      "ev": "0.73"
     },
     {
       "id": "perf.images",
@@ -624,6 +630,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-19",
+      "up": true,
+      "score": 48
+    },
     {
       "d": "2026-11-18",
       "up": true,
@@ -915,5 +926,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

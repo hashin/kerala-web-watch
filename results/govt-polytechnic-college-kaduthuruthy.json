@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-18T03:35:00.450Z",
-    "run": "1794972863474",
+    "at": "2026-11-19T03:14:26.754Z",
+    "run": "1795058029938",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 46,
@@ -57,7 +57,7 @@
     },
     "tech": {
       "cms": null,
-      "server": "nginx/1.29.8",
+      "server": "nginx/1.31.8",
       "jquery": null
     },
     "checks": [
@@ -153,7 +153,7 @@
       {
         "id": "sec.server_banner",
         "r": "fail",
-        "ev": "nginx/1.29.8"
+        "ev": "nginx/1.31.8"
       },
       {
         "id": "sec.vuln_js",
@@ -224,7 +224,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "18113.688000000002ms"
+        "ev": "22237.464ms"
       },
       {
         "id": "perf.cls",
@@ -568,7 +568,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "18113.688000000002ms"
+      "ev": "22237.464ms"
     },
     {
       "id": "perf.weight",
@@ -594,7 +594,7 @@
     {
       "id": "sec.server_banner",
       "sev": "L",
-      "ev": "nginx/1.29.8"
+      "ev": "nginx/1.31.8"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -654,6 +654,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-19",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-11-18",
       "up": true,
@@ -925,5 +930,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

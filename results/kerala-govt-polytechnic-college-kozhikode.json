@@ -29,10 +29,15 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-11-18T03:29:43.362Z",
-    "run": "1794972535683",
+    "at": "2026-11-19T03:13:20.366Z",
+    "run": "1795057947639",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 51,
+      "accessibility": 76,
+      "best_practices": 69,
+      "seo": 92
+    },
     "axe": {
       "critical": 2,
       "serious": 45,
@@ -96,8 +101,7 @@
       },
       {
         "id": "sec.https",
-        "r": "fail",
-        "ev": "http://www.kgptc.in"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
@@ -121,7 +125,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "fail",
+        "ev": "href=\"http://www.kgptc.in/\""
       },
       {
         "id": "sec.csp",
@@ -204,19 +209,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "76/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "51/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "32155.211499999998ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -229,11 +237,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -460,13 +468,21 @@
       }
     ]
   },
-  "score": null,
-  "status": "broken",
+  "score": {
+    "overall": 45,
+    "security": 28,
+    "accessibility": 50,
+    "content": 56,
+    "gigw": 16,
+    "performance": 76,
+    "identity": 72
+  },
+  "status": "poor",
   "issues": [
     {
-      "id": "sec.https",
-      "sev": "C",
-      "ev": "http://www.kgptc.in"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://www.kgptc.in/\""
     },
     {
       "id": "sec.vuln_js",
@@ -532,6 +548,11 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "32155.211499999998ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "8.3MB"
@@ -593,6 +614,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -607,6 +632,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-19",
+      "up": true,
+      "score": 45
+    },
     {
       "d": "2026-11-18",
       "up": false,
@@ -878,5 +908,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

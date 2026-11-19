@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-11T01:51:41.836Z",
-    "run": "1794361845868",
+    "at": "2026-11-19T03:03:22.984Z",
+    "run": "1795057344281",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 61,
+      "performance": 60,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 85
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 8,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "61/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "23563.07050000001ms"
+        "ev": "33236.535500000005ms"
       },
       {
         "id": "perf.cls",
@@ -281,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://irinjalakudamunicipality.lsgkerala.gov.in/ml/en/en/members)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -565,10 +564,10 @@
     ]
   },
   "score": {
-    "overall": 63,
+    "overall": 65,
     "security": 76,
     "accessibility": 70,
-    "content": 46,
+    "content": 56,
     "gigw": 16,
     "performance": 76,
     "identity": 96
@@ -589,11 +588,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://irinjalakudamunicipality.lsgkerala.gov.in/ml/en/en/members)"
     },
     {
       "id": "gigw.rti",
@@ -628,7 +622,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "23563.07050000001ms"
+      "ev": "33236.535500000005ms"
     },
     {
       "id": "perf.weight",
@@ -693,6 +687,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-19",
+      "up": true,
+      "score": 65
+    },
     {
       "d": "2026-11-18",
       "up": true,
@@ -979,5 +978,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

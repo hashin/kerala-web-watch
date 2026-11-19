@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-18T03:22:40.573Z",
-    "run": "1794972059239",
+    "at": "2026-11-19T02:51:48.324Z",
+    "run": "1795056615405",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 49,
+      "performance": 36,
       "accessibility": 75,
       "best_practices": 96,
       "seo": 73
@@ -219,22 +219,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "49/100"
+        "ev": "36/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "5290.207ms"
+        "ev": "4813.83ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.26"
+        "ev": "0.63"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "24.1MB"
+        "ev": "23.8MB"
       },
       {
         "id": "perf.viewport",
@@ -311,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "7 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
+        "ev": "6 console error(s): Connecting to 'https://www.youtube.com/s/player/983e9c18/www-player.css' violates the following Content Security Policy directive: \"connect-src 'self' blob: data: *.userway.org kchat1.kerala.gov.in *.google-analytics.com\". The action has been blocked."
       },
       {
         "id": "gigw.contact",
@@ -580,12 +580,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "5290.207ms"
+      "ev": "4813.83ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "24.1MB"
+      "ev": "23.8MB"
     },
     {
       "id": "perf.tap_targets",
@@ -613,7 +613,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "7 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
+      "ev": "6 console error(s): Connecting to 'https://www.youtube.com/s/player/983e9c18/www-player.css' violates the following Content Security Policy directive: \"connect-src 'self' blob: data: *.userway.org kchat1.kerala.gov.in *.google-analytics.com\". The action has been blocked."
     },
     {
       "id": "gigw.terms",
@@ -634,7 +634,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.26"
+      "ev": "0.63"
     },
     {
       "id": "perf.images",
@@ -660,6 +660,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-19",
+      "up": true,
+      "score": 60
+    },
     {
       "d": "2026-11-18",
       "up": true,
@@ -951,5 +956,5 @@
       "score": 61
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

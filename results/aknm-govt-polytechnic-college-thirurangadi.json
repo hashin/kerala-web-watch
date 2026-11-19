@@ -38,14 +38,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-29T01:31:59.715Z",
-    "run": "1793237403136",
+    "at": "2026-11-19T03:12:23.971Z",
+    "run": "1795057740770",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 58,
+      "performance": 55,
       "accessibility": 83,
       "best_practices": 96,
-      "seo": 92
+      "seo": 85
     },
     "axe": {
       "critical": 2,
@@ -59,7 +59,7 @@
       "broken": 0
     },
     "tech": {
-      "cms": "WordPress 7.1.4",
+      "cms": "WordPress 7.1.5",
       "server": "nginx/1.24.0 (Ubuntu)",
       "jquery": null
     },
@@ -98,8 +98,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3563ms"
+        "r": "fail",
+        "ev": "8407ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -225,12 +225,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "58/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6028.9259999999995ms"
+        "ev": "13701.12ms"
       },
       {
         "id": "perf.cls",
@@ -239,7 +239,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "69.5MB"
+        "ev": "69.6MB"
       },
       {
         "id": "perf.viewport",
@@ -388,7 +388,8 @@
       },
       {
         "id": "id.domain_expiry",
-        "r": "pass"
+        "r": "fail",
+        "ev": "59 days left"
       },
       {
         "id": "id.www_consistency",
@@ -417,7 +418,7 @@
       {
         "id": "id.tech",
         "r": "pass",
-        "ev": "WordPress 7.1.4"
+        "ev": "WordPress 7.1.5"
       },
       {
         "id": "id.third_party",
@@ -456,13 +457,13 @@
     ]
   },
   "score": {
-    "overall": 46,
+    "overall": 44,
     "security": 44,
     "accessibility": 50,
     "content": 46,
     "gigw": 2,
     "performance": 76,
-    "identity": 80
+    "identity": 60
   },
   "status": "poor",
   "issues": [
@@ -496,9 +497,14 @@
       "ev": "www.gptcthirurangadi.in"
     },
     {
+      "id": "id.domain_expiry",
+      "sev": "H",
+      "ev": "59 days left"
+    },
+    {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "3563ms"
+      "ev": "8407ms"
     },
     {
       "id": "sec.hsts",
@@ -546,12 +552,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6028.9259999999995ms"
+      "ev": "13701.12ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "69.5MB"
+      "ev": "69.6MB"
     },
     {
       "id": "sec.csp",
@@ -628,6 +634,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-19",
+      "up": true,
+      "score": 44
+    },
     {
       "d": "2026-11-18",
       "up": true,
@@ -894,5 +905,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

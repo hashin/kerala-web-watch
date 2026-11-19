@@ -29,11 +29,11 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-11-18T03:26:21.934Z",
-    "run": "1794972345121",
+    "at": "2026-11-19T02:55:34.905Z",
+    "run": "1795056896622",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 81,
+      "performance": 79,
       "accessibility": 51,
       "best_practices": 69,
       "seo": 75
@@ -47,7 +47,7 @@
     "crawl": {
       "pages": 22,
       "pdfs": 3,
-      "broken": 1
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -215,7 +215,7 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "81/100"
+        "ev": "79/100"
       },
       {
         "id": "perf.lcp",
@@ -275,7 +275,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/22 crawled link(s) broken (https://www.telk.com/Userfiles/Supplier/VendorCapabilityReport.doc)"
+        "ev": "2/22 crawled link(s) broken (http://mail.telk.com/, https://www.telk.com/Userfiles/Supplier/VendorCapabilityReport.doc)"
       },
       {
         "id": "content.broken_pdfs",
@@ -477,7 +477,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/22 crawled link(s) broken (https://www.telk.com/Userfiles/Supplier/VendorCapabilityReport.doc)"
+      "ev": "2/22 crawled link(s) broken (http://mail.telk.com/, https://www.telk.com/Userfiles/Supplier/VendorCapabilityReport.doc)"
     },
     {
       "id": "gigw.contact",
@@ -616,6 +616,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-19",
+      "up": true,
+      "score": 40
+    },
     {
       "d": "2026-11-18",
       "up": true,
@@ -867,5 +872,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

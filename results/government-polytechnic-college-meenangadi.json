@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-06T02:07:32.341Z",
-    "run": "1793930810967",
+    "at": "2026-11-19T03:14:23.695Z",
+    "run": "1795058016836",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 74,
+      "performance": 77,
       "accessibility": 96,
       "best_practices": 73,
       "seo": 92
@@ -58,7 +58,7 @@
       "broken": 0
     },
     "tech": {
-      "cms": "WordPress 7.1.4",
+      "cms": "WordPress 7.1.5",
       "server": "Microsoft-IIS/10.0",
       "jquery": null
     },
@@ -97,7 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "5845ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -220,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "74/100"
+        "ev": "77/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "4832.043ms"
+        "ev": "4914.907999999999ms"
       },
       {
         "id": "perf.cls",
@@ -407,7 +408,7 @@
       {
         "id": "id.tech",
         "r": "pass",
-        "ev": "WordPress 7.1.4"
+        "ev": "WordPress 7.1.5"
       },
       {
         "id": "id.third_party",
@@ -460,6 +461,11 @@
       "sev": "H"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "5845ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -495,7 +501,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "4832.043ms"
+      "ev": "4914.907999999999ms"
     },
     {
       "id": "sec.csp",
@@ -566,6 +572,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-19",
+      "up": true,
+      "score": 62
+    },
     {
       "d": "2026-11-18",
       "up": true,
@@ -832,5 +843,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

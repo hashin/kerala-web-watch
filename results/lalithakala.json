@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-16T00:06:03.804Z",
-    "run": "1792109126197",
+    "at": "2026-11-19T03:00:43.010Z",
+    "run": "1795057203925",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 25,
+      "performance": 16,
       "accessibility": 86,
       "best_practices": 81,
-      "seo": 82
+      "seo": 83
     },
     "axe": {
       "critical": 0,
@@ -219,22 +219,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "25/100"
+        "ev": "16/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "39775.842500000006ms"
+        "ev": "17189.89575ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.53"
+        "ev": "0.91"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "30.1MB"
+        "ev": "31.3MB"
       },
       {
         "id": "perf.viewport",
@@ -281,7 +281,7 @@
       {
         "id": "content.broken_links",
         "r": "fail",
-        "ev": "21/30 crawled link(s) broken (http://www.lalithkala.org/news/SOCIAL%20MEDIA, http://www.lalithkala.org/news/GRAPHIC%20DESIGN, http://www.lalithkala.org/news/VIDEOGRAPHY, ...)"
+        "ev": "21/30 crawled link(s) broken (http://www.lalithkala.org/news/---, http://www.lalithkala.org/news/--2-----1, http://www.lalithkala.org/news/-----, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -391,8 +391,7 @@
       },
       {
         "id": "id.robots",
-        "r": "fail",
-        "ev": "robots.txt returned 404"
+        "r": "pass"
       },
       {
         "id": "id.sitemap_xml",
@@ -418,7 +417,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920"
+        "ev": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
       }
     ],
     "screenshot": {
@@ -465,7 +464,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "21/30 crawled link(s) broken (http://www.lalithkala.org/news/SOCIAL%20MEDIA, http://www.lalithkala.org/news/GRAPHIC%20DESIGN, http://www.lalithkala.org/news/VIDEOGRAPHY, ...)"
+      "ev": "21/30 crawled link(s) broken (http://www.lalithkala.org/news/---, http://www.lalithkala.org/news/--2-----1, http://www.lalithkala.org/news/-----, ...)"
     },
     {
       "id": "gigw.contact",
@@ -512,12 +511,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "39775.842500000006ms"
+      "ev": "17189.89575ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "30.1MB"
+      "ev": "31.3MB"
     },
     {
       "id": "perf.tap_targets",
@@ -590,7 +589,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.53"
+      "ev": "0.91"
     },
     {
       "id": "perf.images",
@@ -599,11 +598,6 @@
     {
       "id": "id.www_consistency",
       "sev": "L"
-    },
-    {
-      "id": "id.robots",
-      "sev": "L",
-      "ev": "robots.txt returned 404"
     },
     {
       "id": "id.sitemap_xml",
@@ -621,10 +615,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920"
+      "ev": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-19",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-18",
       "up": false,
@@ -911,5 +910,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

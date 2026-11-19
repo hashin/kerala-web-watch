@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-17T04:33:55.860Z",
-    "run": "1794889967785",
+    "at": "2026-11-19T03:17:01.215Z",
+    "run": "1795058153131",
     "vantage": "gh-us",
     "lighthouse": null,
     "axe": {
@@ -52,7 +52,7 @@
     },
     "tech": {
       "cms": null,
-      "server": "nginx/1.29.8",
+      "server": "nginx/1.31.8",
       "jquery": "2.2.4"
     },
     "checks": [
@@ -148,7 +148,7 @@
       {
         "id": "sec.server_banner",
         "r": "fail",
-        "ev": "nginx/1.29.8"
+        "ev": "nginx/1.31.8"
       },
       {
         "id": "sec.vuln_js",
@@ -448,8 +448,10 @@
       },
       {
         "host": "google.com",
-        "count": 1,
-        "texts": []
+        "count": 4,
+        "texts": [
+          "Click Here"
+        ]
       },
       {
         "host": "kerala.gov.in",
@@ -590,7 +592,7 @@
     {
       "id": "sec.server_banner",
       "sev": "L",
-      "ev": "nginx/1.29.8"
+      "ev": "nginx/1.31.8"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -663,6 +665,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-19",
+      "up": true,
+      "score": 38
+    },
     {
       "d": "2026-11-18",
       "up": true,
@@ -949,5 +956,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

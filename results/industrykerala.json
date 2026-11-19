@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-18T03:20:59.238Z",
-    "run": "1794971977708",
+    "at": "2026-11-19T02:50:15.403Z",
+    "run": "1795056535614",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 43,
+      "performance": 41,
       "accessibility": 84,
       "best_practices": 88,
       "seo": 73
@@ -219,16 +219,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "43/100"
+        "ev": "41/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "64080.35199999994ms"
+        "ev": "64345.39600000008ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.27"
       },
       {
         "id": "perf.weight",
@@ -308,7 +309,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "7 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+        "ev": "8 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
@@ -518,7 +519,7 @@
     "accessibility": 56,
     "content": 78,
     "gigw": 68,
-    "performance": 76,
+    "performance": 72,
     "identity": 88
   },
   "status": "needs-work",
@@ -564,7 +565,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "64080.35199999994ms"
+      "ev": "64345.39600000008ms"
     },
     {
       "id": "perf.weight",
@@ -592,7 +593,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "7 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      "ev": "8 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
@@ -605,6 +606,11 @@
     {
       "id": "gigw.search",
       "sev": "L"
+    },
+    {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.27"
     },
     {
       "id": "perf.images",
@@ -634,6 +640,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-19",
+      "up": true,
+      "score": 66
+    },
     {
       "d": "2026-11-18",
       "up": true,
@@ -925,5 +936,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

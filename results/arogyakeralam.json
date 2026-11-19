@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-18T03:05:13.110Z",
-    "run": "1794971055947",
+    "at": "2026-11-19T02:49:18.438Z",
+    "run": "1795056252373",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 37,
+      "performance": 51,
       "accessibility": 86,
       "best_practices": 92,
       "seo": 69
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 20
     },
     "tech": {
       "cms": null,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4516ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -221,17 +222,16 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "37/100"
+        "ev": "51/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "28411.791750000004ms"
+        "ev": "26386.235000000008ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.41"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -282,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "20/30 crawled link(s) broken (https://arogyakeralam.gov.in/2024/08/12/other-contacts/, https://arogyakeralam.gov.in/2020/03/25/health-institutional-details/, https://arogyakeralam.gov.in/2020/03/25/mandatory-disclosure/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -508,15 +509,15 @@
     ]
   },
   "score": {
-    "overall": 51,
+    "overall": 48,
     "security": 42,
     "accessibility": 50,
-    "content": 52,
+    "content": 32,
     "gigw": 22,
-    "performance": 67,
+    "performance": 71,
     "identity": 100
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -542,6 +543,16 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-box"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "20/30 crawled link(s) broken (https://arogyakeralam.gov.in/2024/08/12/other-contacts/, https://arogyakeralam.gov.in/2020/03/25/health-institutional-details/, https://arogyakeralam.gov.in/2020/03/25/mandatory-disclosure/, ...)"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "4516ms"
     },
     {
       "id": "sec.hsts",
@@ -580,7 +591,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "28411.791750000004ms"
+      "ev": "26386.235000000008ms"
     },
     {
       "id": "perf.weight",
@@ -652,11 +663,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.41"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -666,6 +672,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-19",
+      "up": true,
+      "score": 48
+    },
     {
       "d": "2026-11-18",
       "up": true,
@@ -962,5 +973,5 @@
       "score": 51
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-18T03:30:58.568Z",
-    "run": "1794972564760",
+    "at": "2026-11-19T03:06:07.960Z",
+    "run": "1795057473923",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 54,
+      "performance": 29,
       "accessibility": 77,
       "best_practices": 96,
       "seo": 83
@@ -219,21 +219,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "54/100"
+        "ev": "29/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "47001.893ms"
+        "ev": "43529.64899999999ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.69"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "2524.8MB"
+        "ev": "2888.3MB"
       },
       {
         "id": "perf.viewport",
@@ -420,7 +421,7 @@
     "screenshot": {
       "desktop": "adak.webp",
       "mobile": "adak-m.webp",
-      "phash": "000000fffefcf8f2"
+      "phash": "180000fffeffffe5"
     },
     "outlinks": [
       {
@@ -453,12 +454,12 @@
     ]
   },
   "score": {
-    "overall": 79,
+    "overall": 78,
     "security": 96,
     "accessibility": 72,
     "content": 56,
     "gigw": 76,
-    "performance": 76,
+    "performance": 72,
     "identity": 92
   },
   "status": "needs-work",
@@ -499,12 +500,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "47001.893ms"
+      "ev": "43529.64899999999ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "2524.8MB"
+      "ev": "2888.3MB"
     },
     {
       "id": "sec.csp",
@@ -527,6 +528,11 @@
     {
       "id": "gigw.feedback",
       "sev": "L"
+    },
+    {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.69"
     },
     {
       "id": "perf.images",
@@ -552,6 +558,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-19",
+      "up": true,
+      "score": 78
+    },
     {
       "d": "2026-11-18",
       "up": true,
@@ -843,5 +854,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-12T02:26:42.577Z",
-    "run": "1794450343436",
+    "at": "2026-11-19T02:48:00.169Z",
+    "run": "1795056372903",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 54,
+      "performance": 55,
       "accessibility": 84,
       "best_practices": 69,
-      "seo": 83
+      "seo": 77
     },
     "axe": {
       "critical": 20,
@@ -119,7 +119,8 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "warn",
+        "ev": "28 days left"
       },
       {
         "id": "sec.tls_version",
@@ -219,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "54/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "22801.475250000003ms"
+        "ev": "22658.527000000002ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +234,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "4.8MB"
+        "ev": "8.0MB"
       },
       {
         "id": "perf.viewport",
@@ -280,7 +281,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://malappuram.nic.in/en/#SkipContent)"
+        "ev": "1/30 crawled link(s) broken (https://malappuram.nic.in/en/helpline/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -309,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "6 console error(s): Refused to apply style from 'https://malappuram.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+        "ev": "12 console error(s): Refused to apply style from 'https://malappuram.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       },
       {
         "id": "gigw.contact",
@@ -452,11 +453,11 @@
       },
       {
         "host": "s3waas.gov.in",
-        "count": 6,
+        "count": 8,
         "texts": [
-          "PDF\n                    \n\n                    \n                        RTA Agenda\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
-          "PDF\n                    \n\n                    \n                        Land Acquisition – Malappuram District – Nediyiruppu Village, Kondotty Taluk – Construction of Perimeter Road and Watch Tower for RESA – Final Report of the Social Impact Assessment Study\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
-          "PDF\n                    \n\n                    \n                        Land Acquisition – Rehabilitation package under the Right to Fair Compensation and Transparency in Land Acquisition, Rehabilitation and Resettlement (LARR) Act, 2013, in connection with the acquisition of land for the construction of the approach roa\n                        Download Document\n                    \n\n                    Opens downloadable PDF document"
+          "PDF\n                    \n\n                    \n                        RTA Supplementary Agenda\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
+          "PDF\n                    \n\n                    \n                        RTA Erratum Agenda\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
+          "PDF\n                    \n\n                    \n                        RTA Agenda\n                        Download Document\n                    \n\n                    Opens downloadable PDF document"
         ]
       },
       {
@@ -502,8 +503,8 @@
     ]
   },
   "score": {
-    "overall": 60,
-    "security": 48,
+    "overall": 58,
+    "security": 38,
     "accessibility": 60,
     "content": 42,
     "gigw": 60,
@@ -512,6 +513,11 @@
   },
   "status": "needs-work",
   "issues": [
+    {
+      "id": "sec.cert_expiry",
+      "sev": "H",
+      "ev": "28 days left"
+    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -535,7 +541,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://malappuram.nic.in/en/#SkipContent)"
+      "ev": "1/30 crawled link(s) broken (https://malappuram.nic.in/en/helpline/)"
     },
     {
       "id": "sec.hsts",
@@ -561,12 +567,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "22801.475250000003ms"
+      "ev": "22658.527000000002ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "4.8MB"
+      "ev": "8.0MB"
     },
     {
       "id": "sec.csp",
@@ -602,7 +608,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "6 console error(s): Refused to apply style from 'https://malappuram.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+      "ev": "12 console error(s): Refused to apply style from 'https://malappuram.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
     },
     {
       "id": "gigw.terms",
@@ -640,6 +646,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-19",
+      "up": true,
+      "score": 58
+    },
     {
       "d": "2026-11-18",
       "up": true,
@@ -926,5 +937,5 @@
       "score": 60
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
