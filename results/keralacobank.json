@@ -2,15 +2,17 @@
   "id": "keralacobank",
   "url": "https://www.keralacobank.com",
   "light": {
-    "at": "2026-11-19T15:06:07.963Z",
+    "at": "2026-11-20T00:11:27.818Z",
     "status_class": "ok",
     "dns": true,
     "status": 200,
-    "final_url": "https://www.keralacobank.com",
-    "redirects": [],
-    "ttfb_ms": 520,
-    "title": "Site is created successfully!",
-    "byte_size": 1366,
+    "final_url": "https://colatv.broker/",
+    "redirects": [
+      "https://www.keralacobank.com -> https://colatv.broker/"
+    ],
+    "ttfb_ms": 757,
+    "title": "ColaTV - Trực Tiếp Bóng đá HD, Xem Bóng đá TTBD Miễn Phí",
+    "byte_size": 152637,
     "tls": {
       "valid": true,
       "protocol": "TLSv1.3",
@@ -19,18 +21,18 @@
       "issuer": "Let's Encrypt"
     },
     "headers": {
-      "hsts": true,
+      "hsts": false,
       "csp": false,
       "xfo": false,
       "xcto": false,
       "referrer": false,
-      "server": "nginx"
+      "server": "TencentEdgeOne"
     },
-    "content_hash": "4d5f857d76a40164c26ea9d0f684123aa26ba34801dee468dcc19bc1aabad857",
-    "http_redirects_to_https": false,
+    "content_hash": "9fc749910054fd39ac91b5e0f01716fa26316d9b4bff1ae1f6167ebd2e480610",
+    "http_redirects_to_https": true,
     "geo_block_suspect": false,
     "domain": "keralacobank.com",
-    "final_domain": "keralacobank.com",
+    "final_domain": "colatv.broker",
     "vantage": "gh-us",
     "suspect": false
   },
@@ -575,6 +577,11 @@
   ],
   "history": [
     {
+      "d": "2026-11-20",
+      "up": true,
+      "score": 60
+    },
+    {
       "d": "2026-11-19",
       "up": true,
       "score": 60
@@ -865,5 +872,5 @@
       "score": null
     }
   ],
-  "deep_bump": false
+  "deep_bump": true
 }
