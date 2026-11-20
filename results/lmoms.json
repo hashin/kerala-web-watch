@@ -2,8 +2,8 @@
   "id": "lmoms",
   "url": "https://lmoms.kerala.gov.in",
   "light": {
-    "at": "2026-11-20T00:23:35.771Z",
-    "status_class": "timeout",
+    "at": "2026-11-20T14:58:47.662Z",
+    "status_class": "connect_fail",
     "dns": true,
     "status": null,
     "final_url": null,
@@ -11,7 +11,13 @@
     "ttfb_ms": null,
     "title": null,
     "byte_size": null,
-    "tls": null,
+    "tls": {
+      "valid": false,
+      "protocol": "TLSv1.3",
+      "expires": "Dec 22 07:13:29 2026 GMT",
+      "days_left": 32,
+      "issuer": "Let's Encrypt"
+    },
     "headers": {
       "hsts": false,
       "csp": false,
@@ -21,7 +27,7 @@
       "server": null
     },
     "content_hash": null,
-    "http_redirects_to_https": false,
+    "http_redirects_to_https": true,
     "geo_block_suspect": false,
     "domain": "kerala.gov.in",
     "final_domain": null,
@@ -55,7 +61,7 @@
     "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://lmoms.kerala.gov.in/\", waiting until \"load\"\n"
   },
   "score": null,
-  "status": "down",
+  "status": "broken",
   "issues": [],
   "history": [
     {
