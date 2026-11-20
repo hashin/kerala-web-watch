@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-19T03:04:27.161Z",
-    "run": "1795057447519",
+    "at": "2026-11-20T02:54:09.444Z",
+    "run": "1795143220674",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 43,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 7,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -226,7 +226,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11056.675ms"
+        "ev": "11088.692500000001ms"
       },
       {
         "id": "perf.cls",
@@ -282,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/7 crawled link(s) broken (https://www.kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -456,15 +457,15 @@
     ]
   },
   "score": {
-    "overall": 50,
+    "overall": 49,
     "security": 66,
     "accessibility": 40,
-    "content": 46,
+    "content": 36,
     "gigw": 0,
     "performance": 77,
     "identity": 92
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.vuln_js",
@@ -485,6 +486,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-container"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/7 crawled link(s) broken (https://www.kerala.gov.in/)"
     },
     {
       "id": "gigw.contact",
@@ -537,7 +543,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11056.675ms"
+      "ev": "11088.692500000001ms"
     },
     {
       "id": "perf.weight",
@@ -626,7 +632,7 @@
     {
       "d": "2026-11-20",
       "up": true,
-      "score": 50
+      "score": 49
     },
     {
       "d": "2026-11-19",
@@ -924,5 +930,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

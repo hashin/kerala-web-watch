@@ -35,11 +35,11 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-11-19T03:03:37.002Z",
-    "run": "1795056907507",
+    "at": "2026-11-20T02:47:51.733Z",
+    "run": "1795142484594",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 58,
+      "performance": 55,
       "accessibility": 87,
       "best_practices": 96,
       "seo": 77
@@ -53,11 +53,11 @@
     "crawl": {
       "pages": 30,
       "pdfs": 7,
-      "broken": 10
+      "broken": 1
     },
     "tech": {
       "cms": "WordPress 6.5.15",
-      "server": "Apache",
+      "server": null,
       "jquery": null
     },
     "checks": [
@@ -67,15 +67,16 @@
       },
       {
         "id": "avail.connect",
-        "r": "pass"
+        "r": "fail",
+        "ev": "timeout"
       },
       {
         "id": "avail.status",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.parked",
@@ -95,8 +96,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "fail",
-        "ev": "13740ms"
+        "r": "na"
       },
       {
         "id": "avail.geo_blocked",
@@ -108,7 +108,7 @@
       },
       {
         "id": "sec.https",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.http_redirect",
@@ -132,8 +132,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://gmpg.org/xfn/11\""
+        "r": "na"
       },
       {
         "id": "sec.csp",
@@ -219,12 +218,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "58/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10703.205000000002ms"
+        "ev": "15904.203599999997ms"
       },
       {
         "id": "perf.cls",
@@ -279,8 +278,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "9/30 crawled link(s) broken (https://envt.kerala.gov.in/1512-2/, https://envt.kerala.gov.in/organisation-structure/, https://envt.kerala.gov.in/facilities/, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -469,25 +467,17 @@
       }
     ]
   },
-  "score": {
-    "overall": 51,
-    "security": 38,
-    "accessibility": 72,
-    "content": 22,
-    "gigw": 22,
-    "performance": 71,
-    "identity": 100
-  },
-  "status": "needs-work",
+  "score": null,
+  "status": "down",
   "issues": [
+    {
+      "id": "avail.connect",
+      "sev": "C",
+      "ev": "timeout"
+    },
     {
       "id": "sec.http_redirect",
       "sev": "H"
-    },
-    {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://gmpg.org/xfn/11\""
     },
     {
       "id": "content.last_updated",
@@ -498,16 +488,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ML-NILA"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "9/30 crawled link(s) broken (https://envt.kerala.gov.in/1512-2/, https://envt.kerala.gov.in/organisation-structure/, https://envt.kerala.gov.in/facilities/, ...)"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "13740ms"
     },
     {
       "id": "sec.hsts",
@@ -551,7 +531,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10703.205000000002ms"
+      "ev": "15904.203599999997ms"
     },
     {
       "id": "perf.weight",
@@ -628,8 +608,8 @@
   "history": [
     {
       "d": "2026-11-20",
-      "up": true,
-      "score": 51
+      "up": false,
+      "score": null
     },
     {
       "d": "2026-11-19",
@@ -932,5 +912,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -29,18 +29,18 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-11-19T03:05:49.129Z",
-    "run": "1795057481143",
+    "at": "2026-11-20T02:48:51.423Z",
+    "run": "1795142870692",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 66,
+      "performance": 82,
       "accessibility": 76,
       "best_practices": 65,
       "seo": 64
     },
     "axe": {
       "critical": 2,
-      "serious": 7,
+      "serious": 6,
       "moderate": 18,
       "minor": 1
     },
@@ -169,7 +169,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "7 serious violation(s)"
+        "ev": "6 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -188,7 +188,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "3 low-contrast element(s)"
+        "ev": "2 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -214,12 +214,11 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "66/100"
+        "ev": "82/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "4440.2474999999995ms"
+        "r": "pass"
       },
       {
         "id": "perf.cls",
@@ -227,8 +226,7 @@
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "3.7MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
@@ -306,7 +304,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "3 console error(s): Mixed Content: The page at 'https://scu.kerala.gov.in/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,300,800'. This request has been blocked; the content must be served over HTTPS."
+        "ev": "2 console error(s): Mixed Content: The page at 'https://scu.kerala.gov.in/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,300,800'. This request has been blocked; the content must be served over HTTPS."
       },
       {
         "id": "gigw.contact",
@@ -430,15 +428,15 @@
     ]
   },
   "score": {
-    "overall": 49,
+    "overall": 51,
     "security": 44,
     "accessibility": 46,
     "content": 22,
     "gigw": 40,
-    "performance": 81,
+    "performance": 96,
     "identity": 92
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
     {
       "id": "sec.vuln_js",
@@ -476,7 +474,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "7 serious violation(s)"
+      "ev": "6 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -486,7 +484,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "3 low-contrast element(s)"
+      "ev": "2 low-contrast element(s)"
     },
     {
       "id": "content.copyright_year",
@@ -513,16 +511,6 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "4440.2474999999995ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "3.7MB"
     },
     {
       "id": "sec.csp",
@@ -553,7 +541,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "3 console error(s): Mixed Content: The page at 'https://scu.kerala.gov.in/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,300,800'. This request has been blocked; the content must be served over HTTPS."
+      "ev": "2 console error(s): Mixed Content: The page at 'https://scu.kerala.gov.in/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,300,800'. This request has been blocked; the content must be served over HTTPS."
     },
     {
       "id": "gigw.feedback",
@@ -601,7 +589,7 @@
     {
       "d": "2026-11-20",
       "up": true,
-      "score": 49
+      "score": 51
     },
     {
       "d": "2026-11-19",
@@ -904,5 +892,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

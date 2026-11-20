@@ -29,29 +29,29 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-11-19T03:04:41.142Z",
-    "run": "1795057414809",
+    "at": "2026-11-20T02:47:50.691Z",
+    "run": "1795142808940",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 21,
+      "accessibility": 77,
+      "best_practices": 92,
+      "seo": 85
     },
     "axe": {
-      "critical": 0,
-      "serious": 2,
+      "critical": 11,
+      "serious": 23,
       "moderate": 2,
-      "minor": 0
+      "minor": 1
     },
     "crawl": {
-      "pages": 0,
-      "pdfs": 0,
+      "pages": 30,
+      "pdfs": 10,
       "broken": 0
     },
     "tech": {
-      "cms": null,
-      "server": null,
+      "cms": "Drupal 8",
+      "server": "Apache",
       "jquery": null
     },
     "checks": [
@@ -61,16 +61,15 @@
       },
       {
         "id": "avail.connect",
-        "r": "fail",
-        "ev": "timeout"
+        "r": "pass"
       },
       {
         "id": "avail.status",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -82,8 +81,7 @@
       },
       {
         "id": "avail.blank",
-        "r": "fail",
-        "ev": "69 visible characters"
+        "r": "pass"
       },
       {
         "id": "avail.under_construction",
@@ -91,7 +89,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -103,7 +101,7 @@
       },
       {
         "id": "sec.https",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
@@ -111,15 +109,15 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.hsts",
@@ -127,7 +125,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "fail",
+        "ev": "href=\"http://loksabha.nic.in/\""
       },
       {
         "id": "sec.csp",
@@ -151,7 +150,8 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "pass"
+        "r": "fail",
+        "ev": "jquery 3.2.1"
       },
       {
         "id": "sec.safe_browsing",
@@ -163,17 +163,18 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "pass"
+        "r": "fail",
+        "ev": "11 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "2 serious violation(s)"
+        "ev": "23 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "2 moderate/minor violation(s)"
+        "ev": "3 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -185,12 +186,13 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "4 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
         "r": "fail",
-        "ev": "no <h1>"
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
@@ -202,37 +204,41 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "pass"
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "77/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "21/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "16784.849000000002ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.65"
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "fail",
+        "ev": "20.5MB"
       },
       {
         "id": "perf.viewport",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -257,7 +263,8 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "pass"
+        "r": "fail",
+        "ev": "ML-NILA"
       },
       {
         "id": "content.obsolete_tech",
@@ -277,17 +284,16 @@
       },
       {
         "id": "content.broken_images",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 broken image(s)"
       },
       {
         "id": "content.malayalam",
-        "r": "fail",
-        "ev": "Malayalam ratio 0.00, no language toggle found"
+        "r": "pass"
       },
       {
         "id": "content.title",
-        "r": "fail",
-        "ev": "missing <title>"
+        "r": "pass"
       },
       {
         "id": "content.meta_desc",
@@ -295,16 +301,16 @@
       },
       {
         "id": "content.favicon",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 500 (500 Service unavailable (with message))"
+        "ev": "25 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.feedback",
@@ -312,7 +318,7 @@
       },
       {
         "id": "gigw.sitemap",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.privacy",
@@ -348,11 +354,11 @@
       },
       {
         "id": "gigw.rti",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.search",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.ownership",
@@ -376,57 +382,181 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
-      },
-      {
-        "id": "id.robots",
-        "r": "na"
-      },
-      {
-        "id": "id.sitemap_xml",
-        "r": "na"
-      },
-      {
-        "id": "id.soft_404",
-        "r": "na"
-      },
-      {
-        "id": "id.canonical",
         "r": "fail"
       },
       {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "pass"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "pass"
+      },
+      {
         "id": "id.charset_doctype",
-        "r": "fail",
-        "ev": "missing HTML5 doctype"
+        "r": "pass"
       },
       {
         "id": "id.tech",
-        "r": "pass"
+        "r": "warn",
+        "ev": "Drupal 8 (unsupported major version)"
       },
       {
         "id": "id.third_party",
-        "r": "pass"
+        "r": "warn",
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-8TEJQEW4KS&amp;cx=c&amp;_slc=1"
       }
     ],
     "screenshot": {
       "desktop": "prdkerala.webp",
       "mobile": "prdkerala-m.webp",
-      "phash": "1fffffffffffffff"
+      "phash": "000f1f0f00e3efe3"
     },
-    "outlinks": []
+    "outlinks": [
+      {
+        "host": "ecourts.gov.in",
+        "count": 1,
+        "texts": [
+          "ജുഡീഷ്യറി"
+        ]
+      },
+      {
+        "host": "loksabha.nic.in",
+        "count": 1,
+        "texts": [
+          "ലോകസഭ അംഗങ്ങൾ"
+        ]
+      },
+      {
+        "host": "niyamasabha.org",
+        "count": 2,
+        "texts": [
+          "നിയമസഭ അംഗങ്ങൾ",
+          "നിയമസഭ"
+        ]
+      },
+      {
+        "host": "rajyasabha.nic.in",
+        "count": 1,
+        "texts": [
+          "രാജ്യസഭ അംഗങ്ങൾ"
+        ]
+      },
+      {
+        "host": "duk.ac.in",
+        "count": 2,
+        "texts": [
+          "പുതിയ അക്രെഡിറ്റേഷൻ",
+          "മീഡിയ അക്രെഡിറ്റേഷൻ പുതുക്കൽ"
+        ]
+      },
+      {
+        "host": "youtube.com",
+        "count": 2,
+        "texts": [
+          "വീഡിയോ",
+          "കൂടുതൽ വിഡിയോകൾ"
+        ]
+      },
+      {
+        "host": "digilocker.gov.in",
+        "count": 1,
+        "texts": [
+          "results.digilocker.gov.in"
+        ]
+      },
+      {
+        "host": "keralanews.gov.in",
+        "count": 2,
+        "texts": []
+      },
+      {
+        "host": "keltron.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "twitter.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "instagram.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "t.me",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "threads.net",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "dailyhunt.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "spotify.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "keralacm.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "cdit.org",
+        "count": 1,
+        "texts": [
+          "സി-ഡിറ്റ്"
+        ]
+      }
+    ]
   },
-  "score": null,
-  "status": "broken",
+  "score": {
+    "overall": 51,
+    "security": 42,
+    "accessibility": 50,
+    "content": 48,
+    "gigw": 32,
+    "performance": 72,
+    "identity": 91
+  },
+  "status": "needs-work",
   "issues": [
     {
-      "id": "avail.connect",
-      "sev": "C",
-      "ev": "timeout"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://loksabha.nic.in/\""
     },
     {
-      "id": "avail.blank",
-      "sev": "C",
-      "ev": "69 visible characters"
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "jquery 3.2.1"
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "11 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -434,16 +564,9 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "gigw.contact",
-      "sev": "H"
-    },
-    {
-      "id": "gigw.rti",
-      "sev": "H"
-    },
-    {
-      "id": "perf.viewport",
-      "sev": "H"
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ML-NILA"
     },
     {
       "id": "sec.hsts",
@@ -452,21 +575,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "2 serious violation(s)"
+      "ev": "23 serious violation(s)"
     },
     {
-      "id": "content.malayalam",
+      "id": "a11y.contrast",
       "sev": "M",
-      "ev": "Malayalam ratio 0.00, no language toggle found"
-    },
-    {
-      "id": "content.title",
-      "sev": "M",
-      "ev": "missing <title>"
-    },
-    {
-      "id": "gigw.sitemap",
-      "sev": "M"
+      "ev": "4 low-contrast element(s)"
     },
     {
       "id": "gigw.privacy",
@@ -485,8 +599,19 @@
       "sev": "M"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "16784.849000000002ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "20.5MB"
+    },
+    {
+      "id": "id.tech",
+      "sev": "M",
+      "ev": "Drupal 8 (unsupported major version)"
     },
     {
       "id": "sec.csp",
@@ -499,25 +624,31 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "2 moderate/minor violation(s)"
+      "ev": "3 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "no <h1>"
+      "ev": "heading levels skipped"
+    },
+    {
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
+    },
+    {
+      "id": "content.broken_images",
+      "sev": "L",
+      "ev": "1 broken image(s)"
     },
     {
       "id": "content.meta_desc",
       "sev": "L"
     },
     {
-      "id": "content.favicon",
-      "sev": "L"
-    },
-    {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 500 (500 Service unavailable (with message))"
+      "ev": "25 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.feedback",
@@ -548,32 +679,33 @@
       "sev": "L"
     },
     {
-      "id": "gigw.search",
-      "sev": "L"
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.65"
     },
     {
       "id": "perf.images",
       "sev": "L"
     },
     {
-      "id": "id.charset_doctype",
-      "sev": "L",
-      "ev": "missing HTML5 doctype"
+      "id": "id.www_consistency",
+      "sev": "L"
     },
     {
       "id": "gigw.emblem",
       "sev": "I"
     },
     {
-      "id": "id.canonical",
-      "sev": "I"
+      "id": "id.third_party",
+      "sev": "I",
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-8TEJQEW4KS&amp;cx=c&amp;_slc=1"
     }
   ],
   "history": [
     {
       "d": "2026-11-20",
-      "up": false,
-      "score": null
+      "up": true,
+      "score": 51
     },
     {
       "d": "2026-11-19",
@@ -871,5 +1003,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

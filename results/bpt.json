@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-19T02:58:36.111Z",
-    "run": "1795057050128",
+    "at": "2026-11-20T02:43:43.582Z",
+    "run": "1795142493795",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
+      "performance": 55,
       "accessibility": 84,
       "best_practices": 77,
       "seo": 77
@@ -53,10 +53,10 @@
     "crawl": {
       "pages": 25,
       "pdfs": 1,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
-      "cms": "WordPress 7.1.4",
+      "cms": "WordPress 7.1.5",
       "server": "Apache",
       "jquery": null
     },
@@ -153,7 +153,7 @@
       {
         "id": "sec.server_banner",
         "r": "fail",
-        "ev": "PHP/8.3.36"
+        "ev": "PHP/8.3.37"
       },
       {
         "id": "sec.vuln_js",
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "42576.98399999999ms"
+        "ev": "31190.37600000001ms"
       },
       {
         "id": "perf.cls",
@@ -280,7 +280,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/25 crawled link(s) broken (https://www.bptkerala.in/photo-gallery)"
       },
       {
         "id": "content.broken_pdfs",
@@ -410,7 +411,7 @@
       {
         "id": "id.tech",
         "r": "pass",
-        "ev": "WordPress 7.1.4"
+        "ev": "WordPress 7.1.5"
       },
       {
         "id": "id.third_party",
@@ -769,10 +770,10 @@
     ]
   },
   "score": {
-    "overall": 53,
+    "overall": 52,
     "security": 24,
     "accessibility": 82,
-    "content": 46,
+    "content": 36,
     "gigw": 28,
     "performance": 76,
     "identity": 80
@@ -798,6 +799,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/25 crawled link(s) broken (https://www.bptkerala.in/photo-gallery)"
     },
     {
       "id": "id.gov_domain",
@@ -841,7 +847,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "42576.98399999999ms"
+      "ev": "31190.37600000001ms"
     },
     {
       "id": "perf.weight",
@@ -863,7 +869,7 @@
     {
       "id": "sec.server_banner",
       "sev": "L",
-      "ev": "PHP/8.3.36"
+      "ev": "PHP/8.3.37"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -920,7 +926,7 @@
     {
       "d": "2026-11-20",
       "up": true,
-      "score": 53
+      "score": 52
     },
     {
       "d": "2026-11-19",
@@ -1193,5 +1199,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

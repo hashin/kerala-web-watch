@@ -35,19 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-19T02:48:44.325Z",
-    "run": "1795056485100",
+    "at": "2026-11-20T02:36:03.334Z",
+    "run": "1795142122905",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 61,
+      "performance": 60,
       "accessibility": 82,
       "best_practices": 88,
       "seo": 91
     },
     "axe": {
       "critical": 0,
-      "serious": 53,
-      "moderate": 42,
+      "serious": 63,
+      "moderate": 38,
       "minor": 5
     },
     "crawl": {
@@ -92,7 +92,7 @@
       {
         "id": "avail.under_construction",
         "r": "warn",
-        "ev": "\"coming soon\" alongside 2941 other characters"
+        "ev": "\"coming soon\" alongside 2670 other characters"
       },
       {
         "id": "avail.ttfb",
@@ -174,12 +174,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "53 serious violation(s)"
+        "ev": "63 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "47 moderate/minor violation(s)"
+        "ev": "43 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -192,7 +192,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "46 low-contrast element(s)"
+        "ev": "56 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -220,16 +220,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "61/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7152.03ms"
+        "ev": "5467.121ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.27"
       },
       {
         "id": "perf.weight",
@@ -383,7 +384,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "50 days left"
+        "ev": "49 days left"
       },
       {
         "id": "id.www_consistency",
@@ -446,7 +447,7 @@
     "accessibility": 70,
     "content": 32,
     "gigw": 18,
-    "performance": 86,
+    "performance": 82,
     "identity": 48
   },
   "status": "poor",
@@ -454,7 +455,7 @@
     {
       "id": "avail.under_construction",
       "sev": "H",
-      "ev": "\"coming soon\" alongside 2941 other characters"
+      "ev": "\"coming soon\" alongside 2670 other characters"
     },
     {
       "id": "sec.http_redirect",
@@ -483,7 +484,7 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "50 days left"
+      "ev": "49 days left"
     },
     {
       "id": "sec.hsts",
@@ -496,12 +497,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "53 serious violation(s)"
+      "ev": "63 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "46 low-contrast element(s)"
+      "ev": "56 low-contrast element(s)"
     },
     {
       "id": "content.copyright_year",
@@ -536,7 +537,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7152.03ms"
+      "ev": "5467.121ms"
     },
     {
       "id": "sec.csp",
@@ -553,7 +554,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "47 moderate/minor violation(s)"
+      "ev": "43 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -604,6 +605,11 @@
     {
       "id": "gigw.search",
       "sev": "L"
+    },
+    {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.27"
     },
     {
       "id": "perf.images",
@@ -889,5 +895,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

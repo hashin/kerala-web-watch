@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-19T02:48:00.169Z",
-    "run": "1795056372903",
+    "at": "2026-11-20T02:34:20.640Z",
+    "run": "1795141963039",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 52,
       "accessibility": 84,
       "best_practices": 69,
-      "seo": 77
+      "seo": 83
     },
     "axe": {
       "critical": 20,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -120,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "28 days left"
+        "ev": "27 days left"
       },
       {
         "id": "sec.tls_version",
@@ -220,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "52/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "22658.527000000002ms"
+        "ev": "19157.763499999997ms"
       },
       {
         "id": "perf.cls",
@@ -233,8 +233,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "8.0MB"
+        "r": "fail",
+        "ev": "8.2MB"
       },
       {
         "id": "perf.viewport",
@@ -280,8 +280,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://malappuram.nic.in/en/helpline/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -453,11 +452,11 @@
       },
       {
         "host": "s3waas.gov.in",
-        "count": 8,
+        "count": 7,
         "texts": [
+          "PDF\n                    \n\n                    \n                        General Transfer 2026 – Orders issued publishing the draft priority list for the posts of Village Field Assistant/Office Attendant.\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
           "PDF\n                    \n\n                    \n                        RTA Supplementary Agenda\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
-          "PDF\n                    \n\n                    \n                        RTA Erratum Agenda\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
-          "PDF\n                    \n\n                    \n                        RTA Agenda\n                        Download Document\n                    \n\n                    Opens downloadable PDF document"
+          "PDF\n                    \n\n                    \n                        RTA Erratum Agenda\n                        Download Document\n                    \n\n                    Opens downloadable PDF document"
         ]
       },
       {
@@ -503,12 +502,12 @@
     ]
   },
   "score": {
-    "overall": 58,
+    "overall": 59,
     "security": 38,
     "accessibility": 60,
-    "content": 42,
+    "content": 52,
     "gigw": 60,
-    "performance": 81,
+    "performance": 76,
     "identity": 96
   },
   "status": "needs-work",
@@ -516,7 +515,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "28 days left"
+      "ev": "27 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -537,11 +536,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://malappuram.nic.in/en/helpline/)"
     },
     {
       "id": "sec.hsts",
@@ -567,12 +561,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "22658.527000000002ms"
+      "ev": "19157.763499999997ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "8.0MB"
+      "ev": "8.2MB"
     },
     {
       "id": "sec.csp",
@@ -649,7 +643,7 @@
     {
       "d": "2026-11-20",
       "up": true,
-      "score": 58
+      "score": 59
     },
     {
       "d": "2026-11-19",
@@ -942,5 +936,5 @@
       "score": 60
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

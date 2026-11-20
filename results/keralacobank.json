@@ -37,29 +37,29 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-13T02:17:49.148Z",
-    "run": "1794536260692",
+    "at": "2026-11-20T02:43:27.003Z",
+    "run": "1795142546943",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 100,
-      "accessibility": 75,
-      "best_practices": 96,
-      "seo": 90
+      "performance": 26,
+      "accessibility": 62,
+      "best_practices": 92,
+      "seo": 92
     },
     "axe": {
-      "critical": 0,
-      "serious": 1,
-      "moderate": 3,
-      "minor": 0
+      "critical": 9,
+      "serious": 106,
+      "moderate": 1,
+      "minor": 104
     },
     "crawl": {
-      "pages": 0,
+      "pages": 30,
       "pdfs": 0,
       "broken": 0
     },
     "tech": {
-      "cms": null,
-      "server": "nginx",
+      "cms": "WordPress 6.8.1",
+      "server": "TencentEdgeOne",
       "jquery": null
     },
     "checks": [
@@ -77,7 +77,8 @@
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "pass"
+        "r": "fail",
+        "ev": "now resolves to colatv.broker"
       },
       {
         "id": "avail.parked",
@@ -113,7 +114,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
@@ -129,7 +130,7 @@
       },
       {
         "id": "sec.hsts",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.mixed_content",
@@ -165,21 +166,23 @@
       },
       {
         "id": "sec.injected_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "https://6686.blog \"6686 casino\" [spam-text]"
       },
       {
         "id": "a11y.axe_critical",
-        "r": "pass"
+        "r": "fail",
+        "ev": "9 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "1 serious violation(s)"
+        "ev": "106 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "3 moderate/minor violation(s)"
+        "ev": "105 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -187,16 +190,17 @@
       },
       {
         "id": "a11y.alt",
-        "r": "pass"
+        "r": "fail",
+        "ev": "9 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "2 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
-        "r": "fail",
-        "ev": "heading levels skipped"
+        "r": "pass"
       },
       {
         "id": "a11y.labels",
@@ -213,28 +217,31 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "75/100"
+        "ev": "62/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "100/100"
+        "ev": "26/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "fail",
+        "ev": "30622.567499999997ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1.05"
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "fail",
+        "ev": "10.4MB"
       },
       {
         "id": "perf.viewport",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.tap_targets",
@@ -242,11 +249,11 @@
       },
       {
         "id": "perf.images",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "content.last_updated",
@@ -263,7 +270,8 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "pass"
+        "r": "fail",
+        "ev": "ml-user"
       },
       {
         "id": "content.obsolete_tech",
@@ -295,7 +303,7 @@
       },
       {
         "id": "content.meta_desc",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.favicon",
@@ -303,7 +311,8 @@
       },
       {
         "id": "content.console_errors",
-        "r": "pass"
+        "r": "fail",
+        "ev": "40 console error(s): Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
       },
       {
         "id": "gigw.contact",
@@ -380,25 +389,24 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
-      },
-      {
-        "id": "id.robots",
-        "r": "fail",
-        "ev": "robots.txt returned 404"
-      },
-      {
-        "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 404"
-      },
-      {
-        "id": "id.soft_404",
         "r": "pass"
       },
       {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "pass"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
+      },
+      {
         "id": "id.canonical",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.charset_doctype",
@@ -406,39 +414,123 @@
       },
       {
         "id": "id.tech",
-        "r": "pass"
+        "r": "pass",
+        "ev": "WordPress 6.8.1"
       },
       {
         "id": "id.third_party",
-        "r": "pass"
+        "r": "warn",
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-SEW3VVY9T5&amp;cx=c&amp;gtm=4e6bh1, https://www.googletagmanager.com/gtag/js?id=G-V8GXMSME5N, https://www.googletagmanager.com/gtag/js?id=G-SEW3VVY9T5"
       }
     ],
     "screenshot": {
       "desktop": "keralacobank.webp",
       "mobile": "keralacobank-m.webp",
-      "phash": "ff818181ffffffff"
+      "phash": "0000ffffff000000"
     },
-    "outlinks": []
+    "outlinks": [
+      {
+        "host": "refvsb.com",
+        "count": 1,
+        "texts": [
+          "Cược VSBET"
+        ]
+      },
+      {
+        "host": "jun8868.info",
+        "count": 1,
+        "texts": [
+          "jun88 đăng nhập"
+        ]
+      },
+      {
+        "host": "6686.agency",
+        "count": 1,
+        "texts": [
+          "nhà cái 6686"
+        ]
+      },
+      {
+        "host": "6686.guide",
+        "count": 1,
+        "texts": [
+          "6686"
+        ]
+      },
+      {
+        "host": "6686.express",
+        "count": 1,
+        "texts": [
+          "6686bet"
+        ]
+      },
+      {
+        "host": "6686.design",
+        "count": 1,
+        "texts": [
+          "6686 bet"
+        ]
+      },
+      {
+        "host": "6686.blog",
+        "count": 1,
+        "texts": [
+          "6686 casino"
+        ]
+      },
+      {
+        "host": "colatv.pro",
+        "count": 1,
+        "texts": [
+          "bong da truc tiep"
+        ]
+      },
+      {
+        "host": "t.me",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "colatv.live",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "goo.gl",
+        "count": 1,
+        "texts": [
+          "A: 17 Đường số 18, Phường Linh Trung, Thủ Đức, Thành phố Hồ Chí Minh"
+        ]
+      }
+    ]
   },
-  "score": {
-    "overall": 60,
-    "security": 58,
-    "accessibility": 82,
-    "content": 72,
-    "gigw": 0,
-    "performance": 70,
-    "identity": 68
-  },
-  "status": "needs-work",
+  "score": null,
+  "status": "hijacked",
   "issues": [
     {
-      "id": "sec.http_redirect",
-      "sev": "H"
+      "id": "avail.redirect_offsite",
+      "sev": "C",
+      "ev": "now resolves to colatv.broker"
+    },
+    {
+      "id": "sec.injected_links",
+      "sev": "C",
+      "ev": "https://6686.blog \"6686 casino\" [spam-text]"
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "9 critical violation(s)"
     },
     {
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-user"
     },
     {
       "id": "gigw.contact",
@@ -449,13 +541,13 @@
       "sev": "H"
     },
     {
-      "id": "perf.viewport",
-      "sev": "H"
-    },
-    {
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "www.keralacobank.com"
+    },
+    {
+      "id": "sec.hsts",
+      "sev": "M"
     },
     {
       "id": "sec.xfo",
@@ -464,7 +556,17 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "1 serious violation(s)"
+      "ev": "106 serious violation(s)"
+    },
+    {
+      "id": "a11y.alt",
+      "sev": "M",
+      "ev": "9 image(s) missing alt text"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "2 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -487,6 +589,16 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "30622.567499999997ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "10.4MB"
+    },
+    {
       "id": "perf.tap_targets",
       "sev": "M"
     },
@@ -505,20 +617,16 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "3 moderate/minor violation(s)"
-    },
-    {
-      "id": "a11y.headings",
-      "sev": "L",
-      "ev": "heading levels skipped"
-    },
-    {
-      "id": "content.meta_desc",
-      "sev": "L"
+      "ev": "105 moderate/minor violation(s)"
     },
     {
       "id": "content.favicon",
       "sev": "L"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "40 console error(s): Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
     },
     {
       "id": "gigw.feedback",
@@ -553,33 +661,34 @@
       "sev": "L"
     },
     {
-      "id": "id.www_consistency",
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "1.05"
+    },
+    {
+      "id": "perf.images",
       "sev": "L"
     },
     {
-      "id": "id.robots",
+      "id": "id.soft_404",
       "sev": "L",
-      "ev": "robots.txt returned 404"
-    },
-    {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 404"
+      "ev": "a nonexistent path returned 200"
     },
     {
       "id": "gigw.emblem",
       "sev": "I"
     },
     {
-      "id": "id.canonical",
-      "sev": "I"
+      "id": "id.third_party",
+      "sev": "I",
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-SEW3VVY9T5&amp;cx=c&amp;gtm=4e6bh1, https://www.googletagmanager.com/gtag/js?id=G-V8GXMSME5N, https://www.googletagmanager.com/gtag/js?id=G-SEW3VVY9T5"
     }
   ],
   "history": [
     {
       "d": "2026-11-20",
-      "up": true,
-      "score": 60
+      "up": false,
+      "score": null
     },
     {
       "d": "2026-11-19",
@@ -872,5 +981,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

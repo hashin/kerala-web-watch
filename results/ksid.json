@@ -37,8 +37,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-19T03:05:36.515Z",
-    "run": "1795057495250",
+    "at": "2026-11-20T02:45:49.490Z",
+    "run": "1795142698494",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 31,
@@ -97,7 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3185ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -228,17 +229,17 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "18544.738ms"
+        "ev": "18876.768000000007ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "1.00"
+        "ev": "1.07"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "4.5MB"
+        "ev": "4.7MB"
       },
       {
         "id": "perf.viewport",
@@ -509,6 +510,11 @@
       "sev": "H"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3185ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -550,12 +556,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "18544.738ms"
+      "ev": "18876.768000000007ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "4.5MB"
+      "ev": "4.7MB"
     },
     {
       "id": "sec.xcto",
@@ -629,7 +635,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "1.00"
+      "ev": "1.07"
     },
     {
       "id": "perf.images",
@@ -942,5 +948,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

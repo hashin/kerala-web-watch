@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-19T03:07:23.063Z",
-    "run": "1795057589168",
+    "at": "2026-11-20T02:52:59.446Z",
+    "run": "1795143118239",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 35,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 1,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -225,7 +225,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "14594.600499999997ms"
+        "ev": "17038.817000000003ms"
       },
       {
         "id": "perf.cls",
@@ -267,7 +267,8 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "pass"
+        "r": "fail",
+        "ev": "ml-box"
       },
       {
         "id": "content.obsolete_tech",
@@ -279,7 +280,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://automation.medicalcouncil.kerala.gov.in/ksmc-manual/index.jsp)"
       },
       {
         "id": "content.broken_pdfs",
@@ -478,10 +480,10 @@
     ]
   },
   "score": {
-    "overall": 60,
+    "overall": 55,
     "security": 62,
     "accessibility": 50,
-    "content": 68,
+    "content": 38,
     "gigw": 22,
     "performance": 82,
     "identity": 100
@@ -502,6 +504,16 @@
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-box"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://automation.medicalcouncil.kerala.gov.in/ksmc-manual/index.jsp)"
     },
     {
       "id": "sec.hsts",
@@ -540,7 +552,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "14594.600499999997ms"
+      "ev": "17038.817000000003ms"
     },
     {
       "id": "sec.xcto",
@@ -625,7 +637,7 @@
     {
       "d": "2026-11-20",
       "up": true,
-      "score": 60
+      "score": 55
     },
     {
       "d": "2026-11-19",
@@ -928,5 +940,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

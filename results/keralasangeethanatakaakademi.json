@@ -35,19 +35,24 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-17T04:29:48.523Z",
-    "run": "1794889732056",
+    "at": "2026-11-20T03:02:08.687Z",
+    "run": "1795143669045",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 22,
+      "accessibility": 88,
+      "best_practices": 78,
+      "seo": 69
+    },
     "axe": {
-      "critical": 16,
+      "critical": 17,
       "serious": 1,
       "moderate": 70,
       "minor": 0
     },
     "crawl": {
       "pages": 22,
-      "pdfs": 17,
+      "pdfs": 18,
       "broken": 0
     },
     "tech": {
@@ -87,7 +92,7 @@
       {
         "id": "avail.under_construction",
         "r": "warn",
-        "ev": "\"coming soon\" alongside 3144 other characters"
+        "ev": "\"coming soon\" alongside 3207 other characters"
       },
       {
         "id": "avail.ttfb",
@@ -165,7 +170,7 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "16 critical violation(s)"
+        "ev": "17 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
@@ -184,7 +189,7 @@
       {
         "id": "a11y.alt",
         "r": "fail",
-        "ev": "16 image(s) missing alt text"
+        "ev": "17 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
@@ -210,24 +215,28 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "88/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "22/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "6303.376499999999ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "2.21"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "6.6MB"
+        "ev": "6.7MB"
       },
       {
         "id": "perf.viewport",
@@ -235,11 +244,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -302,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/ad8d59ae/www-widgetapi.vflset/www-widgetapi.js' from origin 'http://keralasangeethanatakaakademi.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/6b3d0364/www-widgetapi.vflset/www-widgetapi.js' from origin 'http://keralasangeethanatakaakademi.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -376,7 +385,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "4 days left"
+        "ev": "1 days left"
       },
       {
         "id": "id.www_consistency",
@@ -460,12 +469,12 @@
     {
       "id": "avail.under_construction",
       "sev": "H",
-      "ev": "\"coming soon\" alongside 3144 other characters"
+      "ev": "\"coming soon\" alongside 3207 other characters"
     },
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "16 critical violation(s)"
+      "ev": "17 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -485,7 +494,7 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "4 days left"
+      "ev": "1 days left"
     },
     {
       "id": "sec.hsts",
@@ -503,7 +512,7 @@
     {
       "id": "a11y.alt",
       "sev": "M",
-      "ev": "16 image(s) missing alt text"
+      "ev": "17 image(s) missing alt text"
     },
     {
       "id": "a11y.contrast",
@@ -531,9 +540,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "6303.376499999999ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "6.6MB"
+      "ev": "6.7MB"
     },
     {
       "id": "sec.csp",
@@ -564,7 +578,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/ad8d59ae/www-widgetapi.vflset/www-widgetapi.js' from origin 'http://keralasangeethanatakaakademi.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/6b3d0364/www-widgetapi.vflset/www-widgetapi.js' from origin 'http://keralasangeethanatakaakademi.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -592,6 +606,15 @@
     },
     {
       "id": "gigw.help",
+      "sev": "L"
+    },
+    {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "2.21"
+    },
+    {
+      "id": "perf.images",
       "sev": "L"
     }
   ],
@@ -892,5 +915,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

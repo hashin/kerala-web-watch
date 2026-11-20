@@ -37,18 +37,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-04T01:52:58.622Z",
-    "run": "1793757087608",
+    "at": "2026-11-20T02:47:03.440Z",
+    "run": "1795142768141",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 32,
-      "accessibility": 52,
-      "best_practices": 92,
+      "accessibility": 57,
+      "best_practices": 96,
       "seo": 82
     },
     "axe": {
       "critical": 11,
-      "serious": 36,
+      "serious": 35,
       "moderate": 28,
       "minor": 0
     },
@@ -176,7 +176,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "36 serious violation(s)"
+        "ev": "35 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -186,7 +186,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"\"> vs. 103% Malayalam content"
+        "ev": "<html lang=\"en\"> vs. 103% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -220,7 +220,7 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "52/100"
+        "ev": "57/100"
       },
       {
         "id": "perf.lighthouse",
@@ -230,12 +230,12 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "26008.164999999994ms"
+        "ev": "23916.788999999997ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.67"
+        "ev": "0.72"
       },
       {
         "id": "perf.weight",
@@ -413,8 +413,7 @@
       },
       {
         "id": "id.charset_doctype",
-        "r": "fail",
-        "ev": "missing HTML5 doctype"
+        "r": "pass"
       },
       {
         "id": "id.tech",
@@ -428,7 +427,7 @@
     "screenshot": {
       "desktop": "keralaprisons.webp",
       "mobile": "keralaprisons-m.webp",
-      "phash": "ff03406068e00000"
+      "phash": "ff1f1e040143cf00"
     },
     "outlinks": [
       {
@@ -467,13 +466,13 @@
     ]
   },
   "score": {
-    "overall": 47,
+    "overall": 48,
     "security": 76,
     "accessibility": 10,
     "content": 56,
     "gigw": 16,
     "performance": 67,
-    "identity": 84
+    "identity": 88
   },
   "status": "poor",
   "issues": [
@@ -490,7 +489,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"\"> vs. 103% Malayalam content"
+      "ev": "<html lang=\"en\"> vs. 103% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -509,7 +508,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "36 serious violation(s)"
+      "ev": "35 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -545,7 +544,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "26008.164999999994ms"
+      "ev": "23916.788999999997ms"
     },
     {
       "id": "perf.weight",
@@ -607,7 +606,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.67"
+      "ev": "0.72"
     },
     {
       "id": "perf.images",
@@ -628,11 +627,6 @@
       "ev": "sitemap.xml returned 404"
     },
     {
-      "id": "id.charset_doctype",
-      "sev": "L",
-      "ev": "missing HTML5 doctype"
-    },
-    {
       "id": "gigw.emblem",
       "sev": "I"
     },
@@ -645,7 +639,7 @@
     {
       "d": "2026-11-20",
       "up": true,
-      "score": 47
+      "score": 48
     },
     {
       "d": "2026-11-19",
@@ -938,5 +932,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

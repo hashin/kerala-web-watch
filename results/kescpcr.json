@@ -37,23 +37,23 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-19T02:58:48.725Z",
-    "run": "1795057119894",
+    "at": "2026-11-20T02:49:00.481Z",
+    "run": "1795142886270",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 35,
+      "accessibility": 80,
+      "best_practices": 92,
+      "seo": 85
     },
     "axe": {
-      "critical": 0,
-      "serious": 1,
+      "critical": 2,
+      "serious": 25,
       "moderate": 4,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
+      "pages": 30,
       "pdfs": 0,
       "broken": 0
     },
@@ -73,8 +73,7 @@
       },
       {
         "id": "avail.status",
-        "r": "fail",
-        "ev": "final response was 403"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
@@ -114,7 +113,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
@@ -134,15 +133,16 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "pass"
+        "r": "fail",
+        "ev": "href=\"http://www.cdit.org\""
       },
       {
         "id": "sec.csp",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.xfo",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.xcto",
@@ -170,12 +170,13 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "pass"
+        "r": "fail",
+        "ev": "2 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "1 serious violation(s)"
+        "ev": "25 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -188,19 +189,23 @@
       },
       {
         "id": "a11y.alt",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 image(s) missing alt text"
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "18 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
-        "r": "pass"
+        "r": "fail",
+        "ev": "heading levels skipped"
       },
       {
         "id": "a11y.labels",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 form control(s) without a label"
       },
       {
         "id": "a11y.skip_link",
@@ -208,33 +213,37 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "pass"
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "80/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "35/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "18962.660999999996ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.44"
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4.4MB"
       },
       {
         "id": "perf.viewport",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.tap_targets",
@@ -246,7 +255,7 @@
       },
       {
         "id": "content.copyright_year",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "content.last_updated",
@@ -263,7 +272,8 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "pass"
+        "r": "fail",
+        "ev": "ml-IN"
       },
       {
         "id": "content.obsolete_tech",
@@ -299,16 +309,16 @@
       },
       {
         "id": "content.favicon",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 403 ()"
+        "ev": "6 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
       },
       {
         "id": "gigw.contact",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.feedback",
@@ -336,15 +346,15 @@
       },
       {
         "id": "gigw.disclaimer",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.screen_reader",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.help",
@@ -352,11 +362,11 @@
       },
       {
         "id": "gigw.rti",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.search",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.ownership",
@@ -368,7 +378,7 @@
       },
       {
         "id": "gigw.emblem",
-        "r": "warn"
+        "r": "pass"
       },
       {
         "id": "id.gov_domain",
@@ -380,17 +390,15 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.robots",
-        "r": "fail",
-        "ev": "robots.txt returned 403"
+        "r": "pass"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 403"
+        "r": "pass"
       },
       {
         "id": "id.soft_404",
@@ -398,12 +406,11 @@
       },
       {
         "id": "id.canonical",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.charset_doctype",
-        "r": "fail",
-        "ev": "missing UTF-8 charset, HTML5 doctype"
+        "r": "pass"
       },
       {
         "id": "id.tech",
@@ -417,21 +424,65 @@
     "screenshot": {
       "desktop": "kescpcr.webp",
       "mobile": "kescpcr-m.webp",
-      "phash": "0707ffffffffffff"
+      "phash": "00ff7f7f7f1f8001"
     },
-    "outlinks": []
+    "outlinks": [
+      {
+        "host": "ux4g.gov.in",
+        "count": 1,
+        "texts": [
+          "Created by"
+        ]
+      },
+      {
+        "host": "radionellikka.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "instagram.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "youtube.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "cdit.org",
+        "count": 1,
+        "texts": [
+          "CDIT"
+        ]
+      }
+    ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 54,
+    "security": 62,
+    "accessibility": 30,
+    "content": 52,
+    "gigw": 40,
+    "performance": 67,
+    "identity": 100
+  },
+  "status": "needs-work",
   "issues": [
     {
-      "id": "avail.status",
-      "sev": "C",
-      "ev": "final response was 403"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://www.cdit.org\""
     },
     {
-      "id": "sec.http_redirect",
-      "sev": "H"
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "2 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -439,29 +490,33 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "gigw.contact",
-      "sev": "H"
-    },
-    {
-      "id": "gigw.rti",
-      "sev": "H"
-    },
-    {
-      "id": "perf.viewport",
-      "sev": "H"
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-IN"
     },
     {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
-      "id": "sec.xfo",
-      "sev": "M"
-    },
-    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "1 serious violation(s)"
+      "ev": "25 serious violation(s)"
+    },
+    {
+      "id": "a11y.alt",
+      "sev": "M",
+      "ev": "1 image(s) missing alt text"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "18 low-contrast element(s)"
+    },
+    {
+      "id": "a11y.labels",
+      "sev": "M",
+      "ev": "1 form control(s) without a label"
     },
     {
       "id": "gigw.sitemap",
@@ -469,10 +524,6 @@
     },
     {
       "id": "gigw.privacy",
-      "sev": "M"
-    },
-    {
-      "id": "gigw.accessibility_statement",
       "sev": "M"
     },
     {
@@ -484,12 +535,18 @@
       "sev": "M"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "18962.660999999996ms"
     },
     {
-      "id": "sec.csp",
-      "sev": "L"
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "4.4MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "sec.xcto",
@@ -505,17 +562,23 @@
       "ev": "4 moderate/minor violation(s)"
     },
     {
-      "id": "content.meta_desc",
-      "sev": "L"
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "heading levels skipped"
     },
     {
-      "id": "content.favicon",
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
+    },
+    {
+      "id": "content.meta_desc",
       "sev": "L"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 403 ()"
+      "ev": "6 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
     },
     {
       "id": "gigw.feedback",
@@ -534,58 +597,24 @@
       "sev": "L"
     },
     {
-      "id": "gigw.disclaimer",
-      "sev": "L"
-    },
-    {
-      "id": "gigw.screen_reader",
-      "sev": "L"
-    },
-    {
       "id": "gigw.help",
       "sev": "L"
     },
     {
-      "id": "gigw.search",
-      "sev": "L"
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.44"
     },
     {
       "id": "perf.images",
       "sev": "L"
-    },
-    {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
-      "id": "id.robots",
-      "sev": "L",
-      "ev": "robots.txt returned 403"
-    },
-    {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 403"
-    },
-    {
-      "id": "id.charset_doctype",
-      "sev": "L",
-      "ev": "missing UTF-8 charset, HTML5 doctype"
-    },
-    {
-      "id": "gigw.emblem",
-      "sev": "I"
-    },
-    {
-      "id": "id.canonical",
-      "sev": "I"
     }
   ],
   "history": [
     {
       "d": "2026-11-20",
-      "up": false,
-      "score": null
+      "up": true,
+      "score": 54
     },
     {
       "d": "2026-11-19",
@@ -888,5 +917,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
