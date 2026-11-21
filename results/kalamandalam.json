@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-20T02:44:16.857Z",
-    "run": "1795142590452",
+    "at": "2026-11-21T02:52:23.511Z",
+    "run": "1795229496032",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
+      "performance": 58,
       "accessibility": 84,
       "best_practices": 96,
       "seo": 77
@@ -119,7 +119,8 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "warn",
+        "ev": "29 days left"
       },
       {
         "id": "sec.tls_version",
@@ -218,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "58/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "31803.20000000001ms"
+        "ev": "25087.033500000012ms"
       },
       {
         "id": "perf.cls",
@@ -232,7 +233,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "12.4MB"
+        "ev": "13.3MB"
       },
       {
         "id": "perf.viewport",
@@ -309,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "7 console error(s): Cannot set properties of null (setting 'onclick')"
+        "ev": "3 console error(s): Cannot set properties of null (setting 'onclick')"
       },
       {
         "id": "gigw.contact",
@@ -420,7 +421,7 @@
     "screenshot": {
       "desktop": "kalamandalam.webp",
       "mobile": "kalamandalam-m.webp",
-      "phash": "00001d11bdffffe7"
+      "phash": "00c0f89f0011b7ff"
     },
     "outlinks": [
       {
@@ -432,11 +433,11 @@
       },
       {
         "host": "google.com",
-        "count": 10,
+        "count": 9,
         "texts": [
           "📌Fee Notification – BPA and MPA Programmes – 2026–27 .",
           "📌കേരള കലാമണ്ഡലത്തിലെ 96-മത് വാർഷികവും സ്ഥാപകനായ മഹാകവി വള്ളത്തോൾ നാരായണ മേനോന്റെ 148 - മത് ജന്മദിനാഘോഷവും.",
-          "📌വള്ളത്തോൾ കവിതാലാപന/കവിതാരചന മത്സരം സംഘടിപ്പിക്കുന്നു."
+          "OPEN"
         ]
       },
       {
@@ -457,8 +458,8 @@
     ]
   },
   "score": {
-    "overall": 55,
-    "security": 68,
+    "overall": 53,
+    "security": 58,
     "accessibility": 46,
     "content": 38,
     "gigw": 22,
@@ -467,6 +468,11 @@
   },
   "status": "needs-work",
   "issues": [
+    {
+      "id": "sec.cert_expiry",
+      "sev": "H",
+      "ev": "29 days left"
+    },
     {
       "id": "a11y.axe_critical",
       "sev": "H",
@@ -533,12 +539,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "31803.20000000001ms"
+      "ev": "25087.033500000012ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "12.4MB"
+      "ev": "13.3MB"
     },
     {
       "id": "sec.csp",
@@ -569,7 +575,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "7 console error(s): Cannot set properties of null (setting 'onclick')"
+      "ev": "3 console error(s): Cannot set properties of null (setting 'onclick')"
     },
     {
       "id": "gigw.feedback",
@@ -605,6 +611,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-21",
+      "up": true,
+      "score": 53
+    },
     {
       "d": "2026-11-20",
       "up": true,
@@ -906,5 +917,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

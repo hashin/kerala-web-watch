@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-19T02:53:59.614Z",
-    "run": "1795056778516",
+    "at": "2026-11-21T02:49:20.244Z",
+    "run": "1795229292047",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 42,
+      "performance": 44,
       "accessibility": 90,
       "best_practices": 100,
       "seo": 92
@@ -55,10 +55,10 @@
     "crawl": {
       "pages": 30,
       "pdfs": 2,
-      "broken": 1
+      "broken": 2
     },
     "tech": {
-      "cms": "WordPress 7.1.4",
+      "cms": "WordPress 7.1.5",
       "server": "nginx",
       "jquery": null
     },
@@ -121,7 +121,8 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "warn",
+        "ev": "29 days left"
       },
       {
         "id": "sec.tls_version",
@@ -221,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "42/100"
+        "ev": "44/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "20352.119999999995ms"
+        "ev": "19023.887999999995ms"
       },
       {
         "id": "perf.cls",
@@ -281,7 +282,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://itmission.kerala.gov.in/)"
+        "ev": "2/30 crawled link(s) broken (https://www.pwd.kerala.gov.in/, https://itmission.kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -412,7 +413,7 @@
       {
         "id": "id.tech",
         "r": "pass",
-        "ev": "WordPress 7.1.4"
+        "ev": "WordPress 7.1.5"
       },
       {
         "id": "id.third_party",
@@ -472,8 +473,8 @@
     ]
   },
   "score": {
-    "overall": 62,
-    "security": 62,
+    "overall": 60,
+    "security": 52,
     "accessibility": 60,
     "content": 62,
     "gigw": 32,
@@ -482,6 +483,11 @@
   },
   "status": "needs-work",
   "issues": [
+    {
+      "id": "sec.cert_expiry",
+      "sev": "H",
+      "ev": "29 days left"
+    },
     {
       "id": "sec.vuln_js",
       "sev": "H",
@@ -500,7 +506,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://itmission.kerala.gov.in/)"
+      "ev": "2/30 crawled link(s) broken (https://www.pwd.kerala.gov.in/, https://itmission.kerala.gov.in/)"
     },
     {
       "id": "gigw.rti",
@@ -526,7 +532,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "20352.119999999995ms"
+      "ev": "19023.887999999995ms"
     },
     {
       "id": "perf.weight",
@@ -604,6 +610,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-21",
+      "up": true,
+      "score": 60
+    },
     {
       "d": "2026-11-20",
       "up": true,
@@ -905,5 +916,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

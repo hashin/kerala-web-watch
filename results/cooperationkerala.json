@@ -37,25 +37,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-20T02:41:26.912Z",
-    "run": "1795142392002",
+    "at": "2026-11-21T02:55:33.159Z",
+    "run": "1795229616532",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 31,
+      "performance": 37,
       "accessibility": 81,
       "best_practices": 73,
       "seo": 75
     },
     "axe": {
-      "critical": 0,
-      "serious": 10,
-      "moderate": 5,
+      "critical": 2,
+      "serious": 11,
+      "moderate": 4,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 12,
-      "broken": 6
+      "broken": 7
     },
     "tech": {
       "cms": null,
@@ -172,17 +172,18 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "pass"
+        "r": "fail",
+        "ev": "2 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "10 serious violation(s)"
+        "ev": "11 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "5 moderate/minor violation(s)"
+        "ev": "4 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -199,8 +200,7 @@
       },
       {
         "id": "a11y.headings",
-        "r": "fail",
-        "ev": "no <h1>"
+        "r": "pass"
       },
       {
         "id": "a11y.labels",
@@ -223,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "31/100"
+        "ev": "37/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "224308.17850000018ms"
+        "ev": "225497.02099999937ms"
       },
       {
         "id": "perf.cls",
@@ -285,7 +285,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "2/30 crawled link(s) broken (https://eofficercs.kerala.gov.in/, http://prism.kerala.gov.in/)"
+        "ev": "3/30 crawled link(s) broken (https://eofficercs.kerala.gov.in/, https://camis.kerala.gov.in/, http://prism.kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -452,9 +452,9 @@
     ]
   },
   "score": {
-    "overall": 47,
+    "overall": 43,
     "security": 38,
-    "accessibility": 70,
+    "accessibility": 54,
     "content": 18,
     "gigw": 8,
     "performance": 66,
@@ -473,6 +473,11 @@
       "ev": "bootstrap 3.3.7, bootstrap 3.4.1"
     },
     {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "2 critical violation(s)"
+    },
+    {
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
@@ -485,7 +490,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "2/30 crawled link(s) broken (https://eofficercs.kerala.gov.in/, http://prism.kerala.gov.in/)"
+      "ev": "3/30 crawled link(s) broken (https://eofficercs.kerala.gov.in/, https://camis.kerala.gov.in/, http://prism.kerala.gov.in/)"
     },
     {
       "id": "gigw.rti",
@@ -498,7 +503,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "10 serious violation(s)"
+      "ev": "11 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -534,7 +539,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "224308.17850000018ms"
+      "ev": "225497.02099999937ms"
     },
     {
       "id": "perf.weight",
@@ -561,12 +566,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "5 moderate/minor violation(s)"
-    },
-    {
-      "id": "a11y.headings",
-      "sev": "L",
-      "ev": "no <h1>"
+      "ev": "4 moderate/minor violation(s)"
     },
     {
       "id": "a11y.keyboard",
@@ -640,6 +640,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-21",
+      "up": true,
+      "score": 43
+    },
     {
       "d": "2026-11-20",
       "up": true,
@@ -941,5 +946,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

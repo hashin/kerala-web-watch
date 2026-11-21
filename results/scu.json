@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-20T02:48:51.423Z",
-    "run": "1795142870692",
+    "at": "2026-11-21T03:01:04.928Z",
+    "run": "1795230006942",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 82,
+      "performance": 73,
       "accessibility": 76,
       "best_practices": 65,
       "seo": 64
     },
     "axe": {
       "critical": 2,
-      "serious": 6,
+      "serious": 7,
       "moderate": 18,
       "minor": 1
     },
@@ -175,7 +175,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "6 serious violation(s)"
+        "ev": "7 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -194,7 +194,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "2 low-contrast element(s)"
+        "ev": "3 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -220,11 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "82/100"
+        "ev": "73/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "fail",
+        "ev": "4348.9439999999995ms"
       },
       {
         "id": "perf.cls",
@@ -434,12 +435,12 @@
     ]
   },
   "score": {
-    "overall": 51,
+    "overall": 50,
     "security": 44,
     "accessibility": 46,
     "content": 22,
     "gigw": 40,
-    "performance": 96,
+    "performance": 86,
     "identity": 92
   },
   "status": "needs-work",
@@ -480,7 +481,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "6 serious violation(s)"
+      "ev": "7 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -490,7 +491,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "2 low-contrast element(s)"
+      "ev": "3 low-contrast element(s)"
     },
     {
       "id": "content.copyright_year",
@@ -517,6 +518,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "4348.9439999999995ms"
     },
     {
       "id": "sec.csp",
@@ -592,6 +598,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-21",
+      "up": true,
+      "score": 50
+    },
     {
       "d": "2026-11-20",
       "up": true,
@@ -898,5 +909,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

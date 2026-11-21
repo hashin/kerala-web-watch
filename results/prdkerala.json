@@ -35,18 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-20T02:47:50.691Z",
-    "run": "1795142808940",
+    "at": "2026-11-21T03:00:06.941Z",
+    "run": "1795229951240",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 21,
-      "accessibility": 77,
-      "best_practices": 92,
-      "seo": 85
-    },
+    "lighthouse": null,
     "axe": {
-      "critical": 11,
-      "serious": 23,
+      "critical": 12,
+      "serious": 24,
       "moderate": 2,
       "minor": 1
     },
@@ -170,12 +165,12 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "11 critical violation(s)"
+        "ev": "12 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "23 serious violation(s)"
+        "ev": "24 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -193,7 +188,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "4 low-contrast element(s)"
+        "ev": "5 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -215,23 +210,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "77/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "21/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "16784.849000000002ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.65"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -244,11 +235,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -290,8 +281,7 @@
       },
       {
         "id": "content.broken_images",
-        "r": "fail",
-        "ev": "1 broken image(s)"
+        "r": "pass"
       },
       {
         "id": "content.malayalam",
@@ -312,7 +302,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "25 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/player/6b3d0364/www-player.css' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -424,7 +414,7 @@
     "screenshot": {
       "desktop": "prdkerala.webp",
       "mobile": "prdkerala-m.webp",
-      "phash": "000f1f0f00e3efe3"
+      "phash": "00ffff781043e7e3"
     },
     "outlinks": [
       {
@@ -539,15 +529,15 @@
     ]
   },
   "score": {
-    "overall": 51,
+    "overall": 54,
     "security": 42,
     "accessibility": 50,
-    "content": 48,
+    "content": 52,
     "gigw": 32,
-    "performance": 72,
+    "performance": 90,
     "identity": 91
   },
-  "status": "down",
+  "status": "needs-work",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -562,7 +552,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "11 critical violation(s)"
+      "ev": "12 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -581,12 +571,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "23 serious violation(s)"
+      "ev": "24 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "4 low-contrast element(s)"
+      "ev": "5 low-contrast element(s)"
     },
     {
       "id": "gigw.privacy",
@@ -603,11 +593,6 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "16784.849000000002ms"
     },
     {
       "id": "perf.weight",
@@ -643,18 +628,13 @@
       "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
-      "id": "content.broken_images",
-      "sev": "L",
-      "ev": "1 broken image(s)"
-    },
-    {
       "id": "content.meta_desc",
       "sev": "L"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "25 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/player/6b3d0364/www-player.css' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -685,15 +665,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.65"
-    },
-    {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -708,6 +679,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-21",
+      "up": true,
+      "score": 54
+    },
     {
       "d": "2026-11-20",
       "up": false,
@@ -1009,5 +985,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

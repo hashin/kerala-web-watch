@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-20T02:34:42.192Z",
-    "run": "1795142019799",
+    "at": "2026-11-21T02:47:49.096Z",
+    "run": "1795229217132",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 50,
+      "performance": 63,
       "accessibility": 75,
       "best_practices": 92,
       "seo": 73
@@ -52,7 +52,7 @@
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 10,
+      "pdfs": 11,
       "broken": 1
     },
     "tech": {
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "50/100"
+        "ev": "63/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9760.33944ms"
+        "ev": "10478.155000000002ms"
       },
       {
         "id": "perf.cls",
@@ -269,7 +269,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-"
+        "ev": "ml-user"
       },
       {
         "id": "content.obsolete_tech",
@@ -502,7 +502,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-"
+      "ev": "ml-user"
     },
     {
       "id": "content.broken_links",
@@ -560,7 +560,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9760.33944ms"
+      "ev": "10478.155000000002ms"
     },
     {
       "id": "perf.weight",
@@ -650,6 +650,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-21",
+      "up": true,
+      "score": 43
+    },
     {
       "d": "2026-11-20",
       "up": true,
@@ -946,5 +951,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

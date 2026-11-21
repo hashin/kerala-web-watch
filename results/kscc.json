@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-20T03:03:11.045Z",
-    "run": "1795143745480",
+    "at": "2026-11-21T03:07:46.824Z",
+    "run": "1795230424430",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 13,
+      "performance": 24,
       "accessibility": 90,
       "best_practices": 77,
       "seo": 92
@@ -219,17 +219,16 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "13/100"
+        "ev": "24/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6068.76ms"
+        "ev": "5871.3679999999995ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.51"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -381,7 +380,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "9 days left"
+        "ev": "8 days left"
       },
       {
         "id": "id.www_consistency",
@@ -425,12 +424,12 @@
     "outlinks": []
   },
   "score": {
-    "overall": 52,
+    "overall": 53,
     "security": 48,
     "accessibility": 60,
     "content": 56,
     "gigw": 18,
-    "performance": 82,
+    "performance": 86,
     "identity": 60
   },
   "status": "needs-work",
@@ -463,7 +462,7 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "9 days left"
+      "ev": "8 days left"
     },
     {
       "id": "sec.hsts",
@@ -501,7 +500,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6068.76ms"
+      "ev": "5871.3679999999995ms"
     },
     {
       "id": "sec.csp",
@@ -567,16 +566,16 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.51"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-21",
+      "up": true,
+      "score": 53
+    },
     {
       "d": "2026-11-20",
       "up": true,
@@ -878,5 +877,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

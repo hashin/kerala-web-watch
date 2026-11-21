@@ -37,29 +37,24 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-20T02:47:51.733Z",
-    "run": "1795142484594",
+    "at": "2026-11-21T02:55:23.667Z",
+    "run": "1795229670286",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 55,
-      "accessibility": 87,
-      "best_practices": 96,
-      "seo": 77
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 0,
-      "serious": 49,
-      "moderate": 8,
-      "minor": 1
+      "serious": 31,
+      "moderate": 3,
+      "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 7,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "WordPress 6.5.15",
-      "server": null,
+      "server": "Apache",
       "jquery": null
     },
     "checks": [
@@ -69,16 +64,15 @@
       },
       {
         "id": "avail.connect",
-        "r": "fail",
-        "ev": "timeout"
+        "r": "pass"
       },
       {
         "id": "avail.status",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -98,7 +92,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -110,7 +104,7 @@
       },
       {
         "id": "sec.https",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
@@ -134,7 +128,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "fail",
+        "ev": "href=\"http://gmpg.org/xfn/11\""
       },
       {
         "id": "sec.csp",
@@ -142,7 +137,7 @@
       },
       {
         "id": "sec.xfo",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xcto",
@@ -175,12 +170,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "49 serious violation(s)"
+        "ev": "31 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "9 moderate/minor violation(s)"
+        "ev": "3 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -193,7 +188,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "35 low-contrast element(s)"
+        "ev": "17 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -214,27 +209,23 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "87/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "55/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "15904.203599999997ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "3.1MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
@@ -242,11 +233,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -284,8 +275,7 @@
       },
       {
         "id": "content.broken_pdfs",
-        "r": "fail",
-        "ev": "1 linked PDF(s) 404: https://climatechange.envt.kerala.gov.in/wp-content/uploads/2026/06/Carbon-Neutral-Kerala-by-2050-Report.pdf"
+        "r": "pass"
       },
       {
         "id": "content.broken_images",
@@ -420,7 +410,7 @@
     "screenshot": {
       "desktop": "envtkerala.webp",
       "mobile": "envtkerala-m.webp",
-      "phash": "fffffff9f7c103a5"
+      "phash": "ff7fc1890100009f"
     },
     "outlinks": [
       {
@@ -435,21 +425,6 @@
       },
       {
         "host": "arcgis.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "envfor.nic.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "keralaczma.gov.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "seiaakerala.in",
         "count": 1,
         "texts": []
       },
@@ -469,17 +444,25 @@
       }
     ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 56,
+    "security": 28,
+    "accessibility": 72,
+    "content": 52,
+    "gigw": 22,
+    "performance": 100,
+    "identity": 100
+  },
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "avail.connect",
-      "sev": "C",
-      "ev": "timeout"
-    },
     {
       "id": "sec.http_redirect",
       "sev": "H"
+    },
+    {
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://gmpg.org/xfn/11\""
     },
     {
       "id": "content.last_updated",
@@ -496,19 +479,18 @@
       "sev": "M"
     },
     {
+      "id": "sec.xfo",
+      "sev": "M"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "49 serious violation(s)"
+      "ev": "31 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "35 low-contrast element(s)"
-    },
-    {
-      "id": "content.broken_pdfs",
-      "sev": "M",
-      "ev": "1 linked PDF(s) 404: https://climatechange.envt.kerala.gov.in/wp-content/uploads/2026/06/Carbon-Neutral-Kerala-by-2050-Report.pdf"
+      "ev": "17 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -531,20 +513,6 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "15904.203599999997ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "3.1MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
-    },
-    {
       "id": "sec.csp",
       "sev": "L"
     },
@@ -559,7 +527,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "9 moderate/minor violation(s)"
+      "ev": "3 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -601,13 +569,14 @@
     {
       "id": "gigw.help",
       "sev": "L"
-    },
-    {
-      "id": "perf.images",
-      "sev": "L"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-21",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-11-20",
       "up": false,
@@ -914,5 +883,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

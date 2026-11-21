@@ -35,28 +35,28 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-20T02:51:38.403Z",
-    "run": "1795143017254",
+    "at": "2026-11-21T03:05:42.001Z",
+    "run": "1795230288702",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 32,
-      "accessibility": 83,
+      "performance": 78,
+      "accessibility": 81,
       "best_practices": 96,
-      "seo": 75
+      "seo": 83
     },
     "axe": {
-      "critical": 3,
-      "serious": 8,
-      "moderate": 2,
+      "critical": 0,
+      "serious": 11,
+      "moderate": 4,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 3,
-      "broken": 0
+      "broken": 27
     },
     "tech": {
-      "cms": null,
+      "cms": "WordPress 7.1.5",
       "server": "Apache",
       "jquery": null
     },
@@ -168,18 +168,17 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "fail",
-        "ev": "3 critical violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "8 serious violation(s)"
+        "ev": "11 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "2 moderate/minor violation(s)"
+        "ev": "4 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -187,13 +186,12 @@
       },
       {
         "id": "a11y.alt",
-        "r": "fail",
-        "ev": "1 image(s) missing alt text"
+        "r": "pass"
       },
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "2 low-contrast element(s)"
+        "ev": "5 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -210,33 +208,29 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "warn",
-        "ev": "tabindex=\"-1\" alongside outline:none"
+        "r": "pass"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "83/100"
+        "ev": "81/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "32/100"
+        "ev": "78/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "9576.184499999998ms"
+        "r": "pass"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.69"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
-        "r": "fail",
-        "ev": "21.1MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
@@ -244,7 +238,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -269,8 +263,7 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "fail",
-        "ev": "ml-IN"
+        "r": "pass"
       },
       {
         "id": "content.obsolete_tech",
@@ -282,7 +275,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "27/30 crawled link(s) broken (https://keralabiodiversity.org/?page_id=337, https://keralabiodiversity.org/?page_id=340, https://keralabiodiversity.org/?page_id=345, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -310,7 +304,8 @@
       },
       {
         "id": "content.console_errors",
-        "r": "pass"
+        "r": "fail",
+        "ev": "2 console error(s): Access to fetch at 'https://www.gstatic.com/_/mss/boq-calendar/_/ss/k=boq-calendar.CalendarEmbed.HUNV6oyE7ZM.L.X.O/am=AAAAADCAYAAANA/d=1/ed=1/rs=AA4Gz9gALaNTT9dHXBJU8BJ2RKZU4HB22Q/m=mainview,_b,_tp' from origin 'https://keralabiodiversity.org' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -413,7 +408,8 @@
       },
       {
         "id": "id.tech",
-        "r": "pass"
+        "r": "pass",
+        "ev": "WordPress 7.1.5"
       },
       {
         "id": "id.third_party",
@@ -423,7 +419,7 @@
     "screenshot": {
       "desktop": "keralabiodiversity.webp",
       "mobile": "keralabiodiversity-m.webp",
-      "phash": "5fff3858000fff3f"
+      "phash": "00ffff0707e7e7e7"
     },
     "outlinks": [
       {
@@ -446,62 +442,6 @@
         "texts": []
       },
       {
-        "host": "nbaindia.org",
-        "count": 1,
-        "texts": [
-          "NBA"
-        ]
-      },
-      {
-        "host": "cbd.int",
-        "count": 1,
-        "texts": [
-          "CBC"
-        ]
-      },
-      {
-        "host": "unep.org",
-        "count": 1,
-        "texts": [
-          "UNEP"
-        ]
-      },
-      {
-        "host": "cms.int",
-        "count": 1,
-        "texts": [
-          "CMS"
-        ]
-      },
-      {
-        "host": "wetlands.org",
-        "count": 1,
-        "texts": [
-          "Wetlands"
-        ]
-      },
-      {
-        "host": "iucn.org",
-        "count": 1,
-        "texts": [
-          "IUCN"
-        ]
-      },
-      {
-        "host": "moef.gov.in",
-        "count": 1,
-        "texts": [
-          "MoEFCC"
-        ]
-      },
-      {
-        "host": "kerala.gov.in",
-        "count": 1,
-        "texts": [
-          "DoECC"
-        ]
-      },
-      {
         "host": "cdit.org",
         "count": 1,
         "texts": [
@@ -511,12 +451,12 @@
     ]
   },
   "score": {
-    "overall": 55,
+    "overall": 66,
     "security": 80,
-    "accessibility": 40,
-    "content": 56,
+    "accessibility": 72,
+    "content": 52,
     "gigw": 22,
-    "performance": 62,
+    "performance": 96,
     "identity": 72
   },
   "status": "needs-work",
@@ -527,19 +467,14 @@
       "ev": "href=\"http://gmpg.org/xfn/11\""
     },
     {
-      "id": "a11y.axe_critical",
-      "sev": "H",
-      "ev": "3 critical violation(s)"
-    },
-    {
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "content.legacy_font",
+      "id": "content.broken_links",
       "sev": "H",
-      "ev": "ml-IN"
+      "ev": "27/30 crawled link(s) broken (https://keralabiodiversity.org/?page_id=337, https://keralabiodiversity.org/?page_id=340, https://keralabiodiversity.org/?page_id=345, ...)"
     },
     {
       "id": "id.gov_domain",
@@ -549,17 +484,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "8 serious violation(s)"
-    },
-    {
-      "id": "a11y.alt",
-      "sev": "M",
-      "ev": "1 image(s) missing alt text"
+      "ev": "11 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "2 low-contrast element(s)"
+      "ev": "5 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -582,23 +512,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "9576.184499999998ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "21.1MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
-    },
-    {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "2 moderate/minor violation(s)"
+      "ev": "4 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -606,13 +522,13 @@
       "ev": "heading levels skipped"
     },
     {
-      "id": "a11y.keyboard",
-      "sev": "L",
-      "ev": "tabindex=\"-1\" alongside outline:none"
-    },
-    {
       "id": "content.meta_desc",
       "sev": "L"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "2 console error(s): Access to fetch at 'https://www.gstatic.com/_/mss/boq-calendar/_/ss/k=boq-calendar.CalendarEmbed.HUNV6oyE7ZM.L.X.O/am=AAAAADCAYAAANA/d=1/ed=1/rs=AA4Gz9gALaNTT9dHXBJU8BJ2RKZU4HB22Q/m=mainview,_b,_tp' from origin 'https://keralabiodiversity.org' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -643,11 +559,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.69"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -663,6 +574,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-21",
+      "up": true,
+      "score": 66
+    },
     {
       "d": "2026-11-20",
       "up": true,
@@ -969,5 +885,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

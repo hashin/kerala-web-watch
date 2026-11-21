@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-20T03:05:29.272Z",
-    "run": "1795143880770",
+    "at": "2026-11-21T03:08:43.199Z",
+    "run": "1795230345321",
     "vantage": "gh-us",
     "lighthouse": null,
     "axe": {
@@ -48,7 +48,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -272,7 +272,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "2/30 crawled link(s) broken (https://www.kamcoindia.com/, http://www.kamcoindia.com/#)"
       },
       {
         "id": "content.broken_pdfs",
@@ -458,6 +459,11 @@
       "ev": "no \"last updated\" date found"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "2/30 crawled link(s) broken (https://www.kamcoindia.com/, http://www.kamcoindia.com/#)"
+    },
+    {
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "www.kamcoindia.com"
@@ -578,6 +584,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-21",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-20",
       "up": false,
@@ -879,5 +890,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

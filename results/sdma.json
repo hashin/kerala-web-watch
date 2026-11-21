@@ -37,18 +37,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-20T02:39:08.029Z",
-    "run": "1795142296082",
+    "at": "2026-11-21T02:50:11.067Z",
+    "run": "1795229360245",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 53,
+      "performance": 55,
       "accessibility": 81,
       "best_practices": 85,
       "seo": 77
     },
     "axe": {
       "critical": 2,
-      "serious": 43,
+      "serious": 42,
       "moderate": 2,
       "minor": 0
     },
@@ -176,7 +176,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "43 serious violation(s)"
+        "ev": "42 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -185,7 +185,8 @@
       },
       {
         "id": "a11y.lang",
-        "r": "pass"
+        "r": "fail",
+        "ev": "<html lang=\"en-GB\"> vs. 33% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -194,7 +195,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "17 low-contrast element(s)"
+        "ev": "16 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -221,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "53/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9530.277ms"
+        "ev": "12821.823000000002ms"
       },
       {
         "id": "perf.cls",
@@ -259,7 +260,7 @@
       },
       {
         "id": "content.stale_news",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "content.placeholder",
@@ -416,7 +417,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://connect.facebook.net/en_US/all.js?hash=1c83b8a12f0318e05b0dd0f4ac857f59, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
+        "ev": "https://connect.facebook.net/en_US/all.js?hash=1800957aa67227ee81ba7a8e5b6160ee, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
       }
     ],
     "screenshot": {
@@ -464,9 +465,9 @@
     ]
   },
   "score": {
-    "overall": 64,
+    "overall": 59,
     "security": 80,
-    "accessibility": 54,
+    "accessibility": 34,
     "content": 46,
     "gigw": 32,
     "performance": 86,
@@ -485,6 +486,11 @@
       "ev": "2 critical violation(s)"
     },
     {
+      "id": "a11y.lang",
+      "sev": "H",
+      "ev": "<html lang=\"en-GB\"> vs. 33% Malayalam content"
+    },
+    {
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
@@ -497,12 +503,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "43 serious violation(s)"
+      "ev": "42 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "17 low-contrast element(s)"
+      "ev": "16 low-contrast element(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -528,7 +534,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9530.277ms"
+      "ev": "12821.823000000002ms"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -584,10 +590,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://connect.facebook.net/en_US/all.js?hash=1c83b8a12f0318e05b0dd0f4ac857f59, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
+      "ev": "https://connect.facebook.net/en_US/all.js?hash=1800957aa67227ee81ba7a8e5b6160ee, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-21",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-11-20",
       "up": true,
@@ -889,5 +900,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

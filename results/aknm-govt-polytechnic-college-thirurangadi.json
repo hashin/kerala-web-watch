@@ -38,14 +38,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-19T03:12:23.971Z",
-    "run": "1795057740770",
+    "at": "2026-11-21T03:14:08.676Z",
+    "run": "1795230731764",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 59,
       "accessibility": 83,
       "best_practices": 96,
-      "seo": 85
+      "seo": 92
     },
     "axe": {
       "critical": 2,
@@ -98,8 +98,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "fail",
-        "ev": "8407ms"
+        "r": "warn",
+        "ev": "3862ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -225,12 +225,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "13701.12ms"
+        "ev": "6003.0740000000005ms"
       },
       {
         "id": "perf.cls",
@@ -389,7 +389,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "59 days left"
+        "ev": "57 days left"
       },
       {
         "id": "id.www_consistency",
@@ -499,12 +499,12 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "59 days left"
+      "ev": "57 days left"
     },
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "8407ms"
+      "ev": "3862ms"
     },
     {
       "id": "sec.hsts",
@@ -552,7 +552,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "13701.12ms"
+      "ev": "6003.0740000000005ms"
     },
     {
       "id": "perf.weight",
@@ -634,6 +634,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-21",
+      "up": true,
+      "score": 44
+    },
     {
       "d": "2026-11-20",
       "up": true,
@@ -910,5 +915,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

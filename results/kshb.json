@@ -35,24 +35,24 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-11-20T02:47:58.944Z",
-    "run": "1795142823441",
+    "at": "2026-11-21T03:05:58.802Z",
+    "run": "1795230342003",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 18,
-      "accessibility": 90,
-      "best_practices": 100,
-      "seo": 92
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
     },
     "axe": {
       "critical": 0,
-      "serious": 14,
-      "moderate": 5,
-      "minor": 1
+      "serious": 2,
+      "moderate": 2,
+      "minor": 0
     },
     "crawl": {
-      "pages": 30,
-      "pdfs": 2,
+      "pages": 0,
+      "pdfs": 0,
       "broken": 0
     },
     "tech": {
@@ -71,7 +71,8 @@
       },
       {
         "id": "avail.status",
-        "r": "pass"
+        "r": "fail",
+        "ev": "final response was 500"
       },
       {
         "id": "avail.redirect_offsite",
@@ -87,7 +88,8 @@
       },
       {
         "id": "avail.blank",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0 visible characters"
       },
       {
         "id": "avail.under_construction",
@@ -111,7 +113,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.cert_valid",
@@ -131,8 +133,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://www.kshbonline.com/\""
+        "r": "pass"
       },
       {
         "id": "sec.csp",
@@ -173,12 +174,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "14 serious violation(s)"
+        "ev": "2 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "6 moderate/minor violation(s)"
+        "ev": "2 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -190,13 +191,12 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "13 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
         "r": "fail",
-        "ev": "heading levels skipped"
+        "ev": "no <h1>"
       },
       {
         "id": "a11y.labels",
@@ -208,37 +208,33 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "warn",
-        "ev": "tabindex=\"-1\" alongside outline:none"
+        "r": "pass"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "90/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "18/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "27766.960499999997ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "1.42"
+        "r": "na"
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "7.8MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.tap_targets",
@@ -250,7 +246,7 @@
       },
       {
         "id": "content.copyright_year",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "content.last_updated",
@@ -267,13 +263,11 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "fail",
-        "ev": "ml-IN"
+        "r": "pass"
       },
       {
         "id": "content.obsolete_tech",
-        "r": "fail",
-        "ev": "<marquee"
+        "r": "pass"
       },
       {
         "id": "content.best_viewed",
@@ -297,7 +291,8 @@
       },
       {
         "id": "content.title",
-        "r": "pass"
+        "r": "fail",
+        "ev": "missing <title>"
       },
       {
         "id": "content.meta_desc",
@@ -305,15 +300,16 @@
       },
       {
         "id": "content.favicon",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.console_errors",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 500 ()"
       },
       {
         "id": "gigw.contact",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.feedback",
@@ -341,7 +337,7 @@
       },
       {
         "id": "gigw.disclaimer",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.accessibility_statement",
@@ -353,7 +349,7 @@
       },
       {
         "id": "gigw.help",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.rti",
@@ -385,15 +381,17 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.robots",
-        "r": "pass"
+        "r": "fail",
+        "ev": "robots.txt returned 500"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "pass"
+        "r": "fail",
+        "ev": "sitemap.xml returned 500"
       },
       {
         "id": "id.soft_404",
@@ -401,11 +399,12 @@
       },
       {
         "id": "id.canonical",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.charset_doctype",
-        "r": "pass"
+        "r": "fail",
+        "ev": "missing HTML5 doctype"
       },
       {
         "id": "id.tech",
@@ -419,67 +418,26 @@
     "screenshot": {
       "desktop": "kshb.webp",
       "mobile": "kshb-m.webp",
-      "phash": "ffff0800000090ff"
+      "phash": "ffffffffffffffff"
     },
-    "outlinks": [
-      {
-        "host": "facebook.com",
-        "count": 2,
-        "texts": [
-          "facebook"
-        ]
-      },
-      {
-        "host": "youtube.com",
-        "count": 2,
-        "texts": [
-          "youtube"
-        ]
-      },
-      {
-        "host": "kshbonline.com",
-        "count": 2,
-        "texts": [
-          "ഇപ്പോൾ  അപേക്ഷിക്കാം",
-          "അപേക്ഷിക്കാം"
-        ]
-      },
-      {
-        "host": "cdit.org",
-        "count": 20,
-        "texts": [
-          "C-Dit"
-        ]
-      },
-      {
-        "host": "twitter.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "mohua.gov.in",
-        "count": 1,
-        "texts": [
-          "ഹൗസിങ് ആൻഡ് അർബൻ അഫയേർസ് മിനിസ്ട്രി"
-        ]
-      }
-    ]
+    "outlinks": []
   },
-  "score": {
-    "overall": 58,
-    "security": 62,
-    "accessibility": 70,
-    "content": 46,
-    "gigw": 6,
-    "performance": 67,
-    "identity": 100
-  },
-  "status": "needs-work",
+  "score": null,
+  "status": "broken",
   "issues": [
     {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://www.kshbonline.com/\""
+      "id": "avail.status",
+      "sev": "C",
+      "ev": "final response was 500"
+    },
+    {
+      "id": "avail.blank",
+      "sev": "C",
+      "ev": "0 visible characters"
+    },
+    {
+      "id": "sec.http_redirect",
+      "sev": "H"
     },
     {
       "id": "content.last_updated",
@@ -487,12 +445,15 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "content.legacy_font",
-      "sev": "H",
-      "ev": "ml-IN"
+      "id": "gigw.contact",
+      "sev": "H"
     },
     {
       "id": "gigw.rti",
+      "sev": "H"
+    },
+    {
+      "id": "perf.viewport",
       "sev": "H"
     },
     {
@@ -502,17 +463,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "14 serious violation(s)"
+      "ev": "2 serious violation(s)"
     },
     {
-      "id": "a11y.contrast",
+      "id": "content.title",
       "sev": "M",
-      "ev": "13 low-contrast element(s)"
-    },
-    {
-      "id": "content.obsolete_tech",
-      "sev": "M",
-      "ev": "<marquee"
+      "ev": "missing <title>"
     },
     {
       "id": "gigw.sitemap",
@@ -535,16 +491,6 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "27766.960499999997ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "7.8MB"
-    },
-    {
       "id": "perf.tap_targets",
       "sev": "M"
     },
@@ -559,21 +505,25 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "6 moderate/minor violation(s)"
+      "ev": "2 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "heading levels skipped"
-    },
-    {
-      "id": "a11y.keyboard",
-      "sev": "L",
-      "ev": "tabindex=\"-1\" alongside outline:none"
+      "ev": "no <h1>"
     },
     {
       "id": "content.meta_desc",
       "sev": "L"
+    },
+    {
+      "id": "content.favicon",
+      "sev": "L"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 500 ()"
     },
     {
       "id": "gigw.feedback",
@@ -592,7 +542,15 @@
       "sev": "L"
     },
     {
+      "id": "gigw.disclaimer",
+      "sev": "L"
+    },
+    {
       "id": "gigw.screen_reader",
+      "sev": "L"
+    },
+    {
+      "id": "gigw.help",
       "sev": "L"
     },
     {
@@ -600,20 +558,43 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "1.42"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
     {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
+      "id": "id.robots",
+      "sev": "L",
+      "ev": "robots.txt returned 500"
+    },
+    {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 500"
+    },
+    {
+      "id": "id.charset_doctype",
+      "sev": "L",
+      "ev": "missing HTML5 doctype"
+    },
+    {
       "id": "gigw.emblem",
+      "sev": "I"
+    },
+    {
+      "id": "id.canonical",
       "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-21",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-20",
       "up": true,
@@ -920,5 +901,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
