@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-04T02:03:46.148Z",
-    "run": "1793757784881",
+    "at": "2026-11-22T01:57:46.601Z",
+    "run": "1795312625062",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 78,
+      "performance": 72,
       "accessibility": 63,
       "best_practices": 88,
       "seo": 92
@@ -121,8 +121,7 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "26 days left"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
@@ -223,11 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "78/100"
+        "ev": "72/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "fail",
+        "ev": "4410.62ms"
       },
       {
         "id": "perf.cls",
@@ -418,7 +418,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-3J77CD95RX&amp;cx=c&amp;gtm=4e6b21, https://www.googletagmanager.com/gtag/js?id=UA-37163079-44"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-3J77CD95RX&amp;cx=c&amp;gtm=4e6bh1, https://www.googletagmanager.com/gtag/js?id=UA-37163079-44"
       }
     ],
     "screenshot": {
@@ -451,11 +451,6 @@
       "id": "sec.cert_valid",
       "sev": "C",
       "ev": "certificate chain invalid, expired, or hostname mismatch"
-    },
-    {
-      "id": "sec.cert_expiry",
-      "sev": "H",
-      "ev": "26 days left"
     },
     {
       "id": "a11y.axe_critical",
@@ -528,6 +523,11 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "4410.62ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "4.4MB"
@@ -589,10 +589,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-3J77CD95RX&amp;cx=c&amp;gtm=4e6b21, https://www.googletagmanager.com/gtag/js?id=UA-37163079-44"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-3J77CD95RX&amp;cx=c&amp;gtm=4e6bh1, https://www.googletagmanager.com/gtag/js?id=UA-37163079-44"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-22",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-21",
       "up": false,
@@ -894,5 +899,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-21T02:57:50.301Z",
-    "run": "1795229808108",
+    "at": "2026-11-22T01:43:28.792Z",
+    "run": "1795311724157",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 32,
-      "accessibility": 78,
+      "performance": 31,
+      "accessibility": 81,
       "best_practices": 88,
       "seo": 62
     },
     "axe": {
       "critical": 6,
-      "serious": 32,
+      "serious": 31,
       "moderate": 3,
       "minor": 1
     },
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "5565ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -141,7 +140,7 @@
       },
       {
         "id": "sec.xfo",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xcto",
@@ -175,7 +174,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "32 serious violation(s)"
+        "ev": "31 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -217,27 +216,27 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "78/100"
+        "ev": "81/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "32/100"
+        "ev": "31/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10922.5505ms"
+        "ev": "11015.179000000002ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.70"
+        "ev": "1.07"
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "7.2MB"
+        "r": "fail",
+        "ev": "13.6MB"
       },
       {
         "id": "perf.viewport",
@@ -271,7 +270,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-user"
+        "ev": "ml-widget"
       },
       {
         "id": "content.obsolete_tech",
@@ -313,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "2 console error(s): Framing 'https://www.facebook.com/' violates the following Content Security Policy directive: \"frame-src 'self' https://www.google.com https://maps.google.com https://*.google.com https://www.youtube.com https://www.youtube-nocookie.com\". The request has been blocked.\n"
+        "ev": "4 console error(s): Creating a worker from 'blob:https://ksotto.kerala.gov.in/d3fa8b44-68ab-43d2-96d1-a03ff3b4c924' violates the following Content Security Policy directive: \"child-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com https://www.youtube-nocookie.com\". Note that 'worker-src' was not explicitly set, so 'child-src' is used as a fallback. The action has been blocked."
       },
       {
         "id": "gigw.contact",
@@ -417,7 +416,8 @@
       },
       {
         "id": "id.third_party",
-        "r": "pass"
+        "r": "warn",
+        "ev": "https://connect.facebook.net/en_US/bundle/sdk.js/, https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v23.0"
       }
     ],
     "screenshot": {
@@ -476,12 +476,12 @@
     ]
   },
   "score": {
-    "overall": 55,
-    "security": 72,
+    "overall": 52,
+    "security": 62,
     "accessibility": 40,
     "content": 42,
     "gigw": 22,
-    "performance": 77,
+    "performance": 72,
     "identity": 100
   },
   "status": "needs-work",
@@ -504,7 +504,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-user"
+      "ev": "ml-widget"
     },
     {
       "id": "content.broken_links",
@@ -512,14 +512,13 @@
       "ev": "1/30 crawled link(s) broken (https://www.portal.ksotto.kerala.gov.in/)"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "5565ms"
+      "id": "sec.xfo",
+      "sev": "M"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "32 serious violation(s)"
+      "ev": "31 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -554,12 +553,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10922.5505ms"
+      "ev": "11015.179000000002ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.2MB"
+      "ev": "13.6MB"
     },
     {
       "id": "sec.xcto",
@@ -591,7 +590,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "2 console error(s): Framing 'https://www.facebook.com/' violates the following Content Security Policy directive: \"frame-src 'self' https://www.google.com https://maps.google.com https://*.google.com https://www.youtube.com https://www.youtube-nocookie.com\". The request has been blocked.\n"
+      "ev": "4 console error(s): Creating a worker from 'blob:https://ksotto.kerala.gov.in/d3fa8b44-68ab-43d2-96d1-a03ff3b4c924' violates the following Content Security Policy directive: \"child-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com https://www.youtube-nocookie.com\". Note that 'worker-src' was not explicitly set, so 'child-src' is used as a fallback. The action has been blocked."
     },
     {
       "id": "gigw.feedback",
@@ -624,7 +623,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.70"
+      "ev": "1.07"
     },
     {
       "id": "perf.images",
@@ -633,9 +632,19 @@
     {
       "id": "gigw.emblem",
       "sev": "I"
+    },
+    {
+      "id": "id.third_party",
+      "sev": "I",
+      "ev": "https://connect.facebook.net/en_US/bundle/sdk.js/, https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v23.0"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-22",
+      "up": true,
+      "score": 52
+    },
     {
       "d": "2026-11-21",
       "up": true,
@@ -947,5 +956,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

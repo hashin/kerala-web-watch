@@ -37,10 +37,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-21T02:56:27.651Z",
-    "run": "1795229727184",
+    "at": "2026-11-22T01:46:24.903Z",
+    "run": "1795311925984",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 58,
+      "accessibility": 82,
+      "best_practices": 100,
+      "seo": 85
+    },
     "axe": {
       "critical": 0,
       "serious": 6,
@@ -210,19 +215,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "82/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "58/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "56851.69199999999ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -235,11 +243,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -273,12 +281,12 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://kodungalloormunicipality.lsgkerala.gov.in/ml/.well-known/traffic-advice)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 linked PDF(s) 404: https://kodungalloormunicipality.lsgkerala.gov.in/ml/system/files/2026-09/AFS%202025-26.pdf"
       },
       {
         "id": "content.broken_images",
@@ -557,12 +565,12 @@
     ]
   },
   "score": {
-    "overall": 68,
+    "overall": 67,
     "security": 76,
     "accessibility": 70,
     "content": 46,
     "gigw": 40,
-    "performance": 90,
+    "performance": 76,
     "identity": 96
   },
   "status": "needs-work",
@@ -583,11 +591,6 @@
       "ev": "ml-"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://kodungalloormunicipality.lsgkerala.gov.in/ml/.well-known/traffic-advice)"
-    },
-    {
       "id": "a11y.axe_serious",
       "sev": "M",
       "ev": "6 serious violation(s)"
@@ -596,6 +599,11 @@
       "id": "a11y.contrast",
       "sev": "M",
       "ev": "3 low-contrast element(s)"
+    },
+    {
+      "id": "content.broken_pdfs",
+      "sev": "M",
+      "ev": "1 linked PDF(s) 404: https://kodungalloormunicipality.lsgkerala.gov.in/ml/system/files/2026-09/AFS%202025-26.pdf"
     },
     {
       "id": "gigw.sitemap",
@@ -612,6 +620,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "56851.69199999999ms"
     },
     {
       "id": "perf.weight",
@@ -662,12 +675,21 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-22",
+      "up": true,
+      "score": 67
+    },
     {
       "d": "2026-11-21",
       "up": true,
@@ -969,5 +991,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

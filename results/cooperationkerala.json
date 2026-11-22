@@ -37,25 +37,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-21T02:55:33.159Z",
-    "run": "1795229616532",
+    "at": "2026-11-22T01:40:54.117Z",
+    "run": "1795311561300",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 37,
+      "performance": 39,
       "accessibility": 81,
       "best_practices": 73,
       "seo": 75
     },
     "axe": {
-      "critical": 2,
-      "serious": 11,
-      "moderate": 4,
+      "critical": 0,
+      "serious": 10,
+      "moderate": 5,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 12,
-      "broken": 7
+      "broken": 6
     },
     "tech": {
       "cms": null,
@@ -172,18 +172,17 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "fail",
-        "ev": "2 critical violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "11 serious violation(s)"
+        "ev": "10 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "4 moderate/minor violation(s)"
+        "ev": "5 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -200,7 +199,8 @@
       },
       {
         "id": "a11y.headings",
-        "r": "pass"
+        "r": "fail",
+        "ev": "no <h1>"
       },
       {
         "id": "a11y.labels",
@@ -223,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "37/100"
+        "ev": "39/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "225497.02099999937ms"
+        "ev": "221959.24749999962ms"
       },
       {
         "id": "perf.cls",
@@ -285,7 +285,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "3/30 crawled link(s) broken (https://eofficercs.kerala.gov.in/, https://camis.kerala.gov.in/, http://prism.kerala.gov.in/)"
+        "ev": "2/30 crawled link(s) broken (https://eofficercs.kerala.gov.in/, http://prism.kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -295,7 +295,7 @@
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "5 broken image(s)"
+        "ev": "6 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -316,7 +316,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "13 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "14 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -452,9 +452,9 @@
     ]
   },
   "score": {
-    "overall": 43,
+    "overall": 47,
     "security": 38,
-    "accessibility": 54,
+    "accessibility": 70,
     "content": 18,
     "gigw": 8,
     "performance": 66,
@@ -473,11 +473,6 @@
       "ev": "bootstrap 3.3.7, bootstrap 3.4.1"
     },
     {
-      "id": "a11y.axe_critical",
-      "sev": "H",
-      "ev": "2 critical violation(s)"
-    },
-    {
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
@@ -490,7 +485,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "3/30 crawled link(s) broken (https://eofficercs.kerala.gov.in/, https://camis.kerala.gov.in/, http://prism.kerala.gov.in/)"
+      "ev": "2/30 crawled link(s) broken (https://eofficercs.kerala.gov.in/, http://prism.kerala.gov.in/)"
     },
     {
       "id": "gigw.rti",
@@ -503,7 +498,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "11 serious violation(s)"
+      "ev": "10 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -539,7 +534,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "225497.02099999937ms"
+      "ev": "221959.24749999962ms"
     },
     {
       "id": "perf.weight",
@@ -566,7 +561,12 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "4 moderate/minor violation(s)"
+      "ev": "5 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "no <h1>"
     },
     {
       "id": "a11y.keyboard",
@@ -576,7 +576,7 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "5 broken image(s)"
+      "ev": "6 broken image(s)"
     },
     {
       "id": "content.meta_desc",
@@ -585,7 +585,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "13 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "14 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.feedback",
@@ -640,6 +640,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-22",
+      "up": true,
+      "score": 47
+    },
     {
       "d": "2026-11-21",
       "up": true,
@@ -946,5 +951,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,12 +35,17 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-21T03:00:06.941Z",
-    "run": "1795229951240",
+    "at": "2026-11-22T01:48:34.990Z",
+    "run": "1795312051923",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 17,
+      "accessibility": 77,
+      "best_practices": 92,
+      "seo": 85
+    },
     "axe": {
-      "critical": 12,
+      "critical": 11,
       "serious": 24,
       "moderate": 2,
       "minor": 1
@@ -165,7 +170,7 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "12 critical violation(s)"
+        "ev": "11 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
@@ -188,7 +193,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "5 low-contrast element(s)"
+        "ev": "4 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -210,19 +215,23 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "77/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "17/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "18115.990999999995ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.85"
       },
       {
         "id": "perf.weight",
@@ -235,11 +244,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -281,7 +290,8 @@
       },
       {
         "id": "content.broken_images",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -302,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/player/6b3d0364/www-player.css' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "25 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -414,7 +424,7 @@
     "screenshot": {
       "desktop": "prdkerala.webp",
       "mobile": "prdkerala-m.webp",
-      "phash": "00ffff781043e7e3"
+      "phash": "000f1f0f00e3efe3"
     },
     "outlinks": [
       {
@@ -529,12 +539,12 @@
     ]
   },
   "score": {
-    "overall": 54,
+    "overall": 51,
     "security": 42,
     "accessibility": 50,
-    "content": 52,
+    "content": 48,
     "gigw": 32,
-    "performance": 90,
+    "performance": 72,
     "identity": 91
   },
   "status": "needs-work",
@@ -552,7 +562,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "12 critical violation(s)"
+      "ev": "11 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -576,7 +586,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "5 low-contrast element(s)"
+      "ev": "4 low-contrast element(s)"
     },
     {
       "id": "gigw.privacy",
@@ -593,6 +603,11 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "18115.990999999995ms"
     },
     {
       "id": "perf.weight",
@@ -628,13 +643,18 @@
       "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
+      "id": "content.broken_images",
+      "sev": "L",
+      "ev": "1 broken image(s)"
+    },
+    {
       "id": "content.meta_desc",
       "sev": "L"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/player/6b3d0364/www-player.css' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "25 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.feedback",
@@ -665,6 +685,15 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.85"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -679,6 +708,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-22",
+      "up": true,
+      "score": 51
+    },
     {
       "d": "2026-11-21",
       "up": true,
@@ -985,5 +1019,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

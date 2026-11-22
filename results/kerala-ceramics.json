@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-21T02:50:57.164Z",
-    "run": "1795229388743",
+    "at": "2026-11-22T01:34:20.839Z",
+    "run": "1795311173873",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 44,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3280ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -227,7 +228,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "21237.367ms"
+        "ev": "11232.172000000002ms"
       },
       {
         "id": "perf.cls",
@@ -311,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "11 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+        "ev": "12 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
       },
       {
         "id": "gigw.contact",
@@ -484,6 +485,11 @@
       "ev": "keralaceramics.com"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3280ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -530,7 +536,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "21237.367ms"
+      "ev": "11232.172000000002ms"
     },
     {
       "id": "perf.weight",
@@ -571,7 +577,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "11 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      "ev": "12 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
     },
     {
       "id": "gigw.feedback",
@@ -621,6 +627,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-22",
+      "up": true,
+      "score": 42
+    },
     {
       "d": "2026-11-21",
       "up": true,
@@ -887,5 +898,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-21T02:53:49.114Z",
-    "run": "1795229549546",
+    "at": "2026-11-22T01:42:42.534Z",
+    "run": "1795311678578",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 34,
+      "performance": 32,
       "accessibility": 83,
       "best_practices": 92,
       "seo": 85
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 21,
       "pdfs": 0,
-      "broken": 8
+      "broken": 7
     },
     "tech": {
       "cms": null,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3507ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -221,17 +222,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "34/100"
+        "ev": "32/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8414.792ms"
+        "ev": "7510.327ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.83"
+        "ev": "1.48"
       },
       {
         "id": "perf.weight",
@@ -282,7 +283,7 @@
       {
         "id": "content.broken_links",
         "r": "fail",
-        "ev": "8/21 crawled link(s) broken (https://hsgtechdept.kerala.gov.in/category/whatsnew/, https://hsgtechdept.kerala.gov.in/2022/04/30/ghis-scheme/, https://hsgtechdept.kerala.gov.in/2022/04/30/cehm-scheme/, ...)"
+        "ev": "7/21 crawled link(s) broken (https://hsgtechdept.kerala.gov.in/category/whatsnew/, https://hsgtechdept.kerala.gov.in/2022/04/30/ghis-scheme/, https://hsgtechdept.kerala.gov.in/2022/04/30/cehm-scheme/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -500,11 +501,16 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "8/21 crawled link(s) broken (https://hsgtechdept.kerala.gov.in/category/whatsnew/, https://hsgtechdept.kerala.gov.in/2022/04/30/ghis-scheme/, https://hsgtechdept.kerala.gov.in/2022/04/30/cehm-scheme/, ...)"
+      "ev": "7/21 crawled link(s) broken (https://hsgtechdept.kerala.gov.in/category/whatsnew/, https://hsgtechdept.kerala.gov.in/2022/04/30/ghis-scheme/, https://hsgtechdept.kerala.gov.in/2022/04/30/cehm-scheme/, ...)"
     },
     {
       "id": "gigw.rti",
       "sev": "H"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3507ms"
     },
     {
       "id": "sec.xfo",
@@ -548,7 +554,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8414.792ms"
+      "ev": "7510.327ms"
     },
     {
       "id": "sec.xcto",
@@ -613,7 +619,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.83"
+      "ev": "1.48"
     },
     {
       "id": "perf.images",
@@ -621,6 +627,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-22",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-11-21",
       "up": true,
@@ -932,5 +943,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

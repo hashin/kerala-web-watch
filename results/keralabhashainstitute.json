@@ -37,13 +37,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-21T03:03:57.708Z",
-    "run": "1795230196478",
+    "at": "2026-11-22T01:53:45.226Z",
+    "run": "1795312381215",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
+      "performance": 53,
       "accessibility": 64,
-      "best_practices": 77,
+      "best_practices": 92,
       "seo": 75
     },
     "axe": {
@@ -186,7 +186,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 127% Malayalam content"
+        "ev": "<html lang=\"en\"> vs. 126% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -224,12 +224,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "53/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "8925.9945ms"
+        "ev": "8175.217500000001ms"
       },
       {
         "id": "perf.cls",
@@ -313,7 +313,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "5 console error(s): Access to fetch at 'https://buttons-config.sharethis.com/js/618cc82ac000050012c310e4.js' from origin 'https://keralabhashainstitute.org' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "6 console error(s): Failed to load resource: net::ERR_BLOCKED_BY_RESPONSE.NotSameOrigin"
       },
       {
         "id": "gigw.contact",
@@ -425,7 +425,7 @@
     "screenshot": {
       "desktop": "keralabhashainstitute.webp",
       "mobile": "keralabhashainstitute-m.webp",
-      "phash": "00ff42020206ffe7"
+      "phash": "00ff12000040ff3f"
     },
     "outlinks": [
       {
@@ -485,7 +485,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 127% Malayalam content"
+      "ev": "<html lang=\"en\"> vs. 126% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -532,7 +532,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8925.9945ms"
+      "ev": "8175.217500000001ms"
     },
     {
       "id": "perf.weight",
@@ -561,7 +561,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "5 console error(s): Access to fetch at 'https://buttons-config.sharethis.com/js/618cc82ac000050012c310e4.js' from origin 'https://keralabhashainstitute.org' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "6 console error(s): Failed to load resource: net::ERR_BLOCKED_BY_RESPONSE.NotSameOrigin"
     },
     {
       "id": "gigw.feedback",
@@ -602,6 +602,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-22",
+      "up": true,
+      "score": 56
+    },
     {
       "d": "2026-11-21",
       "up": true,
@@ -908,5 +913,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

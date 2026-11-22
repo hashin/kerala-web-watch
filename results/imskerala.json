@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-21T02:56:26.117Z",
-    "run": "1795229723668",
+    "at": "2026-11-22T01:40:57.808Z",
+    "run": "1795311593958",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 90,
+      "performance": 88,
       "accessibility": 86,
       "best_practices": 96,
       "seo": 92
@@ -220,7 +220,7 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "90/100"
+        "ev": "88/100"
       },
       {
         "id": "perf.lcp",
@@ -392,7 +392,8 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "pass"
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
       },
       {
         "id": "id.soft_404",
@@ -471,7 +472,7 @@
     "content": 26,
     "gigw": 58,
     "performance": 86,
-    "identity": 100
+    "identity": 96
   },
   "status": "needs-work",
   "issues": [
@@ -577,9 +578,19 @@
     {
       "id": "perf.images",
       "sev": "L"
+    },
+    {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 404"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-22",
+      "up": true,
+      "score": 59
+    },
     {
       "d": "2026-11-21",
       "up": true,
@@ -891,5 +902,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

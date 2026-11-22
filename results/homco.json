@@ -35,13 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-21T03:05:27.365Z",
-    "run": "1795230264801",
+    "at": "2026-11-22T01:51:37.701Z",
+    "run": "1795312235985",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 29,
+      "performance": 30,
       "accessibility": 83,
-      "best_practices": 73,
+      "best_practices": 96,
       "seo": 85
     },
     "axe": {
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3049ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -222,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "29/100"
+        "ev": "30/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "21027.216500000006ms"
+        "ev": "22653.241499999996ms"
       },
       {
         "id": "perf.cls",
@@ -237,7 +238,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "5.5MB"
+        "ev": "5.3MB"
       },
       {
         "id": "perf.viewport",
@@ -271,7 +272,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-transform"
+        "ev": "ml-user"
       },
       {
         "id": "content.obsolete_tech",
@@ -474,7 +475,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-transform"
+      "ev": "ml-user"
     },
     {
       "id": "content.broken_links",
@@ -485,6 +486,11 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "homcokerala.com"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3049ms"
     },
     {
       "id": "sec.hsts",
@@ -524,12 +530,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "21027.216500000006ms"
+      "ev": "22653.241499999996ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "5.5MB"
+      "ev": "5.3MB"
     },
     {
       "id": "sec.xcto",
@@ -606,6 +612,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-22",
+      "up": true,
+      "score": 43
+    },
     {
       "d": "2026-11-21",
       "up": true,
@@ -917,5 +928,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
