@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-22T01:56:41.529Z",
-    "run": "1795312562573",
+    "at": "2026-11-23T02:16:40.506Z",
+    "run": "1795400181115",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 75,
+      "performance": 81,
       "accessibility": 81,
       "best_practices": 81,
       "seo": 75
@@ -218,12 +218,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "75/100"
+        "ev": "81/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "5136.600999999999ms"
+        "ev": "4428.719999999999ms"
       },
       {
         "id": "perf.cls",
@@ -305,8 +305,7 @@
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "2 console error(s): Failed to load resource: the server responded with a status of 522 ()"
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
@@ -511,7 +510,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "5136.600999999999ms"
+      "ev": "4428.719999999999ms"
     },
     {
       "id": "sec.xcto",
@@ -534,11 +533,6 @@
     {
       "id": "content.meta_desc",
       "sev": "L"
-    },
-    {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "2 console error(s): Failed to load resource: the server responded with a status of 522 ()"
     },
     {
       "id": "gigw.feedback",
@@ -600,6 +594,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-23",
+      "up": false,
+      "score": null
+    },
     {
       "d": "2026-11-22",
       "up": false,
@@ -896,5 +895,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

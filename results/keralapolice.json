@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-22T01:36:21.979Z",
-    "run": "1795311291142",
+    "at": "2026-11-23T02:02:11.862Z",
+    "run": "1795399245229",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 44,
+      "accessibility": 92,
+      "best_practices": 96,
+      "seo": 92
+    },
     "axe": {
       "critical": 0,
       "serious": 14,
@@ -48,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -209,24 +214,27 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "92/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "44/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "36472.14500000002ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "9.1MB"
+        "ev": "9.4MB"
       },
       {
         "id": "perf.viewport",
@@ -234,11 +242,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -273,7 +281,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://keralapolice.gov.in/page/central-police-canteen-service)"
+        "ev": "2/30 crawled link(s) broken (https://keralapolice.gov.in/, https://keralapolice.gov.in/page/former-chiefs)"
       },
       {
         "id": "content.broken_pdfs",
@@ -408,7 +416,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6bh1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K&amp;cx=c&amp;gtm=4e6bh1, https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6bh1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
       }
     ],
     "screenshot": {
@@ -573,12 +581,12 @@
     ]
   },
   "score": {
-    "overall": 57,
+    "overall": 55,
     "security": 50,
     "accessibility": 60,
     "content": 46,
     "gigw": 26,
-    "performance": 90,
+    "performance": 66,
     "identity": 96
   },
   "status": "needs-work",
@@ -611,7 +619,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://keralapolice.gov.in/page/central-police-canteen-service)"
+      "ev": "2/30 crawled link(s) broken (https://keralapolice.gov.in/, https://keralapolice.gov.in/page/former-chiefs)"
     },
     {
       "id": "gigw.contact",
@@ -639,9 +647,18 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "36472.14500000002ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "9.1MB"
+      "ev": "9.4MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -688,6 +705,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
@@ -699,10 +720,15 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6bh1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K&amp;cx=c&amp;gtm=4e6bh1, https://www.googletagmanager.com/gtag/js?id=G-EHGEHQFVXZ&amp;cx=c&amp;gtm=4e6bh1, https://www.googletagmanager.com/gtm.js?id=GTM-5XH2XTV, https://www.googletagmanager.com/gtag/js?id=G-FXT3GHQP8K"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-23",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-11-22",
       "up": true,
@@ -1019,5 +1045,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

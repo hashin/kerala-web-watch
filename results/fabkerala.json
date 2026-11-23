@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-22T01:42:43.870Z",
-    "run": "1795311654119",
+    "at": "2026-11-23T02:09:10.381Z",
+    "run": "1795399623698",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 27,
+      "performance": 31,
       "accessibility": 79,
       "best_practices": 92,
       "seo": 73
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3737ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -221,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "27/100"
+        "ev": "31/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "41593.563499999975ms"
+        "ev": "49809.36200000001ms"
       },
       {
         "id": "perf.cls",
@@ -236,7 +237,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "1176.8MB"
+        "ev": "1041.2MB"
       },
       {
         "id": "perf.viewport",
@@ -314,7 +315,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "329 console error(s): Refused to apply style from 'https://fabkerala.gov.in/media/com_sppagebuilder/assets/iconfont/icoffzony/style.css?143fb2b8f5d98f82feb246ecc61db33d' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+        "ev": "329 console error(s): Refused to apply style from 'https://fabkerala.gov.in/media/com_sppagebuilder/assets/iconfont/icoxmgdij/style.css?143fb2b8f5d98f82feb246ecc61db33d' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       },
       {
         "id": "gigw.contact",
@@ -426,7 +427,7 @@
     "screenshot": {
       "desktop": "fabkerala.webp",
       "mobile": "fabkerala-m.webp",
-      "phash": "0000fffeffffb200"
+      "phash": "0080eff7bf100200"
     },
     "outlinks": [
       {
@@ -519,6 +520,11 @@
       "ev": "no \"last updated\" date found"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3737ms"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
       "ev": "28 serious violation(s)"
@@ -559,12 +565,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "41593.563499999975ms"
+      "ev": "49809.36200000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "1176.8MB"
+      "ev": "1041.2MB"
     },
     {
       "id": "sec.csp",
@@ -592,7 +598,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "329 console error(s): Refused to apply style from 'https://fabkerala.gov.in/media/com_sppagebuilder/assets/iconfont/icoffzony/style.css?143fb2b8f5d98f82feb246ecc61db33d' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+      "ev": "329 console error(s): Refused to apply style from 'https://fabkerala.gov.in/media/com_sppagebuilder/assets/iconfont/icoxmgdij/style.css?143fb2b8f5d98f82feb246ecc61db33d' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
     },
     {
       "id": "gigw.feedback",
@@ -647,6 +653,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-23",
+      "up": true,
+      "score": 55
+    },
     {
       "d": "2026-11-22",
       "up": true,
@@ -958,5 +969,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

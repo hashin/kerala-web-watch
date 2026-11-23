@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-17T04:09:50.309Z",
-    "run": "1794888550107",
+    "at": "2026-11-23T01:58:01.342Z",
+    "run": "1795399042723",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 60,
+      "performance": 62,
       "accessibility": 82,
       "best_practices": 96,
       "seo": 82
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 28,
       "pdfs": 0,
-      "broken": 2
+      "broken": 5
     },
     "tech": {
       "cms": null,
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "60/100"
+        "ev": "62/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "12242.63ms"
+        "ev": "10967.579000000002ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +233,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "4.4MB"
+        "ev": "4.3MB"
       },
       {
         "id": "perf.viewport",
@@ -279,8 +279,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "2/28 crawled link(s) broken (https://fitkerala.co.in/img/product/teapoy.jpg, https://fitkerala.co.in/img/product/dressing.jpg)"
+        "r": "fail",
+        "ev": "5/28 crawled link(s) broken (https://fitkerala.co.in/img/product/hamper2.jpg, https://fitkerala.co.in/img/product/teapoy.jpg, https://fitkerala.co.in/img/product/dressing.jpg, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -289,7 +289,7 @@
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "4 broken image(s)"
+        "ev": "5 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -310,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "4 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+        "ev": "5 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
@@ -446,15 +446,15 @@
     ]
   },
   "score": {
-    "overall": 50,
+    "overall": 49,
     "security": 48,
     "accessibility": 60,
-    "content": 34,
+    "content": 24,
     "gigw": 18,
     "performance": 81,
     "identity": 72
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.vuln_js",
@@ -479,7 +479,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "2/28 crawled link(s) broken (https://fitkerala.co.in/img/product/teapoy.jpg, https://fitkerala.co.in/img/product/dressing.jpg)"
+      "ev": "5/28 crawled link(s) broken (https://fitkerala.co.in/img/product/hamper2.jpg, https://fitkerala.co.in/img/product/teapoy.jpg, https://fitkerala.co.in/img/product/dressing.jpg, ...)"
     },
     {
       "id": "id.gov_domain",
@@ -522,12 +522,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "12242.63ms"
+      "ev": "10967.579000000002ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "4.4MB"
+      "ev": "4.3MB"
     },
     {
       "id": "sec.csp",
@@ -559,7 +559,7 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "4 broken image(s)"
+      "ev": "5 broken image(s)"
     },
     {
       "id": "content.meta_desc",
@@ -572,7 +572,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "4 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      "ev": "5 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
@@ -630,6 +630,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-23",
+      "up": true,
+      "score": 49
+    },
     {
       "d": "2026-11-22",
       "up": true,
@@ -896,5 +901,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

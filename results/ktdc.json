@@ -35,18 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-22T01:46:37.568Z",
-    "run": "1795311953910",
+    "at": "2026-11-23T02:09:24.379Z",
+    "run": "1795399720905",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 56,
-      "accessibility": 80,
-      "best_practices": 96,
-      "seo": 83
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 0,
-      "serious": 80,
+      "serious": 81,
       "moderate": 12,
       "minor": 0
     },
@@ -172,7 +167,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "80 serious violation(s)"
+        "ev": "81 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -212,22 +207,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "80/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "56/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "9670.011000000002ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -240,11 +232,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -462,12 +454,12 @@
     ]
   },
   "score": {
-    "overall": 65,
+    "overall": 67,
     "security": 90,
     "accessibility": 70,
     "content": 32,
     "gigw": 32,
-    "performance": 81,
+    "performance": 95,
     "identity": 76
   },
   "status": "needs-work",
@@ -494,7 +486,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "80 serious violation(s)"
+      "ev": "81 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -526,11 +518,6 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "9670.011000000002ms"
     },
     {
       "id": "perf.weight",
@@ -590,10 +577,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.soft_404",
       "sev": "L",
       "ev": "a nonexistent path returned 200"
@@ -609,6 +592,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-23",
+      "up": true,
+      "score": 67
+    },
     {
       "d": "2026-11-22",
       "up": true,
@@ -920,5 +908,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

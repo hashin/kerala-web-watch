@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-22T01:39:29.589Z",
-    "run": "1795311431456",
+    "at": "2026-11-23T02:06:09.984Z",
+    "run": "1795399423976",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 44,
+      "performance": 40,
       "accessibility": 81,
       "best_practices": 92,
       "seo": 69
     },
     "axe": {
       "critical": 2,
-      "serious": 19,
+      "serious": 6,
       "moderate": 7,
       "minor": 1
     },
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "3167ms"
+        "ev": "3269ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -158,7 +158,7 @@
       {
         "id": "sec.vuln_js",
         "r": "fail",
-        "ev": "chart.js 2.5.0"
+        "ev": "chart.js 2.5.0, swiper 8.4.5"
       },
       {
         "id": "sec.safe_browsing",
@@ -176,7 +176,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "19 serious violation(s)"
+        "ev": "6 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -194,8 +194,7 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "13 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
@@ -224,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "44/100"
+        "ev": "40/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "52237.33349999995ms"
+        "ev": "41769.361999999965ms"
       },
       {
         "id": "perf.cls",
@@ -238,7 +237,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "18.9MB"
+        "ev": "19.1MB"
       },
       {
         "id": "perf.viewport",
@@ -480,9 +479,9 @@
     ]
   },
   "score": {
-    "overall": 42,
+    "overall": 45,
     "security": 32,
-    "accessibility": 30,
+    "accessibility": 40,
     "content": 34,
     "gigw": 32,
     "performance": 66,
@@ -502,7 +501,7 @@
     {
       "id": "sec.vuln_js",
       "sev": "H",
-      "ev": "chart.js 2.5.0"
+      "ev": "chart.js 2.5.0, swiper 8.4.5"
     },
     {
       "id": "a11y.axe_critical",
@@ -527,22 +526,17 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "3167ms"
+      "ev": "3269ms"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "19 serious violation(s)"
+      "ev": "6 serious violation(s)"
     },
     {
       "id": "a11y.alt",
       "sev": "M",
       "ev": "1 image(s) missing alt text"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "13 low-contrast element(s)"
     },
     {
       "id": "a11y.labels",
@@ -568,12 +562,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "52237.33349999995ms"
+      "ev": "41769.361999999965ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "18.9MB"
+      "ev": "19.1MB"
     },
     {
       "id": "perf.tap_targets",
@@ -654,6 +648,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-23",
+      "up": true,
+      "score": 45
+    },
     {
       "d": "2026-11-22",
       "up": true,
@@ -965,5 +964,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

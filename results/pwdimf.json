@@ -37,29 +37,29 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-22T01:44:52.773Z",
-    "run": "1795311429705",
+    "at": "2026-11-23T02:04:15.004Z",
+    "run": "1795399381142",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 56,
       "accessibility": 74,
       "best_practices": 88,
-      "seo": 75
+      "seo": 83
     },
     "axe": {
       "critical": 0,
-      "serious": 30,
+      "serious": 23,
       "moderate": 25,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 2,
-      "broken": 31
+      "broken": 3
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "",
       "jquery": null
     },
     "checks": [
@@ -69,16 +69,15 @@
       },
       {
         "id": "avail.connect",
-        "r": "fail",
-        "ev": "timeout"
+        "r": "pass"
       },
       {
         "id": "avail.status",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -98,7 +97,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -110,7 +109,7 @@
       },
       {
         "id": "sec.https",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
@@ -118,15 +117,15 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.hsts",
@@ -134,7 +133,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "fail",
+        "ev": "href=\"http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic\""
       },
       {
         "id": "sec.csp",
@@ -176,7 +176,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "30 serious violation(s)"
+        "ev": "23 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -194,7 +194,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "10 low-contrast element(s)"
+        "ev": "11 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "56/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "30254.878000000004ms"
+        "ev": "11807.863999999998ms"
       },
       {
         "id": "perf.cls",
@@ -235,8 +235,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "fail",
-        "ev": "8.6MB"
+        "r": "warn",
+        "ev": "4.6MB"
       },
       {
         "id": "perf.viewport",
@@ -282,13 +282,13 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "29/30 crawled link(s) broken (https://pwd.kerala.gov.in/IMF_website/index/index.php?id_ml=TUw=, https://www.pwd.kerala.gov.in/includes/PWD_4U_mobileApp.php?id_ml=RU4=, https://www.pwd.kerala.gov.in/Projects/wings_list.php?id_ml=RU4=, ...)"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://thottariyaampwd.kerala.gov.in/pms/home/project/projects?projectStatusId=2)"
       },
       {
         "id": "content.broken_pdfs",
         "r": "fail",
-        "ev": "2 linked PDF(s) 404: https://www.pwd.kerala.gov.in/NEW/Avenue_split-compressed.pdf, https://www.pwd.kerala.gov.in/documents/NEWS_NOTIFICATIONS/166_1794820354.pdf"
+        "ev": "2 linked PDF(s) 404: https://www.pwd.kerala.gov.in/IMF_website/NEW/Avenue_split-compressed.pdf, https://www.pwd.kerala.gov.in/documents/NEWS_NOTIFICATIONS/166_1794820354.pdf"
       },
       {
         "id": "content.broken_images",
@@ -315,7 +315,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "6 console error(s): Cannot read properties of undefined (reading 'length')"
+        "ev": "5 console error(s): Cannot read properties of undefined (reading 'length')"
       },
       {
         "id": "gigw.contact",
@@ -391,19 +391,20 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.robots",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "na"
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
       },
       {
         "id": "id.soft_404",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
@@ -492,17 +493,25 @@
       }
     ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 57,
+    "security": 40,
+    "accessibility": 70,
+    "content": 28,
+    "gigw": 56,
+    "performance": 71,
+    "identity": 96
+  },
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "avail.connect",
-      "sev": "C",
-      "ev": "timeout"
-    },
     {
       "id": "sec.http_redirect",
       "sev": "H"
+    },
+    {
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic\""
     },
     {
       "id": "sec.vuln_js",
@@ -517,17 +526,17 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "29/30 crawled link(s) broken (https://pwd.kerala.gov.in/IMF_website/index/index.php?id_ml=TUw=, https://www.pwd.kerala.gov.in/includes/PWD_4U_mobileApp.php?id_ml=RU4=, https://www.pwd.kerala.gov.in/Projects/wings_list.php?id_ml=RU4=, ...)"
+      "ev": "1/30 crawled link(s) broken (https://thottariyaampwd.kerala.gov.in/pms/home/project/projects?projectStatusId=2)"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "30 serious violation(s)"
+      "ev": "23 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "10 low-contrast element(s)"
+      "ev": "11 low-contrast element(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -537,7 +546,7 @@
     {
       "id": "content.broken_pdfs",
       "sev": "M",
-      "ev": "2 linked PDF(s) 404: https://www.pwd.kerala.gov.in/NEW/Avenue_split-compressed.pdf, https://www.pwd.kerala.gov.in/documents/NEWS_NOTIFICATIONS/166_1794820354.pdf"
+      "ev": "2 linked PDF(s) 404: https://www.pwd.kerala.gov.in/IMF_website/NEW/Avenue_split-compressed.pdf, https://www.pwd.kerala.gov.in/documents/NEWS_NOTIFICATIONS/166_1794820354.pdf"
     },
     {
       "id": "content.malayalam",
@@ -555,12 +564,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "30254.878000000004ms"
+      "ev": "11807.863999999998ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "8.6MB"
+      "ev": "4.6MB"
     },
     {
       "id": "perf.tap_targets",
@@ -593,7 +602,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "6 console error(s): Cannot read properties of undefined (reading 'length')"
+      "ev": "5 console error(s): Cannot read properties of undefined (reading 'length')"
     },
     {
       "id": "gigw.feedback",
@@ -624,11 +633,21 @@
       "sev": "L"
     },
     {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 404"
+    },
+    {
       "id": "id.canonical",
       "sev": "I"
     }
   ],
   "history": [
+    {
+      "d": "2026-11-23",
+      "up": true,
+      "score": 57
+    },
     {
       "d": "2026-11-22",
       "up": false,
@@ -940,5 +959,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

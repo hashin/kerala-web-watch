@@ -37,19 +37,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-22T01:40:54.117Z",
-    "run": "1795311561300",
+    "at": "2026-11-23T02:07:03.696Z",
+    "run": "1795399526783",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 39,
+      "performance": 42,
       "accessibility": 81,
       "best_practices": 73,
       "seo": 75
     },
     "axe": {
-      "critical": 0,
-      "serious": 10,
-      "moderate": 5,
+      "critical": 2,
+      "serious": 11,
+      "moderate": 4,
       "minor": 0
     },
     "crawl": {
@@ -172,17 +172,18 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "pass"
+        "r": "fail",
+        "ev": "2 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "10 serious violation(s)"
+        "ev": "11 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "5 moderate/minor violation(s)"
+        "ev": "4 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -199,8 +200,7 @@
       },
       {
         "id": "a11y.headings",
-        "r": "fail",
-        "ev": "no <h1>"
+        "r": "pass"
       },
       {
         "id": "a11y.labels",
@@ -223,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "39/100"
+        "ev": "42/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "221959.24749999962ms"
+        "ev": "224105.11949999962ms"
       },
       {
         "id": "perf.cls",
@@ -295,7 +295,7 @@
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "6 broken image(s)"
+        "ev": "5 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -316,7 +316,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "14 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "13 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -452,9 +452,9 @@
     ]
   },
   "score": {
-    "overall": 47,
+    "overall": 43,
     "security": 38,
-    "accessibility": 70,
+    "accessibility": 54,
     "content": 18,
     "gigw": 8,
     "performance": 66,
@@ -471,6 +471,11 @@
       "id": "sec.vuln_js",
       "sev": "H",
       "ev": "bootstrap 3.3.7, bootstrap 3.4.1"
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "2 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -498,7 +503,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "10 serious violation(s)"
+      "ev": "11 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -534,7 +539,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "221959.24749999962ms"
+      "ev": "224105.11949999962ms"
     },
     {
       "id": "perf.weight",
@@ -561,12 +566,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "5 moderate/minor violation(s)"
-    },
-    {
-      "id": "a11y.headings",
-      "sev": "L",
-      "ev": "no <h1>"
+      "ev": "4 moderate/minor violation(s)"
     },
     {
       "id": "a11y.keyboard",
@@ -576,7 +576,7 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "6 broken image(s)"
+      "ev": "5 broken image(s)"
     },
     {
       "id": "content.meta_desc",
@@ -585,7 +585,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "14 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "13 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.feedback",
@@ -640,6 +640,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-23",
+      "up": true,
+      "score": 43
+    },
     {
       "d": "2026-11-22",
       "up": true,
@@ -951,5 +956,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-22T01:50:03.045Z",
-    "run": "1795312089445",
+    "at": "2026-11-23T02:13:03.893Z",
+    "run": "1795399892795",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 31,
       "accessibility": 77,
       "best_practices": 96,
       "seo": 83
@@ -219,21 +219,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "31/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "49787.98850000001ms"
+        "ev": "51009.740500000014ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.69"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "1637.4MB"
+        "ev": "2366.9MB"
       },
       {
         "id": "perf.viewport",
@@ -420,7 +421,7 @@
     "screenshot": {
       "desktop": "adak.webp",
       "mobile": "adak-m.webp",
-      "phash": "ff0000ef8f27c7c7"
+      "phash": "000000fefe7e3fff"
     },
     "outlinks": [
       {
@@ -453,12 +454,12 @@
     ]
   },
   "score": {
-    "overall": 79,
+    "overall": 78,
     "security": 96,
     "accessibility": 72,
     "content": 56,
     "gigw": 76,
-    "performance": 76,
+    "performance": 72,
     "identity": 92
   },
   "status": "needs-work",
@@ -499,12 +500,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "49787.98850000001ms"
+      "ev": "51009.740500000014ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "1637.4MB"
+      "ev": "2366.9MB"
     },
     {
       "id": "sec.csp",
@@ -527,6 +528,11 @@
     {
       "id": "gigw.feedback",
       "sev": "L"
+    },
+    {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.69"
     },
     {
       "id": "perf.images",
@@ -552,6 +558,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-23",
+      "up": true,
+      "score": 78
+    },
     {
       "d": "2026-11-22",
       "up": true,
@@ -863,5 +874,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

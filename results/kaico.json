@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-22T01:52:56.443Z",
-    "run": "1795312297702",
+    "at": "2026-11-23T02:17:34.779Z",
+    "run": "1795400181477",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 55,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3131ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -224,7 +225,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "15897.158200000005ms"
+        "ev": "15871.913149999998ms"
       },
       {
         "id": "perf.cls",
@@ -469,6 +470,11 @@
       "ev": "kaicltd.com"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3131ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -509,7 +515,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "15897.158200000005ms"
+      "ev": "15871.913149999998ms"
     },
     {
       "id": "perf.weight",
@@ -586,6 +592,11 @@
     }
   ],
   "history": [
+    {
+      "d": "2026-11-23",
+      "up": true,
+      "score": 60
+    },
     {
       "d": "2026-11-22",
       "up": true,
@@ -897,5 +908,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
