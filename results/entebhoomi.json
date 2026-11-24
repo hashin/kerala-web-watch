@@ -37,10 +37,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-23T01:58:50.199Z",
-    "run": "1795399043785",
+    "at": "2026-11-24T05:39:39.628Z",
+    "run": "1795498687162",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 58,
+      "accessibility": 70,
+      "best_practices": 88,
+      "seo": 77
+    },
     "axe": {
       "critical": 20,
       "serious": 16,
@@ -50,7 +55,7 @@
     "crawl": {
       "pages": 28,
       "pdfs": 6,
-      "broken": 2
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -117,7 +122,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "fail",
-        "ev": "4 days left"
+        "ev": "3 days left"
       },
       {
         "id": "sec.tls_version",
@@ -213,19 +218,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "70/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "58/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "6611.902ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -237,11 +245,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -276,7 +284,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "2/28 crawled link(s) broken (https://services.kerala.gov.in/, https://dslr.kerala.gov.in/en/home/)"
+        "ev": "1/28 crawled link(s) broken (https://services.kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -475,12 +483,12 @@
     ]
   },
   "score": {
-    "overall": 46,
+    "overall": 44,
     "security": 60,
     "accessibility": 20,
     "content": 42,
     "gigw": 0,
-    "performance": 100,
+    "performance": 76,
     "identity": 96
   },
   "status": "poor",
@@ -492,7 +500,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "4 days left"
+      "ev": "3 days left"
     },
     {
       "id": "a11y.axe_critical",
@@ -517,7 +525,7 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "2/28 crawled link(s) broken (https://services.kerala.gov.in/, https://dslr.kerala.gov.in/en/home/)"
+      "ev": "1/28 crawled link(s) broken (https://services.kerala.gov.in/)"
     },
     {
       "id": "gigw.contact",
@@ -556,6 +564,15 @@
     },
     {
       "id": "gigw.last_updated",
+      "sev": "M"
+    },
+    {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "6611.902ms"
+    },
+    {
+      "id": "perf.tap_targets",
       "sev": "M"
     },
     {
@@ -607,6 +624,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.soft_404",
       "sev": "L",
       "ev": "a nonexistent path returned 200"
@@ -620,7 +641,7 @@
     {
       "d": "2026-11-24",
       "up": true,
-      "score": 46
+      "score": 44
     },
     {
       "d": "2026-11-23",
@@ -938,5 +959,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

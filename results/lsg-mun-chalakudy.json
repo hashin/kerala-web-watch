@@ -37,12 +37,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-18T23:46:30.081Z",
-    "run": "1792367147243",
+    "at": "2026-11-24T05:54:07.788Z",
+    "run": "1795499608668",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 61,
-      "accessibility": 82,
+      "accessibility": 86,
       "best_practices": 100,
       "seo": 85
     },
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -217,7 +217,7 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "82/100"
+        "ev": "86/100"
       },
       {
         "id": "perf.lighthouse",
@@ -227,7 +227,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "65833.9205ms"
+        "ev": "50810.918000000005ms"
       },
       {
         "id": "perf.cls",
@@ -282,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://chalakudymunicipality.lsgkerala.gov.in/ml/terms)"
       },
       {
         "id": "content.broken_pdfs",
@@ -550,10 +551,10 @@
     ]
   },
   "score": {
-    "overall": 68,
+    "overall": 67,
     "security": 76,
     "accessibility": 70,
-    "content": 56,
+    "content": 46,
     "gigw": 40,
     "performance": 76,
     "identity": 96
@@ -579,6 +580,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://chalakudymunicipality.lsgkerala.gov.in/ml/terms)"
     },
     {
       "id": "a11y.axe_serious",
@@ -609,7 +615,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "65833.9205ms"
+      "ev": "50810.918000000005ms"
     },
     {
       "id": "perf.weight",
@@ -673,7 +679,7 @@
     {
       "d": "2026-11-24",
       "up": true,
-      "score": 68
+      "score": 67
     },
     {
       "d": "2026-11-23",
@@ -996,5 +1002,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

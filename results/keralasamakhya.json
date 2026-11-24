@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-12T02:50:28.803Z",
-    "run": "1794451814530",
+    "at": "2026-11-24T05:59:13.671Z",
+    "run": "1795499939165",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 54,
+      "accessibility": 91,
+      "best_practices": 69,
+      "seo": 92
+    },
     "axe": {
       "critical": 1,
       "serious": 0,
@@ -206,19 +211,23 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "91/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "54/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "16142.387999999999ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.35"
       },
       {
         "id": "perf.weight",
@@ -230,11 +239,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -298,7 +307,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -424,12 +433,12 @@
     ]
   },
   "score": {
-    "overall": 46,
+    "overall": 45,
     "security": 28,
     "accessibility": 66,
     "content": 52,
     "gigw": 2,
-    "performance": 80,
+    "performance": 62,
     "identity": 68
   },
   "status": "poor",
@@ -505,6 +514,11 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "16142.387999999999ms"
+    },
+    {
       "id": "sec.csp",
       "sev": "L"
     },
@@ -529,7 +543,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.feedback",
@@ -560,6 +574,15 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.35"
+    },
+    {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -586,7 +609,7 @@
     {
       "d": "2026-11-24",
       "up": true,
-      "score": 46
+      "score": 45
     },
     {
       "d": "2026-11-23",
@@ -899,5 +922,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

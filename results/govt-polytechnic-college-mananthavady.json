@@ -37,13 +37,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-23T02:15:19.341Z",
-    "run": "1795400072432",
+    "at": "2026-11-24T05:59:39.603Z",
+    "run": "1795499928802",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 67,
+      "performance": 69,
       "accessibility": 82,
-      "best_practices": 96,
+      "best_practices": 100,
       "seo": 92
     },
     "axe": {
@@ -58,7 +58,7 @@
       "broken": 0
     },
     "tech": {
-      "cms": "WordPress 7.1.4",
+      "cms": "WordPress 7.1.5",
       "server": "LiteSpeed",
       "jquery": null
     },
@@ -223,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "67/100"
+        "ev": "69/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9055.760999999999ms"
+        "ev": "9133.497ms"
       },
       {
         "id": "perf.cls",
@@ -310,8 +310,7 @@
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "1 console error(s): Failed to load resource: net::ERR_CONNECTION_RESET"
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
@@ -387,7 +386,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.robots",
@@ -412,7 +411,7 @@
       {
         "id": "id.tech",
         "r": "pass",
-        "ev": "WordPress 7.1.4"
+        "ev": "WordPress 7.1.5"
       },
       {
         "id": "id.third_party",
@@ -498,10 +497,10 @@
     ]
   },
   "score": {
-    "overall": 50,
+    "overall": 51,
     "security": 48,
     "accessibility": 50,
-    "content": 52,
+    "content": 56,
     "gigw": 0,
     "performance": 76,
     "identity": 100
@@ -573,7 +572,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9055.760999999999ms"
+      "ev": "9133.497ms"
     },
     {
       "id": "perf.tap_targets",
@@ -610,11 +609,6 @@
     {
       "id": "content.meta_desc",
       "sev": "L"
-    },
-    {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "1 console error(s): Failed to load resource: net::ERR_CONNECTION_RESET"
     },
     {
       "id": "gigw.feedback",
@@ -657,7 +651,7 @@
     {
       "d": "2026-11-24",
       "up": true,
-      "score": 50
+      "score": 51
     },
     {
       "d": "2026-11-23",
@@ -955,5 +949,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

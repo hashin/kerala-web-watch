@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-23T01:59:12.084Z",
-    "run": "1795399081344",
+    "at": "2026-11-24T05:35:34.808Z",
+    "run": "1795498461445",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 44,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3871ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -227,7 +228,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "21566.9375ms"
+        "ev": "41813.38199999998ms"
       },
       {
         "id": "perf.cls",
@@ -236,7 +237,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "5.9MB"
+        "ev": "5.8MB"
       },
       {
         "id": "perf.viewport",
@@ -484,6 +485,11 @@
       "ev": "keralaceramics.com"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3871ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -530,12 +536,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "21566.9375ms"
+      "ev": "41813.38199999998ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "5.9MB"
+      "ev": "5.8MB"
     },
     {
       "id": "perf.tap_targets",
@@ -902,5 +908,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

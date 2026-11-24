@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-23T02:06:31.304Z",
-    "run": "1795399533050",
+    "at": "2026-11-24T05:45:20.451Z",
+    "run": "1795499063578",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 42,
+      "performance": 48,
       "accessibility": 77,
       "best_practices": 92,
       "seo": 92
     },
     "axe": {
       "critical": 6,
-      "serious": 5,
+      "serious": 2,
       "moderate": 22,
       "minor": 0
     },
@@ -120,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "25 days left"
+        "ev": "24 days left"
       },
       {
         "id": "sec.tls_version",
@@ -175,7 +175,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "5 serious violation(s)"
+        "ev": "2 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -192,8 +192,7 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "3 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
@@ -221,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "42/100"
+        "ev": "48/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "13618.898ms"
+        "ev": "13300.23875ms"
       },
       {
         "id": "perf.cls",
@@ -463,9 +462,9 @@
     ]
   },
   "score": {
-    "overall": 59,
+    "overall": 62,
     "security": 70,
-    "accessibility": 50,
+    "accessibility": 60,
     "content": 46,
     "gigw": 32,
     "performance": 76,
@@ -476,7 +475,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "25 days left"
+      "ev": "24 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -506,12 +505,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "5 serious violation(s)"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "3 low-contrast element(s)"
+      "ev": "2 serious violation(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -532,7 +526,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "13618.898ms"
+      "ev": "13300.23875ms"
     },
     {
       "id": "perf.tap_targets",
@@ -604,7 +598,7 @@
     {
       "d": "2026-11-24",
       "up": true,
-      "score": 59
+      "score": 62
     },
     {
       "d": "2026-11-23",
@@ -922,5 +916,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

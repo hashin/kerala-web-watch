@@ -37,15 +37,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-22T01:51:24.295Z",
-    "run": "1795312210263",
+    "at": "2026-11-24T05:57:25.232Z",
+    "run": "1795499755125",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 45,
-      "accessibility": 75,
-      "best_practices": 92,
-      "seo": 69
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 4,
       "serious": 20,
@@ -97,7 +92,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3026ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -217,27 +213,24 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "75/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "45/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "46336.50250000001ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "9.4MB"
+        "ev": "9.2MB"
       },
       {
         "id": "perf.viewport",
@@ -245,11 +238,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -489,12 +482,12 @@
     ]
   },
   "score": {
-    "overall": 53,
+    "overall": 55,
     "security": 62,
     "accessibility": 40,
     "content": 42,
     "gigw": 32,
-    "performance": 66,
+    "performance": 90,
     "identity": 96
   },
   "status": "needs-work",
@@ -523,6 +516,11 @@
       "id": "content.broken_links",
       "sev": "H",
       "ev": "2/30 crawled link(s) broken (https://portal.clinicalestablishments.kerala.gov.in/Grievance/lodge_grievance, https://portal.clinicalestablishments.kerala.gov.in/)"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3026ms"
     },
     {
       "id": "sec.xfo",
@@ -560,18 +558,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "46336.50250000001ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "9.4MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "ev": "9.2MB"
     },
     {
       "id": "sec.xcto",
@@ -634,10 +623,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
@@ -651,7 +636,7 @@
     {
       "d": "2026-11-24",
       "up": true,
-      "score": 53
+      "score": 55
     },
     {
       "d": "2026-11-23",
@@ -974,5 +959,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

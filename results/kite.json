@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-10-24T00:13:22.513Z",
-    "run": "1792800728575",
+    "at": "2026-11-24T05:50:11.993Z",
+    "run": "1795499324569",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 60,
+      "performance": 59,
       "accessibility": 60,
       "best_practices": 96,
       "seo": 82
     },
     "axe": {
       "critical": 4,
-      "serious": 38,
+      "serious": 39,
       "moderate": 22,
       "minor": 1
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 12,
-      "broken": 5
+      "pdfs": 13,
+      "broken": 2
     },
     "tech": {
       "cms": null,
@@ -175,7 +175,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "38 serious violation(s)"
+        "ev": "39 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -194,7 +194,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "22 low-contrast element(s)"
+        "ev": "23 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "60/100"
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9236.836ms"
+        "ev": "10620ms"
       },
       {
         "id": "perf.cls",
@@ -236,7 +236,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "461.7MB"
+        "ev": "906.9MB"
       },
       {
         "id": "perf.viewport",
@@ -282,8 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "5/30 crawled link(s) broken (https://sametham.kite.kerala.gov.in/, https://samanwaya.kite.kerala.gov.in/index.php/auth/login, https://tms.kite.kerala.gov.in/tms2022/, ...)"
+        "r": "warn",
+        "ev": "2/30 crawled link(s) broken (https://samanwaya.kite.kerala.gov.in/index.php/auth/login, https://kite.kerala.gov.in/broadband/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -482,10 +482,10 @@
     ]
   },
   "score": {
-    "overall": 48,
+    "overall": 49,
     "security": 52,
     "accessibility": 40,
-    "content": 36,
+    "content": 46,
     "gigw": 18,
     "performance": 80,
     "identity": 88
@@ -520,12 +520,12 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "5/30 crawled link(s) broken (https://sametham.kite.kerala.gov.in/, https://samanwaya.kite.kerala.gov.in/index.php/auth/login, https://tms.kite.kerala.gov.in/tms2022/, ...)"
+      "ev": "2/30 crawled link(s) broken (https://samanwaya.kite.kerala.gov.in/index.php/auth/login, https://kite.kerala.gov.in/broadband/)"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "38 serious violation(s)"
+      "ev": "39 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -535,7 +535,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "22 low-contrast element(s)"
+      "ev": "23 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -560,12 +560,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9236.836ms"
+      "ev": "10620ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "461.7MB"
+      "ev": "906.9MB"
     },
     {
       "id": "sec.csp",
@@ -649,7 +649,7 @@
     {
       "d": "2026-11-24",
       "up": true,
-      "score": 48
+      "score": 49
     },
     {
       "d": "2026-11-23",
@@ -967,5 +967,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -29,25 +29,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-23T02:04:15.004Z",
-    "run": "1795399381142",
+    "at": "2026-11-24T05:48:02.383Z",
+    "run": "1795498833829",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 56,
+      "performance": 57,
       "accessibility": 74,
       "best_practices": 88,
       "seo": 83
     },
     "axe": {
       "critical": 0,
-      "serious": 23,
+      "serious": 24,
       "moderate": 25,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 2,
-      "broken": 3
+      "broken": 32
     },
     "tech": {
       "cms": null,
@@ -89,7 +89,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "fail",
+        "ev": "9834ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -109,15 +110,15 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.tls_version",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.hsts",
@@ -168,7 +169,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "23 serious violation(s)"
+        "ev": "24 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -186,7 +187,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "11 low-contrast element(s)"
+        "ev": "12 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -214,12 +215,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "56/100"
+        "ev": "57/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11807.863999999998ms"
+        "ev": "8328.048ms"
       },
       {
         "id": "perf.cls",
@@ -228,7 +229,7 @@
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "4.6MB"
+        "ev": "4.5MB"
       },
       {
         "id": "perf.viewport",
@@ -274,8 +275,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://thottariyaampwd.kerala.gov.in/pms/home/project/projects?projectStatusId=2)"
+        "r": "fail",
+        "ev": "30/30 crawled link(s) broken (https://pwd.kerala.gov.in/IMF_website/index/index.php?id_ml=TUw=, https://www.pwd.kerala.gov.in/IMF_website/includes/PWD_4U_mobileApp.php?id_ml=RU4=, https://www.pwd.kerala.gov.in/IMF_website/Projects/wings_list.php?id_ml=RU4=, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -383,11 +384,11 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.robots",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.sitemap_xml",
@@ -396,7 +397,7 @@
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.canonical",
@@ -486,15 +487,15 @@
     ]
   },
   "score": {
-    "overall": 57,
+    "overall": 55,
     "security": 40,
     "accessibility": 70,
-    "content": 28,
+    "content": 18,
     "gigw": 56,
     "performance": 71,
     "identity": 96
   },
-  "status": "down",
+  "status": "needs-work",
   "issues": [
     {
       "id": "sec.http_redirect",
@@ -518,17 +519,22 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://thottariyaampwd.kerala.gov.in/pms/home/project/projects?projectStatusId=2)"
+      "ev": "30/30 crawled link(s) broken (https://pwd.kerala.gov.in/IMF_website/index/index.php?id_ml=TUw=, https://www.pwd.kerala.gov.in/IMF_website/includes/PWD_4U_mobileApp.php?id_ml=RU4=, https://www.pwd.kerala.gov.in/IMF_website/Projects/wings_list.php?id_ml=RU4=, ...)"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "9834ms"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "23 serious violation(s)"
+      "ev": "24 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "11 low-contrast element(s)"
+      "ev": "12 low-contrast element(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -556,12 +562,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11807.863999999998ms"
+      "ev": "8328.048ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "4.6MB"
+      "ev": "4.5MB"
     },
     {
       "id": "perf.tap_targets",
@@ -637,8 +643,8 @@
   "history": [
     {
       "d": "2026-11-24",
-      "up": false,
-      "score": 57
+      "up": true,
+      "score": 55
     },
     {
       "d": "2026-11-23",
@@ -956,5 +962,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

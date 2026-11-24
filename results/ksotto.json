@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-23T02:06:48.493Z",
-    "run": "1795399545864",
+    "at": "2026-11-24T05:47:55.839Z",
+    "run": "1795499182363",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 31,
+      "performance": 32,
       "accessibility": 81,
       "best_practices": 88,
       "seo": 62
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "6203ms"
+        "ev": "5655ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -222,22 +222,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "31/100"
+        "ev": "32/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10746.430999999999ms"
+        "ev": "10575.714000000004ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "1.07"
+        "ev": "0.70"
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "7.3MB"
+        "r": "fail",
+        "ev": "13.9MB"
       },
       {
         "id": "perf.viewport",
@@ -313,7 +313,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "2 console error(s): Creating a worker from 'blob:https://ksotto.kerala.gov.in/be013ca7-6f17-4ee2-82d0-9145e74a79bd' violates the following Content Security Policy directive: \"child-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com https://www.youtube-nocookie.com\". Note that 'worker-src' was not explicitly set, so 'child-src' is used as a fallback. The action has been blocked."
+        "ev": "5 console error(s): Creating a worker from 'blob:https://ksotto.kerala.gov.in/c15f2cc5-67ec-40fc-a567-967e925cecea' violates the following Content Security Policy directive: \"child-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com https://www.youtube-nocookie.com\". Note that 'worker-src' was not explicitly set, so 'child-src' is used as a fallback. The action has been blocked."
       },
       {
         "id": "gigw.contact",
@@ -477,12 +477,12 @@
     ]
   },
   "score": {
-    "overall": 53,
+    "overall": 52,
     "security": 62,
     "accessibility": 40,
     "content": 42,
     "gigw": 22,
-    "performance": 77,
+    "performance": 72,
     "identity": 100
   },
   "status": "needs-work",
@@ -515,7 +515,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "6203ms"
+      "ev": "5655ms"
     },
     {
       "id": "sec.xfo",
@@ -559,12 +559,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10746.430999999999ms"
+      "ev": "10575.714000000004ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.3MB"
+      "ev": "13.9MB"
     },
     {
       "id": "sec.xcto",
@@ -596,7 +596,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "2 console error(s): Creating a worker from 'blob:https://ksotto.kerala.gov.in/be013ca7-6f17-4ee2-82d0-9145e74a79bd' violates the following Content Security Policy directive: \"child-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com https://www.youtube-nocookie.com\". Note that 'worker-src' was not explicitly set, so 'child-src' is used as a fallback. The action has been blocked."
+      "ev": "5 console error(s): Creating a worker from 'blob:https://ksotto.kerala.gov.in/c15f2cc5-67ec-40fc-a567-967e925cecea' violates the following Content Security Policy directive: \"child-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com https://www.youtube-nocookie.com\". Note that 'worker-src' was not explicitly set, so 'child-src' is used as a fallback. The action has been blocked."
     },
     {
       "id": "gigw.feedback",
@@ -629,7 +629,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "1.07"
+      "ev": "0.70"
     },
     {
       "id": "perf.images",
@@ -649,7 +649,7 @@
     {
       "d": "2026-11-24",
       "up": true,
-      "score": 53
+      "score": 52
     },
     {
       "d": "2026-11-23",
@@ -972,5 +972,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-23T02:16:12.593Z",
-    "run": "1795400128554",
+    "at": "2026-11-24T06:08:54.636Z",
+    "run": "1795500478417",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 62,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -227,7 +227,7 @@
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6549.523000000001ms"
+        "ev": "6399.077000000001ms"
       },
       {
         "id": "perf.cls",
@@ -282,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://plan.lsgkerala.gov.in/formulation/Public.aspx)"
       },
       {
         "id": "content.broken_pdfs",
@@ -557,6 +558,11 @@
       "ev": "ml-user"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://plan.lsgkerala.gov.in/formulation/Public.aspx)"
+    },
+    {
       "id": "gigw.rti",
       "sev": "H"
     },
@@ -594,7 +600,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6549.523000000001ms"
+      "ev": "6399.077000000001ms"
     },
     {
       "id": "perf.weight",
@@ -997,5 +1003,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

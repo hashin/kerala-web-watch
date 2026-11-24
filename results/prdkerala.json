@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-23T02:10:34.577Z",
-    "run": "1795399776504",
+    "at": "2026-11-24T05:53:58.081Z",
+    "run": "1795499561721",
     "vantage": "gh-us",
     "lighthouse": null,
     "axe": {
@@ -48,7 +48,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 10,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 8",
@@ -227,7 +227,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "20.5MB"
+        "ev": "20.6MB"
       },
       {
         "id": "perf.viewport",
@@ -273,7 +273,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (http://www.prd.kerala.gov.in/pressrelease)"
       },
       {
         "id": "content.broken_pdfs",
@@ -281,7 +282,8 @@
       },
       {
         "id": "content.broken_images",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -302,7 +304,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/player/6b3d0364/www-player.css' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "26 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
       },
       {
         "id": "gigw.contact",
@@ -346,7 +348,7 @@
       },
       {
         "id": "gigw.help",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.rti",
@@ -414,7 +416,7 @@
     "screenshot": {
       "desktop": "prdkerala.webp",
       "mobile": "prdkerala-m.webp",
-      "phash": "00ffff781043e7e3"
+      "phash": "001f1f0f00e3efe3"
     },
     "outlinks": [
       {
@@ -529,11 +531,11 @@
     ]
   },
   "score": {
-    "overall": 54,
+    "overall": 52,
     "security": 42,
     "accessibility": 50,
-    "content": 52,
-    "gigw": 32,
+    "content": 38,
+    "gigw": 36,
     "performance": 90,
     "identity": 91
   },
@@ -563,6 +565,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ML-NILA"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (http://www.prd.kerala.gov.in/pressrelease)"
     },
     {
       "id": "sec.hsts",
@@ -597,7 +604,7 @@
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "20.5MB"
+      "ev": "20.6MB"
     },
     {
       "id": "id.tech",
@@ -628,13 +635,18 @@
       "ev": "tabindex=\"-1\" alongside outline:none"
     },
     {
+      "id": "content.broken_images",
+      "sev": "L",
+      "ev": "1 broken image(s)"
+    },
+    {
       "id": "content.meta_desc",
       "sev": "L"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "24 console error(s): Access to fetch at 'https://www.youtube.com/s/player/6b3d0364/www-player.css' from origin 'https://prd.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "26 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
     },
     {
       "id": "gigw.feedback",
@@ -661,10 +673,6 @@
       "sev": "L"
     },
     {
-      "id": "gigw.help",
-      "sev": "L"
-    },
-    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -682,7 +690,7 @@
     {
       "d": "2026-11-24",
       "up": true,
-      "score": 54
+      "score": 52
     },
     {
       "d": "2026-11-23",
@@ -1000,5 +1008,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

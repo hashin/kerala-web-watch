@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-22T01:46:24.903Z",
-    "run": "1795311925984",
+    "at": "2026-11-24T05:52:28.221Z",
+    "run": "1795499478941",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 58,
+      "performance": 61,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 85
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 20,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "58/100"
+        "ev": "61/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "56851.69199999999ms"
+        "ev": "30282.256999999983ms"
       },
       {
         "id": "perf.cls",
@@ -285,8 +285,7 @@
       },
       {
         "id": "content.broken_pdfs",
-        "r": "fail",
-        "ev": "1 linked PDF(s) 404: https://kodungalloormunicipality.lsgkerala.gov.in/ml/system/files/2026-09/AFS%202025-26.pdf"
+        "r": "pass"
       },
       {
         "id": "content.broken_images",
@@ -565,10 +564,10 @@
     ]
   },
   "score": {
-    "overall": 67,
+    "overall": 68,
     "security": 76,
     "accessibility": 70,
-    "content": 46,
+    "content": 56,
     "gigw": 40,
     "performance": 76,
     "identity": 96
@@ -601,11 +600,6 @@
       "ev": "3 low-contrast element(s)"
     },
     {
-      "id": "content.broken_pdfs",
-      "sev": "M",
-      "ev": "1 linked PDF(s) 404: https://kodungalloormunicipality.lsgkerala.gov.in/ml/system/files/2026-09/AFS%202025-26.pdf"
-    },
-    {
       "id": "gigw.sitemap",
       "sev": "M"
     },
@@ -624,7 +618,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "56851.69199999999ms"
+      "ev": "30282.256999999983ms"
     },
     {
       "id": "perf.weight",
@@ -688,7 +682,7 @@
     {
       "d": "2026-11-24",
       "up": true,
-      "score": 67
+      "score": 68
     },
     {
       "d": "2026-11-23",
@@ -1001,5 +995,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

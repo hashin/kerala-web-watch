@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-23T01:59:17.766Z",
-    "run": "1795399089339",
+    "at": "2026-11-24T05:40:28.535Z",
+    "run": "1795498735540",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 41,
+      "performance": 47,
       "accessibility": 75,
       "best_practices": 92,
       "seo": 73
@@ -48,7 +48,7 @@
       "critical": 2,
       "serious": 12,
       "moderate": 73,
-      "minor": 1
+      "minor": 0
     },
     "crawl": {
       "pages": 30,
@@ -179,7 +179,7 @@
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "74 moderate/minor violation(s)"
+        "ev": "73 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -219,12 +219,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "41/100"
+        "ev": "47/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "15413.018ms"
+        "ev": "15895.175500000003ms"
       },
       {
         "id": "perf.cls",
@@ -233,7 +233,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "11.8MB"
+        "ev": "23.7MB"
       },
       {
         "id": "perf.viewport",
@@ -310,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "6 console error(s): Connecting to 'https://www.youtube.com/s/player/6b3d0364/www-player.css' violates the following Content Security Policy directive: \"connect-src 'self' blob: data: *.userway.org kchat1.kerala.gov.in *.google-analytics.com\". The action has been blocked."
+        "ev": "6 console error(s): Connecting to 'https://www.youtube.com/s/player/7f755914/www-player.css' violates the following Content Security Policy directive: \"connect-src 'self' blob: data: *.userway.org kchat1.kerala.gov.in *.google-analytics.com\". The action has been blocked."
       },
       {
         "id": "gigw.contact",
@@ -346,7 +346,7 @@
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.screen_reader",
@@ -515,11 +515,11 @@
     ]
   },
   "score": {
-    "overall": 62,
+    "overall": 61,
     "security": 80,
     "accessibility": 60,
     "content": 32,
-    "gigw": 44,
+    "gigw": 34,
     "performance": 66,
     "identity": 92
   },
@@ -565,6 +565,10 @@
       "ev": "missing <title>"
     },
     {
+      "id": "gigw.accessibility_statement",
+      "sev": "M"
+    },
+    {
       "id": "gigw.ownership",
       "sev": "M"
     },
@@ -575,12 +579,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "15413.018ms"
+      "ev": "15895.175500000003ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "11.8MB"
+      "ev": "23.7MB"
     },
     {
       "id": "perf.tap_targets",
@@ -589,7 +593,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "74 moderate/minor violation(s)"
+      "ev": "73 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -608,7 +612,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "6 console error(s): Connecting to 'https://www.youtube.com/s/player/6b3d0364/www-player.css' violates the following Content Security Policy directive: \"connect-src 'self' blob: data: *.userway.org kchat1.kerala.gov.in *.google-analytics.com\". The action has been blocked."
+      "ev": "6 console error(s): Connecting to 'https://www.youtube.com/s/player/7f755914/www-player.css' violates the following Content Security Policy directive: \"connect-src 'self' blob: data: *.userway.org kchat1.kerala.gov.in *.google-analytics.com\". The action has been blocked."
     },
     {
       "id": "gigw.terms",
@@ -653,7 +657,7 @@
     {
       "d": "2026-11-24",
       "up": true,
-      "score": 62
+      "score": 61
     },
     {
       "d": "2026-11-23",
@@ -971,5 +975,5 @@
       "score": 61
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

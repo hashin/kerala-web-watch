@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-13T02:04:47.149Z",
-    "run": "1794535411749",
+    "at": "2026-11-24T05:36:41.054Z",
+    "run": "1795498503248",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 38,
+      "performance": 46,
       "accessibility": 93,
       "best_practices": 46,
       "seo": 83
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "38/100"
+        "ev": "46/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "45968.13050000003ms"
+        "ev": "30128.659ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "33.7MB"
+        "ev": "52.9MB"
       },
       {
         "id": "perf.viewport",
@@ -281,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://kozhikode.nic.in/en/#SkipContent)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -291,7 +290,7 @@
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "6 broken image(s)"
+        "ev": "14 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -312,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "14 console error(s): Refused to apply style from 'https://kozhikode.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+        "ev": "30 console error(s): Refused to apply style from 'https://kozhikode.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       },
       {
         "id": "gigw.contact",
@@ -418,7 +417,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-9HR295F7RX&amp;cx=c&amp;gtm=4e6bb1, https://www.googletagmanager.com/gtag/js?id=UA-131902160-1"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-9HR295F7RX&amp;cx=c&amp;gtm=4e6bh1h1, https://www.googletagmanager.com/gtag/js?id=UA-131902160-1"
       }
     ],
     "screenshot": {
@@ -501,10 +500,10 @@
     ]
   },
   "score": {
-    "overall": 56,
+    "overall": 58,
     "security": 48,
     "accessibility": 40,
-    "content": 42,
+    "content": 52,
     "gigw": 70,
     "performance": 76,
     "identity": 96
@@ -530,11 +529,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://kozhikode.nic.in/en/#SkipContent)"
     },
     {
       "id": "sec.hsts",
@@ -566,12 +560,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "45968.13050000003ms"
+      "ev": "30128.659ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "33.7MB"
+      "ev": "52.9MB"
     },
     {
       "id": "sec.csp",
@@ -603,12 +597,12 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "6 broken image(s)"
+      "ev": "14 broken image(s)"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "14 console error(s): Refused to apply style from 'https://kozhikode.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+      "ev": "30 console error(s): Refused to apply style from 'https://kozhikode.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
     },
     {
       "id": "gigw.terms",
@@ -646,14 +640,14 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-9HR295F7RX&amp;cx=c&amp;gtm=4e6bb1, https://www.googletagmanager.com/gtag/js?id=UA-131902160-1"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-9HR295F7RX&amp;cx=c&amp;gtm=4e6bh1h1, https://www.googletagmanager.com/gtag/js?id=UA-131902160-1"
     }
   ],
   "history": [
     {
       "d": "2026-11-24",
       "up": true,
-      "score": 56
+      "score": 58
     },
     {
       "d": "2026-11-23",
@@ -966,5 +960,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

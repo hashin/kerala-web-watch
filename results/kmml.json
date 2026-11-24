@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-23T02:02:47.115Z",
-    "run": "1795399331863",
+    "at": "2026-11-24T05:43:05.168Z",
+    "run": "1795498923289",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 72,
+      "performance": 60,
       "accessibility": 82,
       "best_practices": 88,
       "seo": 83
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3990ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -220,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "72/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "5702.527ms"
+        "ev": "4350.603ms"
       },
       {
         "id": "perf.cls",
@@ -467,7 +468,7 @@
     "performance": 81,
     "identity": 72
   },
-  "status": "down",
+  "status": "needs-work",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -493,6 +494,11 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "www.kmml.com"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3990ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -542,7 +548,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "5702.527ms"
+      "ev": "4350.603ms"
     },
     {
       "id": "perf.weight",
@@ -631,7 +637,7 @@
   "history": [
     {
       "d": "2026-11-24",
-      "up": false,
+      "up": true,
       "score": 53
     },
     {
@@ -945,5 +951,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

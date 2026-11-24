@@ -35,23 +35,23 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-23T02:17:01.345Z",
-    "run": "1795400171585",
+    "at": "2026-11-24T06:05:41.185Z",
+    "run": "1795500324605",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 48,
-      "accessibility": 82,
-      "best_practices": 73,
-      "seo": 85
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
     },
     "axe": {
-      "critical": 3,
-      "serious": 2,
-      "moderate": 4,
+      "critical": 0,
+      "serious": 1,
+      "moderate": 2,
       "minor": 0
     },
     "crawl": {
-      "pages": 30,
+      "pages": 0,
       "pdfs": 0,
       "broken": 0
     },
@@ -71,7 +71,8 @@
       },
       {
         "id": "avail.status",
-        "r": "pass"
+        "r": "fail",
+        "ev": "final response was 500"
       },
       {
         "id": "avail.redirect_offsite",
@@ -131,8 +132,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://gmpg.org/xfn/11\""
+        "r": "pass"
       },
       {
         "id": "sec.csp",
@@ -168,18 +168,17 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "fail",
-        "ev": "3 critical violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "2 serious violation(s)"
+        "ev": "1 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "4 moderate/minor violation(s)"
+        "ev": "2 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -187,23 +186,19 @@
       },
       {
         "id": "a11y.alt",
-        "r": "fail",
-        "ev": "2 image(s) missing alt text"
+        "r": "pass"
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "1 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
-        "r": "fail",
-        "ev": "heading levels skipped"
+        "r": "pass"
       },
       {
         "id": "a11y.labels",
-        "r": "fail",
-        "ev": "1 form control(s) without a label"
+        "r": "pass"
       },
       {
         "id": "a11y.skip_link",
@@ -211,36 +206,33 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "warn",
-        "ev": "tabindex=\"-1\" alongside outline:none"
+        "r": "pass"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "82/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "48/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "59659.14899999999ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
-        "r": "fail",
-        "ev": "10.7MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "perf.tap_targets",
@@ -252,7 +244,7 @@
       },
       {
         "id": "content.copyright_year",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "content.last_updated",
@@ -269,8 +261,7 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "fail",
-        "ev": "ml-IN"
+        "r": "pass"
       },
       {
         "id": "content.obsolete_tech",
@@ -306,16 +297,16 @@
       },
       {
         "id": "content.favicon",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "7 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+        "ev": "1 console error(s): Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
       },
       {
         "id": "gigw.contact",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.feedback",
@@ -347,11 +338,11 @@
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.screen_reader",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.help",
@@ -359,7 +350,7 @@
       },
       {
         "id": "gigw.rti",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.search",
@@ -387,15 +378,17 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.robots",
-        "r": "pass"
+        "r": "fail",
+        "ev": "robots.txt returned 500"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "pass"
+        "r": "fail",
+        "ev": "sitemap.xml returned 500"
       },
       {
         "id": "id.soft_404",
@@ -403,11 +396,12 @@
       },
       {
         "id": "id.canonical",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.charset_doctype",
-        "r": "pass"
+        "r": "fail",
+        "ev": "missing UTF-8 charset, HTML5 doctype"
       },
       {
         "id": "id.tech",
@@ -421,52 +415,17 @@
     "screenshot": {
       "desktop": "kirtads.webp",
       "mobile": "kirtads-m.webp",
-      "phash": "ff00007f7f7f7f7f"
+      "phash": "03e7ffffffffffff"
     },
-    "outlinks": [
-      {
-        "host": "ux4g.gov.in",
-        "count": 1,
-        "texts": [
-          "Created by"
-        ]
-      },
-      {
-        "host": "tribal.nic.in",
-        "count": 1,
-        "texts": [
-          "കേന്ദ്ര പട്ടികവർഗ്ഗ മന്ത്രാലയം"
-        ]
-      },
-      {
-        "host": "cdit.org",
-        "count": 1,
-        "texts": [
-          "CDIT"
-        ]
-      }
-    ]
+    "outlinks": []
   },
-  "score": {
-    "overall": 49,
-    "security": 48,
-    "accessibility": 30,
-    "content": 52,
-    "gigw": 32,
-    "performance": 66,
-    "identity": 100
-  },
+  "score": null,
   "status": "down",
   "issues": [
     {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://gmpg.org/xfn/11\""
-    },
-    {
-      "id": "a11y.axe_critical",
-      "sev": "H",
-      "ev": "3 critical violation(s)"
+      "id": "avail.status",
+      "sev": "C",
+      "ev": "final response was 500"
     },
     {
       "id": "content.last_updated",
@@ -474,9 +433,16 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "content.legacy_font",
-      "sev": "H",
-      "ev": "ml-IN"
+      "id": "gigw.contact",
+      "sev": "H"
+    },
+    {
+      "id": "gigw.rti",
+      "sev": "H"
+    },
+    {
+      "id": "perf.viewport",
+      "sev": "H"
     },
     {
       "id": "sec.hsts",
@@ -489,22 +455,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "2 serious violation(s)"
-    },
-    {
-      "id": "a11y.alt",
-      "sev": "M",
-      "ev": "2 image(s) missing alt text"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "1 low-contrast element(s)"
-    },
-    {
-      "id": "a11y.labels",
-      "sev": "M",
-      "ev": "1 form control(s) without a label"
+      "ev": "1 serious violation(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -515,22 +466,16 @@
       "sev": "M"
     },
     {
+      "id": "gigw.accessibility_statement",
+      "sev": "M"
+    },
+    {
       "id": "gigw.ownership",
       "sev": "M"
     },
     {
       "id": "gigw.last_updated",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "59659.14899999999ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "10.7MB"
     },
     {
       "id": "perf.tap_targets",
@@ -551,26 +496,20 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "4 moderate/minor violation(s)"
-    },
-    {
-      "id": "a11y.headings",
-      "sev": "L",
-      "ev": "heading levels skipped"
-    },
-    {
-      "id": "a11y.keyboard",
-      "sev": "L",
-      "ev": "tabindex=\"-1\" alongside outline:none"
+      "ev": "2 moderate/minor violation(s)"
     },
     {
       "id": "content.meta_desc",
       "sev": "L"
     },
     {
+      "id": "content.favicon",
+      "sev": "L"
+    },
+    {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "7 console error(s): Failed to load resource: the server responded with a status of 403 (Forbidden)"
+      "ev": "1 console error(s): Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
     },
     {
       "id": "gigw.feedback",
@@ -593,6 +532,10 @@
       "sev": "L"
     },
     {
+      "id": "gigw.screen_reader",
+      "sev": "L"
+    },
+    {
       "id": "gigw.help",
       "sev": "L"
     },
@@ -605,7 +548,30 @@
       "sev": "L"
     },
     {
+      "id": "id.www_consistency",
+      "sev": "L"
+    },
+    {
+      "id": "id.robots",
+      "sev": "L",
+      "ev": "robots.txt returned 500"
+    },
+    {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 500"
+    },
+    {
+      "id": "id.charset_doctype",
+      "sev": "L",
+      "ev": "missing UTF-8 charset, HTML5 doctype"
+    },
+    {
       "id": "gigw.emblem",
+      "sev": "I"
+    },
+    {
+      "id": "id.canonical",
       "sev": "I"
     }
   ],
@@ -613,7 +579,7 @@
     {
       "d": "2026-11-24",
       "up": false,
-      "score": 49
+      "score": null
     },
     {
       "d": "2026-11-23",
@@ -926,5 +892,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
