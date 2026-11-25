@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-24T05:52:28.221Z",
-    "run": "1795499478941",
+    "at": "2026-11-25T04:48:40.013Z",
+    "run": "1795582058163",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 61,
+      "performance": 53,
       "accessibility": 82,
       "best_practices": 100,
       "seo": 85
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 20,
-      "broken": 0
+      "broken": 1
     },
     "tech": {
       "cms": "Drupal 11",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "61/100"
+        "ev": "53/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "30282.256999999983ms"
+        "ev": "46238.17899999996ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +235,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "16.2MB"
+        "ev": "16.0MB"
       },
       {
         "id": "perf.viewport",
@@ -281,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://kodungalloormunicipality.lsgkerala.gov.in/ml/en/node/88)"
       },
       {
         "id": "content.broken_pdfs",
@@ -564,10 +565,10 @@
     ]
   },
   "score": {
-    "overall": 68,
+    "overall": 67,
     "security": 76,
     "accessibility": 70,
-    "content": 56,
+    "content": 46,
     "gigw": 40,
     "performance": 76,
     "identity": 96
@@ -588,6 +589,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://kodungalloormunicipality.lsgkerala.gov.in/ml/en/node/88)"
     },
     {
       "id": "a11y.axe_serious",
@@ -618,12 +624,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "30282.256999999983ms"
+      "ev": "46238.17899999996ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "16.2MB"
+      "ev": "16.0MB"
     },
     {
       "id": "sec.csp",
@@ -682,7 +688,7 @@
     {
       "d": "2026-11-25",
       "up": true,
-      "score": 68
+      "score": 67
     },
     {
       "d": "2026-11-24",
@@ -1000,5 +1006,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

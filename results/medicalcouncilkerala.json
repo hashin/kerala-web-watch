@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-24T05:55:08.333Z",
-    "run": "1795499651239",
+    "at": "2026-11-25T04:54:14.795Z",
+    "run": "1795582398703",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 36,
+      "performance": 35,
       "accessibility": 86,
       "best_practices": 96,
       "seo": 62
@@ -220,21 +220,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "36/100"
+        "ev": "35/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "12881.667500000003ms"
+        "ev": "13528.9485ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.75"
+        "ev": "0.76"
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3.0MB"
       },
       {
         "id": "perf.viewport",
@@ -267,7 +268,8 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "pass"
+        "r": "fail",
+        "ev": "ml-box"
       },
       {
         "id": "content.obsolete_tech",
@@ -478,12 +480,12 @@
     ]
   },
   "score": {
-    "overall": 60,
+    "overall": 56,
     "security": 62,
     "accessibility": 50,
-    "content": 68,
+    "content": 48,
     "gigw": 22,
-    "performance": 82,
+    "performance": 77,
     "identity": 100
   },
   "status": "needs-work",
@@ -502,6 +504,11 @@
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-box"
     },
     {
       "id": "sec.hsts",
@@ -540,7 +547,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "12881.667500000003ms"
+      "ev": "13528.9485ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "3.0MB"
     },
     {
       "id": "sec.xcto",
@@ -610,7 +622,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.75"
+      "ev": "0.76"
     },
     {
       "id": "perf.images",
@@ -625,7 +637,7 @@
     {
       "d": "2026-11-25",
       "up": true,
-      "score": 60
+      "score": 56
     },
     {
       "d": "2026-11-24",
@@ -953,5 +965,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

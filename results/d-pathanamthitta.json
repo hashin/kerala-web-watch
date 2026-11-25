@@ -35,15 +35,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-24T05:32:07.872Z",
-    "run": "1795498236714",
+    "at": "2026-11-25T04:33:44.261Z",
+    "run": "1795581155167",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 62,
-      "accessibility": 93,
-      "best_practices": 73,
-      "seo": 67
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 8,
       "serious": 3,
@@ -120,7 +115,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "22 days left"
+        "ev": "21 days left"
       },
       {
         "id": "sec.tls_version",
@@ -215,27 +210,23 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "93/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "62/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "5795.663ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "3.0MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
@@ -243,11 +234,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -310,7 +301,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "9 console error(s): Refused to apply style from 'https://pathanamthitta.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+        "ev": "5 console error(s): Refused to apply style from 'https://pathanamthitta.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       },
       {
         "id": "gigw.contact",
@@ -475,12 +466,12 @@
     ]
   },
   "score": {
-    "overall": 57,
+    "overall": 59,
     "security": 38,
     "accessibility": 50,
     "content": 52,
     "gigw": 64,
-    "performance": 81,
+    "performance": 100,
     "identity": 96
   },
   "status": "needs-work",
@@ -488,7 +479,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "22 days left"
+      "ev": "21 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -537,16 +528,6 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "5795.663ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "3.0MB"
-    },
-    {
       "id": "sec.csp",
       "sev": "L"
     },
@@ -580,7 +561,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "9 console error(s): Refused to apply style from 'https://pathanamthitta.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+      "ev": "5 console error(s): Refused to apply style from 'https://pathanamthitta.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
     },
     {
       "id": "gigw.terms",
@@ -596,10 +577,6 @@
     },
     {
       "id": "gigw.screen_reader",
-      "sev": "L"
-    },
-    {
-      "id": "perf.images",
       "sev": "L"
     },
     {
@@ -621,7 +598,7 @@
     {
       "d": "2026-11-25",
       "up": true,
-      "score": 57
+      "score": 59
     },
     {
       "d": "2026-11-24",
@@ -939,5 +916,5 @@
       "score": 58
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

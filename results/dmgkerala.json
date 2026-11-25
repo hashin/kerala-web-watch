@@ -35,28 +35,23 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-24T05:56:11.849Z",
-    "run": "1795499709837",
+    "at": "2026-11-25T04:57:08.702Z",
+    "run": "1795582582512",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 39,
-      "accessibility": 88,
-      "best_practices": 96,
-      "seo": 58
-    },
+    "lighthouse": null,
     "axe": {
-      "critical": 10,
-      "serious": 5,
-      "moderate": 1,
+      "critical": 0,
+      "serious": 14,
+      "moderate": 0,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 1,
+      "pdfs": 0,
       "broken": 1
     },
     "tech": {
-      "cms": null,
+      "cms": "WordPress 7.1.5",
       "server": "Apache",
       "jquery": null
     },
@@ -127,7 +122,7 @@
       },
       {
         "id": "sec.hsts",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.mixed_content",
@@ -136,7 +131,7 @@
       },
       {
         "id": "sec.csp",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xfo",
@@ -168,18 +163,16 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "fail",
-        "ev": "10 critical violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "5 serious violation(s)"
+        "ev": "14 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
-        "r": "fail",
-        "ev": "1 moderate/minor violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.lang",
@@ -187,13 +180,12 @@
       },
       {
         "id": "a11y.alt",
-        "r": "fail",
-        "ev": "6 image(s) missing alt text"
+        "r": "pass"
       },
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "1 low-contrast element(s)"
+        "ev": "14 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -209,33 +201,27 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "warn",
-        "ev": "tabindex=\"-1\" alongside outline:none"
+        "r": "pass"
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "88/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "39/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "5231.8615ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "1.34"
+        "r": "na"
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "4.2MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
@@ -243,11 +229,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -269,7 +255,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-IN"
+        "ev": "ml-"
       },
       {
         "id": "content.obsolete_tech",
@@ -310,7 +296,8 @@
       },
       {
         "id": "content.console_errors",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 console error(s): Cannot read properties of undefined (reading 'split')"
       },
       {
         "id": "gigw.contact",
@@ -318,7 +305,7 @@
       },
       {
         "id": "gigw.feedback",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.sitemap",
@@ -358,7 +345,7 @@
       },
       {
         "id": "gigw.rti",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.search",
@@ -374,7 +361,7 @@
       },
       {
         "id": "gigw.emblem",
-        "r": "warn"
+        "r": "pass"
       },
       {
         "id": "id.gov_domain",
@@ -386,7 +373,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.robots",
@@ -412,7 +399,8 @@
       },
       {
         "id": "id.tech",
-        "r": "pass"
+        "r": "pass",
+        "ev": "WordPress 7.1.5"
       },
       {
         "id": "id.third_party",
@@ -422,29 +410,28 @@
     "screenshot": {
       "desktop": "dmgkerala.webp",
       "mobile": "dmgkerala-m.webp",
-      "phash": "ff003f30033a3d00"
+      "phash": "7f0000ffffffffff"
     },
     "outlinks": [
       {
         "host": "cdit.org",
-        "count": 2,
+        "count": 1,
         "texts": [
-          "Bid opening date: 14.02.2022",
           "CDIT"
         ]
       }
     ]
   },
   "score": {
-    "overall": 46,
-    "security": 42,
-    "accessibility": 44,
-    "content": 46,
-    "gigw": 6,
-    "performance": 77,
-    "identity": 92
+    "overall": 55,
+    "security": 28,
+    "accessibility": 80,
+    "content": 42,
+    "gigw": 22,
+    "performance": 100,
+    "identity": 88
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
     {
       "id": "sec.http_redirect",
@@ -456,11 +443,6 @@
       "ev": "href=\"http://gmpg.org/xfn/11\""
     },
     {
-      "id": "a11y.axe_critical",
-      "sev": "H",
-      "ev": "10 critical violation(s)"
-    },
-    {
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
@@ -468,7 +450,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-IN"
+      "ev": "ml-"
     },
     {
       "id": "content.broken_links",
@@ -476,8 +458,8 @@
       "ev": "1/30 crawled link(s) broken (https://www.portal.dmg.kerala.gov.in/)"
     },
     {
-      "id": "gigw.rti",
-      "sev": "H"
+      "id": "sec.hsts",
+      "sev": "M"
     },
     {
       "id": "sec.xfo",
@@ -486,17 +468,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "5 serious violation(s)"
-    },
-    {
-      "id": "a11y.alt",
-      "sev": "M",
-      "ev": "6 image(s) missing alt text"
+      "ev": "14 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "1 low-contrast element(s)"
+      "ev": "14 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -519,14 +496,8 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "5231.8615ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "4.2MB"
+      "id": "sec.csp",
+      "sev": "L"
     },
     {
       "id": "sec.xcto",
@@ -537,17 +508,16 @@
       "sev": "L"
     },
     {
-      "id": "a11y.axe_moderate_minor",
-      "sev": "L",
-      "ev": "1 moderate/minor violation(s)"
-    },
-    {
-      "id": "a11y.keyboard",
-      "sev": "L",
-      "ev": "tabindex=\"-1\" alongside outline:none"
-    },
-    {
       "id": "content.meta_desc",
+      "sev": "L"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "1 console error(s): Cannot read properties of undefined (reading 'split')"
+    },
+    {
+      "id": "gigw.feedback",
       "sev": "L"
     },
     {
@@ -575,12 +545,7 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "1.34"
-    },
-    {
-      "id": "perf.images",
+      "id": "id.www_consistency",
       "sev": "L"
     },
     {
@@ -592,17 +557,13 @@
       "id": "id.sitemap_xml",
       "sev": "L",
       "ev": "sitemap.xml returned 404"
-    },
-    {
-      "id": "gigw.emblem",
-      "sev": "I"
     }
   ],
   "history": [
     {
       "d": "2026-11-25",
       "up": true,
-      "score": 46
+      "score": 55
     },
     {
       "d": "2026-11-24",
@@ -930,5 +891,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-24T05:43:50.244Z",
-    "run": "1795498985169",
+    "at": "2026-11-25T04:40:45.302Z",
+    "run": "1795581591479",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 62,
+      "performance": 60,
       "accessibility": 77,
       "best_practices": 92,
       "seo": 92
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "5010ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -120,7 +121,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "22 days left"
+        "ev": "21 days left"
       },
       {
         "id": "sec.tls_version",
@@ -222,12 +223,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "62/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "12814.1435ms"
+        "ev": "12469.050500000003ms"
       },
       {
         "id": "perf.cls",
@@ -418,7 +419,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://www.googletagmanager.com/gtag/js?id=G-Q595STPSXP&amp;cx=c&amp;gtm=4e6bh1h1, https://www.googletagmanager.com/gtag/js?id=UA-12419584-1"
+        "ev": "https://www.googletagmanager.com/gtag/js?id=G-Q595STPSXP&amp;cx=c&amp;gtm=4e6bh1, https://www.googletagmanager.com/gtag/js?id=UA-12419584-1"
       }
     ],
     "screenshot": {
@@ -495,7 +496,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "22 days left"
+      "ev": "21 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -521,6 +522,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-lsgd"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "5010ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -560,7 +566,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "12814.1435ms"
+      "ev": "12469.050500000003ms"
     },
     {
       "id": "id.tech",
@@ -639,7 +645,7 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://www.googletagmanager.com/gtag/js?id=G-Q595STPSXP&amp;cx=c&amp;gtm=4e6bh1h1, https://www.googletagmanager.com/gtag/js?id=UA-12419584-1"
+      "ev": "https://www.googletagmanager.com/gtag/js?id=G-Q595STPSXP&amp;cx=c&amp;gtm=4e6bh1, https://www.googletagmanager.com/gtag/js?id=UA-12419584-1"
     }
   ],
   "history": [
@@ -974,5 +980,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

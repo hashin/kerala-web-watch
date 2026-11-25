@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-24T05:36:46.085Z",
-    "run": "1795498383502",
+    "at": "2026-11-25T04:31:30.565Z",
+    "run": "1795581005415",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 50,
+      "performance": 49,
       "accessibility": 86,
       "best_practices": 92,
       "seo": 69
@@ -57,26 +57,25 @@
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "Apache",
       "jquery": null
     },
     "checks": [
       {
         "id": "avail.dns",
-        "r": "fail",
-        "ev": "arogyakeralam.gov.in did not resolve"
+        "r": "pass"
       },
       {
         "id": "avail.connect",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.status",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -96,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "na"
+        "r": "warn",
+        "ev": "3422ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -108,23 +108,23 @@
       },
       {
         "id": "sec.https",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.hsts",
@@ -132,7 +132,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "fail",
+        "ev": "href=\"http://gmpg.org/xfn/11\""
       },
       {
         "id": "sec.csp",
@@ -221,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "50/100"
+        "ev": "49/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "26827.603000000003ms"
+        "ev": "24672.174999999996ms"
       },
       {
         "id": "perf.cls",
@@ -310,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "4 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+        "ev": "2 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
@@ -506,13 +507,21 @@
       }
     ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 51,
+    "security": 42,
+    "accessibility": 50,
+    "content": 52,
+    "gigw": 22,
+    "performance": 71,
+    "identity": 100
+  },
+  "status": "needs-work",
   "issues": [
     {
-      "id": "avail.dns",
-      "sev": "C",
-      "ev": "arogyakeralam.gov.in did not resolve"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://gmpg.org/xfn/11\""
     },
     {
       "id": "sec.vuln_js",
@@ -533,6 +542,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-box"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3422ms"
     },
     {
       "id": "sec.hsts",
@@ -571,7 +585,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "26827.603000000003ms"
+      "ev": "24672.174999999996ms"
     },
     {
       "id": "perf.weight",
@@ -612,7 +626,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "4 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      "ev": "2 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
@@ -654,8 +668,8 @@
   "history": [
     {
       "d": "2026-11-25",
-      "up": false,
-      "score": null
+      "up": true,
+      "score": 51
     },
     {
       "d": "2026-11-24",
@@ -983,5 +997,5 @@
       "score": 51
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -29,11 +29,11 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-11-23T02:00:52.967Z",
-    "run": "1795399197188",
+    "at": "2026-11-25T04:43:18.412Z",
+    "run": "1795581752558",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 41,
+      "performance": 45,
       "accessibility": 69,
       "best_practices": 88,
       "seo": 83
@@ -89,8 +89,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3356ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -215,17 +214,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "41/100"
+        "ev": "45/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7798.626ms"
+        "ev": "7658.702ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.33"
+        "ev": "0.32"
       },
       {
         "id": "perf.weight",
@@ -380,7 +379,7 @@
       {
         "id": "id.domain_expiry",
         "r": "fail",
-        "ev": "41 days left"
+        "ev": "39 days left"
       },
       {
         "id": "id.www_consistency",
@@ -501,7 +500,7 @@
     "performance": 67,
     "identity": 56
   },
-  "status": "down",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -541,12 +540,7 @@
     {
       "id": "id.domain_expiry",
       "sev": "H",
-      "ev": "41 days left"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3356ms"
+      "ev": "39 days left"
     },
     {
       "id": "sec.hsts",
@@ -585,7 +579,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7798.626ms"
+      "ev": "7658.702ms"
     },
     {
       "id": "perf.weight",
@@ -650,7 +644,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.33"
+      "ev": "0.32"
     },
     {
       "id": "perf.images",
@@ -678,7 +672,7 @@
   "history": [
     {
       "d": "2026-11-25",
-      "up": false,
+      "up": true,
       "score": 45
     },
     {
@@ -1002,5 +996,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

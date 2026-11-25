@@ -35,18 +35,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-24T05:45:20.451Z",
-    "run": "1795499063578",
+    "at": "2026-11-25T04:46:02.737Z",
+    "run": "1795581907419",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 48,
+      "performance": 47,
       "accessibility": 77,
       "best_practices": 92,
       "seo": 92
     },
     "axe": {
       "critical": 6,
-      "serious": 2,
+      "serious": 5,
       "moderate": 22,
       "minor": 0
     },
@@ -120,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "24 days left"
+        "ev": "23 days left"
       },
       {
         "id": "sec.tls_version",
@@ -175,7 +175,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "2 serious violation(s)"
+        "ev": "5 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -192,7 +192,8 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "3 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -220,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "48/100"
+        "ev": "47/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "13300.23875ms"
+        "ev": "13972.060000000001ms"
       },
       {
         "id": "perf.cls",
@@ -462,9 +463,9 @@
     ]
   },
   "score": {
-    "overall": 62,
+    "overall": 59,
     "security": 70,
-    "accessibility": 60,
+    "accessibility": 50,
     "content": 46,
     "gigw": 32,
     "performance": 76,
@@ -475,7 +476,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "24 days left"
+      "ev": "23 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -505,7 +506,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "2 serious violation(s)"
+      "ev": "5 serious violation(s)"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "3 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -526,7 +532,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "13300.23875ms"
+      "ev": "13972.060000000001ms"
     },
     {
       "id": "perf.tap_targets",
@@ -598,7 +604,7 @@
     {
       "d": "2026-11-25",
       "up": true,
-      "score": 62
+      "score": 59
     },
     {
       "d": "2026-11-24",
@@ -921,5 +927,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

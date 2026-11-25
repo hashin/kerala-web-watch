@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-24T05:42:44.106Z",
-    "run": "1795498843024",
+    "at": "2026-11-25T04:44:12.577Z",
+    "run": "1795581781194",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 39,
+      "performance": 35,
       "accessibility": 90,
       "best_practices": 100,
       "seo": 92
@@ -122,7 +122,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "26 days left"
+        "ev": "25 days left"
       },
       {
         "id": "sec.tls_version",
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "39/100"
+        "ev": "35/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "19573.014000000006ms"
+        "ev": "19391.535000000003ms"
       },
       {
         "id": "perf.cls",
@@ -395,8 +395,7 @@
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 404"
+        "r": "pass"
       },
       {
         "id": "id.soft_404",
@@ -479,14 +478,14 @@
     "content": 62,
     "gigw": 32,
     "performance": 81,
-    "identity": 96
+    "identity": 100
   },
   "status": "needs-work",
   "issues": [
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "26 days left"
+      "ev": "25 days left"
     },
     {
       "id": "sec.vuln_js",
@@ -532,7 +531,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "19573.014000000006ms"
+      "ev": "19391.535000000003ms"
     },
     {
       "id": "perf.weight",
@@ -602,11 +601,6 @@
     {
       "id": "perf.images",
       "sev": "L"
-    },
-    {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 404"
     }
   ],
   "history": [
@@ -936,5 +930,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-23T02:17:34.779Z",
-    "run": "1795400181477",
+    "at": "2026-11-25T04:57:29.908Z",
+    "run": "1795582605176",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 57,
       "accessibility": 98,
       "best_practices": 100,
       "seo": 100
@@ -53,11 +53,11 @@
     "crawl": {
       "pages": 20,
       "pdfs": 0,
-      "broken": 2
+      "broken": 3
     },
     "tech": {
       "cms": "WordPress 7.0.9",
-      "server": "nginx/1.25.5",
+      "server": "Apache",
       "jquery": null
     },
     "checks": [
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3131ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -152,8 +151,7 @@
       },
       {
         "id": "sec.server_banner",
-        "r": "fail",
-        "ev": "nginx/1.25.5"
+        "r": "pass"
       },
       {
         "id": "sec.vuln_js",
@@ -220,12 +218,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "57/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "15871.913149999998ms"
+        "ev": "11585.440500000002ms"
       },
       {
         "id": "perf.cls",
@@ -281,7 +279,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "2/20 crawled link(s) broken (https://kaicltd.com/services-copy-2/, https://kaicltd.com/trading/)"
+        "ev": "3/20 crawled link(s) broken (https://kaicltd.com/about/, https://kaicltd.com/services-copy-2/, https://kaicltd.com/trading/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -439,8 +437,8 @@
     ]
   },
   "score": {
-    "overall": 60,
-    "security": 64,
+    "overall": 61,
+    "security": 68,
     "accessibility": 70,
     "content": 50,
     "gigw": 18,
@@ -462,17 +460,12 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "2/20 crawled link(s) broken (https://kaicltd.com/services-copy-2/, https://kaicltd.com/trading/)"
+      "ev": "3/20 crawled link(s) broken (https://kaicltd.com/about/, https://kaicltd.com/services-copy-2/, https://kaicltd.com/trading/)"
     },
     {
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "kaicltd.com"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3131ms"
     },
     {
       "id": "sec.hsts",
@@ -515,7 +508,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "15871.913149999998ms"
+      "ev": "11585.440500000002ms"
     },
     {
       "id": "perf.weight",
@@ -533,11 +526,6 @@
     {
       "id": "sec.referrer",
       "sev": "L"
-    },
-    {
-      "id": "sec.server_banner",
-      "sev": "L",
-      "ev": "nginx/1.25.5"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -595,7 +583,7 @@
     {
       "d": "2026-11-25",
       "up": true,
-      "score": 60
+      "score": 61
     },
     {
       "d": "2026-11-24",
@@ -918,5 +906,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

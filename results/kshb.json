@@ -35,25 +35,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-22T01:44:22.071Z",
-    "run": "1795311801506",
+    "at": "2026-11-25T04:49:52.631Z",
+    "run": "1795582129465",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 28,
-      "accessibility": 90,
-      "best_practices": 100,
-      "seo": 92
+      "performance": 33,
+      "accessibility": 91,
+      "best_practices": 96,
+      "seo": 85
     },
     "axe": {
       "critical": 0,
-      "serious": 14,
-      "moderate": 5,
+      "serious": 4,
+      "moderate": 1,
       "minor": 1
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 2,
-      "broken": 0
+      "pdfs": 1,
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -131,8 +131,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://www.kshbonline.com/\""
+        "r": "pass"
       },
       {
         "id": "sec.csp",
@@ -173,12 +172,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "14 serious violation(s)"
+        "ev": "4 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "6 moderate/minor violation(s)"
+        "ev": "2 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -191,7 +190,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "13 low-contrast element(s)"
+        "ev": "4 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -214,27 +213,27 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "90/100"
+        "ev": "91/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "28/100"
+        "ev": "33/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "31638.357500000006ms"
+        "ev": "17599.561ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "1.42"
+        "ev": "0.90"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "7.9MB"
+        "ev": "5.9MB"
       },
       {
         "id": "perf.viewport",
@@ -272,8 +271,7 @@
       },
       {
         "id": "content.obsolete_tech",
-        "r": "fail",
-        "ev": "<marquee"
+        "r": "pass"
       },
       {
         "id": "content.best_viewed",
@@ -281,7 +279,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://kshb.kerala.gov.in/en/home-2/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -313,7 +312,7 @@
       },
       {
         "id": "gigw.contact",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.feedback",
@@ -353,7 +352,7 @@
       },
       {
         "id": "gigw.help",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.rti",
@@ -424,37 +423,17 @@
     "outlinks": [
       {
         "host": "facebook.com",
-        "count": 2,
+        "count": 1,
         "texts": [
           "facebook"
         ]
       },
       {
         "host": "youtube.com",
-        "count": 2,
+        "count": 1,
         "texts": [
           "youtube"
         ]
-      },
-      {
-        "host": "kshbonline.com",
-        "count": 2,
-        "texts": [
-          "ഇപ്പോൾ  അപേക്ഷിക്കാം",
-          "അപേക്ഷിക്കാം"
-        ]
-      },
-      {
-        "host": "cdit.org",
-        "count": 20,
-        "texts": [
-          "C-Dit"
-        ]
-      },
-      {
-        "host": "twitter.com",
-        "count": 1,
-        "texts": []
       },
       {
         "host": "mohua.gov.in",
@@ -462,25 +441,27 @@
         "texts": [
           "ഹൗസിങ് ആൻഡ് അർബൻ അഫയേർസ് മിനിസ്ട്രി"
         ]
+      },
+      {
+        "host": "cdit.org",
+        "count": 1,
+        "texts": [
+          "C-Dit"
+        ]
       }
     ]
   },
   "score": {
-    "overall": 58,
-    "security": 62,
+    "overall": 62,
+    "security": 82,
     "accessibility": 70,
     "content": 46,
-    "gigw": 6,
+    "gigw": 0,
     "performance": 67,
     "identity": 100
   },
   "status": "needs-work",
   "issues": [
-    {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://www.kshbonline.com/\""
-    },
     {
       "id": "content.last_updated",
       "sev": "H",
@@ -490,6 +471,15 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://kshb.kerala.gov.in/en/home-2/)"
+    },
+    {
+      "id": "gigw.contact",
+      "sev": "H"
     },
     {
       "id": "gigw.rti",
@@ -502,17 +492,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "14 serious violation(s)"
+      "ev": "4 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "13 low-contrast element(s)"
-    },
-    {
-      "id": "content.obsolete_tech",
-      "sev": "M",
-      "ev": "<marquee"
+      "ev": "4 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -537,12 +522,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "31638.357500000006ms"
+      "ev": "17599.561ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.9MB"
+      "ev": "5.9MB"
     },
     {
       "id": "perf.tap_targets",
@@ -559,7 +544,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "6 moderate/minor violation(s)"
+      "ev": "2 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -596,13 +581,17 @@
       "sev": "L"
     },
     {
+      "id": "gigw.help",
+      "sev": "L"
+    },
+    {
       "id": "gigw.search",
       "sev": "L"
     },
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "1.42"
+      "ev": "0.90"
     },
     {
       "id": "perf.images",
@@ -617,7 +606,7 @@
     {
       "d": "2026-11-25",
       "up": true,
-      "score": 58
+      "score": 62
     },
     {
       "d": "2026-11-24",
@@ -945,5 +934,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

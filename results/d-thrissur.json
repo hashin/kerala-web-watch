@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-24T05:36:10.687Z",
-    "run": "1795498477116",
+    "at": "2026-11-25T04:35:44.248Z",
+    "run": "1795581205411",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 50,
+      "performance": 48,
       "accessibility": 84,
       "best_practices": 69,
       "seo": 83
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 3
     },
     "tech": {
       "cms": null,
@@ -120,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "22 days left"
+        "ev": "21 days left"
       },
       {
         "id": "sec.tls_version",
@@ -220,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "50/100"
+        "ev": "48/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "36879.8585ms"
+        "ev": "38611.85500000002ms"
       },
       {
         "id": "perf.cls",
@@ -234,7 +234,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "17.6MB"
+        "ev": "17.3MB"
       },
       {
         "id": "perf.viewport",
@@ -280,7 +280,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3/30 crawled link(s) broken (https://thrissur.nic.in/, https://thrissur.nic.in/en, https://thrissur.nic.in/en/mahathma-gandhi-national-rural-employemnt-guarantee-scheme/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -309,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "14 console error(s): Refused to apply style from 'https://thrissur.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+        "ev": "16 console error(s): Refused to apply style from 'https://thrissur.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       },
       {
         "id": "gigw.contact",
@@ -440,11 +441,11 @@
       },
       {
         "host": "s3waas.gov.in",
-        "count": 6,
+        "count": 5,
         "texts": [
+          "PDF\n                    \n\n                    \n                        Kerala Government Extraordinary Gazette – 3061-Volume – 15\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
           "PDF\n                    \n\n                    \n                        Seniority list of VFA and OA- 3 Years Completed\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
-          "PDF\n                    \n\n                    \n                        Kerala Government Extraordinary Gazette – 2778 -Volume – 15\n                        Download Document\n                    \n\n                    Opens downloadable PDF document",
-          "PDF\n                    \n\n                    \n                        List of employees who have completed three years – 29.10.2026\n                        Download Document\n                    \n\n                    Opens downloadable PDF document"
+          "PDF\n                    \n\n                    \n                        Kerala Government Extraordinary Gazette – 2778 -Volume – 15\n                        Download Document\n                    \n\n                    Opens downloadable PDF document"
         ]
       },
       {
@@ -471,10 +472,10 @@
     ]
   },
   "score": {
-    "overall": 59,
+    "overall": 57,
     "security": 38,
     "accessibility": 60,
-    "content": 52,
+    "content": 42,
     "gigw": 60,
     "performance": 76,
     "identity": 96
@@ -484,7 +485,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "22 days left"
+      "ev": "21 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -505,6 +506,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "3/30 crawled link(s) broken (https://thrissur.nic.in/, https://thrissur.nic.in/en, https://thrissur.nic.in/en/mahathma-gandhi-national-rural-employemnt-guarantee-scheme/)"
     },
     {
       "id": "sec.hsts",
@@ -530,12 +536,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "36879.8585ms"
+      "ev": "38611.85500000002ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "17.6MB"
+      "ev": "17.3MB"
     },
     {
       "id": "sec.csp",
@@ -571,7 +577,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "14 console error(s): Refused to apply style from 'https://thrissur.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+      "ev": "16 console error(s): Refused to apply style from 'https://thrissur.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
     },
     {
       "id": "gigw.terms",
@@ -612,7 +618,7 @@
     {
       "d": "2026-11-25",
       "up": true,
-      "score": 59
+      "score": 57
     },
     {
       "d": "2026-11-24",
@@ -930,5 +936,5 @@
       "score": 63
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

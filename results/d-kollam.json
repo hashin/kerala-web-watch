@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-24T05:35:29.161Z",
-    "run": "1795498434155",
+    "at": "2026-11-25T04:33:25.409Z",
+    "run": "1795581068122",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 53,
+      "performance": 52,
       "accessibility": 96,
       "best_practices": 46,
       "seo": 92
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 0
+      "broken": 3
     },
     "tech": {
       "cms": null,
@@ -120,7 +120,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "22 days left"
+        "ev": "21 days left"
       },
       {
         "id": "sec.tls_version",
@@ -220,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "53/100"
+        "ev": "52/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "25418.91525ms"
+        "ev": "41214.90964000001ms"
       },
       {
         "id": "perf.cls",
@@ -234,7 +234,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "10.4MB"
+        "ev": "9.0MB"
       },
       {
         "id": "perf.viewport",
@@ -280,7 +280,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3/30 crawled link(s) broken (https://kollam.nic.in/en/#SkipContent, https://kollam.nic.in/en/, https://kollam.nic.in/en)"
       },
       {
         "id": "content.broken_pdfs",
@@ -289,7 +290,7 @@
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "3 broken image(s)"
+        "ev": "4 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -310,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "23 console error(s): Refused to apply style from 'https://kollam.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+        "ev": "21 console error(s): Refused to apply style from 'https://kollam.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
       },
       {
         "id": "gigw.contact",
@@ -485,10 +486,10 @@
     ]
   },
   "score": {
-    "overall": 59,
+    "overall": 57,
     "security": 38,
     "accessibility": 60,
-    "content": 52,
+    "content": 42,
     "gigw": 60,
     "performance": 76,
     "identity": 96
@@ -498,7 +499,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "22 days left"
+      "ev": "21 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -519,6 +520,11 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-IN"
+    },
+    {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "3/30 crawled link(s) broken (https://kollam.nic.in/en/#SkipContent, https://kollam.nic.in/en/, https://kollam.nic.in/en)"
     },
     {
       "id": "sec.hsts",
@@ -544,12 +550,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "25418.91525ms"
+      "ev": "41214.90964000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "10.4MB"
+      "ev": "9.0MB"
     },
     {
       "id": "sec.csp",
@@ -581,12 +587,12 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "3 broken image(s)"
+      "ev": "4 broken image(s)"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "23 console error(s): Refused to apply style from 'https://kollam.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+      "ev": "21 console error(s): Refused to apply style from 'https://kollam.nic.in/wp-content/themes/dbim-theme/css/sliderhelper.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
     },
     {
       "id": "gigw.terms",
@@ -627,7 +633,7 @@
     {
       "d": "2026-11-25",
       "up": true,
-      "score": 59
+      "score": 57
     },
     {
       "d": "2026-11-24",
@@ -945,5 +951,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

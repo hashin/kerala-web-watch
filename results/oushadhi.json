@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-24T05:53:39.487Z",
-    "run": "1795499579982",
+    "at": "2026-11-25T04:45:49.965Z",
+    "run": "1795581895560",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 42,
+      "performance": 27,
       "accessibility": 37,
       "best_practices": 77,
       "seo": 67
@@ -111,7 +111,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.cert_valid",
@@ -219,17 +219,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "42/100"
+        "ev": "27/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "13943.515ms"
+        "ev": "26886.757000000012ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.53"
+        "ev": "0.43"
       },
       {
         "id": "perf.weight",
@@ -454,8 +454,8 @@
     ]
   },
   "score": {
-    "overall": 45,
-    "security": 48,
+    "overall": 40,
+    "security": 28,
     "accessibility": 46,
     "content": 38,
     "gigw": 18,
@@ -464,6 +464,10 @@
   },
   "status": "poor",
   "issues": [
+    {
+      "id": "sec.http_redirect",
+      "sev": "H"
+    },
     {
       "id": "sec.vuln_js",
       "sev": "H",
@@ -540,7 +544,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "13943.515ms"
+      "ev": "26886.757000000012ms"
     },
     {
       "id": "perf.weight",
@@ -617,7 +621,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.53"
+      "ev": "0.43"
     },
     {
       "id": "perf.images",
@@ -650,7 +654,7 @@
     {
       "d": "2026-11-25",
       "up": true,
-      "score": 45
+      "score": 40
     },
     {
       "d": "2026-11-24",
@@ -973,5 +977,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
