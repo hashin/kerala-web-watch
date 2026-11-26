@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-25T04:38:57.169Z",
-    "run": "1795581243820",
+    "at": "2026-11-26T03:54:23.383Z",
+    "run": "1795665019942",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 53,
+      "performance": 32,
       "accessibility": 81,
       "best_practices": 73,
       "seo": 62
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "6146ms"
+        "ev": "5898ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -222,16 +222,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "53/100"
+        "ev": "32/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "16215.4905ms"
+        "ev": "16304.317ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.77"
       },
       {
         "id": "perf.weight",
@@ -311,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "1 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
+        "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/b485e332/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -453,12 +454,12 @@
     ]
   },
   "score": {
-    "overall": 48,
+    "overall": 47,
     "security": 46,
     "accessibility": 44,
     "content": 52,
     "gigw": 12,
-    "performance": 66,
+    "performance": 62,
     "identity": 91
   },
   "status": "poor",
@@ -495,7 +496,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "6146ms"
+      "ev": "5898ms"
     },
     {
       "id": "sec.hsts",
@@ -535,7 +536,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "16215.4905ms"
+      "ev": "16304.317ms"
     },
     {
       "id": "perf.weight",
@@ -572,7 +573,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "1 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
+      "ev": "4 console error(s): Access to fetch at 'https://www.youtube.com/s/player/b485e332/www-player.css' from origin 'https://dhs.kerala.gov.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -603,6 +604,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.77"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -620,7 +626,7 @@
     {
       "d": "2026-11-26",
       "up": true,
-      "score": 48
+      "score": 47
     },
     {
       "d": "2026-11-25",
@@ -948,5 +954,5 @@
       "score": 45
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

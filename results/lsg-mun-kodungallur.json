@@ -37,12 +37,12 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-25T04:48:40.013Z",
-    "run": "1795582058163",
+    "at": "2026-11-26T03:59:19.166Z",
+    "run": "1795665495261",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 53,
-      "accessibility": 82,
+      "performance": 59,
+      "accessibility": 86,
       "best_practices": 100,
       "seo": 85
     },
@@ -55,7 +55,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 20,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 11",
@@ -216,17 +216,17 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "82/100"
+        "ev": "86/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "53/100"
+        "ev": "59/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "46238.17899999996ms"
+        "ev": "30504.708000000006ms"
       },
       {
         "id": "perf.cls",
@@ -281,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://kodungalloormunicipality.lsgkerala.gov.in/ml/en/node/88)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -565,10 +564,10 @@
     ]
   },
   "score": {
-    "overall": 67,
+    "overall": 68,
     "security": 76,
     "accessibility": 70,
-    "content": 46,
+    "content": 56,
     "gigw": 40,
     "performance": 76,
     "identity": 96
@@ -589,11 +588,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://kodungalloormunicipality.lsgkerala.gov.in/ml/en/node/88)"
     },
     {
       "id": "a11y.axe_serious",
@@ -624,7 +618,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "46238.17899999996ms"
+      "ev": "30504.708000000006ms"
     },
     {
       "id": "perf.weight",
@@ -688,7 +682,7 @@
     {
       "d": "2026-11-26",
       "up": true,
-      "score": 67
+      "score": 68
     },
     {
       "d": "2026-11-25",
@@ -1011,5 +1005,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

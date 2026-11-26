@@ -35,13 +35,13 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-25T04:56:45.174Z",
-    "run": "1795582537172",
+    "at": "2026-11-26T04:05:58.166Z",
+    "run": "1795665882560",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 26,
+      "performance": 28,
       "accessibility": 83,
-      "best_practices": 73,
+      "best_practices": 96,
       "seo": 85
     },
     "axe": {
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3063ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -222,22 +223,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "26/100"
+        "ev": "28/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "24187.3035ms"
+        "ev": "20654.688000000002ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.95"
+        "ev": "1.56"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "5.5MB"
+        "ev": "5.7MB"
       },
       {
         "id": "perf.viewport",
@@ -271,7 +272,7 @@
       {
         "id": "content.legacy_font",
         "r": "fail",
-        "ev": "ml-user"
+        "ev": "ml-transform"
       },
       {
         "id": "content.obsolete_tech",
@@ -474,7 +475,7 @@
     {
       "id": "content.legacy_font",
       "sev": "H",
-      "ev": "ml-user"
+      "ev": "ml-transform"
     },
     {
       "id": "content.broken_links",
@@ -485,6 +486,11 @@
       "id": "id.gov_domain",
       "sev": "H",
       "ev": "homcokerala.com"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3063ms"
     },
     {
       "id": "sec.hsts",
@@ -524,12 +530,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "24187.3035ms"
+      "ev": "20654.688000000002ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "5.5MB"
+      "ev": "5.7MB"
     },
     {
       "id": "sec.xcto",
@@ -589,7 +595,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.95"
+      "ev": "1.56"
     },
     {
       "id": "perf.images",
@@ -942,5 +948,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

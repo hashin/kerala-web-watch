@@ -29,11 +29,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-23T02:11:32.794Z",
-    "run": "1795399834578",
+    "at": "2026-11-26T03:59:48.321Z",
+    "run": "1795665553569",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 78,
+      "performance": 85,
       "accessibility": 76,
       "best_practices": 65,
       "seo": 64
@@ -51,7 +51,7 @@
     },
     "tech": {
       "cms": null,
-      "server": "nginx/1.25.5",
+      "server": "Apache",
       "jquery": null
     },
     "checks": [
@@ -145,8 +145,7 @@
       },
       {
         "id": "sec.server_banner",
-        "r": "fail",
-        "ev": "nginx/1.25.5"
+        "r": "pass"
       },
       {
         "id": "sec.vuln_js",
@@ -214,7 +213,7 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "78/100"
+        "ev": "85/100"
       },
       {
         "id": "perf.lcp",
@@ -428,15 +427,15 @@
     ]
   },
   "score": {
-    "overall": 51,
-    "security": 44,
+    "overall": 52,
+    "security": 48,
     "accessibility": 46,
     "content": 22,
     "gigw": 40,
     "performance": 96,
     "identity": 92
   },
-  "status": "down",
+  "status": "needs-work",
   "issues": [
     {
       "id": "sec.vuln_js",
@@ -525,11 +524,6 @@
       "sev": "L"
     },
     {
-      "id": "sec.server_banner",
-      "sev": "L",
-      "ev": "nginx/1.25.5"
-    },
-    {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
       "ev": "19 moderate/minor violation(s)"
@@ -588,8 +582,8 @@
   "history": [
     {
       "d": "2026-11-26",
-      "up": false,
-      "score": 51
+      "up": true,
+      "score": 52
     },
     {
       "d": "2026-11-25",
@@ -922,5 +916,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

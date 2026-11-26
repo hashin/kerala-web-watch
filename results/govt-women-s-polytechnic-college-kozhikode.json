@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-25T04:58:35.253Z",
-    "run": "1795582635133",
+    "at": "2026-11-26T04:04:14.340Z",
+    "run": "1795665819793",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 51,
+      "performance": 38,
       "accessibility": 68,
       "best_practices": 56,
       "seo": 83
@@ -221,16 +221,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "51/100"
+        "ev": "38/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "12484.132500000005ms"
+        "ev": "10089.900249999999ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.59"
       },
       {
         "id": "perf.weight",
@@ -291,7 +292,7 @@
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "2 broken image(s)"
+        "ev": "1 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -312,7 +313,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "10 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "9 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -523,7 +524,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "12484.132500000005ms"
+      "ev": "10089.900249999999ms"
     },
     {
       "id": "sec.csp",
@@ -550,12 +551,12 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "2 broken image(s)"
+      "ev": "1 broken image(s)"
     },
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "10 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "9 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.terms",
@@ -584,6 +585,11 @@
     {
       "id": "gigw.search",
       "sev": "L"
+    },
+    {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.59"
     },
     {
       "id": "perf.images",
@@ -924,5 +930,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

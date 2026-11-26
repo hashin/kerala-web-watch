@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-25T04:55:16.565Z",
-    "run": "1795582452934",
+    "at": "2026-11-26T04:09:24.847Z",
+    "run": "1795666095696",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 51,
+      "performance": 56,
       "accessibility": 85,
       "best_practices": 73,
       "seo": 92
@@ -222,11 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "51/100"
+        "ev": "56/100"
       },
       {
         "id": "perf.lcp",
-        "r": "pass"
+        "r": "fail",
+        "ev": "4973.87116ms"
       },
       {
         "id": "perf.cls",
@@ -311,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "11 console error(s): jQuery is not defined"
+        "ev": "10 console error(s): jQuery is not defined"
       },
       {
         "id": "gigw.contact",
@@ -479,12 +480,12 @@
     ]
   },
   "score": {
-    "overall": 49,
+    "overall": 48,
     "security": 24,
     "accessibility": 74,
     "content": 46,
     "gigw": 2,
-    "performance": 81,
+    "performance": 71,
     "identity": 91
   },
   "status": "poor",
@@ -557,6 +558,11 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "4973.87116ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "7.5MB"
@@ -600,7 +606,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "11 console error(s): jQuery is not defined"
+      "ev": "10 console error(s): jQuery is not defined"
     },
     {
       "id": "gigw.terms",
@@ -648,7 +654,7 @@
     {
       "d": "2026-11-26",
       "up": true,
-      "score": 49
+      "score": 48
     },
     {
       "d": "2026-11-25",
@@ -956,5 +962,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

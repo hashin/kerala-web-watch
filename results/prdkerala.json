@@ -35,20 +35,20 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-25T04:50:14.293Z",
-    "run": "1795582132284",
+    "at": "2026-11-26T03:59:13.567Z",
+    "run": "1795665497985",
     "vantage": "gh-us",
     "lighthouse": null,
     "axe": {
-      "critical": 12,
-      "serious": 24,
+      "critical": 11,
+      "serious": 25,
       "moderate": 2,
       "minor": 1
     },
     "crawl": {
       "pages": 30,
       "pdfs": 10,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 8",
@@ -165,12 +165,12 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "12 critical violation(s)"
+        "ev": "11 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "24 serious violation(s)"
+        "ev": "25 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -273,8 +273,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (http://www.prd.kerala.gov.in/pressrelease)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -304,7 +303,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "25 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "26 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
       },
       {
         "id": "gigw.contact",
@@ -531,10 +530,10 @@
     ]
   },
   "score": {
-    "overall": 52,
+    "overall": 54,
     "security": 42,
     "accessibility": 50,
-    "content": 38,
+    "content": 48,
     "gigw": 36,
     "performance": 90,
     "identity": 91
@@ -554,7 +553,7 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "12 critical violation(s)"
+      "ev": "11 critical violation(s)"
     },
     {
       "id": "content.last_updated",
@@ -567,18 +566,13 @@
       "ev": "ML-NILA"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (http://www.prd.kerala.gov.in/pressrelease)"
-    },
-    {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "24 serious violation(s)"
+      "ev": "25 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
@@ -646,7 +640,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "25 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "26 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
     },
     {
       "id": "gigw.feedback",
@@ -690,7 +684,7 @@
     {
       "d": "2026-11-26",
       "up": true,
-      "score": 52
+      "score": 54
     },
     {
       "d": "2026-11-25",
@@ -1018,5 +1012,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,15 +35,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-25T04:44:55.558Z",
-    "run": "1795581851412",
+    "at": "2026-11-26T03:59:36.919Z",
+    "run": "1795665534998",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 44,
-      "accessibility": 88,
-      "best_practices": 92,
-      "seo": 100
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 0,
       "serious": 9,
@@ -214,22 +209,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "88/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "44/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "15453.117ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -242,11 +234,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -311,7 +303,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "2 console error(s): Access to XMLHttpRequest at 'https://matsyafed.in/components/com_layer_slider/base/static/layerslider/skins/numbers/skin.css' from origin 'https://www.matsyafed.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "3 console error(s): Cannot read properties of undefined (reading 'length')"
       },
       {
         "id": "gigw.contact",
@@ -458,12 +450,12 @@
     ]
   },
   "score": {
-    "overall": 46,
+    "overall": 47,
     "security": 14,
     "accessibility": 62,
     "content": 36,
     "gigw": 42,
-    "performance": 76,
+    "performance": 90,
     "identity": 72
   },
   "status": "poor",
@@ -534,11 +526,6 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "15453.117ms"
-    },
-    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "11.5MB"
@@ -573,7 +560,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "2 console error(s): Access to XMLHttpRequest at 'https://matsyafed.in/components/com_layer_slider/base/static/layerslider/skins/numbers/skin.css' from origin 'https://www.matsyafed.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "3 console error(s): Cannot read properties of undefined (reading 'length')"
     },
     {
       "id": "gigw.feedback",
@@ -604,10 +591,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -625,7 +608,7 @@
     {
       "d": "2026-11-26",
       "up": true,
-      "score": 46
+      "score": 47
     },
     {
       "d": "2026-11-25",
@@ -953,5 +936,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

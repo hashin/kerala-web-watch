@@ -37,23 +37,28 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-25T04:57:08.702Z",
-    "run": "1795582582512",
+    "at": "2026-11-26T04:02:18.863Z",
+    "run": "1795665726975",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 100,
+      "accessibility": 94,
+      "best_practices": 100,
+      "seo": 82
+    },
     "axe": {
       "critical": 0,
-      "serious": 14,
-      "moderate": 0,
+      "serious": 0,
+      "moderate": 2,
       "minor": 0
     },
     "crawl": {
-      "pages": 30,
+      "pages": 0,
       "pdfs": 0,
-      "broken": 1
+      "broken": 0
     },
     "tech": {
-      "cms": "WordPress 7.1.5",
+      "cms": null,
       "server": "Apache",
       "jquery": null
     },
@@ -128,8 +133,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://gmpg.org/xfn/11\""
+        "r": "pass"
       },
       {
         "id": "sec.csp",
@@ -169,12 +173,12 @@
       },
       {
         "id": "a11y.axe_serious",
-        "r": "fail",
-        "ev": "14 serious violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_moderate_minor",
-        "r": "pass"
+        "r": "fail",
+        "ev": "2 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -186,8 +190,7 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "14 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
@@ -207,19 +210,21 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "94/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "100/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -231,15 +236,15 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "content.copyright_year",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "content.last_updated",
@@ -256,8 +261,7 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "fail",
-        "ev": "ml-"
+        "r": "pass"
       },
       {
         "id": "content.obsolete_tech",
@@ -269,8 +273,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "1/30 crawled link(s) broken (https://www.portal.dmg.kerala.gov.in/)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -282,7 +285,8 @@
       },
       {
         "id": "content.malayalam",
-        "r": "pass"
+        "r": "fail",
+        "ev": "Malayalam ratio 0.00, no language toggle found"
       },
       {
         "id": "content.title",
@@ -294,16 +298,15 @@
       },
       {
         "id": "content.favicon",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "1 console error(s): Cannot read properties of undefined (reading 'split')"
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.feedback",
@@ -347,11 +350,11 @@
       },
       {
         "id": "gigw.rti",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.search",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.ownership",
@@ -363,7 +366,7 @@
       },
       {
         "id": "gigw.emblem",
-        "r": "pass"
+        "r": "warn"
       },
       {
         "id": "id.gov_domain",
@@ -379,21 +382,20 @@
       },
       {
         "id": "id.robots",
-        "r": "fail",
-        "ev": "robots.txt returned 404"
+        "r": "pass"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 404"
+        "r": "pass"
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
       },
       {
         "id": "id.canonical",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.charset_doctype",
@@ -401,8 +403,7 @@
       },
       {
         "id": "id.tech",
-        "r": "pass",
-        "ev": "WordPress 7.1.5"
+        "r": "pass"
       },
       {
         "id": "id.third_party",
@@ -412,26 +413,18 @@
     "screenshot": {
       "desktop": "dmgkerala.webp",
       "mobile": "dmgkerala-m.webp",
-      "phash": "7f0000ffffffffff"
+      "phash": "00003c3c3c3c0000"
     },
-    "outlinks": [
-      {
-        "host": "cdit.org",
-        "count": 1,
-        "texts": [
-          "CDIT"
-        ]
-      }
-    ]
+    "outlinks": []
   },
   "score": {
-    "overall": 55,
-    "security": 28,
-    "accessibility": 80,
-    "content": 42,
-    "gigw": 22,
-    "performance": 100,
-    "identity": 88
+    "overall": 64,
+    "security": 48,
+    "accessibility": 96,
+    "content": 62,
+    "gigw": 0,
+    "performance": 90,
+    "identity": 92
   },
   "status": "needs-work",
   "issues": [
@@ -440,24 +433,17 @@
       "sev": "H"
     },
     {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://gmpg.org/xfn/11\""
-    },
-    {
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "content.legacy_font",
-      "sev": "H",
-      "ev": "ml-"
+      "id": "gigw.contact",
+      "sev": "H"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "1/30 crawled link(s) broken (https://www.portal.dmg.kerala.gov.in/)"
+      "id": "gigw.rti",
+      "sev": "H"
     },
     {
       "id": "sec.hsts",
@@ -468,14 +454,9 @@
       "sev": "M"
     },
     {
-      "id": "a11y.axe_serious",
+      "id": "content.malayalam",
       "sev": "M",
-      "ev": "14 serious violation(s)"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "14 low-contrast element(s)"
+      "ev": "Malayalam ratio 0.00, no language toggle found"
     },
     {
       "id": "gigw.sitemap",
@@ -498,6 +479,10 @@
       "sev": "M"
     },
     {
+      "id": "perf.tap_targets",
+      "sev": "M"
+    },
+    {
       "id": "sec.csp",
       "sev": "L"
     },
@@ -510,13 +495,17 @@
       "sev": "L"
     },
     {
+      "id": "a11y.axe_moderate_minor",
+      "sev": "L",
+      "ev": "2 moderate/minor violation(s)"
+    },
+    {
       "id": "content.meta_desc",
       "sev": "L"
     },
     {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "1 console error(s): Cannot read properties of undefined (reading 'split')"
+      "id": "content.favicon",
+      "sev": "L"
     },
     {
       "id": "gigw.feedback",
@@ -547,25 +536,32 @@
       "sev": "L"
     },
     {
+      "id": "gigw.search",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
     {
-      "id": "id.robots",
+      "id": "id.soft_404",
       "sev": "L",
-      "ev": "robots.txt returned 404"
+      "ev": "a nonexistent path returned 200"
     },
     {
-      "id": "id.sitemap_xml",
-      "sev": "L",
-      "ev": "sitemap.xml returned 404"
+      "id": "gigw.emblem",
+      "sev": "I"
+    },
+    {
+      "id": "id.canonical",
+      "sev": "I"
     }
   ],
   "history": [
     {
       "d": "2026-11-26",
       "up": true,
-      "score": 55
+      "score": 64
     },
     {
       "d": "2026-11-25",
@@ -898,5 +894,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
