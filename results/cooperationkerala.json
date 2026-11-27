@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-26T03:55:12.190Z",
-    "run": "1795665197441",
+    "at": "2026-11-27T04:01:13.219Z",
+    "run": "1795751975592",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 35,
+      "performance": 34,
       "accessibility": 81,
       "best_practices": 73,
       "seo": 75
@@ -97,7 +97,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3198ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -223,12 +224,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "35/100"
+        "ev": "34/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "224200.0217499997ms"
+        "ev": "224024.5014999999ms"
       },
       {
         "id": "perf.cls",
@@ -295,7 +296,7 @@
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "6 broken image(s)"
+        "ev": "5 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -497,6 +498,11 @@
       "sev": "H"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3198ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -539,7 +545,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "224200.0217499997ms"
+      "ev": "224024.5014999999ms"
     },
     {
       "id": "perf.weight",
@@ -576,7 +582,7 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "6 broken image(s)"
+      "ev": "5 broken image(s)"
     },
     {
       "id": "content.meta_desc",
@@ -976,5 +982,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

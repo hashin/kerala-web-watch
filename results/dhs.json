@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-26T03:54:23.383Z",
-    "run": "1795665019942",
+    "at": "2026-11-27T03:54:46.168Z",
+    "run": "1795751286121",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 32,
-      "accessibility": 81,
-      "best_practices": 73,
-      "seo": 62
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
     },
     "axe": {
       "critical": 5,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 3,
-      "broken": 0
+      "broken": 21
     },
     "tech": {
       "cms": "WordPress 5.0.32",
@@ -95,8 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "5898ms"
+        "r": "fail",
+        "ev": "16907ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -116,15 +116,15 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.tls_version",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.hsts",
@@ -217,22 +217,20 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "81/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "32/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "16304.317ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.77"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -283,7 +281,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "21/30 crawled link(s) broken (https://dhs.kerala.gov.in/#content, https://dhs.kerala.gov.in/#, https://dhs.kerala.gov.in/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -388,7 +387,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.robots",
@@ -454,12 +453,12 @@
     ]
   },
   "score": {
-    "overall": 47,
+    "overall": 46,
     "security": 46,
     "accessibility": 44,
-    "content": 52,
+    "content": 32,
     "gigw": 12,
-    "performance": 62,
+    "performance": 76,
     "identity": 91
   },
   "status": "poor",
@@ -490,13 +489,18 @@
       "ev": "ml-IN"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "21/30 crawled link(s) broken (https://dhs.kerala.gov.in/#content, https://dhs.kerala.gov.in/#, https://dhs.kerala.gov.in/, ...)"
+    },
+    {
       "id": "gigw.contact",
       "sev": "H"
     },
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "5898ms"
+      "ev": "16907ms"
     },
     {
       "id": "sec.hsts",
@@ -532,11 +536,6 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "16304.317ms"
     },
     {
       "id": "perf.weight",
@@ -604,11 +603,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.77"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -626,7 +620,7 @@
     {
       "d": "2026-11-27",
       "up": true,
-      "score": 47
+      "score": 46
     },
     {
       "d": "2026-11-26",
@@ -959,5 +953,5 @@
       "score": 45
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,24 +35,29 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-26T03:59:13.567Z",
-    "run": "1795665497985",
+    "at": "2026-11-27T04:08:27.466Z",
+    "run": "1795752329879",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 0,
+      "accessibility": 0,
+      "best_practices": 0,
+      "seo": 0
+    },
     "axe": {
       "critical": 11,
-      "serious": 25,
+      "serious": 23,
       "moderate": 2,
       "minor": 1
     },
     "crawl": {
       "pages": 30,
       "pdfs": 10,
-      "broken": 0
+      "broken": 10
     },
     "tech": {
       "cms": "Drupal 8",
-      "server": "Apache",
+      "server": null,
       "jquery": null
     },
     "checks": [
@@ -62,15 +67,16 @@
       },
       {
         "id": "avail.connect",
-        "r": "pass"
+        "r": "fail",
+        "ev": "timeout"
       },
       {
         "id": "avail.status",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.parked",
@@ -90,7 +96,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "avail.geo_blocked",
@@ -102,7 +108,7 @@
       },
       {
         "id": "sec.https",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.http_redirect",
@@ -110,15 +116,15 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.tls_version",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "sec.hsts",
@@ -126,8 +132,7 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "fail",
-        "ev": "href=\"http://loksabha.nic.in/\""
+        "r": "na"
       },
       {
         "id": "sec.csp",
@@ -170,7 +175,7 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "25 serious violation(s)"
+        "ev": "23 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -188,7 +193,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "5 low-contrast element(s)"
+        "ev": "4 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -210,11 +215,13 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "0/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
@@ -227,7 +234,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "20.3MB"
+        "ev": "26.5MB"
       },
       {
         "id": "perf.viewport",
@@ -235,11 +242,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -273,7 +280,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "10/30 crawled link(s) broken (https://prd.kerala.gov.in/#main-content, https://prd.kerala.gov.in/en, https://prd.kerala.gov.in/ml, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -303,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "26 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
+        "ev": "21 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
       },
       {
         "id": "gigw.contact",
@@ -379,19 +387,19 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "id.robots",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "id.canonical",
@@ -529,21 +537,13 @@
       }
     ]
   },
-  "score": {
-    "overall": 54,
-    "security": 42,
-    "accessibility": 50,
-    "content": 48,
-    "gigw": 36,
-    "performance": 90,
-    "identity": 91
-  },
-  "status": "needs-work",
+  "score": null,
+  "status": "down",
   "issues": [
     {
-      "id": "sec.mixed_content",
-      "sev": "H",
-      "ev": "href=\"http://loksabha.nic.in/\""
+      "id": "avail.connect",
+      "sev": "C",
+      "ev": "timeout"
     },
     {
       "id": "sec.vuln_js",
@@ -566,18 +566,23 @@
       "ev": "ML-NILA"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "10/30 crawled link(s) broken (https://prd.kerala.gov.in/#main-content, https://prd.kerala.gov.in/en, https://prd.kerala.gov.in/ml, ...)"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "25 serious violation(s)"
+      "ev": "23 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "5 low-contrast element(s)"
+      "ev": "4 low-contrast element(s)"
     },
     {
       "id": "gigw.privacy",
@@ -598,7 +603,11 @@
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "20.3MB"
+      "ev": "26.5MB"
+    },
+    {
+      "id": "perf.tap_targets",
+      "sev": "M"
     },
     {
       "id": "id.tech",
@@ -640,7 +649,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "26 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
+      "ev": "21 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.feedback",
@@ -667,7 +676,7 @@
       "sev": "L"
     },
     {
-      "id": "id.www_consistency",
+      "id": "perf.images",
       "sev": "L"
     },
     {
@@ -683,8 +692,8 @@
   "history": [
     {
       "d": "2026-11-27",
-      "up": true,
-      "score": 54
+      "up": false,
+      "score": null
     },
     {
       "d": "2026-11-26",
@@ -1017,5 +1026,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

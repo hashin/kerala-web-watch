@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-16T01:36:50.014Z",
-    "run": "1794792956274",
+    "at": "2026-11-27T04:10:34.861Z",
+    "run": "1795752580704",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 0,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3236ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -233,7 +234,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "36.5MB"
+        "ev": "36.7MB"
       },
       {
         "id": "perf.viewport",
@@ -507,6 +508,11 @@
       "ev": "www.bharatbhavankerala.org"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3236ms"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -549,7 +555,7 @@
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "36.5MB"
+      "ev": "36.7MB"
     },
     {
       "id": "perf.tap_targets",
@@ -966,5 +972,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

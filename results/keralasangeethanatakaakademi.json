@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-26T04:08:20.857Z",
-    "run": "1795666004775",
+    "at": "2026-11-27T04:16:54.169Z",
+    "run": "1795752948799",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 30,
+      "accessibility": 89,
+      "best_practices": 78,
+      "seo": 69
     },
     "axe": {
       "critical": 19,
@@ -96,8 +96,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "fail",
-        "ev": "10605ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -217,25 +216,27 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "89/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "30/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "6600.856000000002ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.52"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "6.4MB"
+        "ev": "6.7MB"
       },
       {
         "id": "perf.viewport",
@@ -243,7 +244,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -490,11 +491,6 @@
       "ev": "keralasangeethanatakaakademi.in"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "10605ms"
-    },
-    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -538,13 +534,14 @@
       "sev": "M"
     },
     {
-      "id": "perf.weight",
+      "id": "perf.lcp",
       "sev": "M",
-      "ev": "6.4MB"
+      "ev": "6600.856000000002ms"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "6.7MB"
     },
     {
       "id": "sec.csp",
@@ -604,6 +601,11 @@
     {
       "id": "gigw.help",
       "sev": "L"
+    },
+    {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.52"
     },
     {
       "id": "perf.images",
@@ -942,5 +944,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

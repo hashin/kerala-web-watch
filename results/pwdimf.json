@@ -37,46 +37,481 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-26T03:51:15.633Z",
-    "run": "1795664977231",
+    "at": "2026-11-27T03:58:24.836Z",
+    "run": "1795751844930",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 57,
+      "accessibility": 74,
+      "best_practices": 88,
+      "seo": 83
+    },
     "axe": {
       "critical": 0,
-      "serious": 0,
-      "moderate": 0,
+      "serious": 18,
+      "moderate": 25,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
-      "pdfs": 0,
-      "broken": 0
+      "pages": 30,
+      "pdfs": 2,
+      "broken": 3
     },
     "tech": {
       "cms": null,
-      "server": null,
+      "server": "",
       "jquery": null
     },
-    "checks": [],
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "pass"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "fail"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "pass"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "fail",
+        "ev": "href=\"http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic\""
+      },
+      {
+        "id": "sec.csp",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "pass"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "pass"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "pass"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "fail",
+        "ev": "jquery 1.11.0, jquery-validation 1.13.1, jquery-ui 1.10.3, bootstrap 3.3.2, swiper 2.7.5, jquery 2.1.1, bootstrap 3.3.7"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "18 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "25 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "fail",
+        "ev": "9 low-contrast element(s)"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "no <h1>"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "74/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "57/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "9525.560000000001ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "pass"
+      },
+      {
+        "id": "perf.weight",
+        "r": "warn",
+        "ev": "4.6MB"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "fail"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "na"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "pass"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-user"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "fail",
+        "ev": "<marquee"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://thottariyaampwd.kerala.gov.in/pms/home/project/projects?projectStatusId=2)"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "fail",
+        "ev": "2 linked PDF(s) 404: https://www.pwd.kerala.gov.in/IMF_website/NEW/Avenue_split-compressed.pdf, https://www.pwd.kerala.gov.in/documents/NEWS_NOTIFICATIONS/166_1794820354.pdf"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "fail",
+        "ev": "1 broken image(s)"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "fail",
+        "ev": "Malayalam ratio 0.00, no language toggle found"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "fail"
+      },
+      {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "5 console error(s): Cannot read properties of undefined (reading 'length')"
+      },
+      {
+        "id": "gigw.contact",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.search",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "pass"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "pass"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "na"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "pass"
+      },
+      {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "fail"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "pass"
+      }
+    ],
     "screenshot": {
       "desktop": "pwdimf.webp",
       "mobile": "pwdimf-m.webp",
       "phash": "007f000008cfbfbf"
     },
-    "outlinks": [],
-    "error": "page.goto: net::ERR_TIMED_OUT at https://www.pwd.kerala.gov.in/IMF_website/index\nCall log:\n  - navigating to \"https://www.pwd.kerala.gov.in/IMF_website/index\", waiting until \"load\"\n"
+    "outlinks": [
+      {
+        "host": "youtube.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "krfb.org",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "kscc.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "rbdck.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "khri.org",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "gandhi.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "india.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "cpwd.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "kiifb.org",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "spark.gov.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "cdit.org",
+        "count": 1,
+        "texts": [
+          "C-DIT"
+        ]
+      }
+    ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 57,
+    "security": 40,
+    "accessibility": 70,
+    "content": 28,
+    "gigw": 56,
+    "performance": 71,
+    "identity": 96
+  },
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "avail.connect",
-      "sev": "C",
-      "ev": "timeout"
-    },
     {
       "id": "sec.http_redirect",
       "sev": "H"
+    },
+    {
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic\""
     },
     {
       "id": "sec.vuln_js",
@@ -91,17 +526,17 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "25/30 crawled link(s) broken (https://pwd.kerala.gov.in/IMF_website/index/index.php?id_ml=TUw=, https://www.pwd.kerala.gov.in/includes/PWD_4U_mobileApp.php?id_ml=RU4=, https://www.pwd.kerala.gov.in/Projects/wings_list.php?id_ml=RU4=, ...)"
+      "ev": "1/30 crawled link(s) broken (https://thottariyaampwd.kerala.gov.in/pms/home/project/projects?projectStatusId=2)"
     },
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "21 serious violation(s)"
+      "ev": "18 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "10 low-contrast element(s)"
+      "ev": "9 low-contrast element(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -111,7 +546,7 @@
     {
       "id": "content.broken_pdfs",
       "sev": "M",
-      "ev": "2 linked PDF(s) 404: https://www.pwd.kerala.gov.in/NEW/Avenue_split-compressed.pdf, https://www.pwd.kerala.gov.in/documents/NEWS_NOTIFICATIONS/166_1794820354.pdf"
+      "ev": "2 linked PDF(s) 404: https://www.pwd.kerala.gov.in/IMF_website/NEW/Avenue_split-compressed.pdf, https://www.pwd.kerala.gov.in/documents/NEWS_NOTIFICATIONS/166_1794820354.pdf"
     },
     {
       "id": "content.malayalam",
@@ -129,12 +564,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "8616.659999999998ms"
+      "ev": "9525.560000000001ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "9.0MB"
+      "ev": "4.6MB"
     },
     {
       "id": "perf.tap_targets",
@@ -158,7 +593,7 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "2 broken image(s)"
+      "ev": "1 broken image(s)"
     },
     {
       "id": "content.meta_desc",
@@ -167,7 +602,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "7 console error(s): Cannot read properties of undefined (reading 'length')"
+      "ev": "5 console error(s): Cannot read properties of undefined (reading 'length')"
     },
     {
       "id": "gigw.feedback",
@@ -198,6 +633,11 @@
       "sev": "L"
     },
     {
+      "id": "id.sitemap_xml",
+      "sev": "L",
+      "ev": "sitemap.xml returned 404"
+    },
+    {
       "id": "id.canonical",
       "sev": "I"
     }
@@ -205,8 +645,8 @@
   "history": [
     {
       "d": "2026-11-27",
-      "up": false,
-      "score": null
+      "up": true,
+      "score": 57
     },
     {
       "d": "2026-11-26",
@@ -539,5 +979,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

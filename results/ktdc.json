@@ -35,10 +35,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-26T03:58:15.259Z",
-    "run": "1795665451925",
+    "at": "2026-11-27T04:04:18.736Z",
+    "run": "1795752215020",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 56,
+      "accessibility": 84,
+      "best_practices": 96,
+      "seo": 83
+    },
     "axe": {
       "critical": 0,
       "serious": 79,
@@ -207,19 +212,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "84/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "56/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "15664.2755ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -232,11 +240,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -454,12 +462,12 @@
     ]
   },
   "score": {
-    "overall": 67,
+    "overall": 65,
     "security": 90,
     "accessibility": 70,
     "content": 32,
     "gigw": 32,
-    "performance": 95,
+    "performance": 81,
     "identity": 76
   },
   "status": "needs-work",
@@ -520,6 +528,11 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "15664.2755ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "7.1MB"
@@ -577,6 +590,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.soft_404",
       "sev": "L",
       "ev": "a nonexistent path returned 200"
@@ -595,7 +612,7 @@
     {
       "d": "2026-11-27",
       "up": true,
-      "score": 67
+      "score": 65
     },
     {
       "d": "2026-11-26",
@@ -928,5 +945,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

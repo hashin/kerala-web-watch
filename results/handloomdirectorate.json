@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-26T03:56:21.184Z",
-    "run": "1795665312192",
+    "at": "2026-11-27T04:02:31.586Z",
+    "run": "1795752073221",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 31,
+      "accessibility": 89,
+      "best_practices": 73,
+      "seo": 62
     },
     "axe": {
       "critical": 1,
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "3660ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -215,25 +216,27 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "89/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "31/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "35241.85650000002ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "fail",
+        "ev": "0.73"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "5.9MB"
+        "ev": "6.0MB"
       },
       {
         "id": "perf.viewport",
@@ -241,7 +244,7 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "perf.images",
@@ -460,12 +463,12 @@
     ]
   },
   "score": {
-    "overall": 49,
+    "overall": 48,
     "security": 42,
     "accessibility": 44,
     "content": 42,
     "gigw": 18,
-    "performance": 81,
+    "performance": 77,
     "identity": 100
   },
   "status": "poor",
@@ -498,6 +501,11 @@
       "id": "content.broken_links",
       "sev": "H",
       "ev": "2/30 crawled link(s) broken (https://handsum.kerala.gov.in/, https://dhtschemes.kerala.gov.in/)"
+    },
+    {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "3660ms"
     },
     {
       "id": "sec.hsts",
@@ -539,13 +547,14 @@
       "sev": "M"
     },
     {
-      "id": "perf.weight",
+      "id": "perf.lcp",
       "sev": "M",
-      "ev": "5.9MB"
+      "ev": "35241.85650000002ms"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "6.0MB"
     },
     {
       "id": "sec.xcto",
@@ -607,6 +616,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.73"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -619,7 +633,7 @@
     {
       "d": "2026-11-27",
       "up": true,
-      "score": 49
+      "score": 48
     },
     {
       "d": "2026-11-26",
@@ -952,5 +966,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

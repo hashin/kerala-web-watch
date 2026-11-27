@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-26T03:44:05.000Z",
-    "run": "1795664575723",
+    "at": "2026-11-27T03:45:25.169Z",
+    "run": "1795751060684",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 53,
+      "performance": 52,
       "accessibility": 79,
       "best_practices": 92,
       "seo": 85
@@ -127,7 +127,7 @@
       },
       {
         "id": "sec.hsts",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.mixed_content",
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "53/100"
+        "ev": "52/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "34408.11225ms"
+        "ev": "37285.25999999998ms"
       },
       {
         "id": "perf.cls",
@@ -463,15 +463,15 @@
     ]
   },
   "score": {
-    "overall": 47,
-    "security": 62,
+    "overall": 50,
+    "security": 72,
     "accessibility": 40,
     "content": 32,
     "gigw": 0,
     "performance": 71,
     "identity": 100
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
     {
       "id": "sec.vuln_js",
@@ -507,10 +507,6 @@
       "sev": "H"
     },
     {
-      "id": "sec.hsts",
-      "sev": "M"
-    },
-    {
       "id": "a11y.axe_serious",
       "sev": "M",
       "ev": "3 serious violation(s)"
@@ -544,7 +540,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "34408.11225ms"
+      "ev": "37285.25999999998ms"
     },
     {
       "id": "perf.weight",
@@ -624,7 +620,7 @@
     {
       "d": "2026-11-27",
       "up": true,
-      "score": 47
+      "score": 50
     },
     {
       "d": "2026-11-26",
@@ -957,5 +953,5 @@
       "score": 48
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

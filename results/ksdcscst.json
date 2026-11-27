@@ -35,11 +35,11 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-11-25T04:51:52.358Z",
-    "run": "1795582280019",
+    "at": "2026-11-27T04:03:35.019Z",
+    "run": "1795752182252",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 43,
+      "performance": 46,
       "accessibility": 84,
       "best_practices": 96,
       "seo": 91
@@ -57,7 +57,7 @@
     },
     "tech": {
       "cms": null,
-      "server": "",
+      "server": "Microsoft-IIS/10.0",
       "jquery": "3.6.0"
     },
     "checks": [
@@ -152,7 +152,8 @@
       },
       {
         "id": "sec.server_banner",
-        "r": "pass"
+        "r": "fail",
+        "ev": "Microsoft-IIS/10.0"
       },
       {
         "id": "sec.vuln_js",
@@ -222,22 +223,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "43/100"
+        "ev": "46/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "36869.731000000014ms"
+        "ev": "36406.520000000004ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.39"
+        "ev": "0.34"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "7.7MB"
+        "ev": "7.6MB"
       },
       {
         "id": "perf.viewport",
@@ -428,15 +429,15 @@
     "outlinks": []
   },
   "score": {
-    "overall": 47,
-    "security": 28,
+    "overall": 46,
+    "security": 24,
     "accessibility": 40,
     "content": 72,
     "gigw": 18,
     "performance": 77,
     "identity": 88
   },
-  "status": "down",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -504,12 +505,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "36869.731000000014ms"
+      "ev": "36406.520000000004ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "7.7MB"
+      "ev": "7.6MB"
     },
     {
       "id": "sec.csp",
@@ -522,6 +523,11 @@
     {
       "id": "sec.referrer",
       "sev": "L"
+    },
+    {
+      "id": "sec.server_banner",
+      "sev": "L",
+      "ev": "Microsoft-IIS/10.0"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -582,7 +588,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.39"
+      "ev": "0.34"
     },
     {
       "id": "perf.images",
@@ -614,8 +620,8 @@
   "history": [
     {
       "d": "2026-11-27",
-      "up": false,
-      "score": 47
+      "up": true,
+      "score": 46
     },
     {
       "d": "2026-11-26",
@@ -948,5 +954,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

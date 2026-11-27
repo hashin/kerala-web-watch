@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-26T04:02:59.196Z",
-    "run": "1795665677838",
+    "at": "2026-11-27T04:07:19.603Z",
+    "run": "1795752346449",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 53,
+      "performance": 32,
       "accessibility": 77,
       "best_practices": 96,
       "seo": 83
@@ -219,21 +219,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "53/100"
+        "ev": "32/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "47609.825999999994ms"
+        "ev": "46316.141500000034ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.66"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "2612.5MB"
+        "ev": "2320.3MB"
       },
       {
         "id": "perf.viewport",
@@ -421,7 +422,7 @@
     "screenshot": {
       "desktop": "adak.webp",
       "mobile": "adak-m.webp",
-      "phash": "180000fefcfcf8f2"
+      "phash": "000000fffffc3cff"
     },
     "outlinks": [
       {
@@ -459,7 +460,7 @@
     "accessibility": 72,
     "content": 46,
     "gigw": 76,
-    "performance": 76,
+    "performance": 72,
     "identity": 92
   },
   "status": "needs-work",
@@ -505,12 +506,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "47609.825999999994ms"
+      "ev": "46316.141500000034ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "2612.5MB"
+      "ev": "2320.3MB"
     },
     {
       "id": "sec.csp",
@@ -533,6 +534,11 @@
     {
       "id": "gigw.feedback",
       "sev": "L"
+    },
+    {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.66"
     },
     {
       "id": "perf.images",
@@ -894,5 +900,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

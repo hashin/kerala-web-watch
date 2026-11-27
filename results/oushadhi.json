@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-26T04:01:11.345Z",
-    "run": "1795665576921",
+    "at": "2026-11-27T04:01:34.547Z",
+    "run": "1795752036219",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 33,
+      "performance": 34,
       "accessibility": 37,
       "best_practices": 77,
       "seo": 67
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 2
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -219,17 +219,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "33/100"
+        "ev": "34/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "26814.235ms"
+        "ev": "12629.571ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "0.43"
+        "ev": "0.65"
       },
       {
         "id": "perf.weight",
@@ -281,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "warn",
-        "ev": "2/30 crawled link(s) broken (https://www.oushadhi.org/, https://www.oushadhi.org/directors)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -291,7 +290,7 @@
       {
         "id": "content.broken_images",
         "r": "fail",
-        "ev": "3 broken image(s)"
+        "ev": "2 broken image(s)"
       },
       {
         "id": "content.malayalam",
@@ -312,7 +311,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "7 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+        "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
@@ -455,10 +454,10 @@
     ]
   },
   "score": {
-    "overall": 44,
+    "overall": 45,
     "security": 48,
     "accessibility": 46,
-    "content": 28,
+    "content": 38,
     "gigw": 18,
     "performance": 62,
     "identity": 72
@@ -484,11 +483,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-user"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "2/30 crawled link(s) broken (https://www.oushadhi.org/, https://www.oushadhi.org/directors)"
     },
     {
       "id": "id.gov_domain",
@@ -546,7 +540,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "26814.235ms"
+      "ev": "12629.571ms"
     },
     {
       "id": "perf.weight",
@@ -577,7 +571,7 @@
     {
       "id": "content.broken_images",
       "sev": "L",
-      "ev": "3 broken image(s)"
+      "ev": "2 broken image(s)"
     },
     {
       "id": "content.meta_desc",
@@ -586,7 +580,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "7 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      "ev": "6 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
@@ -623,7 +617,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "0.43"
+      "ev": "0.65"
     },
     {
       "id": "perf.images",
@@ -656,7 +650,7 @@
     {
       "d": "2026-11-27",
       "up": true,
-      "score": 44
+      "score": 45
     },
     {
       "d": "2026-11-26",
@@ -989,5 +983,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
