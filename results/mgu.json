@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-27T03:53:35.150Z",
-    "run": "1795751544715",
+    "at": "2026-11-28T03:37:12.392Z",
+    "run": "1795836961140",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 74,
+      "performance": 75,
       "accessibility": 100,
       "best_practices": 92,
       "seo": 92
@@ -52,8 +52,8 @@
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 5,
-      "broken": 0
+      "pdfs": 6,
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -221,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "74/100"
+        "ev": "75/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "4530.297ms"
+        "ev": "4440.622ms"
       },
       {
         "id": "perf.cls",
@@ -282,7 +282,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://iqac.mgu.ac.in/ssr/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -499,10 +500,10 @@
     ]
   },
   "score": {
-    "overall": 51,
+    "overall": 50,
     "security": 32,
     "accessibility": 52,
-    "content": 38,
+    "content": 28,
     "gigw": 46,
     "performance": 76,
     "identity": 100
@@ -539,6 +540,11 @@
       "ev": "ml-"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "1/30 crawled link(s) broken (https://iqac.mgu.ac.in/ssr/)"
+    },
+    {
       "id": "a11y.axe_serious",
       "sev": "M",
       "ev": "18 serious violation(s)"
@@ -568,7 +574,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "4530.297ms"
+      "ev": "4440.622ms"
     },
     {
       "id": "perf.weight",
@@ -650,7 +656,7 @@
     {
       "d": "2026-11-28",
       "up": true,
-      "score": 51
+      "score": 50
     },
     {
       "d": "2026-11-27",
@@ -983,5 +989,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

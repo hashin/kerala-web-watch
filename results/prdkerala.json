@@ -35,15 +35,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-27T04:08:27.466Z",
-    "run": "1795752329879",
+    "at": "2026-11-28T03:47:18.149Z",
+    "run": "1795837509492",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 11,
       "serious": 23,
@@ -53,11 +48,11 @@
     "crawl": {
       "pages": 30,
       "pdfs": 10,
-      "broken": 10
+      "broken": 0
     },
     "tech": {
       "cms": "Drupal 8",
-      "server": null,
+      "server": "Apache",
       "jquery": null
     },
     "checks": [
@@ -67,16 +62,15 @@
       },
       {
         "id": "avail.connect",
-        "r": "fail",
-        "ev": "timeout"
+        "r": "pass"
       },
       {
         "id": "avail.status",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.redirect_offsite",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.parked",
@@ -96,7 +90,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -108,7 +102,7 @@
       },
       {
         "id": "sec.https",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.http_redirect",
@@ -116,15 +110,15 @@
       },
       {
         "id": "sec.cert_valid",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.cert_expiry",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.tls_version",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "sec.hsts",
@@ -132,7 +126,8 @@
       },
       {
         "id": "sec.mixed_content",
-        "r": "na"
+        "r": "fail",
+        "ev": "href=\"http://loksabha.nic.in/\""
       },
       {
         "id": "sec.csp",
@@ -215,13 +210,11 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "0/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "0/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
@@ -234,7 +227,7 @@
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "26.5MB"
+        "ev": "20.3MB"
       },
       {
         "id": "perf.viewport",
@@ -242,11 +235,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -280,8 +273,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "10/30 crawled link(s) broken (https://prd.kerala.gov.in/#main-content, https://prd.kerala.gov.in/en, https://prd.kerala.gov.in/ml, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -311,7 +303,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "21 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+        "ev": "26 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
       },
       {
         "id": "gigw.contact",
@@ -387,19 +379,19 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "id.robots",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.soft_404",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
@@ -537,13 +529,21 @@
       }
     ]
   },
-  "score": null,
-  "status": "down",
+  "score": {
+    "overall": 54,
+    "security": 42,
+    "accessibility": 50,
+    "content": 48,
+    "gigw": 36,
+    "performance": 90,
+    "identity": 91
+  },
+  "status": "needs-work",
   "issues": [
     {
-      "id": "avail.connect",
-      "sev": "C",
-      "ev": "timeout"
+      "id": "sec.mixed_content",
+      "sev": "H",
+      "ev": "href=\"http://loksabha.nic.in/\""
     },
     {
       "id": "sec.vuln_js",
@@ -564,11 +564,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ML-NILA"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "10/30 crawled link(s) broken (https://prd.kerala.gov.in/#main-content, https://prd.kerala.gov.in/en, https://prd.kerala.gov.in/ml, ...)"
     },
     {
       "id": "sec.hsts",
@@ -603,11 +598,7 @@
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "26.5MB"
-    },
-    {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "ev": "20.3MB"
     },
     {
       "id": "id.tech",
@@ -649,7 +640,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "21 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      "ev": "26 console error(s): Permissions policy violation: compute-pressure is not allowed in this document."
     },
     {
       "id": "gigw.feedback",
@@ -676,7 +667,7 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
+      "id": "id.www_consistency",
       "sev": "L"
     },
     {
@@ -692,8 +683,8 @@
   "history": [
     {
       "d": "2026-11-28",
-      "up": false,
-      "score": null
+      "up": true,
+      "score": 54
     },
     {
       "d": "2026-11-27",
@@ -1031,5 +1022,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

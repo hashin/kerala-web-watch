@@ -35,30 +35,30 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-26T04:01:17.837Z",
-    "run": "1795665652721",
+    "at": "2026-11-28T03:49:48.558Z",
+    "run": "1795837638150",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 65,
-      "accessibility": 94,
-      "best_practices": 100,
-      "seo": 100
+      "performance": 32,
+      "accessibility": 96,
+      "best_practices": 88,
+      "seo": 75
     },
     "axe": {
-      "critical": 0,
-      "serious": 4,
-      "moderate": 2,
-      "minor": 0
+      "critical": 5,
+      "serious": 2,
+      "moderate": 1,
+      "minor": 9
     },
     "crawl": {
-      "pages": 3,
+      "pages": 30,
       "pdfs": 0,
       "broken": 0
     },
     "tech": {
       "cms": null,
       "server": "Apache/2.4.58 (Ubuntu)",
-      "jquery": null
+      "jquery": "3.3.1"
     },
     "checks": [
       {
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "4297ms"
+        "ev": "3722ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -157,7 +157,8 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "pass"
+        "r": "fail",
+        "ev": "jquery 3.3.1, jszip 3.1.3, quill 1.3.7, tinyMCE 5.10.2"
       },
       {
         "id": "sec.safe_browsing",
@@ -169,17 +170,18 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "pass"
+        "r": "fail",
+        "ev": "5 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "4 serious violation(s)"
+        "ev": "2 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "2 moderate/minor violation(s)"
+        "ev": "10 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -191,8 +193,7 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "4 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
@@ -208,22 +209,23 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "pass"
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "94/100"
+        "ev": "96/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "65/100"
+        "ev": "32/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "4881.8634999999995ms"
+        "ev": "53367.931500000006ms"
       },
       {
         "id": "perf.cls",
@@ -231,7 +233,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "fail",
+        "ev": "160.7MB"
       },
       {
         "id": "perf.viewport",
@@ -243,11 +246,11 @@
       },
       {
         "id": "perf.images",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "content.last_updated",
@@ -264,7 +267,8 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "pass"
+        "r": "fail",
+        "ev": "ml-template"
       },
       {
         "id": "content.obsolete_tech",
@@ -296,19 +300,20 @@
       },
       {
         "id": "content.meta_desc",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "content.favicon",
-        "r": "fail"
-      },
-      {
-        "id": "content.console_errors",
         "r": "pass"
       },
       {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "13 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
+      },
+      {
         "id": "gigw.contact",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.feedback",
@@ -324,7 +329,7 @@
       },
       {
         "id": "gigw.terms",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.copyright_policy",
@@ -340,7 +345,7 @@
       },
       {
         "id": "gigw.accessibility_statement",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.screen_reader",
@@ -348,7 +353,7 @@
       },
       {
         "id": "gigw.help",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.rti",
@@ -415,51 +420,66 @@
     "screenshot": {
       "desktop": "sgou.webp",
       "mobile": "sgou-m.webp",
-      "phash": "00080efece2ec6c3"
+      "phash": "207c647c7e3c3e24"
     },
     "outlinks": [
       {
+        "host": "facebook.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "instagram.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "youtube.com",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "twitter.com",
+        "count": 1,
+        "texts": []
+      },
+      {
         "host": "cloudfront.net",
-        "count": 1,
-        "texts": [
-          "View Official Circular ↗"
-        ]
-      },
-      {
-        "host": "goo.gl",
-        "count": 1,
-        "texts": [
-          "Get Directions ↗"
-        ]
-      },
-      {
-        "host": "keralahistorycongress.org",
-        "count": 1,
-        "texts": [
-          "Kerala History Congress"
-        ]
+        "count": 3,
+        "texts": []
       }
     ]
   },
   "score": {
-    "overall": 65,
-    "security": 64,
-    "accessibility": 76,
-    "content": 76,
-    "gigw": 0,
-    "performance": 90,
+    "overall": 55,
+    "security": 44,
+    "accessibility": 64,
+    "content": 52,
+    "gigw": 20,
+    "performance": 76,
     "identity": 96
   },
   "status": "needs-work",
   "issues": [
+    {
+      "id": "sec.vuln_js",
+      "sev": "H",
+      "ev": "jquery 3.3.1, jszip 3.1.3, quill 1.3.7, tinyMCE 5.10.2"
+    },
+    {
+      "id": "a11y.axe_critical",
+      "sev": "H",
+      "ev": "5 critical violation(s)"
+    },
     {
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "gigw.contact",
-      "sev": "H"
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-template"
     },
     {
       "id": "gigw.rti",
@@ -468,7 +488,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "4297ms"
+      "ev": "3722ms"
     },
     {
       "id": "sec.hsts",
@@ -481,12 +501,7 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "4 serious violation(s)"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "4 low-contrast element(s)"
+      "ev": "2 serious violation(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -494,10 +509,6 @@
     },
     {
       "id": "gigw.privacy",
-      "sev": "M"
-    },
-    {
-      "id": "gigw.accessibility_statement",
       "sev": "M"
     },
     {
@@ -511,7 +522,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "4881.8634999999995ms"
+      "ev": "53367.931500000006ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "160.7MB"
     },
     {
       "id": "sec.csp",
@@ -533,18 +549,24 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "2 moderate/minor violation(s)"
+      "ev": "10 moderate/minor violation(s)"
     },
     {
-      "id": "content.favicon",
+      "id": "a11y.keyboard",
+      "sev": "L",
+      "ev": "tabindex=\"-1\" alongside outline:none"
+    },
+    {
+      "id": "content.meta_desc",
       "sev": "L"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "13 console error(s): Failed to load resource: the server responded with a status of 404 (Not Found)"
     },
     {
       "id": "gigw.feedback",
-      "sev": "L"
-    },
-    {
-      "id": "gigw.terms",
       "sev": "L"
     },
     {
@@ -564,7 +586,7 @@
       "sev": "L"
     },
     {
-      "id": "gigw.help",
+      "id": "perf.images",
       "sev": "L"
     },
     {
@@ -585,7 +607,7 @@
     {
       "d": "2026-11-28",
       "up": true,
-      "score": 65
+      "score": 55
     },
     {
       "d": "2026-11-27",
@@ -918,5 +940,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

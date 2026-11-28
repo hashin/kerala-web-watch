@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-27T04:14:00.157Z",
-    "run": "1795752620637",
+    "at": "2026-11-28T03:58:35.761Z",
+    "run": "1795838165777",
     "vantage": "gh-us",
     "lighthouse": null,
     "axe": {
@@ -48,7 +48,7 @@
     "crawl": {
       "pages": 19,
       "pdfs": 10,
-      "broken": 2
+      "broken": 1
     },
     "tech": {
       "cms": null,
@@ -91,7 +91,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "4300ms"
+        "ev": "4799ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -116,7 +116,7 @@
       {
         "id": "sec.cert_expiry",
         "r": "warn",
-        "ev": "18 days left"
+        "ev": "17 days left"
       },
       {
         "id": "sec.tls_version",
@@ -182,7 +182,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en\"> vs. 47% Malayalam content"
+        "ev": "<html lang=\"en\"> vs. 56% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -282,8 +282,7 @@
       },
       {
         "id": "content.broken_pdfs",
-        "r": "fail",
-        "ev": "1 linked PDF(s) 404: https://ksheerasree.kerala.gov.in/assets/landing/pdf/user_manual/NIC-KLSC-ASG6--KSHEERASREE-USER%20MANUAL-VER1.0_01122021.pdf"
+        "r": "pass"
       },
       {
         "id": "content.broken_images",
@@ -484,10 +483,10 @@
     ]
   },
   "score": {
-    "overall": 53,
+    "overall": 54,
     "security": 50,
     "accessibility": 20,
-    "content": 36,
+    "content": 46,
     "gigw": 78,
     "performance": 95,
     "identity": 88
@@ -497,7 +496,7 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "18 days left"
+      "ev": "17 days left"
     },
     {
       "id": "sec.mixed_content",
@@ -517,7 +516,7 @@
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en\"> vs. 47% Malayalam content"
+      "ev": "<html lang=\"en\"> vs. 56% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -537,7 +536,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "4300ms"
+      "ev": "4799ms"
     },
     {
       "id": "a11y.axe_serious",
@@ -553,11 +552,6 @@
       "id": "a11y.contrast",
       "sev": "M",
       "ev": "14 low-contrast element(s)"
-    },
-    {
-      "id": "content.broken_pdfs",
-      "sev": "M",
-      "ev": "1 linked PDF(s) 404: https://ksheerasree.kerala.gov.in/assets/landing/pdf/user_manual/NIC-KLSC-ASG6--KSHEERASREE-USER%20MANUAL-VER1.0_01122021.pdf"
     },
     {
       "id": "gigw.last_updated",
@@ -623,7 +617,7 @@
     {
       "d": "2026-11-28",
       "up": true,
-      "score": 53
+      "score": 54
     },
     {
       "d": "2026-11-27",
@@ -961,5 +955,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

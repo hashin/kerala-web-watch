@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-27T03:59:10.368Z",
-    "run": "1795751864698",
+    "at": "2026-11-28T03:43:56.389Z",
+    "run": "1795837348144",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 31,
+      "performance": 32,
       "accessibility": 81,
       "best_practices": 88,
       "seo": 62
@@ -95,7 +95,8 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "pass"
+        "r": "warn",
+        "ev": "6772ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -221,22 +222,22 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "31/100"
+        "ev": "32/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "11356.783999999998ms"
+        "ev": "13036.996ms"
       },
       {
         "id": "perf.cls",
         "r": "fail",
-        "ev": "1.07"
+        "ev": "0.70"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "13.9MB"
+        "ev": "13.7MB"
       },
       {
         "id": "perf.viewport",
@@ -312,7 +313,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "4 console error(s): Creating a worker from 'blob:https://ksotto.kerala.gov.in/3a7d2437-3501-40e3-9bda-ab2aa18c19ea' violates the following Content Security Policy directive: \"child-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com https://www.youtube-nocookie.com\". Note that 'worker-src' was not explicitly set, so 'child-src' is used as a fallback. The action has been blocked."
+        "ev": "4 console error(s): Creating a worker from 'blob:https://ksotto.kerala.gov.in/079ece77-5126-463d-b8ee-c9595bc93013' violates the following Content Security Policy directive: \"child-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com https://www.youtube-nocookie.com\". Note that 'worker-src' was not explicitly set, so 'child-src' is used as a fallback. The action has been blocked."
       },
       {
         "id": "gigw.contact",
@@ -512,6 +513,11 @@
       "ev": "1/30 crawled link(s) broken (https://www.portal.ksotto.kerala.gov.in/)"
     },
     {
+      "id": "avail.ttfb",
+      "sev": "M",
+      "ev": "6772ms"
+    },
+    {
       "id": "sec.xfo",
       "sev": "M"
     },
@@ -553,12 +559,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "11356.783999999998ms"
+      "ev": "13036.996ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "13.9MB"
+      "ev": "13.7MB"
     },
     {
       "id": "sec.xcto",
@@ -590,7 +596,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "4 console error(s): Creating a worker from 'blob:https://ksotto.kerala.gov.in/3a7d2437-3501-40e3-9bda-ab2aa18c19ea' violates the following Content Security Policy directive: \"child-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com https://www.youtube-nocookie.com\". Note that 'worker-src' was not explicitly set, so 'child-src' is used as a fallback. The action has been blocked."
+      "ev": "4 console error(s): Creating a worker from 'blob:https://ksotto.kerala.gov.in/079ece77-5126-463d-b8ee-c9595bc93013' violates the following Content Security Policy directive: \"child-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com https://www.youtube-nocookie.com\". Note that 'worker-src' was not explicitly set, so 'child-src' is used as a fallback. The action has been blocked."
     },
     {
       "id": "gigw.feedback",
@@ -623,7 +629,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "1.07"
+      "ev": "0.70"
     },
     {
       "id": "perf.images",
@@ -986,5 +992,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

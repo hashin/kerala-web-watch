@@ -37,15 +37,10 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-16T01:34:25.804Z",
-    "run": "1794792824677",
+    "at": "2026-11-28T03:44:23.512Z",
+    "run": "1795837421691",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 59,
-      "accessibility": 82,
-      "best_practices": 100,
-      "seo": 85
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 0,
       "serious": 6,
@@ -54,8 +49,8 @@
     },
     "crawl": {
       "pages": 30,
-      "pdfs": 0,
-      "broken": 1
+      "pdfs": 1,
+      "broken": 2
     },
     "tech": {
       "cms": "Drupal 11",
@@ -215,22 +210,19 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "82/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "59/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "17001.113ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -242,11 +234,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
@@ -285,7 +277,8 @@
       },
       {
         "id": "content.broken_pdfs",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 linked PDF(s) 404: https://thrippunithuramunicipality.lsgkerala.gov.in/ml/system/files/2026-11/KSMART-DRAFT-Others%20%2832%29.pdf"
       },
       {
         "id": "content.broken_images",
@@ -569,9 +562,9 @@
     "overall": 67,
     "security": 76,
     "accessibility": 70,
-    "content": 46,
+    "content": 36,
     "gigw": 36,
-    "performance": 86,
+    "performance": 100,
     "identity": 96
   },
   "status": "needs-work",
@@ -607,6 +600,11 @@
       "ev": "3 low-contrast element(s)"
     },
     {
+      "id": "content.broken_pdfs",
+      "sev": "M",
+      "ev": "1 linked PDF(s) 404: https://thrippunithuramunicipality.lsgkerala.gov.in/ml/system/files/2026-11/KSMART-DRAFT-Others%20%2832%29.pdf"
+    },
+    {
       "id": "gigw.sitemap",
       "sev": "M"
     },
@@ -621,11 +619,6 @@
     {
       "id": "gigw.last_updated",
       "sev": "M"
-    },
-    {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "17001.113ms"
     },
     {
       "id": "sec.csp",
@@ -672,10 +665,6 @@
     },
     {
       "id": "gigw.screen_reader",
-      "sev": "L"
-    },
-    {
-      "id": "perf.images",
       "sev": "L"
     },
     {
@@ -1021,5 +1010,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

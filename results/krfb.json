@@ -29,29 +29,24 @@
     "suspect": true
   },
   "deep": {
-    "at": "2026-11-27T04:13:15.612Z",
-    "run": "1795752779789",
+    "at": "2026-11-28T03:52:43.553Z",
+    "run": "1795837941226",
     "vantage": "gh-us",
-    "lighthouse": {
-      "performance": 0,
-      "accessibility": 91,
-      "best_practices": 100,
-      "seo": 82
-    },
+    "lighthouse": null,
     "axe": {
       "critical": 0,
-      "serious": 0,
-      "moderate": 3,
+      "serious": 3,
+      "moderate": 11,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
-      "pdfs": 0,
+      "pages": 10,
+      "pdfs": 1,
       "broken": 0
     },
     "tech": {
-      "cms": null,
-      "server": "openresty/1.31.1.1",
+      "cms": "WordPress 7.1.5",
+      "server": "nginx",
       "jquery": null
     },
     "checks": [
@@ -81,8 +76,7 @@
       },
       {
         "id": "avail.blank",
-        "r": "fail",
-        "ev": "51 visible characters"
+        "r": "pass"
       },
       {
         "id": "avail.under_construction",
@@ -106,7 +100,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.cert_valid",
@@ -130,24 +124,24 @@
       },
       {
         "id": "sec.csp",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xfo",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.xcto",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.referrer",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.server_banner",
         "r": "fail",
-        "ev": "openresty/1.31.1.1"
+        "ev": "PHP/8.4.28, PleskLin"
       },
       {
         "id": "sec.vuln_js",
@@ -167,12 +161,13 @@
       },
       {
         "id": "a11y.axe_serious",
-        "r": "pass"
+        "r": "fail",
+        "ev": "3 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "3 moderate/minor violation(s)"
+        "ev": "11 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -184,7 +179,8 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "pass"
+        "r": "fail",
+        "ev": "2 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -205,13 +201,11 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "pass",
-        "ev": "91/100"
+        "r": "na"
       },
       {
         "id": "perf.lighthouse",
-        "r": "pass",
-        "ev": "0/100"
+        "r": "na"
       },
       {
         "id": "perf.lcp",
@@ -219,7 +213,7 @@
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "perf.weight",
@@ -231,15 +225,16 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "fail"
+        "r": "na"
       },
       {
         "id": "perf.images",
-        "r": "pass"
+        "r": "na"
       },
       {
         "id": "content.copyright_year",
-        "r": "na"
+        "r": "fail",
+        "ev": "copyright year 2023"
       },
       {
         "id": "content.last_updated",
@@ -256,7 +251,8 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "pass"
+        "r": "fail",
+        "ev": "ml-user"
       },
       {
         "id": "content.obsolete_tech",
@@ -300,7 +296,7 @@
       },
       {
         "id": "gigw.contact",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.feedback",
@@ -316,7 +312,7 @@
       },
       {
         "id": "gigw.terms",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.copyright_policy",
@@ -348,7 +344,7 @@
       },
       {
         "id": "gigw.search",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "gigw.ownership",
@@ -373,7 +369,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.robots",
@@ -385,21 +381,20 @@
       },
       {
         "id": "id.soft_404",
-        "r": "fail",
-        "ev": "a nonexistent path returned 200"
+        "r": "pass"
       },
       {
         "id": "id.canonical",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "id.charset_doctype",
-        "r": "fail",
-        "ev": "missing UTF-8 charset"
+        "r": "pass"
       },
       {
         "id": "id.tech",
-        "r": "pass"
+        "r": "pass",
+        "ev": "WordPress 7.1.5"
       },
       {
         "id": "id.third_party",
@@ -409,30 +404,30 @@
     "screenshot": {
       "desktop": "krfb.webp",
       "mobile": "krfb-m.webp",
-      "phash": "ffffe70000ffffff"
+      "phash": "00ffff010f0c0000"
     },
     "outlinks": []
   },
-  "score": null,
-  "status": "broken",
+  "score": {
+    "overall": 60,
+    "security": 64,
+    "accessibility": 72,
+    "content": 46,
+    "gigw": 6,
+    "performance": 100,
+    "identity": 80
+  },
+  "status": "needs-work",
   "issues": [
-    {
-      "id": "avail.blank",
-      "sev": "C",
-      "ev": "51 visible characters"
-    },
-    {
-      "id": "sec.http_redirect",
-      "sev": "H"
-    },
     {
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "gigw.contact",
-      "sev": "H"
+      "id": "content.legacy_font",
+      "sev": "H",
+      "ev": "ml-user"
     },
     {
       "id": "gigw.rti",
@@ -446,6 +441,25 @@
     {
       "id": "sec.hsts",
       "sev": "M"
+    },
+    {
+      "id": "sec.xfo",
+      "sev": "M"
+    },
+    {
+      "id": "a11y.axe_serious",
+      "sev": "M",
+      "ev": "3 serious violation(s)"
+    },
+    {
+      "id": "a11y.contrast",
+      "sev": "M",
+      "ev": "2 low-contrast element(s)"
+    },
+    {
+      "id": "content.copyright_year",
+      "sev": "M",
+      "ev": "copyright year 2023"
     },
     {
       "id": "gigw.sitemap",
@@ -468,18 +482,26 @@
       "sev": "M"
     },
     {
-      "id": "perf.tap_targets",
-      "sev": "M"
+      "id": "sec.csp",
+      "sev": "L"
+    },
+    {
+      "id": "sec.xcto",
+      "sev": "L"
+    },
+    {
+      "id": "sec.referrer",
+      "sev": "L"
     },
     {
       "id": "sec.server_banner",
       "sev": "L",
-      "ev": "openresty/1.31.1.1"
+      "ev": "PHP/8.4.28, PleskLin"
     },
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "3 moderate/minor violation(s)"
+      "ev": "11 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -492,10 +514,6 @@
     },
     {
       "id": "gigw.feedback",
-      "sev": "L"
-    },
-    {
-      "id": "gigw.terms",
       "sev": "L"
     },
     {
@@ -519,37 +537,15 @@
       "sev": "L"
     },
     {
-      "id": "gigw.search",
-      "sev": "L"
-    },
-    {
-      "id": "id.www_consistency",
-      "sev": "L"
-    },
-    {
-      "id": "id.soft_404",
-      "sev": "L",
-      "ev": "a nonexistent path returned 200"
-    },
-    {
-      "id": "id.charset_doctype",
-      "sev": "L",
-      "ev": "missing UTF-8 charset"
-    },
-    {
       "id": "gigw.emblem",
-      "sev": "I"
-    },
-    {
-      "id": "id.canonical",
       "sev": "I"
     }
   ],
   "history": [
     {
       "d": "2026-11-28",
-      "up": false,
-      "score": null
+      "up": true,
+      "score": 60
     },
     {
       "d": "2026-11-27",
@@ -887,5 +883,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

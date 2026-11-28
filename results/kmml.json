@@ -35,19 +35,19 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-24T05:43:05.168Z",
-    "run": "1795498923289",
+    "at": "2026-11-28T03:36:01.139Z",
+    "run": "1795836925834",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 60,
+      "performance": 68,
       "accessibility": 82,
       "best_practices": 88,
       "seo": 83
     },
     "axe": {
       "critical": 2,
-      "serious": 7,
-      "moderate": 9,
+      "serious": 14,
+      "moderate": 10,
       "minor": 4
     },
     "crawl": {
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "warn",
-        "ev": "3990ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -175,12 +174,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "7 serious violation(s)"
+        "ev": "14 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "13 moderate/minor violation(s)"
+        "ev": "14 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -194,7 +193,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "3 low-contrast element(s)"
+        "ev": "10 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -221,12 +220,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "60/100"
+        "ev": "68/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "4350.603ms"
+        "ev": "9240ms"
       },
       {
         "id": "perf.cls",
@@ -496,14 +495,9 @@
       "ev": "www.kmml.com"
     },
     {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "3990ms"
-    },
-    {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "7 serious violation(s)"
+      "ev": "14 serious violation(s)"
     },
     {
       "id": "a11y.alt",
@@ -513,7 +507,7 @@
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "3 low-contrast element(s)"
+      "ev": "10 low-contrast element(s)"
     },
     {
       "id": "content.copyright_year",
@@ -548,7 +542,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "4350.603ms"
+      "ev": "9240ms"
     },
     {
       "id": "perf.weight",
@@ -562,7 +556,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "13 moderate/minor violation(s)"
+      "ev": "14 moderate/minor violation(s)"
     },
     {
       "id": "a11y.keyboard",
@@ -971,5 +965,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

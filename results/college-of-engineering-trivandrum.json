@@ -37,25 +37,25 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-27T04:08:09.970Z",
-    "run": "1795752439604",
+    "at": "2026-11-28T03:55:41.195Z",
+    "run": "1795837730448",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 49,
+      "performance": 39,
       "accessibility": 90,
       "best_practices": 96,
-      "seo": 85
+      "seo": 77
     },
     "axe": {
       "critical": 0,
-      "serious": 28,
-      "moderate": 8,
+      "serious": 27,
+      "moderate": 9,
       "minor": 0
     },
     "crawl": {
       "pages": 30,
       "pdfs": 4,
-      "broken": 0
+      "broken": 14
     },
     "tech": {
       "cms": "WordPress 5.2.21",
@@ -177,12 +177,12 @@
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "28 serious violation(s)"
+        "ev": "27 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "8 moderate/minor violation(s)"
+        "ev": "9 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -195,7 +195,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "23 low-contrast element(s)"
+        "ev": "22 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -222,16 +222,17 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "49/100"
+        "ev": "39/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6835.503999999999ms"
+        "ev": "9312.644680000001ms"
       },
       {
         "id": "perf.cls",
-        "r": "pass"
+        "r": "fail",
+        "ev": "0.37"
       },
       {
         "id": "perf.weight",
@@ -283,7 +284,8 @@
       },
       {
         "id": "content.broken_links",
-        "r": "pass"
+        "r": "fail",
+        "ev": "14/30 crawled link(s) broken (https://www.cet.ac.in/#content, https://www.cet.ac.in/#mob-menu, https://www.cet.ac.in/, ...)"
       },
       {
         "id": "content.broken_pdfs",
@@ -422,7 +424,7 @@
     "screenshot": {
       "desktop": "college-of-engineering-trivandrum.webp",
       "mobile": "college-of-engineering-trivandrum-m.webp",
-      "phash": "ffff00e7bb00bf31"
+      "phash": "ffff0084c0604400"
     },
     "outlinks": [
       {
@@ -524,15 +526,15 @@
     ]
   },
   "score": {
-    "overall": 51,
+    "overall": 47,
     "security": 24,
     "accessibility": 72,
-    "content": 36,
+    "content": 16,
     "gigw": 22,
-    "performance": 86,
+    "performance": 82,
     "identity": 95
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -555,6 +557,11 @@
       "ev": "ml-"
     },
     {
+      "id": "content.broken_links",
+      "sev": "H",
+      "ev": "14/30 crawled link(s) broken (https://www.cet.ac.in/#content, https://www.cet.ac.in/#mob-menu, https://www.cet.ac.in/, ...)"
+    },
+    {
       "id": "sec.hsts",
       "sev": "M"
     },
@@ -565,12 +572,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "28 serious violation(s)"
+      "ev": "27 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "23 low-contrast element(s)"
+      "ev": "22 low-contrast element(s)"
     },
     {
       "id": "content.copyright_year",
@@ -605,7 +612,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6835.503999999999ms"
+      "ev": "9312.644680000001ms"
     },
     {
       "id": "id.tech",
@@ -632,7 +639,7 @@
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "8 moderate/minor violation(s)"
+      "ev": "9 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
@@ -672,6 +679,11 @@
       "sev": "L"
     },
     {
+      "id": "perf.cls",
+      "sev": "L",
+      "ev": "0.37"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -684,7 +696,7 @@
     {
       "d": "2026-11-28",
       "up": true,
-      "score": 51
+      "score": 47
     },
     {
       "d": "2026-11-27",
@@ -997,5 +1009,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-27T03:51:14.074Z",
-    "run": "1795751051065",
+    "at": "2026-11-28T03:28:13.257Z",
+    "run": "1795836436068",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 50,
+      "performance": 49,
       "accessibility": 86,
       "best_practices": 92,
       "seo": 69
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 30,
       "pdfs": 0,
-      "broken": 17
+      "broken": 0
     },
     "tech": {
       "cms": null,
@@ -95,8 +95,7 @@
       },
       {
         "id": "avail.ttfb",
-        "r": "fail",
-        "ev": "19658ms"
+        "r": "pass"
       },
       {
         "id": "avail.geo_blocked",
@@ -222,12 +221,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "50/100"
+        "ev": "49/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "26013.749000000003ms"
+        "ev": "27167.0395ms"
       },
       {
         "id": "perf.cls",
@@ -282,8 +281,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "17/30 crawled link(s) broken (https://arogyakeralam.gov.in/2020/03/25/health-institutional-details/, https://arogyakeralam.gov.in/2020/03/25/mandatory-disclosure/, https://arogyakeralam.gov.in/programmes/, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -312,7 +310,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "2 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+        "ev": "4 console error(s): Failed to load resource: the server responded with a status of 404 ()"
       },
       {
         "id": "gigw.contact",
@@ -388,7 +386,7 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "id.robots",
@@ -509,15 +507,15 @@
     ]
   },
   "score": {
-    "overall": 48,
+    "overall": 51,
     "security": 42,
     "accessibility": 50,
-    "content": 32,
+    "content": 52,
     "gigw": 22,
     "performance": 71,
     "identity": 100
   },
-  "status": "poor",
+  "status": "needs-work",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -543,16 +541,6 @@
       "id": "content.legacy_font",
       "sev": "H",
       "ev": "ml-box"
-    },
-    {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "17/30 crawled link(s) broken (https://arogyakeralam.gov.in/2020/03/25/health-institutional-details/, https://arogyakeralam.gov.in/2020/03/25/mandatory-disclosure/, https://arogyakeralam.gov.in/programmes/, ...)"
-    },
-    {
-      "id": "avail.ttfb",
-      "sev": "M",
-      "ev": "19658ms"
     },
     {
       "id": "sec.hsts",
@@ -591,7 +579,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "26013.749000000003ms"
+      "ev": "27167.0395ms"
     },
     {
       "id": "perf.weight",
@@ -632,7 +620,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "2 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+      "ev": "4 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
@@ -675,7 +663,7 @@
     {
       "d": "2026-11-28",
       "up": true,
-      "score": 48
+      "score": 51
     },
     {
       "d": "2026-11-27",
@@ -1018,5 +1006,5 @@
       "score": 51
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

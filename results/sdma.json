@@ -37,18 +37,18 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-27T03:59:36.495Z",
-    "run": "1795751925097",
+    "at": "2026-11-28T03:36:50.498Z",
+    "run": "1795836937148",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 52,
+      "performance": 55,
       "accessibility": 81,
       "best_practices": 85,
       "seo": 77
     },
     "axe": {
-      "critical": 2,
-      "serious": 53,
+      "critical": 1,
+      "serious": 24,
       "moderate": 2,
       "minor": 0
     },
@@ -171,12 +171,12 @@
       {
         "id": "a11y.axe_critical",
         "r": "fail",
-        "ev": "2 critical violation(s)"
+        "ev": "1 critical violation(s)"
       },
       {
         "id": "a11y.axe_serious",
         "r": "fail",
-        "ev": "53 serious violation(s)"
+        "ev": "24 serious violation(s)"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -186,7 +186,7 @@
       {
         "id": "a11y.lang",
         "r": "fail",
-        "ev": "<html lang=\"en-GB\"> vs. 39% Malayalam content"
+        "ev": "<html lang=\"en-GB\"> vs. 34% Malayalam content"
       },
       {
         "id": "a11y.alt",
@@ -195,7 +195,7 @@
       {
         "id": "a11y.contrast",
         "r": "fail",
-        "ev": "29 low-contrast element(s)"
+        "ev": "13 low-contrast element(s)"
       },
       {
         "id": "a11y.headings",
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "52/100"
+        "ev": "55/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "10204.186ms"
+        "ev": "12065.316499999999ms"
       },
       {
         "id": "perf.cls",
@@ -235,7 +235,8 @@
       },
       {
         "id": "perf.weight",
-        "r": "pass"
+        "r": "warn",
+        "ev": "4.6MB"
       },
       {
         "id": "perf.viewport",
@@ -260,7 +261,7 @@
       },
       {
         "id": "content.stale_news",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "content.placeholder",
@@ -311,7 +312,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "41 console error(s): Unrecognized Content-Security-Policy directive 'base-url'."
+        "ev": "56 console error(s): Unrecognized Content-Security-Policy directive 'base-url'."
       },
       {
         "id": "gigw.contact",
@@ -417,7 +418,7 @@
       {
         "id": "id.third_party",
         "r": "warn",
-        "ev": "https://connect.facebook.net/en_US/all.js?hash=999b484f9908569dfdac8de8e851dcbc, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
+        "ev": "https://connect.facebook.net/en_US/all.js?hash=daac3c4fc18d3b70f7713a02cdcf0788, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
       }
     ],
     "screenshot": {
@@ -465,12 +466,12 @@
     ]
   },
   "score": {
-    "overall": 59,
+    "overall": 58,
     "security": 80,
     "accessibility": 34,
     "content": 46,
     "gigw": 32,
-    "performance": 86,
+    "performance": 81,
     "identity": 100
   },
   "status": "needs-work",
@@ -483,12 +484,12 @@
     {
       "id": "a11y.axe_critical",
       "sev": "H",
-      "ev": "2 critical violation(s)"
+      "ev": "1 critical violation(s)"
     },
     {
       "id": "a11y.lang",
       "sev": "H",
-      "ev": "<html lang=\"en-GB\"> vs. 39% Malayalam content"
+      "ev": "<html lang=\"en-GB\"> vs. 34% Malayalam content"
     },
     {
       "id": "content.last_updated",
@@ -503,12 +504,12 @@
     {
       "id": "a11y.axe_serious",
       "sev": "M",
-      "ev": "53 serious violation(s)"
+      "ev": "24 serious violation(s)"
     },
     {
       "id": "a11y.contrast",
       "sev": "M",
-      "ev": "29 low-contrast element(s)"
+      "ev": "13 low-contrast element(s)"
     },
     {
       "id": "content.obsolete_tech",
@@ -534,7 +535,12 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "10204.186ms"
+      "ev": "12065.316499999999ms"
+    },
+    {
+      "id": "perf.weight",
+      "sev": "M",
+      "ev": "4.6MB"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -549,7 +555,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "41 console error(s): Unrecognized Content-Security-Policy directive 'base-url'."
+      "ev": "56 console error(s): Unrecognized Content-Security-Policy directive 'base-url'."
     },
     {
       "id": "gigw.feedback",
@@ -590,14 +596,14 @@
     {
       "id": "id.third_party",
       "sev": "I",
-      "ev": "https://connect.facebook.net/en_US/all.js?hash=999b484f9908569dfdac8de8e851dcbc, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
+      "ev": "https://connect.facebook.net/en_US/all.js?hash=daac3c4fc18d3b70f7713a02cdcf0788, https://connect.facebook.net/en_US/all.js#xfbml=1&amp;appId=395202813876688, https://www.googletagmanager.com/gtag/js?id=G-D87XBPNB6Z"
     }
   ],
   "history": [
     {
       "d": "2026-11-28",
       "up": true,
-      "score": 59
+      "score": 58
     },
     {
       "d": "2026-11-27",
@@ -935,5 +941,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

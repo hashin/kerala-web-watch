@@ -29,29 +29,29 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-26T03:46:55.657Z",
-    "run": "1795664765590",
+    "at": "2026-11-28T03:34:35.055Z",
+    "run": "1795836856915",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 61,
-      "accessibility": 82,
+      "performance": 0,
+      "accessibility": 75,
       "best_practices": 96,
-      "seo": 82
+      "seo": 83
     },
     "axe": {
-      "critical": 1,
-      "serious": 5,
+      "critical": 0,
+      "serious": 0,
       "moderate": 3,
       "minor": 0
     },
     "crawl": {
-      "pages": 28,
+      "pages": 0,
       "pdfs": 0,
-      "broken": 5
+      "broken": 0
     },
     "tech": {
       "cms": null,
-      "server": "LiteSpeed",
+      "server": "openresty/1.31.1.1",
       "jquery": null
     },
     "checks": [
@@ -81,7 +81,8 @@
       },
       {
         "id": "avail.blank",
-        "r": "pass"
+        "r": "fail",
+        "ev": "51 visible characters"
       },
       {
         "id": "avail.under_construction",
@@ -105,7 +106,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.cert_valid",
@@ -129,28 +130,28 @@
       },
       {
         "id": "sec.csp",
-        "r": "fail"
-      },
-      {
-        "id": "sec.xfo",
-        "r": "fail"
-      },
-      {
-        "id": "sec.xcto",
-        "r": "fail"
-      },
-      {
-        "id": "sec.referrer",
-        "r": "fail"
-      },
-      {
-        "id": "sec.server_banner",
         "r": "pass"
       },
       {
-        "id": "sec.vuln_js",
+        "id": "sec.xfo",
+        "r": "pass"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "pass"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "pass"
+      },
+      {
+        "id": "sec.server_banner",
         "r": "fail",
-        "ev": "jquery 3.2.1, bootstrap 4.0.0"
+        "ev": "openresty/1.31.1.1"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "pass"
       },
       {
         "id": "sec.safe_browsing",
@@ -162,13 +163,11 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "fail",
-        "ev": "1 critical violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_serious",
-        "r": "fail",
-        "ev": "5 serious violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_moderate_minor",
@@ -190,7 +189,7 @@
       {
         "id": "a11y.headings",
         "r": "fail",
-        "ev": "heading levels skipped"
+        "ev": "no <h1>"
       },
       {
         "id": "a11y.labels",
@@ -202,23 +201,21 @@
       },
       {
         "id": "a11y.keyboard",
-        "r": "warn",
-        "ev": "tabindex=\"-1\" alongside outline:none"
+        "r": "pass"
       },
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "82/100"
+        "ev": "75/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "61/100"
+        "ev": "0/100"
       },
       {
         "id": "perf.lcp",
-        "r": "fail",
-        "ev": "12287.059000000001ms"
+        "r": "na"
       },
       {
         "id": "perf.cls",
@@ -226,8 +223,7 @@
       },
       {
         "id": "perf.weight",
-        "r": "warn",
-        "ev": "4.3MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
@@ -239,7 +235,7 @@
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.copyright_year",
@@ -260,8 +256,7 @@
       },
       {
         "id": "content.legacy_font",
-        "r": "fail",
-        "ev": "ml-"
+        "r": "pass"
       },
       {
         "id": "content.obsolete_tech",
@@ -273,8 +268,7 @@
       },
       {
         "id": "content.broken_links",
-        "r": "fail",
-        "ev": "5/28 crawled link(s) broken (https://fitkerala.co.in/img/product/hamper2.jpg, https://fitkerala.co.in/img/product/teapoy.jpg, https://fitkerala.co.in/img/product/dressing.jpg, ...)"
+        "r": "pass"
       },
       {
         "id": "content.broken_pdfs",
@@ -282,8 +276,7 @@
       },
       {
         "id": "content.broken_images",
-        "r": "fail",
-        "ev": "5 broken image(s)"
+        "r": "pass"
       },
       {
         "id": "content.malayalam",
@@ -299,16 +292,15 @@
       },
       {
         "id": "content.favicon",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "5 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.feedback",
@@ -352,7 +344,7 @@
       },
       {
         "id": "gigw.rti",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.search",
@@ -381,21 +373,20 @@
       },
       {
         "id": "id.www_consistency",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "id.robots",
-        "r": "fail",
-        "ev": "robots.txt returned 404"
+        "r": "pass"
       },
       {
         "id": "id.sitemap_xml",
-        "r": "fail",
-        "ev": "sitemap.xml returned 404"
+        "r": "pass"
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
       },
       {
         "id": "id.canonical",
@@ -403,7 +394,8 @@
       },
       {
         "id": "id.charset_doctype",
-        "r": "pass"
+        "r": "fail",
+        "ev": "missing UTF-8 charset"
       },
       {
         "id": "id.tech",
@@ -417,48 +409,21 @@
     "screenshot": {
       "desktop": "fit-kerala.webp",
       "mobile": "fit-kerala-m.webp",
-      "phash": "ff20707c3c3c383e"
+      "phash": "ffffe70000ffffff"
     },
-    "outlinks": [
-      {
-        "host": "kerala.gov.in",
-        "count": 1,
-        "texts": [
-          "E-Tenders"
-        ]
-      },
-      {
-        "host": "facebook.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "instagram.com",
-        "count": 1,
-        "texts": []
-      }
-    ]
+    "outlinks": []
   },
-  "score": {
-    "overall": 49,
-    "security": 48,
-    "accessibility": 60,
-    "content": 24,
-    "gigw": 18,
-    "performance": 81,
-    "identity": 72
-  },
-  "status": "down",
+  "score": null,
+  "status": "broken",
   "issues": [
     {
-      "id": "sec.vuln_js",
-      "sev": "H",
-      "ev": "jquery 3.2.1, bootstrap 4.0.0"
+      "id": "avail.blank",
+      "sev": "C",
+      "ev": "51 visible characters"
     },
     {
-      "id": "a11y.axe_critical",
-      "sev": "H",
-      "ev": "1 critical violation(s)"
+      "id": "sec.http_redirect",
+      "sev": "H"
     },
     {
       "id": "content.last_updated",
@@ -466,14 +431,12 @@
       "ev": "no \"last updated\" date found"
     },
     {
-      "id": "content.legacy_font",
-      "sev": "H",
-      "ev": "ml-"
+      "id": "gigw.contact",
+      "sev": "H"
     },
     {
-      "id": "content.broken_links",
-      "sev": "H",
-      "ev": "5/28 crawled link(s) broken (https://fitkerala.co.in/img/product/hamper2.jpg, https://fitkerala.co.in/img/product/teapoy.jpg, https://fitkerala.co.in/img/product/dressing.jpg, ...)"
+      "id": "gigw.rti",
+      "sev": "H"
     },
     {
       "id": "id.gov_domain",
@@ -483,15 +446,6 @@
     {
       "id": "sec.hsts",
       "sev": "M"
-    },
-    {
-      "id": "sec.xfo",
-      "sev": "M"
-    },
-    {
-      "id": "a11y.axe_serious",
-      "sev": "M",
-      "ev": "5 serious violation(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -514,26 +468,9 @@
       "sev": "M"
     },
     {
-      "id": "perf.lcp",
-      "sev": "M",
-      "ev": "12287.059000000001ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "4.3MB"
-    },
-    {
-      "id": "sec.csp",
-      "sev": "L"
-    },
-    {
-      "id": "sec.xcto",
-      "sev": "L"
-    },
-    {
-      "id": "sec.referrer",
-      "sev": "L"
+      "id": "sec.server_banner",
+      "sev": "L",
+      "ev": "openresty/1.31.1.1"
     },
     {
       "id": "a11y.axe_moderate_minor",
@@ -543,30 +480,11 @@
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "heading levels skipped"
-    },
-    {
-      "id": "a11y.keyboard",
-      "sev": "L",
-      "ev": "tabindex=\"-1\" alongside outline:none"
-    },
-    {
-      "id": "content.broken_images",
-      "sev": "L",
-      "ev": "5 broken image(s)"
+      "ev": "no <h1>"
     },
     {
       "id": "content.meta_desc",
       "sev": "L"
-    },
-    {
-      "id": "content.favicon",
-      "sev": "L"
-    },
-    {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "5 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
@@ -601,18 +519,18 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
+      "id": "id.www_consistency",
       "sev": "L"
     },
     {
-      "id": "id.robots",
+      "id": "id.soft_404",
       "sev": "L",
-      "ev": "robots.txt returned 404"
+      "ev": "a nonexistent path returned 200"
     },
     {
-      "id": "id.sitemap_xml",
+      "id": "id.charset_doctype",
       "sev": "L",
-      "ev": "sitemap.xml returned 404"
+      "ev": "missing UTF-8 charset"
     },
     {
       "id": "gigw.emblem",
@@ -627,7 +545,7 @@
     {
       "d": "2026-11-28",
       "up": false,
-      "score": 49
+      "score": null
     },
     {
       "d": "2026-11-27",
@@ -920,5 +838,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

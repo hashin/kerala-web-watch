@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-27T03:50:32.478Z",
-    "run": "1795751379411",
+    "at": "2026-11-28T03:31:19.698Z",
+    "run": "1795836622142",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 81,
@@ -53,7 +53,7 @@
     "crawl": {
       "pages": 16,
       "pdfs": 1,
-      "broken": 2
+      "broken": 3
     },
     "tech": {
       "cms": null,
@@ -127,7 +127,7 @@
       },
       {
         "id": "sec.hsts",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.mixed_content",
@@ -280,7 +280,7 @@
       {
         "id": "content.broken_links",
         "r": "warn",
-        "ev": "1/16 crawled link(s) broken (https://services.kerala.gov.in/)"
+        "ev": "2/16 crawled link(s) broken (https://edistrict.kerala.gov.in/generalService.htm?event=dashboard&token=17958366274712980235641745170808, https://services.kerala.gov.in/)"
       },
       {
         "id": "content.broken_pdfs",
@@ -448,8 +448,8 @@
     ]
   },
   "score": {
-    "overall": 51,
-    "security": 62,
+    "overall": 53,
+    "security": 72,
     "accessibility": 42,
     "content": 26,
     "gigw": 22,
@@ -481,15 +481,11 @@
     {
       "id": "content.broken_links",
       "sev": "H",
-      "ev": "1/16 crawled link(s) broken (https://services.kerala.gov.in/)"
+      "ev": "2/16 crawled link(s) broken (https://edistrict.kerala.gov.in/generalService.htm?event=dashboard&token=17958366274712980235641745170808, https://services.kerala.gov.in/)"
     },
     {
       "id": "gigw.rti",
       "sev": "H"
-    },
-    {
-      "id": "sec.hsts",
-      "sev": "M"
     },
     {
       "id": "a11y.axe_serious",
@@ -614,7 +610,7 @@
     {
       "d": "2026-11-28",
       "up": true,
-      "score": 51
+      "score": 53
     },
     {
       "d": "2026-11-27",
@@ -952,5 +948,5 @@
       "score": 51
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

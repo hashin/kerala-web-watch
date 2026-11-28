@@ -35,14 +35,14 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-27T03:49:10.457Z",
-    "run": "1795751309977",
+    "at": "2026-11-28T03:34:31.040Z",
+    "run": "1795836799613",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 0,
-      "accessibility": 0,
-      "best_practices": 0,
-      "seo": 0
+      "performance": 44,
+      "accessibility": 78,
+      "best_practices": 92,
+      "seo": 58
     },
     "axe": {
       "critical": 3,
@@ -96,7 +96,7 @@
       {
         "id": "avail.ttfb",
         "r": "warn",
-        "ev": "3182ms"
+        "ev": "3219ms"
       },
       {
         "id": "avail.geo_blocked",
@@ -218,25 +218,26 @@
       {
         "id": "a11y.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "78/100"
       },
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "0/100"
+        "ev": "44/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "22599.843ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "warn",
-        "ev": "5.8MB"
+        "ev": "5.9MB"
       },
       {
         "id": "perf.viewport",
@@ -444,12 +445,12 @@
     ]
   },
   "score": {
-    "overall": 43,
+    "overall": 42,
     "security": 32,
     "accessibility": 30,
     "content": 52,
     "gigw": 32,
-    "performance": 81,
+    "performance": 71,
     "identity": 72
   },
   "status": "poor",
@@ -486,7 +487,7 @@
     {
       "id": "avail.ttfb",
       "sev": "M",
-      "ev": "3182ms"
+      "ev": "3219ms"
     },
     {
       "id": "sec.hsts",
@@ -533,9 +534,14 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "22599.843ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "5.8MB"
+      "ev": "5.9MB"
     },
     {
       "id": "perf.tap_targets",
@@ -624,7 +630,7 @@
     {
       "d": "2026-11-28",
       "up": true,
-      "score": 43
+      "score": 42
     },
     {
       "d": "2026-11-27",
@@ -922,5 +928,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

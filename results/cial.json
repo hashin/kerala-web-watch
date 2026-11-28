@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-19T02:45:31.969Z",
-    "run": "1795056255909",
+    "at": "2026-11-28T03:28:17.491Z",
+    "run": "1795836430912",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 39,
+      "performance": 49,
       "accessibility": 76,
       "best_practices": 85,
       "seo": 85
@@ -155,8 +155,7 @@
       },
       {
         "id": "sec.vuln_js",
-        "r": "fail",
-        "ev": "jquery 1.8.3"
+        "r": "pass"
       },
       {
         "id": "sec.safe_browsing",
@@ -219,22 +218,21 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "39/100"
+        "ev": "49/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "9341.784ms"
+        "ev": "8923.0435ms"
       },
       {
         "id": "perf.cls",
-        "r": "fail",
-        "ev": "0.33"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
         "r": "fail",
-        "ev": "15.0MB"
+        "ev": "15.1MB"
       },
       {
         "id": "perf.viewport",
@@ -309,7 +307,8 @@
       },
       {
         "id": "content.console_errors",
-        "r": "pass"
+        "r": "fail",
+        "ev": "1 console error(s): Cannot read properties of undefined (reading 'backdrop')"
       },
       {
         "id": "gigw.contact",
@@ -422,7 +421,7 @@
     "screenshot": {
       "desktop": "cial.webp",
       "mobile": "cial-m.webp",
-      "phash": "ffff70e0e06060e4"
+      "phash": "f3fee6460c141834"
     },
     "outlinks": [
       {
@@ -505,12 +504,12 @@
     ]
   },
   "score": {
-    "overall": 55,
-    "security": 60,
+    "overall": 60,
+    "security": 80,
     "accessibility": 46,
-    "content": 50,
+    "content": 46,
     "gigw": 42,
-    "performance": 72,
+    "performance": 76,
     "identity": 72
   },
   "status": "needs-work",
@@ -518,11 +517,6 @@
     {
       "id": "sec.http_redirect",
       "sev": "H"
-    },
-    {
-      "id": "sec.vuln_js",
-      "sev": "H",
-      "ev": "jquery 1.8.3"
     },
     {
       "id": "a11y.axe_critical",
@@ -579,17 +573,22 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "9341.784ms"
+      "ev": "8923.0435ms"
     },
     {
       "id": "perf.weight",
       "sev": "M",
-      "ev": "15.0MB"
+      "ev": "15.1MB"
     },
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
       "ev": "38 moderate/minor violation(s)"
+    },
+    {
+      "id": "content.console_errors",
+      "sev": "L",
+      "ev": "1 console error(s): Cannot read properties of undefined (reading 'backdrop')"
     },
     {
       "id": "gigw.feedback",
@@ -620,11 +619,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.cls",
-      "sev": "L",
-      "ev": "0.33"
-    },
-    {
       "id": "perf.images",
       "sev": "L"
     },
@@ -647,7 +641,7 @@
     {
       "d": "2026-11-28",
       "up": true,
-      "score": 55
+      "score": 60
     },
     {
       "d": "2026-11-27",
@@ -980,5 +974,5 @@
       "score": 54
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

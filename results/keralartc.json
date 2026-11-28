@@ -35,34 +35,461 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-27T03:49:21.400Z",
-    "run": "1795751350458",
+    "at": "2026-11-28T03:35:25.832Z",
+    "run": "1795836871041",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 33,
+      "accessibility": 77,
+      "best_practices": 73,
+      "seo": 100
+    },
     "axe": {
-      "critical": 0,
-      "serious": 0,
-      "moderate": 0,
+      "critical": 2,
+      "serious": 26,
+      "moderate": 18,
       "minor": 0
     },
     "crawl": {
-      "pages": 0,
-      "pdfs": 0,
-      "broken": 0
+      "pages": 30,
+      "pdfs": 4,
+      "broken": 1
     },
     "tech": {
       "cms": null,
       "server": null,
-      "jquery": null
+      "jquery": "3.5.1"
     },
-    "checks": [],
+    "checks": [
+      {
+        "id": "avail.dns",
+        "r": "pass"
+      },
+      {
+        "id": "avail.connect",
+        "r": "pass"
+      },
+      {
+        "id": "avail.status",
+        "r": "pass"
+      },
+      {
+        "id": "avail.redirect_offsite",
+        "r": "pass"
+      },
+      {
+        "id": "avail.parked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.default_page",
+        "r": "pass"
+      },
+      {
+        "id": "avail.blank",
+        "r": "pass"
+      },
+      {
+        "id": "avail.under_construction",
+        "r": "pass"
+      },
+      {
+        "id": "avail.ttfb",
+        "r": "pass"
+      },
+      {
+        "id": "avail.geo_blocked",
+        "r": "pass"
+      },
+      {
+        "id": "avail.flapping",
+        "r": "na"
+      },
+      {
+        "id": "sec.https",
+        "r": "pass"
+      },
+      {
+        "id": "sec.http_redirect",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_valid",
+        "r": "pass"
+      },
+      {
+        "id": "sec.cert_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "sec.tls_version",
+        "r": "pass"
+      },
+      {
+        "id": "sec.hsts",
+        "r": "fail"
+      },
+      {
+        "id": "sec.mixed_content",
+        "r": "fail",
+        "ev": "href=\"http://www.keralartctender.com/\""
+      },
+      {
+        "id": "sec.csp",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xfo",
+        "r": "fail"
+      },
+      {
+        "id": "sec.xcto",
+        "r": "fail"
+      },
+      {
+        "id": "sec.referrer",
+        "r": "fail"
+      },
+      {
+        "id": "sec.server_banner",
+        "r": "pass"
+      },
+      {
+        "id": "sec.vuln_js",
+        "r": "pass"
+      },
+      {
+        "id": "sec.safe_browsing",
+        "r": "na"
+      },
+      {
+        "id": "sec.injected_links",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.axe_critical",
+        "r": "fail",
+        "ev": "2 critical violation(s)"
+      },
+      {
+        "id": "a11y.axe_serious",
+        "r": "fail",
+        "ev": "26 serious violation(s)"
+      },
+      {
+        "id": "a11y.axe_moderate_minor",
+        "r": "fail",
+        "ev": "18 moderate/minor violation(s)"
+      },
+      {
+        "id": "a11y.lang",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.alt",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.contrast",
+        "r": "fail",
+        "ev": "17 low-contrast element(s)"
+      },
+      {
+        "id": "a11y.headings",
+        "r": "fail",
+        "ev": "heading levels skipped"
+      },
+      {
+        "id": "a11y.labels",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.skip_link",
+        "r": "pass"
+      },
+      {
+        "id": "a11y.keyboard",
+        "r": "warn",
+        "ev": "tabindex=\"-1\" alongside outline:none"
+      },
+      {
+        "id": "a11y.lighthouse",
+        "r": "pass",
+        "ev": "77/100"
+      },
+      {
+        "id": "perf.lighthouse",
+        "r": "pass",
+        "ev": "33/100"
+      },
+      {
+        "id": "perf.lcp",
+        "r": "fail",
+        "ev": "18021.791999999994ms"
+      },
+      {
+        "id": "perf.cls",
+        "r": "fail",
+        "ev": "0.37"
+      },
+      {
+        "id": "perf.weight",
+        "r": "warn",
+        "ev": "3.6MB"
+      },
+      {
+        "id": "perf.viewport",
+        "r": "pass"
+      },
+      {
+        "id": "perf.tap_targets",
+        "r": "pass"
+      },
+      {
+        "id": "perf.images",
+        "r": "fail"
+      },
+      {
+        "id": "content.copyright_year",
+        "r": "fail",
+        "ev": "copyright year 2021"
+      },
+      {
+        "id": "content.last_updated",
+        "r": "fail",
+        "ev": "no \"last updated\" date found"
+      },
+      {
+        "id": "content.stale_news",
+        "r": "na"
+      },
+      {
+        "id": "content.placeholder",
+        "r": "pass"
+      },
+      {
+        "id": "content.legacy_font",
+        "r": "fail",
+        "ev": "ml-user"
+      },
+      {
+        "id": "content.obsolete_tech",
+        "r": "pass"
+      },
+      {
+        "id": "content.best_viewed",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_links",
+        "r": "warn",
+        "ev": "1/30 crawled link(s) broken (https://online.keralartc.com/oprs-web/)"
+      },
+      {
+        "id": "content.broken_pdfs",
+        "r": "pass"
+      },
+      {
+        "id": "content.broken_images",
+        "r": "pass"
+      },
+      {
+        "id": "content.malayalam",
+        "r": "na"
+      },
+      {
+        "id": "content.title",
+        "r": "pass"
+      },
+      {
+        "id": "content.meta_desc",
+        "r": "pass"
+      },
+      {
+        "id": "content.favicon",
+        "r": "pass"
+      },
+      {
+        "id": "content.console_errors",
+        "r": "fail",
+        "ev": "2 console error(s): Access to fetch at 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit' from origin 'https://www.keralartc.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      },
+      {
+        "id": "gigw.contact",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.feedback",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.sitemap",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.privacy",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.terms",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.copyright_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.hyperlink_policy",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.disclaimer",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.accessibility_statement",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.screen_reader",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.help",
+        "r": "pass"
+      },
+      {
+        "id": "gigw.rti",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.search",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.ownership",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.last_updated",
+        "r": "fail"
+      },
+      {
+        "id": "gigw.emblem",
+        "r": "pass"
+      },
+      {
+        "id": "id.gov_domain",
+        "r": "fail",
+        "ev": "www.keralartc.com"
+      },
+      {
+        "id": "id.domain_expiry",
+        "r": "pass"
+      },
+      {
+        "id": "id.www_consistency",
+        "r": "fail"
+      },
+      {
+        "id": "id.robots",
+        "r": "pass"
+      },
+      {
+        "id": "id.sitemap_xml",
+        "r": "fail",
+        "ev": "sitemap.xml returned 404"
+      },
+      {
+        "id": "id.soft_404",
+        "r": "pass"
+      },
+      {
+        "id": "id.canonical",
+        "r": "pass"
+      },
+      {
+        "id": "id.charset_doctype",
+        "r": "pass"
+      },
+      {
+        "id": "id.tech",
+        "r": "pass"
+      },
+      {
+        "id": "id.third_party",
+        "r": "pass"
+      }
+    ],
     "screenshot": {
       "desktop": "keralartc.webp",
       "mobile": "keralartc-m.webp",
       "phash": "ffff00000000c3ff"
     },
-    "outlinks": [],
-    "error": "page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://www.keralartc.com/\nCall log:\n  - navigating to \"https://www.keralartc.com/\", waiting until \"load\"\n"
+    "outlinks": [
+      {
+        "host": "bajajallianz.com",
+        "count": 1,
+        "texts": [
+          "ആരോഗ്യ ഇൻഷുറൻസ് ടോപ് അപ്പ് ചെയ്യുക"
+        ]
+      },
+      {
+        "host": "onlineksrtcswift.com",
+        "count": 1,
+        "texts": [
+          "ഓൺലൈൻ ടിക്കറ്റ് റിസർവേഷൻ"
+        ]
+      },
+      {
+        "host": "keralartctender.com",
+        "count": 1,
+        "texts": [
+          "ടെൻഡറുകൾ"
+        ]
+      },
+      {
+        "host": "ksrtcads.in",
+        "count": 1,
+        "texts": []
+      },
+      {
+        "host": "google.com",
+        "count": 2,
+        "texts": [
+          "ഓൺലൈൻ മെഡിക്കൽ കൺസൾട്ടേഷൻ\n                        കെ.എസ്.ആർ.ടി.സി ജീവനക്കാർക്കുള്ള ഓൺലൈൻ മെഡിക്കൽ കൺസൾട്ടേഷൻ",
+          "കരട് വോട്ടർ പട്ടിക-റഫറണ്ടം 2025\n                        കരട് വോട്ടർ പട്ടിക-റഫറണ്ടം 2025"
+        ]
+      },
+      {
+        "host": "artibot.ai",
+        "count": 1,
+        "texts": [
+          "ടൂർ പാക്കേജുകൾ\n                        പുതിയ ലക്ഷ്യസ്ഥാനങ്ങൾ പര്യവേക്ഷണം ചെയ്യാൻ ആഗ്രഹിക്കുന്ന വ്യക്തികൾക്കോ ​​ഗ്രൂപ്പുകൾക്കോ ​​വേണ്ടി തടസ്സരഹിതവും ക്യൂറേറ്റഡ് യാത്രാനുഭവങ്ങളും."
+        ]
+      },
+      {
+        "host": "kerala.gov.in",
+        "count": 1,
+        "texts": [
+          "ജി-സ്പാർക്ക്\n                        ജി-സ്പാർക്ക് വിവരണം"
+        ]
+      },
+      {
+        "host": "eofficeksrtc.com",
+        "count": 1,
+        "texts": [
+          "ഇഓഫീസ് ലോഗിൻ\n                        കെ.എസ്.ആർ.ടി.സി. ഇ.ഓഫീസ്"
+        ]
+      },
+      {
+        "host": "keralartcit.com",
+        "count": 1,
+        "texts": [
+          "കെഎസ്ആർടിസി നെക്സ്റ്റ്ജെൻ ഇന്റേൺഷിപ്പ് പോർട്ടൽ\n                        കെ.എസ്.ആർ.ടി.സിയിൽ എം.ബി.എ ഇന്റേൺഷിപ്പ് അവസരങ്ങൾ - അപേക്ഷകൾ ക്ഷണിച്ചു. കേരള സ്റ്റേറ്റ് റോഡ് ട്രാൻസ്പോർട്ട് കോർപ്പറേഷൻ (കെ.എസ്.ആർ.ടി.സി) ഇന്റേൺഷിപ്പ് അവസരങ്ങൾക്കായി എം.ബി.എ ബിരുദധാരികളിൽ നിന്ന് അപേക്ഷകൾ ക്ഷണിക്കുന്നു. പൊതുഗതാഗത മാനേജ്മെന്റിൽ പ്രായോഗിക പരിചയം നേടുക, നിങ്ങളുടെ അക്കാദമിക് അറിവ് യഥാർത്ഥ ലോകത്തിലെ വെല്ലുവിളികൾക്ക് ബാധകമാക്കുക, യാത്രാ സേവനങ്ങളും സംഘടനാ കാര്യക്ഷമതയും മെച്ചപ്പെടുത്തുന്നതിന് പുതിയ ആശയങ്ങൾ സംഭാവന ചെയ്യുക. താൽപ്പര്യമുള്ള ഉദ്യോഗാർത്ഥികൾക്ക് കെ.എസ്.ആർ.ടി.സി നെക്സ്റ്റ്ജെൻ പോർട്ടൽ വഴി ഓൺലൈനായി അപേക്ഷകൾ സമർപ്പിക്കാം."
+        ]
+      }
+    ]
   },
   "score": {
     "overall": 45,
@@ -73,7 +500,7 @@
     "performance": 77,
     "identity": 72
   },
-  "status": "broken",
+  "status": "poor",
   "issues": [
     {
       "id": "sec.mixed_content",
@@ -155,7 +582,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "18379.775999999998ms"
+      "ev": "18021.791999999994ms"
     },
     {
       "id": "perf.weight",
@@ -221,7 +648,7 @@
     {
       "id": "perf.cls",
       "sev": "L",
-      "ev": "1.22"
+      "ev": "0.37"
     },
     {
       "id": "perf.images",
@@ -240,7 +667,7 @@
   "history": [
     {
       "d": "2026-11-28",
-      "up": false,
+      "up": true,
       "score": 45
     },
     {
@@ -574,5 +1001,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

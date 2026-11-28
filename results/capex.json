@@ -35,30 +35,30 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-24T05:57:22.222Z",
-    "run": "1795499771330",
+    "at": "2026-11-28T03:53:54.783Z",
+    "run": "1795838018229",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 55,
+      "performance": 68,
       "accessibility": 69,
       "best_practices": 96,
       "seo": 67
     },
     "axe": {
-      "critical": 1,
-      "serious": 5,
-      "moderate": 10,
-      "minor": 8
+      "critical": 0,
+      "serious": 0,
+      "moderate": 3,
+      "minor": 0
     },
     "crawl": {
-      "pages": 30,
+      "pages": 0,
       "pdfs": 0,
       "broken": 0
     },
     "tech": {
       "cms": null,
       "server": "Apache",
-      "jquery": "3.3.1"
+      "jquery": null
     },
     "checks": [
       {
@@ -87,7 +87,8 @@
       },
       {
         "id": "avail.blank",
-        "r": "pass"
+        "r": "fail",
+        "ev": "51 visible characters"
       },
       {
         "id": "avail.under_construction",
@@ -119,8 +120,8 @@
       },
       {
         "id": "sec.cert_expiry",
-        "r": "warn",
-        "ev": "7 days left"
+        "r": "fail",
+        "ev": "3 days left"
       },
       {
         "id": "sec.tls_version",
@@ -136,29 +137,27 @@
       },
       {
         "id": "sec.csp",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.xfo",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.xcto",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.referrer",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.server_banner",
-        "r": "fail",
-        "ev": "PHP/5.6.40"
+        "r": "pass"
       },
       {
         "id": "sec.vuln_js",
-        "r": "fail",
-        "ev": "jquery 3.3.1, swiper 8.3.1, jquery 1.10.2"
+        "r": "pass"
       },
       {
         "id": "sec.safe_browsing",
@@ -170,18 +169,16 @@
       },
       {
         "id": "a11y.axe_critical",
-        "r": "fail",
-        "ev": "1 critical violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_serious",
-        "r": "fail",
-        "ev": "5 serious violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "18 moderate/minor violation(s)"
+        "ev": "3 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -189,8 +186,7 @@
       },
       {
         "id": "a11y.alt",
-        "r": "fail",
-        "ev": "1 image(s) missing alt text"
+        "r": "pass"
       },
       {
         "id": "a11y.contrast",
@@ -199,7 +195,7 @@
       {
         "id": "a11y.headings",
         "r": "fail",
-        "ev": "no <h1>, heading levels skipped"
+        "ev": "no <h1>"
       },
       {
         "id": "a11y.labels",
@@ -221,12 +217,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "55/100"
+        "ev": "68/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "6114.858999999999ms"
+        "ev": "7453.7480000000005ms"
       },
       {
         "id": "perf.cls",
@@ -234,8 +230,7 @@
       },
       {
         "id": "perf.weight",
-        "r": "fail",
-        "ev": "10.6MB"
+        "r": "pass"
       },
       {
         "id": "perf.viewport",
@@ -247,12 +242,11 @@
       },
       {
         "id": "perf.images",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "content.copyright_year",
-        "r": "fail",
-        "ev": "copyright year 2023"
+        "r": "na"
       },
       {
         "id": "content.last_updated",
@@ -309,12 +303,11 @@
       },
       {
         "id": "content.console_errors",
-        "r": "fail",
-        "ev": "15 console error(s): Failed to load resource: the server responded with a status of 404 ()"
+        "r": "pass"
       },
       {
         "id": "gigw.contact",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.feedback",
@@ -358,7 +351,7 @@
       },
       {
         "id": "gigw.rti",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.search",
@@ -422,39 +415,18 @@
     "screenshot": {
       "desktop": "capex.webp",
       "mobile": "capex-m.webp",
-      "phash": "ff9f3818009830ff"
+      "phash": "ffff0000ffffffff"
     },
-    "outlinks": [
-      {
-        "host": "kshoppe.in",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "youtube.com",
-        "count": 1,
-        "texts": []
-      },
-      {
-        "host": "indphoenix.com",
-        "count": 1,
-        "texts": [
-          "Indphoenix Technologies"
-        ]
-      }
-    ]
+    "outlinks": []
   },
-  "score": {
-    "overall": 43,
-    "security": 14,
-    "accessibility": 52,
-    "content": 62,
-    "gigw": 18,
-    "performance": 76,
-    "identity": 72
-  },
-  "status": "poor",
+  "score": null,
+  "status": "broken",
   "issues": [
+    {
+      "id": "avail.blank",
+      "sev": "C",
+      "ev": "51 visible characters"
+    },
     {
       "id": "sec.http_redirect",
       "sev": "H"
@@ -462,22 +434,20 @@
     {
       "id": "sec.cert_expiry",
       "sev": "H",
-      "ev": "7 days left"
-    },
-    {
-      "id": "sec.vuln_js",
-      "sev": "H",
-      "ev": "jquery 3.3.1, swiper 8.3.1, jquery 1.10.2"
-    },
-    {
-      "id": "a11y.axe_critical",
-      "sev": "H",
-      "ev": "1 critical violation(s)"
+      "ev": "3 days left"
     },
     {
       "id": "content.last_updated",
       "sev": "H",
       "ev": "no \"last updated\" date found"
+    },
+    {
+      "id": "gigw.contact",
+      "sev": "H"
+    },
+    {
+      "id": "gigw.rti",
+      "sev": "H"
     },
     {
       "id": "id.gov_domain",
@@ -487,25 +457,6 @@
     {
       "id": "sec.hsts",
       "sev": "M"
-    },
-    {
-      "id": "sec.xfo",
-      "sev": "M"
-    },
-    {
-      "id": "a11y.axe_serious",
-      "sev": "M",
-      "ev": "5 serious violation(s)"
-    },
-    {
-      "id": "a11y.alt",
-      "sev": "M",
-      "ev": "1 image(s) missing alt text"
-    },
-    {
-      "id": "content.copyright_year",
-      "sev": "M",
-      "ev": "copyright year 2023"
     },
     {
       "id": "gigw.sitemap",
@@ -530,48 +481,21 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "6114.858999999999ms"
-    },
-    {
-      "id": "perf.weight",
-      "sev": "M",
-      "ev": "10.6MB"
-    },
-    {
-      "id": "sec.csp",
-      "sev": "L"
-    },
-    {
-      "id": "sec.xcto",
-      "sev": "L"
-    },
-    {
-      "id": "sec.referrer",
-      "sev": "L"
-    },
-    {
-      "id": "sec.server_banner",
-      "sev": "L",
-      "ev": "PHP/5.6.40"
+      "ev": "7453.7480000000005ms"
     },
     {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "18 moderate/minor violation(s)"
+      "ev": "3 moderate/minor violation(s)"
     },
     {
       "id": "a11y.headings",
       "sev": "L",
-      "ev": "no <h1>, heading levels skipped"
+      "ev": "no <h1>"
     },
     {
       "id": "content.meta_desc",
       "sev": "L"
-    },
-    {
-      "id": "content.console_errors",
-      "sev": "L",
-      "ev": "15 console error(s): Failed to load resource: the server responded with a status of 404 ()"
     },
     {
       "id": "gigw.feedback",
@@ -606,10 +530,6 @@
       "sev": "L"
     },
     {
-      "id": "perf.images",
-      "sev": "L"
-    },
-    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -630,8 +550,8 @@
   "history": [
     {
       "d": "2026-11-28",
-      "up": true,
-      "score": 43
+      "up": false,
+      "score": null
     },
     {
       "d": "2026-11-27",
@@ -964,5 +884,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -35,8 +35,8 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-26T04:15:00.723Z",
-    "run": "1795666445408",
+    "at": "2026-11-28T03:55:21.115Z",
+    "run": "1795838087793",
     "vantage": "gh-us",
     "lighthouse": {
       "performance": 0,
@@ -46,17 +46,17 @@
     },
     "axe": {
       "critical": 0,
-      "serious": 1,
-      "moderate": 2,
-      "minor": 2
+      "serious": 0,
+      "moderate": 3,
+      "minor": 0
     },
     "crawl": {
-      "pages": 22,
+      "pages": 0,
       "pdfs": 0,
       "broken": 0
     },
     "tech": {
-      "cms": "WordPress 7.1.5",
+      "cms": null,
       "server": "Apache",
       "jquery": null
     },
@@ -87,7 +87,8 @@
       },
       {
         "id": "avail.blank",
-        "r": "pass"
+        "r": "fail",
+        "ev": "51 visible characters"
       },
       {
         "id": "avail.under_construction",
@@ -137,24 +138,23 @@
       },
       {
         "id": "sec.csp",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.xfo",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.xcto",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.referrer",
-        "r": "fail"
+        "r": "pass"
       },
       {
         "id": "sec.server_banner",
-        "r": "fail",
-        "ev": "PHP/8.3.37"
+        "r": "pass"
       },
       {
         "id": "sec.vuln_js",
@@ -174,13 +174,12 @@
       },
       {
         "id": "a11y.axe_serious",
-        "r": "fail",
-        "ev": "1 serious violation(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.axe_moderate_minor",
         "r": "fail",
-        "ev": "4 moderate/minor violation(s)"
+        "ev": "3 moderate/minor violation(s)"
       },
       {
         "id": "a11y.lang",
@@ -192,12 +191,12 @@
       },
       {
         "id": "a11y.contrast",
-        "r": "fail",
-        "ev": "1 low-contrast element(s)"
+        "r": "pass"
       },
       {
         "id": "a11y.headings",
-        "r": "pass"
+        "r": "fail",
+        "ev": "no <h1>"
       },
       {
         "id": "a11y.labels",
@@ -308,7 +307,7 @@
       },
       {
         "id": "gigw.contact",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.feedback",
@@ -356,7 +355,7 @@
       },
       {
         "id": "gigw.search",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "gigw.ownership",
@@ -392,11 +391,12 @@
       },
       {
         "id": "id.soft_404",
-        "r": "pass"
+        "r": "fail",
+        "ev": "a nonexistent path returned 200"
       },
       {
         "id": "id.canonical",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "id.charset_doctype",
@@ -404,8 +404,7 @@
       },
       {
         "id": "id.tech",
-        "r": "pass",
-        "ev": "WordPress 7.1.5"
+        "r": "pass"
       },
       {
         "id": "id.third_party",
@@ -415,28 +414,18 @@
     "screenshot": {
       "desktop": "govt-polytechnic-college-kunnamkulam.webp",
       "mobile": "govt-polytechnic-college-kunnamkulam-m.webp",
-      "phash": "ee80ffff83130383"
+      "phash": "ffff0000ffffffff"
     },
-    "outlinks": [
-      {
-        "host": "wordpress.org",
-        "count": 1,
-        "texts": [
-          "Proudly powered by WordPress"
-        ]
-      },
-      {
-        "host": "wenthemes.com",
-        "count": 1,
-        "texts": [
-          "WEN Themes"
-        ]
-      }
-    ]
+    "outlinks": []
   },
   "score": null,
   "status": "broken",
   "issues": [
+    {
+      "id": "avail.blank",
+      "sev": "C",
+      "ev": "51 visible characters"
+    },
     {
       "id": "sec.https",
       "sev": "C",
@@ -453,26 +442,16 @@
       "ev": "no \"last updated\" date found"
     },
     {
+      "id": "gigw.contact",
+      "sev": "H"
+    },
+    {
       "id": "gigw.rti",
       "sev": "H"
     },
     {
       "id": "sec.hsts",
       "sev": "M"
-    },
-    {
-      "id": "sec.xfo",
-      "sev": "M"
-    },
-    {
-      "id": "a11y.axe_serious",
-      "sev": "M",
-      "ev": "1 serious violation(s)"
-    },
-    {
-      "id": "a11y.contrast",
-      "sev": "M",
-      "ev": "1 low-contrast element(s)"
     },
     {
       "id": "gigw.sitemap",
@@ -499,26 +478,14 @@
       "sev": "M"
     },
     {
-      "id": "sec.csp",
-      "sev": "L"
-    },
-    {
-      "id": "sec.xcto",
-      "sev": "L"
-    },
-    {
-      "id": "sec.referrer",
-      "sev": "L"
-    },
-    {
-      "id": "sec.server_banner",
-      "sev": "L",
-      "ev": "PHP/8.3.37"
-    },
-    {
       "id": "a11y.axe_moderate_minor",
       "sev": "L",
-      "ev": "4 moderate/minor violation(s)"
+      "ev": "3 moderate/minor violation(s)"
+    },
+    {
+      "id": "a11y.headings",
+      "sev": "L",
+      "ev": "no <h1>"
     },
     {
       "id": "content.meta_desc",
@@ -553,11 +520,24 @@
       "sev": "L"
     },
     {
+      "id": "gigw.search",
+      "sev": "L"
+    },
+    {
       "id": "perf.images",
       "sev": "L"
     },
     {
+      "id": "id.soft_404",
+      "sev": "L",
+      "ev": "a nonexistent path returned 200"
+    },
+    {
       "id": "gigw.emblem",
+      "sev": "I"
+    },
+    {
+      "id": "id.canonical",
       "sev": "I"
     }
   ],
@@ -878,5 +858,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

@@ -37,10 +37,15 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-27T04:10:57.118Z",
-    "run": "1795752613542",
+    "at": "2026-11-28T03:59:00.393Z",
+    "run": "1795838295479",
     "vantage": "gh-us",
-    "lighthouse": null,
+    "lighthouse": {
+      "performance": 56,
+      "accessibility": 76,
+      "best_practices": 69,
+      "seo": 92
+    },
     "axe": {
       "critical": 2,
       "serious": 45,
@@ -212,19 +217,22 @@
       },
       {
         "id": "a11y.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "76/100"
       },
       {
         "id": "perf.lighthouse",
-        "r": "na"
+        "r": "pass",
+        "ev": "56/100"
       },
       {
         "id": "perf.lcp",
-        "r": "na"
+        "r": "fail",
+        "ev": "32128.12724999999ms"
       },
       {
         "id": "perf.cls",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.weight",
@@ -237,11 +245,11 @@
       },
       {
         "id": "perf.tap_targets",
-        "r": "na"
+        "r": "pass"
       },
       {
         "id": "perf.images",
-        "r": "na"
+        "r": "fail"
       },
       {
         "id": "content.copyright_year",
@@ -469,12 +477,12 @@
     ]
   },
   "score": {
-    "overall": 47,
+    "overall": 46,
     "security": 28,
     "accessibility": 50,
     "content": 56,
     "gigw": 16,
-    "performance": 95,
+    "performance": 81,
     "identity": 72
   },
   "status": "poor",
@@ -548,6 +556,11 @@
       "sev": "M"
     },
     {
+      "id": "perf.lcp",
+      "sev": "M",
+      "ev": "32128.12724999999ms"
+    },
+    {
       "id": "perf.weight",
       "sev": "M",
       "ev": "7.9MB"
@@ -609,6 +622,10 @@
       "sev": "L"
     },
     {
+      "id": "perf.images",
+      "sev": "L"
+    },
+    {
       "id": "id.www_consistency",
       "sev": "L"
     },
@@ -626,7 +643,7 @@
     {
       "d": "2026-11-28",
       "up": true,
-      "score": 47
+      "score": 46
     },
     {
       "d": "2026-11-27",
@@ -944,5 +961,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

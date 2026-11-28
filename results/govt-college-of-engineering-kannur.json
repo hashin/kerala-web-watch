@@ -37,11 +37,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-26T04:04:33.444Z",
-    "run": "1795665862689",
+    "at": "2026-11-28T03:52:02.371Z",
+    "run": "1795837910611",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 61,
+      "performance": 60,
       "accessibility": 100,
       "best_practices": 73,
       "seo": 91
@@ -216,12 +216,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "61/100"
+        "ev": "60/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "7261.887ms"
+        "ev": "7532.073ms"
       },
       {
         "id": "perf.cls",
@@ -304,7 +304,7 @@
       {
         "id": "content.console_errors",
         "r": "fail",
-        "ev": "10 console error(s): Access to fetch at 'https://gcek-website-backend.onrender.com/api/v1/admin/me' from origin 'https://www.gcek.ac.in' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+        "ev": "10 console error(s): Access to fetch at 'https://gcek-website-backend.onrender.com/api/v1/static-assets?prefix=websites/gcek/' from origin 'https://www.gcek.ac.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
       },
       {
         "id": "gigw.contact",
@@ -477,7 +477,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "7261.887ms"
+      "ev": "7532.073ms"
     },
     {
       "id": "perf.tap_targets",
@@ -490,7 +490,7 @@
     {
       "id": "content.console_errors",
       "sev": "L",
-      "ev": "10 console error(s): Access to fetch at 'https://gcek-website-backend.onrender.com/api/v1/admin/me' from origin 'https://www.gcek.ac.in' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+      "ev": "10 console error(s): Access to fetch at 'https://gcek-website-backend.onrender.com/api/v1/static-assets?prefix=websites/gcek/' from origin 'https://www.gcek.ac.in' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
     },
     {
       "id": "gigw.feedback",
@@ -864,5 +864,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }

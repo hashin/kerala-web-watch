@@ -35,11 +35,11 @@
     "suspect": false
   },
   "deep": {
-    "at": "2026-11-24T05:51:53.121Z",
-    "run": "1795499454042",
+    "at": "2026-11-28T03:43:26.457Z",
+    "run": "1795837337199",
     "vantage": "gh-us",
     "lighthouse": {
-      "performance": 65,
+      "performance": 67,
       "accessibility": 86,
       "best_practices": 69,
       "seo": 75
@@ -111,7 +111,7 @@
       },
       {
         "id": "sec.http_redirect",
-        "r": "pass"
+        "r": "fail"
       },
       {
         "id": "sec.cert_valid",
@@ -222,12 +222,12 @@
       {
         "id": "perf.lighthouse",
         "r": "pass",
-        "ev": "65/100"
+        "ev": "67/100"
       },
       {
         "id": "perf.lcp",
         "r": "fail",
-        "ev": "5796.940500000001ms"
+        "ev": "5056.359ms"
       },
       {
         "id": "perf.cls",
@@ -443,16 +443,20 @@
     ]
   },
   "score": {
-    "overall": 54,
-    "security": 38,
+    "overall": 49,
+    "security": 18,
     "accessibility": 42,
     "content": 62,
     "gigw": 46,
     "performance": 86,
     "identity": 91
   },
-  "status": "needs-work",
+  "status": "poor",
   "issues": [
+    {
+      "id": "sec.http_redirect",
+      "sev": "H"
+    },
     {
       "id": "sec.mixed_content",
       "sev": "H",
@@ -512,7 +516,7 @@
     {
       "id": "perf.lcp",
       "sev": "M",
-      "ev": "5796.940500000001ms"
+      "ev": "5056.359ms"
     },
     {
       "id": "id.tech",
@@ -602,7 +606,7 @@
     {
       "d": "2026-11-28",
       "up": true,
-      "score": 54
+      "score": 49
     },
     {
       "d": "2026-11-27",
@@ -935,5 +939,5 @@
       "score": null
     }
   ],
-  "deep_bump": true
+  "deep_bump": false
 }
